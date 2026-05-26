@@ -21,7 +21,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests anthropic
+        run: pip install requests anthropic python-dotenv
 
       - name: Run sentiment analysis
         env:
