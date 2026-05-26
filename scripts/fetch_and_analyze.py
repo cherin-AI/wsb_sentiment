@@ -34,7 +34,8 @@ except ImportError:
 HKT          = timezone(timedelta(hours=8))
 OUTPUT_PATH  = os.path.join(os.path.dirname(__file__), "..", "docs", "sentiment.json")
 
-REDDIT_UA    = "wsb-sentiment-bot/1.0 by genius_kim"
+REDDIT_UA    = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+REDDIT_HDR   = {"User-Agent": REDDIT_UA, "Accept": "application/json", "Accept-Language": "en-US,en;q=0.9"}
 REDDIT_BASE  = "https://oauth.reddit.com"
 REDDIT_AUTH  = "https://www.reddit.com/api/v1/access_token"
 
@@ -48,7 +49,7 @@ def get_reddit_token(client_id: str, client_secret: str) -> str:
         REDDIT_AUTH,
         auth=(client_id, client_secret),
         data={"grant_type": "client_credentials"},
-        headers={"User-Agent": REDDIT_UA},
+        headers=REDDIT_HDR,
         timeout=15,
     )
     r.raise_for_status()
@@ -117,7 +118,7 @@ def fetch_comments(post_id: str) -> list[str]:
     try:
         r = requests.get(
             f"https://www.reddit.com/r/wallstreetbets/comments/{post_id}.json",
-            headers={"User-Agent": REDDIT_UA},
+            headers=REDDIT_HDR,
             params={"limit": 5, "depth": 1, "sort": "top"},
             timeout=15,
         )
@@ -142,7 +143,7 @@ def fetch_wsb_posts_unauthenticated() -> list[dict]:
         params = {"limit": 100, **({"after": after} if after else {})}
         r = requests.get(
             "https://www.reddit.com/r/wallstreetbets/new.json",
-            headers={"User-Agent": REDDIT_UA},
+            headers=REDDIT_HDR,
             params=params,
             timeout=15,
         )
