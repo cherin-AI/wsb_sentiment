@@ -1,0 +1,200 @@
+{
+  "bull_pct": 52,
+  "bear_pct": 24,
+  "neutral_pct": 24,
+  "bull_bear_ratio": 2.2,
+  "overall_score": 68,
+  "overall_label": "Greed",
+  "methodology": {
+    "formula_score": 52,
+    "ai_score": 75,
+    "bull_count": 13,
+    "bear_count": 6,
+    "neutral_count": 6,
+    "total_posts": 25,
+    "formula": {
+      "bull_pct": "bullish posts / total posts × 100",
+      "bear_pct": "bearish posts / total posts × 100",
+      "bull_bear_ratio": "bull count / bear count",
+      "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
+    }
+  },
+  "post_count": 25,
+  "hours_window": 24,
+  "themes": [
+    {
+      "id": "space-trade",
+      "title": "Space Trade Euphoria",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "RKLB +2100% gains flexing everywhere",
+        "ASTS space trade paying off bigly",
+        "Million dollar space portfolios posted",
+        "Rocket ships in every comment"
+      ],
+      "sentiment_score": 85,
+      "tickers": [
+        "RKLB",
+        "ASTS",
+        "LUNR"
+      ]
+    },
+    {
+      "id": "millionaire-gains",
+      "title": "Millionaire Factory",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Multiple $1M+ portfolio posts",
+        "MU creating new millionaires daily",
+        "AMD hitting $11M gains",
+        "30x returns quit-your-job money"
+      ],
+      "sentiment_score": 90,
+      "tickers": [
+        "MU",
+        "AMD",
+        "NBIS"
+      ]
+    },
+    {
+      "id": "memory-chip-mania",
+      "title": "Memory Chip Dominance",
+      "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "Micron making millionaires left right",
+        "Memory shortage driving massive gains",
+        "AI demand crushing chip supply",
+        "Riding wave to $2000 targets"
+      ],
+      "sentiment_score": 88,
+      "tickers": [
+        "MU",
+        "AMD",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "ai-bubble-concerns",
+      "title": "AI Bubble Warnings",
+      "icon": "skull",
+      "heat": "rising",
+      "bullets": [
+        "Uber questioning AI token spending",
+        "Overvaluation fears creeping in",
+        "Institutions dumping when IPOs hit",
+        "AI sauce memes everywhere"
+      ],
+      "sentiment_score": 25,
+      "tickers": [
+        "NVDA",
+        "UBER"
+      ]
+    },
+    {
+      "id": "bear-capitulation",
+      "title": "Bear Extinction Event",
+      "icon": "flame",
+      "heat": "rising",
+      "bullets": [
+        "Bears officially giving up fight",
+        "Put buyers need handicap parking",
+        "Bull market destroying shorts",
+        "Bear memes flooding timeline"
+      ],
+      "sentiment_score": 85,
+      "tickers": [
+        "SPY"
+      ]
+    },
+    {
+      "id": "saas-comeback",
+      "title": "SaaS Revival Trade",
+      "icon": "trending-up",
+      "heat": "cool",
+      "bullets": [
+        "Enterprise software oversold bounce",
+        "AI integration boosting SaaS",
+        "Sticky enterprise customer base",
+        "Trump connection driving interest"
+      ],
+      "sentiment_score": 70,
+      "tickers": [
+        "CRM",
+        "NOW",
+        "WDAY"
+      ]
+    },
+    {
+      "id": "geopolitical-catalysts",
+      "title": "Iran Deal Pump",
+      "icon": "trending-up",
+      "heat": "cool",
+      "bullets": [
+        "Peace deal 95% complete",
+        "Strait of Hormuz reopening",
+        "Oil markets reacting positively",
+        "Tuesday expected to pump"
+      ],
+      "sentiment_score": 75,
+      "tickers": [
+        "SPY"
+      ]
+    }
+  ],
+  "tickers": [
+    {
+      "symbol": "RKLB",
+      "sentiment": "bullish",
+      "mentions": 15,
+      "signal": "+2100% rocket ship gains"
+    },
+    {
+      "symbol": "ASTS",
+      "sentiment": "bullish",
+      "mentions": 12,
+      "signal": "space trade paying off"
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 11,
+      "signal": "millionaire factory"
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "$11M mega gains"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "bullish",
+      "mentions": 7,
+      "signal": "bull market unstoppable"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "AI bubble concerns"
+    },
+    {
+      "symbol": "LUNR",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "space trade momentum"
+    },
+    {
+      "symbol": "NOK",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "$180k YOLO play"
+    }
+  ],
+  "summary": "WSB is experiencing pure euphoria as space stocks like RKLB and ASTS deliver life-changing gains while memory chips create new millionaires daily. The bears have officially capitulated as this bull market steamrolls everything, with even geopolitical news turning bullish.",
+  "updated_at": "2026-05-26T16:25:09.017603+00:00",
+  "updated_hkt": "2026-05-27 00:25 HKT"
+}

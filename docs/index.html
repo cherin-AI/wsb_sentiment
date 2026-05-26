@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WSB Sentiment Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #07090f;
+    --s1: #0b1018;
+    --s2: #0f1520;
+    --s3: #131c2a;
+    --s4: #182236;
+    --b1: #1b2a42;
+    --b2: #213352;
+    --b3: #2a4068;
+    --t1: #e8eef8;
+    --t2: #a8bdd6;
+    --t3: #607a96;
+    --t4: #2a3a52;
+    --ac: #60A8D6;
+    --gr: #3CC8B8;
+    --rd: #E86060;
+    --am: #FFCC30;
+    --pu: #FF9040;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); color: var(--t1); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  body {
+    min-height: 100vh; padding: 0 0 4rem;
+    background:
+      radial-gradient(circle at top left, rgba(96,168,214,0.12), transparent 28%),
+      radial-gradient(circle at top right, rgba(60,200,184,0.10), transparent 24%),
+      linear-gradient(180deg, #07090f 0%, #090d14 100%);
+  }
+
+  /* ── Header ── */
+  header {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--b1);
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 30;
+    background: rgba(11,16,24,0.92);
+    backdrop-filter: blur(12px);
+  }
+  .logo-title { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .logo-title span { color: var(--ac); }
+  .header-right { text-align: right; }
+  .header-author { font-size: 10px; color: var(--t3); margin-bottom: 4px; }
+  .header-ts { font-size: 11px; color: var(--t3); margin-top: 4px; }
+  .live-pill {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 4px 10px; border: 1px solid var(--b2); border-radius: 4px;
+    background: var(--s3); color: var(--t2);
+    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .live-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--gr); box-shadow: 0 0 8px rgba(60,200,184,0.85);
+    animation: pulse 2s infinite; flex-shrink: 0;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+  /* ── Layout ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+  /* ── Section title ── */
+  .section-title {
+    font-size: 9px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.18em; color: var(--t3);
+    border-bottom: 1px solid var(--b1); padding-bottom: 8px; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title::before {
+    content: ''; display: inline-block; width: 3px; height: 12px;
+    background: var(--ac); border-radius: 2px; flex-shrink: 0;
+  }
+
+  /* ── Score section ── */
+  .score-section {
+    margin-bottom: 1.5rem;
+    background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+    padding: 20px 24px;
+  }
+  .score-top { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 1.25rem; }
+  .score-top > div { flex: 1; }
+  .score-label { font-size: 9px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 6px; }
+  .score-number { font-size: 52px; font-weight: 700; line-height: 1; }
+  .score-tag {
+    display: inline-flex; align-items: center;
+    padding: 3px 10px; border-radius: 999px; border: 1px solid;
+    font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; line-height: 1.4; margin-top: 8px;
+  }
+  .score-summary { }
+  .score-ai-header { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
+  .score-ai-label { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); }
+  .score-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .score-bullets li {
+    font-size: 12px; line-height: 1.55; padding-left: 16px; position: relative; color: var(--t1);
+  }
+  .score-bullets li::before { content: "•"; position: absolute; left: 0; color: var(--ac); }
+  .gauge-track { width: 100%; height: 5px; background: var(--s3); border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
+  .gauge-fill { height: 100%; border-radius: 3px; transition: width 1s ease; }
+  .gauge-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--t3); letter-spacing: 0.04em; }
+
+  /* ── KPI cards ── */
+  .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+  .kpi-card {
+    background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+    padding: 14px 16px; min-height: 110px;
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+  .kpi-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    border-radius: 8px 8px 0 0;
+  }
+  .kpi-card.g::before { background: var(--gr); }
+  .kpi-card.r::before { background: var(--rd); }
+  .kpi-card.b::before { background: var(--ac); }
+  .kpi-card.a::before { background: var(--am); }
+  .kpi-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); margin-bottom: 8px; }
+  .kpi-value { font-size: 26px; font-weight: 700; }
+  .kpi-value.g { color: var(--gr); }
+  .kpi-value.r { color: var(--rd); }
+  .kpi-value.b { color: var(--ac); }
+  .kpi-value.a { color: var(--am); }
+  .kpi-sub { font-size: 10px; color: var(--t3); line-height: 1.35; margin-top: 4px; }
+
+  /* ── Sentiment bar ── */
+  .bull-bear { margin-bottom: 1.5rem; background: var(--s2); border: 1px solid var(--b1); border-radius: 8px; padding: 14px 16px; }
+  .bb-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .bb-row:last-child { margin-bottom: 0; }
+  .bb-name { font-size: 10px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.06em; width: 56px; flex-shrink: 0; }
+  .bb-bar { flex: 1; height: 6px; background: var(--s3); border-radius: 3px; overflow: hidden; }
+  .bb-fill { height: 100%; border-radius: 3px; transition: width 1s ease; }
+  .bb-pct { font-size: 10px; font-weight: 600; width: 36px; text-align: right; }
+
+  /* ── Theme grid ── */
+  .theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+  .theme-card {
+    background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+    padding: 14px 16px; cursor: default; transition: border-color 0.15s;
+  }
+  .theme-card:hover { border-color: var(--b2); }
+  .theme-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .theme-title { font-size: 12px; font-weight: 600; color: var(--t1); }
+  .heat-badge {
+    display: inline-flex; align-items: center;
+    padding: 3px 8px; border-radius: 999px; border: 1px solid;
+    font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; line-height: 1.4; white-space: nowrap;
+  }
+  .heat-hot    { border-color: rgba(232,96,96,0.45);  color: #ff9b9b; background: rgba(232,96,96,0.10); }
+  .heat-rising { border-color: rgba(255,204,48,0.45); color: #ffe08a; background: rgba(255,204,48,0.10); }
+  .heat-cool   { border-color: rgba(96,168,214,0.45); color: #9fd0f1; background: rgba(96,168,214,0.10); }
+  .theme-bullets { list-style: none; margin-bottom: 12px; }
+  .theme-bullets li { font-size: 11px; color: var(--t3); padding: 2px 0; display: flex; gap: 6px; line-height: 1.5; }
+  .theme-bullets li::before { content: '•'; color: var(--ac); flex-shrink: 0; }
+  .theme-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--b1); padding-top: 10px; margin-top: 4px; }
+  .theme-score-wrap { display: flex; align-items: center; gap: 6px; flex: 1; margin-right: 12px; }
+  .theme-score-bar { flex: 1; height: 3px; background: var(--s3); border-radius: 2px; overflow: hidden; }
+  .theme-score-fill { height: 100%; border-radius: 2px; }
+  .theme-score-num { font-size: 10px; font-weight: 600; }
+  .theme-tickers { display: flex; gap: 4px; flex-wrap: wrap; }
+  .ticker-chip { font-size: 9px; padding: 2px 6px; border-radius: 4px; background: var(--s3); color: var(--t2); border: 1px solid var(--b1); }
+
+  /* ── Ticker table ── */
+  .ticker-table-wrap { background: var(--s2); border: 1px solid var(--b1); border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    padding: 8px 14px; text-align: left;
+    font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--t2); border-bottom: 1px solid var(--b2);
+    background: var(--s3); white-space: nowrap;
+  }
+  tbody tr { border-bottom: 1px solid rgba(27,42,66,0.65); transition: background 0.1s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--s4); }
+  tbody td { padding: 10px 14px; font-size: 12px; }
+  .sym { font-size: 13px; font-weight: 600; color: var(--t1); }
+  .sent-pill {
+    display: inline-flex; align-items: center;
+    padding: 3px 8px; border-radius: 999px; border: 1px solid;
+    font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; line-height: 1.4;
+  }
+  .sent-bull  { border-color: rgba(60,200,184,0.45);  color: #8de9df; background: rgba(60,200,184,0.10); }
+  .sent-bear  { border-color: rgba(232,96,96,0.45);   color: #ff9b9b; background: rgba(232,96,96,0.10); }
+  .sent-mixed { border-color: rgba(255,204,48,0.45);  color: #ffe08a; background: rgba(255,204,48,0.10); }
+  .mention-track { display: flex; align-items: center; gap: 8px; }
+  .mbar { height: 4px; border-radius: 2px; background: var(--ac); opacity: 0.6; }
+  .mention-num { font-size: 11px; color: var(--t2); }
+  .signal-text { font-size: 11px; color: var(--t3); }
+
+
+  /* ── Loading / Error ── */
+  .loading { text-align: center; padding: 4rem; font-size: 13px; color: var(--t3); }
+  .error { background: rgba(232,96,96,0.10); border: 1px solid rgba(232,96,96,0.3); border-radius: 8px; padding: 12px 16px; color: #ff9b9b; font-size: 12px; margin-bottom: 1rem; }
+
+  @media (max-width: 768px) {
+    .container { padding: 1rem; }
+    .metrics { grid-template-columns: 1fr; }
+    .theme-grid { grid-template-columns: 1fr; }
+    header { padding: 12px 16px; }
+    .score-top { flex-direction: column; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo-title">
+      WSB <span>Sentiment</span> Monitor
+      <span class="live-pill"><span class="live-dot"></span><span>Live</span></span>
+      <span class="live-pill" id="ts-date">—</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="header-author">Cherin Kim | cherin0508@gmail.com</div>
+    <div class="header-ts">Last updated as <span id="ts">—</span></div>
+  </div>
+</header>
+
+<main class="container" id="root">
+  <div class="loading">Loading sentiment data…</div>
+</main>
+
+<script>
+async function load() {
+  const root = document.getElementById('root');
+  let data;
+  try {
+    const r = await fetch(`sentiment.json?t=${Date.now()}`);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    data = await r.json();
+  } catch (e) {
+    root.innerHTML = `<div class="error">Failed to load sentiment.json — ${e.message}</div>`;
+    return;
+  }
+
+  const ts = data.updated_hkt || data.updated_at || '—';
+  document.getElementById('ts').textContent = ts;
+  const datePart = ts !== '—' ? ts.split(' ')[0] : '—';
+  document.getElementById('ts-date').textContent = `DATE: ${datePart}`;
+
+  const scoreColor = data.overall_score >= 70 ? 'var(--gr)' : data.overall_score >= 40 ? 'var(--am)' : 'var(--rd)';
+  const scoreTagStyle = data.overall_score >= 70
+    ? 'border-color:rgba(60,200,184,0.45);color:#8de9df;background:rgba(60,200,184,0.10)'
+    : data.overall_score >= 40
+    ? 'border-color:rgba(255,204,48,0.45);color:#ffe08a;background:rgba(255,204,48,0.10)'
+    : 'border-color:rgba(232,96,96,0.45);color:#ff9b9b;background:rgba(232,96,96,0.10)';
+
+  const gaugeColor = data.overall_score >= 70 ? '#3CC8B8' : data.overall_score >= 40 ? '#FFCC30' : '#E86060';
+
+  const maxMentions = Math.max(...(data.tickers || []).map(t => t.mentions || 0), 1);
+  const m = data.methodology || null;
+
+  root.innerHTML = `
+    <!-- Score Section -->
+    <div class="score-section">
+      <div class="score-top">
+        <div>
+          <div class="score-label">WSB Greed Index</div>
+          <div class="score-number" style="color:${scoreColor}">${data.overall_score}</div>
+          <span class="score-tag" style="${scoreTagStyle}">${data.overall_label || '—'}</span>
+        </div>
+        <div class="score-summary">
+          <div class="score-ai-header">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gr)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.85" aria-hidden="true">
+              <path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/>
+              <path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/>
+            </svg>
+            <span class="score-ai-label">AI Analysis</span>
+          </div>
+          <ul class="score-bullets">
+            ${(data.summary || '').split(/(?<=\.)\s+/).filter(s => s.trim()).map(s => `<li>${s.replace(/\.$/, '')}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+      <div class="gauge-track">
+        <div class="gauge-fill" style="width:${data.overall_score}%;background:${gaugeColor};"></div>
+      </div>
+      <div class="gauge-labels">
+        <span>Extreme Fear</span><span>Fear</span><span>Neutral</span><span>Greed</span><span>Extreme Greed</span>
+      </div>
+    </div>
+
+    <!-- Metric Cards -->
+    <div class="metrics">
+      <div class="kpi-card g">
+        <div class="kpi-label">Bull/Bear Ratio</div>
+        <div style="flex:1">
+          <div class="kpi-value g">${(data.bull_bear_ratio || 0).toFixed(1)}x</div>
+          <div class="kpi-sub">${m ? m.bull_count : '?'} bull · ${m ? m.bear_count : '?'} bear posts</div>
+        </div>
+      </div>
+      <div class="kpi-card b">
+        <div class="kpi-label">Posts Analyzed</div>
+        <div style="flex:1">
+          <div class="kpi-value b">${data.post_count || 0}</div>
+          <div class="kpi-sub">Last ${data.hours_window || 24}h · title + body + comments</div>
+        </div>
+      </div>
+      <div class="kpi-card a">
+        <div class="kpi-label">#1 Ticker</div>
+        <div style="flex:1">
+          <div class="kpi-value a">${(data.tickers && data.tickers[0]) ? data.tickers[0].symbol : '—'}</div>
+          <div class="kpi-sub">${(data.tickers && data.tickers[0]) ? `${(data.tickers[0].mentions||0).toLocaleString()} mentions` : '—'}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bull/Bear Bar -->
+    <div class="bull-bear">
+      <div class="section-title" style="margin-bottom:14px">Sentiment Breakdown</div>
+      <div class="bb-row">
+        <span class="bb-name">Bullish</span>
+        <div class="bb-bar"><div class="bb-fill" style="width:${data.bull_pct||0}%;background:var(--gr);"></div></div>
+        <span class="bb-pct" style="color:var(--gr)">${data.bull_pct||0}%</span>
+      </div>
+      <div class="bb-row">
+        <span class="bb-name">Neutral</span>
+        <div class="bb-bar"><div class="bb-fill" style="width:${data.neutral_pct||0}%;background:var(--t3);"></div></div>
+        <span class="bb-pct" style="color:var(--t3)">${data.neutral_pct||0}%</span>
+      </div>
+      <div class="bb-row">
+        <span class="bb-name">Bearish</span>
+        <div class="bb-bar"><div class="bb-fill" style="width:${data.bear_pct||0}%;background:var(--rd);"></div></div>
+        <span class="bb-pct" style="color:var(--rd)">${data.bear_pct||0}%</span>
+      </div>
+    </div>
+
+    <!-- Themes -->
+    <div class="section-title">Trending Themes</div>
+    <div class="theme-grid">
+      ${(data.themes || []).map(th => {
+        const sc = th.sentiment_score || 0;
+        const fillColor = sc >= 70 ? '#3CC8B8' : sc >= 40 ? '#FFCC30' : '#E86060';
+        const numColor = sc >= 70 ? 'var(--gr)' : sc >= 40 ? 'var(--am)' : 'var(--rd)';
+        const badgeCls = th.heat === 'hot' ? 'heat-hot' : th.heat === 'rising' ? 'heat-rising' : 'heat-cool';
+        const badgeLabel = th.heat === 'hot' ? '🔥 HOT' : th.heat === 'rising' ? '⚡ RISING' : '❄ COOL';
+        return `
+          <div class="theme-card">
+            <div class="theme-head">
+              <span class="theme-title">${th.title}</span>
+              <span class="heat-badge ${badgeCls}">${badgeLabel}</span>
+            </div>
+            <ul class="theme-bullets">
+              ${(th.bullets || []).map(b => `<li>${b}</li>`).join('')}
+            </ul>
+            <div class="theme-footer">
+              <div class="theme-score-wrap">
+                <div class="theme-score-bar"><div class="theme-score-fill" style="width:${sc}%;background:${fillColor};"></div></div>
+                <span class="theme-score-num" style="color:${numColor}">${sc}</span>
+              </div>
+              <div class="theme-tickers">
+                ${(th.tickers || []).map(t => `<span class="ticker-chip">${t}</span>`).join('')}
+              </div>
+            </div>
+          </div>`;
+      }).join('')}
+    </div>
+
+    <!-- Ticker Table -->
+    <div class="section-title">Hot Tickers</div>
+    <div class="ticker-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Sentiment</th>
+            <th>Mentions</th>
+            <th>Top Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${(data.tickers || []).map(t => {
+            const pillCls = t.sentiment === 'bullish' ? 'sent-bull' : t.sentiment === 'bearish' ? 'sent-bear' : 'sent-mixed';
+            const barW = Math.round((t.mentions / maxMentions) * 80);
+            return `
+              <tr>
+                <td><span class="sym">${t.symbol}</span></td>
+                <td><span class="sent-pill ${pillCls}">${t.sentiment}</span></td>
+                <td>
+                  <div class="mention-track">
+                    <div class="mbar" style="width:${barW}px;"></div>
+                    <span class="mention-num">${(t.mentions||0).toLocaleString()}</span>
+                  </div>
+                </td>
+                <td><span class="signal-text">${t.signal || '—'}</span></td>
+              </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <div style="text-align:center;font-size:10px;color:var(--t4);margin-top:1.5rem;">
+      Source: r/wallstreetbets · Analyzed by Claude API · Auto-updated daily 05:00 AM HKT
+    </div>
+  `;
+}
+
+load();
+</script>
+</body>
+</html>

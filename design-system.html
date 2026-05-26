@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System — Short Pressure Monitor</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      /* ── Surface layers (dark-to-slightly-lighter) ── */
+      --bg: #07090f;   /* page background */
+      --s1: #0b1018;   /* deepest card */
+      --s2: #0f1520;   /* standard card */
+      --s3: #131c2a;   /* inner element / pill */
+      --s4: #182236;   /* hover state */
+
+      /* ── Border / stroke ── */
+      --b1: #1b2a42;   /* subtle border */
+      --b2: #213352;   /* card border */
+      --b3: #2a4068;   /* prominent border */
+
+      /* ── Text ── */
+      --t1: #e8eef8;   /* primary text */
+      --t2: #a8bdd6;   /* secondary / label */
+      --t3: #607a96;   /* muted / placeholder */
+      --t4: #2a3a52;   /* disabled */
+
+      /* ── Accent / status colors ── */
+      --ac: #60A8D6;   /* blue accent (links, active) */
+      --gr: #3CC8B8;   /* teal green (positive, live) */
+      --rd: #E86060;   /* red (negative, high risk) */
+      --am: #FFCC30;   /* amber (warning, moderate) */
+      --pu: #FF9040;   /* orange (highlight C) */
+
+      /* ── Chart palette aliases ── */
+      --pA: #60A8D6;
+      --pB: #3CC8B8;
+      --pC: #FF9040;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(96,168,214,0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(60,200,184,0.10), transparent 24%),
+        linear-gradient(180deg, #07090f 0%, #090d14 100%);
+      color: var(--t1);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* ── Page header ── */
+    header {
+      padding: 18px 32px;
+      border-bottom: 1px solid var(--b1);
+      background: rgba(11,16,24,0.92);
+      backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 30;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    header h1 { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    header h1 span { color: var(--ac); }
+    header p { color: var(--t3); font-size: 11px; margin-top: 2px; }
+
+    .page { max-width: 1200px; margin: 0 auto; padding: 32px 32px 56px; }
+
+    /* ── Section headers ── */
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 9px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--t3);
+      border-bottom: 1px solid var(--b1); padding-bottom: 8px; margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-title::before {
+      content: ''; display: inline-block; width: 3px; height: 12px;
+      background: var(--ac); border-radius: 2px;
+    }
+
+    /* ── Grid utilities ── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+
+    /* ════════════════════════════════════════════
+       COLOR SYSTEM
+    ════════════════════════════════════════════ */
+    .swatch-group-label {
+      font-size: 9px; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--t3); margin-bottom: 8px; margin-top: 16px;
+    }
+    .swatch-group-label:first-child { margin-top: 0; }
+    .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 6px; }
+    .swatch {
+      width: 80px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
+    }
+    .swatch-color { height: 44px; }
+    .swatch-info {
+      background: var(--s2); padding: 6px 8px;
+    }
+    .swatch-var { font-size: 9px; color: var(--t3); }
+    .swatch-hex { font-size: 10px; font-weight: 600; color: var(--t1); margin-top: 1px; }
+    .swatch-desc { font-size: 9px; color: var(--t3); margin-top: 2px; line-height: 1.3; }
+
+    /* ════════════════════════════════════════════
+       TYPOGRAPHY SCALE
+    ════════════════════════════════════════════ */
+    .type-row {
+      display: flex; align-items: baseline; gap: 20px;
+      padding: 10px 0; border-bottom: 1px solid var(--b1);
+    }
+    .type-row:last-child { border-bottom: none; }
+    .type-meta {
+      width: 220px; flex-shrink: 0;
+      display: flex; flex-direction: column; gap: 3px;
+    }
+    .type-meta-name { font-size: 10px; font-weight: 600; color: var(--t2); }
+    .type-meta-spec { font-size: 9px; color: var(--t3); font-family: monospace; }
+    .type-sample { flex: 1; }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: CARD
+    ════════════════════════════════════════════ */
+    .card {
+      background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .card-title {
+      font-size: 9px; font-weight: 600; color: var(--t2);
+      text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px;
+    }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: KPI CARD
+    ════════════════════════════════════════════ */
+    .kpi-card {
+      background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+      padding: 14px 16px; min-height: 120px;
+      display: flex; flex-direction: column;
+    }
+    .kpi-label {
+      font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em;
+      color: var(--t2); margin-bottom: 8px;
+    }
+    .kpi-value { font-size: 22px; font-weight: 700; }
+    .kpi-sub { font-size: 10px; color: #8fa3be; line-height: 1.35; margin-top: 2px; }
+    .kpi-footer { margin-top: auto; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: BADGE
+    ════════════════════════════════════════════ */
+    .badge {
+      display: inline-flex; align-items: center;
+      padding: 3px 8px; border-radius: 999px;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; white-space: nowrap;
+      border: 1px solid; line-height: 1.4;
+    }
+    .badge-blue   { border-color: rgba(96,168,214,0.45);  color: #9fd0f1; background: rgba(96,168,214,0.10); }
+    .badge-teal   { border-color: rgba(60,200,184,0.45);  color: #8de9df; background: rgba(60,200,184,0.10); }
+    .badge-red    { border-color: rgba(232,96,96,0.45);   color: #ff9b9b; background: rgba(232,96,96,0.10); }
+    .badge-yellow { border-color: rgba(255,204,48,0.45);  color: #ffe08a; background: rgba(255,204,48,0.10); }
+    .badge-muted  { border-color: var(--b2); color: var(--t2); background: var(--s3); }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: PILL (formula / tag)
+    ════════════════════════════════════════════ */
+    .pill {
+      background: var(--s3); border: 1px solid var(--b1); border-radius: 4px;
+      padding: 4px 10px; font-size: 11px;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .pill-weight { font-weight: 700; color: var(--ac); }
+    .pill-label  { color: var(--t1); }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: MARKET BADGE
+    ════════════════════════════════════════════ */
+    .market-badge {
+      display: inline-block; padding: 2px 6px;
+      font-size: 9px; font-weight: 700; border-radius: 3px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .market-kospi  { background: rgba(96,168,214,0.18); color: #60A8D6; border: 1px solid rgba(96,168,214,0.35); }
+    .market-kosdaq { background: rgba(60,200,184,0.18); color: #3CC8B8; border: 1px solid rgba(60,200,184,0.35); }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: LIVE PILL
+    ════════════════════════════════════════════ */
+    .live-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 10px; border: 1px solid var(--b2); border-radius: 4px;
+      background: var(--s3); color: var(--t2);
+      font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .live-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--gr); box-shadow: 0 0 8px rgba(60,200,184,0.85);
+    }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: FILTER TABS
+    ════════════════════════════════════════════ */
+    .filter-tab {
+      padding: 4px 10px; border-radius: 4px; border: 1px solid var(--b2);
+      background: var(--s3); color: var(--t2); font-size: 11px;
+      cursor: pointer; font-family: inherit;
+    }
+    .filter-tab.active-blue { border-color: var(--ac); color: var(--ac); background: rgba(96,168,214,0.12); }
+    .filter-tab.active-teal { border-color: var(--gr); color: var(--gr); background: rgba(60,200,184,0.12); }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: SOURCE LINK ICON BUTTON
+    ════════════════════════════════════════════ */
+    .icon-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px; border-radius: 4px;
+      border: 1px solid var(--b2); background: var(--s3);
+      color: var(--t2); cursor: pointer;
+    }
+    .icon-btn:hover { border-color: var(--ac); color: var(--t1); background: rgba(96,168,214,0.10); }
+    .icon-btn svg { width: 12px; height: 12px; fill: currentColor; display: block; }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: INFO BUTTON + TOOLTIP
+    ════════════════════════════════════════════ */
+    .tip-wrap { position: relative; display: inline-flex; }
+    .info-btn {
+      width: 18px; height: 18px; border: 1px solid var(--b2); border-radius: 50%;
+      background: var(--s3); color: var(--t2); font-size: 10px; font-weight: 700;
+      cursor: help; display: inline-flex; align-items: center; justify-content: center;
+      line-height: 1;
+    }
+    .tooltip {
+      position: absolute; top: calc(100% + 8px); right: 0; width: 240px;
+      padding: 10px 12px; border-radius: 8px; border: 1px solid var(--b2);
+      background: #0c121c; color: var(--t1); font-size: 10px; line-height: 1.5;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35); z-index: 20;
+      opacity: 0; transform: translateY(-4px); pointer-events: none;
+      transition: 0.15s ease;
+    }
+    .tooltip .tt-label { color: #60A8D6; font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px; }
+    .tip-wrap:hover .tooltip { opacity: 1; transform: translateY(0); }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: TABLE
+    ════════════════════════════════════════════ */
+    .table-wrap { background: var(--s2); border: 1px solid var(--b1); border-radius: 8px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      padding: 8px 14px; text-align: left; font-size: 9px; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--t2); border-bottom: 1px solid var(--b2);
+      white-space: nowrap;
+    }
+    tbody tr { border-bottom: 1px solid rgba(27,42,66,0.65); transition: background 0.1s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--s4); }
+    tbody td { padding: 8px 14px; font-size: 12px; }
+    tbody tr.row-high { border-left: 2px solid var(--rd); }
+    tbody tr.row-mid  { border-left: 2px solid var(--am); }
+    .neg { color: var(--rd); }
+    .pos { color: var(--gr); }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: MINI BAR
+    ════════════════════════════════════════════ */
+    .bar-cell { display: flex; align-items: center; gap: 8px; }
+    .mini-bar-track { width: 60px; height: 6px; background: var(--s3); border-radius: 3px; overflow: hidden; }
+    .mini-bar-fill { height: 100%; border-radius: 3px; }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: SCORE BAR
+    ════════════════════════════════════════════ */
+    .score-wrap { display: flex; align-items: center; gap: 8px; }
+    .score-bar-track { width: 44px; height: 4px; background: var(--s3); border-radius: 2px; overflow: hidden; }
+    .score-bar-fill { height: 100%; border-radius: 2px; }
+    .score-high { color: var(--rd); }
+    .score-mid  { color: var(--am); }
+    .score-low  { color: var(--gr); }
+    .bar-high { background: var(--rd); }
+    .bar-mid  { background: var(--am); }
+    .bar-low  { background: var(--gr); }
+    .bar-teal { background: var(--gr); }
+    .bar-blue { background: var(--ac); }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: AI ANALYSIS CARD
+    ════════════════════════════════════════════ */
+    .ai-card {
+      background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+      border-left: 3px solid var(--pB); padding: 14px 18px;
+    }
+    .ai-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .ai-label { color: var(--t2); font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; flex: 1; }
+    .ai-badge {
+      background: rgba(60,200,184,0.12); color: var(--pB);
+      border: 1px solid rgba(60,200,184,0.28); border-radius: 4px;
+      font-size: 8px; padding: 2px 7px; text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .ai-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .ai-bullets li {
+      font-size: 12px; line-height: 1.55; padding-left: 16px; position: relative; color: var(--t1);
+    }
+    .ai-bullets li::before { content: "•"; position: absolute; left: 0; color: var(--pB); }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: FORMULA STRIP
+    ════════════════════════════════════════════ */
+    .formula-strip {
+      background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+      padding: 10px 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    }
+    .formula-label { color: var(--t2); font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; }
+
+    /* ════════════════════════════════════════════
+       COMPONENT: SEARCH INPUT
+    ════════════════════════════════════════════ */
+    .search-input {
+      background: var(--s3); border: 1px solid var(--b2);
+      color: var(--t1); border-radius: 5px; padding: 5px 10px;
+      font-size: 12px; font-family: inherit; outline: none;
+    }
+    .search-input::placeholder { color: var(--t3); }
+    .search-input:focus { border-color: var(--ac); }
+
+    /* ════════════════════════════════════════════
+       CSS VARIABLE REFERENCE TABLE
+    ════════════════════════════════════════════ */
+    .var-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    .var-table thead th {
+      text-align: left; padding: 6px 12px; font-size: 9px;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--t3); border-bottom: 1px solid var(--b1);
+    }
+    .var-table tbody td { padding: 5px 12px; border-bottom: 1px solid rgba(27,42,66,0.4); }
+    .var-table tbody tr:last-child td { border-bottom: none; }
+    .var-name { font-family: 'Courier New', monospace; color: var(--ac); font-size: 11px; }
+    .var-preview { display: inline-block; width: 16px; height: 16px; border-radius: 3px; vertical-align: middle; border: 1px solid rgba(255,255,255,0.1); }
+    .var-desc { color: var(--t2); }
+
+    /* ════════════════════════════════════════════
+       LAYOUT / SPACING REFERENCE
+    ════════════════════════════════════════════ */
+    .spacing-row { display: flex; align-items: center; gap: 16px; padding: 6px 0; border-bottom: 1px solid var(--b1); }
+    .spacing-row:last-child { border-bottom: none; }
+    .spacing-box { background: rgba(96,168,214,0.25); border-radius: 2px; flex-shrink: 0; }
+    .spacing-label { font-size: 10px; color: var(--t2); width: 60px; flex-shrink: 0; }
+    .spacing-desc { font-size: 10px; color: var(--t3); }
+
+    /* ════════════════════════════════════════════
+       CHART DEMO
+    ════════════════════════════════════════════ */
+    .chart-card {
+      background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .chart-card h3 {
+      font-size: 9px; font-weight: 600; color: var(--t2);
+      text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px;
+    }
+
+    /* ════════════════════════════════════════════
+       MISC UTILITIES
+    ════════════════════════════════════════════ */
+    .flex { display: flex; }
+    .flex-col { display: flex; flex-direction: column; }
+    .gap-4  { gap: 4px; }
+    .gap-6  { gap: 6px; }
+    .gap-8  { gap: 8px; }
+    .gap-10 { gap: 10px; }
+    .gap-12 { gap: 12px; }
+    .gap-16 { gap: 16px; }
+    .mt-4  { margin-top: 4px; }
+    .mt-8  { margin-top: 8px; }
+    .mt-12 { margin-top: 12px; }
+    .mono { font-family: 'Courier New', monospace; }
+    .dim  { color: var(--t3); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>DESIGN <span>SYSTEM</span></h1>
+    <p>Short Pressure Monitor · Dark data dashboard · v1.0</p>
+  </div>
+  <div class="flex gap-8" style="align-items:center">
+    <span class="live-pill"><span class="live-dot"></span><span>Reference</span></span>
+    <span class="badge badge-blue">Inter + Chart.js</span>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- ══════════════════════════════════════════
+       1. COLOR SYSTEM
+  ══════════════════════════════════════════ -->
+  <section class="section">
+    <h2 class="section-title">1 · Color System</h2>
+
+    <p class="swatch-group-label">Surfaces — layered from deepest to hover</p>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#07090f"></div><div class="swatch-info"><div class="swatch-var">--bg</div><div class="swatch-hex">#07090F</div><div class="swatch-desc">Page bg</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#0b1018"></div><div class="swatch-info"><div class="swatch-var">--s1</div><div class="swatch-hex">#0B1018</div><div class="swatch-desc">Deepest card</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#0f1520"></div><div class="swatch-info"><div class="swatch-var">--s2</div><div class="swatch-hex">#0F1520</div><div class="swatch-desc">Standard card</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#131c2a"></div><div class="swatch-info"><div class="swatch-var">--s3</div><div class="swatch-hex">#131C2A</div><div class="swatch-desc">Inner / pill</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#182236"></div><div class="swatch-info"><div class="swatch-var">--s4</div><div class="swatch-hex">#182236</div><div class="swatch-desc">Row hover</div></div></div>
+    </div>
+
+    <p class="swatch-group-label" style="margin-top:16px">Borders / Strokes</p>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#1b2a42"></div><div class="swatch-info"><div class="swatch-var">--b1</div><div class="swatch-hex">#1B2A42</div><div class="swatch-desc">Subtle border</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#213352"></div><div class="swatch-info"><div class="swatch-var">--b2</div><div class="swatch-hex">#213352</div><div class="swatch-desc">Card border</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#2a4068"></div><div class="swatch-info"><div class="swatch-var">--b3</div><div class="swatch-hex">#2A4068</div><div class="swatch-desc">Prominent</div></div></div>
+    </div>
+
+    <p class="swatch-group-label" style="margin-top:16px">Text Hierarchy</p>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#e8eef8"></div><div class="swatch-info"><div class="swatch-var">--t1</div><div class="swatch-hex">#E8EEF8</div><div class="swatch-desc">Primary text</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#a8bdd6"></div><div class="swatch-info"><div class="swatch-var">--t2</div><div class="swatch-hex">#A8BDD6</div><div class="swatch-desc">Labels</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#607a96"></div><div class="swatch-info"><div class="swatch-var">--t3</div><div class="swatch-hex">#607A96</div><div class="swatch-desc">Muted / hints</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#2a3a52"></div><div class="swatch-info"><div class="swatch-var">--t4</div><div class="swatch-hex">#2A3A52</div><div class="swatch-desc">Disabled</div></div></div>
+    </div>
+
+    <p class="swatch-group-label" style="margin-top:16px">Semantic / Accent Colors</p>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#60A8D6"></div><div class="swatch-info"><div class="swatch-var">--ac / --pA</div><div class="swatch-hex">#60A8D6</div><div class="swatch-desc">Blue · Active / links</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#3CC8B8"></div><div class="swatch-info"><div class="swatch-var">--gr / --pB</div><div class="swatch-hex">#3CC8B8</div><div class="swatch-desc">Teal · Positive / live</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#E86060"></div><div class="swatch-info"><div class="swatch-var">--rd</div><div class="swatch-hex">#E86060</div><div class="swatch-desc">Red · Negative / alert</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FFCC30"></div><div class="swatch-info"><div class="swatch-var">--am</div><div class="swatch-hex">#FFCC30</div><div class="swatch-desc">Amber · Warning / moderate</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FF9040"></div><div class="swatch-info"><div class="swatch-var">--pu / --pC</div><div class="swatch-hex">#FF9040</div><div class="swatch-desc">Orange · Chart accent C</div></div></div>
+    </div>
+
+    <p class="swatch-group-label" style="margin-top:16px">Background Gradient (applied on &lt;body&gt;)</p>
+    <div style="height:64px; border-radius:8px; border:1px solid var(--b1);
+      background: radial-gradient(circle at top left, rgba(96,168,214,0.15), transparent 35%),
+                  radial-gradient(circle at top right, rgba(60,200,184,0.12), transparent 28%),
+                  linear-gradient(180deg, #07090f 0%, #090d14 100%);">
+    </div>
+    <p style="font-size:9px;color:var(--t3);margin-top:6px">
+      radial-gradient blue (top-left) + radial-gradient teal (top-right) + linear-gradient bg
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       2. TYPOGRAPHY
+  ══════════════════════════════════════════ -->
+  <section class="section">
+    <h2 class="section-title">2 · Typography</h2>
+
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-title">Font Family</div>
+      <p style="font-size:13px;color:var(--t2)">
+        <strong style="color:var(--t1)">Inter</strong> — weights 300 · 400 · 500 · 600 · 700
+        &nbsp;·&nbsp; fallback: <code class="mono">system-ui, sans-serif</code>
+        &nbsp;·&nbsp; base size: <strong style="color:var(--t1)">13px</strong>
+        &nbsp;·&nbsp; line-height: <strong style="color:var(--t1)">1.5</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Type Scale</div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">Page Title</span>
+          <span class="type-meta-spec">15px · 700 · uppercase · ls 0.08em</span>
+        </div>
+        <div class="type-sample" style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em">
+          KOREA <span style="color:var(--ac)">SHORT PRESSURE</span> MONITOR
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">Section / Card Heading</span>
+          <span class="type-meta-spec">9px · 600 · uppercase · ls 0.12em · t2</span>
+        </div>
+        <div class="type-sample" style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--t2)">
+          Score Driver Breakdown
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">KPI Value</span>
+          <span class="type-meta-spec">20–22px · 700 · t1</span>
+        </div>
+        <div class="type-sample" style="font-size:22px;font-weight:700;color:var(--rd)">14</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">Table Body</span>
+          <span class="type-meta-spec">12px · 400 · t1</span>
+        </div>
+        <div class="type-sample" style="font-size:12px">Samsung Electronics</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">Table Header</span>
+          <span class="type-meta-spec">9px · 400 · uppercase · ls 0.08em · t2</span>
+        </div>
+        <div class="type-sample" style="font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--t2)">Short Turnover %</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">Label / Tag</span>
+          <span class="type-meta-spec">9px · uppercase · ls 0.14em · t2</span>
+        </div>
+        <div class="type-sample" style="font-size:9px;text-transform:uppercase;letter-spacing:0.14em;color:var(--t2)">High-Pressure Stocks</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">Body / Bullets</span>
+          <span class="type-meta-spec">12px · 400 · lh 1.55</span>
+        </div>
+        <div class="type-sample" style="font-size:12px;line-height:1.55;color:var(--t1)">
+          Short pressure is broadly distributed. Score-weighted return of −1.82% confirms the highest-conviction shorts are declining in line with positioning.
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">Sub / Note</span>
+          <span class="type-meta-spec">10px · 400 · lh 1.35 · #8fa3be</span>
+        </div>
+        <div class="type-sample" style="font-size:10px;color:#8fa3be;line-height:1.35">score ≥ 1.0 · today vs 5-day average</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-meta-name">Micro / Meta</span>
+          <span class="type-meta-spec">10–11px · t3</span>
+        </div>
+        <div class="type-sample" style="font-size:11px;color:var(--t3)">Last updated as 2026-05-27 15:44:00 KST</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       3. COMPONENT LIBRARY
+  ══════════════════════════════════════════ -->
+  <section class="section">
+    <h2 class="section-title">3 · Component Library</h2>
+
+    <!-- KPI Cards -->
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-title">KPI Cards — 4-column grid</div>
+      <div class="grid-4">
+        <div class="kpi-card">
+          <div class="kpi-label">High-Pressure Stocks</div>
+          <div style="flex:1">
+            <div class="kpi-value" style="color:var(--rd)">14</div>
+            <div class="kpi-sub">score ≥ 1.0</div>
+          </div>
+          <div class="kpi-footer">
+            <div class="kpi-sub"></div>
+            <span class="badge badge-red">BROAD</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Rising Short Pressure</div>
+          <div style="flex:1">
+            <div class="kpi-value" style="color:var(--am)">71.4%</div>
+            <div class="kpi-sub">of high-pressure stocks</div>
+          </div>
+          <div class="kpi-footer">
+            <div></div>
+            <span class="badge badge-yellow">RISING</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Score-Weighted Return</div>
+          <div style="flex:1">
+            <div class="kpi-value" style="color:var(--am)">−0.52%</div>
+            <div class="kpi-sub">Weak downside confirmation</div>
+          </div>
+          <div class="kpi-footer">
+            <div></div>
+            <span class="badge badge-yellow">WEAK</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Unconfirmed Shorts</div>
+          <div style="flex:1">
+            <div class="kpi-value" style="color:var(--gr)">1</div>
+            <div class="kpi-sub">Most shorts confirmed</div>
+          </div>
+          <div class="kpi-footer">
+            <div></div>
+            <span class="badge badge-teal">LOW</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-title">Badges &amp; Status Pills</div>
+      <div class="flex gap-8" style="flex-wrap:wrap;margin-bottom:12px">
+        <span class="badge badge-blue">FOCUSED</span>
+        <span class="badge badge-teal">CONFIRMED</span>
+        <span class="badge badge-red">HIGH RISK</span>
+        <span class="badge badge-yellow">MODERATE</span>
+        <span class="badge badge-muted">NEUTRAL</span>
+      </div>
+      <div class="flex gap-8" style="flex-wrap:wrap">
+        <span class="live-pill"><span class="live-dot"></span><span>Live</span></span>
+        <span class="live-pill">Date: 2026-05-27</span>
+        <span class="market-badge market-kospi">KOSPI</span>
+        <span class="market-badge market-kosdaq">KOSDAQ</span>
+      </div>
+    </div>
+
+    <!-- Buttons / controls -->
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-title">Controls — Filter Tabs, Icon Buttons, Search</div>
+      <div class="flex gap-8" style="flex-wrap:wrap;align-items:center;margin-bottom:12px">
+        <div class="flex gap-4">
+          <button class="filter-tab active-blue">All</button>
+          <button class="filter-tab">KOSPI</button>
+          <button class="filter-tab active-teal">KOSDAQ</button>
+        </div>
+        <div class="flex gap-6">
+          <button class="icon-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-6.36 15.36l1.41-1.41A7 7 0 1 1 19 12h2A9 9 0 0 0 12 3zm-1 5v6h2V8h-2zm0 8v2h2v-2h-2z"/></svg>
+          </button>
+          <button class="icon-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.8 1.1 1.8 1.1 1 .1 1.7-.7 2-1.1-.9-.1-2-.5-2.9-2-.7-1.1-.1-2.2.2-2.5-.1-.1-.4-1.1.1-2.3 0 0 .9-.3 3 .9a10.4 10.4 0 0 1 5.5 0c2.1-1.2 3-.9 3-.9.5 1.2.2 2.2.1 2.3.3.3.9 1.4.2 2.5-.9 1.5-2 1.9-2.9 2 .7.6 1.3 1.8 1.3 3.6v3.8c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+          </button>
+        </div>
+        <input class="search-input" placeholder="Search name / ticker…" style="width:200px" />
+        <div class="tip-wrap">
+          <button class="info-btn">i</button>
+          <div class="tooltip">
+            <div class="tt-label">Formula</div>
+            count(score ≥ 1.0 &amp; price return ≥ 0%)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formula strip -->
+    <div style="margin-bottom:16px">
+      <div class="formula-strip">
+        <span class="formula-label">Score =</span>
+        <span class="pill"><span class="pill-weight">0.35</span><span class="pill-label">× z(short turnover %)</span></span>
+        <span style="color:var(--t3)">+</span>
+        <span class="pill"><span class="pill-weight">0.15</span><span class="pill-label">× z(short turnover accel.)</span></span>
+        <span style="color:var(--t3)">+</span>
+        <span class="pill"><span class="pill-weight">0.25</span><span class="pill-label">× z(−foreign net flow)</span></span>
+        <span style="color:var(--t3)">+</span>
+        <span class="pill"><span class="pill-weight">0.10</span><span class="pill-label">× z(−price chg%)</span></span>
+      </div>
+    </div>
+
+    <!-- AI Card -->
+    <div class="ai-card" style="margin-bottom:16px">
+      <div class="ai-header">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--pB)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.85" aria-hidden="true">
+          <path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/>
+          <path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/>
+        </svg>
+        <span class="ai-label">AI Analysis</span>
+        <span class="ai-badge">Live</span>
+        <span style="color:var(--t3);font-size:9px">claude-sonnet-4-6</span>
+      </div>
+      <ul class="ai-bullets">
+        <li><strong>Short pressure is broad: 14 stocks exceed the threshold.</strong> 71% show rising short turnover versus their 5-day average, indicating active widespread bearish positioning.</li>
+        <li><strong>Price action weakly confirms.</strong> Score-weighted return of −0.52% shows modest declines — traction but not yet strong follow-through.</li>
+        <li>Pressure is concentrated in liquid names: Samsung Electronics, SK Hynix, POSCO rank at the top, which may reflect institutional or macro-driven positioning.</li>
+      </ul>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Market</th>
+            <th>Short Turnover %</th>
+            <th>Price Change %</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-high">
+            <td><strong style="color:var(--t3)">1</strong></td>
+            <td>
+              <div style="font-weight:600;font-size:12px">Samsung Electronics</div>
+              <div style="font-size:10px;color:var(--t3)">005930</div>
+            </td>
+            <td><span class="market-badge market-kospi">KOSPI</span></td>
+            <td>
+              <div class="bar-cell">
+                <span>18.42%</span>
+                <div class="mini-bar-track"><div class="mini-bar-fill bar-high" style="width:92%"></div></div>
+              </div>
+            </td>
+            <td><span class="neg">−2.14%</span></td>
+            <td>
+              <div class="score-wrap">
+                <span style="font-weight:700;font-size:14px;color:var(--rd)">2.34</span>
+                <div class="score-bar-track"><div class="score-bar-fill bar-high" style="width:100%"></div></div>
+              </div>
+            </td>
+          </tr>
+          <tr class="row-mid">
+            <td><strong style="color:var(--t3)">2</strong></td>
+            <td>
+              <div style="font-weight:600;font-size:12px">Kakao</div>
+              <div style="font-size:10px;color:var(--t3)">035720</div>
+            </td>
+            <td><span class="market-badge market-kospi">KOSPI</span></td>
+            <td>
+              <div class="bar-cell">
+                <span>9.81%</span>
+                <div class="mini-bar-track"><div class="mini-bar-fill bar-mid" style="width:49%"></div></div>
+              </div>
+            </td>
+            <td><span class="neg">−0.87%</span></td>
+            <td>
+              <div class="score-wrap">
+                <span style="font-weight:700;font-size:14px;color:var(--am)">0.74</span>
+                <div class="score-bar-track"><div class="score-bar-fill bar-mid" style="width:32%"></div></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--t3)">3</strong></td>
+            <td>
+              <div style="font-weight:600;font-size:12px">Celltrion</div>
+              <div style="font-size:10px;color:var(--t3)">068270</div>
+            </td>
+            <td><span class="market-badge market-kosdaq">KOSDAQ</span></td>
+            <td>
+              <div class="bar-cell">
+                <span>4.20%</span>
+                <div class="mini-bar-track"><div class="mini-bar-fill bar-low" style="width:21%"></div></div>
+              </div>
+            </td>
+            <td><span class="pos">+0.33%</span></td>
+            <td>
+              <div class="score-wrap">
+                <span style="font-weight:700;font-size:14px;color:var(--gr)">0.28</span>
+                <div class="score-bar-track"><div class="score-bar-fill bar-low" style="width:12%"></div></div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       4. CHARTS
+  ══════════════════════════════════════════ -->
+  <section class="section">
+    <h2 class="section-title">4 · Chart Style</h2>
+    <div class="grid-3">
+      <div class="chart-card">
+        <h3>Bar Chart</h3>
+        <div style="height:220px"><canvas id="demo-bar"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Stacked Horizontal Bar</h3>
+        <div style="height:220px"><canvas id="demo-hbar"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Scatter Plot</h3>
+        <div style="height:220px"><canvas id="demo-scatter"></canvas></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="card-title">Chart Theme Constants</div>
+      <div class="grid-2" style="margin-top:4px">
+        <div>
+          <p style="font-size:10px;color:var(--t3);margin-bottom:8px">Color tokens used in Chart.js configs</p>
+          <div class="flex flex-col gap-4">
+            <div class="flex gap-8" style="align-items:center"><span class="var-preview" style="background:#e8eef8"></span><code class="mono" style="font-size:10px;color:var(--ac)">text</code><span style="font-size:10px;color:var(--t3)">#E8EEF8 — tick labels</span></div>
+            <div class="flex gap-8" style="align-items:center"><span class="var-preview" style="background:#a8bdd6"></span><code class="mono" style="font-size:10px;color:var(--ac)">muted</code><span style="font-size:10px;color:var(--t3)">#A8BDD6 — axis titles, legend</span></div>
+            <div class="flex gap-8" style="align-items:center"><span class="var-preview" style="background:#213352"></span><code class="mono" style="font-size:10px;color:var(--ac)">grid</code><span style="font-size:10px;color:var(--t3)">#213352 — grid lines</span></div>
+            <div class="flex gap-8" style="align-items:center"><span class="var-preview" style="background:#60A8D6"></span><code class="mono" style="font-size:10px;color:var(--ac)">pA</code><span style="font-size:10px;color:var(--t3)">#60A8D6 — chart series A</span></div>
+            <div class="flex gap-8" style="align-items:center"><span class="var-preview" style="background:#3CC8B8"></span><code class="mono" style="font-size:10px;color:var(--ac)">pB</code><span style="font-size:10px;color:var(--t3)">#3CC8B8 — chart series B</span></div>
+            <div class="flex gap-8" style="align-items:center"><span class="var-preview" style="background:#FF9040"></span><code class="mono" style="font-size:10px;color:var(--ac)">pC</code><span style="font-size:10px;color:var(--t3)">#FF9040 — chart series C</span></div>
+            <div class="flex gap-8" style="align-items:center"><span class="var-preview" style="background:#607a96"></span><code class="mono" style="font-size:10px;color:var(--ac)">t3</code><span style="font-size:10px;color:var(--t3)">#607A96 — chart series D</span></div>
+            <div class="flex gap-8" style="align-items:center"><span class="var-preview" style="background:#E86060"></span><code class="mono" style="font-size:10px;color:var(--ac)">rd</code><span style="font-size:10px;color:var(--t3)">#E86060 — chart series E (alert)</span></div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:10px;color:var(--t3);margin-bottom:8px">Standard chart options snippet</p>
+          <pre style="font-size:9px;color:var(--t2);line-height:1.6;background:var(--s1);padding:12px;border-radius:6px;border:1px solid var(--b1);overflow-x:auto">const THEME = {
+  text:  '#e8eef8',
+  muted: '#a8bdd6',
+  grid:  '#213352',
+  pA:    '#60A8D6',
+  pB:    '#3CC8B8',
+  pC:    '#FF9040',
+  rd:    '#E86060',
+  t3:    '#607a96',
+};
+
+// Shared scale defaults
+scales: {
+  x: {
+    ticks: { color: THEME.muted },
+    grid:  { color: THEME.grid },
+    title: { color: THEME.muted }
+  },
+  y: {
+    ticks: { color: THEME.muted },
+    grid:  { color: THEME.grid }
+  }
+}
+
+// Legend
+legend: {
+  labels: {
+    color: THEME.muted,
+    font:  { size: 11 },
+    boxWidth: 10,
+    padding: 8
+  }
+}</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       5. LAYOUT & SPACING
+  ══════════════════════════════════════════ -->
+  <section class="section">
+    <h2 class="section-title">5 · Layout &amp; Spacing</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Grid Patterns</div>
+        <div class="flex flex-col gap-10" style="margin-top:4px;font-size:11px;color:var(--t2)">
+          <div><strong style="color:var(--t1)">4-column</strong> — KPI cards · <code class="mono" style="font-size:10px">grid-template-columns: repeat(4,1fr)</code></div>
+          <div><strong style="color:var(--t1)">3-column</strong> — charts row · <code class="mono" style="font-size:10px">grid-template-columns: 1fr 1fr 1fr</code></div>
+          <div><strong style="color:var(--t1)">2-column</strong> — detail panels · <code class="mono" style="font-size:10px">grid-template-columns: 1fr 1fr</code></div>
+          <div><strong style="color:var(--t1)">Responsive</strong> — ≤900px → 1-col charts, 2-col KPI · ≤600px → 1-col all</div>
+          <div><strong style="color:var(--t1)">Max width</strong> — 1440px centred, padding 0 24px</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Spacing Scale</div>
+        <div style="margin-top:4px">
+          <div class="spacing-row"><div class="spacing-label" style="font-family:monospace;color:var(--ac)">4px</div><div class="spacing-box" style="width:4px;height:4px"></div><div class="spacing-desc">micro gap (badge padding y)</div></div>
+          <div class="spacing-row"><div class="spacing-label" style="font-family:monospace;color:var(--ac)">6px</div><div class="spacing-box" style="width:6px;height:6px"></div><div class="spacing-desc">icon gap, mini bar</div></div>
+          <div class="spacing-row"><div class="spacing-label" style="font-family:monospace;color:var(--ac)">8px</div><div class="spacing-box" style="width:8px;height:8px"></div><div class="spacing-desc">tooltip padding, badge px</div></div>
+          <div class="spacing-row"><div class="spacing-label" style="font-family:monospace;color:var(--ac)">10px</div><div class="spacing-box" style="width:10px;height:10px"></div><div class="spacing-desc">pill padding, live-pill</div></div>
+          <div class="spacing-row"><div class="spacing-label" style="font-family:monospace;color:var(--ac)">12px</div><div class="spacing-box" style="width:12px;height:12px"></div><div class="spacing-desc">chart card padding</div></div>
+          <div class="spacing-row"><div class="spacing-label" style="font-family:monospace;color:var(--ac)">14px</div><div class="spacing-box" style="width:14px;height:14px"></div><div class="spacing-desc">card padding, KPI card</div></div>
+          <div class="spacing-row"><div class="spacing-label" style="font-family:monospace;color:var(--ac)">18px</div><div class="spacing-box" style="width:18px;height:18px"></div><div class="spacing-desc">AI card padding</div></div>
+          <div class="spacing-row"><div class="spacing-label" style="font-family:monospace;color:var(--ac)">24px</div><div class="spacing-box" style="width:24px;height:24px"></div><div class="spacing-desc">header / container padding</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="card-title">Border Radius</div>
+      <div class="flex gap-16" style="flex-wrap:wrap;margin-top:10px;align-items:flex-end">
+        <div class="flex flex-col gap-6" style="align-items:center">
+          <div style="width:48px;height:48px;background:var(--s3);border:1px solid var(--b2);border-radius:3px"></div>
+          <span style="font-size:9px;color:var(--t3)">3px — mini bar</span>
+        </div>
+        <div class="flex flex-col gap-6" style="align-items:center">
+          <div style="width:48px;height:48px;background:var(--s3);border:1px solid var(--b2);border-radius:4px"></div>
+          <span style="font-size:9px;color:var(--t3)">4px — tab / pill / badge</span>
+        </div>
+        <div class="flex flex-col gap-6" style="align-items:center">
+          <div style="width:48px;height:48px;background:var(--s3);border:1px solid var(--b2);border-radius:5px"></div>
+          <span style="font-size:9px;color:var(--t3)">5px — search input</span>
+        </div>
+        <div class="flex flex-col gap-6" style="align-items:center">
+          <div style="width:48px;height:48px;background:var(--s3);border:1px solid var(--b2);border-radius:8px"></div>
+          <span style="font-size:9px;color:var(--t3)">8px — cards, table</span>
+        </div>
+        <div class="flex flex-col gap-6" style="align-items:center">
+          <div style="width:48px;height:48px;background:var(--s3);border:1px solid var(--b2);border-radius:50%"></div>
+          <span style="font-size:9px;color:var(--t3)">50% — info btn, dot</span>
+        </div>
+        <div class="flex flex-col gap-6" style="align-items:center">
+          <div style="width:80px;height:28px;background:var(--s3);border:1px solid var(--b2);border-radius:999px"></div>
+          <span style="font-size:9px;color:var(--t3)">999px — status badge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       6. HEADER ANATOMY
+  ══════════════════════════════════════════ -->
+  <section class="section">
+    <h2 class="section-title">6 · Header Anatomy</h2>
+    <div style="border:1px solid var(--b2);border-radius:8px;overflow:hidden;margin-bottom:12px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px;background:rgba(11,16,24,0.95)">
+        <div>
+          <div class="flex gap-10" style="align-items:center;flex-wrap:wrap">
+            <span style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em">PAGE <span style="color:var(--ac)">TITLE</span> HERE</span>
+            <span class="live-pill"><span class="live-dot"></span><span>Live</span></span>
+            <span class="live-pill">Date: 2026-05-27</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:var(--t3);font-size:10px;margin-bottom:4px">Author Name | author@email.com</div>
+          <div class="flex gap-8" style="justify-content:flex-end;align-items:center">
+            <span style="color:var(--t3);font-size:10px">Source: Data Provider</span>
+            <button class="icon-btn">
+              <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.8 1.1 1.8 1.1 1 .1 1.7-.7 2-1.1-.9-.1-2-.5-2.9-2-.7-1.1-.1-2.2.2-2.5-.1-.1-.4-1.1.1-2.3 0 0 .9-.3 3 .9a10.4 10.4 0 0 1 5.5 0c2.1-1.2 3-.9 3-.9.5 1.2.2 2.2.1 2.3.3.3.9 1.4.2 2.5-.9 1.5-2 1.9-2.9 2 .7.6 1.3 1.8 1.3 3.6v3.8c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+            </button>
+          </div>
+          <div style="color:var(--t3);font-size:11px;margin-top:4px">Last updated as 2026-05-27 15:44:00 KST</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Header Rules</div>
+      <ul style="font-size:11px;color:var(--t2);display:flex;flex-direction:column;gap:6px;padding-left:14px;list-style:disc;margin-top:4px">
+        <li><strong style="color:var(--t1)">Sticky</strong> at <code class="mono" style="font-size:10px">top:0; z-index:30</code> with <code class="mono" style="font-size:10px">backdrop-filter:blur(12px)</code></li>
+        <li><strong style="color:var(--t1)">Background</strong> <code class="mono" style="font-size:10px">rgba(11,16,24,0.92)</code> — translucent so page bg gradient bleeds through at edges</li>
+        <li><strong style="color:var(--t1)">Border bottom</strong> <code class="mono" style="font-size:10px">1px solid var(--b1)</code></li>
+        <li><strong style="color:var(--t1)">Left</strong> — brand name + live dot pill + date pill. Title uppercase, accent color on keyword</li>
+        <li><strong style="color:var(--t1)">Right</strong> — author, data source text + icon buttons, timestamp · all right-aligned, no-wrap</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       7. CSS VARIABLE QUICK REFERENCE
+  ══════════════════════════════════════════ -->
+  <section class="section">
+    <h2 class="section-title">7 · CSS Variable Quick Reference</h2>
+    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:8px;overflow:hidden">
+      <table class="var-table">
+        <thead><tr><th>Variable</th><th>Value</th><th>Preview</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td class="var-name">--bg</td><td>#07090F</td><td><span class="var-preview" style="background:#07090f"></span></td><td class="var-desc">Page background</td></tr>
+          <tr><td class="var-name">--s1–s4</td><td>#0B1018 → #182236</td><td><span class="var-preview" style="background:linear-gradient(90deg,#0b1018,#182236)"></span></td><td class="var-desc">Card surface layers (dark → hover)</td></tr>
+          <tr><td class="var-name">--b1–b3</td><td>#1B2A42 → #2A4068</td><td><span class="var-preview" style="background:linear-gradient(90deg,#1b2a42,#2a4068)"></span></td><td class="var-desc">Border strokes (subtle → prominent)</td></tr>
+          <tr><td class="var-name">--t1–t4</td><td>#E8EEF8 → #2A3A52</td><td><span class="var-preview" style="background:linear-gradient(90deg,#e8eef8,#2a3a52)"></span></td><td class="var-desc">Text hierarchy (primary → disabled)</td></tr>
+          <tr><td class="var-name">--ac / --pA</td><td>#60A8D6</td><td><span class="var-preview" style="background:#60A8D6"></span></td><td class="var-desc">Blue accent — active states, links, sort indicator</td></tr>
+          <tr><td class="var-name">--gr / --pB</td><td>#3CC8B8</td><td><span class="var-preview" style="background:#3CC8B8"></span></td><td class="var-desc">Teal — live dot, AI card accent, positive values</td></tr>
+          <tr><td class="var-name">--rd</td><td>#E86060</td><td><span class="var-preview" style="background:#E86060"></span></td><td class="var-desc">Red — negative values, high-pressure indicator</td></tr>
+          <tr><td class="var-name">--am</td><td>#FFCC30</td><td><span class="var-preview" style="background:#FFCC30"></span></td><td class="var-desc">Amber — moderate / warning state</td></tr>
+          <tr><td class="var-name">--pu / --pC</td><td>#FF9040</td><td><span class="var-preview" style="background:#FF9040"></span></td><td class="var-desc">Orange — chart accent C, foreign sell series</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<script>
+const THEME = {
+  text: '#e8eef8', muted: '#a8bdd6', grid: '#213352',
+  pA: '#60A8D6', pB: '#3CC8B8', pC: '#FF9040', rd: '#E86060', t3: '#607a96',
+};
+const scaleOpts = {
+  x: { ticks: { color: THEME.muted, font: { size: 10 } }, grid: { color: THEME.grid } },
+  y: { ticks: { color: THEME.muted, font: { size: 10 } }, grid: { color: THEME.grid } },
+};
+
+// Demo bar chart
+new Chart(document.getElementById('demo-bar'), {
+  type: 'bar',
+  data: {
+    labels: ['A', 'B', 'C', 'D', 'E', 'F'],
+    datasets: [{ data: [4.2, 3.1, 2.8, 2.0, 1.5, 0.9], backgroundColor: 'rgba(60,200,184,0.80)', borderRadius: 3 }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ...scaleOpts.x, title: { display: true, text: 'Today − 5D Avg (%p)', color: THEME.muted, font: { size: 10 } } },
+      y: scaleOpts.y,
+    }
+  }
+});
+
+// Demo stacked horizontal bar
+new Chart(document.getElementById('demo-hbar'), {
+  type: 'bar',
+  data: {
+    labels: ['Stock A', 'Stock B', 'Stock C', 'Stock D'],
+    datasets: [
+      { label: 'Short Ratio',  data: [0.82, 0.65, 0.50, 0.30], backgroundColor: THEME.pA, borderWidth: 0 },
+      { label: '5D Avg',       data: [0.35, 0.28, 0.20, 0.15], backgroundColor: THEME.t3, borderWidth: 0 },
+      { label: 'Foreign Sell', data: [0.58, 0.40, 0.25, 0.18], backgroundColor: THEME.pC, borderWidth: 0 },
+      { label: 'Inst Sell',    data: [0.35, 0.22, 0.18, 0.10], backgroundColor: THEME.rd, borderWidth: 0 },
+      { label: 'Return',       data: [0.23, 0.18, 0.12, 0.05], backgroundColor: THEME.pB, borderWidth: 0 },
+    ]
+  },
+  options: {
+    indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { labels: { color: THEME.muted, font: { size: 9 }, boxWidth: 8, padding: 6 }, position: 'bottom' } },
+    scales: {
+      x: { stacked: true, ...scaleOpts.x, title: { display: true, text: 'Score contribution', color: THEME.muted, font: { size: 9 } } },
+      y: { stacked: true, ticks: { color: THEME.text, font: { size: 10 } }, grid: { color: THEME.grid } },
+    }
+  }
+});
+
+// Demo scatter
+new Chart(document.getElementById('demo-scatter'), {
+  type: 'scatter',
+  data: {
+    datasets: [
+      { label: 'KOSPI',  data: [{x:-2.1,y:2.34},{x:-0.8,y:1.20},{x:0.3,y:1.05},{x:-1.5,y:0.74},{x:0.8,y:0.42}], backgroundColor: 'rgba(96,168,214,0.80)', pointRadius: 6 },
+      { label: 'KOSDAQ', data: [{x:-1.2,y:1.80},{x:0.5,y:1.30},{x:-0.4,y:0.95},{x:1.1,y:0.60},{x:-0.9,y:0.38}], backgroundColor: 'rgba(60,200,184,0.80)', pointRadius: 6 },
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { labels: { color: THEME.muted, font: { size: 11 } } } },
+    scales: {
+      x: { ...scaleOpts.x, title: { display: true, text: 'Price Return %', color: THEME.muted } },
+      y: { ...scaleOpts.y, title: { display: true, text: 'Score', color: THEME.muted } },
+    }
+  }
+});
+</script>
+</body>
+</html>

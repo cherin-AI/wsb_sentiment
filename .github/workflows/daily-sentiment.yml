@@ -1,0 +1,39 @@
+name: WSB Daily Sentiment
+
+on:
+  schedule:
+    - cron: '0 21 * * *'  # 21:00 UTC = 05:00 HKT (+1 day) daily
+  workflow_dispatch:       # manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests anthropic
+
+      - name: Run sentiment analysis
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+        run: python scripts/fetch_and_analyze.py
+
+      - name: Commit updated sentiment.json
+        run: |
+          git config user.name "wsb-bot"
+          git config user.email "bot@wsb-sentiment.local"
+          git add docs/sentiment.json
+          git diff --cached --quiet || git commit -m "chore: daily sentiment update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
