@@ -20,7 +20,9 @@ Python's job: calculate every metric from those classifications.
 """
 
 import os
+import re
 import json
+import subprocess
 import requests
 import anthropic
 from datetime import datetime, timezone, timedelta
@@ -42,7 +44,48 @@ REDDIT_AUTH  = "https://www.reddit.com/api/v1/access_token"
 HOURS_WINDOW = 24  # fetch all posts from the last 24 hours
 
 
+# Matches individual P&L brags: "2100% gains", "up 400%", "$1M+", "printing 30x", etc.
+_PNL_RE = re.compile(
+    r'\b\d[\d,]*[xX%]\+?\s*(gain|gains|return|returns|profit|up|pump|print|printing)s?\b'
+    r'|\b(up|down|gained|lost|printing|printed)\s+\d[\d,]*[xX%]'
+    r'|\$\s*\d[\d,.]+\s*[KkMmBb]\+?\s*(gain|loss|profit|post|trade|return)s?'
+    r'|\bMultiple\s+\$\d'
+    r'|\b\d[\d,]*%\+?\s*(gain|gains|return|returns|profit)s?',
+    re.IGNORECASE,
+)
+
+def _clean_pnl(text: str) -> str:
+    return re.sub(_PNL_RE, lambda m: '[market momentum]', text)
+
+def sanitize_claude_result(result: dict) -> dict:
+    """Strip individual P&L figures from bullets, signals, and summary."""
+    for theme in result.get("themes", []):
+        theme["bullets"] = [_clean_pnl(b) for b in theme.get("bullets", [])]
+    for ticker in result.get("tickers", []):
+        ticker["signal"] = _clean_pnl(ticker.get("signal", ""))
+    if "summary" in result:
+        if isinstance(result["summary"], list):
+            for item in result["summary"]:
+                if isinstance(item, dict) and "text" in item:
+                    item["text"] = _clean_pnl(item["text"])
+        else:
+            result["summary"] = _clean_pnl(result["summary"])
+    return result
+
+
 # ── Reddit ───────────────────────────────────────────────────────────────────
+
+def curl_get_json(url: str, params: dict | None = None) -> dict:
+    """Fetch a Reddit JSON endpoint via subprocess curl (bypasses TLS fingerprint block)."""
+    if params:
+        url = url + "?" + "&".join(f"{k}={v}" for k, v in params.items())
+    result = subprocess.run(
+        ["curl", "-s", "-H", f"User-Agent: {REDDIT_UA}", url],
+        capture_output=True, text=True, timeout=20,
+    )
+    result.check_returncode()
+    return json.loads(result.stdout)
+
 
 def get_reddit_token(client_id: str, client_secret: str) -> str:
     r = requests.post(
@@ -116,17 +159,13 @@ def fetch_wsb_posts_authenticated(token: str) -> list[dict]:
 def fetch_comments(post_id: str) -> list[str]:
     """Fetch top 5 comments for a post via public JSON API (no OAuth needed)."""
     try:
-        r = requests.get(
+        data = curl_get_json(
             f"https://www.reddit.com/r/wallstreetbets/comments/{post_id}.json",
-            headers=REDDIT_HDR,
-            params={"limit": 5, "depth": 1, "sort": "top"},
-            timeout=15,
+            {"limit": 5, "depth": 1, "sort": "top"},
         )
-        if not r.ok:
-            return []
         return [
             c["data"].get("body", "")[:200]
-            for c in r.json()[1]["data"]["children"]
+            for c in data[1]["data"]["children"]
             if c["kind"] == "t1"
         ][:5]
     except Exception:
@@ -141,14 +180,7 @@ def fetch_wsb_posts_unauthenticated() -> list[dict]:
 
     while True:
         params = {"limit": 100, **({"after": after} if after else {})}
-        r = requests.get(
-            "https://www.reddit.com/r/wallstreetbets/new.json",
-            headers=REDDIT_HDR,
-            params=params,
-            timeout=15,
-        )
-        r.raise_for_status()
-        data = r.json()["data"]
+        data = curl_get_json("https://www.reddit.com/r/wallstreetbets/new.json", params)["data"]
 
         hit_cutoff = False
         for child in data["children"]:
@@ -207,7 +239,7 @@ PART 2 — Holistic sentiment score:
     This is your AI judgment — not a formula. Be honest, not generous.
 
 PART 3 — Qualitative analysis (themes, tickers, narrative):
-  - themes: 5–7 dominant topics ordered hottest first
+  - themes: exactly 6 dominant topics ordered hottest first. Always return exactly 6 — combine minor themes or add a broader catch-all theme (e.g. "General Market Mood") if needed to reach 6
   - tickers: top 8 by mention count across all posts + comments
   - summary: 2–3 sentence punchy WSB narrative
 
@@ -236,13 +268,19 @@ JSON schema:
       "signal": "<one short phrase describing WSB attitude>"
     }
   ],
-  "summary": "<punchy 2-3 sentence WSB narrative>"
+  "summary": [
+    {"text": "<1-3 sentences, punchy WSB voice, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"},
+    {"text": "<1-3 sentences, punchy WSB voice, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"},
+    {"text": "<1-3 sentences, punchy WSB voice, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"}
+  ]
 }
 
 Rules:
 - bullets: exactly 4 per theme, WSB voice, no fluff
 - tickers: top 8 by mention count only
+- summary: exactly 3 items. tag must be one of: "bullish" (positive momentum, buying energy), "bearish" (fear, selling, losses), "notable" (key observation, neutral but important)
 - Do not invent post_classifications entries — one per input post, in order
+- NEVER include specific individual P&L figures anywhere — no percentage gains/losses (e.g. "up 2100%", "printing 2000% gains"), no dollar amounts tied to individual trades (e.g. "$1M+ gain posts", "$50k loss"), no "X gains", "X returns" for specific people or tickers. Describe collective market mood and themes instead (e.g. "retail euphoria spreading" not "RKLB up 2100%")
 """
 
 
@@ -356,7 +394,7 @@ def main():
     posts_text = posts_to_text(posts)
 
     print("Analyzing with Claude…")
-    claude_result = analyze_with_claude(posts_text, len(posts), api_key)
+    claude_result = sanitize_claude_result(analyze_with_claude(posts_text, len(posts), api_key))
 
     classifications = claude_result.get("post_classifications", [])
     if len(classifications) != len(posts):

@@ -16,9 +16,9 @@
     --b1: #1b2a42;
     --b2: #213352;
     --b3: #2a4068;
-    --t1: #e8eef8;
-    --t2: #a8bdd6;
-    --t3: #607a96;
+    --t1: #f5f8ff;
+    --t2: #c8daf0;
+    --t3: #90aec8;
     --t4: #2a3a52;
     --ac: #60A8D6;
     --gr: #3CC8B8;
@@ -98,14 +98,25 @@
   .score-summary { }
   .score-ai-header { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
   .score-ai-label { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); }
-  .score-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-  .score-bullets li {
-    font-size: 12px; line-height: 1.55; padding-left: 16px; position: relative; color: var(--t1);
+  .score-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .score-bullet-card {
+    background: var(--s2); border-radius: 6px; padding: 10px 12px;
+    border-left: 3px solid var(--ac); display: flex; flex-direction: column; gap: 6px;
   }
-  .score-bullets li::before { content: "•"; position: absolute; left: 0; color: var(--ac); }
-  .gauge-track { width: 100%; height: 5px; background: var(--s3); border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
-  .gauge-fill { height: 100%; border-radius: 3px; transition: width 1s ease; }
-  .gauge-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--t3); letter-spacing: 0.04em; }
+  .score-bullet-card.tag-bullish { border-left-color: var(--gr); }
+  .score-bullet-card.tag-bearish { border-left-color: var(--rd); }
+  .score-bullet-card.tag-notable { border-left-color: var(--ac); }
+  .score-bullet-tag {
+    font-size: 8px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 2px 6px; border-radius: 3px; align-self: flex-start;
+  }
+  .tag-bullish .score-bullet-tag { background: rgba(60,200,184,0.15); color: var(--gr); }
+  .tag-bearish .score-bullet-tag { background: rgba(232,96,96,0.15); color: var(--rd); }
+  .tag-notable .score-bullet-tag { background: rgba(96,168,214,0.15); color: var(--ac); }
+  .score-bullet-text { font-size: 12px; line-height: 1.55; color: var(--t1); }
+  .score-gauge-col { flex: 0 0 300px; max-width: 300px; text-align: center; }
+  .score-gauge-col .score-label { text-align: left; }
+  .learn-more { display: block; margin-top: 8px; }
 
   /* ── KPI cards ── */
   .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
@@ -159,13 +170,10 @@
   .heat-rising { border-color: rgba(255,204,48,0.45); color: #ffe08a; background: rgba(255,204,48,0.10); }
   .heat-cool   { border-color: rgba(96,168,214,0.45); color: #9fd0f1; background: rgba(96,168,214,0.10); }
   .theme-bullets { list-style: none; margin-bottom: 12px; }
-  .theme-bullets li { font-size: 11px; color: var(--t3); padding: 2px 0; display: flex; gap: 6px; line-height: 1.5; }
+  .theme-bullets li { font-size: 11px; color: var(--t2); padding: 2px 0; display: flex; gap: 6px; line-height: 1.5; }
   .theme-bullets li::before { content: '•'; color: var(--ac); flex-shrink: 0; }
   .theme-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--b1); padding-top: 10px; margin-top: 4px; }
-  .theme-score-wrap { display: flex; align-items: center; gap: 6px; flex: 1; margin-right: 12px; }
-  .theme-score-bar { flex: 1; height: 3px; background: var(--s3); border-radius: 2px; overflow: hidden; }
-  .theme-score-fill { height: 100%; border-radius: 2px; }
-  .theme-score-num { font-size: 10px; font-weight: 600; }
+  .theme-score-wrap { display: none; }
   .theme-tickers { display: flex; gap: 4px; flex-wrap: wrap; }
   .ticker-chip { font-size: 9px; padding: 2px 6px; border-radius: 4px; background: var(--s3); color: var(--t2); border: 1px solid var(--b1); }
 
@@ -195,12 +203,26 @@
   .mention-track { display: flex; align-items: center; gap: 8px; }
   .mbar { height: 4px; border-radius: 2px; background: var(--ac); opacity: 0.6; }
   .mention-num { font-size: 11px; color: var(--t2); }
-  .signal-text { font-size: 11px; color: var(--t3); }
+  .signal-text { font-size: 11px; color: var(--t2); }
 
 
   /* ── Loading / Error ── */
   .loading { text-align: center; padding: 4rem; font-size: 13px; color: var(--t3); }
   .error { background: rgba(232,96,96,0.10); border: 1px solid rgba(232,96,96,0.3); border-radius: 8px; padding: 12px 16px; color: #ff9b9b; font-size: 12px; margin-bottom: 1rem; }
+
+  /* ── Learn more link ── */
+  .learn-more { display: block; font-size: 11px; color: var(--ac); margin-top: 10px; text-decoration: underline; text-underline-offset: 3px; opacity: 0.85; }
+  .learn-more:hover { opacity: 1; }
+
+  /* ── FAQ ── */
+  .faq-section { max-width: 1100px; margin: 0 auto; padding: 0 2rem 4rem; }
+  .faq-divider { border: none; border-top: 1px solid var(--b1); margin: 2rem 0; }
+  .faq-title { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--t3); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+  .faq-title::before { content: ''; display: inline-block; width: 3px; height: 12px; background: var(--ac); border-radius: 2px; flex-shrink: 0; }
+  .faq-list { display: flex; flex-direction: column; gap: 20px; }
+  .faq-item {}
+  .faq-q { font-size: 13px; font-weight: 600; color: var(--t1); margin-bottom: 6px; }
+  .faq-a { font-size: 12px; color: var(--t2); line-height: 1.7; }
 
   @media (max-width: 768px) {
     .container { padding: 1rem; }
@@ -211,7 +233,7 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
 <header>
   <div>
@@ -232,6 +254,49 @@
 </main>
 
 <script>
+function buildGaugeSVG(score, scoreColor) {
+  const W=300,H=200,cx=150,cy=144,ro=112,ri=70,mid=91,GAP=1.8;
+  const segs=[
+    {a1:180,a2:144,color:'#c03838',label:['EXTREME','FEAR']},
+    {a1:144,a2:108,color:'#c07020',label:['FEAR']},
+    {a1:108,a2:72, color:'#3a5870',label:['NEUTRAL']},
+    {a1:72, a2:36, color:'#1880b0',label:['GREED']},
+    {a1:36, a2:0,  color:'#18a880',label:['EXTREME','GREED']},
+  ];
+  const activeIdx=Math.min(Math.floor(score/20),4);
+  function p(r,deg){const rad=deg*Math.PI/180;return[(cx+r*Math.cos(rad)).toFixed(1),(cy-r*Math.sin(rad)).toFixed(1)];}
+  const paths=segs.map(function(s,i){
+    const[ox1,oy1]=p(ro,s.a1-GAP),[ox2,oy2]=p(ro,s.a2+GAP);
+    const[ix2,iy2]=p(ri,s.a2+GAP),[ix1,iy1]=p(ri,s.a1-GAP);
+    const d='M'+ox1+','+oy1+' A'+ro+','+ro+' 0 0,0 '+ox2+','+oy2+' L'+ix2+','+iy2+' A'+ri+','+ri+' 0 0,1 '+ix1+','+iy1+'Z';
+    return'<path d="'+d+'" fill="'+(i===activeIdx?s.color:'#162030')+'"/>';
+  }).join('');
+  const labels=segs.map(function(s,i){
+    const ang=(s.a1+s.a2)/2;
+    const[lx,ly]=p(mid,ang);
+    const isActive=i===activeIdx;
+    const col=isActive?'#ffffff':'#5a7a98';
+    const lines=s.label;
+    const by=parseFloat(ly)+(lines.length>1?-5:2);
+    return lines.map(function(line,j){
+      return'<text x="'+lx+'" y="'+(by+j*10).toFixed(1)+'" text-anchor="middle" fill="'+col+'" font-size="8" font-weight="700" font-family="Inter,system-ui,sans-serif" letter-spacing="0.04em">'+line+'</text>';
+    }).join('');
+  }).join('');
+  // Dot ticks on outer arc edge + scale numbers outside the arc
+  const scale=[{v:'0',a:180},{v:'20',a:144},{v:'40',a:108},{v:'60',a:72},{v:'80',a:36},{v:'100',a:0}];
+  const dots=scale.map(function(n){const[dx,dy]=p(ro+2,n.a);return'<circle cx="'+dx+'" cy="'+dy+'" r="2.5" fill="#5a7890"/>';}).join('');
+  const nums=scale.map(function(n){const[lx,ly]=p(ro+16,n.a);return'<text x="'+lx+'" y="'+ly+'" text-anchor="middle" dominant-baseline="middle" fill="#90b4cc" font-size="8" font-weight="500" font-family="Inter,system-ui,sans-serif">'+n.v+'</text>';}).join('');
+  const ndeg=180-score*1.8;
+  const[nx,ny]=p(ro-8,ndeg);
+  const bRad=(ndeg+90)*Math.PI/180,bw=3.5;
+  const b1x=(cx+bw*Math.cos(bRad)).toFixed(1),b1y=(cy-bw*Math.sin(bRad)).toFixed(1);
+  const b2x=(cx-bw*Math.cos(bRad)).toFixed(1),b2y=(cy+bw*Math.sin(bRad)).toFixed(1);
+  const needle='<polygon points="'+b1x+','+b1y+' '+nx+','+ny+' '+b2x+','+b2y+'" fill="'+scoreColor+'"/>';
+  const pivot='<circle cx="'+cx+'" cy="'+cy+'" r="6" fill="var(--s1)" stroke="'+scoreColor+'" stroke-width="2"/>';
+  const scoreNum='<text x="'+cx+'" y="'+(cy+30)+'" text-anchor="middle" fill="'+scoreColor+'" font-size="30" font-weight="700" font-family="Inter,system-ui,sans-serif">'+score+'</text>';
+  return'<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+W+'px;display:block;margin:8px 0;" xmlns="http://www.w3.org/2000/svg">'+paths+dots+nums+labels+needle+pivot+scoreNum+'</svg>';
+}
+
 async function load() {
   const root = document.getElementById('root');
   let data;
@@ -265,10 +330,11 @@ async function load() {
     <!-- Score Section -->
     <div class="score-section">
       <div class="score-top">
-        <div>
-          <div class="score-label">WSB Greed Index</div>
-          <div class="score-number" style="color:${scoreColor}">${data.overall_score}</div>
-          <span class="score-tag" style="${scoreTagStyle}">${data.overall_label || '—'}</span>
+        <div class="score-gauge-col">
+          <div class="score-label">WSB Fear &amp; Greed Index</div>
+          ${buildGaugeSVG(data.overall_score, scoreColor)}
+          <span class="score-tag" style="${scoreTagStyle}">${data.overall_label || ''}</span>
+          <a href="#faq" class="learn-more">Learn more about the index</a>
         </div>
         <div class="score-summary">
           <div class="score-ai-header">
@@ -279,15 +345,13 @@ async function load() {
             <span class="score-ai-label">AI Analysis</span>
           </div>
           <ul class="score-bullets">
-            ${(data.summary || '').split(/(?<=\.)\s+/).filter(s => s.trim()).map(s => `<li>${s.replace(/\.$/, '')}</li>`).join('')}
+            ${(Array.isArray(data.summary) ? data.summary : []).slice(0, 3).map(item => {
+              const tag = item.tag || 'notable';
+              const label = tag.charAt(0).toUpperCase() + tag.slice(1);
+              return `<li><div class="score-bullet-card tag-${tag}"><span class="score-bullet-tag">${label}</span><span class="score-bullet-text">${item.text || ''}</span></div></li>`;
+            }).join('')}
           </ul>
         </div>
-      </div>
-      <div class="gauge-track">
-        <div class="gauge-fill" style="width:${data.overall_score}%;background:${gaugeColor};"></div>
-      </div>
-      <div class="gauge-labels">
-        <span>Extreme Fear</span><span>Fear</span><span>Neutral</span><span>Greed</span><span>Extreme Greed</span>
       </div>
     </div>
 
@@ -317,8 +381,8 @@ async function load() {
     </div>
 
     <!-- Bull/Bear Bar -->
+    <div class="section-title">Sentiment Breakdown</div>
     <div class="bull-bear">
-      <div class="section-title" style="margin-bottom:14px">Sentiment Breakdown</div>
       <div class="bb-row">
         <span class="bb-name">Bullish</span>
         <div class="bb-bar"><div class="bb-fill" style="width:${data.bull_pct||0}%;background:var(--gr);"></div></div>
@@ -337,12 +401,9 @@ async function load() {
     </div>
 
     <!-- Themes -->
-    <div class="section-title">Trending Themes</div>
+    <div class="section-title">Trending Themes &amp; Post Highlights</div>
     <div class="theme-grid">
       ${(data.themes || []).map(th => {
-        const sc = th.sentiment_score || 0;
-        const fillColor = sc >= 70 ? '#3CC8B8' : sc >= 40 ? '#FFCC30' : '#E86060';
-        const numColor = sc >= 70 ? 'var(--gr)' : sc >= 40 ? 'var(--am)' : 'var(--rd)';
         const badgeCls = th.heat === 'hot' ? 'heat-hot' : th.heat === 'rising' ? 'heat-rising' : 'heat-cool';
         const badgeLabel = th.heat === 'hot' ? '🔥 HOT' : th.heat === 'rising' ? '⚡ RISING' : '❄ COOL';
         return `
@@ -355,10 +416,6 @@ async function load() {
               ${(th.bullets || []).map(b => `<li>${b}</li>`).join('')}
             </ul>
             <div class="theme-footer">
-              <div class="theme-score-wrap">
-                <div class="theme-score-bar"><div class="theme-score-fill" style="width:${sc}%;background:${fillColor};"></div></div>
-                <span class="theme-score-num" style="color:${numColor}">${sc}</span>
-              </div>
               <div class="theme-tickers">
                 ${(th.tickers || []).map(t => `<span class="ticker-chip">${t}</span>`).join('')}
               </div>
@@ -402,13 +459,48 @@ async function load() {
 
 
 
-    <div style="text-align:center;font-size:10px;color:var(--t4);margin-top:1.5rem;">
-      Source: r/wallstreetbets · Analyzed by Claude API · Auto-updated daily 05:00 AM HKT
-    </div>
   `;
 }
 
 load();
 </script>
+
+<section id="faq">
+  <div class="faq-section">
+    <div class="section-title">Fear &amp; Greed Index FAQs</div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-q">What is the WSB Fear &amp; Greed Index?</div>
+        <div class="faq-a">The WSB Fear &amp; Greed Index measures the collective mood of Reddit's WallStreetBets (WSB) forum, one of the most active retail trading forums for US stock and options markets. When WSB is greedy, retail traders are piling in and chasing momentum. When fearful, they're pulling back, cutting exposure, and bracing for further downside. The index gives you a single number (0–100) to cut through the noise.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How is WSB Fear &amp; Greed Calculated?</div>
+        <div class="faq-a">Each day's WSB posts are analyzed by AI and classified as bullish, bearish or neutral. The final score blends a formula signal (share of bullish vs. bearish posts) with AI's holistic read of the batch - its overall energy, sarcasm, and tone. WSB communicates heavily in irony and memes, so raw post counts alone can miss the actual sentiment.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How Often is the Index Updated?</div>
+        <div class="faq-a">The index is recalculated once daily at 5:00 AM HKT, after the US market session closes. Each update analyzes all WSB posts from the prior 24 hours, typically 50–100 posts.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How to Use the WSB Fear &amp; Greed Index?</div>
+        <div class="faq-a">Use it as a contrarian signal alongside your own research, not as trading advice. Extreme Greed (80+) often means retail is overextended. Extreme Fear (below 20) can signal capitulation. WSB tends to be a lagging amplifier of market moves, so sharp swings in the index are worth watching. Combined with the trending themes and hot tickers, it gives you a ground-level view of where retail attention is concentrated.</div>
+      </div>
+
+    </div>
+
+    <div style="padding-top:1.5rem;">
+      <a href="#top" style="font-size:11px;color:var(--ac);text-decoration:none;border-bottom:1px solid var(--ac);padding-bottom:1px;">&#8593; Return to WSB Fear &amp; Greed Index</a>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center;font-size:10px;color:var(--t3);padding:2rem 0 3rem;">
+  Source: r/wallstreetbets &middot; Auto-updated daily 05:00 AM HKT
+</footer>
+
 </body>
 </html>

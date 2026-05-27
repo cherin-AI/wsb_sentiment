@@ -1,9 +1,7 @@
 name: WSB Daily Sentiment
 
 on:
-  schedule:
-    - cron: '0 21 * * *'  # 21:00 UTC = 05:00 HKT (+1 day) daily
-  workflow_dispatch:       # manual trigger from GitHub UI
+  workflow_dispatch:       # manual trigger from GitHub UI only (local Mac cron replaced scheduled run)
 
 permissions:
   contents: write
