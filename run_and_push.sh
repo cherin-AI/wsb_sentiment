@@ -13,3 +13,10 @@ python3 scripts/fetch_and_analyze.py
 git add docs/sentiment.json
 git diff --cached --quiet || git commit -m "chore: daily sentiment update $(date '+%Y-%m-%d %H:%M HKT')"
 git push
+
+# Extract score and label for notification
+SCORE=$(python3 -c "import json; d=json.load(open('docs/sentiment.json')); print(d['overall_score'])")
+LABEL=$(python3 -c "import json; d=json.load(open('docs/sentiment.json')); print(d['overall_label'])")
+
+# macOS notification
+osascript -e "display notification \"Score: ${SCORE} (${LABEL}) — dashboard updated\" with title \"WSB Fear & Greed Index\" sound name \"Default\""
