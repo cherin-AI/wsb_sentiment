@@ -1,17 +1,17 @@
 {
-  "bull_pct": 68,
-  "bear_pct": 23,
-  "neutral_pct": 9,
-  "bull_bear_ratio": 3.0,
-  "overall_score": 75,
+  "bull_pct": 74,
+  "bear_pct": 22,
+  "neutral_pct": 4,
+  "bull_bear_ratio": 3.4,
+  "overall_score": 77,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 68,
+    "formula_score": 74,
     "ai_score": 78,
-    "bull_count": 48,
-    "bear_count": 16,
-    "neutral_count": 7,
-    "total_posts": 71,
+    "bull_count": 51,
+    "bear_count": 15,
+    "neutral_count": 3,
+    "total_posts": 69,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,23 +19,26 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 71,
+  "post_count": 69,
   "hours_window": 24,
   "themes": [
     {
       "id": "memory-mania",
-      "title": "Memory Chip Mania",
+      "title": "Memory Chip Moon Mission",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MU hits $1T market cap insanity",
-        "UBS $1,625 price target ridiculous",
-        "Everyone became millionaire on memory",
-        "NAND prices hiking 100%+ quarterly"
+        "MU hitting $1T market cap",
+        "UBS price target $1,625",
+        "Millionaire maker for many regards",
+        "Bears getting absolutely wrecked"
       ],
-      "sentiment_score": 88,
+      "sentiment_score": 92,
       "tickers": [
-        "MU"
+        "MU",
+        "SNDK",
+        "NVDA",
+        "AMD"
       ]
     },
     {
@@ -44,12 +47,12 @@
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "RKLB +2100% gains posting",
-        "SpaceX IPO merger speculation wild",
-        "LUNR buying dips religiously",
-        "Space Force contracts printing money"
+        "RKLB up 2100% gains",
+        "SpaceX IPO rumors heating up",
+        "LUNR getting volatility reality check",
+        "Space Force contracts flowing"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 85,
       "tickers": [
         "RKLB",
         "LUNR",
@@ -57,95 +60,96 @@
       ]
     },
     {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Frenzy",
-      "icon": "flame",
+      "id": "millionaire-makers",
+      "title": "Millionaire Making Machine",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
-        "Semiconductor plays going vertical",
-        "Data center power crunch narrative",
-        "Boomer stocks joining AI party",
-        "NVDA sideways but everything explodes"
+        "Multiple million dollar portfolios posted",
+        "AMD guy flexing $11M gains",
+        "30x returns becoming common",
+        "WSB degens finally winning big"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 88,
       "tickers": [
         "AMD",
-        "NVDA",
+        "MU",
         "ASTS",
+        "PLTR"
+      ]
+    },
+    {
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Boom",
+      "icon": "cpu",
+      "heat": "rising",
+      "bullets": [
+        "Power grid bottlenecks emerging",
+        "Datacenter demand exploding",
+        "CRSR pivoting to AI workstations",
+        "Hyperscaler capex continuing"
+      ],
+      "sentiment_score": 83,
+      "tickers": [
+        "FRMI",
+        "CLSK",
+        "MARA",
         "CRSR"
       ]
     },
     {
-      "id": "millionaire-flex",
-      "title": "Millionaire Flex Posts",
-      "icon": "trending-up",
+      "id": "profit-taking",
+      "title": "When to Sell Debates",
+      "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "$1M club members posting gains",
-        "30x returns from space plays",
-        "$11M AMD position flex",
-        "Regards hitting lottery on options"
+        "Screenshot worthy gains creating dilemmas",
+        "Diamond hands vs taking profits",
+        "FOMO preventing rational decisions",
+        "Greed overriding common sense"
       ],
-      "sentiment_score": 90,
+      "sentiment_score": 70,
       "tickers": [
-        "AMD",
-        "ASTS",
+        "MU",
         "RKLB",
-        "MU"
+        "ASTS"
       ]
     },
     {
-      "id": "meme-revival",
-      "title": "Meme Stock Revival",
-      "icon": "fire",
-      "heat": "rising",
+      "id": "bear-extinction",
+      "title": "Bear Market Denial",
+      "icon": "skull",
+      "heat": "cool",
       "bullets": [
-        "Nokia boomer phones narrative",
-        "BlackBerry making phones joke",
-        "Corsair slapping AI stickers",
-        "Old school tech getting pumped"
+        "Puts getting obliterated daily",
+        "Bulls calling market top",
+        "Crystal ball predictions failing",
+        "Short sellers getting squeezed"
+      ],
+      "sentiment_score": 25,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "SOXS"
+      ]
+    },
+    {
+      "id": "meme-resurrection",
+      "title": "Boomer Stock Revival",
+      "icon": "trending-up",
+      "heat": "cool",
+      "bullets": [
+        "Nokia breaking out unexpectedly",
+        "BlackBerry getting renewed interest",
+        "Take Two gaming YOLO",
+        "Old tech finding new life"
       ],
       "sentiment_score": 75,
       "tickers": [
         "NOK",
         "BB",
-        "CRSR",
-        "HOOD"
-      ]
-    },
-    {
-      "id": "bear-extinction",
-      "title": "Bear Extinction Event",
-      "icon": "skull",
-      "heat": "cool",
-      "bullets": [
-        "Shorts getting absolutely demolished",
-        "Bull market too strong",
-        "Puts buyers losing everything",
-        "Bears calling tops unsuccessfully"
-      ],
-      "sentiment_score": 20,
-      "tickers": [
-        "SOXS",
-        "SPY"
-      ]
-    },
-    {
-      "id": "fomo-regret",
-      "title": "FOMO Regret Chronicles",
-      "icon": "trending-down",
-      "heat": "cool",
-      "bullets": [
-        "Sold too early stories",
-        "Missed million dollar trades",
-        "Paper hands selling winners",
-        "Timing market perfectly wrong"
-      ],
-      "sentiment_score": 35,
-      "tickers": [
-        "MU",
-        "LUNR",
-        "DOGE"
+        "TTWO",
+        "HPE"
       ]
     }
   ],
@@ -153,53 +157,53 @@
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 45,
-      "signal": "Millionaire maker machine"
+      "mentions": 38,
+      "signal": "Trillion dollar memory moon mission"
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 28,
-      "signal": "Rocket ship to moon"
+      "mentions": 15,
+      "signal": "2100% rocket ship to space"
     },
     {
       "symbol": "AMD",
       "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "$11M flex position"
+      "mentions": 13,
+      "signal": "$11M flex making regards jealous"
     },
     {
       "symbol": "LUNR",
       "sentiment": "mixed",
-      "mentions": 17,
-      "signal": "Dip buying opportunity"
+      "mentions": 12,
+      "signal": "Volatile moon stock reality check"
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 16,
-      "signal": "AI infrastructure king"
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "bullish",
-      "mentions": 14,
-      "signal": "SpaceX merger dreams"
+      "mentions": 11,
+      "signal": "Steady AI infrastructure king"
     },
     {
       "symbol": "ASTS",
       "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "Space communications play"
+      "mentions": 9,
+      "signal": "Space communication goldmine"
+    },
+    {
+      "symbol": "TSLA",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "SpaceX merger speculation heating"
     },
     {
       "symbol": "NOK",
       "sentiment": "bullish",
-      "mentions": 11,
-      "signal": "Boomer phone revival"
+      "mentions": 7,
+      "signal": "Boomer phone unexpected comeback"
     }
   ],
-  "summary": "WSB is in full euphoria mode as memory chip stocks mint millionaires left and right, with MU hitting $1T market cap and UBS slapping $1,625 price targets that nobody questions. Space stocks are the second money printer, with RKLB delivering 2100% gains while bears get systematically obliterated trying to short the most obvious bull run in history.",
-  "updated_at": "2026-05-27T07:02:31.171956+00:00",
-  "updated_hkt": "2026-05-27 15:02 HKT"
+  "summary": "WSB is drunk on memory chip moonshots and space stocks, with MU creating multiple millionaires at $1T market cap while RKLB delivers 2100% gains. Bears are getting absolutely demolished as regards finally hit life-changing money, but greed is preventing smart profit-taking decisions.",
+  "updated_at": "2026-05-27T09:01:50.097150+00:00",
+  "updated_hkt": "2026-05-27 17:01 HKT"
 }
