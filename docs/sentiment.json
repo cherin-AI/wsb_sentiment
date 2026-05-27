@@ -1,17 +1,17 @@
 {
-  "bull_pct": 70,
-  "bear_pct": 20,
-  "neutral_pct": 10,
-  "bull_bear_ratio": 3.4,
-  "overall_score": 74,
+  "bull_pct": 63,
+  "bear_pct": 16,
+  "neutral_pct": 21,
+  "bull_bear_ratio": 3.9,
+  "overall_score": 70,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 70,
-    "ai_score": 75,
-    "bull_count": 48,
-    "bear_count": 14,
-    "neutral_count": 7,
-    "total_posts": 69,
+    "formula_score": 63,
+    "ai_score": 73,
+    "bull_count": 47,
+    "bear_count": 12,
+    "neutral_count": 16,
+    "total_posts": 75,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,109 +19,75 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 69,
+  "post_count": 75,
   "hours_window": 24,
   "themes": [
     {
-      "id": "micron-mania",
-      "title": "Micron Mania",
+      "id": "memory-mania",
+      "title": "Memory Chip Euphoria",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MU hits $1T market cap",
-        "UBS raises target to $1625",
-        "Memory demand crushing bears",
-        "AI boom fueling chip shortage"
+        "MU breaks $1T market cap milestone",
+        "UBS raises price target to $1625",
+        "Memory companies joining trillion dollar club",
+        "AI demand driving insane valuations"
       ],
       "sentiment_score": 85,
       "tickers": [
-        "MU"
+        "MU",
+        "SK",
+        "SNDK"
       ]
     },
     {
-      "id": "space-race-gains",
-      "title": "Space Race Gains",
+      "id": "space-race",
+      "title": "Space Sector Moonshots",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SpaceX IPO hype building",
-        "$2.3B Space Force contract",
-        "RKLB up 2100% gains",
-        "Lunar missions printing money"
+        "RKLB delivering massive gains to believers",
+        "LUNR volatility on NASA contract news",
+        "SpaceX IPO speculation heating up",
+        "Space ETFs and leveraged plays printing"
       ],
       "sentiment_score": 80,
       "tickers": [
         "RKLB",
         "LUNR",
-        "ASTS"
+        "ASTS",
+        "NASA"
       ]
     },
     {
       "id": "ai-infrastructure",
-      "title": "AI Infrastructure",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "Power crunch creating bottlenecks",
-        "Data center demand exploding",
-        "Semiconductor boom continues",
-        "Energy stocks getting attention"
-      ],
-      "sentiment_score": 82,
-      "tickers": [
-        "NVDA",
-        "AMD",
-        "CLSK",
-        "MARA"
-      ]
-    },
-    {
-      "id": "millionaire-makers",
-      "title": "Millionaire Makers",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Multiple $1M+ gain posts",
-        "Life changing returns happening",
-        "30x plays materializing",
-        "Early retirement dreams alive"
-      ],
-      "sentiment_score": 90,
-      "tickers": [
-        "MU",
-        "AMD",
-        "RKLB",
-        "ASTS"
-      ]
-    },
-    {
-      "id": "timing-regrets",
-      "title": "Timing Regrets",
-      "icon": "skull",
-      "heat": "rising",
-      "bullets": [
-        "Sold too early stories",
-        "Missed massive gains pain",
-        "Paper hands getting punished",
-        "FOMO driving decisions"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "MU",
-        "DOGE",
-        "TSLA"
-      ]
-    },
-    {
-      "id": "meme-revival",
-      "title": "Meme Revival",
+      "title": "AI Power & Infrastructure",
       "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "NOK breaking out hard",
-        "BlackBerry getting attention",
-        "Boomer stocks surprising",
-        "Old memes new money"
+        "Data center power constraints becoming bottleneck",
+        "NVDA and semis still printing",
+        "Mining companies pivoting to AI hosting",
+        "Infrastructure plays gaining momentum"
+      ],
+      "sentiment_score": 78,
+      "tickers": [
+        "NVDA",
+        "CLSK",
+        "MARA",
+        "APLD"
+      ]
+    },
+    {
+      "id": "nokia-resurrection",
+      "title": "Nokia's Surprising Comeback",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "NOK delivering unexpected massive gains",
+        "Boomer phone memes becoming reality",
+        "Options chains lighting up",
+        "Nostalgic tech plays working"
       ],
       "sentiment_score": 75,
       "tickers": [
@@ -130,20 +96,39 @@
       ]
     },
     {
-      "id": "top-calling",
-      "title": "Top Calling",
-      "icon": "trending-down",
+      "id": "fomo-regrets",
+      "title": "FOMO and Missed Opportunities",
+      "icon": "skull",
       "heat": "cool",
       "bullets": [
-        "Technical analysis bearish formations",
-        "Profit taking starting",
-        "Sentiment too bullish warning",
-        "Pullback predictions increasing"
+        "Retail missing every major rally",
+        "Selling too early haunting traders",
+        "Bears getting repeatedly crushed",
+        "Timing market proving impossible"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 35,
       "tickers": [
-        "SPY",
-        "QQQ"
+        "MU",
+        "RKLB",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "general-euphoria",
+      "title": "General Market Euphoria",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "AI agents trading on Robinhood",
+        "Everything hitting trillion dollar valuations",
+        "Options volume exploding",
+        "Bull market refusing to stop"
+      ],
+      "sentiment_score": 82,
+      "tickers": [
+        "HOOD",
+        "TSLA",
+        "GOOGL"
       ]
     }
   ],
@@ -151,53 +136,53 @@
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 47,
-      "signal": "Memory god hitting trillion market cap"
+      "mentions": 89,
+      "signal": "Trillion dollar memory king"
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "Rocket ship printing 2000% gains"
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "mixed",
-      "mentions": 14,
-      "signal": "SpaceX merger speculation brewing"
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 13,
-      "signal": "AI chip demand staying strong"
-    },
-    {
-      "symbol": "LUNR",
-      "sentiment": "mixed",
-      "mentions": 12,
-      "signal": "Lunar plays getting volatile"
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "bullish",
-      "mentions": 11,
-      "signal": "Semiconductor surge continuing"
-    },
-    {
-      "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "Lucky number price targets"
+      "mentions": 23,
+      "signal": "Space dreams printing tendies"
     },
     {
       "symbol": "NOK",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Nokia nostalgia paying off"
+      "mentions": 18,
+      "signal": "Boomer phone resurrection"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 15,
+      "signal": "AI chip god refuses pullbacks"
+    },
+    {
+      "symbol": "LUNR",
+      "sentiment": "mixed",
+      "mentions": 13,
+      "signal": "Moon volatility machine"
+    },
+    {
+      "symbol": "TSLA",
+      "sentiment": "mixed",
+      "mentions": 12,
+      "signal": "SpaceX merger speculation"
+    },
+    {
+      "symbol": "SNDK",
+      "sentiment": "bullish",
+      "mentions": 11,
+      "signal": "Storage plays following memory"
+    },
+    {
+      "symbol": "GOOGL",
+      "sentiment": "neutral",
+      "mentions": 10,
+      "signal": "Lucky number closes"
     }
   ],
-  "summary": "WSB is riding a euphoric wave of AI and space gains with MU leading the charge to trillion-dollar valuations while degens celebrate life-changing returns. Despite some bear warnings about market tops and timing regrets, the overall energy remains bullishly intoxicated with millionaire maker stories dominating the feed.",
-  "updated_at": "2026-05-27T09:06:10.612496+00:00",
-  "updated_hkt": "2026-05-27 17:06 HKT"
+  "summary": "WSB is riding an absolute euphoria wave as memory chips join the trillion-dollar club with MU leading the charge, while space stocks like RKLB deliver life-changing returns to diamond hands. Bears are getting obliterated in this relentless bull market as AI infrastructure plays print money and even forgotten Nokia is somehow mooning. The only tears being shed are from regards who sold too early or missed the rocket ships entirely.",
+  "updated_at": "2026-05-27T16:39:27.326409+00:00",
+  "updated_hkt": "2026-05-28 00:39 HKT"
 }
