@@ -1,17 +1,17 @@
 {
   "bull_pct": 74,
-  "bear_pct": 17,
-  "neutral_pct": 9,
-  "bull_bear_ratio": 4.4,
+  "bear_pct": 14,
+  "neutral_pct": 12,
+  "bull_bear_ratio": 5.4,
   "overall_score": 77,
   "overall_label": "Greed",
   "methodology": {
     "formula_score": 74,
     "ai_score": 78,
-    "bull_count": 53,
-    "bear_count": 12,
-    "neutral_count": 7,
-    "total_posts": 72,
+    "bull_count": 54,
+    "bear_count": 10,
+    "neutral_count": 9,
+    "total_posts": 73,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,35 +19,36 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 72,
+  "post_count": 73,
   "hours_window": 24,
   "themes": [
     {
-      "id": "micron-mania",
-      "title": "Micron Mania",
-      "icon": "rocket",
+      "id": "memory-chip-mania",
+      "title": "Memory Chip Trillion Dollar Club",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MU hitting trillion dollar market cap",
-        "UBS price target raised to $1625",
-        "Memory shortage driving massive gains",
-        "Weekly calls printing astronomical returns"
+        "Micron hits trillion dollar market cap",
+        "UBS raises target to $1625",
+        "Memory companies dominating discussions",
+        "Forward PE arguments everywhere"
       ],
       "sentiment_score": 85,
       "tickers": [
-        "MU"
+        "MU",
+        "SNDK"
       ]
     },
     {
-      "id": "space-race-gains",
-      "title": "Space Race Euphoria",
-      "icon": "planet",
+      "id": "space-fever",
+      "title": "Space Stocks Rocketing",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "RKLB delivering massive multibaggers",
-        "SpaceX IPO anticipation building",
-        "NASA contracts flowing to space companies",
-        "Leveraged space ETFs going parabolic"
+        "RKLB aerospace engineer revenge trade",
+        "SpaceX military contracts worth billions",
+        "LUNR and ASTS margin plays",
+        "Blue Origin LTV news shakes LUNR"
       ],
       "sentiment_score": 82,
       "tickers": [
@@ -58,73 +59,72 @@
     },
     {
       "id": "ai-infrastructure-boom",
-      "title": "AI Infrastructure Frenzy",
+      "title": "AI Infrastructure Gold Rush",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Memory chips joining trillion club",
-        "Data center power crunch creating plays",
-        "Semiconductor rally broadening beyond NVDA",
-        "AI spending flowing to hardware companies"
+        "Power grid bottlenecks creating opportunities",
+        "APLD and NBIS massive runs",
+        "Datacenter demand driving everything",
+        "Energy efficient chip focus"
       ],
       "sentiment_score": 80,
       "tickers": [
-        "NVDA",
-        "AMD",
-        "AVGO",
-        "SNDK"
+        "APLD",
+        "NBIS",
+        "QCOM"
       ]
     },
     {
-      "id": "nokia-blackberry-revival",
-      "title": "Boomer Phone Renaissance",
-      "icon": "device-mobile",
+      "id": "fomo-culture",
+      "title": "FOMO and Missed Opportunities",
+      "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "NOK breaking out after years dormant",
-        "BlackBerry getting meme attention again",
-        "Nostalgia plays gaining momentum",
-        "Deep OTM calls on legacy tech"
+        "Daily thread full of MU regrets",
+        "Everyone sharing missed train stories",
+        "Chasing momentum becoming acceptable",
+        "Taking profits feels wrong"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 65,
       "tickers": [
+        "MU",
         "NOK",
-        "BB"
+        "PLTR"
       ]
     },
     {
-      "id": "bear-destruction",
-      "title": "Bear Apocalypse",
+      "id": "bubble-warnings",
+      "title": "Bubble Top Calls",
       "icon": "skull",
-      "heat": "rising",
+      "heat": "cool",
       "bullets": [
-        "Shorts getting obliterated daily",
-        "Put buyers facing relentless pain",
-        "Market climbing wall of worry",
-        "Bears calling tops unsuccessfully"
+        "Technical analysts calling tops",
+        "Bears loading puts despite pain",
+        "Burry disciples questioning sustainability",
+        "Pullback predictions ignored"
       ],
-      "sentiment_score": 20,
+      "sentiment_score": 25,
       "tickers": [
         "SOXS"
       ]
     },
     {
-      "id": "yolo-culture-explosion",
-      "title": "YOLO Culture Peak",
-      "icon": "flame",
-      "heat": "cool",
+      "id": "degenerate-yolos",
+      "title": "Maximum Leverage Plays",
+      "icon": "trending-up",
+      "heat": "rising",
       "bullets": [
-        "Massive position sizing becoming normal",
-        "Weekly options replacing shares",
-        "Retirement account gambling rising",
-        "FOMO driving reckless behavior"
+        "Nokia and Corsair full port moves",
+        "Margin trading at record levels",
+        "Options expiring in days",
+        "All-in mindset prevailing"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 75,
       "tickers": [
-        "MU",
-        "RKLB",
         "NOK",
-        "CRSR"
+        "CRSR",
+        "GRPN"
       ]
     }
   ],
@@ -132,38 +132,26 @@
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 47,
-      "signal": "Trillion club memory king"
+      "mentions": 45,
+      "signal": "trillion dollar memory king"
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "Space multibagger machine"
+      "mentions": 12,
+      "signal": "aerospace revenge play"
     },
     {
       "symbol": "NOK",
       "sentiment": "bullish",
-      "mentions": 16,
-      "signal": "Boomer phone revival"
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "AI chip overlord"
+      "mentions": 11,
+      "signal": "boomer phone resurrection"
     },
     {
       "symbol": "LUNR",
       "sentiment": "mixed",
-      "mentions": 11,
-      "signal": "Moon mission volatility"
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "neutral",
       "mentions": 9,
-      "signal": "SpaceX merger speculation"
+      "signal": "moon dreams meet reality"
     },
     {
       "symbol": "CRSR",
@@ -172,26 +160,38 @@
       "signal": "AI datacenter pivot play"
     },
     {
+      "symbol": "APLD",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "power grid bottleneck winner"
+    },
+    {
       "symbol": "SNDK",
       "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "Storage boom beneficiary"
+      "mentions": 6,
+      "signal": "storage demand explosion"
+    },
+    {
+      "symbol": "PLTR",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "AI darling holding strong"
     }
   ],
   "summary": [
     {
-      "text": "Memory chip companies reaching trillion valuations as AI hunger creates unprecedented shortage.",
+      "text": "Micron mania reaches fever pitch as memory companies join trillion dollar club with UBS price targets soaring",
       "tag": "bullish"
     },
     {
-      "text": "Space stocks delivering life-changing returns while bears get systematically destroyed.",
+      "text": "Space stocks and AI infrastructure plays dominating portfolios while bears get systematically obliterated",
       "tag": "bullish"
     },
     {
-      "text": "YOLO culture hitting dangerous peaks with retirement accounts being gambled on weekly options.",
+      "text": "FOMO culture intensifying as missed opportunity regrets flood daily threads and margin debt hits records",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-05-27T16:45:06.673072+00:00",
-  "updated_hkt": "2026-05-28 00:45 HKT"
+  "updated_at": "2026-05-27T16:47:23.418590+00:00",
+  "updated_hkt": "2026-05-28 00:47 HKT"
 }
