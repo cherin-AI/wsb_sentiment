@@ -25,6 +25,8 @@ import json
 import subprocess
 import requests
 import anthropic
+import html
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 
 try:
@@ -82,10 +84,18 @@ def curl_get_json(url: str, params: dict | None = None, retries: int = 4) -> dic
         url = url + "?" + "&".join(f"{k}={v}" for k, v in params.items())
     for attempt in range(retries):
         result = subprocess.run(
-            ["curl", "-s", "-H", f"User-Agent: {REDDIT_UA}", url],
+            [
+                "curl", "-sL",
+                "-H", f"User-Agent: {REDDIT_UA}",
+                "-H", "Accept: application/json",
+                "-H", "Accept-Language: en-US,en;q=0.9",
+                url,
+            ],
             capture_output=True, text=True, timeout=20,
         )
         result.check_returncode()
+        if result.stdout.lstrip().lower().startswith(("<!doctype", "<html", "<body")):
+            raise RuntimeError(f"Reddit returned HTML instead of JSON. Response: {result.stdout[:200]}")
         try:
             return json.loads(result.stdout)
         except json.JSONDecodeError:
@@ -95,6 +105,28 @@ def curl_get_json(url: str, params: dict | None = None, retries: int = 4) -> dic
                 time.sleep(wait)
             else:
                 raise RuntimeError(f"Reddit returned non-JSON after {retries} attempts. Response: {result.stdout[:200]}")
+
+
+def curl_get_text(url: str, retries: int = 3) -> str:
+    """Fetch a text endpoint via curl using the same browser-like profile."""
+    import time
+    for attempt in range(retries):
+        result = subprocess.run(
+            [
+                "curl", "-sL",
+                "-H", f"User-Agent: {REDDIT_UA}",
+                "-H", "Accept: application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.8",
+                "-H", "Accept-Language: en-US,en;q=0.9",
+                url,
+            ],
+            capture_output=True, text=True, timeout=20,
+        )
+        result.check_returncode()
+        if result.stdout.strip():
+            return result.stdout
+        if attempt < retries - 1:
+            time.sleep(10 * (attempt + 1))
+    raise RuntimeError(f"Empty response from {url}")
 
 
 def get_reddit_token(client_id: str, client_secret: str) -> str:
@@ -210,6 +242,76 @@ def fetch_wsb_posts_unauthenticated() -> list[dict]:
         post["top_comments"] = fetch_comments(post["id"])
 
     return all_posts
+
+
+def _html_to_text(value: str) -> str:
+    text = html.unescape(value or "")
+    text = re.sub(r"<!--.*?-->", " ", text, flags=re.DOTALL)
+    text = re.sub(r"<(br|/p|/li|/div|/tr)\b[^>]*>", "\n", text, flags=re.IGNORECASE)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html.unescape(text)
+    text = re.sub(r"https?://\S+", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def fetch_wsb_posts_rss() -> list[dict]:
+    """Fallback to Reddit's Atom feed when public .json endpoints return HTML."""
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=HOURS_WINDOW)
+    feed = curl_get_text("https://www.reddit.com/r/wallstreetbets/new/.rss?limit=100")
+    root = ET.fromstring(feed)
+    ns = {"atom": "http://www.w3.org/2005/Atom"}
+    posts = []
+
+    for entry in root.findall("atom:entry", ns):
+        published_text = entry.findtext("atom:published", default="", namespaces=ns)
+        try:
+            published = datetime.fromisoformat(published_text.replace("Z", "+00:00"))
+        except ValueError:
+            published = datetime.now(timezone.utc)
+        if published < cutoff:
+            continue
+
+        post_id = entry.findtext("atom:id", default="", namespaces=ns).replace("t3_", "")
+        content = entry.findtext("atom:content", default="", namespaces=ns)
+        posts.append({
+            "id": post_id,
+            "title": entry.findtext("atom:title", default="", namespaces=ns),
+            "score": 0,
+            "num_comments": 0,
+            "selftext": _html_to_text(content)[:300],
+            "flair": "",
+            "top_comments": [],
+        })
+
+    print(f"  Fetching comments for {len(posts)} RSS posts...")
+    for post in posts:
+        post["top_comments"] = fetch_comments_rss(post["id"])
+
+    return posts
+
+
+def fetch_comments_rss(post_id: str) -> list[str]:
+    """Fetch top comments from a post's Atom feed when JSON comments are blocked."""
+    try:
+        feed = curl_get_text(f"https://www.reddit.com/r/wallstreetbets/comments/{post_id}/.rss?sort=top")
+        root = ET.fromstring(feed)
+        ns = {"atom": "http://www.w3.org/2005/Atom"}
+        comments = []
+        for entry in root.findall("atom:entry", ns):
+            title = entry.findtext("atom:title", default="", namespaces=ns)
+            if "AutoModerator" in title:
+                continue
+            if not title.startswith("/u/"):
+                continue
+            text = _html_to_text(entry.findtext("atom:content", default="", namespaces=ns))
+            if text:
+                comments.append(text[:200])
+            if len(comments) >= 5:
+                break
+        return comments
+    except Exception:
+        return []
 
 
 def posts_to_text(posts: list[dict]) -> str:
@@ -398,7 +500,12 @@ def main():
         token = get_reddit_token(client_id, client_secret)
         posts = fetch_wsb_posts_authenticated(token)
     else:
-        posts = fetch_wsb_posts_unauthenticated()
+        try:
+            posts = fetch_wsb_posts_unauthenticated()
+        except RuntimeError as exc:
+            print(f"  Public JSON fetch failed: {exc}")
+            print("  Falling back to Reddit RSS feed...")
+            posts = fetch_wsb_posts_rss()
     print(f"  Found {len(posts)} posts · title + body + top 5 comments each")
 
     posts_text = posts_to_text(posts)
