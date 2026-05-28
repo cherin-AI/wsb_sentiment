@@ -75,16 +75,26 @@ def sanitize_claude_result(result: dict) -> dict:
 
 # ── Reddit ───────────────────────────────────────────────────────────────────
 
-def curl_get_json(url: str, params: dict | None = None) -> dict:
+def curl_get_json(url: str, params: dict | None = None, retries: int = 4) -> dict:
     """Fetch a Reddit JSON endpoint via subprocess curl (bypasses TLS fingerprint block)."""
+    import time
     if params:
         url = url + "?" + "&".join(f"{k}={v}" for k, v in params.items())
-    result = subprocess.run(
-        ["curl", "-s", "-H", f"User-Agent: {REDDIT_UA}", url],
-        capture_output=True, text=True, timeout=20,
-    )
-    result.check_returncode()
-    return json.loads(result.stdout)
+    for attempt in range(retries):
+        result = subprocess.run(
+            ["curl", "-s", "-H", f"User-Agent: {REDDIT_UA}", url],
+            capture_output=True, text=True, timeout=20,
+        )
+        result.check_returncode()
+        try:
+            return json.loads(result.stdout)
+        except json.JSONDecodeError:
+            if attempt < retries - 1:
+                wait = 30 * (attempt + 1)
+                print(f"  Reddit returned non-JSON (attempt {attempt + 1}/{retries}), retrying in {wait}s…")
+                time.sleep(wait)
+            else:
+                raise RuntimeError(f"Reddit returned non-JSON after {retries} attempts. Response: {result.stdout[:200]}")
 
 
 def get_reddit_token(client_id: str, client_secret: str) -> str:
