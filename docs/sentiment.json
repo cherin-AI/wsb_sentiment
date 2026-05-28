@@ -1,17 +1,17 @@
 {
-  "bull_pct": 71,
-  "bear_pct": 16,
-  "neutral_pct": 13,
-  "bull_bear_ratio": 4.5,
-  "overall_score": 76,
+  "bull_pct": 76,
+  "bear_pct": 13,
+  "neutral_pct": 11,
+  "bull_bear_ratio": 5.7,
+  "overall_score": 77,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 71,
+    "formula_score": 76,
     "ai_score": 78,
-    "bull_count": 45,
+    "bull_count": 57,
     "bear_count": 10,
     "neutral_count": 8,
-    "total_posts": 63,
+    "total_posts": 75,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,186 +19,182 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 63,
+  "post_count": 75,
   "hours_window": 24,
   "themes": [
     {
-      "id": "memory-mania",
-      "title": "Memory Chip Madness",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "MU hits trillion dollar market cap",
-        "Memory companies joining exclusive club",
-        "AI demand driving euphoric price action",
-        "UBS price target explosion to $1,625"
-      ],
-      "sentiment_score": 85,
-      "tickers": [
-        "MU",
-        "NVDA",
-        "AMD",
-        "AVGO"
-      ]
-    },
-    {
-      "id": "space-race",
+      "id": "space-rally",
       "title": "Space Stock Euphoria",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "RKLB delivering massive multi-bagger returns",
-        "ASTS printing money for believers",
-        "Space force contracts lighting fires",
-        "Aerospace engineers betting on companies rejecting them"
+        "ASTS and RKLB printing massive green",
+        "SpaceX IPO June 12th creating FOMO",
+        "Defense drone stocks catching space wave",
+        "Retailers piling into any ticker with rockets"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 85,
       "tickers": [
         "RKLB",
         "ASTS",
-        "LUNR"
+        "UMAC"
       ]
     },
     {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Boom",
+      "id": "corsair-meme",
+      "title": "CRSR Gaming Revival",
       "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Gaming peripheral maker suddenly memeing hard",
+        "AI pivot narrative driving retail hype",
+        "Multiple bagholders finally seeing green",
+        "After hours pumping to new highs"
+      ],
+      "sentiment_score": 88,
+      "tickers": [
+        "CRSR"
+      ]
+    },
+    {
+      "id": "ai-cloud-boom",
+      "title": "AI Infrastructure Bonanza",
+      "icon": "cpu",
       "heat": "rising",
       "bullets": [
-        "Cloud spending creating new winners",
-        "Data center power plays emerging",
-        "Snowflake shocking with earnings beat",
-        "Corporate profit pump accelerating"
+        "Snowflake crushing earnings with Amazon deal",
+        "Data centers and GPU plays printing",
+        "Cloud spending accelerating across board",
+        "Semis continuing unstoppable rally"
+      ],
+      "sentiment_score": 82,
+      "tickers": [
+        "SNOW",
+        "MU",
+        "NVDA",
+        "META",
+        "AMD"
+      ]
+    },
+    {
+      "id": "earnings-beats",
+      "title": "Earnings Season Winners",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "Multiple companies beating expectations handily",
+        "Revenue growth surprising to upside",
+        "Forward guidance fueling continued buying",
+        "Options premiums exploding on good news"
       ],
       "sentiment_score": 80,
       "tickers": [
-        "SNOW",
         "CRM",
-        "PLTR",
-        "NVDA"
+        "META",
+        "SNOW",
+        "DELL"
       ]
     },
     {
-      "id": "yolo-euphoria",
-      "title": "Degenerate YOLO Season",
+      "id": "meme-rotation",
+      "title": "Meme Stock Renaissance",
       "icon": "trending-up",
-      "heat": "hot",
+      "heat": "rising",
       "bullets": [
-        "Weekly options printing ridiculous money",
-        "Full portfolio bets becoming normalized",
-        "Risk tolerance hitting dangerous levels",
-        "Making retirement money in single trades"
+        "Forgotten COVID stocks coming back to life",
+        "Retail traders finding old baggers printing",
+        "Short squeezes driving violent moves",
+        "WSB picks finally working for once"
       ],
       "sentiment_score": 75,
       "tickers": [
-        "MU",
         "CRSR",
-        "NOK",
-        "META"
+        "UMAC",
+        "NBIS"
       ]
     },
     {
-      "id": "fomo-madness",
-      "title": "FOMO Anxiety Rising",
-      "icon": "skull",
-      "heat": "rising",
-      "bullets": [
-        "Missing every single hype train",
-        "Boomer stocks underperforming meme rockets",
-        "Everyone making millions except me",
-        "Safe plays becoming punishment trades"
-      ],
-      "sentiment_score": 35,
-      "tickers": [
-        "MSFT",
-        "GOOGL",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "meme-revival",
-      "title": "Meme Stock Renaissance",
+      "id": "macro-backdrop",
+      "title": "Inflation and Market Optimism",
       "icon": "flame",
-      "heat": "rising",
+      "heat": "cool",
       "bullets": [
-        "CRSR AI pivot sparking massive runs",
-        "Nokia inexplicably mooning again",
-        "Groupon short squeeze materializing",
-        "Old names getting new life"
+        "PCE inflation meeting expectations",
+        "Rate cut hopes keeping bulls alive",
+        "Government contracts boosting defense plays",
+        "Overall risk-on sentiment prevailing"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 65,
       "tickers": [
-        "CRSR",
-        "NOK",
-        "GRPN",
-        "SNOW"
+        "SPY",
+        "QQQ"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 47,
-      "signal": "Trillion dollar mania with analyst explosions"
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 32,
-      "signal": "AI king but sideways price action frustrating"
-    },
-    {
       "symbol": "CRSR",
       "sentiment": "bullish",
-      "mentions": 28,
-      "signal": "AI pivot creating violent upside moves"
-    },
-    {
-      "symbol": "ASTS",
-      "sentiment": "bullish",
-      "mentions": 26,
-      "signal": "Space communication rocket ship continuing"
+      "mentions": 47,
+      "signal": "Gaming peripheral meme exploding higher"
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 24,
-      "signal": "Multi-bagger space darling still climbing"
+      "mentions": 32,
+      "signal": "Space rally reaching escape velocity"
     },
     {
-      "symbol": "NOK",
+      "symbol": "ASTS",
       "sentiment": "bullish",
-      "mentions": 22,
-      "signal": "Unexpected comeback story gaining momentum"
+      "mentions": 28,
+      "signal": "Satellite play mooning on short squeeze"
     },
     {
-      "symbol": "MSFT",
-      "sentiment": "bearish",
-      "mentions": 18,
-      "signal": "Boomer disappointment underperforming everything"
+      "symbol": "UMAC",
+      "sentiment": "bullish",
+      "mentions": 25,
+      "signal": "Trump drone play flying high"
     },
     {
       "symbol": "META",
       "sentiment": "bullish",
-      "mentions": 16,
-      "signal": "Big tech call options still printing"
+      "mentions": 23,
+      "signal": "AI spending keeping momentum strong"
+    },
+    {
+      "symbol": "SNOW",
+      "sentiment": "bullish",
+      "mentions": 19,
+      "signal": "Cloud earnings crushing expectations"
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 17,
+      "signal": "Memory chip rally unstoppable"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 15,
+      "signal": "AI infrastructure king printing"
     }
   ],
   "summary": [
     {
-      "text": "Memory chip companies exploding into trillion dollar territory as MU leads semiconductor euphoria with UBS price targets reaching astronomical levels.",
+      "text": "Space stocks RKLB and ASTS are absolutely mooning as retail piles in ahead of SpaceX IPO madness, with defense drones joining the rocket ship party.",
       "tag": "bullish"
     },
     {
-      "text": "Space stocks creating generational wealth while traditional holders watch from sidelines, missing every rocket ship departure.",
+      "text": "CRSR gaming peripheral stock exploded from forgotten COVID baggage to meme status overnight, printing massive moves on AI pivot narrative and pure FOMO.",
       "tag": "bullish"
     },
     {
-      "text": "FOMO anxiety reaching dangerous levels as degenerate YOLO culture normalizes full portfolio bets on weekly options.",
+      "text": "Earnings season delivering monster beats across AI infrastructure plays while old meme stocks resurrect from the dead, proving WSB picks sometimes actually work.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-05-27T21:01:30.155613+00:00",
-  "updated_hkt": "2026-05-28 05:01 HKT"
+  "updated_at": "2026-05-28T17:45:20.983271+00:00",
+  "updated_hkt": "2026-05-29 01:45 HKT"
 }
