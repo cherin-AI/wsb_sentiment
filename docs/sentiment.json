@@ -1,17 +1,17 @@
 {
   "bull_pct": 71,
-  "bear_pct": 13,
-  "neutral_pct": 16,
-  "bull_bear_ratio": 5.6,
-  "overall_score": 76,
+  "bear_pct": 14,
+  "neutral_pct": 15,
+  "bull_bear_ratio": 5.1,
+  "overall_score": 74,
   "overall_label": "Greed",
   "methodology": {
     "formula_score": 71,
-    "ai_score": 78,
-    "bull_count": 67,
-    "bear_count": 12,
+    "ai_score": 75,
+    "bull_count": 71,
+    "bear_count": 14,
     "neutral_count": 15,
-    "total_posts": 95,
+    "total_posts": 100,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,175 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 95,
+  "post_count": 100,
   "hours_window": 24,
   "themes": [
     {
-      "id": "space-mania",
-      "title": "Space Stock Confusion",
+      "id": "space-ipo-mania",
+      "title": "SpaceX IPO Fever",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SpaceX IPO ticker confusion spreads",
-        "SPCE getting massive volume",
-        "Blue Origin rocket explodes",
-        "Retail buying wrong tickers"
+        "Retail confusing SPCe with SpaceX",
+        "Massive gains on ticker confusion",
+        "IPO excitement reaching peak euphoria",
+        "Everyone claiming early access wins"
       ],
       "sentiment_score": 85,
       "tickers": [
-        "SPCE",
-        "SPCX",
-        "RKLB",
-        "ASTS"
+        "SPCe",
+        "SPCE"
+      ]
+    },
+    {
+      "id": "dell-trump-rally",
+      "title": "Dell Earnings Explosion",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Trump told everyone buy Dell",
+        "Massive options wins overnight",
+        "AI server revenue surge driving gains",
+        "Overnight millionaires posting screenshots"
+      ],
+      "sentiment_score": 90,
+      "tickers": [
+        "DELL"
       ]
     },
     {
       "id": "ai-infrastructure",
-      "title": "AI Infrastructure Boom",
+      "title": "AI Infrastructure Dominance",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "DELL earnings massive beat",
-        "Memory and storage awakening",
-        "NVDA COMPUTEX hype building",
-        "Infrastructure plays printing"
-      ],
-      "sentiment_score": 82,
-      "tickers": [
-        "DELL",
-        "NVDA",
-        "NTAP",
-        "MU"
-      ]
-    },
-    {
-      "id": "corsair-squeeze",
-      "title": "CRSR Gaming Revival",
-      "icon": "flame",
-      "heat": "rising",
-      "bullets": [
-        "Corsair AI pivot narrative",
-        "Memory chip demand surge",
-        "Gaming hardware comeback",
-        "Options chain squeezing"
-      ],
-      "sentiment_score": 88,
-      "tickers": [
-        "CRSR"
-      ]
-    },
-    {
-      "id": "defense-drones",
-      "title": "Defense & Drone Plays",
-      "icon": "shield",
-      "heat": "rising",
-      "bullets": [
-        "Trump connections driving momentum",
-        "Military contracts flowing",
-        "Drone warfare future",
-        "Defense spending acceleration"
+        "Nuclear power for data centers",
+        "Memory and storage awakening finally",
+        "Everyone chasing AI infrastructure plays",
+        "Storage companies getting recognition now"
       ],
       "sentiment_score": 80,
       "tickers": [
-        "UMAC",
-        "AVAV",
-        "RCAT",
-        "ONDS"
+        "NVDA",
+        "AMD",
+        "TSMC",
+        "NTAP"
       ]
     },
     {
-      "id": "earnings-momentum",
-      "title": "Earnings Beat Euphoria",
-      "icon": "trending-up",
-      "heat": "hot",
+      "id": "options-gambling",
+      "title": "0DTE Options Madness",
+      "icon": "flame",
+      "heat": "rising",
       "bullets": [
-        "Tech earnings crushing estimates",
-        "Revenue growth accelerating",
-        "AI revenue streams exploding",
-        "Multiple expansion continuing"
+        "Zero days to expiry addiction",
+        "SPX and QQQ scalping wins",
+        "Iron balls hold to expiry",
+        "Quick scalps beating long holds"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 75,
       "tickers": [
-        "DELL",
-        "META",
-        "SNOW",
-        "HOOD"
+        "SPY",
+        "QQQ",
+        "SPX"
       ]
     },
     {
-      "id": "market-warnings",
-      "title": "Bubble Top Calls",
+      "id": "bubble-warnings",
+      "title": "Bubble Top Signals",
       "icon": "skull",
       "heat": "cool",
       "bullets": [
-        "Women buying stocks indicator",
-        "Retail euphoria spreading",
-        "Put buyers getting wrecked",
-        "Valuations disconnected from reality"
+        "Women talking about stocks everywhere",
+        "Everyone selling everything warning crashes",
+        "Biblical levels of greed spotted",
+        "Multiple people calling market tops"
       ],
       "sentiment_score": 25,
+      "tickers": []
+    },
+    {
+      "id": "meme-momentum",
+      "title": "Meme Stock Renaissance",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "CRSR bandwagon building momentum fast",
+        "Virgin Galactic confusion plays working",
+        "Gaming peripheral AI thesis emerging",
+        "Corsair memory binning DD spreading"
+      ],
+      "sentiment_score": 70,
       "tickers": [
-        "SPY",
-        "QQQ"
+        "CRSR",
+        "SPCE"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "CRSR",
-      "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "AI pivot squeeze play"
-    },
-    {
       "symbol": "DELL",
       "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "earnings explosion afterhours"
+      "mentions": 23,
+      "signal": "Trump pump causing overnight millionaires"
     },
     {
-      "symbol": "SPCE",
+      "symbol": "SPCe",
       "sentiment": "bullish",
-      "mentions": 11,
-      "signal": "SpaceX ticker confusion"
-    },
-    {
-      "symbol": "UMAC",
-      "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "Trump connection momentum"
+      "mentions": 19,
+      "signal": "SpaceX IPO confusion driving euphoria"
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
       "mentions": 8,
-      "signal": "COMPUTEX catalyst building"
+      "signal": "AI infrastructure backbone staying strong"
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "mixed",
+      "mentions": 7,
+      "signal": "PE ratio concerns amid gains"
+    },
+    {
+      "symbol": "QQQ",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "0DTE scalping paradise for degens"
+    },
+    {
+      "symbol": "CRSR",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "AI memory thesis building momentum"
+    },
+    {
+      "symbol": "TSMC",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Semiconductor chokepoint play gaining traction"
     },
     {
       "symbol": "META",
       "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "AI spending justified"
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "memory demand surge"
-    },
-    {
-      "symbol": "ASTS",
-      "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "rocket explosion impact"
+      "mentions": 4,
+      "signal": "Trillion dollar value play thesis"
     }
   ],
   "summary": [
     {
-      "text": "Space stock ticker confusion reaching fever pitch as retail scrambles into SPCE ahead of SpaceX IPO, creating the most regarded trade of the year.",
+      "text": "WSB is riding peak euphoria as SpaceX IPO confusion and Dell earnings create overnight millionaires posting massive gain screenshots everywhere.",
       "tag": "bullish"
     },
     {
-      "text": "DELL earnings obliterated estimates with AI server sales exploding, proving the infrastructure plays are just getting started despite naysayer warnings.",
+      "text": "AI infrastructure plays are finally awakening beyond chips, with nuclear power and storage companies getting WSB attention for data center bottlenecks.",
       "tag": "bullish"
     },
     {
-      "text": "Bears getting absolutely demolished as every earnings beat sends stocks parabolic while put buyers lose their shirts in this relentless melt-up.",
-      "tag": "notable"
+      "text": "Multiple bubble warnings emerging as women start talking stocks and regards debate if this is the top before the crash.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-05-29T12:02:53.906577+00:00",
-  "updated_hkt": "2026-05-29 20:02 HKT"
+  "updated_at": "2026-05-29T21:02:59.771067+00:00",
+  "updated_hkt": "2026-05-30 05:02 HKT"
 }
