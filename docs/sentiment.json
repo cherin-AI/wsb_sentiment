@@ -1,17 +1,17 @@
 {
-  "bull_pct": 70,
-  "bear_pct": 14,
+  "bull_pct": 71,
+  "bear_pct": 13,
   "neutral_pct": 16,
-  "bull_bear_ratio": 5.2,
+  "bull_bear_ratio": 5.6,
   "overall_score": 76,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 70,
+    "formula_score": 71,
     "ai_score": 78,
     "bull_count": 67,
-    "bear_count": 13,
-    "neutral_count": 16,
-    "total_posts": 96,
+    "bear_count": 12,
+    "neutral_count": 15,
+    "total_posts": 95,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,57 +19,57 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 96,
+  "post_count": 95,
   "hours_window": 24,
   "themes": [
     {
-      "id": "space-stocks",
-      "title": "Space Stock Mania",
+      "id": "space-mania",
+      "title": "Space Stock Confusion",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "RKLB rockets printing money",
-        "ASTS diamond hands paying off",
-        "SpaceX IPO hype building",
-        "Trump space policies fueling rally"
+        "SpaceX IPO ticker confusion spreads",
+        "SPCE getting massive volume",
+        "Blue Origin rocket explodes",
+        "Retail buying wrong tickers"
       ],
       "sentiment_score": 85,
       "tickers": [
+        "SPCE",
+        "SPCX",
         "RKLB",
-        "ASTS",
-        "ONDS",
-        "SPCX"
+        "ASTS"
       ]
     },
     {
-      "id": "ai-bubble",
-      "title": "AI Everything Bubble",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Boom",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Every stock adding AI pivot",
-        "NVDA computex anticipation rising",
-        "Semiconductor cycle rotation happening",
-        "Software catching AI wave"
+        "DELL earnings massive beat",
+        "Memory and storage awakening",
+        "NVDA COMPUTEX hype building",
+        "Infrastructure plays printing"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 82,
       "tickers": [
+        "DELL",
         "NVDA",
-        "CRSR",
-        "META",
-        "SNOW"
+        "NTAP",
+        "MU"
       ]
     },
     {
-      "id": "corsair-meme",
-      "title": "CRSR Gaming Revolution",
-      "icon": "device-gamepad",
-      "heat": "hot",
+      "id": "corsair-squeeze",
+      "title": "CRSR Gaming Revival",
+      "icon": "flame",
+      "heat": "rising",
       "bullets": [
-        "Gaming hardware AI pivot narrative",
-        "Multiple baggers being posted",
-        "Short squeeze momentum building",
-        "WSB pump in overdrive"
+        "Corsair AI pivot narrative",
+        "Memory chip demand surge",
+        "Gaming hardware comeback",
+        "Options chain squeezing"
       ],
       "sentiment_score": 88,
       "tickers": [
@@ -77,55 +77,58 @@
       ]
     },
     {
-      "id": "drone-warfare",
-      "title": "Defense Drone Plays",
-      "icon": "plane",
+      "id": "defense-drones",
+      "title": "Defense & Drone Plays",
+      "icon": "shield",
       "heat": "rising",
       "bullets": [
-        "Trump administration funding rumors",
-        "Military contracts driving momentum",
-        "Geopolitical tensions supporting demand",
-        "Don Jr connections fueling speculation"
+        "Trump connections driving momentum",
+        "Military contracts flowing",
+        "Drone warfare future",
+        "Defense spending acceleration"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 80,
       "tickers": [
         "UMAC",
-        "RCAT",
         "AVAV",
-        "KTOS"
+        "RCAT",
+        "ONDS"
       ]
     },
     {
-      "id": "options-gambling",
-      "title": "0DTE Degenerate Hour",
-      "icon": "dice",
-      "heat": "rising",
+      "id": "earnings-momentum",
+      "title": "Earnings Beat Euphoria",
+      "icon": "trending-up",
+      "heat": "hot",
       "bullets": [
-        "SPX scalping printing money",
-        "Weekend puts paying off",
-        "Options euphoria spreading fast",
-        "Quick gains becoming addictive"
+        "Tech earnings crushing estimates",
+        "Revenue growth accelerating",
+        "AI revenue streams exploding",
+        "Multiple expansion continuing"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 85,
       "tickers": [
-        "SPY",
-        "SPX"
+        "DELL",
+        "META",
+        "SNOW",
+        "HOOD"
       ]
     },
     {
-      "id": "spacex-ipo",
-      "title": "SpaceX IPO Anxiety",
-      "icon": "trending-down",
+      "id": "market-warnings",
+      "title": "Bubble Top Calls",
+      "icon": "skull",
       "heat": "cool",
       "bullets": [
-        "Market crash fears spreading",
-        "Valuation concerns mounting high",
-        "Insider dump speculation rising",
-        "Index inclusion forcing buyers"
+        "Women buying stocks indicator",
+        "Retail euphoria spreading",
+        "Put buyers getting wrecked",
+        "Valuations disconnected from reality"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 25,
       "tickers": [
-        "SPCX"
+        "SPY",
+        "QQQ"
       ]
     }
   ],
@@ -134,65 +137,65 @@
       "symbol": "CRSR",
       "sentiment": "bullish",
       "mentions": 18,
-      "signal": "Gaming hardware AI pivot mania"
+      "signal": "AI pivot squeeze play"
     },
     {
-      "symbol": "RKLB",
-      "sentiment": "bullish",
-      "mentions": 15,
-      "signal": "Space diamond hands printing"
-    },
-    {
-      "symbol": "ASTS",
+      "symbol": "DELL",
       "sentiment": "bullish",
       "mentions": 12,
-      "signal": "Satellite short squeeze momentum"
+      "signal": "earnings explosion afterhours"
     },
     {
-      "symbol": "NVDA",
+      "symbol": "SPCE",
       "sentiment": "bullish",
-      "mentions": 10,
-      "signal": "Computex hype machine activated"
+      "mentions": 11,
+      "signal": "SpaceX ticker confusion"
     },
     {
       "symbol": "UMAC",
       "sentiment": "bullish",
       "mentions": 9,
-      "signal": "Trump drone funding speculation"
+      "signal": "Trump connection momentum"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "COMPUTEX catalyst building"
     },
     {
       "symbol": "META",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Big tech rotation continues"
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "bullish",
       "mentions": 7,
-      "signal": "0DTE scalping paradise"
+      "signal": "AI spending justified"
     },
     {
-      "symbol": "SNOW",
+      "symbol": "MU",
       "sentiment": "bullish",
       "mentions": 6,
-      "signal": "Software AI pivot momentum"
+      "signal": "memory demand surge"
+    },
+    {
+      "symbol": "ASTS",
+      "sentiment": "bearish",
+      "mentions": 5,
+      "signal": "rocket explosion impact"
     }
   ],
   "summary": [
     {
-      "text": "Space stocks are absolutely ripping with RKLB and ASTS diamond hands finally getting rewarded while SpaceX IPO looms.",
+      "text": "Space stock ticker confusion reaching fever pitch as retail scrambles into SPCE ahead of SpaceX IPO, creating the most regarded trade of the year.",
       "tag": "bullish"
     },
     {
-      "text": "Every company is pivoting to AI with CRSR leading the gaming hardware meme revolution and printing massive gains.",
+      "text": "DELL earnings obliterated estimates with AI server sales exploding, proving the infrastructure plays are just getting started despite naysayer warnings.",
       "tag": "bullish"
     },
     {
-      "text": "Market showing bubble characteristics but momentum remains strong despite growing concerns about valuations and incoming IPO chaos.",
+      "text": "Bears getting absolutely demolished as every earnings beat sends stocks parabolic while put buyers lose their shirts in this relentless melt-up.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-05-28T22:21:23.622158+00:00",
-  "updated_hkt": "2026-05-29 06:21 HKT"
+  "updated_at": "2026-05-29T12:02:53.906577+00:00",
+  "updated_hkt": "2026-05-29 20:02 HKT"
 }
