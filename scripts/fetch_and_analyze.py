@@ -44,6 +44,8 @@ REDDIT_BASE  = "https://oauth.reddit.com"
 REDDIT_AUTH  = "https://www.reddit.com/api/v1/access_token"
 
 HOURS_WINDOW = 24  # fetch all posts from the last 24 hours
+RSS_PAGE_LIMIT = 100
+RSS_MAX_POSTS = 200
 
 
 # Matches individual P&L brags: "2100% gains", "up 400%", "$1M+", "printing 30x", etc.
@@ -258,31 +260,55 @@ def _html_to_text(value: str) -> str:
 def fetch_wsb_posts_rss() -> list[dict]:
     """Fallback to Reddit's Atom feed when public .json endpoints return HTML."""
     cutoff = datetime.now(timezone.utc) - timedelta(hours=HOURS_WINDOW)
-    feed = curl_get_text("https://www.reddit.com/r/wallstreetbets/new/.rss?limit=100")
-    root = ET.fromstring(feed)
     ns = {"atom": "http://www.w3.org/2005/Atom"}
-    posts = []
+    posts, seen_ids, after = [], set(), None
 
-    for entry in root.findall("atom:entry", ns):
-        published_text = entry.findtext("atom:published", default="", namespaces=ns)
-        try:
-            published = datetime.fromisoformat(published_text.replace("Z", "+00:00"))
-        except ValueError:
-            published = datetime.now(timezone.utc)
-        if published < cutoff:
-            continue
+    while len(posts) < RSS_MAX_POSTS:
+        url = f"https://www.reddit.com/r/wallstreetbets/new/.rss?limit={RSS_PAGE_LIMIT}"
+        if after:
+            url += f"&after={after}"
 
-        post_id = entry.findtext("atom:id", default="", namespaces=ns).replace("t3_", "")
-        content = entry.findtext("atom:content", default="", namespaces=ns)
-        posts.append({
-            "id": post_id,
-            "title": entry.findtext("atom:title", default="", namespaces=ns),
-            "score": 0,
-            "num_comments": 0,
-            "selftext": _html_to_text(content)[:300],
-            "flair": "",
-            "top_comments": [],
-        })
+        feed = curl_get_text(url)
+        root = ET.fromstring(feed)
+        entries = root.findall("atom:entry", ns)
+        if not entries:
+            break
+
+        hit_cutoff = False
+        last_full_id = None
+        for entry in entries:
+            full_id = entry.findtext("atom:id", default="", namespaces=ns)
+            last_full_id = full_id
+            if full_id in seen_ids:
+                continue
+            seen_ids.add(full_id)
+
+            published_text = entry.findtext("atom:published", default="", namespaces=ns)
+            try:
+                published = datetime.fromisoformat(published_text.replace("Z", "+00:00"))
+            except ValueError:
+                published = datetime.now(timezone.utc)
+            if published < cutoff:
+                hit_cutoff = True
+                break
+
+            post_id = full_id.replace("t3_", "")
+            content = entry.findtext("atom:content", default="", namespaces=ns)
+            posts.append({
+                "id": post_id,
+                "title": entry.findtext("atom:title", default="", namespaces=ns),
+                "score": 0,
+                "num_comments": 0,
+                "selftext": _html_to_text(content)[:300],
+                "flair": "",
+                "top_comments": [],
+            })
+            if len(posts) >= RSS_MAX_POSTS:
+                break
+
+        if hit_cutoff or not last_full_id or len(entries) < RSS_PAGE_LIMIT:
+            break
+        after = last_full_id
 
     print(f"  Fetching comments for {len(posts)} RSS posts...")
     for post in posts:
