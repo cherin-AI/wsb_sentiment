@@ -443,7 +443,7 @@ Rules:
 - tickers: top 8 by mention count only
 - summary: exactly 3 items. tag must be one of: "bullish" (positive momentum, buying energy), "bearish" (fear, selling, losses), "notable" (key observation, neutral but important)
 - Do not invent post_classifications entries — one per input post, in order
-- Avoid explicit/adult-sounding WSB slang in public dashboard copy. For large loss screenshots, write "trading losses" or "loss posts"; for large profit screenshots, write "profit posts" or "gain posts".
+- Avoid provocative or explicit WSB slang in all output text (theme titles, bullets, summary, signals). Specifically: never write "loss porn" — use "trading losses", "loss posts", or "account blow-ups" instead. Never write "gain porn" — use "profit posts" or "big wins". You may still use these terms internally to assess heat, but they must not appear in any output field.
 - NEVER include specific individual P&L figures anywhere — no percentage gains/losses (e.g. "up 2100%", "printing 2000% gains"), no dollar amounts tied to individual trades (e.g. "$1M+ gain posts", "$50k loss"), no "X gains", "X returns" for specific people or tickers. Describe collective market mood and themes instead (e.g. "retail euphoria spreading" not "RKLB up 2100%")
 """
 
