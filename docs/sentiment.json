@@ -1,17 +1,17 @@
 {
-  "bull_pct": 68,
-  "bear_pct": 14,
-  "neutral_pct": 18,
+  "bull_pct": 76,
+  "bear_pct": 16,
+  "neutral_pct": 8,
   "bull_bear_ratio": 4.9,
   "overall_score": 75,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 68,
-    "ai_score": 78,
+    "formula_score": 76,
+    "ai_score": 75,
     "bull_count": 68,
     "bear_count": 14,
-    "neutral_count": 18,
-    "total_posts": 100,
+    "neutral_count": 7,
+    "total_posts": 89,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,177 +19,178 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 100,
+  "post_count": 89,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-ipo-fomo",
-      "title": "SpaceX IPO Mania",
+      "id": "spacex-ipo-confusion",
+      "title": "SpaceX IPO Confusion Trade",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Virgin Galactic confusion trade pumping hard",
-        "Retail buying wrong tickers on purpose",
-        "June 12 IPO date driving FOMO",
-        "Space sympathy plays mooning everywhere"
+        "SPCE mistaken for SpaceX IPO",
+        "Weaponized stupidity paying off",
+        "Riding ticker confusion to moon",
+        "June 12 IPO date circled"
       ],
       "sentiment_score": 85,
       "tickers": [
-        "SPCE",
-        "SPCX"
+        "SPCE"
       ]
     },
     {
-      "id": "ai-infrastructure-boom",
-      "title": "AI Infrastructure Gold Rush",
-      "icon": "cpu",
+      "id": "dell-trump-surge",
+      "title": "DELL Trump Rally",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
-        "Data centers in space thesis emerging",
-        "Nuclear power for AI demand",
-        "Microsoft dominance narrative strengthening",
-        "SaaSpocalypse fears fading fast"
+        "Trump said buy Dell",
+        "Massive overnight option wins",
+        "0DTE strikes printing hard",
+        "Regarded but profitable trades"
+      ],
+      "sentiment_score": 90,
+      "tickers": [
+        "DELL"
+      ]
+    },
+    {
+      "id": "ai-resurgence",
+      "title": "AI Stock Comeback",
+      "icon": "cpu",
+      "heat": "rising",
+      "bullets": [
+        "SaaSpocalypse fears fading away",
+        "SNOW leading AI recovery",
+        "Nuclear power for datacenters",
+        "Software stocks rebounding strong"
       ],
       "sentiment_score": 80,
       "tickers": [
-        "MSFT",
-        "NVDA",
         "SNOW",
-        "AMD"
+        "MSFT",
+        "ADSK",
+        "NVDA"
       ]
     },
     {
-      "id": "trump-rally-plays",
-      "title": "Trump Signal Trading",
-      "icon": "trending-up",
-      "heat": "rising",
-      "bullets": [
-        "Dell moonshot from Trump mention",
-        "NOW pumping on political signals",
-        "Meme politics driving overnight plays",
-        "Social media DD becoming alpha"
-      ],
-      "sentiment_score": 82,
-      "tickers": [
-        "DELL",
-        "NOW"
-      ]
-    },
-    {
-      "id": "options-degeneracy",
-      "title": "Maximum Leverage Culture",
+      "id": "options-gambling",
+      "title": "0DTE Option Mania",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Zero DTE SPX gambling everywhere",
-        "Massive overnight option plays printing",
-        "Revenge trading burning accounts hard",
-        "Full portfolio YOLOs normalized completely"
+        "Overnight option explosions happening",
+        "0DTE SPY addiction widespread",
+        "Revenge trading burning accounts",
+        "Quick scalp mentality dominating"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 60,
       "tickers": [
         "SPY",
+        "SPX",
         "QQQ"
       ]
     },
     {
-      "id": "bubble-peak-signals",
-      "title": "Peak Euphoria Warnings",
-      "icon": "skull",
+      "id": "space-tech-hype",
+      "title": "Space Technology Boom",
+      "icon": "planet",
       "heat": "rising",
       "bullets": [
-        "Some taking profits and exiting",
-        "Valuations getting completely absurd now",
-        "Weaponized idiocy trading strategies working",
-        "Exit liquidity concerns growing louder"
+        "Space contracts flowing in",
+        "Laser beam satellites emerging",
+        "Orbital datacenter concepts growing",
+        "Defense drone plays expanding"
       ],
-      "sentiment_score": 35,
-      "tickers": []
+      "sentiment_score": 75,
+      "tickers": [
+        "RDW",
+        "LPTH",
+        "XTIA"
+      ]
     },
     {
-      "id": "tech-earnings-momentum",
-      "title": "Tech Earnings Momentum",
-      "icon": "chart-line",
+      "id": "loss-acceptance",
+      "title": "Loss Porn Reality",
+      "icon": "skull",
       "heat": "cool",
       "bullets": [
-        "Oracle earnings anticipation building high",
-        "Software stocks bouncing back hard",
-        "Semiconductor plays still running hot",
-        "Broadcom setup for next move"
+        "Blown accounts from bad timing",
+        "Margin calls hitting hard",
+        "UUUU uranium dreams dying",
+        "Shorting attempts getting squeezed"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 25,
       "tickers": [
-        "ORCL",
-        "AVGO",
-        "RDDT",
-        "ARM"
+        "UUUU",
+        "NQ"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "DELL",
-      "sentiment": "bullish",
-      "mentions": 15,
-      "signal": "Trump mention overnight moonshot"
-    },
-    {
       "symbol": "SPCE",
       "sentiment": "bullish",
+      "mentions": 45,
+      "signal": "Riding SpaceX confusion wave"
+    },
+    {
+      "symbol": "DELL",
+      "sentiment": "bullish",
       "mentions": 12,
-      "signal": "SpaceX confusion trade pumping"
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "AI infrastructure dominance play"
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "Continued AI chip momentum"
-    },
-    {
-      "symbol": "NOW",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Political signal momentum trade"
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "neutral",
-      "mentions": 6,
-      "signal": "High valuation concerns emerging"
+      "signal": "Trump rally printing money"
     },
     {
       "symbol": "SNOW",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "SaaSpocalypse fears dissipating"
+      "mentions": 8,
+      "signal": "AI recovery leader"
     },
     {
-      "symbol": "ASTS",
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 7,
+      "signal": "German confidence play"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "0DTE addiction central"
+    },
+    {
+      "symbol": "AMD",
       "sentiment": "mixed",
       "mentions": 5,
-      "signal": "Space sympathy with FUD"
+      "signal": "Valuation concerns emerging"
+    },
+    {
+      "symbol": "RDDT",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Social media momentum"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "AI infrastructure king"
     }
   ],
   "summary": [
     {
-      "text": "SpaceX IPO hysteria has retail buying wrong tickers on purpose, with Virgin Galactic mooning as the ultimate confusion trade. Weaponized stupidity is literally a working strategy.",
-      "tag": "notable"
-    },
-    {
-      "text": "Trump's Dell mention created overnight millionaires while space mania spreads across every adjacent ticker. The meme politics playbook is printing harder than Powell.",
+      "text": "Apes are weaponizing stupidity by buying SPCE thinking it's SpaceX, creating the most regarded profitable trade in WSB history ahead of June 12th.",
       "tag": "bullish"
     },
     {
-      "text": "Peak euphoria signals flashing as some veterans cash out completely, warning of biblical greed levels and retail becoming exit liquidity for smart money.",
-      "tag": "bearish"
+      "text": "Trump's Dell comment triggered overnight option explosions with traders making [market momentum] on pure vibes and presidential stock tips.",
+      "tag": "bullish"
+    },
+    {
+      "text": "The SaaSpocalypse is officially dead as SNOW leads AI stocks back from the grave, proving bears wrong once again.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-05-30T12:03:11.439086+00:00",
-  "updated_hkt": "2026-05-30 20:03 HKT"
+  "updated_at": "2026-05-30T15:48:33.499219+00:00",
+  "updated_hkt": "2026-05-30 23:48 HKT"
 }
