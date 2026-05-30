@@ -1,17 +1,17 @@
 {
-  "bull_pct": 75,
-  "bear_pct": 12,
-  "neutral_pct": 13,
-  "bull_bear_ratio": 6.3,
-  "overall_score": 77,
+  "bull_pct": 73,
+  "bear_pct": 13,
+  "neutral_pct": 14,
+  "bull_bear_ratio": 5.5,
+  "overall_score": 72,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 75,
-    "ai_score": 78,
-    "bull_count": 38,
+    "formula_score": 73,
+    "ai_score": 72,
+    "bull_count": 33,
     "bear_count": 6,
-    "neutral_count": 7,
-    "total_posts": 51,
+    "neutral_count": 6,
+    "total_posts": 45,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,110 +19,116 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 51,
+  "post_count": 45,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-confusion-trade",
-      "title": "SpaceX IPO Ticker Confusion",
+      "id": "spacex-ipo-mania",
+      "title": "SpaceX IPO Mania",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Virgin Galactic SPCE mistaken for SpaceX",
-        "Massive pre-IPO gains flooding timeline",
-        "June 12th IPO date driving frenzy",
-        "Retail confusion creating accidental momentum"
+        "Massive pre-IPO speculation on SPCE confusion",
+        "Retail piling into June 12th date",
+        "Ticker mix-up plays gaining momentum",
+        "Virgin Galactic proxy trade exploding"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 85,
       "tickers": [
-        "SPCE"
+        "SPCE",
+        "SPACEX"
       ]
     },
     {
       "id": "ai-infrastructure-surge",
-      "title": "AI Infrastructure Rally",
+      "title": "AI Infrastructure Surge",
       "icon": "cpu",
       "heat": "rising",
       "bullets": [
-        "SaaS stocks recovering from apocalypse fears",
-        "Data center plays gaining momentum",
-        "SNOW leading software comeback rally",
-        "AI integration boosting traditional tech"
+        "Data center demand driving utilities",
+        "Grid connection bottlenecks creating opportunity",
+        "SNOW blowout crushing SaaSpocalypse fears",
+        "AI integration accelerating traditional software"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 78,
       "tickers": [
         "SNOW",
         "NOK",
-        "MSFT",
-        "DELL",
-        "ORCL"
-      ]
-    },
-    {
-      "id": "meme-stock-euphoria",
-      "title": "Meme Stock Resurrection",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Short squeeze potential building pressure",
-        "WOLF heavily shorted awaiting catalyst",
-        "Reddit traders coordinating movements",
-        "GameStop energy returning to WSB"
-      ],
-      "sentiment_score": 76,
-      "tickers": [
         "WOLF",
-        "RDDT",
-        "CRWV"
+        "RDW"
       ]
     },
     {
-      "id": "yolo-profit-posts",
-      "title": "YOLO Profit Posts",
+      "id": "meme-momentum",
+      "title": "Meme Momentum Trading",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "Retail euphoria spreading across tickers",
+        "Short squeeze setups being targeted",
+        "Options volume spiking on momentum",
+        "YOLO mentality driving massive plays"
+      ],
+      "sentiment_score": 80,
+      "tickers": [
+        "SPCE",
+        "DELL",
+        "RDDT",
+        "NOW"
+      ]
+    },
+    {
+      "id": "short-squeeze-hunting",
+      "title": "Short Squeeze Hunting",
       "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "Options printing across multiple tickers",
-        "Dell calls exploding overnight",
-        "Tax payment recovery trades working",
-        "Revenge trading burning some portfolios"
+        "High short interest targets identified",
+        "Coordinated buying pressure building",
+        "Options gamma creating squeeze potential",
+        "Retail targeting heavily shorted names"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 82,
       "tickers": [
-        "DELL",
-        "RDDT",
-        "SMCI"
+        "WOLF",
+        "JACK",
+        "SPCE"
       ]
     },
     {
-      "id": "oil-energy-speculation",
-      "title": "Oil Speculation Building",
-      "icon": "trending-up",
+      "id": "trading-losses",
+      "title": "Trading Losses",
+      "icon": "skull",
       "heat": "rising",
       "bullets": [
-        "Charts suggesting potential oil moonshot",
-        "Energy sector getting fresh attention",
-        "Supply concerns creating bullish sentiment",
-        "Contrarian plays gaining interest"
+        "Bear trades getting squeezed hard",
+        "Revenge trading burning accounts",
+        "Shorting in bull market backfiring",
+        "Risk management breaking down"
       ],
-      "sentiment_score": 68,
-      "tickers": []
+      "sentiment_score": 25,
+      "tickers": [
+        "UUUU",
+        "NQ",
+        "NVO"
+      ]
     },
     {
-      "id": "general-market-mood",
-      "title": "Bull Market Confidence",
+      "id": "tech-giants-dominance",
+      "title": "Tech Giants Dominance",
       "icon": "trending-up",
-      "heat": "rising",
+      "heat": "fading",
       "bullets": [
-        "Green screens becoming normal sight",
-        "Bears getting squeezed consistently",
-        "Full portfolio YOLO mindset spreading",
-        "Market correction fears fading fast"
+        "Microsoft ecosystem stranglehold continuing",
+        "Big tech maintaining market leadership",
+        "Corporate dependency creating moats",
+        "Platform lock-in effects strengthening"
       ],
-      "sentiment_score": 79,
+      "sentiment_score": 75,
       "tickers": [
-        "SPY",
-        "QQQ"
+        "MSFT",
+        "GOOGL",
+        "AAPL"
       ]
     }
   ],
@@ -130,66 +136,66 @@
     {
       "symbol": "SPCE",
       "sentiment": "bullish",
-      "mentions": 32,
-      "signal": "SpaceX confusion play euphoria"
+      "mentions": 28,
+      "signal": "SpaceX IPO confusion play"
+    },
+    {
+      "symbol": "SPACEX",
+      "sentiment": "bullish",
+      "mentions": 15,
+      "signal": "IPO anticipation building"
     },
     {
       "symbol": "SNOW",
       "sentiment": "bullish",
       "mentions": 8,
-      "signal": "SaaS recovery leader"
+      "signal": "AI acceleration narrative"
     },
     {
       "symbol": "DELL",
       "sentiment": "bullish",
       "mentions": 6,
-      "signal": "Trump tweet catalyst"
+      "signal": "Trump mention momentum"
     },
     {
-      "symbol": "RDDT",
+      "symbol": "MSFT",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "Fresh momentum building"
+      "signal": "Ecosystem dominance play"
     },
     {
       "symbol": "NOK",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "AI infrastructure play"
+      "signal": "AI infrastructure surge"
     },
     {
       "symbol": "WOLF",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Heavy short squeeze setup"
+      "signal": "Short squeeze target"
     },
     {
-      "symbol": "MSFT",
+      "symbol": "RDDT",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Corporate dominance thesis"
-    },
-    {
-      "symbol": "ORCL",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "AI earnings anticipation"
+      "signal": "Social momentum building"
     }
   ],
   "summary": [
     {
-      "text": "Virgin Galactic becomes the ultimate misdirection play as retail traders confuse SPCE with SpaceX pre-IPO, creating accidental rocket fuel for the stock ahead of June 12th.",
+      "text": "SpaceX IPO fever hitting peak frenzy as retail piles into Virgin Galactic on ticker confusion bets, with June 12th becoming a meme date.",
       "tag": "bullish"
     },
     {
-      "text": "AI infrastructure stocks stage dramatic comeback with SNOW leading the charge, proving SaaS apocalypse fears were overblown as traditional tech embraces AI integration.",
+      "text": "AI infrastructure narrative exploding after Snowflake's blowout earnings crushed SaaSpocalypse fears, proving AI accelerates rather than destroys software.",
       "tag": "bullish"
     },
     {
-      "text": "YOLO energy reaching fever pitch with Dell options exploding overnight and traders going full portfolio into everything from space memes to heavily shorted micro caps.",
+      "text": "Short squeeze hunters targeting heavily shorted names while bears get obliterated trying to fight the momentum, creating classic WSB revenge trading spirals.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-05-30T21:01:27.233824+00:00",
-  "updated_hkt": "2026-05-31 05:01 HKT"
+  "updated_at": "2026-05-30T21:20:22.273769+00:00",
+  "updated_hkt": "2026-05-31 05:20 HKT"
 }
