@@ -432,8 +432,9 @@ async function load() {
     <div class="section-title">Trending Themes &amp; Post Highlights</div>
     <div class="theme-grid">
       ${(data.themes || []).map(th => {
-        const badgeCls = th.heat === 'hot' ? 'heat-hot' : th.heat === 'rising' ? 'heat-rising' : 'heat-cool';
-        const badgeLabel = th.heat === 'hot' ? '🔥 HOT' : th.heat === 'rising' ? '⚡ RISING' : '❄ COOL';
+        const heat = th.heat === 'cool' ? 'fading' : th.heat;
+        const badgeCls = heat === 'hot' ? 'heat-hot' : heat === 'rising' ? 'heat-rising' : 'heat-cool';
+        const badgeLabel = heat === 'hot' ? '🔥 HOT' : heat === 'rising' ? '⚡ RISING' : '↘ FADING';
         return `
           <div class="theme-card">
             <div class="theme-head">

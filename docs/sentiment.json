@@ -98,7 +98,7 @@
       "id": "oil-energy-speculation",
       "title": "Oil Speculation Building",
       "icon": "trending-up",
-      "heat": "cool",
+      "heat": "rising",
       "bullets": [
         "Charts suggesting potential oil moonshot",
         "Energy sector getting fresh attention",

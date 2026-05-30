@@ -65,6 +65,7 @@ def sanitize_claude_result(result: dict) -> dict:
     """Strip individual P&L figures from bullets, signals, and summary."""
     for theme in result.get("themes", []):
         theme["bullets"] = [_clean_pnl(b) for b in theme.get("bullets", [])]
+        normalize_theme_heat(theme)
     for ticker in result.get("tickers", []):
         ticker["signal"] = _clean_pnl(ticker.get("signal", ""))
     if "summary" in result:
@@ -75,6 +76,36 @@ def sanitize_claude_result(result: dict) -> dict:
         else:
             result["summary"] = _clean_pnl(result["summary"])
     return result
+
+
+def normalize_theme_heat(theme: dict) -> None:
+    """Keep theme heat labels aligned with recency/momentum language."""
+    heat = (theme.get("heat") or "").lower()
+    if heat == "cool":
+        heat = "fading"
+
+    text = " ".join([
+        theme.get("title", ""),
+        " ".join(theme.get("bullets", [])),
+    ]).lower()
+    rising_terms = (
+        "building", "gaining", "fresh attention", "momentum",
+        "spreading", "accelerating", "surging", "rally",
+        "moonshot", "squeeze", "frenzy",
+    )
+    fading_terms = (
+        "fading", "cooling", "declining", "losing steam",
+        "less active", "dying", "waning",
+    )
+
+    if heat == "fading" and any(term in text for term in rising_terms):
+        heat = "rising"
+    elif heat not in {"hot", "rising", "fading"}:
+        heat = "rising" if any(term in text for term in rising_terms) else "fading"
+    elif heat == "rising" and any(term in text for term in fading_terms):
+        heat = "fading"
+
+    theme["heat"] = heat
 
 
 # ── Reddit ───────────────────────────────────────────────────────────────────
@@ -392,7 +423,7 @@ JSON schema:
       "id": "<slug>",
       "title": "<display name>",
       "icon": "<tabler icon name e.g. cpu, rocket, flame, trending-up, skull>",
-      "heat": "hot|rising|cool",  // hot=dominant topic with high post volume right now; rising=gaining traction, momentum building but not yet peak; cool=fading, declining engagement compared to earlier
+      "heat": "hot|rising|fading",  // hot=dominant topic with high post volume right now; rising=gaining traction, momentum building but not yet peak; fading=declining engagement compared to earlier
       "bullets": ["<bullet 1 ≤8 words>", "<bullet 2>", "<bullet 3>", "<bullet 4>"],
       "sentiment_score": <integer 0-100, your qualitative read of this theme's bullishness>,
       "tickers": ["TICKER", ...]
@@ -414,7 +445,7 @@ JSON schema:
 }
 
 Rules:
-- heat: "hot" = dominant theme right now, high post volume, very active discussion; "rising" = gaining traction, momentum building but not at peak yet; "cool" = fading, declining engagement, less active than earlier in the day. Base this on relative post volume and recency of activity within the batch — do NOT use "cool" just because a theme sounds calm or stable.
+- heat: "hot" = dominant theme right now, high post volume, very active discussion; "rising" = gaining traction, momentum building but not at peak yet; "fading" = declining engagement, less active than earlier in the day. Base this on relative post volume and recency of activity within the batch. If the title or bullets say building, gaining, fresh attention, squeeze pressure, moonshot, rally, or momentum, heat should usually be "rising", not "fading".
 - bullets: exactly 4 per theme, WSB voice, no fluff
 - tickers: top 8 by mention count only
 - summary: exactly 3 items. tag must be one of: "bullish" (positive momentum, buying energy), "bearish" (fear, selling, losses), "notable" (key observation, neutral but important)
