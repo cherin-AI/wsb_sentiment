@@ -1,17 +1,17 @@
 {
-  "bull_pct": 76,
-  "bear_pct": 16,
-  "neutral_pct": 8,
-  "bull_bear_ratio": 4.9,
-  "overall_score": 75,
+  "bull_pct": 75,
+  "bear_pct": 12,
+  "neutral_pct": 13,
+  "bull_bear_ratio": 6.3,
+  "overall_score": 77,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 76,
-    "ai_score": 75,
-    "bull_count": 68,
-    "bear_count": 14,
+    "formula_score": 75,
+    "ai_score": 78,
+    "bull_count": 38,
+    "bear_count": 6,
     "neutral_count": 7,
-    "total_posts": 89,
+    "total_posts": 51,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,111 +19,110 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 89,
+  "post_count": 51,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-ipo-confusion",
-      "title": "SpaceX IPO Confusion Trade",
+      "id": "spacex-confusion-trade",
+      "title": "SpaceX IPO Ticker Confusion",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SPCE mistaken for SpaceX IPO",
-        "Weaponized stupidity paying off",
-        "Riding ticker confusion to moon",
-        "June 12 IPO date circled"
+        "Virgin Galactic SPCE mistaken for SpaceX",
+        "Massive pre-IPO gains flooding timeline",
+        "June 12th IPO date driving frenzy",
+        "Retail confusion creating accidental momentum"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 82,
       "tickers": [
         "SPCE"
       ]
     },
     {
-      "id": "dell-trump-surge",
-      "title": "DELL Trump Rally",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Trump said buy Dell",
-        "Massive overnight option wins",
-        "0DTE strikes printing hard",
-        "Regarded but profitable trades"
-      ],
-      "sentiment_score": 90,
-      "tickers": [
-        "DELL"
-      ]
-    },
-    {
-      "id": "ai-resurgence",
-      "title": "AI Stock Comeback",
+      "id": "ai-infrastructure-surge",
+      "title": "AI Infrastructure Rally",
       "icon": "cpu",
       "heat": "rising",
       "bullets": [
-        "SaaSpocalypse fears fading away",
-        "SNOW leading AI recovery",
-        "Nuclear power for datacenters",
-        "Software stocks rebounding strong"
+        "SaaS stocks recovering from apocalypse fears",
+        "Data center plays gaining momentum",
+        "SNOW leading software comeback rally",
+        "AI integration boosting traditional tech"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 85,
       "tickers": [
         "SNOW",
+        "NOK",
         "MSFT",
-        "ADSK",
-        "NVDA"
+        "DELL",
+        "ORCL"
       ]
     },
     {
-      "id": "options-gambling",
-      "title": "0DTE Option Mania",
-      "icon": "flame",
+      "id": "meme-stock-euphoria",
+      "title": "Meme Stock Resurrection",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
-        "Overnight option explosions happening",
-        "0DTE SPY addiction widespread",
-        "Revenge trading burning accounts",
-        "Quick scalp mentality dominating"
+        "Short squeeze potential building pressure",
+        "WOLF heavily shorted awaiting catalyst",
+        "Reddit traders coordinating movements",
+        "GameStop energy returning to WSB"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 76,
       "tickers": [
-        "SPY",
-        "SPX",
-        "QQQ"
+        "WOLF",
+        "RDDT",
+        "CRWV"
       ]
     },
     {
-      "id": "space-tech-hype",
-      "title": "Space Technology Boom",
-      "icon": "planet",
+      "id": "yolo-profit-posts",
+      "title": "YOLO Profit Posts",
+      "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "Space contracts flowing in",
-        "Laser beam satellites emerging",
-        "Orbital datacenter concepts growing",
-        "Defense drone plays expanding"
+        "Options printing across multiple tickers",
+        "Dell calls exploding overnight",
+        "Tax payment recovery trades working",
+        "Revenge trading burning some portfolios"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 72,
       "tickers": [
-        "RDW",
-        "LPTH",
-        "XTIA"
+        "DELL",
+        "RDDT",
+        "SMCI"
       ]
     },
     {
-      "id": "loss-acceptance",
-      "title": "Loss Porn Reality",
-      "icon": "skull",
+      "id": "oil-energy-speculation",
+      "title": "Oil Speculation Building",
+      "icon": "trending-up",
       "heat": "cool",
       "bullets": [
-        "Blown accounts from bad timing",
-        "Margin calls hitting hard",
-        "UUUU uranium dreams dying",
-        "Shorting attempts getting squeezed"
+        "Charts suggesting potential oil moonshot",
+        "Energy sector getting fresh attention",
+        "Supply concerns creating bullish sentiment",
+        "Contrarian plays gaining interest"
       ],
-      "sentiment_score": 25,
+      "sentiment_score": 68,
+      "tickers": []
+    },
+    {
+      "id": "general-market-mood",
+      "title": "Bull Market Confidence",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "Green screens becoming normal sight",
+        "Bears getting squeezed consistently",
+        "Full portfolio YOLO mindset spreading",
+        "Market correction fears fading fast"
+      ],
+      "sentiment_score": 79,
       "tickers": [
-        "UUUU",
-        "NQ"
+        "SPY",
+        "QQQ"
       ]
     }
   ],
@@ -131,66 +130,66 @@
     {
       "symbol": "SPCE",
       "sentiment": "bullish",
-      "mentions": 45,
-      "signal": "Riding SpaceX confusion wave"
-    },
-    {
-      "symbol": "DELL",
-      "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "Trump rally printing money"
+      "mentions": 32,
+      "signal": "SpaceX confusion play euphoria"
     },
     {
       "symbol": "SNOW",
       "sentiment": "bullish",
       "mentions": 8,
-      "signal": "AI recovery leader"
+      "signal": "SaaS recovery leader"
     },
     {
-      "symbol": "MSFT",
+      "symbol": "DELL",
       "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "German confidence play"
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
       "mentions": 6,
-      "signal": "0DTE addiction central"
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Valuation concerns emerging"
+      "signal": "Trump tweet catalyst"
     },
     {
       "symbol": "RDDT",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Social media momentum"
+      "mentions": 5,
+      "signal": "Fresh momentum building"
     },
     {
-      "symbol": "NVDA",
+      "symbol": "NOK",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "AI infrastructure king"
+      "signal": "AI infrastructure play"
+    },
+    {
+      "symbol": "WOLF",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Heavy short squeeze setup"
+    },
+    {
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Corporate dominance thesis"
+    },
+    {
+      "symbol": "ORCL",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "AI earnings anticipation"
     }
   ],
   "summary": [
     {
-      "text": "Apes are weaponizing stupidity by buying SPCE thinking it's SpaceX, creating the most regarded profitable trade in WSB history ahead of June 12th.",
+      "text": "Virgin Galactic becomes the ultimate misdirection play as retail traders confuse SPCE with SpaceX pre-IPO, creating accidental rocket fuel for the stock ahead of June 12th.",
       "tag": "bullish"
     },
     {
-      "text": "Trump's Dell comment triggered overnight option explosions with traders making [market momentum] on pure vibes and presidential stock tips.",
+      "text": "AI infrastructure stocks stage dramatic comeback with SNOW leading the charge, proving SaaS apocalypse fears were overblown as traditional tech embraces AI integration.",
       "tag": "bullish"
     },
     {
-      "text": "The SaaSpocalypse is officially dead as SNOW leads AI stocks back from the grave, proving bears wrong once again.",
+      "text": "YOLO energy reaching fever pitch with Dell options exploding overnight and traders going full portfolio into everything from space memes to heavily shorted micro caps.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-05-30T15:48:33.499219+00:00",
-  "updated_hkt": "2026-05-30 23:48 HKT"
+  "updated_at": "2026-05-30T21:01:27.233824+00:00",
+  "updated_hkt": "2026-05-31 05:01 HKT"
 }
