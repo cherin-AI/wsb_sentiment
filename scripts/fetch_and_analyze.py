@@ -366,7 +366,7 @@ JSON schema:
       "id": "<slug>",
       "title": "<display name>",
       "icon": "<tabler icon name e.g. cpu, rocket, flame, trending-up, skull>",
-      "heat": "hot|rising|cool",
+      "heat": "hot|rising|cool",  // hot=dominant topic with high post volume right now; rising=gaining traction, momentum building but not yet peak; cool=fading, declining engagement compared to earlier
       "bullets": ["<bullet 1 ≤8 words>", "<bullet 2>", "<bullet 3>", "<bullet 4>"],
       "sentiment_score": <integer 0-100, your qualitative read of this theme's bullishness>,
       "tickers": ["TICKER", ...]
@@ -388,6 +388,7 @@ JSON schema:
 }
 
 Rules:
+- heat: "hot" = dominant theme right now, high post volume, very active discussion; "rising" = gaining traction, momentum building but not at peak yet; "cool" = fading, declining engagement, less active than earlier in the day. Base this on relative post volume and recency of activity within the batch — do NOT use "cool" just because a theme sounds calm or stable.
 - bullets: exactly 4 per theme, WSB voice, no fluff
 - tickers: top 8 by mention count only
 - summary: exactly 3 items. tag must be one of: "bullish" (positive momentum, buying energy), "bearish" (fear, selling, losses), "notable" (key observation, neutral but important)
