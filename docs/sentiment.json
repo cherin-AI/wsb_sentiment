@@ -1,17 +1,17 @@
 {
-  "bull_pct": 73,
-  "bear_pct": 13,
-  "neutral_pct": 14,
-  "bull_bear_ratio": 5.5,
-  "overall_score": 72,
+  "bull_pct": 70,
+  "bear_pct": 19,
+  "neutral_pct": 11,
+  "bull_bear_ratio": 3.7,
+  "overall_score": 71,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 73,
+    "formula_score": 70,
     "ai_score": 72,
     "bull_count": 33,
-    "bear_count": 6,
-    "neutral_count": 6,
-    "total_posts": 45,
+    "bear_count": 9,
+    "neutral_count": 5,
+    "total_posts": 47,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,7 +19,7 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 45,
+  "post_count": 47,
   "hours_window": 24,
   "themes": [
     {
@@ -28,107 +28,101 @@
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Massive pre-IPO speculation on SPCE confusion",
-        "Retail piling into June 12th date",
-        "Ticker mix-up plays gaining momentum",
-        "Virgin Galactic proxy trade exploding"
+        "Life savings dumped into IPO plays",
+        "Ticker confusion SPCE trade strategy",
+        "June 12th countdown fever building",
+        "Virgin Galactic space meme revival"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 82,
       "tickers": [
         "SPCE",
-        "SPACEX"
+        "SPACX"
       ]
     },
     {
-      "id": "ai-infrastructure-surge",
-      "title": "AI Infrastructure Surge",
+      "id": "ai-profit-rush",
+      "title": "AI Profit Rush",
       "icon": "cpu",
-      "heat": "rising",
+      "heat": "hot",
       "bullets": [
-        "Data center demand driving utilities",
-        "Grid connection bottlenecks creating opportunity",
-        "SNOW blowout crushing SaaSpocalypse fears",
-        "AI integration accelerating traditional software"
+        "Snowflake massive comeback surge",
+        "Dell surprise AI infrastructure play",
+        "Microsoft corporate dominance thesis",
+        "Data center power grid bottlenecks"
       ],
       "sentiment_score": 78,
       "tickers": [
         "SNOW",
-        "NOK",
-        "WOLF",
-        "RDW"
+        "DELL",
+        "MSFT",
+        "WOLF"
       ]
     },
     {
-      "id": "meme-momentum",
-      "title": "Meme Momentum Trading",
+      "id": "trading-loss-showcase",
+      "title": "Trading Loss Showcase",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Bear market revenge trades backfiring",
+        "Options gambling destroying accounts",
+        "Uranium and tech selloffs",
+        "Market timing failures exposed"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "UUUU",
+        "NQ"
+      ]
+    },
+    {
+      "id": "meme-stock-speculation",
+      "title": "Meme Stock Speculation",
       "icon": "trending-up",
       "heat": "rising",
       "bullets": [
-        "Retail euphoria spreading across tickers",
-        "Short squeeze setups being targeted",
-        "Options volume spiking on momentum",
-        "YOLO mentality driving massive plays"
+        "Nokia and BlackBerry revival attempts",
+        "Jack in Box fundamentals play",
+        "Reddit stock momentum building",
+        "Short squeeze hunting continuing"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 68,
       "tickers": [
-        "SPCE",
-        "DELL",
-        "RDDT",
-        "NOW"
+        "NOK",
+        "BB",
+        "JACK",
+        "RDDT"
       ]
     },
     {
-      "id": "short-squeeze-hunting",
-      "title": "Short Squeeze Hunting",
+      "id": "oil-supply-shock",
+      "title": "Oil Supply Shock",
       "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "High short interest targets identified",
-        "Coordinated buying pressure building",
-        "Options gamma creating squeeze potential",
-        "Retail targeting heavily shorted names"
-      ],
-      "sentiment_score": 82,
-      "tickers": [
-        "WOLF",
-        "JACK",
-        "SPCE"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Trading Losses",
-      "icon": "skull",
-      "heat": "rising",
-      "bullets": [
-        "Bear trades getting squeezed hard",
-        "Revenge trading burning accounts",
-        "Shorting in bull market backfiring",
-        "Risk management breaking down"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "UUUU",
-        "NQ",
-        "NVO"
-      ]
-    },
-    {
-      "id": "tech-giants-dominance",
-      "title": "Tech Giants Dominance",
-      "icon": "trending-up",
-      "heat": "fading",
-      "bullets": [
-        "Microsoft ecosystem stranglehold continuing",
-        "Big tech maintaining market leadership",
-        "Corporate dependency creating moats",
-        "Platform lock-in effects strengthening"
+        "Regional infrastructure damaged permanently",
+        "Supply glut completely gone",
+        "Hormuz straits still closed",
+        "Market pricing in normalcy"
       ],
       "sentiment_score": 75,
+      "tickers": []
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Euphoria",
+      "icon": "chart-line",
+      "heat": "rising",
+      "bullets": [
+        "Bull market FOMO spreading",
+        "Regards confusing tickers strategy",
+        "Full portfolio YOLO mentality",
+        "Tax season profit flex"
+      ],
+      "sentiment_score": 76,
       "tickers": [
-        "MSFT",
-        "GOOGL",
-        "AAPL"
+        "SPY",
+        "QQQ"
       ]
     }
   ],
@@ -136,66 +130,66 @@
     {
       "symbol": "SPCE",
       "sentiment": "bullish",
-      "mentions": 28,
+      "mentions": 18,
       "signal": "SpaceX IPO confusion play"
     },
     {
-      "symbol": "SPACEX",
+      "symbol": "SPACX",
       "sentiment": "bullish",
-      "mentions": 15,
-      "signal": "IPO anticipation building"
+      "mentions": 12,
+      "signal": "Life savings IPO mania"
     },
     {
       "symbol": "SNOW",
       "sentiment": "bullish",
       "mentions": 8,
-      "signal": "AI acceleration narrative"
+      "signal": "AI comeback surge"
     },
     {
       "symbol": "DELL",
       "sentiment": "bullish",
       "mentions": 6,
-      "signal": "Trump mention momentum"
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Ecosystem dominance play"
+      "signal": "Trump infrastructure play"
     },
     {
       "symbol": "NOK",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "AI infrastructure surge"
+      "mentions": 5,
+      "signal": "AI infrastructure revival"
     },
     {
-      "symbol": "WOLF",
+      "symbol": "MSFT",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Short squeeze target"
+      "signal": "Corporate monopoly dominance"
+    },
+    {
+      "symbol": "BB",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Meme stock momentum"
     },
     {
       "symbol": "RDDT",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Social momentum building"
+      "mentions": 3,
+      "signal": "Social media rally"
     }
   ],
   "summary": [
     {
-      "text": "SpaceX IPO fever hitting peak frenzy as retail piles into Virgin Galactic on ticker confusion bets, with June 12th becoming a meme date.",
+      "text": "Degenerate traders dumping life savings into SpaceX IPO plays, banking on ticker confusion when retail accidentally buys Virgin Galactic instead. June 12th countdown has space apes loading up on calls.",
       "tag": "bullish"
     },
     {
-      "text": "AI infrastructure narrative exploding after Snowflake's blowout earnings crushed SaaSpocalypse fears, proving AI accelerates rather than destroys software.",
+      "text": "AI infrastructure mania continues as Snowflake stages epic comeback and Dell catches surprise Trump bump. Microsoft corporate dominance thesis gaining traction among regards.",
       "tag": "bullish"
     },
     {
-      "text": "Short squeeze hunters targeting heavily shorted names while bears get obliterated trying to fight the momentum, creating classic WSB revenge trading spirals.",
-      "tag": "notable"
+      "text": "Classic WSB loss porn emerges as bears get squeezed on revenge trades and uranium bagholders realize their mistakes. Market timing failures providing entertainment for the masses.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-05-30T21:20:22.273769+00:00",
-  "updated_hkt": "2026-05-31 05:20 HKT"
+  "updated_at": "2026-05-30T21:34:38.082534+00:00",
+  "updated_hkt": "2026-05-31 05:34 HKT"
 }
