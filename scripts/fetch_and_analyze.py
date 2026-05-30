@@ -419,6 +419,7 @@ Rules:
 - tickers: top 8 by mention count only
 - summary: exactly 3 items. tag must be one of: "bullish" (positive momentum, buying energy), "bearish" (fear, selling, losses), "notable" (key observation, neutral but important)
 - Do not invent post_classifications entries — one per input post, in order
+- Avoid explicit/adult-sounding WSB slang in public dashboard copy. For large loss screenshots, write "trading losses" or "loss posts"; for large profit screenshots, write "profit posts" or "gain posts".
 - NEVER include specific individual P&L figures anywhere — no percentage gains/losses (e.g. "up 2100%", "printing 2000% gains"), no dollar amounts tied to individual trades (e.g. "$1M+ gain posts", "$50k loss"), no "X gains", "X returns" for specific people or tickers. Describe collective market mood and themes instead (e.g. "retail euphoria spreading" not "RKLB up 2100%")
 """
 
@@ -464,8 +465,8 @@ def calculate_metrics(posts: list[dict], classifications: list[dict],
     """
     Hybrid scoring: formula (equal post weight) + Claude holistic read.
 
-    Formula side — equal weight per post (upvotes excluded: loss porn gets
-    as many upvotes as gain porn, so upvotes don't indicate sentiment direction):
+    Formula side — equal weight per post (upvotes excluded: trading loss posts
+    can get as many upvotes as profit posts, so upvotes don't indicate sentiment direction):
       bull_pct        = count(bullish posts) / total posts × 100
       bear_pct        = count(bearish posts) / total posts × 100
       neutral_pct     = 100 − bull_pct − bear_pct
