@@ -93,17 +93,10 @@ def normalize_theme_heat(theme: dict) -> None:
         "spreading", "accelerating", "surging", "rally",
         "moonshot", "squeeze", "frenzy",
     )
-    fading_terms = (
-        "fading", "cooling", "declining", "losing steam",
-        "less active", "dying", "waning",
-    )
-
     if heat == "fading" and any(term in text for term in rising_terms):
         heat = "rising"
     elif heat not in {"hot", "rising", "fading"}:
-        heat = "rising" if any(term in text for term in rising_terms) else "fading"
-    elif heat == "rising" and any(term in text for term in fading_terms):
-        heat = "fading"
+        heat = "rising"
 
     theme["heat"] = heat
 
@@ -423,7 +416,7 @@ JSON schema:
       "id": "<slug>",
       "title": "<display name>",
       "icon": "<tabler icon name e.g. cpu, rocket, flame, trending-up, skull>",
-      "heat": "hot|rising|fading",  // hot=dominant topic with high post volume right now; rising=gaining traction, momentum building but not yet peak; fading=declining engagement compared to earlier
+      "heat": "hot|rising|fading",
       "bullets": ["<bullet 1 ≤8 words>", "<bullet 2>", "<bullet 3>", "<bullet 4>"],
       "sentiment_score": <integer 0-100, your qualitative read of this theme's bullishness>,
       "tickers": ["TICKER", ...]
@@ -445,7 +438,7 @@ JSON schema:
 }
 
 Rules:
-- heat: "hot" = dominant theme right now, high post volume, very active discussion; "rising" = gaining traction, momentum building but not at peak yet; "fading" = declining engagement, less active than earlier in the day. Base this on relative post volume and recency of activity within the batch. If the title or bullets say building, gaining, fresh attention, squeeze pressure, moonshot, rally, or momentum, heat should usually be "rising", not "fading".
+- heat: use your holistic judgment as a WSB-savvy analyst — not keyword matching or volume counting. Ask yourself: how culturally resonant is this theme on WSB, how many posts in this batch touch it, and how intensely? "hot" = high engagement, culturally sticky (loss porn, short squeezes, meme stock mania always draw heat regardless of sentiment direction). "rising" = building momentum, a few posts gaining traction. "fading" = minor theme, low engagement, peripheral to the main conversation. A bearish or painful theme can absolutely be "hot" — energy level is independent of sentiment direction.
 - bullets: exactly 4 per theme, WSB voice, no fluff
 - tickers: top 8 by mention count only
 - summary: exactly 3 items. tag must be one of: "bullish" (positive momentum, buying energy), "bearish" (fear, selling, losses), "notable" (key observation, neutral but important)
