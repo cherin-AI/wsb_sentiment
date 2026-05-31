@@ -1,16 +1,16 @@
 {
-  "bull_pct": 41,
-  "bear_pct": 9,
-  "neutral_pct": 50,
-  "bull_bear_ratio": 4.5,
-  "overall_score": 53,
-  "overall_label": "Neutral",
+  "bull_pct": 55,
+  "bear_pct": 14,
+  "neutral_pct": 31,
+  "bull_bear_ratio": 4.0,
+  "overall_score": 67,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 41,
-    "ai_score": 58,
-    "bull_count": 9,
-    "bear_count": 2,
-    "neutral_count": 11,
+    "formula_score": 55,
+    "ai_score": 72,
+    "bull_count": 12,
+    "bear_count": 3,
+    "neutral_count": 7,
     "total_posts": 22,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
@@ -23,106 +23,105 @@
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-hype",
-      "title": "SpaceX IPO Mania",
+      "id": "spce-mania",
+      "title": "SPCE Rocket Fuel",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SpaceX IPO speculation driving SPCE momentum",
-        "Retail dumping serious money on space plays",
-        "Branson SPCE bagholders seeking redemption from Musk",
-        "Pre-IPO investment schemes spreading through chat"
+        "All-in SPCE euphoria spreading",
+        "Space virgin rally calls",
+        "Meme takeover of WSB",
+        "Bears getting crushed hard"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 88,
       "tickers": [
-        "SPCE",
-        "JACK"
+        "SPCE"
       ]
     },
     {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Boom",
+      "id": "memory-semiconductors",
+      "title": "Memory & Semi Boom",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Data center power grid bottlenecks creating opportunities",
-        "Enterprise AI adoption accelerating software demand",
-        "Alibaba landing major AI contracts globally",
-        "Memory and chip plays benefiting from AI"
+        "LEAPS printing massive returns",
+        "Memory stocks soaring fast",
+        "Semi rally momentum strong",
+        "Bears shorting getting rekt"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 85,
       "tickers": [
-        "ADBE",
         "MU",
-        "BABA",
-        "WOLF",
-        "NOK"
+        "SOXX"
       ]
     },
     {
-      "id": "options-education",
-      "title": "Trading Education Moments",
+      "id": "ai-ecosystem",
+      "title": "AI Infrastructure Play",
       "icon": "trending-up",
       "heat": "rising",
       "bullets": [
-        "Pattern day trader rule changes arriving",
-        "Options assignment confusion spreading among new traders",
-        "LEAPS strategies gaining popularity over short term",
-        "Basic mechanics still confusing retail crowd"
+        "Software rotation incoming soon",
+        "AI tailwinds for tech",
+        "Jensen pumping stocks hard",
+        "Infrastructure demand surging"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 78,
       "tickers": [
-        "HOOD"
+        "ADBE",
+        "MSFT",
+        "FIG"
       ]
     },
     {
-      "id": "profit-posts",
-      "title": "Big Win Screenshots",
+      "id": "space-economy",
+      "title": "Commercial Space Race",
       "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "Memory stock LEAPS delivering massive returns",
-        "Screenshot timing debate alive and well",
-        "Year-to-date performance hitting triple digits",
-        "Take profits versus diamond hands dilemma"
+        "Space companies undervalued plays",
+        "Defense production act momentum",
+        "Alternative to SPCE hype",
+        "Long-term growth thesis strong"
       ],
       "sentiment_score": 75,
       "tickers": [
-        "MU",
-        "NOW"
+        "FLY",
+        "RKLB"
       ]
     },
     {
-      "id": "crypto-bears",
-      "title": "Crypto Skepticism",
-      "icon": "skull",
-      "heat": "rising",
-      "bullets": [
-        "MSTR puts gaining traction among bears",
-        "Bitcoin proxy trades looking vulnerable",
-        "Ponzi scheme accusations resurfacing",
-        "Traditional equities preferred over digital assets"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "MSTR"
-      ]
-    },
-    {
-      "id": "retail-sentiment",
-      "title": "General Market Mood",
+      "id": "biotech-opportunities",
+      "title": "Biotech Revival",
       "icon": "trending-up",
-      "heat": "rising",
+      "heat": "fading",
       "bullets": [
-        "Bull market participants outnumbering bears significantly",
-        "Sector rotation into software gaining momentum",
-        "Oil market positioning ahead of potential surge",
-        "Risk-on attitude dominating discussion threads"
+        "Cancer treatment breakthroughs coming",
+        "Cash-heavy biotechs undervalued",
+        "Pipeline catalysts ahead",
+        "Summit competition heating up"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 70,
       "tickers": [
-        "TSLA",
-        "QQQ"
+        "BNTX"
+      ]
+    },
+    {
+      "id": "trading-momentum",
+      "title": "General Market Mood",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Bull market making everyone",
+        "Pattern day trading barriers",
+        "Degenerate gambling culture thriving",
+        "Diamond hands vs profit"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "HOOD",
+        "MSTR",
+        "ARKK"
       ]
     }
   ],
@@ -131,65 +130,65 @@
       "symbol": "SPCE",
       "sentiment": "bullish",
       "mentions": 8,
-      "signal": "SpaceX IPO speculation driving momentum"
+      "signal": "rocket fuel euphoria"
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Memory LEAPS delivering massive gains"
+      "mentions": 4,
+      "signal": "massive LEAPS winners"
     },
     {
       "symbol": "ADBE",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "AI software rotation thesis gaining traction"
+      "mentions": 3,
+      "signal": "mango portfolio play"
     },
     {
-      "symbol": "MSTR",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Bears targeting crypto proxy plays"
-    },
-    {
-      "symbol": "HOOD",
+      "symbol": "MSFT",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Pattern day trader rule changes benefit"
+      "signal": "SaaS redemption trade"
     },
     {
-      "symbol": "NOK",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "AI infrastructure yolo positioning"
+      "symbol": "BABA",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "institutional accumulation"
     },
     {
-      "symbol": "WOLF",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Grid connection solutions for AI datacenters"
-    },
-    {
-      "symbol": "NOW",
+      "symbol": "FIG",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Full portfolio oversold opportunity play"
+      "signal": "AI design tooling"
+    },
+    {
+      "symbol": "BNTX",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "cancer therapy catalyst"
+    },
+    {
+      "symbol": "FLY",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "undervalued space play"
     }
   ],
   "summary": [
     {
-      "text": "SpaceX IPO rumors are creating a feeding frenzy around space stocks, with SPCE bagholders from 2021 hoping Musk can deliver what Branson couldn't.",
+      "text": "WSB has gone full space cadet with SPCE mania taking over the sub as degens pile in expecting moon missions.",
       "tag": "bullish"
     },
     {
-      "text": "Memory and AI infrastructure plays are printing serious returns as traders pile into LEAPS on data center beneficiaries and enterprise software rotation themes.",
+      "text": "Memory semiconductor plays are printing massive returns while bears betting against the rally are getting obliterated.",
       "tag": "bullish"
     },
     {
-      "text": "Despite scattered bearish positions on crypto proxies, the overall energy feels decidedly risk-on with profit screenshots dominating the conversation flow.",
+      "text": "Bull market energy is infectious with traders swinging for the fences despite occasional big strikeouts.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-05-31T12:01:14.597495+00:00",
-  "updated_hkt": "2026-05-31 20:01 HKT"
+  "updated_at": "2026-05-31T21:01:06.655084+00:00",
+  "updated_hkt": "2026-06-01 05:01 HKT"
 }
