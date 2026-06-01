@@ -1,17 +1,17 @@
 {
-  "bull_pct": 46,
-  "bear_pct": 21,
-  "neutral_pct": 33,
-  "bull_bear_ratio": 2.2,
-  "overall_score": 59,
-  "overall_label": "Neutral",
+  "bull_pct": 71,
+  "bear_pct": 9,
+  "neutral_pct": 20,
+  "bull_bear_ratio": 7.7,
+  "overall_score": 72,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 46,
-    "ai_score": 64,
-    "bull_count": 13,
+    "formula_score": 71,
+    "ai_score": 72,
+    "bull_count": 46,
     "bear_count": 6,
-    "neutral_count": 9,
-    "total_posts": 28,
+    "neutral_count": 13,
+    "total_posts": 65,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,108 +19,120 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 28,
+  "post_count": 65,
   "hours_window": 24,
   "themes": [
     {
-      "id": "space-rally",
-      "title": "Space Stock Mania",
+      "id": "space-euphoria",
+      "title": "Space Stock Speculation",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SPCE rockets dominate daily threads",
-        "SpaceX pre-IPO speculation building momentum",
-        "Firefly and Rocket Lab comparison wars",
-        "Galactic Virgins unite for moon mission"
+        "SPCE trading halts creating FOMO",
+        "SpaceX backdoor plays gaining momentum",
+        "Space tourism stocks rallying hard",
+        "Retail chasing astronomical returns"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 85,
       "tickers": [
         "SPCE",
-        "FLY",
+        "SATS",
         "RKLB"
       ]
     },
     {
-      "id": "ai-boom-skepticism",
-      "title": "AI Bubble Reality Check",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Boom",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Burry questions Nvidia-Musk deal quality",
-        "SoftBank claims AI fifty times bigger",
-        "Mixed signals on hardware sustainability",
-        "Government funding versus private billions debate"
+        "Data center demand driving HPE surge",
+        "Memory shortage fueling MU speculation",
+        "Corporate AI spending reaching records",
+        "Hardware plays outperforming software"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 78,
       "tickers": [
+        "HPE",
+        "MU",
         "NVDA",
-        "MSFT"
+        "AMD"
       ]
     },
     {
-      "id": "margin-trading-chaos",
-      "title": "High-Risk Margin Plays",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Large margin position taking",
-        "Aggressive risk-taking mindset spreading",
-        "Account losses remain prominent",
-        "All-or-nothing speculation remains visible"
-      ],
-      "sentiment_score": 35,
-      "tickers": []
-    },
-    {
-      "id": "saas-redemption",
-      "title": "SaaS Stock Revival",
+      "id": "profit-screenshots",
+      "title": "Big Win Documentation",
       "icon": "trending-up",
-      "heat": "rising",
+      "heat": "hot",
       "bullets": [
-        "Microsoft and ServiceNow recovery thesis",
-        "SAP cloud transformation appreciation growing",
-        "Enterprise software finding new life",
-        "AI integration driving renewed interest"
+        "High conviction trades paying off",
+        "Memory and space stocks delivering",
+        "Account milestones being celebrated",
+        "Risk management becoming priority"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 82,
       "tickers": [
-        "MSFT",
-        "SAP",
-        "NOW"
+        "MU",
+        "HPE",
+        "RKLB",
+        "SPCE"
       ]
     },
     {
-      "id": "semiconductor-timing",
-      "title": "Semiconductor Peak Calls",
-      "icon": "cpu",
+      "id": "options-speculation",
+      "title": "Leveraged Option Plays",
+      "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "SOXX short positions building up",
-        "Memory and CPU rally concerns",
-        "Pullback scalping strategies emerging",
-        "Sector rotation speculation intensifying"
+        "Earnings volatility creating opportunities",
+        "High stakes bets on tech",
+        "Margin trading accelerating gains",
+        "Short term momentum chasing"
       ],
-      "sentiment_score": 42,
+      "sentiment_score": 75,
       "tickers": [
-        "SOXX",
-        "NVDA",
+        "HPE",
+        "CRWD",
+        "TTD",
         "INTC"
       ]
     },
     {
-      "id": "biotech-binary-bets",
-      "title": "Biotech Binary Events",
+      "id": "margin-risks",
+      "title": "Leverage and Risk Taking",
       "icon": "skull",
       "heat": "rising",
       "bullets": [
-        "ABCL phase two readout hype",
-        "Post-pump timing concerns growing",
-        "Medical trial volunteer strategies",
-        "Cash burn versus breakthrough potential"
+        "Full portfolio margin deployments",
+        "Risk tolerance reaching extremes",
+        "Concentrated position building",
+        "Questionable diversification strategies"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 45,
       "tickers": [
-        "ABCL"
+        "SPCE",
+        "META",
+        "MSTR",
+        "NIO"
+      ]
+    },
+    {
+      "id": "market-skepticism",
+      "title": "General Market Mood",
+      "icon": "trending-down",
+      "heat": "fading",
+      "bullets": [
+        "Concerns about market authenticity",
+        "Geopolitical tensions weighing",
+        "Profit taking considerations emerging",
+        "Some defensive positioning apparent"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "MSTR",
+        "META"
       ]
     }
   ],
@@ -129,73 +141,73 @@
       "symbol": "SPCE",
       "sentiment": "bullish",
       "mentions": 12,
-      "signal": "upside momentum toward ten dollars",
+      "signal": "Meme stock mania with trading halts",
       "company_name": "Virgin Galactic Holdings, Inc."
     },
     {
+      "symbol": "HPE",
+      "sentiment": "bullish",
+      "mentions": 11,
+      "signal": "Massive earnings beat driving euphoria",
+      "company_name": "Hewlett Packard Enterprise Comp"
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 10,
+      "signal": "Memory shortage thesis gaining traction",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
       "symbol": "NVDA",
-      "sentiment": "mixed",
+      "sentiment": "bullish",
       "mentions": 8,
-      "signal": "deal-quality concerns versus hardware bullishness",
+      "signal": "AI infrastructure leadership continues",
       "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "closest thing to free money",
-      "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "SAP",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "boring uncle owning half the block",
-      "company_name": "SAP  SE"
-    },
-    {
-      "symbol": "INTC",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "terafab dreams and government money",
-      "company_name": "Intel Corporation"
-    },
-    {
-      "symbol": "FLY",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "ten times space play opportunity",
-      "company_name": "Firefly Aerospace Inc."
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "better than Firefly valuation debate",
+      "mentions": 7,
+      "signal": "Space momentum with retail FOMO",
       "company_name": "Rocket Lab Corporation"
     },
     {
-      "symbol": "ABCL",
+      "symbol": "AMD",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "Semiconductor strength persisting",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "META",
       "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "post-pump biotech binary event",
-      "company_name": "AbCellera Biologics Inc."
+      "mentions": 5,
+      "signal": "Mixed sentiment with some losses",
+      "company_name": "Meta Platforms, Inc."
+    },
+    {
+      "symbol": "SAP",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Enterprise software value play",
+      "company_name": "SAP  SE"
     }
   ],
   "summary": [
     {
-      "text": "Space-related equities are dominating retail attention, with SPCE strength and SpaceX pre-IPO speculation driving sustained discussion across daily trading threads.",
+      "text": "Space stocks are experiencing parabolic moves with SPCE trading halts generating intense FOMO among retail traders seeking backdoor exposure to SpaceX through various proxies.",
       "tag": "bullish"
     },
     {
-      "text": "Risk appetite remains elevated as speculative traders deploy large margin positions, while Michael Burry's criticism of Nvidia-linked transactions adds a cautionary note to AI hardware enthusiasm.",
-      "tag": "bearish"
+      "text": "AI infrastructure plays like HPE and MU are delivering massive earnings beats, with memory shortage fears driving speculation about unprecedented demand growth through the decade.",
+      "tag": "bullish"
     },
     {
-      "text": "Enterprise software sentiment is improving as Microsoft cash generation and AI integration support a broader recovery narrative across SaaS and cloud-exposed names.",
+      "text": "High leverage margin trading is becoming commonplace as traders deploy full portfolios into concentrated bets, raising concerns about risk management in an increasingly speculative environment.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-01T12:01:29.948255+00:00",
-  "updated_hkt": "2026-06-01 20:01 HKT"
+  "updated_at": "2026-06-01T21:01:59.437982+00:00",
+  "updated_hkt": "2026-06-02 05:01 HKT"
 }
