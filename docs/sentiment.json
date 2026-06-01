@@ -129,49 +129,57 @@
       "symbol": "SPCE",
       "sentiment": "bullish",
       "mentions": 12,
-      "signal": "upside momentum toward ten dollars"
+      "signal": "upside momentum toward ten dollars",
+      "company_name": "Virgin Galactic Holdings, Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "mixed",
       "mentions": 8,
-      "signal": "deal-quality concerns versus hardware bullishness"
+      "signal": "deal-quality concerns versus hardware bullishness",
+      "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "MSFT",
       "sentiment": "bullish",
       "mentions": 6,
-      "signal": "closest thing to free money"
+      "signal": "closest thing to free money",
+      "company_name": "Microsoft Corporation"
     },
     {
       "symbol": "SAP",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "boring uncle owning half the block"
+      "signal": "boring uncle owning half the block",
+      "company_name": "SAP  SE"
     },
     {
       "symbol": "INTC",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "terafab dreams and government money"
+      "signal": "terafab dreams and government money",
+      "company_name": "Intel Corporation"
     },
     {
       "symbol": "FLY",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "ten times space play opportunity"
+      "signal": "ten times space play opportunity",
+      "company_name": "Firefly Aerospace Inc."
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "better than Firefly valuation debate"
+      "signal": "better than Firefly valuation debate",
+      "company_name": "Rocket Lab Corporation"
     },
     {
       "symbol": "ABCL",
       "sentiment": "mixed",
       "mentions": 3,
-      "signal": "post-pump biotech binary event"
+      "signal": "post-pump biotech binary event",
+      "company_name": "AbCellera Biologics Inc."
     }
   ],
   "summary": [
