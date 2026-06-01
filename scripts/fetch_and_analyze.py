@@ -91,7 +91,9 @@ def normalize_theme_heat(theme: dict) -> None:
     rising_terms = (
         "building", "gaining", "fresh attention", "momentum",
         "spreading", "accelerating", "surging", "rally",
-        "moonshot", "squeeze", "frenzy",
+        "moonshot", "squeeze", "frenzy", "heating up",
+        "breakthrough", "catalyst", "catalysts ahead",
+        "unveiled", "revival", "opportunities",
     )
     if heat == "fading" and any(term in text for term in rising_terms):
         heat = "rising"
@@ -438,12 +440,12 @@ JSON schema:
 }
 
 Rules:
-- heat: use your holistic judgment as a WSB-savvy analyst — not keyword matching or volume counting. Ask yourself: how culturally resonant is this theme on WSB, how many posts in this batch touch it, and how intensely? "hot" = high engagement, culturally sticky (loss porn, short squeezes, meme stock mania always draw heat regardless of sentiment direction). "rising" = building momentum, a few posts gaining traction. "fading" = minor theme, low engagement, peripheral to the main conversation. A bearish or painful theme can absolutely be "hot" — energy level is independent of sentiment direction.
+- heat: use your holistic judgment as a WSB-savvy analyst — not simple keyword matching or pure volume counting. Ask yourself: how culturally resonant is this theme on WSB, how many posts in this batch touch it, and how intensely? "hot" = high engagement, culturally sticky themes such as trading losses, short squeezes, and meme stock mania draw heat regardless of sentiment direction. "rising" = building momentum, a few posts gaining traction, fresh catalysts, new breakthroughs, or renewed speculation. "fading" = minor theme, low engagement, peripheral to the main conversation. A bearish or painful theme can absolutely be "hot" — energy level is independent of sentiment direction.
 - bullets: exactly 4 per theme, WSB voice, no fluff
 - tickers: top 8 by mention count only
 - summary: exactly 3 items. tag must be one of: "bullish" (positive momentum, buying energy), "bearish" (fear, selling, losses), "notable" (key observation, neutral but important)
 - Do not invent post_classifications entries — one per input post, in order
-- Avoid provocative or explicit WSB slang in all output text (theme titles, bullets, summary, signals). Specifically: never write "loss porn" — use "trading losses", "loss posts", or "account blow-ups" instead. Never write "gain porn" — use "profit posts" or "big wins". You may still use these terms internally to assess heat, but they must not appear in any output field.
+- Avoid provocative or explicit WSB slang in all output text (theme titles, bullets, summary, signals). For large loss screenshots, use "trading losses", "loss posts", or "account blow-ups". For large profit screenshots, use "profit posts" or "big wins".
 - NEVER include specific individual P&L figures anywhere — no percentage gains/losses (e.g. "up 2100%", "printing 2000% gains"), no dollar amounts tied to individual trades (e.g. "$1M+ gain posts", "$50k loss"), no "X gains", "X returns" for specific people or tickers. Describe collective market mood and themes instead (e.g. "retail euphoria spreading" not "RKLB up 2100%")
 """
 
