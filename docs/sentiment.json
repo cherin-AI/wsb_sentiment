@@ -46,7 +46,7 @@
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Burry calls Nvidia-Musk deal fugazi",
+        "Burry questions Nvidia-Musk deal quality",
         "SoftBank claims AI fifty times bigger",
         "Mixed signals on hardware sustainability",
         "Government funding versus private billions debate"
@@ -63,10 +63,10 @@
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Sixty thousand dollar margin YOLO",
-        "Swing for fences mindset spreading",
-        "Account blow-ups behind Wendy's",
-        "All-or-nothing gambling addiction tendencies"
+        "Large margin position taking",
+        "Aggressive risk-taking mindset spreading",
+        "Account losses remain prominent",
+        "All-or-nothing speculation remains visible"
       ],
       "sentiment_score": 35,
       "tickers": []
@@ -129,13 +129,13 @@
       "symbol": "SPCE",
       "sentiment": "bullish",
       "mentions": 12,
-      "signal": "rocket ship to ten dollars"
+      "signal": "upside momentum toward ten dollars"
     },
     {
       "symbol": "NVDA",
       "sentiment": "mixed",
       "mentions": 8,
-      "signal": "fugazi deal warnings versus hardware bullishness"
+      "signal": "deal-quality concerns versus hardware bullishness"
     },
     {
       "symbol": "MSFT",
@@ -176,15 +176,15 @@
   ],
   "summary": [
     {
-      "text": "Space stocks hijack WSB consciousness as SPCE rockets and SpaceX pre-IPO fever spreads through daily threads like wildfire.",
+      "text": "Space-related equities are dominating retail attention, with SPCE strength and SpaceX pre-IPO speculation driving sustained discussion across daily trading threads.",
       "tag": "bullish"
     },
     {
-      "text": "Margin cowboys YOLO sixty thousand on tiny moves while Michael Burry screams about Nvidia fugazi deals from the sidelines.",
+      "text": "Risk appetite remains elevated as speculative traders deploy large margin positions, while Michael Burry's criticism of Nvidia-linked transactions adds a cautionary note to AI hardware enthusiasm.",
       "tag": "bearish"
     },
     {
-      "text": "SaaS redemption arc quietly builds momentum as Microsoft prints money and enterprise software finds its AI-powered second wind.",
+      "text": "Enterprise software sentiment is improving as Microsoft cash generation and AI integration support a broader recovery narrative across SaaS and cloud-exposed names.",
       "tag": "notable"
     }
   ],

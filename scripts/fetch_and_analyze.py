@@ -61,20 +61,37 @@ _PNL_RE = re.compile(
 def _clean_pnl(text: str) -> str:
     return re.sub(_PNL_RE, lambda m: '[market momentum]', text)
 
+
+_PROFESSIONAL_REPLACEMENTS = (
+    (re.compile(r"\bfugazi\b", re.IGNORECASE), "questionable"),
+    (re.compile(r"\bYOLO\b", re.IGNORECASE), "high-conviction"),
+    (re.compile(r"\bcowboys?\b", re.IGNORECASE), "speculative traders"),
+    (re.compile(r"\bscreams?\b", re.IGNORECASE), "warns"),
+    (re.compile(r"\bprints money\b", re.IGNORECASE), "generates strong cash flow"),
+    (re.compile(r"\brocket ship\b", re.IGNORECASE), "upside momentum"),
+)
+
+
+def _professionalize_text(text: str) -> str:
+    for pattern, replacement in _PROFESSIONAL_REPLACEMENTS:
+        text = pattern.sub(replacement, text)
+    return text
+
 def sanitize_claude_result(result: dict) -> dict:
     """Strip individual P&L figures from bullets, signals, and summary."""
     for theme in result.get("themes", []):
-        theme["bullets"] = [_clean_pnl(b) for b in theme.get("bullets", [])]
+        theme["title"] = _professionalize_text(theme.get("title", ""))
+        theme["bullets"] = [_professionalize_text(_clean_pnl(b)) for b in theme.get("bullets", [])]
         normalize_theme_heat(theme)
     for ticker in result.get("tickers", []):
-        ticker["signal"] = _clean_pnl(ticker.get("signal", ""))
+        ticker["signal"] = _professionalize_text(_clean_pnl(ticker.get("signal", "")))
     if "summary" in result:
         if isinstance(result["summary"], list):
             for item in result["summary"]:
                 if isinstance(item, dict) and "text" in item:
-                    item["text"] = _clean_pnl(item["text"])
+                    item["text"] = _professionalize_text(_clean_pnl(item["text"]))
         else:
-            result["summary"] = _clean_pnl(result["summary"])
+            result["summary"] = _professionalize_text(_clean_pnl(result["summary"]))
     return result
 
 
@@ -382,7 +399,7 @@ def posts_to_text(posts: list[dict]) -> str:
 
 # ── Claude ───────────────────────────────────────────────────────────────────
 
-SYSTEM_PROMPT = """You are a WSB (WallStreetBets) sentiment analyst.
+SYSTEM_PROMPT = """You are a senior financial market sentiment analyst with more than 10 years of experience covering retail trading flows, equity narratives, options speculation, and market psychology.
 Output ONLY a valid JSON object — no markdown, no explanation.
 
 Your job has three parts:
@@ -405,7 +422,7 @@ PART 2 — Holistic sentiment score:
 PART 3 — Qualitative analysis (themes, tickers, narrative):
   - themes: exactly 6 dominant topics ordered hottest first. Always return exactly 6 — combine minor themes or add a broader catch-all theme (e.g. "General Market Mood") if needed to reach 6
   - tickers: top 8 by mention count across all posts + comments
-  - summary: 2–3 sentence punchy WSB narrative
+  - summary: 2–3 sentence professional market narrative
 
 JSON schema:
 {
@@ -433,15 +450,16 @@ JSON schema:
     }
   ],
   "summary": [
-    {"text": "<1-3 sentences, punchy WSB voice, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"},
-    {"text": "<1-3 sentences, punchy WSB voice, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"},
-    {"text": "<1-3 sentences, punchy WSB voice, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"}
+    {"text": "<1-3 sentences, professional market commentary, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"},
+    {"text": "<1-3 sentences, professional market commentary, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"},
+    {"text": "<1-3 sentences, professional market commentary, vivid and specific, 30-50 words>", "tag": "bullish|bearish|notable"}
   ]
 }
 
 Rules:
 - heat: use your holistic judgment as a WSB-savvy analyst — not simple keyword matching or pure volume counting. Ask yourself: how culturally resonant is this theme on WSB, how many posts in this batch touch it, and how intensely? "hot" = high engagement, culturally sticky themes such as trading losses, short squeezes, and meme stock mania draw heat regardless of sentiment direction. "rising" = building momentum, a few posts gaining traction, fresh catalysts, new breakthroughs, or renewed speculation. "fading" = minor theme, low engagement, peripheral to the main conversation. A bearish or painful theme can absolutely be "hot" — energy level is independent of sentiment direction.
-- bullets: exactly 4 per theme, WSB voice, no fluff
+- writing style: write like a financial specialist, not a forum participant. Keep the analysis concise, polished, and market-literate. Avoid casual forum slang; translate it into professional language such as "questionable", "speculative traders", "warns", "strong cash flow", "upside momentum", or "high-conviction".
+- bullets: exactly 4 per theme, concise professional market language, no fluff
 - tickers: top 8 by mention count only
 - summary: exactly 3 items. tag must be one of: "bullish" (positive momentum, buying energy), "bearish" (fear, selling, losses), "notable" (key observation, neutral but important)
 - Do not invent post_classifications entries — one per input post, in order
