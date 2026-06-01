@@ -193,6 +193,8 @@
   tbody tr:hover { background: var(--s4); }
   tbody td { padding: 10px 14px; font-size: 12px; }
   .sym { font-size: 13px; font-weight: 600; color: var(--t1); }
+  .sym-name { font-size: 10px; color: var(--t3); margin-top: 2px; }
+  .kpi-company { font-size: 10px; color: var(--t3); margin-top: 2px; margin-bottom: 4px; }
   .sent-pill {
     display: inline-flex; align-items: center;
     padding: 3px 8px; border-radius: 999px; border: 1px solid;
@@ -403,6 +405,7 @@ async function load() {
         <div class="kpi-label">#1 Ticker</div>
         <div style="flex:1">
           <div class="kpi-value a">${(data.tickers && data.tickers[0]) ? data.tickers[0].symbol : '—'}</div>
+          ${(data.tickers && data.tickers[0] && data.tickers[0].company_name) ? `<div class="kpi-company">${data.tickers[0].company_name}</div>` : ''}
           <div class="kpi-sub">${(data.tickers && data.tickers[0]) ? `${(data.tickers[0].mentions||0).toLocaleString()} mentions` : '—'}</div>
         </div>
       </div>
@@ -471,7 +474,10 @@ async function load() {
             const barW = Math.round((t.mentions / maxMentions) * 80);
             return `
               <tr>
-                <td><span class="sym">${t.symbol}</span></td>
+                <td>
+                  <span class="sym">${t.symbol}</span>
+                  ${t.company_name ? `<div class="sym-name">${t.company_name}</div>` : ''}
+                </td>
                 <td><span class="sent-pill ${pillCls}">${t.sentiment}</span></td>
                 <td>
                   <div class="mention-track">

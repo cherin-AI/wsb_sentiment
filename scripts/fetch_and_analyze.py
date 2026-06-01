@@ -383,6 +383,29 @@ def fetch_comments_rss(post_id: str) -> list[str]:
         return []
 
 
+def lookup_company_name(symbol: str) -> str:
+    """Look up company short name from Yahoo Finance search API."""
+    try:
+        result = subprocess.run([
+            "curl", "-sL",
+            "-H", f"User-Agent: {REDDIT_UA}",
+            f"https://query1.finance.yahoo.com/v1/finance/search?q={symbol}&quotesCount=1&newsCount=0&listsCount=0",
+        ], capture_output=True, text=True, timeout=10)
+        data = json.loads(result.stdout)
+        quotes = data.get("quotes", [])
+        if quotes:
+            return quotes[0].get("shortname", "") or quotes[0].get("longname", "")
+    except Exception:
+        pass
+    return ""
+
+
+def enrich_tickers_with_names(tickers: list[dict]) -> list[dict]:
+    for ticker in tickers:
+        ticker["company_name"] = lookup_company_name(ticker.get("symbol", ""))
+    return tickers
+
+
 def posts_to_text(posts: list[dict]) -> str:
     lines = []
     for i, p in enumerate(posts, 1):
@@ -599,7 +622,7 @@ def main():
         "post_count":   len(posts),
         "hours_window": HOURS_WINDOW,
         "themes":        claude_result.get("themes", []),
-        "tickers":       claude_result.get("tickers", []),
+        "tickers":       enrich_tickers_with_names(claude_result.get("tickers", [])),
         "summary":       claude_result.get("summary", ""),
         "updated_at":    datetime.now(timezone.utc).isoformat(),
         "updated_hkt":   datetime.now(HKT).strftime("%Y-%m-%d %H:%M HKT"),
