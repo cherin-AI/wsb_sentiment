@@ -1,17 +1,17 @@
 {
   "bull_pct": 71,
-  "bear_pct": 9,
-  "neutral_pct": 20,
-  "bull_bear_ratio": 7.7,
+  "bear_pct": 13,
+  "neutral_pct": 16,
+  "bull_bear_ratio": 5.5,
   "overall_score": 72,
   "overall_label": "Greed",
   "methodology": {
     "formula_score": 71,
     "ai_score": 72,
-    "bull_count": 46,
-    "bear_count": 6,
-    "neutral_count": 13,
-    "total_posts": 65,
+    "bull_count": 55,
+    "bear_count": 10,
+    "neutral_count": 12,
+    "total_posts": 77,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,21 +19,41 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 65,
+  "post_count": 77,
   "hours_window": 24,
   "themes": [
     {
-      "id": "space-euphoria",
+      "id": "jensen-bump",
+      "title": "Jensen Huang Market Rally",
+      "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "Computex keynote drives massive semiconductor rotation",
+        "AI infrastructure plays surge on commentary",
+        "Supply chain beneficiaries rally across sessions",
+        "Enterprise hardware demand narrative strengthens"
+      ],
+      "sentiment_score": 85,
+      "tickers": [
+        "NVDA",
+        "MRVL",
+        "HPE",
+        "DELL",
+        "MU"
+      ]
+    },
+    {
+      "id": "space-mania",
       "title": "Space Stock Speculation",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SPCE trading halts creating FOMO",
-        "SpaceX backdoor plays gaining momentum",
-        "Space tourism stocks rallying hard",
-        "Retail chasing astronomical returns"
+        "SpaceX IPO speculation drives proxy trades",
+        "Virgin Galactic experiences trading halts",
+        "Space infrastructure investments accelerate momentum",
+        "Retail enthusiasm for space exposure intensifies"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 78,
       "tickers": [
         "SPCE",
         "SATS",
@@ -41,173 +61,155 @@
       ]
     },
     {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Boom",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "Data center demand driving HPE surge",
-        "Memory shortage fueling MU speculation",
-        "Corporate AI spending reaching records",
-        "Hardware plays outperforming software"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "HPE",
-        "MU",
-        "NVDA",
-        "AMD"
-      ]
-    },
-    {
-      "id": "profit-screenshots",
-      "title": "Big Win Documentation",
+      "id": "ai-enterprise-boom",
+      "title": "AI Enterprise Infrastructure",
       "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "High conviction trades paying off",
-        "Memory and space stocks delivering",
-        "Account milestones being celebrated",
-        "Risk management becoming priority"
-      ],
-      "sentiment_score": 82,
-      "tickers": [
-        "MU",
-        "HPE",
-        "RKLB",
-        "SPCE"
-      ]
-    },
-    {
-      "id": "options-speculation",
-      "title": "Leveraged Option Plays",
-      "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "Earnings volatility creating opportunities",
-        "High stakes bets on tech",
-        "Margin trading accelerating gains",
-        "Short term momentum chasing"
+        "Enterprise AI spending drives hardware demand",
+        "Datacenter expansion accelerates across providers",
+        "Memory and storage demand creates supply constraints",
+        "B2B software recovery gains momentum"
+      ],
+      "sentiment_score": 80,
+      "tickers": [
+        "HPE",
+        "DELL",
+        "MU",
+        "CRWD",
+        "NOW"
+      ]
+    },
+    {
+      "id": "saas-recovery",
+      "title": "SaaS Sector Revival",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "Software oversold conditions create opportunities",
+        "Enterprise subscription resilience becomes apparent",
+        "AI integration improves competitive positioning",
+        "Valuation reset provides entry points"
       ],
       "sentiment_score": 75,
       "tickers": [
-        "HPE",
-        "CRWD",
+        "SHOP",
         "TTD",
-        "INTC"
+        "GTLB",
+        "DOCU"
       ]
     },
     {
-      "id": "margin-risks",
-      "title": "Leverage and Risk Taking",
-      "icon": "skull",
+      "id": "profit-taking",
+      "title": "Active Profit Management",
+      "icon": "flame",
       "heat": "rising",
       "bullets": [
-        "Full portfolio margin deployments",
-        "Risk tolerance reaching extremes",
-        "Concentrated position building",
-        "Questionable diversification strategies"
+        "Large gains trigger disciplined selling",
+        "Screenshot-worthy returns prompt exits",
+        "Risk management becomes priority",
+        "Portfolio rebalancing activity increases"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 65,
       "tickers": [
-        "SPCE",
-        "META",
-        "MSTR",
-        "NIO"
+        "RKLB",
+        "MU",
+        "HPE",
+        "AMZN"
       ]
     },
     {
-      "id": "market-skepticism",
-      "title": "General Market Mood",
-      "icon": "trending-down",
+      "id": "market-speculation",
+      "title": "General Market Euphoria",
+      "icon": "flame",
       "heat": "fading",
       "bullets": [
-        "Concerns about market authenticity",
-        "Geopolitical tensions weighing",
-        "Profit taking considerations emerging",
-        "Some defensive positioning apparent"
+        "High-risk positioning across sectors",
+        "Leveraged strategies gain popularity",
+        "Meme stock enthusiasm continues",
+        "Options speculation reaches extremes"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 68,
       "tickers": [
-        "SPY",
-        "QQQ",
-        "MSTR",
+        "SPCE",
+        "GRRR",
+        "NIO",
         "META"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPCE",
-      "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "Meme stock mania with trading halts",
-      "company_name": "Virgin Galactic Holdings, Inc."
-    },
-    {
       "symbol": "HPE",
       "sentiment": "bullish",
-      "mentions": 11,
-      "signal": "Massive earnings beat driving euphoria",
+      "mentions": 24,
+      "signal": "Enterprise AI infrastructure beneficiary",
       "company_name": "Hewlett Packard Enterprise Comp"
+    },
+    {
+      "symbol": "SPCE",
+      "sentiment": "bullish",
+      "mentions": 18,
+      "signal": "Space speculation proxy play",
+      "company_name": "Virgin Galactic Holdings, Inc."
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 10,
-      "signal": "Memory shortage thesis gaining traction",
+      "mentions": 16,
+      "signal": "Memory demand supercycle narrative",
       "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "DELL",
+      "sentiment": "bullish",
+      "mentions": 12,
+      "signal": "AI server momentum continues",
+      "company_name": "Dell Technologies Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "AI infrastructure leadership continues",
+      "mentions": 10,
+      "signal": "Jensen keynote drives ecosystem",
       "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "Space momentum with retail FOMO",
+      "mentions": 8,
+      "signal": "Space infrastructure pure play",
       "company_name": "Rocket Lab Corporation"
     },
     {
-      "symbol": "AMD",
-      "sentiment": "bullish",
+      "symbol": "GTLB",
+      "sentiment": "mixed",
       "mentions": 6,
-      "signal": "Semiconductor strength persisting",
-      "company_name": "Advanced Micro Devices, Inc."
+      "signal": "Earnings speculation volatility",
+      "company_name": "GitLab Inc."
     },
     {
       "symbol": "META",
       "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Mixed sentiment with some losses",
+      "mentions": 6,
+      "signal": "Value play amid broader tech rally",
       "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "SAP",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Enterprise software value play",
-      "company_name": "SAP  SE"
     }
   ],
   "summary": [
     {
-      "text": "Space stocks are experiencing parabolic moves with SPCE trading halts generating intense FOMO among retail traders seeking backdoor exposure to SpaceX through various proxies.",
+      "text": "Jensen Huang's Computex keynote triggered widespread rotation into AI infrastructure plays, with HPE surging after enterprise earnings beat while semiconductor supply chain stocks extend gains.",
       "tag": "bullish"
     },
     {
-      "text": "AI infrastructure plays like HPE and MU are delivering massive earnings beats, with memory shortage fears driving speculation about unprecedented demand growth through the decade.",
+      "text": "Space sector euphoria intensified as SpaceX IPO speculation drove proxy trades in Virgin Galactic and satellite companies, creating volatile trading conditions and retail momentum.",
       "tag": "bullish"
     },
     {
-      "text": "High leverage margin trading is becoming commonplace as traders deploy full portfolios into concentrated bets, raising concerns about risk management in an increasingly speculative environment.",
+      "text": "Profit-taking activities accelerated among high-conviction positions as traders captured substantial gains while maintaining exposure to artificial intelligence and space technology themes.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-01T21:01:59.437982+00:00",
-  "updated_hkt": "2026-06-02 05:01 HKT"
+  "updated_at": "2026-06-02T12:02:38.018855+00:00",
+  "updated_hkt": "2026-06-02 20:02 HKT"
 }
