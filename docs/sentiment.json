@@ -1,17 +1,17 @@
 {
-  "bull_pct": 71,
-  "bear_pct": 13,
-  "neutral_pct": 16,
-  "bull_bear_ratio": 5.5,
-  "overall_score": 72,
+  "bull_pct": 66,
+  "bear_pct": 15,
+  "neutral_pct": 19,
+  "bull_bear_ratio": 4.5,
+  "overall_score": 70,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 71,
+    "formula_score": 66,
     "ai_score": 72,
-    "bull_count": 55,
+    "bull_count": 45,
     "bear_count": 10,
-    "neutral_count": 12,
-    "total_posts": 77,
+    "neutral_count": 13,
+    "total_posts": 68,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,197 +19,192 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 77,
+  "post_count": 68,
   "hours_window": 24,
   "themes": [
     {
-      "id": "jensen-bump",
-      "title": "Jensen Huang Market Rally",
+      "id": "ai-semiconductor-boom",
+      "title": "AI Semiconductor Boom",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Computex keynote drives massive semiconductor rotation",
-        "AI infrastructure plays surge on commentary",
-        "Supply chain beneficiaries rally across sessions",
-        "Enterprise hardware demand narrative strengthens"
+        "Jensen Huang's keynote drives massive rallies",
+        "NVIDIA ecosystem companies surging dramatically",
+        "Hardware infrastructure remains AI bottleneck",
+        "Trillion dollar valuations now normalized"
       ],
       "sentiment_score": 85,
       "tickers": [
         "NVDA",
         "MRVL",
-        "HPE",
-        "DELL",
-        "MU"
+        "AMD",
+        "MU",
+        "HPQ",
+        "HPE"
       ]
     },
     {
-      "id": "space-mania",
-      "title": "Space Stock Speculation",
+      "id": "space-trading-mania",
+      "title": "Space Stock Trading Mania",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SpaceX IPO speculation drives proxy trades",
-        "Virgin Galactic experiences trading halts",
-        "Space infrastructure investments accelerate momentum",
-        "Retail enthusiasm for space exposure intensifies"
+        "Virgin Galactic dilution sparks heavy losses",
+        "SpaceX IPO anticipation driving speculation",
+        "Fat finger trades creating volatility",
+        "Retail traders chasing momentum plays"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 35,
       "tickers": [
         "SPCE",
-        "SATS",
-        "RKLB"
+        "RKLB",
+        "SPXC"
       ]
     },
     {
-      "id": "ai-enterprise-boom",
-      "title": "AI Enterprise Infrastructure",
+      "id": "profit-taking-warnings",
+      "title": "Profit Taking Warnings",
       "icon": "trending-up",
       "heat": "rising",
       "bullets": [
-        "Enterprise AI spending drives hardware demand",
-        "Datacenter expansion accelerates across providers",
-        "Memory and storage demand creates supply constraints",
-        "B2B software recovery gains momentum"
-      ],
-      "sentiment_score": 80,
-      "tickers": [
-        "HPE",
-        "DELL",
-        "MU",
-        "CRWD",
-        "NOW"
-      ]
-    },
-    {
-      "id": "saas-recovery",
-      "title": "SaaS Sector Revival",
-      "icon": "trending-up",
-      "heat": "rising",
-      "bullets": [
-        "Software oversold conditions create opportunities",
-        "Enterprise subscription resilience becomes apparent",
-        "AI integration improves competitive positioning",
-        "Valuation reset provides entry points"
-      ],
-      "sentiment_score": 75,
-      "tickers": [
-        "SHOP",
-        "TTD",
-        "GTLB",
-        "DOCU"
-      ]
-    },
-    {
-      "id": "profit-taking",
-      "title": "Active Profit Management",
-      "icon": "flame",
-      "heat": "rising",
-      "bullets": [
-        "Large gains trigger disciplined selling",
-        "Screenshot-worthy returns prompt exits",
-        "Risk management becomes priority",
-        "Portfolio rebalancing activity increases"
+        "Traders lock in significant gains",
+        "Screenshots triggering exit strategies",
+        "Extended valuations sparking caution",
+        "Risk management becoming priority"
       ],
       "sentiment_score": 65,
       "tickers": [
-        "RKLB",
-        "MU",
-        "HPE",
-        "AMZN"
+        "PANW",
+        "NOW",
+        "LITE"
       ]
     },
     {
-      "id": "market-speculation",
-      "title": "General Market Euphoria",
+      "id": "oil-geopolitical-tensions",
+      "title": "Oil and Geopolitical Tensions",
       "icon": "flame",
-      "heat": "fading",
+      "heat": "rising",
       "bullets": [
-        "High-risk positioning across sectors",
-        "Leveraged strategies gain popularity",
-        "Meme stock enthusiasm continues",
-        "Options speculation reaches extremes"
+        "Iran conflict constraining supply flows",
+        "Inventory buffers reportedly diminishing",
+        "Energy inflation pressuring markets",
+        "Strategic positioning in oil majors"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 70,
+      "tickers": [
+        "XOM",
+        "CL"
+      ]
+    },
+    {
+      "id": "trading-loss-posts",
+      "title": "Trading Loss Posts",
+      "icon": "skull",
+      "heat": "rising",
+      "bullets": [
+        "Pump and dump casualties mounting",
+        "Paper hands regret documented",
+        "FOMO trades resulting in losses",
+        "Risk warnings being ignored"
+      ],
+      "sentiment_score": 25,
       "tickers": [
         "SPCE",
-        "GRRR",
-        "NIO",
-        "META"
+        "META",
+        "VRRM"
+      ]
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "Bull market euphoria persisting",
+        "Pattern day trading restrictions lifted",
+        "Speculative plays dominating discussion",
+        "Leverage strategies gaining popularity"
+      ],
+      "sentiment_score": 75,
+      "tickers": [
+        "SPY",
+        "TQQQ",
+        "GLD"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "HPE",
-      "sentiment": "bullish",
-      "mentions": 24,
-      "signal": "Enterprise AI infrastructure beneficiary",
-      "company_name": "Hewlett Packard Enterprise Comp"
-    },
-    {
       "symbol": "SPCE",
-      "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "Space speculation proxy play",
+      "sentiment": "bearish",
+      "mentions": 15,
+      "signal": "dilution casualties and paper hands",
       "company_name": "Virgin Galactic Holdings, Inc."
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 16,
-      "signal": "Memory demand supercycle narrative",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "DELL",
-      "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "AI server momentum continues",
-      "company_name": "Dell Technologies Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 10,
-      "signal": "Jensen keynote drives ecosystem",
+      "mentions": 12,
+      "signal": "Jensen bump driving ecosystem rallies",
       "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "MRVL",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "trillion dollar company endorsement",
+      "company_name": "Marvell Technology, Inc."
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "semiconductor momentum play",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "PANW",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "cybersecurity earnings optimism",
+      "company_name": "Palo Alto Networks, Inc."
+    },
+    {
+      "symbol": "HPQ",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "AI PC narrative gaining traction",
+      "company_name": "HP Inc."
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Space infrastructure pure play",
+      "mentions": 4,
+      "signal": "space sector anticipation building",
       "company_name": "Rocket Lab Corporation"
     },
     {
-      "symbol": "GTLB",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Earnings speculation volatility",
-      "company_name": "GitLab Inc."
-    },
-    {
-      "symbol": "META",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Value play amid broader tech rally",
-      "company_name": "Meta Platforms, Inc."
+      "symbol": "XOM",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "oil supply constraints positioning",
+      "company_name": "Exxon Mobil Corporation"
     }
   ],
   "summary": [
     {
-      "text": "Jensen Huang's Computex keynote triggered widespread rotation into AI infrastructure plays, with HPE surging after enterprise earnings beat while semiconductor supply chain stocks extend gains.",
+      "text": "AI hardware euphoria reaches fever pitch as Jensen Huang's Computex keynote triggers massive rallies across semiconductor ecosystem, with traders positioning for trillion-dollar valuations.",
       "tag": "bullish"
     },
     {
-      "text": "Space sector euphoria intensified as SpaceX IPO speculation drove proxy trades in Virgin Galactic and satellite companies, creating volatile trading conditions and retail momentum.",
-      "tag": "bullish"
+      "text": "Virgin Galactic's dilution announcement creates heavy casualties among retail traders who chased the space stock mania, highlighting risks of momentum trading.",
+      "tag": "bearish"
     },
     {
-      "text": "Profit-taking activities accelerated among high-conviction positions as traders captured substantial gains while maintaining exposure to artificial intelligence and space technology themes.",
+      "text": "Oil markets show bullish positioning as geopolitical tensions constrain supply, while profit-taking accelerates across extended tech positions as traders lock in substantial gains.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-02T12:02:38.018855+00:00",
-  "updated_hkt": "2026-06-02 20:02 HKT"
+  "updated_at": "2026-06-02T21:02:02.397272+00:00",
+  "updated_hkt": "2026-06-03 05:02 HKT"
 }
