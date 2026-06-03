@@ -1,17 +1,17 @@
 {
-  "bull_pct": 68,
-  "bear_pct": 23,
-  "neutral_pct": 9,
-  "bull_bear_ratio": 2.9,
-  "overall_score": 71,
+  "bull_pct": 61,
+  "bear_pct": 27,
+  "neutral_pct": 12,
+  "bull_bear_ratio": 2.3,
+  "overall_score": 69,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 68,
+    "formula_score": 61,
     "ai_score": 72,
-    "bull_count": 56,
-    "bear_count": 19,
-    "neutral_count": 7,
-    "total_posts": 82,
+    "bull_count": 39,
+    "bear_count": 17,
+    "neutral_count": 8,
+    "total_posts": 64,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,116 +19,121 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 82,
+  "post_count": 64,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-semiconductor-mania",
-      "title": "AI Semiconductor Rally",
+      "id": "semiconductor-mania",
+      "title": "Semiconductor Rally",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MRVL soaring after Jensen endorsement",
-        "Nvidia strength continuing to spread",
-        "Custom ASIC demand driving momentum",
-        "Infrastructure plays gaining traction"
+        "MRVL dominates with Jensen endorsement",
+        "NVDA continues institutional confidence",
+        "MU holders celebrating massive returns",
+        "AI chip demand driving valuations higher"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 88,
       "tickers": [
         "MRVL",
         "NVDA",
         "MU",
-        "AMD",
-        "LITE"
+        "AVGO"
       ]
     },
     {
-      "id": "space-sector-volatility",
-      "title": "Space Sector Turbulence",
+      "id": "space-speculation",
+      "title": "Space Investment Surge",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SpaceX IPO anticipation building momentum",
-        "Virgin Galactic dilution triggering selloff",
-        "Space sympathy plays gaining attention",
-        "Fat-finger trading on similar tickers"
-      ],
-      "sentiment_score": 45,
-      "tickers": [
-        "SPCE",
-        "RKLB",
-        "ASTS",
-        "SPXC"
-      ]
-    },
-    {
-      "id": "oil-energy-thesis",
-      "title": "Oil Supply Constraints",
-      "icon": "flame",
-      "heat": "rising",
-      "bullets": [
-        "Hormuz disruption reducing global supply",
-        "Inventory buffers reportedly diminishing",
-        "Energy majors warning of shortages",
-        "Commodity traders positioning for spike"
+        "SPCE delivering strong momentum trades",
+        "SpaceX IPO driving sector excitement",
+        "Government funding boosting space plays",
+        "Retail FOMO entering space stocks"
       ],
       "sentiment_score": 75,
       "tickers": [
-        "XOM",
-        "MCL"
-      ]
-    },
-    {
-      "id": "trading-rule-changes",
-      "title": "Pattern Day Trading Reform",
-      "icon": "trending-up",
-      "heat": "rising",
-      "bullets": [
-        "PDT restrictions being eliminated Thursday",
-        "Retail traders gaining enhanced access",
-        "Leverage opportunities expanding significantly",
-        "Risk management concerns emerging"
-      ],
-      "sentiment_score": 65,
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "profit-taking-psychology",
-      "title": "Profit Taking Dynamics",
-      "icon": "skull",
-      "heat": "rising",
-      "bullets": [
-        "Early exit regret spreading",
-        "FOMO driving questionable entries",
-        "Paper hands versus diamond hands",
-        "Risk management debates intensifying"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "MRVL",
         "SPCE",
-        "NVDA"
+        "ASTS",
+        "LUNR",
+        "RDW"
       ]
     },
     {
-      "id": "general-market-mood",
-      "title": "Bullish Momentum Sentiment",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Buildout",
       "icon": "trending-up",
       "heat": "rising",
       "bullets": [
-        "Broad optimism across tech sectors",
-        "Earnings beats driving confidence",
-        "IPO anticipation building excitement",
-        "Speculative plays attracting capital"
+        "Big Tech committing trillions to AI",
+        "Data center capacity completely allocated",
+        "Google raising massive capital for expansion",
+        "Meta and Microsoft ramping infrastructure"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 82,
       "tickers": [
         "GOOG",
         "META",
-        "HPE",
-        "NOW"
+        "MSFT",
+        "AMZN"
+      ]
+    },
+    {
+      "id": "options-speculation",
+      "title": "High-Risk Options Trading",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Short-term calls dominating discussions",
+        "high-conviction positions reaching new extremes",
+        "IV crush concerns mounting",
+        "Zero-day expiration plays increasing"
+      ],
+      "sentiment_score": 70,
+      "tickers": [
+        "SPY",
+        "PANW",
+        "ARM",
+        "APPS"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Account Destruction",
+      "icon": "skull",
+      "heat": "rising",
+      "bullets": [
+        "Major bag holders sharing pain",
+        "Portfolio wipeouts accelerating",
+        "Bearish bets getting crushed",
+        "Risk management completely absent"
+      ],
+      "sentiment_score": 25,
+      "tickers": [
+        "SPCE",
+        "BTC",
+        "MSTR",
+        "TLRY"
+      ]
+    },
+    {
+      "id": "market-skepticism",
+      "title": "Bubble Warnings",
+      "icon": "alert-triangle",
+      "heat": "rising",
+      "bullets": [
+        "Short squeeze accusations widespread",
+        "Fundamental concerns growing",
+        "Crash predictions intensifying",
+        "Valuation skepticism mounting"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TSLA",
+        "BTC"
       ]
     }
   ],
@@ -137,73 +142,73 @@
       "symbol": "MRVL",
       "sentiment": "bullish",
       "mentions": 24,
-      "signal": "Jensen Huang endorsement driving euphoria",
+      "signal": "Jensen-fueled euphoria",
       "company_name": "Marvell Technology, Inc."
     },
     {
       "symbol": "SPCE",
       "sentiment": "mixed",
-      "mentions": 22,
-      "signal": "Dilution fears crushing momentum",
+      "mentions": 18,
+      "signal": "momentum play volatility",
       "company_name": "Virgin Galactic Holdings, Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "Continued strength despite size",
+      "mentions": 12,
+      "signal": "institutional confidence",
       "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "Memory cycle optimism persisting",
+      "mentions": 8,
+      "signal": "massive winner momentum",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "AMD",
+      "symbol": "META",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Semiconductor sector momentum play",
-      "company_name": "Advanced Micro Devices, Inc."
+      "mentions": 7,
+      "signal": "oversold recovery",
+      "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "GOOG",
-      "sentiment": "bullish",
+      "symbol": "MSFT",
+      "sentiment": "neutral",
       "mentions": 6,
-      "signal": "Capital raise viewed as AI commitment",
-      "company_name": "Alphabet Inc."
+      "signal": "slow mover frustration",
+      "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "LITE",
-      "sentiment": "bullish",
+      "symbol": "SPY",
+      "sentiment": "bearish",
       "mentions": 5,
-      "signal": "Optical components demand surge",
-      "company_name": "Lumentum Holdings Inc."
+      "signal": "crash bet speculation",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "XOM",
+      "symbol": "ASTS",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Oil supply disruption beneficiary",
-      "company_name": "Exxon Mobil Corporation"
+      "signal": "space sector leader",
+      "company_name": "AST SpaceMobile, Inc."
     }
   ],
   "summary": [
     {
-      "text": "AI semiconductor euphoria reaches fever pitch as MRVL soars following Jensen Huang's trillion-dollar endorsement, with traders piling into custom ASIC suppliers despite extended valuations.",
+      "text": "Semiconductor euphoria reaches fever pitch as MRVL soars on Jensen Huang endorsement, with retail traders piling into AI infrastructure plays despite stretched valuations.",
       "tag": "bullish"
     },
     {
-      "text": "Space sector whipsaws violently as SpaceX IPO anticipation collides with Virgin Galactic dilution reality, leaving momentum traders nursing significant losses on sympathy plays.",
-      "tag": "bearish"
+      "text": "Space sector momentum accelerates ahead of SpaceX IPO, driving speculative flows into SPCE and satellite plays as government funding validates the theme.",
+      "tag": "bullish"
     },
     {
-      "text": "Pattern day trading rule elimination Thursday could amplify retail speculation significantly, removing traditional guardrails just as major IPO events approach the market.",
-      "tag": "notable"
+      "text": "Growing concern over unsustainable valuations and short squeeze dynamics, with bearish voices warning of imminent correction despite continued retail euphoria.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-03T12:02:33.731975+00:00",
-  "updated_hkt": "2026-06-03 20:02 HKT"
+  "updated_at": "2026-06-03T21:02:00.394240+00:00",
+  "updated_hkt": "2026-06-04 05:02 HKT"
 }
