@@ -1,17 +1,17 @@
 {
-  "bull_pct": 61,
-  "bear_pct": 27,
-  "neutral_pct": 12,
-  "bull_bear_ratio": 2.3,
-  "overall_score": 69,
-  "overall_label": "Greed",
+  "bull_pct": 29,
+  "bear_pct": 52,
+  "neutral_pct": 19,
+  "bull_bear_ratio": 0.6,
+  "overall_score": 26,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 61,
-    "ai_score": 72,
-    "bull_count": 39,
-    "bear_count": 17,
-    "neutral_count": 8,
-    "total_posts": 64,
+    "formula_score": 29,
+    "ai_score": 25,
+    "bull_count": 17,
+    "bear_count": 30,
+    "neutral_count": 11,
+    "total_posts": 58,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,196 +19,191 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 64,
+  "post_count": 58,
   "hours_window": 24,
   "themes": [
     {
-      "id": "semiconductor-mania",
-      "title": "Semiconductor Rally",
+      "id": "semiconductor-carnage",
+      "title": "Semiconductor Earnings Disappointment",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MRVL dominates with Jensen endorsement",
-        "NVDA continues institutional confidence",
-        "MU holders celebrating massive returns",
-        "AI chip demand driving valuations higher"
+        "Broadcom guidance misses expectations badly",
+        "AI chip sales forecasts disappoint investors",
+        "Massive options losses on earnings plays",
+        "Supply chain companies struggle with valuations"
       ],
-      "sentiment_score": 88,
+      "sentiment_score": 15,
       "tickers": [
-        "MRVL",
+        "AVGO",
         "NVDA",
-        "MU",
-        "AVGO"
+        "MRVL",
+        "ARM"
       ]
     },
     {
-      "id": "space-speculation",
-      "title": "Space Investment Surge",
-      "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "SPCE delivering strong momentum trades",
-        "SpaceX IPO driving sector excitement",
-        "Government funding boosting space plays",
-        "Retail FOMO entering space stocks"
-      ],
-      "sentiment_score": 75,
-      "tickers": [
-        "SPCE",
-        "ASTS",
-        "LUNR",
-        "RDW"
-      ]
-    },
-    {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Buildout",
-      "icon": "trending-up",
-      "heat": "rising",
-      "bullets": [
-        "Big Tech committing trillions to AI",
-        "Data center capacity completely allocated",
-        "Google raising massive capital for expansion",
-        "Meta and Microsoft ramping infrastructure"
-      ],
-      "sentiment_score": 82,
-      "tickers": [
-        "GOOG",
-        "META",
-        "MSFT",
-        "AMZN"
-      ]
-    },
-    {
-      "id": "options-speculation",
-      "title": "High-Risk Options Trading",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Short-term calls dominating discussions",
-        "high-conviction positions reaching new extremes",
-        "IV crush concerns mounting",
-        "Zero-day expiration plays increasing"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "SPY",
-        "PANW",
-        "ARM",
-        "APPS"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Account Destruction",
+      "id": "options-destruction",
+      "title": "Options Trading Disasters",
       "icon": "skull",
-      "heat": "rising",
+      "heat": "hot",
       "bullets": [
-        "Major bag holders sharing pain",
-        "Portfolio wipeouts accelerating",
-        "Bearish bets getting crushed",
-        "Risk management completely absent"
+        "Zero-day expiration trades imploding spectacularly",
+        "Risk management warnings from brokerages",
+        "Massive account drawdowns from speculation",
+        "Retail traders overleveraged on margin"
       ],
-      "sentiment_score": 25,
-      "tickers": [
-        "SPCE",
-        "BTC",
-        "MSTR",
-        "TLRY"
-      ]
-    },
-    {
-      "id": "market-skepticism",
-      "title": "Bubble Warnings",
-      "icon": "alert-triangle",
-      "heat": "rising",
-      "bullets": [
-        "Short squeeze accusations widespread",
-        "Fundamental concerns growing",
-        "Crash predictions intensifying",
-        "Valuation skepticism mounting"
-      ],
-      "sentiment_score": 35,
+      "sentiment_score": 10,
       "tickers": [
         "SPY",
         "QQQ",
         "TSLA",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "space-stock-collapse",
+      "title": "Space Sector Meltdown",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Virgin Galactic facing delisting concerns",
+        "Share dilution announcements crushing valuations",
+        "Bag holders experiencing catastrophic losses",
+        "Industry sentiment turning extremely negative"
+      ],
+      "sentiment_score": 5,
+      "tickers": [
+        "SPCE",
+        "LUNR",
+        "ACHR"
+      ]
+    },
+    {
+      "id": "ai-speculation-bubble",
+      "title": "AI Investment Bubble Concerns",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "Goldman projects massive AI spending increase",
+        "Valuation concerns on infrastructure companies",
+        "Profitability timeline remains uncertain",
+        "Market questioning sustainability of growth"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "MSFT",
+        "META",
+        "NVDA",
+        "GOOGL"
+      ]
+    },
+    {
+      "id": "market-correction-anxiety",
+      "title": "Market Correction Psychology",
+      "icon": "trending-down",
+      "heat": "rising",
+      "bullets": [
+        "SPY pullback triggering widespread panic",
+        "Bears celebrating minimal downside moves",
+        "Retail traders questioning bull market",
+        "Technical analysts warning of volatility"
+      ],
+      "sentiment_score": 20,
+      "tickers": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    {
+      "id": "crypto-mining-struggles",
+      "title": "Cryptocurrency Mining Weakness",
+      "icon": "coin",
+      "heat": "fading",
+      "bullets": [
+        "Bitcoin treasury companies declining sharply",
+        "Mining operations facing pressure",
+        "Leveraged crypto plays unwinding",
+        "Sector rotation away from digital assets"
+      ],
+      "sentiment_score": 25,
+      "tickers": [
+        "MSTR",
         "BTC"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MRVL",
-      "sentiment": "bullish",
-      "mentions": 24,
-      "signal": "Jensen-fueled euphoria",
-      "company_name": "Marvell Technology, Inc."
+      "symbol": "AVGO",
+      "sentiment": "bearish",
+      "mentions": 12,
+      "signal": "earnings guidance disaster",
+      "company_name": "Broadcom Inc."
     },
     {
       "symbol": "SPCE",
-      "sentiment": "mixed",
-      "mentions": 18,
-      "signal": "momentum play volatility",
+      "sentiment": "bearish",
+      "mentions": 11,
+      "signal": "delisting concerns mounting",
       "company_name": "Virgin Galactic Holdings, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "institutional confidence",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "massive winner momentum",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "META",
-      "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "oversold recovery",
-      "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "neutral",
-      "mentions": 6,
-      "signal": "slow mover frustration",
-      "company_name": "Microsoft Corporation"
     },
     {
       "symbol": "SPY",
       "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "crash bet speculation",
+      "mentions": 9,
+      "signal": "correction anxiety spreading",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "ASTS",
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 8,
+      "signal": "mixed reactions on pullback",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "LUNR",
+      "sentiment": "bearish",
+      "mentions": 6,
+      "signal": "dilution fears dominating",
+      "company_name": "Intuitive Machines, Inc."
+    },
+    {
+      "symbol": "META",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "oversold opportunity cited",
+      "company_name": "Meta Platforms, Inc."
+    },
+    {
+      "symbol": "BB",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "space sector leader",
-      "company_name": "AST SpaceMobile, Inc."
+      "signal": "contrarian optimism emerging",
+      "company_name": "BlackBerry Limited"
+    },
+    {
+      "symbol": "HPE",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "supply chain beneficiary",
+      "company_name": "Hewlett Packard Enterprise Comp"
     }
   ],
   "summary": [
     {
-      "text": "Semiconductor euphoria reaches fever pitch as MRVL soars on Jensen Huang endorsement, with retail traders piling into AI infrastructure plays despite stretched valuations.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Space sector momentum accelerates ahead of SpaceX IPO, driving speculative flows into SPCE and satellite plays as government funding validates the theme.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Growing concern over unsustainable valuations and short squeeze dynamics, with bearish voices warning of imminent correction despite continued retail euphoria.",
+      "text": "Retail traders face widespread devastation as semiconductor earnings disappoint and zero-day options expire worthless, creating panic across speculative positions.",
       "tag": "bearish"
+    },
+    {
+      "text": "Space sector stocks experience catastrophic declines with Virgin Galactic nearing delisting and dilution announcements crushing investor confidence.",
+      "tag": "bearish"
+    },
+    {
+      "text": "Despite market carnage, contrarian opportunities emerge in oversold technology names as some traders double down on beaten-down positions.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-03T21:02:00.394240+00:00",
-  "updated_hkt": "2026-06-04 05:02 HKT"
+  "updated_at": "2026-06-04T12:02:07.067882+00:00",
+  "updated_hkt": "2026-06-04 20:02 HKT"
 }
