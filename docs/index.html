@@ -384,7 +384,7 @@ function buildHistoryChart(history) {
   // Dots
   const dots = entries.map((e, i) => {
     const x = toX(i).toFixed(1), y = toY(e.score).toFixed(1);
-    const col = e.score >= 60 ? '#3CC8B8' : e.score >= 40 ? '#FFCC30' : '#E86060';
+    const col = e.score >= 80 ? '#18a880' : e.score >= 60 ? '#1880b0' : e.score >= 40 ? '#3a5870' : e.score >= 20 ? '#c07020' : '#c03838';
     const isLast = i === entries.length - 1;
     const visDot = `<circle cx="${x}" cy="${y}" r="${isLast ? 4 : 2.5}" fill="${col}" stroke="${isLast ? 'white' : 'none'}" stroke-width="${isLast ? 1.5 : 0}" pointer-events="none"/>`;
     const hitArea = `<circle cx="${x}" cy="${y}" r="10" fill="transparent" class="history-dot" data-ts="${e.ts}" data-score="${e.score}" data-label="${e.label}" style="cursor:pointer"/>`;
@@ -600,7 +600,7 @@ load();
     if (!dot) return;
     const score = dot.dataset.score;
     const label = dot.dataset.label || '';
-    const labelCol = score >= 60 ? 'var(--gr)' : score >= 40 ? 'var(--am)' : 'var(--rd)';
+    const labelCol = score >= 80 ? '#18a880' : score >= 60 ? '#1880b0' : score >= 40 ? '#3a5870' : score >= 20 ? '#c07020' : '#c03838';
     tip.querySelector('.tt-score').textContent = score;
     tip.querySelector('.tt-label').style.color = labelCol;
     tip.querySelector('.tt-label').textContent = label;
