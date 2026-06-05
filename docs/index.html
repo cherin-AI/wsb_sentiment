@@ -374,7 +374,7 @@ function buildHistoryChart(history) {
     { v: 70,  label: 'Greed'   },
     { v: 90,  label: 'Ex. Greed' },
   ].map(({ v, label }) =>
-    `<text x="${padL - 4}" y="${toY(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" fill="#c8daf0" font-size="7" font-family="Inter,system-ui,sans-serif">${label}</text>`
+    `<text x="${padL - 4}" y="${toY(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" fill="#f5f8ff" font-size="7" font-family="Inter,system-ui,sans-serif">${label}</text>`
   ).join('');
 
   // Line
@@ -385,11 +385,12 @@ function buildHistoryChart(history) {
   const dots = entries.map((e, i) => {
     const x = toX(i).toFixed(1), y = toY(e.score).toFixed(1);
     const col = e.score >= 80 ? '#18a880' : e.score >= 60 ? '#1880b0' : e.score >= 40 ? '#3a5870' : e.score >= 20 ? '#c07020' : '#c03838';
+    const labelCol = e.score >= 80 ? '#3CC8B8' : e.score >= 60 ? '#60A8D6' : e.score >= 40 ? '#c8daf0' : e.score >= 20 ? '#FFCC30' : '#E86060';
     const isLast = i === entries.length - 1;
     const r = isLast ? 5 : 4;
     const visDot = `<circle cx="${x}" cy="${y}" r="${r}" fill="${col}" stroke="#07090f" stroke-width="1.5" pointer-events="none"/>`;
     const labelY = (parseFloat(y) - r - 4).toFixed(1);
-    const scoreLabel = `<text x="${x}" y="${labelY}" text-anchor="middle" fill="${col}" font-size="8" font-weight="700" font-family="Inter,system-ui,sans-serif" pointer-events="none">${e.score}</text>`;
+    const scoreLabel = `<text x="${x}" y="${labelY}" text-anchor="middle" fill="${labelCol}" font-size="8" font-weight="700" font-family="Inter,system-ui,sans-serif" pointer-events="none">${e.score}</text>`;
     const hitArea = `<circle cx="${x}" cy="${y}" r="10" fill="transparent" class="history-dot" data-ts="${e.ts}" data-score="${e.score}" data-label="${e.label}" style="cursor:pointer"/>`;
     return visDot + scoreLabel + hitArea;
   }).join('');
@@ -401,7 +402,7 @@ function buildHistoryChart(history) {
     const dateStr = ts.length >= 10 ? ts.slice(5, 10) : ts;
     if (seenDates.has(dateStr)) return '';
     seenDates.add(dateStr);
-    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#c8daf0" font-size="8" font-family="Inter,system-ui,sans-serif">${dateStr}</text>`;
+    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#f5f8ff" font-size="8" font-family="Inter,system-ui,sans-serif">${dateStr}</text>`;
   }).join('');
 
   return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">${zoneBands}${dividers}${yLabels}${line}${dots}${xLabels}</svg>`;
