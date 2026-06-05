@@ -1,17 +1,17 @@
 {
-  "bull_pct": 25,
+  "bull_pct": 40,
   "bear_pct": 40,
-  "neutral_pct": 35,
-  "bull_bear_ratio": 0.6,
-  "overall_score": 32,
-  "overall_label": "Fear",
+  "neutral_pct": 20,
+  "bull_bear_ratio": 1.0,
+  "overall_score": 44,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 25,
-    "ai_score": 35,
-    "bull_count": 13,
-    "bear_count": 21,
-    "neutral_count": 18,
-    "total_posts": 52,
+    "formula_score": 40,
+    "ai_score": 45,
+    "bull_count": 14,
+    "bear_count": 14,
+    "neutral_count": 7,
+    "total_posts": 35,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,189 +19,191 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 52,
+  "post_count": 35,
   "hours_window": 24,
   "themes": [
     {
-      "id": "semiconductor-earnings-volatility",
-      "title": "Semiconductor Earnings Volatility",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "AVGO massive earnings disappointment drives portfolio losses",
-        "MRVL mixed results create trading uncertainty",
-        "AMD faces put speculation amid growth concerns",
-        "Intel volatility continues affecting retail positions"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "AVGO",
-        "MRVL",
-        "AMD",
-        "INTC"
-      ]
-    },
-    {
-      "id": "large-position-speculation",
-      "title": "Large Position Speculation",
-      "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "Multiple six-figure portfolio concentrations in single stocks",
-        "Margin trading amplifying position sizes and risks",
-        "Full portfolio allocations becoming normalized strategy",
-        "High-conviction bets on earnings and technical bounces"
-      ],
-      "sentiment_score": 45,
-      "tickers": [
-        "AVGO",
-        "NVDA",
-        "GOOG",
-        "BB",
-        "NOW"
-      ]
-    },
-    {
-      "id": "ipo-anticipation",
-      "title": "IPO Market Anticipation",
-      "icon": "trending-up",
-      "heat": "rising",
-      "bullets": [
-        "SpaceX IPO generating significant retail speculation",
-        "Quantinuum debut showing mixed early reception",
-        "IPO liquidity concerns affecting day-one strategies",
-        "Comparison shopping between upcoming public offerings"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "SPCE",
-        "RKLB"
-      ]
-    },
-    {
-      "id": "crypto-skepticism",
-      "title": "Crypto Skepticism",
+      "id": "trading-losses",
+      "title": "Major Trading Losses",
       "icon": "skull",
-      "heat": "rising",
+      "heat": "hot",
       "bullets": [
-        "Bitcoin bearish thesis gaining traction among contrarians",
-        "Saylor criticism accompanying crypto decline",
-        "Put positions reflecting zero-value predictions",
-        "MLM scheme comparisons emerging in discussions"
+        "Options blow-ups dominating conversation",
+        "Account destruction sparking community engagement",
+        "Memory stock calls expiring worthless",
+        "High-stakes trades turning catastrophic"
       ],
       "sentiment_score": 15,
       "tickers": [
-        "MSTR"
+        "AVGO",
+        "MU",
+        "MSFT",
+        "IOT"
       ]
     },
     {
-      "id": "trading-losses",
-      "title": "Trading Losses",
-      "icon": "flame",
+      "id": "memory-semiconductors",
+      "title": "Memory Semiconductor Rally",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Multiple portfolio screenshots showing significant red positions",
-        "Options expiring worthless creating realized losses",
-        "Margin calls and risk management interventions",
-        "Self-deprecating humor masking substantial financial pain"
+        "NAND and DRAM supply constraints driving momentum",
+        "Micron options speculation intensifying",
+        "Semiconductor earnings volatility creating opportunities",
+        "Memory stocks reaching extreme valuations"
       ],
-      "sentiment_score": 20,
+      "sentiment_score": 70,
       "tickers": [
-        "SPY",
-        "QQQ",
-        "TSLA"
+        "MU",
+        "KXIAY",
+        "AVGO"
       ]
     },
     {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "trending-down",
+      "id": "ipo-speculation",
+      "title": "IPO Mania",
+      "icon": "rocket",
+      "heat": "rising",
+      "bullets": [
+        "SpaceX public offering generating massive interest",
+        "Index inclusion debates surrounding mega-IPOs",
+        "Quantum computing IPO launches",
+        "Retail access requirements being lowered dramatically"
+      ],
+      "sentiment_score": 65,
+      "tickers": [
+        "QNTU",
+        "TKO"
+      ]
+    },
+    {
+      "id": "big-tech-earnings",
+      "title": "Big Tech Earnings Volatility",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Google dilution concerns creating buying opportunities",
+        "Microsoft positions facing continued pressure",
+        "Broadcom earnings aftermath driving portfolio moves",
+        "Long-term LEAP strategies paying off"
+      ],
+      "sentiment_score": 55,
+      "tickers": [
+        "GOOG",
+        "MSFT",
+        "AVGO"
+      ]
+    },
+    {
+      "id": "energy-sector-bets",
+      "title": "Energy Sector Momentum",
+      "icon": "flame",
+      "heat": "rising",
+      "bullets": [
+        "Coal investment announcements driving speculation",
+        "Energy ETF positioning for policy tailwinds",
+        "Oil correlations shifting market dynamics",
+        "Government funding creating sector catalysts"
+      ],
+      "sentiment_score": 75,
+      "tickers": [
+        "XLE",
+        "XOP",
+        "BTU",
+        "BE"
+      ]
+    },
+    {
+      "id": "yolo-culture",
+      "title": "High-Risk Portfolio Concentration",
+      "icon": "target",
       "heat": "fading",
       "bullets": [
-        "Bull market participants experiencing unexpected volatility",
-        "PDT restrictions affecting short-term trading strategies",
-        "Reverse split analysis highlighting distressed companies",
-        "Mixed signals creating directional uncertainty"
+        "Full portfolio bets becoming standard practice",
+        "Options expiration anxiety driving decisions",
+        "Position sizing reaching dangerous levels",
+        "Risk management completely abandoned"
       ],
       "sentiment_score": 40,
       "tickers": [
-        "SPY",
-        "QQQ"
+        "PL",
+        "BB",
+        "NOW"
       ]
     }
   ],
   "tickers": [
     {
       "symbol": "AVGO",
-      "sentiment": "bearish",
-      "mentions": 12,
-      "signal": "earnings disappointment driving major losses",
+      "sentiment": "mixed",
+      "mentions": 8,
+      "signal": "earnings aftermath creating buying opportunities",
       "company_name": "Broadcom Inc."
     },
     {
-      "symbol": "MRVL",
-      "sentiment": "mixed",
-      "mentions": 8,
-      "signal": "mixed earnings reactions creating volatility",
-      "company_name": "Marvell Technology, Inc."
-    },
-    {
-      "symbol": "SPY",
+      "symbol": "MU",
       "sentiment": "bearish",
       "mentions": 7,
-      "signal": "put speculation amid correction fears",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "signal": "calls expiring worthless despite sector momentum",
+      "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "high-stakes position management stress",
-      "company_name": "NVIDIA Corporation"
+      "symbol": "MSFT",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "prolonged underperformance frustrating holders",
+      "company_name": "Microsoft Corporation"
     },
     {
       "symbol": "GOOG",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "dilution overreaction bounce play",
+      "mentions": 3,
+      "signal": "dilution overreaction creating entry point",
       "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "AMD",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "correction speculation despite growth",
-      "company_name": "Advanced Micro Devices, Inc."
-    },
-    {
-      "symbol": "SPCE",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "pump and dump warnings",
-      "company_name": "Virgin Galactic Holdings, Inc."
+      "symbol": "TSMC",
+      "sentiment": "neutral",
+      "mentions": 2,
+      "signal": "Buffett exit prompting commentary",
+      "company_name": "TAIWANSMFAC DRN"
     },
     {
       "symbol": "LULU",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "guidance cut driving contrarian losses",
+      "mentions": 2,
+      "signal": "guidance cut triggering selloff",
       "company_name": "lululemon athletica inc."
+    },
+    {
+      "symbol": "XLE",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "energy policy tailwinds building",
+      "company_name": "State Street Energy Select Sect"
+    },
+    {
+      "symbol": "IOT",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "earnings beat failed to prevent decline",
+      "company_name": "Samsara Inc."
     }
   ],
   "summary": [
     {
-      "text": "Semiconductor earnings season creates widespread portfolio carnage as AVGO disappoints and traders question AI chip valuations amid margin call stress.",
+      "text": "Memory semiconductor fever collides with brutal options expiration reality as MU and AVGO trades implode despite underlying sector strength.",
       "tag": "bearish"
     },
     {
-      "text": "Retail speculation intensifies around SpaceX IPO while traders deploy six-figure concentrated positions despite elevated market volatility.",
+      "text": "SpaceX IPO speculation reaches fever pitch with lowered access requirements driving retail participation expectations across multiple platforms.",
+      "tag": "bullish"
+    },
+    {
+      "text": "Portfolio concentration reaches dangerous levels as traders abandon risk management for full-position bets on everything from quantum computing to coal investments.",
       "tag": "notable"
-    },
-    {
-      "text": "Bitcoin skepticism rises as contrarian traders bet against crypto with bearish thesis while semiconductor losses dominate WSB loss posts.",
-      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-04T21:01:51.332807+00:00",
-  "updated_hkt": "2026-06-05 05:01 HKT"
+  "updated_at": "2026-06-05T12:01:45.140350+00:00",
+  "updated_hkt": "2026-06-05 20:01 HKT"
 }
