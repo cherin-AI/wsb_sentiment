@@ -340,7 +340,7 @@ function buildGaugeSVG(score, scoreColor) {
 
 function buildHistoryChart(history) {
   if (!history || history.length < 2) return '';
-  const entries = history.slice(-60);
+  const entries = history.slice(-14);
   const W = 900, H = 150, padL = 36, padR = 12, padT = 12, padB = 28;
   const chartW = W - padL - padR;
   const chartH = H - padT - padB;
@@ -392,12 +392,13 @@ function buildHistoryChart(history) {
   }).join('');
 
   // X-axis labels: show every ~7th entry + last
-  const step = Math.max(1, Math.floor(entries.length / 7));
+  const seenDates = new Set();
   const xLabels = entries.map((e, i) => {
-    if (i % step !== 0 && i !== entries.length - 1) return '';
     const ts = e.ts || '';
-    const shortDate = ts.length >= 10 ? ts.slice(5, 10) : ts;
-    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#c8daf0" font-size="8" font-family="Inter,system-ui,sans-serif">${shortDate}</text>`;
+    const dateStr = ts.length >= 10 ? ts.slice(5, 10) : ts;
+    if (seenDates.has(dateStr)) return '';
+    seenDates.add(dateStr);
+    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#c8daf0" font-size="8" font-family="Inter,system-ui,sans-serif">${dateStr}</text>`;
   }).join('');
 
   return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">${zoneBands}${dividers}${yLabels}${line}${dots}${xLabels}</svg>`;
