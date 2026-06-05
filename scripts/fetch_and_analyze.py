@@ -37,6 +37,8 @@ except ImportError:
 
 HKT          = timezone(timedelta(hours=8))
 OUTPUT_PATH  = os.path.join(os.path.dirname(__file__), "..", "docs", "sentiment.json")
+HISTORY_PATH = os.path.join(os.path.dirname(__file__), "..", "docs", "history.json")
+HISTORY_MAX  = 180  # 90 days at 2x/day
 
 REDDIT_UA    = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 REDDIT_HDR   = {"User-Agent": REDDIT_UA, "Accept": "application/json", "Accept-Language": "en-US,en;q=0.9"}
@@ -583,12 +585,33 @@ def calculate_metrics(posts: list[dict], classifications: list[dict],
     }
 
 
+# ── History ──────────────────────────────────────────────────────────────────
+
+def load_history() -> list[dict]:
+    try:
+        with open(HISTORY_PATH) as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def save_history(history: list[dict], entry: dict) -> None:
+    history.append(entry)
+    if len(history) > HISTORY_MAX:
+        history = history[-HISTORY_MAX:]
+    os.makedirs(os.path.dirname(HISTORY_PATH), exist_ok=True)
+    with open(HISTORY_PATH, "w") as f:
+        json.dump(history, f, indent=2, ensure_ascii=False)
+
+
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
     api_key       = os.environ["ANTHROPIC_API_KEY"]
     client_id     = os.environ.get("REDDIT_CLIENT_ID", "")
     client_secret = os.environ.get("REDDIT_CLIENT_SECRET", "")
+
+    history = load_history()
 
     print(f"Fetching WSB posts from last {HOURS_WINDOW}h (/new + timestamp filter)…")
     if client_id and client_secret:
@@ -631,6 +654,14 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
+
+    save_history(history, {
+        "ts":            result["updated_hkt"],
+        "score":         result["overall_score"],
+        "label":         result["overall_label"],
+        "formula_score": metrics["methodology"]["formula_score"],
+        "ai_score":      metrics["methodology"]["ai_score"],
+    })
 
     m = metrics["methodology"]
     print(f"\nSaved → {OUTPUT_PATH}")

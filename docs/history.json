@@ -1,0 +1,107 @@
+[
+  {
+    "ts": "2026-05-28 05:01 HKT",
+    "score": 76,
+    "label": "Greed",
+    "formula_score": 71,
+    "ai_score": 78
+  },
+  {
+    "ts": "2026-05-29 20:02 HKT",
+    "score": 76,
+    "label": "Greed",
+    "formula_score": 71,
+    "ai_score": 78
+  },
+  {
+    "ts": "2026-05-30 05:02 HKT",
+    "score": 74,
+    "label": "Greed",
+    "formula_score": 71,
+    "ai_score": 75
+  },
+  {
+    "ts": "2026-05-30 20:03 HKT",
+    "score": 75,
+    "label": "Greed",
+    "formula_score": 68,
+    "ai_score": 78
+  },
+  {
+    "ts": "2026-05-31 05:01 HKT",
+    "score": 77,
+    "label": "Greed",
+    "formula_score": 75,
+    "ai_score": 78
+  },
+  {
+    "ts": "2026-05-31 20:01 HKT",
+    "score": 53,
+    "label": "Neutral",
+    "formula_score": 41,
+    "ai_score": 58
+  },
+  {
+    "ts": "2026-06-01 05:01 HKT",
+    "score": 67,
+    "label": "Greed",
+    "formula_score": 55,
+    "ai_score": 72
+  },
+  {
+    "ts": "2026-06-01 20:01 HKT",
+    "score": 59,
+    "label": "Neutral",
+    "formula_score": 46,
+    "ai_score": 64
+  },
+  {
+    "ts": "2026-06-02 05:01 HKT",
+    "score": 72,
+    "label": "Greed",
+    "formula_score": 71,
+    "ai_score": 72
+  },
+  {
+    "ts": "2026-06-02 20:02 HKT",
+    "score": 72,
+    "label": "Greed",
+    "formula_score": 71,
+    "ai_score": 72
+  },
+  {
+    "ts": "2026-06-03 05:02 HKT",
+    "score": 70,
+    "label": "Greed",
+    "formula_score": 66,
+    "ai_score": 72
+  },
+  {
+    "ts": "2026-06-03 20:02 HKT",
+    "score": 71,
+    "label": "Greed",
+    "formula_score": 68,
+    "ai_score": 72
+  },
+  {
+    "ts": "2026-06-04 05:02 HKT",
+    "score": 69,
+    "label": "Greed",
+    "formula_score": 61,
+    "ai_score": 72
+  },
+  {
+    "ts": "2026-06-04 20:02 HKT",
+    "score": 26,
+    "label": "Fear",
+    "formula_score": 29,
+    "ai_score": 25
+  },
+  {
+    "ts": "2026-06-05 05:01 HKT",
+    "score": 32,
+    "label": "Fear",
+    "formula_score": 25,
+    "ai_score": 35
+  }
+]

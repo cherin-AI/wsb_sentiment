@@ -72,7 +72,7 @@
   /* ── Section title ── */
   .section-title {
     font-size: 9px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.18em; color: var(--t3);
+    letter-spacing: 0.18em; color: var(--t1);
     border-bottom: 1px solid var(--b1); padding-bottom: 8px; margin-bottom: 16px;
     display: flex; align-items: center; gap: 10px;
   }
@@ -210,6 +210,17 @@
   .signal-text { font-size: 11px; color: var(--t2); }
 
 
+  /* ── History tooltip ── */
+  #history-tooltip {
+    position: fixed; display: none; pointer-events: none; z-index: 100;
+    background: var(--s3); border: 1px solid var(--b2); border-radius: 6px;
+    padding: 7px 11px; white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+  }
+  #history-tooltip .tt-score { font-size: 15px; font-weight: 700; color: var(--t1); }
+  #history-tooltip .tt-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-left: 5px; }
+  #history-tooltip .tt-ts { font-size: 10px; color: var(--t3); margin-top: 3px; }
+
   /* ── Loading / Error ── */
   .loading { text-align: center; padding: 4rem; font-size: 13px; color: var(--t3); }
   .error { background: rgba(232,96,96,0.10); border: 1px solid rgba(232,96,96,0.3); border-radius: 8px; padding: 12px 16px; color: #ff9b9b; font-size: 12px; margin-bottom: 1rem; }
@@ -327,9 +338,74 @@ function buildGaugeSVG(score, scoreColor) {
   return'<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+W+'px;display:block;margin:8px 0;" xmlns="http://www.w3.org/2000/svg">'+paths+dots+nums+labels+needle+pivot+scoreNum+'</svg>';
 }
 
+function buildHistoryChart(history) {
+  if (!history || history.length < 2) return '';
+  const entries = history.slice(-60);
+  const W = 900, H = 150, padL = 36, padR = 12, padT = 12, padB = 28;
+  const chartW = W - padL - padR;
+  const chartH = H - padT - padB;
+
+  function toX(i) { return padL + (i / (entries.length - 1)) * chartW; }
+  function toY(v) { return padT + (1 - v / 100) * chartH; }
+
+  // Colored zone bands
+  const zoneBands = [
+    { min: 0,  max: 20,  fill: 'rgba(192,56,56,0.13)'  },
+    { min: 20, max: 40,  fill: 'rgba(192,112,32,0.10)' },
+    { min: 40, max: 60,  fill: 'rgba(58,88,112,0.10)'  },
+    { min: 60, max: 80,  fill: 'rgba(24,128,176,0.10)' },
+    { min: 80, max: 100, fill: 'rgba(24,168,128,0.13)' },
+  ].map(z => {
+    const y1 = toY(z.max).toFixed(1), y2 = toY(z.min).toFixed(1);
+    return `<rect x="${padL}" y="${y1}" width="${chartW}" height="${(parseFloat(y2)-parseFloat(y1)).toFixed(1)}" fill="${z.fill}"/>`;
+  }).join('');
+
+  // Horizontal dividers at zone boundaries
+  const dividers = [20, 40, 60, 80].map(v => {
+    const y = toY(v).toFixed(1);
+    return `<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>`;
+  }).join('');
+
+  // Y-axis labels
+  const yLabels = [
+    { v: 10,  label: 'Ex. Fear' },
+    { v: 30,  label: 'Fear'     },
+    { v: 50,  label: 'Neutral'  },
+    { v: 70,  label: 'Greed'   },
+    { v: 90,  label: 'Ex. Greed' },
+  ].map(({ v, label }) =>
+    `<text x="${padL - 4}" y="${toY(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" fill="#c8daf0" font-size="7" font-family="Inter,system-ui,sans-serif">${label}</text>`
+  ).join('');
+
+  // Line
+  const points = entries.map((e, i) => `${toX(i).toFixed(1)},${toY(e.score).toFixed(1)}`).join(' ');
+  const line = `<polyline points="${points}" fill="none" stroke="rgba(96,168,214,0.75)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+
+  // Dots
+  const dots = entries.map((e, i) => {
+    const x = toX(i).toFixed(1), y = toY(e.score).toFixed(1);
+    const col = e.score >= 60 ? '#3CC8B8' : e.score >= 40 ? '#FFCC30' : '#E86060';
+    const isLast = i === entries.length - 1;
+    const visDot = `<circle cx="${x}" cy="${y}" r="${isLast ? 4 : 2.5}" fill="${col}" stroke="${isLast ? 'white' : 'none'}" stroke-width="${isLast ? 1.5 : 0}" pointer-events="none"/>`;
+    const hitArea = `<circle cx="${x}" cy="${y}" r="10" fill="transparent" class="history-dot" data-ts="${e.ts}" data-score="${e.score}" data-label="${e.label}" style="cursor:pointer"/>`;
+    return visDot + hitArea;
+  }).join('');
+
+  // X-axis labels: show every ~7th entry + last
+  const step = Math.max(1, Math.floor(entries.length / 7));
+  const xLabels = entries.map((e, i) => {
+    if (i % step !== 0 && i !== entries.length - 1) return '';
+    const ts = e.ts || '';
+    const shortDate = ts.length >= 10 ? ts.slice(5, 10) : ts;
+    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#c8daf0" font-size="8" font-family="Inter,system-ui,sans-serif">${shortDate}</text>`;
+  }).join('');
+
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">${zoneBands}${dividers}${yLabels}${line}${dots}${xLabels}</svg>`;
+}
+
 async function load() {
   const root = document.getElementById('root');
-  let data;
+  let data, history = [];
   try {
     const r = await fetch(`sentiment.json?t=${Date.now()}`);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -338,6 +414,10 @@ async function load() {
     root.innerHTML = `<div class="error">Failed to load sentiment.json — ${e.message}</div>`;
     return;
   }
+  try {
+    const rh = await fetch(`history.json?t=${Date.now()}`);
+    if (rh.ok) history = await rh.json();
+  } catch (_) {}
 
   const ts = data.updated_hkt || data.updated_at || '—';
   document.getElementById('ts').textContent = ts;
@@ -494,10 +574,48 @@ async function load() {
 
 
 
+    ${history.length >= 2 ? `
+    <!-- Score History -->
+    <div class="section-title">Score History</div>
+    <div class="bull-bear" style="padding:14px 16px 10px;">
+      ${buildHistoryChart(history)}
+    </div>
+    ` : ''}
   `;
 }
 
 load();
+
+// History chart tooltip
+(function() {
+  let tip = document.getElementById('history-tooltip');
+  if (!tip) {
+    tip = document.createElement('div');
+    tip.id = 'history-tooltip';
+    tip.innerHTML = '<div><span class="tt-score"></span><span class="tt-label"></span></div><div class="tt-ts"></div>';
+    document.body.appendChild(tip);
+  }
+  document.addEventListener('mouseover', e => {
+    const dot = e.target.closest('.history-dot');
+    if (!dot) return;
+    const score = dot.dataset.score;
+    const label = dot.dataset.label || '';
+    const labelCol = score >= 60 ? 'var(--gr)' : score >= 40 ? 'var(--am)' : 'var(--rd)';
+    tip.querySelector('.tt-score').textContent = score;
+    tip.querySelector('.tt-label').style.color = labelCol;
+    tip.querySelector('.tt-label').textContent = label;
+    tip.querySelector('.tt-ts').textContent = dot.dataset.ts;
+    tip.style.display = 'block';
+  });
+  document.addEventListener('mousemove', e => {
+    if (tip.style.display === 'none') return;
+    tip.style.left = (e.clientX + 16) + 'px';
+    tip.style.top  = (e.clientY - 44) + 'px';
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest('.history-dot')) tip.style.display = 'none';
+  });
+}());
 </script>
 
 <section id="faq">
