@@ -110,5 +110,12 @@
     "label": "Neutral",
     "formula_score": 40,
     "ai_score": 45
+  },
+  {
+    "ts": "2026-06-06 05:02 HKT",
+    "score": 26,
+    "label": "Fear",
+    "formula_score": 28,
+    "ai_score": 25
   }
 ]
