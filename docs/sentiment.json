@@ -1,17 +1,17 @@
 {
-  "bull_pct": 27,
+  "bull_pct": 26,
   "bear_pct": 56,
-  "neutral_pct": 17,
+  "neutral_pct": 18,
   "bull_bear_ratio": 0.5,
-  "overall_score": 26,
+  "overall_score": 25,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 27,
+    "formula_score": 26,
     "ai_score": 25,
-    "bull_count": 23,
-    "bear_count": 48,
-    "neutral_count": 15,
-    "total_posts": 86,
+    "bull_count": 17,
+    "bear_count": 37,
+    "neutral_count": 12,
+    "total_posts": 66,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,121 +19,113 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 86,
+  "post_count": 66,
   "hours_window": 24,
   "themes": [
     {
-      "id": "trading-losses",
-      "title": "Trading Losses",
-      "icon": "skull",
+      "id": "spacex-ipo-skepticism",
+      "title": "SpaceX IPO Retail Warning",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Account blow-ups dominating discussion",
-        "Major portfolio wipeouts shared",
-        "Options trades gone wrong",
-        "Retail pain extremely visible"
+        "Retail traders sitting out IPO",
+        "Oversubscribed offering raising red flags",
+        "Institutional manipulation suspected",
+        "Bag-holding fears widespread"
       ],
       "sentiment_score": 15,
       "tickers": [
-        "SPY",
-        "QQQ",
-        "SOXL",
-        "TSLA",
-        "META"
+        "SPACEX"
       ]
     },
     {
-      "id": "options-speculation",
-      "title": "Options Speculation",
-      "icon": "flame",
+      "id": "trading-losses",
+      "title": "Account Destruction",
+      "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Heavy options activity reported",
-        "Zero-day trading increasing",
-        "Pattern day trading rule changes",
-        "High-leverage plays common"
+        "Large account blow-ups posted",
+        "Quarter million dollar losses",
+        "Options expiring worthless",
+        "Lambo-or-ramen mentality persists"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 10,
       "tickers": [
         "SPY",
-        "SPX",
         "QQQ",
-        "SOXL",
-        "AVGO"
+        "TQQQ"
       ]
     },
     {
       "id": "ai-bubble-concerns",
-      "title": "AI Bubble Concerns",
-      "icon": "trending-up",
+      "title": "AI Speculation Fatigue",
+      "icon": "cpu",
       "heat": "rising",
       "bullets": [
-        "AI investment sustainability questioned",
-        "Massive capital expenditure noted",
-        "Bubble crash indicators discussed",
-        "Tech sector vulnerability highlighted"
-      ],
-      "sentiment_score": 35,
-      "tickers": [
-        "NVDA",
-        "GOOGL",
-        "META",
-        "ORCL",
-        "MSFT"
-      ]
-    },
-    {
-      "id": "spacex-ipo",
-      "title": "SpaceX IPO",
-      "icon": "rocket",
-      "heat": "rising",
-      "bullets": [
-        "Retail anticipation building",
-        "Oversubscription concerns raised",
-        "Day-one trading strategies debated",
-        "Valuation skepticism expressed"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "GOOGL",
-        "RKLB"
-      ]
-    },
-    {
-      "id": "market-volatility",
-      "title": "Market Volatility",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Sharp intraday swings observed",
-        "Volatility products active",
-        "Risk management discussed",
-        "Market timing challenges"
+        "Bubble rhetoric increasing",
+        "Trump administration AI stakes",
+        "Valuation questions mounting",
+        "Anthropic development freeze call"
       ],
       "sentiment_score": 30,
       "tickers": [
-        "SPY",
-        "VIX",
-        "QQQ"
+        "NVDA",
+        "ORCL",
+        "ADBE"
       ]
     },
     {
-      "id": "geopolitical-impact",
-      "title": "Geopolitical Impact",
+      "id": "oil-geopolitical-plays",
+      "title": "Energy Crisis Trading",
       "icon": "flame",
-      "heat": "fading",
+      "heat": "rising",
       "bullets": [
-        "Oil crisis affecting markets",
-        "Iran war implications debated",
-        "Consumer sentiment declining",
-        "Economic uncertainty rising"
+        "US-Iran war impacting commodities",
+        "Oil above hundred dollar threshold",
+        "Chevron calls positioning",
+        "Crude supply fears emerging"
       ],
-      "sentiment_score": 25,
+      "sentiment_score": 60,
       "tickers": [
         "CVX",
         "XOM",
-        "USO",
-        "MCD"
+        "USO"
+      ]
+    },
+    {
+      "id": "zero-dte-speculation",
+      "title": "Same-Day Options Gambling",
+      "icon": "trending-up",
+      "heat": "fading",
+      "bullets": [
+        "Zero DTE puts profitable",
+        "SPY scalping active",
+        "Pattern day trader rules lifted",
+        "Quick profit taking strategies"
+      ],
+      "sentiment_score": 65,
+      "tickers": [
+        "SPY",
+        "SPX",
+        "AMD",
+        "AMZN"
+      ]
+    },
+    {
+      "id": "consumer-spending-warnings",
+      "title": "Economic Downturn Signals",
+      "icon": "trending-down",
+      "heat": "fading",
+      "bullets": [
+        "Corporate earnings warnings issued",
+        "Consumer sentiment collapsing rapidly",
+        "Fast food pricing concerns",
+        "Recession indicators strengthening"
+      ],
+      "sentiment_score": 20,
+      "tickers": [
+        "MCD",
+        "KHC"
       ]
     }
   ],
@@ -141,74 +133,74 @@
     {
       "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 15,
-      "signal": "Options battlefield",
+      "mentions": 12,
+      "signal": "zero DTE battlefield",
       "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "SPACEX",
+      "sentiment": "bearish",
+      "mentions": 11,
+      "signal": "retail resistance building",
+      "company_name": "Space Exploration Tech Corp"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bearish",
+      "mentions": 8,
+      "signal": "AI bubble fears",
+      "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "QQQ",
       "sentiment": "bearish",
-      "mentions": 8,
-      "signal": "Tech selloff victim",
+      "mentions": 7,
+      "signal": "tech selloff pain",
       "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
-      "symbol": "SOXL",
+      "symbol": "TQQQ",
       "sentiment": "bearish",
       "mentions": 6,
-      "signal": "Leveraged semiconductor pain",
-      "company_name": "Direxion Daily Semiconductor Bu"
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "Options regret central",
-      "company_name": "Tesla, Inc."
-    },
-    {
-      "symbol": "META",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Dilution fears rising",
-      "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "AVGO",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Earnings disappointment",
-      "company_name": "Broadcom Inc."
-    },
-    {
-      "symbol": "GOOGL",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "SpaceX partnership focus",
-      "company_name": "Alphabet Inc."
+      "signal": "leverage destruction",
+      "company_name": "ProShares UltraPro QQQ"
     },
     {
       "symbol": "ORCL",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Earnings optimism",
+      "mentions": 5,
+      "signal": "earnings optimism",
       "company_name": "Oracle Corporation"
+    },
+    {
+      "symbol": "CVX",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "energy chaos plays",
+      "company_name": "Chevron Corporation"
+    },
+    {
+      "symbol": "MRVL",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "S&P inclusion boost",
+      "company_name": "Marvell Technology, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail traders posted significant account losses following a sharp market decline, with options trades particularly devastated amid heightened volatility.",
+      "text": "Retail traders expressing widespread skepticism toward SpaceX IPO despite institutional hype, viewing oversubscribed offering as manipulation setup targeting uninformed investors.",
       "tag": "bearish"
     },
     {
-      "text": "Pattern day trading rule changes enabled increased speculative activity, though many participants reported substantial losses on leveraged semiconductor positions.",
+      "text": "Zero-day options speculation remains active amid market volatility, with SPY puts providing profitable hedges against broader selloff concerns and consumer warning signals.",
       "tag": "notable"
     },
     {
-      "text": "SpaceX IPO anticipation builds despite market pessimism, with retail investors planning substantial allocations despite oversubscription concerns and valuation skepticism.",
-      "tag": "bullish"
+      "text": "AI investment fatigue emerging as Trump administration proposes public stakes while Anthropic calls for development freeze, creating valuation uncertainty across tech sector.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-06T12:02:57.051372+00:00",
-  "updated_hkt": "2026-06-06 20:02 HKT"
+  "updated_at": "2026-06-06T21:02:36.916645+00:00",
+  "updated_hkt": "2026-06-07 05:02 HKT"
 }
