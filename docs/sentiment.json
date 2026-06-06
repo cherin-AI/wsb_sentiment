@@ -1,17 +1,17 @@
 {
-  "bull_pct": 28,
-  "bear_pct": 71,
-  "neutral_pct": 1,
-  "bull_bear_ratio": 0.4,
+  "bull_pct": 27,
+  "bear_pct": 56,
+  "neutral_pct": 17,
+  "bull_bear_ratio": 0.5,
   "overall_score": 26,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 28,
+    "formula_score": 27,
     "ai_score": 25,
-    "bull_count": 22,
-    "bear_count": 55,
-    "neutral_count": 1,
-    "total_posts": 78,
+    "bull_count": 23,
+    "bear_count": 48,
+    "neutral_count": 15,
+    "total_posts": 86,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,116 +19,121 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 78,
+  "post_count": 86,
   "hours_window": 24,
   "themes": [
     {
-      "id": "massive-losses",
-      "title": "Portfolio Devastation",
+      "id": "trading-losses",
+      "title": "Trading Losses",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Six-figure account blow-ups dominating discussions",
-        "Major sell-off wiping out retail positions",
-        "Trading losses triggering desperation and panic",
-        "Questioning basic investment decisions after crashes"
+        "Account blow-ups dominating discussion",
+        "Major portfolio wipeouts shared",
+        "Options trades gone wrong",
+        "Retail pain extremely visible"
       ],
       "sentiment_score": 15,
       "tickers": [
         "SPY",
-        "SPX",
         "QQQ",
-        "AVGO",
-        "MU"
+        "SOXL",
+        "TSLA",
+        "META"
       ]
     },
     {
-      "id": "puts-printing",
-      "title": "Bear Market Profits",
-      "icon": "trending-down",
+      "id": "options-speculation",
+      "title": "Options Speculation",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Put options delivering massive overnight gains",
-        "Short positions finally paying off significantly",
-        "Bears celebrating after extended bull market",
-        "Zero-day-to-expiration trades going nuclear"
+        "Heavy options activity reported",
+        "Zero-day trading increasing",
+        "Pattern day trading rule changes",
+        "High-leverage plays common"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 45,
       "tickers": [
-        "SPX",
         "SPY",
+        "SPX",
         "QQQ",
-        "SOXL"
+        "SOXL",
+        "AVGO"
       ]
     },
     {
       "id": "ai-bubble-concerns",
-      "title": "AI Valuation Questions",
-      "icon": "cpu",
+      "title": "AI Bubble Concerns",
+      "icon": "trending-up",
       "heat": "rising",
       "bullets": [
-        "Speculation about artificial intelligence bubble bursting",
-        "Government intervention in OpenAI raising concerns",
-        "Massive infrastructure spending continuing despite doubts",
-        "Market evaluating sustainability of AI investments"
+        "AI investment sustainability questioned",
+        "Massive capital expenditure noted",
+        "Bubble crash indicators discussed",
+        "Tech sector vulnerability highlighted"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 35,
       "tickers": [
+        "NVDA",
         "GOOGL",
         "META",
+        "ORCL",
         "MSFT"
       ]
     },
     {
-      "id": "spacex-ipo-hype",
-      "title": "SpaceX IPO Speculation",
+      "id": "spacex-ipo",
+      "title": "SpaceX IPO",
       "icon": "rocket",
       "heat": "rising",
       "bullets": [
-        "Major IPO launch generating retail excitement",
-        "Index inclusion debates creating uncertainty",
-        "Retail demand positioning for public debut",
-        "Mixed reactions to valuation and timing"
+        "Retail anticipation building",
+        "Oversubscription concerns raised",
+        "Day-one trading strategies debated",
+        "Valuation skepticism expressed"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 55,
       "tickers": [
-        "GOOGL"
+        "GOOGL",
+        "RKLB"
       ]
     },
     {
-      "id": "semiconductor-bloodbath",
-      "title": "Chip Stock Collapse",
-      "icon": "cpu",
+      "id": "market-volatility",
+      "title": "Market Volatility",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
-        "Memory and processor stocks experiencing severe selloff",
-        "Earnings disappointments crushing sector sentiment",
-        "Supply chain concerns weighing on valuations",
-        "Technical indicators showing continued weakness"
+        "Sharp intraday swings observed",
+        "Volatility products active",
+        "Risk management discussed",
+        "Market timing challenges"
       ],
-      "sentiment_score": 20,
+      "sentiment_score": 30,
       "tickers": [
-        "AVGO",
-        "MU",
-        "SOXL",
-        "NBIS"
+        "SPY",
+        "VIX",
+        "QQQ"
       ]
     },
     {
-      "id": "jobs-rate-fears",
-      "title": "Economic Policy Anxiety",
-      "icon": "chart-line",
+      "id": "geopolitical-impact",
+      "title": "Geopolitical Impact",
+      "icon": "flame",
       "heat": "fading",
       "bullets": [
-        "Strong employment data suggesting rate hikes",
-        "Federal Reserve policy shifts creating uncertainty",
-        "Market processing economic strength as negative",
-        "Inflation concerns driving monetary tightening fears"
+        "Oil crisis affecting markets",
+        "Iran war implications debated",
+        "Consumer sentiment declining",
+        "Economic uncertainty rising"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 25,
       "tickers": [
-        "SPY",
-        "QQQ"
+        "CVX",
+        "XOM",
+        "USO",
+        "MCD"
       ]
     }
   ],
@@ -137,73 +142,73 @@
       "symbol": "SPY",
       "sentiment": "mixed",
       "mentions": 15,
-      "signal": "Put profits mixed with call devastation",
+      "signal": "Options battlefield",
       "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "SPX",
-      "sentiment": "mixed",
-      "mentions": 12,
-      "signal": "Zero-day trades delivering extreme moves",
-      "company_name": "S&P 500 INDEX"
-    },
-    {
-      "symbol": "AVGO",
-      "sentiment": "bearish",
-      "mentions": 8,
-      "signal": "Earnings disappointment crushing positions",
-      "company_name": "Broadcom Inc."
     },
     {
       "symbol": "QQQ",
       "sentiment": "bearish",
-      "mentions": 7,
-      "signal": "Tech selloff accelerating losses",
+      "mentions": 8,
+      "signal": "Tech selloff victim",
       "company_name": "Invesco QQQ Trust, Series 1"
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bearish",
-      "mentions": 7,
-      "signal": "Memory sector under severe pressure",
-      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "SOXL",
       "sentiment": "bearish",
       "mentions": 6,
-      "signal": "Leveraged semiconductor exposure backfiring",
+      "signal": "Leveraged semiconductor pain",
       "company_name": "Direxion Daily Semiconductor Bu"
+    },
+    {
+      "symbol": "TSLA",
+      "sentiment": "bearish",
+      "mentions": 5,
+      "signal": "Options regret central",
+      "company_name": "Tesla, Inc."
     },
     {
       "symbol": "META",
       "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "Social media giant facing dilution concerns",
+      "mentions": 4,
+      "signal": "Dilution fears rising",
       "company_name": "Meta Platforms, Inc."
+    },
+    {
+      "symbol": "AVGO",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Earnings disappointment",
+      "company_name": "Broadcom Inc."
     },
     {
       "symbol": "GOOGL",
       "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "AI infrastructure deals offsetting market decline",
+      "mentions": 3,
+      "signal": "SpaceX partnership focus",
       "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "ORCL",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Earnings optimism",
+      "company_name": "Oracle Corporation"
     }
   ],
   "summary": [
     {
-      "text": "Retail traders experienced one of the most devastating single-day losses in recent memory, with portfolio destruction reaching historic proportions across multiple sectors and timeframes.",
+      "text": "Retail traders posted significant account losses following a sharp market decline, with options trades particularly devastated amid heightened volatility.",
       "tag": "bearish"
     },
     {
-      "text": "Put option holders captured extraordinary profits as major indices collapsed, with some zero-day trades delivering over ten times returns in minutes during the market rout.",
-      "tag": "bullish"
+      "text": "Pattern day trading rule changes enabled increased speculative activity, though many participants reported substantial losses on leveraged semiconductor positions.",
+      "tag": "notable"
     },
     {
-      "text": "The semiconductor sector led the decline amid earnings concerns and broader AI infrastructure questions, while SpaceX IPO speculation adds complexity to an already volatile environment.",
-      "tag": "notable"
+      "text": "SpaceX IPO anticipation builds despite market pessimism, with retail investors planning substantial allocations despite oversubscription concerns and valuation skepticism.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-06-05T21:02:14.080909+00:00",
-  "updated_hkt": "2026-06-06 05:02 HKT"
+  "updated_at": "2026-06-06T12:02:57.051372+00:00",
+  "updated_hkt": "2026-06-06 20:02 HKT"
 }
