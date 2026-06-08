@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 38,
-  "neutral_pct": 18,
-  "bull_bear_ratio": 1.2,
-  "overall_score": 45,
+  "bull_pct": 42,
+  "bear_pct": 46,
+  "neutral_pct": 12,
+  "bull_bear_ratio": 0.9,
+  "overall_score": 42,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 44,
-    "ai_score": 45,
-    "bull_count": 14,
-    "bear_count": 12,
+    "formula_score": 42,
+    "ai_score": 42,
+    "bull_count": 21,
+    "bear_count": 23,
     "neutral_count": 6,
-    "total_posts": 32,
+    "total_posts": 50,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,187 +19,190 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 32,
+  "post_count": 50,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-chip-narrative",
-      "title": "AI Infrastructure and Memory Shortage",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "NVIDIA partnerships with SK Hynix driving memory demand",
-        "Multi-year chip shortage creating structural tailwinds",
-        "AI datacenter buildout accelerating globally",
-        "Memory stocks positioned for extended cycle"
-      ],
-      "sentiment_score": 75,
-      "tickers": [
-        "NVDA",
-        "MU",
-        "AVGO",
-        "SK"
-      ]
-    },
-    {
-      "id": "spacex-ipo-hype",
-      "title": "SpaceX IPO Anticipation",
-      "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "Major IPO timing driving sector speculation",
-        "Cloud computing revenue streams emerging",
-        "Space sector positioning before public debut",
-        "Market manipulation concerns surfacing"
-      ],
-      "sentiment_score": 65,
-      "tickers": [
-        "SPCX",
-        "RKLB",
-        "LUNR"
-      ]
-    },
-    {
-      "id": "semiconductor-selloff",
-      "title": "Chip Stock Correction",
-      "icon": "trending-down",
-      "heat": "hot",
-      "bullets": [
-        "South Korean markets leading tech decline",
-        "Broadcom earnings disappointing markets",
-        "Semiconductor sector experiencing sharp rotation",
-        "Quality names trading at oversold levels"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "AVGO",
-        "NVDA",
-        "MU"
-      ]
-    },
-    {
       "id": "trading-losses",
-      "title": "Retail Trading Casualties",
+      "title": "Trading Losses & Account Destruction",
       "icon": "skull",
-      "heat": "rising",
+      "heat": "hot",
       "bullets": [
-        "Futures margin calls destroying accounts",
-        "Options strategies backfiring dramatically",
-        "Paper hands preventing bigger losses",
-        "Leverage amplifying retail pain"
+        "Multiple posts showcase significant account drawdowns",
+        "Zero-day option trades causing portfolio devastation",
+        "Margin trading disasters with futures contracts",
+        "Students losing borrowed money from parents"
       ],
       "sentiment_score": 15,
       "tickers": [
-        "QQQ",
         "SPY",
-        "NFLX"
+        "QQQ",
+        "MSFT",
+        "AAPL"
       ]
     },
     {
-      "id": "middle-east-tensions",
-      "title": "Geopolitical Risk Premiums",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Investment Surge",
+      "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "NVIDIA partnerships with SK Hynix and SK Telecom",
+        "Memory shortage expected to last several years",
+        "Nebius investing heavily in UK infrastructure",
+        "Market questioning AI bubble sustainability"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "NVDA",
+        "MU",
+        "SNDK",
+        "MRVL"
+      ]
+    },
+    {
+      "id": "zero-day-trading",
+      "title": "Zero-Day Option Mania",
       "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "PDT removal enabling aggressive day trading",
+        "SPY and QQQ zero-day contracts dominating",
+        "High volatility plays with massive risk",
+        "Quick profits followed by devastating losses"
+      ],
+      "sentiment_score": 55,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "SPX"
+      ]
+    },
+    {
+      "id": "spacex-speculation",
+      "title": "SpaceX IPO and Tesla Speculation",
+      "icon": "rocket",
       "heat": "rising",
       "bullets": [
-        "Iran-Israel conflict escalating again",
-        "Defense stocks benefiting from tensions",
-        "Framework deals repeatedly failing",
-        "Market volatility from regional instability"
+        "Tesla acquisition theories gaining momentum",
+        "SpaceX IPO timeline speculation intensifies",
+        "Elon Musk strategic moves under scrutiny",
+        "Potential catalyst for massive market shifts"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 72,
       "tickers": [
-        "KTOS"
+        "TSLA",
+        "SPACEX"
       ]
     },
     {
-      "id": "crypto-decline",
-      "title": "Digital Asset Weakness",
+      "id": "crypto-volatility",
+      "title": "Cryptocurrency Market Turbulence",
       "icon": "trending-down",
-      "heat": "fading",
+      "heat": "rising",
       "bullets": [
-        "Bitcoin short positions generating profits",
-        "High trading fees deterring activity",
-        "Energy consumption debates intensifying",
-        "Institutional interest waning"
+        "Bitcoin facing continued selling pressure",
+        "MSTR dependency on crypto prices questioned",
+        "High leverage crypto trades showing mixed results",
+        "Market questioning long-term viability"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 35,
       "tickers": [
+        "MSTR",
         "BTC"
+      ]
+    },
+    {
+      "id": "market-volatility",
+      "title": "Global Market Instability",
+      "icon": "trending-up",
+      "heat": "rising",
+      "bullets": [
+        "South Korea tech sector experiencing selloff",
+        "Oil price movements defying expectations",
+        "Defensive stocks outperforming during uncertainty",
+        "Regional market disconnects creating opportunities"
+      ],
+      "sentiment_score": 45,
+      "tickers": [
+        "KO",
+        "UNH",
+        "NFLX"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 8,
+      "signal": "aggressive zero-day plays dominating",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "AI partnership momentum strong",
+      "mentions": 7,
+      "signal": "partnership momentum building",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Memory shortage tailwinds building",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "AVGO",
-      "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "Post-earnings disappointment weighing",
-      "company_name": "Broadcom Inc."
-    },
-    {
-      "symbol": "SK",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Strategic partnerships driving optimism",
-      "company_name": "Skyworks Solutions, Inc."
-    },
-    {
-      "symbol": "SPCX",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "IPO anticipation building",
-      "company_name": "Space Exploration Tech Corp"
-    },
-    {
-      "symbol": "BTC",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Short sellers capitalizing",
-      "company_name": "Bitcoin USD"
-    },
-    {
       "symbol": "QQQ",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Tech rotation creating pressure",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "bounce plays after selloff",
       "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
-      "symbol": "CELH",
+      "symbol": "TSLA",
       "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "acquisition speculation heating up",
+      "company_name": "Tesla, Inc."
+    },
+    {
+      "symbol": "MSTR",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "crypto dependency concerns",
+      "company_name": "Strategy Inc"
+    },
+    {
+      "symbol": "MSFT",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "analyst downgrades pressuring shares",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "AAPL",
+      "sentiment": "bearish",
       "mentions": 3,
-      "signal": "Undervalued growth story emerging",
-      "company_name": "Celsius Holdings, Inc."
+      "signal": "WWDC disappointment continues",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "memory shortage thesis intact",
+      "company_name": "Micron Technology, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Memory shortage narratives are gaining traction as NVIDIA expands partnerships with SK Hynix, creating structural tailwinds for semiconductor suppliers despite recent sector weakness.",
-      "tag": "bullish"
+      "text": "Retail traders are experiencing widespread account destruction through zero-day option strategies, with multiple posts showcasing devastating portfolio losses despite PDT removal enabling more aggressive trading.",
+      "tag": "bearish"
     },
     {
-      "text": "SpaceX IPO timing is generating significant speculation across space-related equities, though manipulation concerns are surfacing around convenient headline timing.",
+      "text": "NVIDIA's expanding partnerships with SK Hynix and SK Telecom signal continued AI infrastructure buildout, though market questions whether massive capital commitments indicate bubble formation or genuine demand.",
       "tag": "notable"
     },
     {
-      "text": "Retail traders are experiencing significant casualties from leveraged positions, particularly in futures and options strategies that backfired during recent volatility.",
-      "tag": "bearish"
+      "text": "SpaceX IPO speculation and Tesla acquisition theories are gaining momentum as traders position for potential Musk strategic announcements, creating significant call option interest in deep out-of-money strikes.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-06-08T12:02:05.730326+00:00",
-  "updated_hkt": "2026-06-08 20:02 HKT"
+  "updated_at": "2026-06-08T21:01:53.834935+00:00",
+  "updated_hkt": "2026-06-09 05:01 HKT"
 }
