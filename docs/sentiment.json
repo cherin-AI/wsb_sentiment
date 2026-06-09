@@ -1,17 +1,17 @@
 {
-  "bull_pct": 42,
-  "bear_pct": 46,
-  "neutral_pct": 12,
-  "bull_bear_ratio": 0.9,
-  "overall_score": 42,
+  "bull_pct": 45,
+  "bear_pct": 33,
+  "neutral_pct": 22,
+  "bull_bear_ratio": 1.4,
+  "overall_score": 50,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 42,
-    "ai_score": 42,
-    "bull_count": 21,
-    "bear_count": 23,
-    "neutral_count": 6,
-    "total_posts": 50,
+    "formula_score": 45,
+    "ai_score": 52,
+    "bull_count": 15,
+    "bear_count": 11,
+    "neutral_count": 7,
+    "total_posts": 33,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,59 +19,21 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 50,
+  "post_count": 33,
   "hours_window": 24,
   "themes": [
     {
-      "id": "trading-losses",
-      "title": "Trading Losses & Account Destruction",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Multiple posts showcase significant account drawdowns",
-        "Zero-day option trades causing portfolio devastation",
-        "Margin trading disasters with futures contracts",
-        "Students losing borrowed money from parents"
-      ],
-      "sentiment_score": 15,
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "MSFT",
-        "AAPL"
-      ]
-    },
-    {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Investment Surge",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "NVIDIA partnerships with SK Hynix and SK Telecom",
-        "Memory shortage expected to last several years",
-        "Nebius investing heavily in UK infrastructure",
-        "Market questioning AI bubble sustainability"
-      ],
-      "sentiment_score": 68,
-      "tickers": [
-        "NVDA",
-        "MU",
-        "SNDK",
-        "MRVL"
-      ]
-    },
-    {
-      "id": "zero-day-trading",
-      "title": "Zero-Day Option Mania",
+      "id": "short-term-options",
+      "title": "Zero-Day Options Trading",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "PDT removal enabling aggressive day trading",
-        "SPY and QQQ zero-day contracts dominating",
-        "High volatility plays with massive risk",
-        "Quick profits followed by devastating losses"
+        "Explosive gains and devastating losses dominate",
+        "Pattern day trader restrictions lifted amplifies activity",
+        "SPY and QQQ contracts driving most speculation",
+        "Quick scalping strategies replacing traditional approaches"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 65,
       "tickers": [
         "SPY",
         "QQQ",
@@ -79,56 +41,89 @@
       ]
     },
     {
-      "id": "spacex-speculation",
-      "title": "SpaceX IPO and Tesla Speculation",
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "International student loses borrowed funds trading options",
+        "IBM position generates significant portfolio damage",
+        "Multiple traders sharing catastrophic loss screenshots",
+        "Mental health impacts from speculative trading acknowledged"
+      ],
+      "sentiment_score": 15,
+      "tickers": [
+        "IBM",
+        "MSFT"
+      ]
+    },
+    {
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Investments",
+      "icon": "cpu",
+      "heat": "rising",
+      "bullets": [
+        "OpenAI files confidential IPO paperwork",
+        "Nebius commits significant UK infrastructure spending",
+        "Oracle earnings expectations driving sector sentiment",
+        "Bubble concerns persist despite continued investment"
+      ],
+      "sentiment_score": 70,
+      "tickers": [
+        "NVDA",
+        "ORCL",
+        "MSFT"
+      ]
+    },
+    {
+      "id": "space-trading",
+      "title": "Space Sector Speculation",
       "icon": "rocket",
       "heat": "rising",
       "bullets": [
-        "Tesla acquisition theories gaining momentum",
-        "SpaceX IPO timeline speculation intensifies",
-        "Elon Musk strategic moves under scrutiny",
-        "Potential catalyst for massive market shifts"
+        "SpaceX launch catalyst driving options activity",
+        "Tesla acquisition theories gain momentum",
+        "Four space-related tickers targeted with weeklies",
+        "High conviction plays despite extreme risk"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 75,
       "tickers": [
         "TSLA",
-        "SPACEX"
+        "RKLB",
+        "RDW",
+        "PL"
       ]
     },
     {
       "id": "crypto-volatility",
-      "title": "Cryptocurrency Market Turbulence",
-      "icon": "trending-down",
-      "heat": "rising",
+      "title": "Bitcoin and Crypto Positioning",
+      "icon": "trending-up",
+      "heat": "fading",
       "bullets": [
-        "Bitcoin facing continued selling pressure",
-        "MSTR dependency on crypto prices questioned",
-        "High leverage crypto trades showing mixed results",
-        "Market questioning long-term viability"
+        "MicroStrategy buying activity stabilizes sentiment",
+        "Retail traders liquidating positions for equity exposure",
+        "Strategy dependency concerns market participants",
+        "Legacy positions under pressure from rotation"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 45,
       "tickers": [
         "MSTR",
         "BTC"
       ]
     },
     {
-      "id": "market-volatility",
-      "title": "Global Market Instability",
-      "icon": "trending-up",
-      "heat": "rising",
+      "id": "sector-rotation",
+      "title": "CPI Sensitivity Analysis",
+      "icon": "chart-line",
+      "heat": "fading",
       "bullets": [
-        "South Korea tech sector experiencing selloff",
-        "Oil price movements defying expectations",
-        "Defensive stocks outperforming during uncertainty",
-        "Regional market disconnects creating opportunities"
+        "Utilities show highest inflation sensitivity",
+        "Technology demonstrates relative resilience",
+        "Real estate and industrials face rate pressures",
+        "Market makers exploit sector rotation patterns"
       ],
-      "sentiment_score": 45,
-      "tickers": [
-        "KO",
-        "UNH",
-        "NFLX"
-      ]
+      "sentiment_score": 40,
+      "tickers": []
     }
   ],
   "tickers": [
@@ -136,73 +131,73 @@
       "symbol": "SPY",
       "sentiment": "mixed",
       "mentions": 8,
-      "signal": "aggressive zero-day plays dominating",
+      "signal": "Primary vehicle for directional bets",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "partnership momentum building",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
       "symbol": "QQQ",
-      "sentiment": "mixed",
+      "sentiment": "bullish",
       "mentions": 6,
-      "signal": "bounce plays after selloff",
+      "signal": "Preferred for short-term momentum plays",
       "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
       "symbol": "TSLA",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "acquisition speculation heating up",
+      "signal": "Acquisition speculation driving options",
       "company_name": "Tesla, Inc."
     },
     {
-      "symbol": "MSTR",
-      "sentiment": "bearish",
+      "symbol": "NVDA",
+      "sentiment": "bullish",
       "mentions": 4,
-      "signal": "crypto dependency concerns",
+      "signal": "Infrastructure spending catalyst",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "MSTR",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Dependency concerns amid buying activity",
       "company_name": "Strategy Inc"
     },
     {
       "symbol": "MSFT",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "analyst downgrades pressuring shares",
+      "mentions": 3,
+      "signal": "Downgrade pressure and disappointment",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "AAPL",
-      "sentiment": "bearish",
+      "symbol": "ORCL",
+      "sentiment": "neutral",
       "mentions": 3,
-      "signal": "WWDC disappointment continues",
-      "company_name": "Apple Inc."
+      "signal": "Earnings uncertainty in AI transition",
+      "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "MU",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "memory shortage thesis intact",
-      "company_name": "Micron Technology, Inc."
+      "symbol": "IBM",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Significant loss exposure",
+      "company_name": "International Business Machines"
     }
   ],
   "summary": [
     {
-      "text": "Retail traders are experiencing widespread account destruction through zero-day option strategies, with multiple posts showcasing devastating portfolio losses despite PDT removal enabling more aggressive trading.",
-      "tag": "bearish"
-    },
-    {
-      "text": "NVIDIA's expanding partnerships with SK Hynix and SK Telecom signal continued AI infrastructure buildout, though market questions whether massive capital commitments indicate bubble formation or genuine demand.",
+      "text": "Zero-day options trading dominates retail activity as pattern day restrictions lift, generating extreme volatility in both directions with SPY and QQQ leading speculation.",
       "tag": "notable"
     },
     {
-      "text": "SpaceX IPO speculation and Tesla acquisition theories are gaining momentum as traders position for potential Musk strategic announcements, creating significant call option interest in deep out-of-money strikes.",
+      "text": "Account destruction posts proliferate as international students and overleveraged traders share catastrophic losses, highlighting the psychological toll of speculative positioning.",
+      "tag": "bearish"
+    },
+    {
+      "text": "Space sector catalysts and AI infrastructure spending drive conviction plays despite bubble concerns, with Tesla acquisition theories and OpenAI IPO filing sustaining momentum.",
       "tag": "bullish"
     }
   ],
-  "updated_at": "2026-06-08T21:01:53.834935+00:00",
-  "updated_hkt": "2026-06-09 05:01 HKT"
+  "updated_at": "2026-06-09T12:01:54.827236+00:00",
+  "updated_hkt": "2026-06-09 20:01 HKT"
 }
