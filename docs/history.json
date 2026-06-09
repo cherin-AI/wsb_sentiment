@@ -166,5 +166,26 @@
     "label": "Neutral",
     "formula_score": 45,
     "ai_score": 52
+  },
+  {
+    "ts": "2026-06-10 01:15 HKT",
+    "score": 40,
+    "label": "Neutral",
+    "formula_score": 37,
+    "ai_score": 42
+  },
+  {
+    "ts": "2026-06-10 01:20 HKT",
+    "score": 51,
+    "label": "Neutral",
+    "formula_score": 43,
+    "ai_score": 55
+  },
+  {
+    "ts": "2026-06-10 05:01 HKT",
+    "score": 56,
+    "label": "Neutral",
+    "formula_score": 52,
+    "ai_score": 58
   }
 ]
