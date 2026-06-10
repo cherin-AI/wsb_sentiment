@@ -163,13 +163,12 @@ def curl_get_text(url: str, retries: int = 3) -> str:
                 "curl", "-sL",
                 "-H", f"User-Agent: {REDDIT_UA}",
                 "-H", "Accept: application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.8",
-                "-H", "Accept-Language: en-US,en;q=0.9",
                 url,
             ],
             capture_output=True, text=True, timeout=20,
         )
         result.check_returncode()
-        if result.stdout.strip():
+        if result.stdout.strip() and not result.stdout.lstrip().lower().startswith(("<body", "<!doctype", "<html")):
             return result.stdout
         if attempt < retries - 1:
             time.sleep(10 * (attempt + 1))
@@ -385,6 +384,8 @@ def fetch_comments_rss(post_id: str) -> list[str]:
         return []
 
 
+
+
 def lookup_company_name(symbol: str) -> str:
     """Look up company short name from Yahoo Finance search API."""
     try:
@@ -404,8 +405,15 @@ def lookup_company_name(symbol: str) -> str:
 
 def enrich_tickers_with_names(tickers: list[dict]) -> list[dict]:
     for ticker in tickers:
-        ticker["company_name"] = lookup_company_name(ticker.get("symbol", ""))
+        symbol = ticker.get("symbol", "")
+        ticker["company_name"] = lookup_company_name(symbol)
     return tickers
+
+
+def normalize_theme_tickers(themes: list[dict]) -> list[dict]:
+    for theme in themes:
+        theme["tickers"] = list(theme.get("tickers", []))
+    return themes
 
 
 def posts_to_text(posts: list[dict]) -> str:
@@ -644,7 +652,7 @@ def main():
         **metrics,
         "post_count":   len(posts),
         "hours_window": HOURS_WINDOW,
-        "themes":        claude_result.get("themes", []),
+        "themes":        normalize_theme_tickers(claude_result.get("themes", [])),
         "tickers":       enrich_tickers_with_names(claude_result.get("tickers", [])),
         "summary":       claude_result.get("summary", ""),
         "updated_at":    datetime.now(timezone.utc).isoformat(),
