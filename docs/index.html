@@ -340,7 +340,10 @@ function buildGaugeSVG(score, scoreColor) {
 
 function buildHistoryChart(history) {
   if (!history || history.length < 2) return '';
-  const entries = history.slice(-14);
+  const entries = history.filter(e => {
+    const m = (e.ts || '').match(/(\d{2}):\d{2} HKT/);
+    return m && (m[1] === '05' || m[1] === '20');
+  }).slice(-14);
   const W = 900, H = 150, padL = 36, padR = 12, padT = 12, padB = 28;
   const chartW = W - padL - padR;
   const chartH = H - padT - padB;

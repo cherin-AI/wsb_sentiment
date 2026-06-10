@@ -663,13 +663,14 @@ def main():
     with open(OUTPUT_PATH, "w") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
-    save_history(history, {
-        "ts":            result["updated_hkt"],
-        "score":         result["overall_score"],
-        "label":         result["overall_label"],
-        "formula_score": metrics["methodology"]["formula_score"],
-        "ai_score":      metrics["methodology"]["ai_score"],
-    })
+    if datetime.now(HKT).hour in (5, 20):
+        save_history(history, {
+            "ts":            result["updated_hkt"],
+            "score":         result["overall_score"],
+            "label":         result["overall_label"],
+            "formula_score": metrics["methodology"]["formula_score"],
+            "ai_score":      metrics["methodology"]["ai_score"],
+        })
 
     m = metrics["methodology"]
     print(f"\nSaved → {OUTPUT_PATH}")
