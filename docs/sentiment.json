@@ -1,17 +1,17 @@
 {
-  "bull_pct": 56,
-  "bear_pct": 33,
-  "neutral_pct": 11,
-  "bull_bear_ratio": 1.7,
-  "overall_score": 67,
-  "overall_label": "Greed",
+  "bull_pct": 30,
+  "bear_pct": 46,
+  "neutral_pct": 24,
+  "bull_bear_ratio": 0.6,
+  "overall_score": 36,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 56,
-    "ai_score": 72,
-    "bull_count": 31,
-    "bear_count": 18,
-    "neutral_count": 6,
-    "total_posts": 55,
+    "formula_score": 30,
+    "ai_score": 38,
+    "bull_count": 11,
+    "bear_count": 17,
+    "neutral_count": 9,
+    "total_posts": 37,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,189 +19,190 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 55,
+  "post_count": 37,
   "hours_window": 24,
   "themes": [
     {
-      "id": "zero-dte-options",
-      "title": "Zero-DTE Options Mania",
-      "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "Massive intraday profits from same-day expirations",
-        "Traders catching perfect timing on market swings",
-        "Quick scalping strategies replacing hold positions",
-        "High-risk high-reward mindset driving decisions"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "SPX"
-      ]
-    },
-    {
-      "id": "trading-profits",
-      "title": "Big Win Celebrations",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Day traders posting exceptional profit screenshots",
-        "Small accounts growing exponentially in sessions",
-        "Successful timing of market volatility swings",
-        "Confidence building after major gains"
-      ],
-      "sentiment_score": 82,
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "SPX",
-        "SOXS"
-      ]
-    },
-    {
-      "id": "account-losses",
-      "title": "Trading Account Destruction",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Substantial portfolio losses from wrong timing",
-        "New traders learning expensive lessons quickly",
-        "Emotional trading leading to poor decisions",
-        "Stop loss failures and position sizing mistakes"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "NOK",
-        "HOOD",
-        "UPST"
-      ]
-    },
-    {
-      "id": "geopolitical-impact",
-      "title": "Iran War Market Effects",
+      "id": "zero-dte-volatility",
+      "title": "Zero-Day Options Volatility",
       "icon": "flame",
-      "heat": "rising",
+      "heat": "hot",
       "bullets": [
-        "Oil prices responding to military escalation",
-        "Market uncertainty from geopolitical tensions",
-        "Defensive positioning against conflict scenarios",
-        "Energy sector volatility expectations rising"
+        "Massive intraday swings dominate trading",
+        "Retail chasing high-risk short expiration plays",
+        "Dramatic profit and loss reversals",
+        "Stress-induced trading decisions prevalent"
       ],
       "sentiment_score": 45,
       "tickers": [
-        "SM"
+        "SPX",
+        "QQQ",
+        "SPY"
       ]
     },
     {
-      "id": "semiconductor-reversal",
-      "title": "Chip Sector Downturn",
+      "id": "semiconductor-selloff",
+      "title": "Semiconductor Sector Decline",
       "icon": "cpu",
-      "heat": "rising",
+      "heat": "hot",
       "bullets": [
-        "Short interest building in semiconductor names",
-        "AI bubble concerns gaining traction",
-        "Technical breakdown following extended rally",
-        "Profit taking after massive runs"
+        "SMCI down significantly on dilution concerns",
+        "Shorts piling into semiconductor plays",
+        "SOXS calls generating profits unexpectedly",
+        "AI infrastructure stocks under pressure"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 25,
       "tickers": [
-        "SOXS",
         "SMCI",
-        "MRVL"
+        "NVDA",
+        "SOXS",
+        "SOXL"
       ]
     },
     {
-      "id": "market-timing",
-      "title": "Volatility Trading Strategies",
+      "id": "inflation-market-stress",
+      "title": "Inflation Data Concerns",
       "icon": "trending-up",
       "heat": "rising",
       "bullets": [
-        "Put-to-call switching during intraday swings",
-        "Credit spread positioning for premium collection",
-        "Momentum trading both directions successfully",
-        "Risk management through position sizing"
+        "CPI reading at elevated levels",
+        "Market volatility around data releases",
+        "Geopolitical tensions affecting oil prices",
+        "Economic uncertainty driving speculation"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 30,
       "tickers": [
         "SPY",
-        "QQQ",
-        "VIX"
+        "QQQ"
+      ]
+    },
+    {
+      "id": "trading-platform-issues",
+      "title": "Platform Trading Restrictions",
+      "icon": "skull",
+      "heat": "rising",
+      "bullets": [
+        "Robinhood limiting option purchases near expiry",
+        "PDT rule removal creating new opportunities",
+        "Stop loss failures costing traders",
+        "Technical barriers frustrating retail flow"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "HOOD",
+        "QQQ"
+      ]
+    },
+    {
+      "id": "big-tech-mixed-signals",
+      "title": "Big Tech Mixed Performance",
+      "icon": "rocket",
+      "heat": "fading",
+      "bullets": [
+        "Oracle funding concerns weighing on stock",
+        "Adobe earnings bets facing headwinds",
+        "Meta positions showing losses",
+        "SAP fundamentals versus market sentiment"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "ORCL",
+        "ADBE",
+        "META",
+        "SAP"
+      ]
+    },
+    {
+      "id": "defense-oil-speculation",
+      "title": "Defense and Energy Sector Focus",
+      "icon": "flame",
+      "heat": "fading",
+      "bullets": [
+        "Defense contractor insider tracking analysis",
+        "Oil price expectations amid geopolitical tensions",
+        "War premium questions in commodity markets",
+        "Strategic positioning in volatile sectors"
+      ],
+      "sentiment_score": 50,
+      "tickers": [
+        "BAH",
+        "LDOS",
+        "SM"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPY",
+      "symbol": "SPX",
       "sentiment": "mixed",
-      "mentions": 15,
-      "signal": "primary vehicle for zero-DTE speculation",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "mentions": 12,
+      "signal": "high-frequency speculation playground",
+      "company_name": "S&P 500 INDEX"
     },
     {
       "symbol": "QQQ",
       "sentiment": "mixed",
-      "mentions": 12,
-      "signal": "volatile tech proxy for quick trades",
+      "mentions": 9,
+      "signal": "volatile intraday momentum plays",
       "company_name": "Invesco QQQ Trust, Series 1"
-    },
-    {
-      "symbol": "SPX",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "preferred for tax-efficient options trading",
-      "company_name": "S&P 500 INDEX"
-    },
-    {
-      "symbol": "SOXS",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "semiconductor short momentum building",
-      "company_name": "Direxion Daily Semiconductor Be"
     },
     {
       "symbol": "SMCI",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "accounting concerns amid dilution",
+      "mentions": 8,
+      "signal": "dilution fears crushing sentiment",
       "company_name": "Super Micro Computer, Inc."
     },
     {
-      "symbol": "HOOD",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "questionable thesis for major high-conviction",
-      "company_name": "Robinhood Markets, Inc."
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 7,
+      "signal": "directional uncertainty prevails",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "NOK",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "disappointing options performance",
-      "company_name": "Nokia Corporation Sponsored"
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "concentrated risk exposure concern",
+      "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "UPST",
+      "symbol": "ORCL",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "funding announcement pressuring shares",
+      "company_name": "Oracle Corporation"
+    },
+    {
+      "symbol": "SOXS",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "semiconductor short momentum building",
+      "company_name": "Direxion Daily Semiconductor Be"
+    },
+    {
+      "symbol": "ADBE",
       "sentiment": "bearish",
       "mentions": 3,
-      "signal": "fundamental deterioration concerns",
-      "company_name": "Upstart Holdings, Inc."
+      "signal": "earnings speculation facing headwinds",
+      "company_name": "Adobe Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail options traders demonstrate remarkable timing on zero-DTE strategies, with multiple traders converting small positions into substantial gains through intraday volatility.",
-      "tag": "bullish"
+      "text": "Retail traders embrace extreme volatility with zero-day options creating dramatic intraday profit and loss swings across major indices.",
+      "tag": "notable"
     },
     {
-      "text": "Account destruction narratives proliferate as inexperienced traders face harsh lessons from poorly timed entries and inadequate risk management protocols.",
+      "text": "Semiconductor sector faces mounting pressure as SMCI dilution concerns and short interest acceleration weigh on AI infrastructure stocks.",
       "tag": "bearish"
     },
     {
-      "text": "Geopolitical tensions create market uncertainty while semiconductor reversal gains momentum as short interest builds following extended AI-driven rallies.",
+      "text": "Platform restrictions and PDT rule changes reshape retail trading behavior while inflation data maintains market uncertainty.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-10T12:02:04.647803+00:00",
-  "updated_hkt": "2026-06-10 20:02 HKT"
+  "updated_at": "2026-06-10T21:01:40.303320+00:00",
+  "updated_hkt": "2026-06-11 05:01 HKT"
 }
