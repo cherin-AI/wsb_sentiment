@@ -48,6 +48,7 @@ REDDIT_AUTH  = "https://www.reddit.com/api/v1/access_token"
 HOURS_WINDOW = 24  # fetch all posts from the last 24 hours
 RSS_PAGE_LIMIT = 100
 RSS_MAX_POSTS = 200
+COMMENT_FETCH_BUDGET_S = 180  # max wall-clock seconds for the per-post comment loop
 
 
 # Matches individual P&L brags: "2100% gains", "up 400%", "$1M+", "printing 30x", etc.
@@ -162,7 +163,7 @@ def curl_get_text(url: str, retries: int = 3) -> str:
         if result.stdout.strip() and not result.stdout.lstrip().lower().startswith(("<body", "<!doctype", "<html")):
             return result.stdout
         if attempt < retries - 1:
-            time.sleep(10 * (attempt + 1))
+            time.sleep(2 * (attempt + 1))
     raise RuntimeError(f"Empty response from {url}")
 
 
@@ -346,8 +347,16 @@ def fetch_wsb_posts_rss() -> list[dict]:
         after = last_full_id
 
     print(f"  Fetching comments for {len(posts)} RSS posts...")
+    import time
+    deadline = time.monotonic() + COMMENT_FETCH_BUDGET_S
+    fetched = 0
     for post in posts:
+        if time.monotonic() > deadline:
+            print(f"  Comment budget ({COMMENT_FETCH_BUDGET_S}s) exhausted after "
+                  f"{fetched}/{len(posts)} posts — continuing without remaining comments")
+            break
         post["top_comments"] = fetch_comments_rss(post["id"])
+        fetched += 1
 
     return posts
 
@@ -355,7 +364,7 @@ def fetch_wsb_posts_rss() -> list[dict]:
 def fetch_comments_rss(post_id: str) -> list[str]:
     """Fetch top comments from a post's Atom feed when JSON comments are blocked."""
     try:
-        feed = curl_get_text(f"https://www.reddit.com/r/wallstreetbets/comments/{post_id}/.rss?sort=top")
+        feed = curl_get_text(f"https://www.reddit.com/r/wallstreetbets/comments/{post_id}/.rss?sort=top", retries=2)
         root = ET.fromstring(feed)
         ns = {"atom": "http://www.w3.org/2005/Atom"}
         comments = []
@@ -497,7 +506,7 @@ Rules:
 
 
 def analyze_with_claude(posts_text: str, post_count: int, api_key: str) -> dict:
-    client  = anthropic.Anthropic(api_key=api_key)
+    client  = anthropic.Anthropic(api_key=api_key, timeout=120.0, max_retries=2)
     now_utc = datetime.now(timezone.utc).isoformat()
 
     message = client.messages.create(
