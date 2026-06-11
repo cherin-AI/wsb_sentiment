@@ -24,7 +24,6 @@
     --gr: #3CC8B8;
     --rd: #E86060;
     --am: #FFCC30;
-    --pu: #FF9040;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -127,16 +126,7 @@
     background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
     padding: 14px 16px; min-height: 110px;
     display: flex; flex-direction: column;
-    position: relative; overflow: hidden;
   }
-  .kpi-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    border-radius: 8px 8px 0 0;
-  }
-  .kpi-card.g::before { background: var(--gr); }
-  .kpi-card.r::before { background: var(--rd); }
-  .kpi-card.b::before { background: var(--ac); }
-  .kpi-card.a::before { background: var(--am); }
   .kpi-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); margin-bottom: 8px; }
   .kpi-value { font-size: 26px; font-weight: 700; }
   .kpi-value.g { color: var(--gr); }
@@ -476,24 +466,24 @@ async function load() {
 
     <!-- Metric Cards -->
     <div class="metrics">
-      <div class="kpi-card g">
+      <div class="kpi-card">
         <div class="kpi-label">Bull/Bear Ratio</div>
         <div style="flex:1">
           <div class="kpi-value g">${(data.bull_bear_ratio || 0).toFixed(1)}x</div>
           <div class="kpi-sub">${m ? m.bull_count : '?'} bull · ${m ? m.bear_count : '?'} bear posts</div>
         </div>
       </div>
-      <div class="kpi-card b">
+      <div class="kpi-card">
         <div class="kpi-label">Posts Analyzed</div>
         <div style="flex:1">
           <div class="kpi-value b">${data.post_count || 0}</div>
           <div class="kpi-sub">Last ${data.hours_window || 24}h · title + body + comments</div>
         </div>
       </div>
-      <div class="kpi-card a">
+      <div class="kpi-card">
         <div class="kpi-label">#1 Ticker</div>
         <div style="flex:1">
-          <div class="kpi-value a">${(data.tickers && data.tickers[0]) ? data.tickers[0].symbol : '—'}</div>
+          <div class="kpi-value">${(data.tickers && data.tickers[0]) ? data.tickers[0].symbol : '—'}</div>
           ${(data.tickers && data.tickers[0] && data.tickers[0].company_name) ? `<div class="kpi-company">${data.tickers[0].company_name}</div>` : ''}
           <div class="kpi-sub">${(data.tickers && data.tickers[0]) ? `${(data.tickers[0].mentions||0).toLocaleString()} mentions` : '—'}</div>
         </div>
@@ -529,7 +519,7 @@ async function load() {
                    : (heatRaw === 'building' || heatRaw === 'rising') ? 'building'
                    : 'cooling';
         const badgeCls = heat === 'hot' ? 'heat-hot' : heat === 'building' ? 'heat-building' : 'heat-cooling';
-        const badgeLabel = heat === 'hot' ? '🔥 HOT' : heat === 'building' ? '📈 BUILDING' : '🧊 COOLING';
+        const badgeLabel = heat === 'hot' ? 'HOT' : heat === 'building' ? 'BUILDING' : 'COOLING';
         return `
           <div class="theme-card">
             <div class="theme-head">
