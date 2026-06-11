@@ -102,12 +102,13 @@
   .score-ai-label { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); }
   .score-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .score-bullet-card {
-    background: var(--s2); border-radius: 6px; padding: 10px 12px;
-    border-left: 3px solid var(--ac); display: flex; flex-direction: column; gap: 6px;
+    border-radius: 8px; padding: 11px 13px;
+    background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07);
+    display: flex; flex-direction: column; gap: 7px;
   }
-  .score-bullet-card.tag-bullish { border-left-color: var(--gr); }
-  .score-bullet-card.tag-bearish { border-left-color: var(--rd); }
-  .score-bullet-card.tag-notable { border-left-color: var(--ac); }
+  .score-bullet-card.tag-bullish { background: rgba(60,200,184,0.06); border-color: rgba(60,200,184,0.20); }
+  .score-bullet-card.tag-bearish { background: rgba(232,96,96,0.06); border-color: rgba(232,96,96,0.20); }
+  .score-bullet-card.tag-notable { background: rgba(96,168,214,0.06); border-color: rgba(96,168,214,0.20); }
   .score-bullet-tag {
     font-size: 8px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
     padding: 2px 6px; border-radius: 3px; align-self: flex-start;
