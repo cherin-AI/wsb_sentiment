@@ -1,17 +1,17 @@
 {
-  "bull_pct": 30,
-  "bear_pct": 46,
-  "neutral_pct": 24,
-  "bull_bear_ratio": 0.6,
-  "overall_score": 36,
+  "bull_pct": 19,
+  "bear_pct": 61,
+  "neutral_pct": 20,
+  "bull_bear_ratio": 0.3,
+  "overall_score": 21,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 30,
-    "ai_score": 38,
-    "bull_count": 11,
-    "bear_count": 17,
-    "neutral_count": 9,
-    "total_posts": 37,
+    "formula_score": 19,
+    "ai_score": 22,
+    "bull_count": 6,
+    "bear_count": 19,
+    "neutral_count": 6,
+    "total_posts": 31,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,190 +19,189 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 37,
+  "post_count": 31,
   "hours_window": 24,
   "themes": [
     {
-      "id": "zero-dte-volatility",
-      "title": "Zero-Day Options Volatility",
-      "icon": "flame",
+      "id": "trading-losses",
+      "title": "Trading Losses",
+      "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Massive intraday swings dominate trading",
-        "Retail chasing high-risk short expiration plays",
-        "Dramatic profit and loss reversals",
-        "Stress-induced trading decisions prevalent"
+        "Major account blow-ups across multiple positions",
+        "COIN [market momentum] causing significant pain",
+        "SMCI fumbles resulting in substantial losses",
+        "Family inheritance gambles going wrong"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 15,
       "tickers": [
-        "SPX",
-        "QQQ",
-        "SPY"
+        "COIN",
+        "SMCI",
+        "BMNR",
+        "NVDA"
       ]
     },
     {
-      "id": "semiconductor-selloff",
-      "title": "Semiconductor Sector Decline",
+      "id": "zero-dte-speculation",
+      "title": "Zero DTE Options",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "High-stakes intraday options trading intensifying",
+        "SPX zero-day plays driving volatility",
+        "Robinhood expiration restrictions frustrating traders",
+        "Extreme leverage creating massive swings"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "SPX"
+      ]
+    },
+    {
+      "id": "ai-semiconductor-volatility",
+      "title": "AI Semiconductor Volatility",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "SMCI down significantly on dilution concerns",
-        "Shorts piling into semiconductor plays",
-        "SOXS calls generating profits unexpectedly",
-        "AI infrastructure stocks under pressure"
+        "SMCI experiencing dramatic selloffs and rebounds",
+        "NVDA concentration risks becoming apparent",
+        "Oracle cloud infrastructure underperforming expectations",
+        "AMD funding startup schemes questioned"
       ],
       "sentiment_score": 25,
       "tickers": [
         "SMCI",
         "NVDA",
-        "SOXS",
-        "SOXL"
+        "ORCL",
+        "AMD"
       ]
     },
     {
-      "id": "inflation-market-stress",
-      "title": "Inflation Data Concerns",
-      "icon": "trending-up",
+      "id": "market-deterioration",
+      "title": "Market Deterioration",
+      "icon": "trending-down",
       "heat": "rising",
       "bullets": [
-        "CPI reading at elevated levels",
-        "Market volatility around data releases",
-        "Geopolitical tensions affecting oil prices",
-        "Economic uncertainty driving speculation"
+        "Recent gains erased over three trading days",
+        "Bear market momentum accelerating downward",
+        "Risk-off sentiment spreading across sectors",
+        "Inflation rising to 4.2% creating headwinds"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 18,
       "tickers": [
         "SPY",
         "QQQ"
       ]
     },
     {
-      "id": "trading-platform-issues",
-      "title": "Platform Trading Restrictions",
-      "icon": "skull",
+      "id": "crypto-energy-plays",
+      "title": "Crypto Energy Plays",
+      "icon": "rocket",
       "heat": "rising",
       "bullets": [
-        "Robinhood limiting option purchases near expiry",
-        "PDT rule removal creating new opportunities",
-        "Stop loss failures costing traders",
-        "Technical barriers frustrating retail flow"
+        "ETH liquidation strategies emerging among traders",
+        "Oil futures positioning showing extreme short interest",
+        "USO short squeeze potential being discussed",
+        "Energy sector rotation gaining attention"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 45,
+      "tickers": [
+        "ETH",
+        "USO"
+      ]
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-sad",
+      "heat": "fading",
+      "bullets": [
+        "Revenge trading patterns becoming prevalent",
+        "Family relationship impacts from trading losses",
+        "Broker platform frustrations mounting",
+        "Research studies validating community stock-picking"
+      ],
+      "sentiment_score": 30,
       "tickers": [
         "HOOD",
-        "QQQ"
-      ]
-    },
-    {
-      "id": "big-tech-mixed-signals",
-      "title": "Big Tech Mixed Performance",
-      "icon": "rocket",
-      "heat": "fading",
-      "bullets": [
-        "Oracle funding concerns weighing on stock",
-        "Adobe earnings bets facing headwinds",
-        "Meta positions showing losses",
-        "SAP fundamentals versus market sentiment"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "ORCL",
-        "ADBE",
-        "META",
-        "SAP"
-      ]
-    },
-    {
-      "id": "defense-oil-speculation",
-      "title": "Defense and Energy Sector Focus",
-      "icon": "flame",
-      "heat": "fading",
-      "bullets": [
-        "Defense contractor insider tracking analysis",
-        "Oil price expectations amid geopolitical tensions",
-        "War premium questions in commodity markets",
-        "Strategic positioning in volatile sectors"
-      ],
-      "sentiment_score": 50,
-      "tickers": [
-        "BAH",
-        "LDOS",
-        "SM"
+        "VOO"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPX",
-      "sentiment": "mixed",
-      "mentions": 12,
-      "signal": "high-frequency speculation playground",
-      "company_name": "S&P 500 INDEX"
-    },
-    {
-      "symbol": "QQQ",
-      "sentiment": "mixed",
-      "mentions": 9,
-      "signal": "volatile intraday momentum plays",
-      "company_name": "Invesco QQQ Trust, Series 1"
+      "symbol": "SPY",
+      "sentiment": "bearish",
+      "mentions": 8,
+      "signal": "zero-day options volatility",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "SMCI",
       "sentiment": "bearish",
-      "mentions": 8,
-      "signal": "dilution fears crushing sentiment",
-      "company_name": "Super Micro Computer, Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
       "mentions": 7,
-      "signal": "directional uncertainty prevails",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "signal": "major selloff aftermath",
+      "company_name": "Super Micro Computer, Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "mixed",
       "mentions": 6,
-      "signal": "concentrated risk exposure concern",
+      "signal": "concentration risk concerns",
       "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "QQQ",
+      "sentiment": "bearish",
+      "mentions": 5,
+      "signal": "expiration rule frustrations",
+      "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
       "symbol": "ORCL",
       "sentiment": "bearish",
       "mentions": 4,
-      "signal": "funding announcement pressuring shares",
+      "signal": "cloud revenue disappointment",
       "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "SOXS",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "semiconductor short momentum building",
-      "company_name": "Direxion Daily Semiconductor Be"
-    },
-    {
-      "symbol": "ADBE",
+      "symbol": "COIN",
       "sentiment": "bearish",
       "mentions": 3,
-      "signal": "earnings speculation facing headwinds",
-      "company_name": "Adobe Inc."
+      "signal": "peak buying regret",
+      "company_name": "Coinbase Global, Inc."
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "funding scheme skepticism",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "USO",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "short squeeze speculation",
+      "company_name": "United States Oil Fund"
     }
   ],
   "summary": [
     {
-      "text": "Retail traders embrace extreme volatility with zero-day options creating dramatic intraday profit and loss swings across major indices.",
-      "tag": "notable"
-    },
-    {
-      "text": "Semiconductor sector faces mounting pressure as SMCI dilution concerns and short interest acceleration weigh on AI infrastructure stocks.",
+      "text": "Retail traders are experiencing widespread account destruction as recent market gains evaporate, with major losses reported across COIN, SMCI, and concentrated NVDA positions.",
       "tag": "bearish"
     },
     {
-      "text": "Platform restrictions and PDT rule changes reshape retail trading behavior while inflation data maintains market uncertainty.",
+      "text": "Zero-day options trading is intensifying despite mounting losses, with traders frustrated by broker restrictions while chasing volatile intraday moves in SPX and QQQ.",
       "tag": "notable"
+    },
+    {
+      "text": "AI semiconductor volatility is creating extreme position sizing risks, while energy and crypto plays show emerging bullish interest amid broader market deterioration.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-10T21:01:40.303320+00:00",
-  "updated_hkt": "2026-06-11 05:01 HKT"
+  "updated_at": "2026-06-11T12:01:44.351428+00:00",
+  "updated_hkt": "2026-06-11 20:01 HKT"
 }
