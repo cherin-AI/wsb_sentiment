@@ -82,7 +82,7 @@
       "id": "market-deterioration",
       "title": "Market Deterioration",
       "icon": "trending-down",
-      "heat": "rising",
+      "heat": "building",
       "bullets": [
         "Recent gains erased over three trading days",
         "Bear market momentum accelerating downward",
@@ -99,7 +99,7 @@
       "id": "crypto-energy-plays",
       "title": "Crypto Energy Plays",
       "icon": "rocket",
-      "heat": "rising",
+      "heat": "building",
       "bullets": [
         "ETH liquidation strategies emerging among traders",
         "Oil futures positioning showing extreme short interest",
@@ -116,7 +116,7 @@
       "id": "general-market-mood",
       "title": "General Market Mood",
       "icon": "mood-sad",
-      "heat": "fading",
+      "heat": "cooling",
       "bullets": [
         "Revenge trading patterns becoming prevalent",
         "Family relationship impacts from trading losses",

@@ -98,28 +98,19 @@ def sanitize_claude_result(result: dict) -> dict:
 
 
 def normalize_theme_heat(theme: dict) -> None:
-    """Keep theme heat labels aligned with recency/momentum language."""
+    """Validate the AI's heat label and fold legacy synonyms onto the current
+    vocabulary (hot / building / cooling). No keyword inference: the AI judges a
+    theme's energy from the post content itself, not from matched words."""
     heat = (theme.get("heat") or "").lower()
-    if heat == "cool":
-        heat = "fading"
-
-    text = " ".join([
-        theme.get("title", ""),
-        " ".join(theme.get("bullets", [])),
-    ]).lower()
-    rising_terms = (
-        "building", "gaining", "fresh attention", "momentum",
-        "spreading", "accelerating", "surging", "rally",
-        "moonshot", "squeeze", "frenzy", "heating up",
-        "breakthrough", "catalyst", "catalysts ahead",
-        "unveiled", "revival", "opportunities",
-    )
-    if heat == "fading" and any(term in text for term in rising_terms):
-        heat = "rising"
-    elif heat not in {"hot", "rising", "fading"}:
-        heat = "rising"
-
-    theme["heat"] = heat
+    synonyms = {
+        "hot":      "hot",
+        "building": "building",
+        "rising":   "building",   # legacy label
+        "cooling":  "cooling",
+        "fading":   "cooling",    # legacy label
+        "cool":     "cooling",    # legacy label
+    }
+    theme["heat"] = synonyms.get(heat, "building")
 
 
 # ── Reddit ───────────────────────────────────────────────────────────────────
@@ -468,7 +459,7 @@ JSON schema:
       "id": "<slug>",
       "title": "<display name>",
       "icon": "<tabler icon name e.g. cpu, rocket, flame, trending-up, skull>",
-      "heat": "hot|rising|fading",
+      "heat": "hot|building|cooling",
       "bullets": ["<bullet 1 ≤8 words>", "<bullet 2>", "<bullet 3>", "<bullet 4>"],
       "sentiment_score": <integer 0-100, your qualitative read of this theme's bullishness>,
       "tickers": ["TICKER", ...]
@@ -490,7 +481,11 @@ JSON schema:
 }
 
 Rules:
-- heat: use your holistic judgment as a WSB-savvy analyst — not simple keyword matching or pure volume counting. Ask yourself: how culturally resonant is this theme on WSB, how many posts in this batch touch it, and how intensely? "hot" = high engagement, culturally sticky themes such as trading losses, short squeezes, and meme stock mania draw heat regardless of sentiment direction. "rising" = building momentum, a few posts gaining traction, fresh catalysts, new breakthroughs, or renewed speculation. "fading" = minor theme, low engagement, peripheral to the main conversation. A bearish or painful theme can absolutely be "hot" — energy level is independent of sentiment direction.
+- heat: classify each theme by the energy you can read in THIS snapshot's posts and comments. You only see the current batch, so never compare to past days, and never decide from keyword matching. Judge from two things you CAN see right now: how much of the conversation the theme occupies, and the tone of the crowd toward it.
+    "hot"      = dominating the feed right now: the highest post volume and the most intense engagement. Culturally sticky topics (trading losses, short squeezes, meme-stock mania) run hot regardless of direction.
+    "building" = energy is gathering: the crowd is actively piling in, opening fresh positions, reacting to a new catalyst, or the speculation is spreading across several posts. Accelerating, constructive attention.
+    "cooling"  = energy is draining: a minor or peripheral theme, few posts, an exhausted or resigned tone, the crowd backing off or moving on.
+  Heat measures attention and energy, NOT bullishness. A painful or bearish theme can absolutely be "hot" or "building" if people are piling into it. Decide from the actual posts, not from the wording of these instructions.
 - writing style: write like a financial specialist, not a forum participant. Keep the analysis concise, polished, and market-literate. Avoid casual forum slang; translate it into professional language such as "questionable", "speculative traders", "warns", "strong cash flow", "upside momentum", or "high-conviction".
 - bullets: exactly 4 per theme, concise professional market language, no fluff
 - tickers: top 8 by mention count only
