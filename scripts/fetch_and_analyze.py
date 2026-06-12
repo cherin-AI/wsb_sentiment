@@ -100,18 +100,15 @@ def sanitize_claude_result(result: dict) -> dict:
 
 def normalize_theme_heat(theme: dict) -> None:
     """Validate the AI's heat label and fold legacy synonyms onto the current
-    vocabulary (hot / building / cooling). No keyword inference: the AI judges a
-    theme's energy from the post content itself, not from matched words."""
+    vocabulary (hot / building / normal). "cooling" is retired: quiet themes
+    carry no badge, so cooling and its legacy synonyms fold to "normal"."""
     heat = (theme.get("heat") or "").lower()
     synonyms = {
         "hot":      "hot",
         "building": "building",
         "rising":   "building",   # legacy label
-        "cooling":  "cooling",
-        "fading":   "cooling",    # legacy label
-        "cool":     "cooling",    # legacy label
     }
-    theme["heat"] = synonyms.get(heat, "building")
+    theme["heat"] = synonyms.get(heat, "normal")
 
 
 # ── Reddit ───────────────────────────────────────────────────────────────────
@@ -468,7 +465,7 @@ JSON schema:
       "id": "<slug>",
       "title": "<display name>",
       "icon": "<tabler icon name e.g. cpu, rocket, flame, trending-up, skull>",
-      "heat": "hot|building|cooling",
+      "heat": "hot|building|normal",
       "bullets": ["<bullet 1 ≤8 words>", "<bullet 2>", "<bullet 3>", "<bullet 4>"],
       "sentiment_score": <integer 0-100, your qualitative read of this theme's bullishness>,
       "tickers": ["TICKER", ...]
@@ -490,11 +487,11 @@ JSON schema:
 }
 
 Rules:
-- heat: classify each theme by the energy you can read in THIS snapshot's posts and comments. You only see the current batch, so never compare to past days, and never decide from keyword matching. Heat is the DIRECTION of crowd energy, not the theme's size and not its rank in your list. A small theme can be "building" and a dominant theme can be "cooling". The themes array is ordered hottest first, but position must NOT determine heat: do not default lower-ranked themes to "cooling", and any mix of labels (even all six "hot", or zero "cooling") is valid if that is what the posts show.
-    "hot"      = high intensity right now: the theme is actively moving trades, drawing piled-on engagement, or driven by a live catalyst (geopolitical shock, earnings, squeeze, mass losses) that traders are positioning around. Culturally sticky topics run hot regardless of direction.
-    "building" = energy gathering: fresh interest, emerging speculation, new positions being opened, a catalyst starting to draw attention, discussion spreading across posts. If the crowd is showing NEW interest in the theme, label it "building" no matter how small the theme is.
-    "cooling"  = energy visibly draining: exhausted or resigned tone, capitulation, traders explicitly backing off, treating it as old news, or losing interest. Reserve "cooling" for positive evidence of disengagement in the posts — being a minor or low-volume theme is NOT, by itself, evidence of cooling.
-  Decision rule when unsure: live catalyst + active positioning → "hot"; small but fresh interest → "building"; indifferent or exhausted tone → "cooling". Heat measures attention and energy, NOT bullishness. A painful or bearish theme can absolutely be "hot" or "building" if people are piling into it. Decide from the actual posts, not from the wording of these instructions.
+- heat: classify each theme's energy as "hot", "building", or "normal", judging only from this snapshot's posts and comments. Never decide from keyword matching, and never infer heat from a theme's position in the list.
+    "hot"      = clearly intense engagement right now: the theme is actively moving trades, drawing piled-on reactions, or driven by a live catalyst (geopolitical shock, earnings, squeeze, mass losses) that traders are positioning around. Culturally sticky topics run hot regardless of direction.
+    "building" = energy gathering: fresh interest, emerging speculation, new positions being opened, a catalyst starting to draw attention, discussion spreading across posts — no matter how small the theme is.
+    "normal"   = everything else: baseline discussion without unusual intensity or fresh momentum. There is no "cooling" label; quiet or fading themes are simply "normal". When unsure, choose "normal".
+  Heat measures attention and energy, NOT bullishness — a painful or bearish theme can be "hot" or "building" if people are piling into it.
 - writing style: write like a financial specialist, not a forum participant. Keep the analysis concise, polished, and market-literate. Avoid casual forum slang; translate it into professional language such as "questionable", "speculative traders", "warns", "strong cash flow", "upside momentum", or "high-conviction".
 - bullets: exactly 4 per theme, concise professional market language, no fluff
 - tickers: top 8 by mention count only

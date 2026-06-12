@@ -161,7 +161,6 @@
   }
   .heat-hot      { border-color: rgba(232,96,96,0.45);  color: #ff9b9b; background: rgba(232,96,96,0.10); }
   .heat-building { border-color: rgba(255,204,48,0.45); color: #ffe08a; background: rgba(255,204,48,0.10); }
-  .heat-cooling, .heat-cool, .heat-fading { border-color: rgba(96,168,214,0.45); color: #9fd0f1; background: rgba(96,168,214,0.10); }
   .theme-bullets { list-style: none; margin-bottom: 12px; }
   .theme-bullets li { font-size: 11px; color: var(--t2); padding: 2px 0; display: flex; gap: 6px; line-height: 1.5; }
   .theme-bullets li::before { content: '•'; color: var(--ac); flex-shrink: 0; }
@@ -517,14 +516,15 @@ async function load() {
         const heatRaw = (th.heat || '').toLowerCase();
         const heat = heatRaw === 'hot' ? 'hot'
                    : (heatRaw === 'building' || heatRaw === 'rising') ? 'building'
-                   : 'cooling';
-        const badgeCls = heat === 'hot' ? 'heat-hot' : heat === 'building' ? 'heat-building' : 'heat-cooling';
-        const badgeLabel = heat === 'hot' ? 'HOT' : heat === 'building' ? 'BUILDING' : 'COOLING';
+                   : null;  // cooling/normal/legacy: no badge
+        const badge = heat
+          ? `<span class="heat-badge heat-${heat}">${heat === 'hot' ? 'HOT' : 'BUILDING'}</span>`
+          : '';
         return `
           <div class="theme-card">
             <div class="theme-head">
               <span class="theme-title">${th.title}</span>
-              <span class="heat-badge ${badgeCls}">${badgeLabel}</span>
+              ${badge}
             </div>
             <ul class="theme-bullets">
               ${(th.bullets || []).map(b => `<li>${b}</li>`).join('')}
