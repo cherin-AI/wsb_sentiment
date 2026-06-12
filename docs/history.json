@@ -201,5 +201,12 @@
     "label": "Fear",
     "formula_score": 39,
     "ai_score": 35
+  },
+  {
+    "ts": "2026-06-12 20:03 HKT",
+    "score": 68,
+    "label": "Greed",
+    "formula_score": 57,
+    "ai_score": 72
   }
 ]
