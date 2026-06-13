@@ -1,17 +1,17 @@
 {
-  "bull_pct": 46,
-  "bear_pct": 31,
-  "neutral_pct": 23,
-  "bull_bear_ratio": 1.5,
-  "overall_score": 59,
-  "overall_label": "Neutral",
+  "bull_pct": 54,
+  "bear_pct": 25,
+  "neutral_pct": 21,
+  "bull_bear_ratio": 2.2,
+  "overall_score": 67,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 46,
-    "ai_score": 65,
-    "bull_count": 22,
-    "bear_count": 15,
-    "neutral_count": 11,
-    "total_posts": 48,
+    "formula_score": 54,
+    "ai_score": 72,
+    "bull_count": 13,
+    "bear_count": 6,
+    "neutral_count": 5,
+    "total_posts": 24,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,106 +19,103 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 48,
+  "post_count": 24,
   "hours_window": 24,
   "themes": [
     {
       "id": "spacex-ipo",
-      "title": "SpaceX IPO Launch",
+      "title": "SpaceX IPO Euphoria",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Options trading begins Tuesday",
-        "Oversubscribed allocation limiting access",
-        "Merger speculation with Tesla emerging",
-        "Retail frenzy despite limited shares"
+        "SpaceX public debut driving massive institutional inflows",
+        "Options trading begins Tuesday accelerating speculation",
+        "Supply-demand dynamics favor near-term momentum",
+        "Valuation concerns overshadowed by scarcity premium"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 85,
       "tickers": [
         "SPCX"
       ]
     },
     {
-      "id": "short-term-options",
-      "title": "Zero-Day Options Trading",
-      "icon": "flame",
-      "heat": "hot",
+      "id": "zero-dte-trading",
+      "title": "Zero-DTE Scalping",
+      "icon": "trending-up",
+      "heat": "building",
       "bullets": [
-        "Multiple profit posts from SPY strategies",
-        "Day trading momentum building",
-        "Quick turnaround success stories",
-        "Risk management discussions increasing"
+        "Aggressive intraday options strategies dominating flows",
+        "SPY zero-day expiration trades generating outsized returns",
+        "High-frequency scalping replacing traditional position building",
+        "Risk-taking mentality reaching fever pitch"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 75,
       "tickers": [
         "SPY"
       ]
     },
     {
-      "id": "chip-sector-rally",
-      "title": "Semiconductor Sector Momentum",
+      "id": "ai-semiconductor-rally",
+      "title": "AI Semiconductor Momentum",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Intel price target upgrades driving gains",
-        "AI company IPO speculation supporting NVIDIA",
-        "Correction concerns over chip valuations",
-        "Bank of America analyst upgrades"
+        "Chip sector volatility creating trading opportunities",
+        "Intel positioning benefits from AI infrastructure demand",
+        "Nvidia call speculation ahead of AI IPOs",
+        "Hyperscaler rotation strategies emerging among traders"
       ],
       "sentiment_score": 68,
       "tickers": [
-        "INTC",
         "NVDA",
+        "INTC"
+      ]
+    },
+    {
+      "id": "options-novice-losses",
+      "title": "Retail Options Education",
+      "icon": "flame",
+      "heat": "normal",
+      "bullets": [
+        "New traders experiencing significant account drawdowns",
+        "Options complexity catching inexperienced participants",
+        "Social media influence driving questionable strategies",
+        "Risk management lessons learned through painful losses"
+      ],
+      "sentiment_score": 25,
+      "tickers": []
+    },
+    {
+      "id": "correction-positioning",
+      "title": "Market Correction Bets",
+      "icon": "skull",
+      "heat": "normal",
+      "bullets": [
+        "Large put positions targeting October semiconductor selloff",
+        "Economic deterioration concerns driving defensive trades",
+        "Geopolitical developments creating uncertainty",
+        "Institutional profit-taking anticipated"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
         "SOXX"
       ]
     },
     {
-      "id": "space-confusion",
-      "title": "Space Ticker Mix-ups",
+      "id": "space-sector-divergence",
+      "title": "Space Industry Performance",
       "icon": "trending-up",
-      "heat": "building",
+      "heat": "normal",
       "bullets": [
-        "Virgin Galactic mistaken identity trades",
-        "Space-named stocks underperforming",
-        "Ticker confusion creating volatility",
-        "Retail misdirection on similar names"
+        "Non-SpaceX space companies underperforming significantly",
+        "Name-based correlation effects creating mispricing",
+        "Sector rotation favoring established players",
+        "Speculative positioning across space-themed tickers"
       ],
       "sentiment_score": 45,
       "tickers": [
         "SPCE",
-        "AST"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Account Blow-ups",
-      "icon": "skull",
-      "heat": "normal",
-      "bullets": [
-        "Large Adobe position losses mounting",
-        "Revenge trading patterns emerging",
-        "Multi-year trading journey failures",
-        "Options strategy disappointments"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "ADBE"
-      ]
-    },
-    {
-      "id": "ai-speculation",
-      "title": "AI IPO Anticipation",
-      "icon": "trending-up",
-      "heat": "normal",
-      "bullets": [
-        "OpenAI and Anthropic IPO expectations",
-        "Pricing competition concerns emerging",
-        "Capital allocation questions raised",
-        "Market bubble discussions continuing"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "NVDA"
+        "ASTS"
       ]
     }
   ],
@@ -126,74 +123,74 @@
     {
       "symbol": "SPCX",
       "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "IPO launch euphoria",
+      "mentions": 8,
+      "signal": "IPO excitement with options launch",
       "company_name": "Space Exploration Tech Corp"
     },
     {
       "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 8,
-      "signal": "Active day trading vehicle",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "SPCE",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Confused with SpaceX",
-      "company_name": "Virgin Galactic Holdings, Inc."
-    },
-    {
-      "symbol": "INTC",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Bank upgrade momentum",
-      "company_name": "Intel Corporation"
+      "mentions": 5,
+      "signal": "Zero-DTE scalping target",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "AI IPO beneficiary",
+      "mentions": 2,
+      "signal": "AI IPO catalyst speculation",
       "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "INTC",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Value play in chip rally",
+      "company_name": "Intel Corporation"
     },
     {
       "symbol": "SOXX",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Correction trade target",
+      "signal": "October correction target",
       "company_name": "iShares PHLX SOX Semiconductor "
     },
     {
-      "symbol": "ADBE",
-      "sentiment": "bearish",
+      "symbol": "SPCE",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Large loss positions",
-      "company_name": "Adobe Inc."
+      "signal": "Momentum trade with caution",
+      "company_name": "Virgin Galactic Holdings, Inc."
     },
     {
-      "symbol": "ORCL",
+      "symbol": "ASTS",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "Put strategy success",
-      "company_name": "Oracle Corporation"
+      "signal": "Space sector laggard",
+      "company_name": "AST SpaceMobile, Inc."
+    },
+    {
+      "symbol": "RKLB",
+      "sentiment": "neutral",
+      "mentions": 1,
+      "signal": "Space theme participant",
+      "company_name": "Rocket Lab Corporation"
     }
   ],
   "summary": [
     {
-      "text": "SpaceX IPO ignites retail euphoria as options trading begins Tuesday, though oversubscription limits allocations and drives speculative frenzy across space-themed tickers.",
+      "text": "SpaceX IPO fever dominates trading flows as retail and institutional money pours into the freshly public space giant. Options trading launch Tuesday promises to amplify speculation around the scarcity premium.",
       "tag": "bullish"
     },
     {
-      "text": "Zero-day SPY options continue generating substantial profit posts, highlighting the persistent appetite for high-risk short-term speculation despite market uncertainty.",
-      "tag": "notable"
+      "text": "Zero-day expiration strategies on SPY showcase extreme risk appetite among retail traders seeking rapid scalping profits. This aggressive positioning reflects heightened market confidence despite elevated volatility.",
+      "tag": "bullish"
     },
     {
-      "text": "Semiconductor momentum builds on Intel upgrades and AI IPO anticipation, while traders position for both continued rally and potential correction scenarios.",
-      "tag": "bullish"
+      "text": "Large bearish semiconductor bets signal growing concern over October correction risks, with traders positioning for economic deterioration despite current AI rally momentum.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-13T12:02:59.623044+00:00",
-  "updated_hkt": "2026-06-13 20:02 HKT"
+  "updated_at": "2026-06-13T21:01:50.491209+00:00",
+  "updated_hkt": "2026-06-14 05:01 HKT"
 }
