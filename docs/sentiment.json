@@ -1,17 +1,17 @@
 {
-  "bull_pct": 52,
-  "bear_pct": 28,
-  "neutral_pct": 20,
-  "bull_bear_ratio": 1.9,
-  "overall_score": 66,
-  "overall_label": "Greed",
+  "bull_pct": 46,
+  "bear_pct": 31,
+  "neutral_pct": 23,
+  "bull_bear_ratio": 1.5,
+  "overall_score": 59,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 52,
-    "ai_score": 72,
-    "bull_count": 26,
-    "bear_count": 14,
-    "neutral_count": 10,
-    "total_posts": 50,
+    "formula_score": 46,
+    "ai_score": 65,
+    "bull_count": 22,
+    "bear_count": 15,
+    "neutral_count": 11,
+    "total_posts": 48,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,7 +19,7 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 50,
+  "post_count": 48,
   "hours_window": 24,
   "themes": [
     {
@@ -28,106 +28,97 @@
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Historic IPO driving intense speculation",
-        "Retail allocation cuts sparking fear",
-        "Tesla merger rumors amplifying momentum",
-        "Oversubscribed demand creating allocation anxiety"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "SPCX",
-        "TSLA",
-        "GOOGL"
-      ]
-    },
-    {
-      "id": "nasdaq-rebalance",
-      "title": "Nasdaq-100 Rebalance",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Five new additions driving index flows",
-        "Quarterly rebalance creating positioning opportunities",
-        "Institutional buying expected on inclusion",
-        "June 22 effective date approaching"
+        "Options trading begins Tuesday",
+        "Oversubscribed allocation limiting access",
+        "Merger speculation with Tesla emerging",
+        "Retail frenzy despite limited shares"
       ],
       "sentiment_score": 75,
       "tickers": [
-        "ALAB",
-        "CRWV",
-        "NBIS"
+        "SPCX"
       ]
     },
     {
-      "id": "semiconductor-rally",
-      "title": "Memory Semiconductor Revival",
-      "icon": "cpu",
-      "heat": "building",
+      "id": "short-term-options",
+      "title": "Zero-Day Options Trading",
+      "icon": "flame",
+      "heat": "hot",
       "bullets": [
-        "DRAM sector showing strong momentum",
-        "Micron guidance beating consensus expectations",
-        "Forward valuations attractive despite growth",
-        "AI infrastructure demand supporting chips"
+        "Multiple profit posts from SPY strategies",
+        "Day trading momentum building",
+        "Quick turnaround success stories",
+        "Risk management discussions increasing"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 70,
       "tickers": [
-        "MU",
-        "AVGO",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Account Blow-Ups",
-      "icon": "skull",
-      "heat": "normal",
-      "bullets": [
-        "Options strategies producing significant losses",
-        "Adobe positions generating major pain",
-        "Virgin Galactic trades creating volatility",
-        "Revenge trading cycles continuing"
-      ],
-      "sentiment_score": 15,
-      "tickers": [
-        "ADBE",
-        "SPCE",
         "SPY"
       ]
     },
     {
-      "id": "comeback-stories",
-      "title": "Recovery Trades",
-      "icon": "flame",
-      "heat": "normal",
+      "id": "chip-sector-rally",
+      "title": "Semiconductor Sector Momentum",
+      "icon": "cpu",
+      "heat": "building",
       "bullets": [
-        "Intel calls producing dramatic recoveries",
-        "Short-term options generating quick wins",
-        "Profit-taking after major moves",
-        "Account rebuilding after drawdowns"
+        "Intel price target upgrades driving gains",
+        "AI company IPO speculation supporting NVIDIA",
+        "Correction concerns over chip valuations",
+        "Bank of America analyst upgrades"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 68,
       "tickers": [
         "INTC",
-        "SPY",
-        "ORCL"
+        "NVDA",
+        "SOXX"
       ]
     },
     {
-      "id": "defensive-positioning",
-      "title": "Market Hedging Activity",
-      "icon": "shield",
+      "id": "space-confusion",
+      "title": "Space Ticker Mix-ups",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Virgin Galactic mistaken identity trades",
+        "Space-named stocks underperforming",
+        "Ticker confusion creating volatility",
+        "Retail misdirection on similar names"
+      ],
+      "sentiment_score": 45,
+      "tickers": [
+        "SPCE",
+        "AST"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Account Blow-ups",
+      "icon": "skull",
       "heat": "normal",
       "bullets": [
-        "Put buying strategies showing profits",
-        "Gold positions facing pressure",
-        "Bear market positioning gaining traction",
-        "Volatility trades in focus"
+        "Large Adobe position losses mounting",
+        "Revenge trading patterns emerging",
+        "Multi-year trading journey failures",
+        "Options strategy disappointments"
       ],
       "sentiment_score": 25,
       "tickers": [
-        "SPY",
-        "GDX",
-        "ORCL"
+        "ADBE"
+      ]
+    },
+    {
+      "id": "ai-speculation",
+      "title": "AI IPO Anticipation",
+      "icon": "trending-up",
+      "heat": "normal",
+      "bullets": [
+        "OpenAI and Anthropic IPO expectations",
+        "Pricing competition concerns emerging",
+        "Capital allocation questions raised",
+        "Market bubble discussions continuing"
+      ],
+      "sentiment_score": 55,
+      "tickers": [
+        "NVDA"
       ]
     }
   ],
@@ -136,73 +127,73 @@
       "symbol": "SPCX",
       "sentiment": "bullish",
       "mentions": 12,
-      "signal": "IPO frenzy driving speculation",
+      "signal": "IPO launch euphoria",
       "company_name": "Space Exploration Tech Corp"
     },
     {
       "symbol": "SPY",
       "sentiment": "mixed",
       "mentions": 8,
-      "signal": "Range-bound with directional bets",
+      "signal": "Active day trading vehicle",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "SPCE",
-      "sentiment": "bearish",
+      "sentiment": "mixed",
       "mentions": 6,
-      "signal": "Major losses on meme stock fade",
+      "signal": "Confused with SpaceX",
       "company_name": "Virgin Galactic Holdings, Inc."
     },
     {
       "symbol": "INTC",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Dramatic comeback plays",
+      "mentions": 4,
+      "signal": "Bank upgrade momentum",
       "company_name": "Intel Corporation"
     },
     {
-      "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "SpaceX exposure play",
-      "company_name": "Alphabet Inc."
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Memory sector revival",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "AVGO",
+      "symbol": "NVDA",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "AI infrastructure value play",
-      "company_name": "Broadcom Inc."
+      "signal": "AI IPO beneficiary",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "SOXX",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Correction trade target",
+      "company_name": "iShares PHLX SOX Semiconductor "
     },
     {
       "symbol": "ADBE",
       "sentiment": "bearish",
-      "mentions": 3,
+      "mentions": 2,
       "signal": "Large loss positions",
       "company_name": "Adobe Inc."
+    },
+    {
+      "symbol": "ORCL",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "Put strategy success",
+      "company_name": "Oracle Corporation"
     }
   ],
   "summary": [
     {
-      "text": "SpaceX IPO dominates sentiment as retail allocations get slashed while institutional demand surges, creating intense speculation around the historic debut.",
+      "text": "SpaceX IPO ignites retail euphoria as options trading begins Tuesday, though oversubscription limits allocations and drives speculative frenzy across space-themed tickers.",
       "tag": "bullish"
     },
     {
-      "text": "Memory semiconductor stocks rally on strong fundamentals as Micron beats guidance while broader AI infrastructure plays gain momentum ahead of earnings.",
-      "tag": "bullish"
+      "text": "Zero-day SPY options continue generating substantial profit posts, highlighting the persistent appetite for high-risk short-term speculation despite market uncertainty.",
+      "tag": "notable"
     },
     {
-      "text": "Significant trading losses mount across options positions, particularly in Adobe and Virgin Galactic, highlighting the volatile nature of current market speculation.",
-      "tag": "bearish"
+      "text": "Semiconductor momentum builds on Intel upgrades and AI IPO anticipation, while traders position for both continued rally and potential correction scenarios.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-06-12T21:03:05.658896+00:00",
-  "updated_hkt": "2026-06-13 05:03 HKT"
+  "updated_at": "2026-06-13T12:02:59.623044+00:00",
+  "updated_hkt": "2026-06-13 20:02 HKT"
 }
