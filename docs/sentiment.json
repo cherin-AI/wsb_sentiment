@@ -1,17 +1,17 @@
 {
-  "bull_pct": 62,
-  "bear_pct": 8,
-  "neutral_pct": 30,
-  "bull_bear_ratio": 8.0,
-  "overall_score": 69,
-  "overall_label": "Greed",
+  "bull_pct": 50,
+  "bear_pct": 33,
+  "neutral_pct": 17,
+  "bull_bear_ratio": 1.5,
+  "overall_score": 58,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 62,
-    "ai_score": 72,
-    "bull_count": 8,
-    "bear_count": 1,
-    "neutral_count": 4,
-    "total_posts": 13,
+    "formula_score": 50,
+    "ai_score": 62,
+    "bull_count": 6,
+    "bear_count": 4,
+    "neutral_count": 2,
+    "total_posts": 12,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,96 +19,65 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 13,
+  "post_count": 12,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-ipo",
-      "title": "SpaceX IPO Launch",
+      "id": "space-speculation",
+      "title": "Space Sector Speculation",
       "icon": "rocket",
-      "heat": "hot",
+      "heat": "building",
       "bullets": [
-        "Fresh IPO draws institutional buying",
-        "Cathie Wood accumulating shares aggressively",
-        "Float constraints driving price action",
-        "Lockup expiration risks in October"
+        "RKLB leap positions gaining attention",
+        "LUNR drawing speculative interest",
+        "Space technology seen as growth catalyst",
+        "High conviction sector plays emerging"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 75,
       "tickers": [
-        "SPCX"
+        "RKLB",
+        "LUNR"
       ]
     },
     {
-      "id": "ai-memory-boom",
-      "title": "AI Memory Sector",
+      "id": "ai-memory-infrastructure",
+      "title": "AI Memory Infrastructure",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Memory demand fueling AI infrastructure growth",
-        "Bank of America predicts massive market expansion",
-        "DXYZ trading below fundamental value",
-        "Anthropic exposure driving fund interest"
+        "Memory demand driving TAM projections",
+        "Bank of America forecasts substantial growth",
+        "Bears questioned on timing assumptions",
+        "Infrastructure plays gaining momentum"
       ],
       "sentiment_score": 78,
-      "tickers": [
-        "DXYZ",
-        "MRVL"
-      ]
-    },
-    {
-      "id": "spy-momentum",
-      "title": "SPY Trading Activity",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Zero-day option scalping strategies trending",
-        "European capital flows supporting US markets",
-        "Quick profit taking on short timeframes",
-        "Risk-on sentiment dominating flows"
-      ],
-      "sentiment_score": 80,
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "index-inclusion",
-      "title": "Index Addition Events",
-      "icon": "plus",
-      "heat": "normal",
-      "bullets": [
-        "MRVL joining SP500 creates buying pressure",
-        "Front-running activity ahead of inclusion",
-        "Potential post-addition selling expected",
-        "Mechanical index fund purchases required"
-      ],
-      "sentiment_score": 65,
-      "tickers": [
-        "MRVL"
-      ]
-    },
-    {
-      "id": "geopolitical-developments",
-      "title": "Iran Deal Progress",
-      "icon": "world",
-      "heat": "normal",
-      "bullets": [
-        "Strait of Hormuz reopening potential",
-        "Energy market implications emerging",
-        "Diplomatic resolution reducing tensions",
-        "Trade route normalization expected"
-      ],
-      "sentiment_score": 70,
       "tickers": []
     },
     {
-      "id": "trading-losses",
-      "title": "Options Trading Risks",
-      "icon": "alert-triangle",
+      "id": "arbitrage-opportunities",
+      "title": "Arbitrage Strategies",
+      "icon": "trending-up",
       "heat": "normal",
       "bullets": [
-        "Retail traders experiencing option losses",
-        "High-risk strategies showing volatility",
+        "Warner Brothers acquisition spread identified",
+        "Regulatory hurdles mostly cleared",
+        "MRVL index inclusion front-running discussed",
+        "Risk-adjusted returns being evaluated"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "WBD",
+        "MRVL"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Options Trading Losses",
+      "icon": "skull",
+      "heat": "normal",
+      "bullets": [
+        "Retail traders experiencing significant drawdowns",
+        "Options positions turning against holders",
         "Unrealized gains converting to losses",
         "Risk management challenges evident"
       ],
@@ -116,80 +85,112 @@
       "tickers": [
         "UNH"
       ]
+    },
+    {
+      "id": "subscription-model-concerns",
+      "title": "Subscription Model Pressures",
+      "icon": "flame",
+      "heat": "normal",
+      "bullets": [
+        "Adobe facing unique headwinds",
+        "Subscription fatigue impacting valuations",
+        "Competitive pressures mounting",
+        "Business model sustainability questioned"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "ADBE"
+      ]
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Sentiment",
+      "icon": "trending-up",
+      "heat": "normal",
+      "bullets": [
+        "Monday volatility concerns emerging",
+        "European capital flowing to US markets",
+        "Risk appetite remains selective",
+        "Deal uncertainty creating hesitation"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "SPY"
+      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPCX",
+      "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "IPO momentum with float constraints",
-      "company_name": "Space Exploration Technologies "
+      "mentions": 2,
+      "signal": "leap positions gaining traction",
+      "company_name": "Rocket Lab Corporation"
     },
     {
-      "symbol": "SPY",
+      "symbol": "LUNR",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Zero-day scalping profits",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "mentions": 2,
+      "signal": "speculative space play",
+      "company_name": "Intuitive Machines, Inc."
+    },
+    {
+      "symbol": "WBD",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "arbitrage opportunity identified",
+      "company_name": "Warner Bros. Discovery, Inc. - "
     },
     {
       "symbol": "MRVL",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Index inclusion uncertainty",
+      "mentions": 1,
+      "signal": "index inclusion play with concerns",
       "company_name": "Marvell Technology, Inc."
     },
     {
-      "symbol": "DXYZ",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Trading below calculated value",
-      "company_name": "Destiny Tech100 Inc."
+      "symbol": "ADBE",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "subscription model under pressure",
+      "company_name": "Adobe Inc."
     },
     {
       "symbol": "UNH",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "Unrealized gains turning to losses",
+      "signal": "unrealized gains turning sour",
       "company_name": "UnitedHealth Group Incorporated"
     },
     {
-      "symbol": "ARK",
+      "symbol": "SPY",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "Aggressive SpaceX accumulation",
-      "company_name": "ARK Space & Defense Innovation "
+      "signal": "benefiting from European capital flows",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "RAM",
-      "sentiment": "bullish",
+      "symbol": "OpenAI",
+      "sentiment": "mixed",
       "mentions": 1,
-      "signal": "Non-cyclical AI demand thesis",
-      "company_name": "Rambus, Inc."
-    },
-    {
-      "symbol": "RHEINMETALL",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "European defense gains",
-      "company_name": "RHEINMETALL AG                I"
+      "signal": "unconventional shorting scheme proposed",
+      "company_name": "OpenAI tokenized stock (PreStocks) USD"
     }
   ],
   "summary": [
     {
-      "text": "SpaceX IPO generating intense institutional interest with Cathie Wood's aggressive accumulation highlighting float constraints and upside momentum ahead of October lockup risks.",
+      "text": "Space sector speculation is building momentum with traders accumulating leap positions in RKLB and LUNR, viewing aerospace technology as a compelling growth catalyst.",
       "tag": "bullish"
     },
     {
-      "text": "AI infrastructure thesis gaining traction as memory sector sees predicted growth, with DXYZ trading below calculated NAV despite significant Anthropic and OpenAI exposure.",
+      "text": "AI infrastructure themes are gaining traction as traders position for memory demand growth, with Bank of America projections supporting bullish semiconductor narratives.",
       "tag": "bullish"
     },
     {
-      "text": "Iran nuclear deal progress signals potential Strait of Hormuz reopening, offering energy market normalization and reduced geopolitical risk premium across sectors.",
+      "text": "Individual traders are experiencing notable options losses while seeking arbitrage opportunities in merger situations and index inclusions.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-14T12:01:13.093748+00:00",
-  "updated_hkt": "2026-06-14 20:01 HKT"
+  "updated_at": "2026-06-14T21:01:09.541649+00:00",
+  "updated_hkt": "2026-06-15 05:01 HKT"
 }
