@@ -1,17 +1,17 @@
 {
-  "bull_pct": 50,
-  "bear_pct": 33,
-  "neutral_pct": 17,
-  "bull_bear_ratio": 1.5,
-  "overall_score": 58,
+  "bull_pct": 43,
+  "bear_pct": 36,
+  "neutral_pct": 21,
+  "bull_bear_ratio": 1.2,
+  "overall_score": 42,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 50,
-    "ai_score": 62,
+    "formula_score": 43,
+    "ai_score": 42,
     "bull_count": 6,
-    "bear_count": 4,
-    "neutral_count": 2,
-    "total_posts": 12,
+    "bear_count": 5,
+    "neutral_count": 3,
+    "total_posts": 14,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,19 +19,67 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 12,
+  "post_count": 14,
   "hours_window": 24,
   "themes": [
     {
-      "id": "space-speculation",
-      "title": "Space Sector Speculation",
-      "icon": "rocket",
+      "id": "iran-peace-catalyst",
+      "title": "Iran Peace Deal Market Impact",
+      "icon": "peace",
       "heat": "building",
       "bullets": [
-        "RKLB leap positions gaining attention",
-        "LUNR drawing speculative interest",
-        "Space technology seen as growth catalyst",
-        "High conviction sector plays emerging"
+        "Geopolitical catalyst creating market uncertainty",
+        "Deal status fluctuating between confirmed and questionable",
+        "Traders positioning for volatility outcomes",
+        "Zero-day options activity increasing around news"
+      ],
+      "sentiment_score": 65,
+      "tickers": [
+        "SPCX"
+      ]
+    },
+    {
+      "id": "dot-com-crash-fears",
+      "title": "Dot-Com Bubble Parallels",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Historical market crash warnings gaining traction",
+        "NASDAQ recovery timeline concerns cited",
+        "Massive AI IPO risks being questioned",
+        "Portfolio diversification discussions emerging"
+      ],
+      "sentiment_score": 25,
+      "tickers": [
+        "QQQ"
+      ]
+    },
+    {
+      "id": "ai-regulatory-crackdown",
+      "title": "AI Model Regulatory Pressures",
+      "icon": "shield-x",
+      "heat": "normal",
+      "bullets": [
+        "Anthropic facing government scrutiny over models",
+        "Amazon research reportedly triggering crackdowns",
+        "AI sector regulatory risks expanding",
+        "Model security vulnerabilities being exposed"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "AMZN"
+      ]
+    },
+    {
+      "id": "space-sector-speculation",
+      "title": "Space Industry Momentum",
+      "icon": "rocket",
+      "heat": "normal",
+      "bullets": [
+        "Concentrated positions in space companies",
+        "Long-term options strategies being deployed",
+        "Sector fundamentals driving conviction trades",
+        "Emerging space economy attracting capital"
       ],
       "sentiment_score": 75,
       "tickers": [
@@ -40,82 +88,37 @@
       ]
     },
     {
-      "id": "ai-memory-infrastructure",
-      "title": "AI Memory Infrastructure",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "Memory demand driving TAM projections",
-        "Bank of America forecasts substantial growth",
-        "Bears questioned on timing assumptions",
-        "Infrastructure plays gaining momentum"
-      ],
-      "sentiment_score": 78,
-      "tickers": []
-    },
-    {
-      "id": "arbitrage-opportunities",
-      "title": "Arbitrage Strategies",
-      "icon": "trending-up",
+      "id": "merger-arbitrage-opportunities",
+      "title": "Merger Arbitrage Plays",
+      "icon": "arrows-exchange",
       "heat": "normal",
       "bullets": [
-        "Warner Brothers acquisition spread identified",
-        "Regulatory hurdles mostly cleared",
-        "MRVL index inclusion front-running discussed",
-        "Risk-adjusted returns being evaluated"
+        "Warner Brothers acquisition spread trading",
+        "Regulatory approval risks mostly cleared",
+        "Free money arbitrage opportunities identified",
+        "Event-driven strategies gaining attention"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 70,
       "tickers": [
-        "WBD",
-        "MRVL"
+        "WBD"
       ]
     },
     {
-      "id": "trading-losses",
-      "title": "Options Trading Losses",
-      "icon": "skull",
+      "id": "tech-earnings-uncertainty",
+      "title": "Tech Earnings Anxiety",
+      "icon": "chart-line",
       "heat": "normal",
       "bullets": [
-        "Retail traders experiencing significant drawdowns",
-        "Options positions turning against holders",
-        "Unrealized gains converting to losses",
-        "Risk management challenges evident"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "UNH"
-      ]
-    },
-    {
-      "id": "subscription-model-concerns",
-      "title": "Subscription Model Pressures",
-      "icon": "flame",
-      "heat": "normal",
-      "bullets": [
-        "Adobe facing unique headwinds",
-        "Subscription fatigue impacting valuations",
-        "Competitive pressures mounting",
-        "Business model sustainability questioned"
+        "Subscription model weakness concerns spreading",
+        "Adobe facing particular pressure questions",
+        "NASDAQ exclusion fears for select names",
+        "Earnings volatility positioning underway"
       ],
       "sentiment_score": 35,
       "tickers": [
-        "ADBE"
-      ]
-    },
-    {
-      "id": "general-market-mood",
-      "title": "General Market Sentiment",
-      "icon": "trending-up",
-      "heat": "normal",
-      "bullets": [
-        "Monday volatility concerns emerging",
-        "European capital flowing to US markets",
-        "Risk appetite remains selective",
-        "Deal uncertainty creating hesitation"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "SPY"
+        "ADBE",
+        "ZS",
+        "NOW"
       ]
     }
   ],
@@ -123,74 +126,74 @@
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "leap positions gaining traction",
+      "mentions": 1,
+      "signal": "space sector conviction plays",
       "company_name": "Rocket Lab Corporation"
     },
     {
       "symbol": "LUNR",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "speculative space play",
+      "mentions": 1,
+      "signal": "long-term space exposure",
       "company_name": "Intuitive Machines, Inc."
+    },
+    {
+      "symbol": "NOW",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "dip buying opportunity",
+      "company_name": "ServiceNow, Inc."
+    },
+    {
+      "symbol": "ZS",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "NASDAQ exclusion concerns",
+      "company_name": "Zscaler, Inc."
+    },
+    {
+      "symbol": "SPCX",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "peace deal catalyst play",
+      "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "WBD",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "arbitrage opportunity identified",
+      "signal": "merger arbitrage opportunity",
       "company_name": "Warner Bros. Discovery, Inc. - "
-    },
-    {
-      "symbol": "MRVL",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "index inclusion play with concerns",
-      "company_name": "Marvell Technology, Inc."
     },
     {
       "symbol": "ADBE",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "subscription model under pressure",
+      "signal": "subscription model weakness",
       "company_name": "Adobe Inc."
     },
     {
-      "symbol": "UNH",
+      "symbol": "AMZN",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "unrealized gains turning sour",
-      "company_name": "UnitedHealth Group Incorporated"
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "benefiting from European capital flows",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "OpenAI",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "unconventional shorting scheme proposed",
-      "company_name": "OpenAI tokenized stock (PreStocks) USD"
+      "signal": "AI regulatory scrutiny",
+      "company_name": "Amazon.com, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Space sector speculation is building momentum with traders accumulating leap positions in RKLB and LUNR, viewing aerospace technology as a compelling growth catalyst.",
-      "tag": "bullish"
-    },
-    {
-      "text": "AI infrastructure themes are gaining traction as traders position for memory demand growth, with Bank of America projections supporting bullish semiconductor narratives.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Individual traders are experiencing notable options losses while seeking arbitrage opportunities in merger situations and index inclusions.",
+      "text": "Retail traders are positioning cautiously around an uncertain Iran peace deal, with zero-day options activity building as the catalyst's credibility fluctuates between confirmed and questionable.",
       "tag": "notable"
+    },
+    {
+      "text": "Growing anxiety over dot-com bubble parallels is driving portfolio diversification discussions, with traders questioning massive AI IPO valuations and NASDAQ concentration risks.",
+      "tag": "bearish"
+    },
+    {
+      "text": "Space sector enthusiasm remains strong with concentrated long-term positions being established, while merger arbitrage opportunities in Warner Brothers are attracting opportunistic capital.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-06-14T21:01:09.541649+00:00",
-  "updated_hkt": "2026-06-15 05:01 HKT"
+  "updated_at": "2026-06-15T12:01:20.315673+00:00",
+  "updated_hkt": "2026-06-15 20:01 HKT"
 }
