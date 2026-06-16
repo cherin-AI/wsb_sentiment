@@ -1,17 +1,17 @@
 {
-  "bull_pct": 43,
-  "bear_pct": 36,
-  "neutral_pct": 21,
-  "bull_bear_ratio": 1.2,
-  "overall_score": 42,
-  "overall_label": "Neutral",
+  "bull_pct": 50,
+  "bear_pct": 21,
+  "neutral_pct": 29,
+  "bull_bear_ratio": 2.4,
+  "overall_score": 63,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 43,
-    "ai_score": 42,
-    "bull_count": 6,
-    "bear_count": 5,
-    "neutral_count": 3,
-    "total_posts": 14,
+    "formula_score": 50,
+    "ai_score": 68,
+    "bull_count": 17,
+    "bear_count": 7,
+    "neutral_count": 10,
+    "total_posts": 34,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,181 +19,183 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 14,
+  "post_count": 34,
   "hours_window": 24,
   "themes": [
     {
-      "id": "iran-peace-catalyst",
-      "title": "Iran Peace Deal Market Impact",
-      "icon": "peace",
-      "heat": "building",
+      "id": "spacex-ipo-frenzy",
+      "title": "SpaceX IPO Euphoria & Valuation Debate",
+      "icon": "rocket",
+      "heat": "hot",
       "bullets": [
-        "Geopolitical catalyst creating market uncertainty",
-        "Deal status fluctuating between confirmed and questionable",
-        "Traders positioning for volatility outcomes",
-        "Zero-day options activity increasing around news"
+        "SPCX trading well above IPO price in overnight sessions",
+        "Valuation approaching Microsoft-level market cap territory",
+        "Retail divided: momentum chasers vs. valuation skeptics",
+        "Moat debate and risk analysis circulating across posts"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 72,
       "tickers": [
         "SPCX"
       ]
     },
     {
-      "id": "dot-com-crash-fears",
-      "title": "Dot-Com Bubble Parallels",
-      "icon": "trending-down",
+      "id": "spy-yolo-options",
+      "title": "High-Stakes SPY Options & high-conviction Trading",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Iran deal catalyst fueled outsized SPY call payoffs",
+        "Retail traders holding short-duration calls over weekends",
+        "0DTE strategies reported as winning plays this session",
+        "Extreme risk tolerance evident across multiple posts"
+      ],
+      "sentiment_score": 80,
+      "tickers": [
+        "SPY"
+      ]
+    },
+    {
+      "id": "ai-tech-mega-cap",
+      "title": "AI & Mega-Cap Tech Momentum",
+      "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Historical market crash warnings gaining traction",
-        "NASDAQ recovery timeline concerns cited",
-        "Massive AI IPO risks being questioned",
-        "Portfolio diversification discussions emerging"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "QQQ"
-      ]
-    },
-    {
-      "id": "ai-regulatory-crackdown",
-      "title": "AI Model Regulatory Pressures",
-      "icon": "shield-x",
-      "heat": "normal",
-      "bullets": [
-        "Anthropic facing government scrutiny over models",
-        "Amazon research reportedly triggering crackdowns",
-        "AI sector regulatory risks expanding",
-        "Model security vulnerabilities being exposed"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "AMZN"
-      ]
-    },
-    {
-      "id": "space-sector-speculation",
-      "title": "Space Industry Momentum",
-      "icon": "rocket",
-      "heat": "normal",
-      "bullets": [
-        "Concentrated positions in space companies",
-        "Long-term options strategies being deployed",
-        "Sector fundamentals driving conviction trades",
-        "Emerging space economy attracting capital"
+        "Nvidia pursuing large-scale bond offering for capital raise",
+        "AVGO concentrated position bets gaining traction",
+        "Fox-Roku acquisition adds M&A energy to tech narrative",
+        "ATH speculation spreading across AI-adjacent names"
       ],
       "sentiment_score": 75,
       "tickers": [
-        "RKLB",
-        "LUNR"
+        "NVDA",
+        "AVGO",
+        "ROKU"
       ]
     },
     {
-      "id": "merger-arbitrage-opportunities",
-      "title": "Merger Arbitrage Plays",
-      "icon": "arrows-exchange",
-      "heat": "normal",
+      "id": "memory-semiconductor-trade",
+      "title": "Memory Semiconductor Speculation",
+      "icon": "trending-up",
+      "heat": "building",
       "bullets": [
-        "Warner Brothers acquisition spread trading",
-        "Regulatory approval risks mostly cleared",
-        "Free money arbitrage opportunities identified",
-        "Event-driven strategies gaining attention"
+        "SNDK deep in-the-money calls held through recent rally",
+        "MU cited repeatedly as a recurring high-conviction trade",
+        "Memory demand narrative tied to AI infrastructure buildout",
+        "Multi-year price targets floated by speculative traders"
       ],
       "sentiment_score": 70,
       "tickers": [
-        "WBD"
+        "SNDK",
+        "MU"
       ]
     },
     {
-      "id": "tech-earnings-uncertainty",
-      "title": "Tech Earnings Anxiety",
-      "icon": "chart-line",
+      "id": "macro-crash-concerns",
+      "title": "Macro Crash Risk & Portfolio Hedging",
+      "icon": "shield",
       "heat": "normal",
       "bullets": [
-        "Subscription model weakness concerns spreading",
-        "Adobe facing particular pressure questions",
-        "NASDAQ exclusion fears for select names",
-        "Earnings volatility positioning underway"
+        "Dot-com comparisons raised amid AI IPO pipeline concerns",
+        "Bank of Japan rate hike to 1% flagged as macro signal",
+        "Retail asking for non-Nasdaq safe haven alternatives",
+        "Crash-hedging discussion gaining cautious but limited traction"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 30,
       "tickers": [
-        "ADBE",
-        "ZS",
-        "NOW"
+        "SPY"
+      ]
+    },
+    {
+      "id": "trading-losses-wins",
+      "title": "Individual Trading Outcomes & Account Swings",
+      "icon": "skull",
+      "heat": "normal",
+      "bullets": [
+        "Large realized losses posted amid FOMO-driven capitulation",
+        "Profit posts from weekend call holds generating social buzz",
+        "T1 Energy high-conviction double-down on tariff catalyst",
+        "Gain posts outnumber loss posts, reflecting current risk appetite"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "SPY",
+        "AVGO",
+        "TE"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "RKLB",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "space sector conviction plays",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "LUNR",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "long-term space exposure",
-      "company_name": "Intuitive Machines, Inc."
-    },
-    {
-      "symbol": "NOW",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "dip buying opportunity",
-      "company_name": "ServiceNow, Inc."
-    },
-    {
-      "symbol": "ZS",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "NASDAQ exclusion concerns",
-      "company_name": "Zscaler, Inc."
-    },
-    {
       "symbol": "SPCX",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "peace deal catalyst play",
+      "sentiment": "mixed",
+      "mentions": 9,
+      "signal": "Euphoric post-IPO momentum tempered by valuation skepticism",
       "company_name": "Space Exploration Technologies "
     },
     {
-      "symbol": "WBD",
+      "symbol": "SPY",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "merger arbitrage opportunity",
-      "company_name": "Warner Bros. Discovery, Inc. - "
+      "mentions": 8,
+      "signal": "Weekend call holders rewarded; high-conviction sentiment elevated",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "ADBE",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "subscription model weakness",
-      "company_name": "Adobe Inc."
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Bond offering seen as capital strength, not dilution concern",
+      "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "AMZN",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "AI regulatory scrutiny",
-      "company_name": "Amazon.com, Inc."
+      "symbol": "AVGO",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Concentrated long position held with high conviction",
+      "company_name": "Broadcom Inc."
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Recurring speculative interest tied to memory demand cycle",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "SNDK",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Deep ITM calls held; aggressive multi-year upside target cited",
+      "company_name": "Sandisk Corporation"
+    },
+    {
+      "symbol": "ROKU",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Fox acquisition deal driving M&A premium enthusiasm",
+      "company_name": "Roku, Inc."
+    },
+    {
+      "symbol": "TE",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "High-conviction tariff-driven revenue catalyst trade",
+      "company_name": "T1 Energy Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail traders are positioning cautiously around an uncertain Iran peace deal, with zero-day options activity building as the catalyst's credibility fluctuates between confirmed and questionable.",
+      "text": "SpaceX's post-IPO price action dominates retail conversation, with SPCX trading sharply above its offering price and market cap comparisons to Microsoft fueling speculative fervor — though a vocal cohort questions whether the valuation is structurally supportable.",
       "tag": "notable"
     },
     {
-      "text": "Growing anxiety over dot-com bubble parallels is driving portfolio diversification discussions, with traders questioning massive AI IPO valuations and NASDAQ concentration risks.",
-      "tag": "bearish"
+      "text": "SPY call traders were rewarded handsomely after the Iran deal served as a weekend catalyst, reinforcing high-risk short-duration options behavior and emboldening a new wave of 0DTE and near-term high-conviction positioning heading into the week.",
+      "tag": "bullish"
     },
     {
-      "text": "Space sector enthusiasm remains strong with concentrated long-term positions being established, while merger arbitrage opportunities in Warner Brothers are attracting opportunistic capital.",
-      "tag": "bullish"
+      "text": "Beneath the euphoria, a minority of posts flag macro fragility — Bank of Japan tightening, AI IPO pipeline risks, and dot-com parallels — but these cautionary voices remain overwhelmed by the dominant risk-on mood currently gripping retail participants.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-15T12:01:20.315673+00:00",
-  "updated_hkt": "2026-06-15 20:01 HKT"
+  "updated_at": "2026-06-16T04:09:46.100285+00:00",
+  "updated_hkt": "2026-06-16 12:09 HKT"
 }
