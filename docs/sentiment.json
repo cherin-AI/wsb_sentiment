@@ -1,17 +1,17 @@
 {
-  "bull_pct": 50,
-  "bear_pct": 21,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 2.4,
+  "bull_pct": 43,
+  "bear_pct": 23,
+  "neutral_pct": 34,
+  "bull_bear_ratio": 1.9,
   "overall_score": 63,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 50,
-    "ai_score": 68,
-    "bull_count": 17,
+    "formula_score": 43,
+    "ai_score": 72,
+    "bull_count": 13,
     "bear_count": 7,
     "neutral_count": 10,
-    "total_posts": 34,
+    "total_posts": 30,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,35 +19,36 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 34,
+  "post_count": 30,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-ipo-frenzy",
-      "title": "SpaceX IPO Euphoria & Valuation Debate",
+      "id": "spacex-ipo",
+      "title": "SpaceX IPO Mania",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SPCX trading well above IPO price in overnight sessions",
-        "Valuation approaching Microsoft-level market cap territory",
-        "Retail divided: momentum chasers vs. valuation skeptics",
-        "Moat debate and risk analysis circulating across posts"
+        "SPCX trading sharply above IPO price",
+        "Approaching trillion-dollar valuation milestones",
+        "Bulls and skeptics fiercely debating valuation",
+        "Speculative shorts and call buyers piling in"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 68,
       "tickers": [
-        "SPCX"
+        "SPCX",
+        "TSLA"
       ]
     },
     {
-      "id": "spy-yolo-options",
-      "title": "High-Stakes SPY Options & high-conviction Trading",
-      "icon": "flame",
+      "id": "spy-0dte",
+      "title": "SPY Index Speculation",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
-        "Iran deal catalyst fueled outsized SPY call payoffs",
-        "Retail traders holding short-duration calls over weekends",
-        "0DTE strategies reported as winning plays this session",
-        "Extreme risk tolerance evident across multiple posts"
+        "Aggressive 0DTE and weekly call YOLOs",
+        "Geopolitical catalyst fueled weekend rally",
+        "Diagonal spreads delivering outsized gains",
+        "ATH expectations spreading across traders"
       ],
       "sentiment_score": 80,
       "tickers": [
@@ -55,72 +56,70 @@
       ]
     },
     {
-      "id": "ai-tech-mega-cap",
-      "title": "AI & Mega-Cap Tech Momentum",
+      "id": "semiconductors",
+      "title": "Semiconductor Momentum",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Nvidia pursuing large-scale bond offering for capital raise",
-        "AVGO concentrated position bets gaining traction",
-        "Fox-Roku acquisition adds M&A energy to tech narrative",
-        "ATH speculation spreading across AI-adjacent names"
+        "Memory demand seen as accelerating",
+        "AVGO, MU, SNDK drawing high-conviction bets",
+        "Nvidia raising large bond offering",
+        "Deep ITM positions held for upside"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 78,
       "tickers": [
-        "NVDA",
         "AVGO",
-        "ROKU"
-      ]
-    },
-    {
-      "id": "memory-semiconductor-trade",
-      "title": "Memory Semiconductor Speculation",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "SNDK deep in-the-money calls held through recent rally",
-        "MU cited repeatedly as a recurring high-conviction trade",
-        "Memory demand narrative tied to AI infrastructure buildout",
-        "Multi-year price targets floated by speculative traders"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
+        "MU",
         "SNDK",
-        "MU"
+        "NVDA"
       ]
     },
     {
-      "id": "macro-crash-concerns",
-      "title": "Macro Crash Risk & Portfolio Hedging",
-      "icon": "shield",
-      "heat": "normal",
+      "id": "profit-loss-posts",
+      "title": "Gains and Blow-Ups",
+      "icon": "flame",
+      "heat": "hot",
       "bullets": [
-        "Dot-com comparisons raised amid AI IPO pipeline concerns",
-        "Bank of Japan rate hike to 1% flagged as macro signal",
-        "Retail asking for non-Nasdaq safe haven alternatives",
-        "Crash-hedging discussion gaining cautious but limited traction"
+        "Big profit posts dominating the feed",
+        "Painful capitulation losses also showcased",
+        "Screenshot-and-hold versus sell debates",
+        "Euphoria mixed with regret"
       ],
-      "sentiment_score": 30,
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "trading-losses-wins",
-      "title": "Individual Trading Outcomes & Account Swings",
-      "icon": "skull",
-      "heat": "normal",
-      "bullets": [
-        "Large realized losses posted amid FOMO-driven capitulation",
-        "Profit posts from weekend call holds generating social buzz",
-        "T1 Energy high-conviction double-down on tariff catalyst",
-        "Gain posts outnumber loss posts, reflecting current risk appetite"
-      ],
-      "sentiment_score": 58,
+      "sentiment_score": 65,
       "tickers": [
         "SPY",
-        "AVGO",
-        "TE"
+        "AVGO"
+      ]
+    },
+    {
+      "id": "macro-rates",
+      "title": "Global Macro Signals",
+      "icon": "world",
+      "heat": "normal",
+      "bullets": [
+        "China retail sales post first drop in years",
+        "Bank of Japan hikes rates as expected",
+        "Manufacturing investment contracting abroad",
+        "Mixed backdrop against US risk appetite"
+      ],
+      "sentiment_score": 38,
+      "tickers": []
+    },
+    {
+      "id": "speculative-bets",
+      "title": "High-Conviction Speculation",
+      "icon": "dice",
+      "heat": "building",
+      "bullets": [
+        "Large directional bet on T1 Energy",
+        "Tariff ruling cited as potential catalyst",
+        "LEAPS versus short-dated calls debated",
+        "M&A headlines drawing speculative interest"
+      ],
+      "sentiment_score": 64,
+      "tickers": [
+        "TE",
+        "ROKU"
       ]
     }
   ],
@@ -128,74 +127,74 @@
     {
       "symbol": "SPCX",
       "sentiment": "mixed",
-      "mentions": 9,
-      "signal": "Euphoric post-IPO momentum tempered by valuation skepticism",
+      "mentions": 6,
+      "signal": "Valuation euphoria meets skeptics",
       "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "SPY",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Weekend call holders rewarded; high-conviction sentiment elevated",
+      "mentions": 5,
+      "signal": "Aggressive 0DTE call buying",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Bond offering seen as capital strength, not dilution concern",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
       "symbol": "AVGO",
-      "sentiment": "bullish",
+      "sentiment": "mixed",
       "mentions": 3,
-      "signal": "Concentrated long position held with high conviction",
+      "signal": "Big bets and post-earnings pain",
       "company_name": "Broadcom Inc."
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Recurring speculative interest tied to memory demand cycle",
+      "mentions": 2,
+      "signal": "Memory demand thesis",
       "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "SNDK",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Deep ITM calls held; aggressive multi-year upside target cited",
+      "mentions": 2,
+      "signal": "Deep ITM holds for more upside",
       "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "ROKU",
+      "symbol": "TSLA",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Fox acquisition deal driving M&A premium enthusiasm",
-      "company_name": "Roku, Inc."
+      "signal": "Record combined valuation hype",
+      "company_name": "Tesla, Inc."
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "neutral",
+      "mentions": 2,
+      "signal": "Large bond raise watched",
+      "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "TE",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "High-conviction tariff-driven revenue catalyst trade",
+      "signal": "High-conviction tariff catalyst bet",
       "company_name": "T1 Energy Inc."
     }
   ],
   "summary": [
     {
-      "text": "SpaceX's post-IPO price action dominates retail conversation, with SPCX trading sharply above its offering price and market cap comparisons to Microsoft fueling speculative fervor — though a vocal cohort questions whether the valuation is structurally supportable.",
-      "tag": "notable"
-    },
-    {
-      "text": "SPY call traders were rewarded handsomely after the Iran deal served as a weekend catalyst, reinforcing high-risk short-duration options behavior and emboldening a new wave of 0DTE and near-term high-conviction positioning heading into the week.",
+      "text": "Risk appetite runs hot as traders crowd into SPY weeklies and 0DTE bets, riding a geopolitical-driven rally toward fresh highs. Profit screenshots dominate the feed, reflecting euphoric positioning and a willingness to chase upside momentum aggressively.",
       "tag": "bullish"
     },
     {
-      "text": "Beneath the euphoria, a minority of posts flag macro fragility — Bank of Japan tightening, AI IPO pipeline risks, and dot-com parallels — but these cautionary voices remain overwhelmed by the dominant risk-on mood currently gripping retail participants.",
+      "text": "The SpaceX IPO has become the batch's defining catalyst, with SPCX surging well above its offering price and approaching mega-cap valuations. The crowd is sharply divided between believers and skeptics calling the valuation questionable.",
+      "tag": "notable"
+    },
+    {
+      "text": "Beneath the greed sits a softer macro backdrop, with China retail sales contracting and the Bank of Japan tightening. Painful capitulation losses also surface, a reminder that speculative exuberance carries real downside risk.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-16T04:09:46.100285+00:00",
-  "updated_hkt": "2026-06-16 12:09 HKT"
+  "updated_at": "2026-06-16T12:02:05.187152+00:00",
+  "updated_hkt": "2026-06-16 20:02 HKT"
 }
