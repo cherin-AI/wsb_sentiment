@@ -507,7 +507,7 @@ def analyze_with_claude(posts_text: str, post_count: int, api_key: str) -> dict:
     now_utc = datetime.now(timezone.utc).isoformat()
 
     message = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-opus-4-8",
         max_tokens=8000,
         system=SYSTEM_PROMPT,
         messages=[{
@@ -525,7 +525,16 @@ def analyze_with_claude(posts_text: str, post_count: int, api_key: str) -> dict:
         raw = raw.split("```")[1]
         if raw.startswith("json"):
             raw = raw[4:]
-    return json.loads(raw.strip())
+    raw = raw.strip()
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        # Opus 4.8 (thinking off) can prepend reasoning prose before the JSON.
+        # Salvage the outermost {...} object rather than failing the whole run.
+        start, end = raw.find("{"), raw.rfind("}")
+        if start != -1 and end > start:
+            return json.loads(raw[start:end + 1])
+        raise
 
 
 # ── Metric calculation ────────────────────────────────────────────────────────
