@@ -1,17 +1,17 @@
 {
-  "bull_pct": 43,
-  "bear_pct": 23,
-  "neutral_pct": 34,
-  "bull_bear_ratio": 1.9,
-  "overall_score": 63,
+  "bull_pct": 45,
+  "bear_pct": 39,
+  "neutral_pct": 16,
+  "bull_bear_ratio": 1.2,
+  "overall_score": 61,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 43,
-    "ai_score": 72,
-    "bull_count": 13,
-    "bear_count": 7,
-    "neutral_count": 10,
-    "total_posts": 30,
+    "formula_score": 45,
+    "ai_score": 68,
+    "bull_count": 20,
+    "bear_count": 17,
+    "neutral_count": 7,
+    "total_posts": 44,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,107 +19,110 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 30,
+  "post_count": 44,
   "hours_window": 24,
   "themes": [
     {
       "id": "spacex-ipo",
-      "title": "SpaceX IPO Mania",
+      "title": "SpaceX IPO Frenzy",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SPCX trading sharply above IPO price",
-        "Approaching trillion-dollar valuation milestones",
-        "Bulls and skeptics fiercely debating valuation",
-        "Speculative shorts and call buyers piling in"
+        "SPCX surges above IPO price overnight",
+        "Massive retirement accounts piled into shares",
+        "First options day draws speculative flows",
+        "Valuation skeptics warn of overextension"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 72,
       "tickers": [
         "SPCX",
         "TSLA"
       ]
     },
     {
-      "id": "spy-0dte",
-      "title": "SPY Index Speculation",
-      "icon": "trending-up",
+      "id": "spcx-shorts",
+      "title": "SPCX Bears & Valuation Doubts",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Traders buying puts on stretched valuation",
+        "Crash contagion fears circulating",
+        "Blue Origin conspiracy short theses emerge",
+        "Skeptics question $2.9T market cap"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "SPCX"
+      ]
+    },
+    {
+      "id": "0dte-options",
+      "title": "0DTE & Options Gambling",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Aggressive 0DTE and weekly call YOLOs",
-        "Geopolitical catalyst fueled weekend rally",
-        "Diagonal spreads delivering outsized gains",
-        "ATH expectations spreading across traders"
+        "Revenge trading after prior losses",
+        "Theta decay punishing short-dated bets",
+        "Diagonal spreads producing wins",
+        "High-conviction high-conviction positions stacking"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 60,
+      "tickers": [
+        "SPY",
+        "SPX",
+        "SPCX"
+      ]
+    },
+    {
+      "id": "fomc-macro",
+      "title": "FOMC & Macro Catalysts",
+      "icon": "calendar",
+      "heat": "building",
+      "bullets": [
+        "FOMC statement looms June 17",
+        "Bank of Japan hikes to 1%",
+        "China retail sales contract first time in years",
+        "Traders prepping defensive puts"
+      ],
+      "sentiment_score": 38,
       "tickers": [
         "SPY"
       ]
     },
     {
-      "id": "semiconductors",
-      "title": "Semiconductor Momentum",
-      "icon": "cpu",
+      "id": "concentrated-bets",
+      "title": "Concentrated Big Bets",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Memory demand seen as accelerating",
-        "AVGO, MU, SNDK drawing high-conviction bets",
-        "Nvidia raising large bond offering",
-        "Deep ITM positions held for upside"
+        "All-in positions on single names",
+        "NVDA holder underwater on average cost",
+        "Large AVGO and NBIS concentrated stakes",
+        "Millionaire-by-deadline mentality dominant"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 58,
       "tickers": [
+        "NVDA",
         "AVGO",
-        "MU",
-        "SNDK",
-        "NVDA"
+        "NBIS"
       ]
     },
     {
-      "id": "profit-loss-posts",
-      "title": "Gains and Blow-Ups",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Big profit posts dominating the feed",
-        "Painful capitulation losses also showcased",
-        "Screenshot-and-hold versus sell debates",
-        "Euphoria mixed with regret"
-      ],
-      "sentiment_score": 65,
-      "tickers": [
-        "SPY",
-        "AVGO"
-      ]
-    },
-    {
-      "id": "macro-rates",
-      "title": "Global Macro Signals",
-      "icon": "world",
+      "id": "general-mood",
+      "title": "General Market Mood",
+      "icon": "mood-happy",
       "heat": "normal",
       "bullets": [
-        "China retail sales post first drop in years",
-        "Bank of Japan hikes rates as expected",
-        "Manufacturing investment contracting abroad",
-        "Mixed backdrop against US risk appetite"
+        "Profit posts mixed with account blow-ups",
+        "Euphoria around AI and space narratives",
+        "Speculative ETFs catering to retail",
+        "Skepticism toward stretched valuations"
       ],
-      "sentiment_score": 38,
-      "tickers": []
-    },
-    {
-      "id": "speculative-bets",
-      "title": "High-Conviction Speculation",
-      "icon": "dice",
-      "heat": "building",
-      "bullets": [
-        "Large directional bet on T1 Energy",
-        "Tariff ruling cited as potential catalyst",
-        "LEAPS versus short-dated calls debated",
-        "M&A headlines drawing speculative interest"
-      ],
-      "sentiment_score": 64,
+      "sentiment_score": 62,
       "tickers": [
-        "TE",
-        "ROKU"
+        "ELF",
+        "USO",
+        "SNAP"
       ]
     }
   ],
@@ -127,74 +130,74 @@
     {
       "symbol": "SPCX",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Valuation euphoria meets skeptics",
+      "mentions": 14,
+      "signal": "IPO mania meets valuation skeptics",
       "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "SPY",
-      "sentiment": "bullish",
+      "sentiment": "mixed",
       "mentions": 5,
-      "signal": "Aggressive 0DTE call buying",
+      "signal": "FOMC hedging and 0DTE plays",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "AVGO",
-      "sentiment": "mixed",
+      "symbol": "NVDA",
+      "sentiment": "bearish",
       "mentions": 3,
-      "signal": "Big bets and post-earnings pain",
-      "company_name": "Broadcom Inc."
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Memory demand thesis",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "SNDK",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Deep ITM holds for more upside",
-      "company_name": "Sandisk Corporation"
+      "signal": "Concentrated holder underwater",
+      "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "TSLA",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Record combined valuation hype",
+      "mentions": 3,
+      "signal": "Riding SpaceX halo effect",
       "company_name": "Tesla, Inc."
     },
     {
-      "symbol": "NVDA",
-      "sentiment": "neutral",
+      "symbol": "SPX",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Large bond raise watched",
-      "company_name": "NVIDIA Corporation"
+      "signal": "0DTE battleground",
+      "company_name": "Direxion Daily S&P 500 Bull 3X "
     },
     {
-      "symbol": "TE",
+      "symbol": "AVGO",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "High-conviction tariff catalyst bet",
-      "company_name": "T1 Energy Inc."
+      "signal": "Large concentrated stake",
+      "company_name": "Broadcom Inc."
+    },
+    {
+      "symbol": "NBIS",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "QQQ inclusion hopes",
+      "company_name": "Nebius Group N.V."
+    },
+    {
+      "symbol": "ELF",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Quick profitable swing",
+      "company_name": "e.l.f. Beauty, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Risk appetite runs hot as traders crowd into SPY weeklies and 0DTE bets, riding a geopolitical-driven rally toward fresh highs. Profit screenshots dominate the feed, reflecting euphoric positioning and a willingness to chase upside momentum aggressively.",
+      "text": "SpaceX's public debut dominates the tape, with SPCX rocketing above its IPO price and retail traders funneling entire retirement accounts into the name. The euphoria is palpable, though valuation skeptics and put buyers are circling a near $2.9 trillion price tag.",
       "tag": "bullish"
     },
     {
-      "text": "The SpaceX IPO has become the batch's defining catalyst, with SPCX surging well above its offering price and approaching mega-cap valuations. The crowd is sharply divided between believers and skeptics calling the valuation questionable.",
-      "tag": "notable"
+      "text": "A vocal contingent is positioning against the mania, buying SPCX puts and floating crash-contagion theories. Concentrated bets on NVDA and others show the strain, with at least one heavily underwater holder weighing whether to capitulate.",
+      "tag": "bearish"
     },
     {
-      "text": "Beneath the greed sits a softer macro backdrop, with China retail sales contracting and the Bank of Japan tightening. Painful capitulation losses also surface, a reminder that speculative exuberance carries real downside risk.",
-      "tag": "bearish"
+      "text": "Macro catalysts loom large with the FOMC decision tomorrow, a Bank of Japan hike, and weakening China retail data. Traders are loading defensive puts even as the speculative 0DTE and IPO energy keeps the broader mood firmly greedy.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-16T12:02:05.187152+00:00",
-  "updated_hkt": "2026-06-16 20:02 HKT"
+  "updated_at": "2026-06-16T21:02:51.629964+00:00",
+  "updated_hkt": "2026-06-17 05:02 HKT"
 }
