@@ -343,8 +343,9 @@ function buildHistoryChart(history) {
   }).slice(-10);  // last 5 days × 2 runs/day (05:00 + 20:00 HKT)
   const mobile = window.innerWidth <= 768;
   // Narrower viewBox on mobile so each element occupies more of the phone width.
-  const W = mobile ? 480 : 900, H = 150, padL = 36, padR = 12, padT = 18, padB = 28;
-  const scoreFont = mobile ? 17 : 13, xFont = mobile ? 11 : 8, yFont = mobile ? 9 : 7;
+  // Wider left margin so the longest zone labels ("Ex. Greed") aren't clipped.
+  const W = mobile ? 480 : 900, H = 150, padL = mobile ? 60 : 52, padR = 12, padT = 18, padB = 28;
+  const scoreFont = mobile ? 17 : 13, xFont = mobile ? 11 : 8, yFont = mobile ? 11 : 8;
   const chartW = W - padL - padR;
   const chartH = H - padT - padB;
 
