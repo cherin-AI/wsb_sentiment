@@ -333,8 +333,11 @@ function buildHistoryChart(history) {
   const entries = history.filter(e => {
     const m = (e.ts || '').match(/(\d{2}):\d{2} HKT/);
     return m && (m[1] === '05' || m[1] === '20');
-  }).slice(-14);
-  const W = 900, H = 150, padL = 36, padR = 12, padT = 12, padB = 28;
+  }).slice(-10);  // last 5 days × 2 runs/day (05:00 + 20:00 HKT)
+  const mobile = window.innerWidth <= 768;
+  // Narrower viewBox on mobile so each element occupies more of the phone width.
+  const W = mobile ? 480 : 900, H = 150, padL = 36, padR = 12, padT = 18, padB = 28;
+  const scoreFont = mobile ? 17 : 13, xFont = mobile ? 11 : 8, yFont = mobile ? 9 : 7;
   const chartW = W - padL - padR;
   const chartH = H - padT - padB;
 
@@ -367,7 +370,7 @@ function buildHistoryChart(history) {
     { v: 70,  label: 'Greed'   },
     { v: 90,  label: 'Ex. Greed' },
   ].map(({ v, label }) =>
-    `<text x="${padL - 4}" y="${toY(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" fill="#f5f8ff" font-size="7" font-family="Inter,system-ui,sans-serif">${label}</text>`
+    `<text x="${padL - 4}" y="${toY(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" fill="#f5f8ff" font-size="${yFont}" font-family="Inter,system-ui,sans-serif">${label}</text>`
   ).join('');
 
   // Line
@@ -380,11 +383,11 @@ function buildHistoryChart(history) {
     const col = e.score >= 80 ? '#18a880' : e.score >= 60 ? '#1880b0' : e.score >= 40 ? '#3a5870' : e.score >= 20 ? '#c07020' : '#c03838';
     const labelCol = e.score >= 80 ? '#3CC8B8' : e.score >= 60 ? '#60A8D6' : e.score >= 40 ? '#c8daf0' : e.score >= 20 ? '#FFCC30' : '#E86060';
     const isLast = i === entries.length - 1;
-    const r = isLast ? 5 : 4;
-    const visDot = `<circle cx="${x}" cy="${y}" r="${r}" fill="${col}" stroke="#07090f" stroke-width="1.5" pointer-events="none"/>`;
-    const labelY = (parseFloat(y) - r - 4).toFixed(1);
-    const scoreLabel = `<text x="${x}" y="${labelY}" text-anchor="middle" fill="${labelCol}" font-size="8" font-weight="700" font-family="Inter,system-ui,sans-serif" pointer-events="none">${e.score}</text>`;
-    const hitArea = `<circle cx="${x}" cy="${y}" r="10" fill="transparent" class="history-dot" data-ts="${e.ts}" data-score="${e.score}" data-label="${e.label}" style="cursor:pointer"/>`;
+    const r = isLast ? (mobile ? 8 : 7) : (mobile ? 7 : 6);
+    const visDot = `<circle cx="${x}" cy="${y}" r="${r}" fill="${col}" stroke="#07090f" stroke-width="2" pointer-events="none"/>`;
+    const labelY = (parseFloat(y) - r - 6).toFixed(1);
+    const scoreLabel = `<text x="${x}" y="${labelY}" text-anchor="middle" fill="${labelCol}" font-size="${scoreFont}" font-weight="700" font-family="Inter,system-ui,sans-serif" pointer-events="none">${e.score}</text>`;
+    const hitArea = `<circle cx="${x}" cy="${y}" r="12" fill="transparent" class="history-dot" data-ts="${e.ts}" data-score="${e.score}" data-label="${e.label}" style="cursor:pointer"/>`;
     return visDot + scoreLabel + hitArea;
   }).join('');
 
@@ -395,7 +398,7 @@ function buildHistoryChart(history) {
     const dateStr = ts.length >= 10 ? ts.slice(5, 10) : ts;
     if (seenDates.has(dateStr)) return '';
     seenDates.add(dateStr);
-    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#f5f8ff" font-size="8" font-family="Inter,system-ui,sans-serif">${dateStr}</text>`;
+    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#f5f8ff" font-size="${xFont}" font-family="Inter,system-ui,sans-serif">${dateStr}</text>`;
   }).join('');
 
   return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">${zoneBands}${dividers}${yLabels}${line}${dots}${xLabels}</svg>`;
