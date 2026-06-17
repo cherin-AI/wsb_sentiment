@@ -1,17 +1,17 @@
 {
-  "bull_pct": 41,
-  "bear_pct": 44,
-  "neutral_pct": 15,
-  "bull_bear_ratio": 0.9,
-  "overall_score": 53,
+  "bull_pct": 34,
+  "bear_pct": 34,
+  "neutral_pct": 32,
+  "bull_bear_ratio": 1.0,
+  "overall_score": 44,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 41,
-    "ai_score": 58,
-    "bull_count": 13,
-    "bear_count": 14,
-    "neutral_count": 5,
-    "total_posts": 32,
+    "formula_score": 34,
+    "ai_score": 48,
+    "bull_count": 15,
+    "bear_count": 15,
+    "neutral_count": 14,
+    "total_posts": 44,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,110 +19,111 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 32,
+  "post_count": 44,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spcx-spacex-debut",
-      "title": "SpaceX (SPCX) Options Frenzy",
+      "id": "fomc-warsh",
+      "title": "FOMC & New Fed Chief Warsh",
+      "icon": "building-bank",
+      "heat": "hot",
+      "bullets": [
+        "Rate hike fears rattle Wall Street",
+        "Dow tumbles on hawkish surprise",
+        "Warsh sentiment sharply negative",
+        "Rates held at 3.50-3.75%"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "SPY",
+        "SPX"
+      ]
+    },
+    {
+      "id": "spacex-ipo",
+      "title": "SpaceX / SPCX Speculation",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "First options day sparks heavy positioning",
-        "Bulls piling into calls and LEAPs",
-        "Skeptics buying puts on rich valuation",
-        "Retirement accounts thrown at single name"
+        "Newly listed options draw speculators",
+        "Bull and bear positions both opening",
+        "Burry tempted to short but passes",
+        "Valuation debates intensify"
       ],
-      "sentiment_score": 62,
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "id": "concentrated-bets",
-      "title": "All-In Concentrated Bets",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Entire portfolios in single names",
-        "Roth IRAs converted to speculation",
-        "NVDA holders weighing capitulation",
-        "High-conviction or high-risk extremes"
-      ],
-      "sentiment_score": 50,
+      "sentiment_score": 55,
       "tickers": [
         "SPCX",
-        "NVDA",
-        "NBIS"
+        "TSLA"
       ]
     },
     {
-      "id": "ai-valuation-doubts",
-      "title": "AI Spend & Valuation Doubts",
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Rotation",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "OpenAI cash burn raises concern",
-        "Pricing war with rivals pressures margins",
-        "Skeptics question cloud disruptors",
-        "Semi chase showing fatigue signals"
+        "Micron earnings play in focus",
+        "Chip designers warned of weakness",
+        "OpenAI cash burn questioned",
+        "AI fear spreading to hardware"
       ],
-      "sentiment_score": 38,
+      "sentiment_score": 50,
       "tickers": [
+        "MU",
         "NBIS",
-        "MSFT",
-        "NVDA"
+        "TXN"
       ]
     },
     {
       "id": "loss-posts",
-      "title": "Account Blow-Ups & Capitulation",
+      "title": "Account Blow-ups & Despair",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Traders posting total account losses",
-        "0DTE revenge attempts after wipeouts",
-        "Defeated tone amid recovery hopes",
-        "Cautionary tales of overleverage"
+        "Multiple full-position loss posts",
+        "Revenge trading confessions surface",
+        "Buying every dip, becoming exit liquidity",
+        "Defeated, somber tone emerging"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 15,
       "tickers": [
-        "SPY"
+        "SPY",
+        "PLTR"
       ]
     },
     {
-      "id": "bearish-positioning",
-      "title": "Contrarian Short Positioning",
-      "icon": "trending-down",
+      "id": "big-wins",
+      "title": "Profit Posts & Euphoria",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Burry-style put buying referenced",
-        "Shorts targeting overvalued debuts",
-        "Healthcare mean-reversion debate",
-        "Rent money wagered on downside"
+        "Large NBIS gains cashed out",
+        "Profit-taking on HOOD calls",
+        "Boastful winning screenshots",
+        "Euphoric tone among winners"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 80,
       "tickers": [
-        "SPCX",
-        "NVDA"
+        "NBIS",
+        "HOOD"
       ]
     },
     {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "activity",
+      "id": "sector-rotation",
+      "title": "Value & Sector Plays",
+      "icon": "chart-pie",
       "heat": "normal",
       "bullets": [
-        "Consumer names quietly delivering gains",
-        "Fusion and space narratives emerging",
-        "Technical battles on mega-caps",
-        "Vibes-driven speculation dominates"
+        "Healthcare mean-reversion debated",
+        "Microsoft cheap on compressed P/E",
+        "Rare earth supply chain catalyst",
+        "Fusion energy touted as future"
       ],
       "sentiment_score": 55,
       "tickers": [
         "MSFT",
-        "ELF",
-        "ASTS"
+        "MP",
+        "T"
       ]
     }
   ],
@@ -130,74 +131,74 @@
     {
       "symbol": "SPCX",
       "sentiment": "mixed",
-      "mentions": 11,
-      "signal": "Frenzied debut, bulls vs shorts",
+      "mentions": 7,
+      "signal": "Heavy speculation both long and short",
       "company_name": "Space Exploration Technologies "
     },
     {
-      "symbol": "NVDA",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Concentrated bet underwater",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "MSFT",
+      "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Range-bound, value case building",
-      "company_name": "Microsoft Corporation"
+      "mentions": 6,
+      "signal": "FOMC-driven options churn",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "NBIS",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Held on QQQ inclusion hope",
+      "mentions": 4,
+      "signal": "Big winners cashing out",
       "company_name": "Nebius Group N.V."
     },
     {
-      "symbol": "SPY",
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Value case building",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Earnings print anticipation",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "SPX",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Awaiting post-FOMC direction",
+      "company_name": "S&P 500 INDEX"
+    },
+    {
+      "symbol": "T",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Recession scars from 0DTE traders",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "signal": "CFO exit weighing on shares",
+      "company_name": "AT&T Inc."
     },
     {
-      "symbol": "ELF",
+      "symbol": "MP",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Quiet winner on consumer demand",
-      "company_name": "e.l.f. Beauty, Inc."
-    },
-    {
-      "symbol": "ASTS",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Successful satellite launch",
-      "company_name": "AST SpaceMobile, Inc."
-    },
-    {
-      "symbol": "FLYYQ",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Distressed airline bagholders",
-      "company_name": "Spirit Aviation Holdings, Inc."
+      "mentions": 2,
+      "signal": "Rare earth supply tailwind",
+      "company_name": "MP Materials Corp."
     }
   ],
   "summary": [
     {
-      "text": "The SpaceX direct listing dominates this snapshot, with retail piling into first-day calls, LEAPs, and even retirement accounts while a vocal contrarian camp buys puts against a valuation widely viewed as stretched.",
-      "tag": "notable"
-    },
-    {
-      "text": "Beneath the rocket euphoria lies real pain: capitulation posts, account blow-ups, and an underwater concentrated NVDA bet signal that overleveraged speculation is exacting a toll on a meaningful slice of traders.",
+      "text": "Sentiment turned defensive after a hawkish FOMC under new chief Warsh sent the Dow tumbling on rate-hike fears. Traders crowded SPY and SPX options around the event, with bearish positioning and visible frustration dominating the immediate reaction.",
       "tag": "bearish"
     },
     {
-      "text": "Skepticism toward AI economics is building, with OpenAI's cash burn and a brewing pricing war cited as warning signs, even as consumer names quietly deliver gains and emerging fusion and space narratives gather speculative interest.",
+      "text": "Newly live SpaceX options via SPCX became the batch's hottest speculative arena, drawing both aggressive bulls and Burry-style bears debating an stretched valuation. The split positioning reflects genuine uncertainty rather than conviction.",
+      "tag": "notable"
+    },
+    {
+      "text": "A widening gulf between euphoric profit posts on names like NBIS and a cluster of somber account blow-ups underscores a polarized, late-cycle mood. Rotation chatter into healthcare and value names like Microsoft hints at fading appetite for crowded semiconductor trades.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-17T12:02:15.982187+00:00",
-  "updated_hkt": "2026-06-17 20:02 HKT"
+  "updated_at": "2026-06-17T21:02:52.488631+00:00",
+  "updated_hkt": "2026-06-18 05:02 HKT"
 }

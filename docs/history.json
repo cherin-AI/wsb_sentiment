@@ -271,5 +271,12 @@
     "label": "Neutral",
     "formula_score": 41,
     "ai_score": 58
+  },
+  {
+    "ts": "2026-06-18 05:02 HKT",
+    "score": 44,
+    "label": "Neutral",
+    "formula_score": 34,
+    "ai_score": 48
   }
 ]
