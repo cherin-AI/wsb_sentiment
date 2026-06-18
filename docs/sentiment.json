@@ -1,17 +1,17 @@
 {
-  "bull_pct": 41,
-  "bear_pct": 23,
-  "neutral_pct": 36,
-  "bull_bear_ratio": 1.8,
-  "overall_score": 51,
-  "overall_label": "Neutral",
+  "bull_pct": 66,
+  "bear_pct": 15,
+  "neutral_pct": 19,
+  "bull_bear_ratio": 4.4,
+  "overall_score": 73,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 41,
-    "ai_score": 56,
-    "bull_count": 16,
-    "bear_count": 9,
-    "neutral_count": 14,
-    "total_posts": 39,
+    "formula_score": 66,
+    "ai_score": 76,
+    "bull_count": 31,
+    "bear_count": 7,
+    "neutral_count": 9,
+    "total_posts": 47,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,189 +19,187 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 39,
+  "post_count": 47,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-spcx-ipo",
+      "id": "memory-chips",
+      "title": "Memory & Semiconductor Mania",
+      "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "Micron earnings framed as key catalyst",
+        "DRAM and SNDK trades drawing crowds",
+        "Traders piling into chip leverage",
+        "AI demand thesis fuels conviction"
+      ],
+      "sentiment_score": 82,
+      "tickers": [
+        "MU",
+        "SNDK",
+        "SOXL",
+        "ARM",
+        "INTC"
+      ]
+    },
+    {
+      "id": "spacex-ipo",
       "title": "SpaceX IPO Speculation",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Retail piling into SPCX options",
-        "Large high-conviction positions opened",
-        "Forced buying narratives spreading",
-        "Skepticism on overstretched valuation"
-      ],
-      "sentiment_score": 60,
-      "tickers": [
-        "SPCX",
-        "TSLA",
-        "T"
-      ]
-    },
-    {
-      "id": "fed-fomc-policy",
-      "title": "Fed Policy & New Chair",
-      "icon": "building-bank",
-      "heat": "hot",
-      "bullets": [
-        "Rates held at 3.50%-3.75%",
-        "Warsh rate-hike fears rattle traders",
-        "Dow tumbles on hawkish concerns",
-        "FOMC dip-buying attempts emerge"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "GOOG"
-      ]
-    },
-    {
-      "id": "semiconductors-memory",
-      "title": "Semiconductors & Memory Chips",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "Micron earnings play anticipation",
-        "DRAM pricing crunch in focus",
-        "Apple-Intel chip deal speculation",
-        "Bearish warnings on chip designers"
+        "SPCX scalps and YOLOs dominate feed",
+        "$20B bond sale headlines circulate",
+        "Forced-buying thesis drives positioning",
+        "Mixed results, some heavy losses"
       ],
       "sentiment_score": 58,
       "tickers": [
-        "MU",
-        "INTC",
-        "ARM",
-        "AAPL"
+        "SPCX"
       ]
     },
     {
-      "id": "profit-loss-posts",
-      "title": "Profit & Loss Posts",
+      "id": "profit-flexing",
+      "title": "Profit Posts & Account Wins",
       "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Multiple large win screenshots posted",
+        "Options gains celebrated openly",
+        "Millionaire AMA fuels euphoria",
+        "Recovery stories spreading optimism"
+      ],
+      "sentiment_score": 88,
+      "tickers": [
+        "WDC",
+        "SMR",
+        "ACN",
+        "INTC"
+      ]
+    },
+    {
+      "id": "geopolitics",
+      "title": "Geopolitical Catalysts",
+      "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Large profit posts circulating",
-        "Account blow-up confessions surface",
-        "Millionaire AMA fuels euphoria",
-        "Mixed wins and painful losses"
+        "US-Iran deal eases war fears",
+        "Hormuz risk premium unwinding",
+        "Traders repositioning post-conflict",
+        "Macro tailwind for risk assets"
+      ],
+      "sentiment_score": 68,
+      "tickers": []
+    },
+    {
+      "id": "big-tech",
+      "title": "Big Tech Re-Rating Bets",
+      "icon": "brand-apple",
+      "heat": "building",
+      "bullets": [
+        "Microsoft pitched as undervalued",
+        "Apple-Intel chip deal rumored",
+        "Apple flags memory cost pressures",
+        "Mega-cap laggards drawing dip buyers"
       ],
       "sentiment_score": 62,
       "tickers": [
-        "NBIS",
+        "MSFT",
+        "AAPL",
         "INTC",
-        "HOOD",
-        "QQQ"
+        "QCOM"
       ]
     },
     {
-      "id": "rare-earths-geopolitics",
-      "title": "Rare Earths & Geopolitics",
-      "icon": "world",
-      "heat": "building",
-      "bullets": [
-        "G7 targets China supply reduction",
-        "MP Materials supply chain debate",
-        "US-Iran deal headlines surface",
-        "Strategic resource positioning grows"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "MP"
-      ]
-    },
-    {
-      "id": "general-market-mood",
+      "id": "market-mood",
       "title": "General Market Mood",
-      "icon": "flame",
+      "icon": "mood-smile",
       "heat": "normal",
       "bullets": [
-        "Heavy irony and meme posting",
-        "Speculative high-leverage positioning",
-        "Mixed conviction across tickers",
-        "Catalyst-driven trader engagement"
+        "Euphoric tone across the feed",
+        "Top-signal warnings emerging",
+        "0DTE QQQ gambling rampant",
+        "Bears largely capitulating"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 72,
       "tickers": [
-        "SPY",
-        "QQQ"
+        "QQQ",
+        "SPX"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 9,
+      "signal": "Earnings seen as market-moving superbowl",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
       "symbol": "SPCX",
       "sentiment": "mixed",
       "mentions": 8,
-      "signal": "Heavy IPO speculation and YOLOs",
+      "signal": "Heavy scalping and high-conviction speculation",
       "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "QQQ",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Active 0DTE day-trading",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "0DTE gambling and DCA fallback",
       "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
       "symbol": "INTC",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Apple deal optimism",
+      "signal": "Apple deal and call exercises",
       "company_name": "Intel Corporation"
     },
     {
-      "symbol": "MU",
+      "symbol": "MSFT",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Earnings play conviction",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "MP",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Rare earth supply catalyst",
-      "company_name": "MP Materials Corp."
+      "mentions": 4,
+      "signal": "Pitched as undervalued mega-cap",
+      "company_name": "Microsoft Corporation"
     },
     {
       "symbol": "AAPL",
       "sentiment": "mixed",
       "mentions": 3,
-      "signal": "Chip deal and price hikes",
+      "signal": "Memory crunch price hikes",
       "company_name": "Apple Inc."
     },
     {
-      "symbol": "ARM",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Full-port long underwater",
-      "company_name": "Arm Holdings plc"
+      "symbol": "SNDK",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Memory rally winner celebrated",
+      "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "GOOG",
+      "symbol": "SOXL",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "FOMC dip-buying target",
-      "company_name": "Alphabet Inc."
+      "signal": "Leveraged semiconductor exposure",
+      "company_name": "Direxion Daily Semiconductor Bu"
     }
   ],
   "summary": [
     {
-      "text": "The batch is dominated by SpaceX IPO mania, with retail traders aggressively opening leveraged SPCX option positions while skeptics warn the speculative spike signals a market top. Euphoria runs high alongside palpable caution.",
+      "text": "Sentiment runs hot and euphoric, dominated by memory-chip mania centered on Micron's looming earnings, with traders treating it as a market-defining event and piling into DRAM, SNDK, and leveraged semiconductor plays with high conviction.",
+      "tag": "bullish"
+    },
+    {
+      "text": "The SpaceX IPO continues to draw aggressive speculation through scalps and full-port YOLOs, though results are mixed and some accounts are taking sizable losses, signaling elevated risk appetite amid a frothy backdrop.",
       "tag": "notable"
     },
     {
-      "text": "Fed policy anxiety weighs heavily as a new chair stokes rate-hike fears, sending the Dow lower and rattling positioning. Despite the hawkish tone, dip-buyers are deploying capital into mega-caps on the FOMC decision.",
-      "tag": "bearish"
-    },
-    {
-      "text": "Semiconductor and memory names including Micron and Intel draw bullish earnings and deal speculation, while large profit posts and the occasional blow-up keep speculative energy elevated across the board.",
+      "text": "A US-Iran deal has unwound geopolitical risk premiums, fueling broad risk-on positioning, while profit-flexing posts and a millionaire AMA underscore a euphoric tone that contrarians are flagging as a potential top signal.",
       "tag": "bullish"
     }
   ],
-  "updated_at": "2026-06-18T12:03:36.776746+00:00",
-  "updated_hkt": "2026-06-18 20:03 HKT"
+  "updated_at": "2026-06-18T21:03:03.982068+00:00",
+  "updated_hkt": "2026-06-19 05:03 HKT"
 }
