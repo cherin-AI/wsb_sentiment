@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WSB Sentiment Monitor</title>
+<title>WSB Sentiment Monitor: Fear &amp; Greed Index</title>
+<meta name="description" content="An AI-derived Fear &amp; Greed index for r/wallstreetbets. Tracks retail sentiment, trending themes, and the most-mentioned tickers, updated twice daily.">
+<meta name="theme-color" content="#07090f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WSB Sentiment Monitor: Fear &amp; Greed Index">
+<meta property="og:description" content="An AI-derived Fear &amp; Greed index for r/wallstreetbets. Tracks retail sentiment, trending themes, and the most-mentioned tickers, updated twice daily.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WSB Sentiment Monitor: Fear &amp; Greed Index">
+<meta name="twitter:description" content="An AI-derived Fear &amp; Greed index for r/wallstreetbets. Tracks retail sentiment, trending themes, and the most-mentioned tickers, updated twice daily.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -87,7 +95,7 @@
 
   /* ── Section title ── */
   .section-title {
-    font-size: 9px; font-weight: 700; text-transform: uppercase;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.18em; color: var(--t1);
     border-bottom: 1px solid var(--b1); padding-bottom: 8px; margin-bottom: 16px;
     display: flex; align-items: center; gap: 10px;
@@ -105,17 +113,17 @@
   }
   .score-top { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 1.25rem; }
   .score-top > div { flex: 1; }
-  .score-label { font-size: 9px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 6px; }
+  .score-label { font-size: 10px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 6px; }
   .score-number { font-size: 52px; font-weight: 700; line-height: 1; }
   .score-tag {
     display: inline-flex; align-items: center;
     padding: 3px 10px; border-radius: 999px; border: 1px solid;
-    font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
     text-transform: uppercase; line-height: 1.4; margin-top: 8px;
   }
   .score-summary { }
   .score-ai-header { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
-  .score-ai-label { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); }
+  .score-ai-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); }
   .score-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .score-bullet-card {
     border-radius: 8px; padding: 11px 13px;
@@ -126,7 +134,7 @@
   .score-bullet-card.tag-bearish { background: rgba(232,96,96,0.06); border-color: rgba(232,96,96,0.20); }
   .score-bullet-card.tag-notable { background: rgba(96,168,214,0.06); border-color: rgba(96,168,214,0.20); }
   .score-bullet-tag {
-    font-size: 8px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
     padding: 2px 6px; border-radius: 3px; align-self: flex-start;
   }
   .tag-bullish .score-bullet-tag { background: rgba(60,200,184,0.15); color: var(--gr); }
@@ -144,7 +152,7 @@
     padding: 14px 16px; min-height: 110px;
     display: flex; flex-direction: column;
   }
-  .kpi-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); margin-bottom: 8px; }
+  .kpi-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); margin-bottom: 8px; }
   .kpi-value { font-size: 26px; font-weight: 700; }
   .kpi-value.g { color: var(--gr); }
   .kpi-value.r { color: var(--rd); }
@@ -173,7 +181,7 @@
   .heat-badge {
     display: inline-flex; align-items: center;
     padding: 3px 8px; border-radius: 999px; border: 1px solid;
-    font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
     text-transform: uppercase; line-height: 1.4; white-space: nowrap;
   }
   .heat-hot      { border-color: rgba(232,96,96,0.45);  color: #ff9b9b; background: rgba(232,96,96,0.10); }
@@ -184,14 +192,14 @@
   .theme-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--b1); padding-top: 10px; margin-top: 4px; }
   .theme-score-wrap { display: none; }
   .theme-tickers { display: flex; gap: 4px; flex-wrap: wrap; }
-  .ticker-chip { font-size: 9px; padding: 2px 6px; border-radius: 4px; background: var(--s3); color: var(--t2); border: 1px solid var(--b1); }
+  .ticker-chip { font-size: 10px; padding: 2px 6px; border-radius: 4px; background: var(--s3); color: var(--t2); border: 1px solid var(--b1); }
 
   /* ── Ticker table ── */
   .ticker-table-wrap { background: var(--s2); border: 1px solid var(--b1); border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
   table { width: 100%; border-collapse: collapse; }
   thead th {
     padding: 8px 14px; text-align: left;
-    font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
     color: var(--t2); border-bottom: 1px solid var(--b2);
     background: var(--s3); white-space: nowrap;
   }
@@ -205,7 +213,7 @@
   .sent-pill {
     display: inline-flex; align-items: center;
     padding: 3px 8px; border-radius: 999px; border: 1px solid;
-    font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
     text-transform: uppercase; line-height: 1.4;
   }
   .sent-bull  { border-color: rgba(60,200,184,0.45);  color: #8de9df; background: rgba(60,200,184,0.10); }
@@ -244,7 +252,7 @@
   /* ── FAQ ── */
   .faq-section { max-width: 1100px; margin: 0 auto; padding: 0 2rem 4rem; }
   .faq-divider { border: none; border-top: 1px solid var(--b1); margin: 2rem 0; }
-  .faq-title { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--t3); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+  .faq-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--t3); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
   .faq-title::before { content: ''; display: inline-block; width: 3px; height: 12px; background: var(--ac); border-radius: 2px; flex-shrink: 0; }
   .faq-list { display: flex; flex-direction: column; gap: 20px; }
   .faq-item {}
@@ -263,6 +271,10 @@
     header { padding: 12px 16px; }
     .score-top { flex-direction: column; gap: 1rem; }
     .score-gauge-col { flex: unset; max-width: 100%; }
+
+    /* Bump reading copy for legibility on small screens */
+    .faq-a, .score-bullet-text, tbody td { font-size: 13px; }
+    .theme-bullets li, .signal-text, .kpi-sub { font-size: 12px; }
 
     /* Hot Tickers: collapse table into cards */
     .ticker-table-wrap table,
@@ -290,7 +302,7 @@
     }
     .ticker-table-wrap tbody td:nth-child(3)::before {
       content: "Mentions"; color: var(--t2);
-      font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
     }
     .ticker-table-wrap tbody td:nth-child(4) { grid-column: 1 / -1; grid-row: 3; }
     .signal-text { white-space: normal; word-wrap: break-word; color: var(--t3); }
@@ -303,7 +315,7 @@
   <div>
     <div class="logo-title">
       WSB <span>Sentiment</span> Monitor
-      <span class="live-pill" title="Recalculated twice daily at 05:00 and 20:00 HKT"><span class="live-dot"></span><span>Auto · 2&times;/Day</span></span>
+      <span class="live-pill"><span class="live-dot"></span><span>Auto · 5am / 8pm HKT</span></span>
       <span class="live-pill" id="ts-date">—</span>
     </div>
   </div>
