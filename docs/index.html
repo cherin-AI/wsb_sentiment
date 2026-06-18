@@ -28,7 +28,7 @@
     --t2: #c8daf0;
     --t3: #90aec8;
     --t4: #2a3a52;
-    --ac: #60A8D6;
+    --ac: #4A90E2;
     --gr: #3CC8B8;
     --rd: #E86060;
     --am: #FFCC30;
@@ -38,7 +38,7 @@
   html { background: var(--bg); color: var(--t1); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
 
   /* Lock digit width so values don't jitter as they change (finance convention) */
-  .score-number, .kpi-value, .mention-num, .bb-pct, .header-ts, .header-ts span,
+  .kpi-value, .mention-num, .bb-pct, .header-ts, .header-ts span,
   .score-tag, .sent-pill, .ticker-chip, td .sym, .tt-score, .tt-ts {
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum" 1;
@@ -56,7 +56,7 @@
   body {
     min-height: 100vh; padding: 0 0 4rem;
     background:
-      radial-gradient(circle at top left, rgba(96,168,214,0.12), transparent 28%),
+      radial-gradient(circle at top left, rgba(74,144,226,0.12), transparent 28%),
       radial-gradient(circle at top right, rgba(60,200,184,0.10), transparent 24%),
       linear-gradient(180deg, #07090f 0%, #090d14 100%);
   }
@@ -114,14 +114,12 @@
   .score-top { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 1.25rem; }
   .score-top > div { flex: 1; }
   .score-label { font-size: 10px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 6px; }
-  .score-number { font-size: 52px; font-weight: 700; line-height: 1; }
   .score-tag {
     display: inline-flex; align-items: center;
     padding: 3px 10px; border-radius: 999px; border: 1px solid;
     font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
     text-transform: uppercase; line-height: 1.4; margin-top: 8px;
   }
-  .score-summary { }
   .score-ai-header { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
   .score-ai-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); }
   .score-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
@@ -132,14 +130,14 @@
   }
   .score-bullet-card.tag-bullish { background: rgba(60,200,184,0.06); border-color: rgba(60,200,184,0.20); }
   .score-bullet-card.tag-bearish { background: rgba(232,96,96,0.06); border-color: rgba(232,96,96,0.20); }
-  .score-bullet-card.tag-notable { background: rgba(96,168,214,0.06); border-color: rgba(96,168,214,0.20); }
+  .score-bullet-card.tag-notable { background: rgba(74,144,226,0.06); border-color: rgba(74,144,226,0.20); }
   .score-bullet-tag {
     font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
     padding: 2px 6px; border-radius: 3px; align-self: flex-start;
   }
   .tag-bullish .score-bullet-tag { background: rgba(60,200,184,0.15); color: var(--gr); }
   .tag-bearish .score-bullet-tag { background: rgba(232,96,96,0.15); color: var(--rd); }
-  .tag-notable .score-bullet-tag { background: rgba(96,168,214,0.15); color: var(--ac); }
+  .tag-notable .score-bullet-tag { background: rgba(74,144,226,0.15); color: var(--ac); }
   .score-bullet-text { font-size: 12px; line-height: 1.55; color: var(--t1); }
   .score-gauge-col { flex: 0 0 300px; max-width: 300px; text-align: center; }
   .score-gauge-col .score-label { text-align: left; }
@@ -190,7 +188,6 @@
   .theme-bullets li { font-size: 11px; color: var(--t2); padding: 2px 0; display: flex; gap: 6px; line-height: 1.5; }
   .theme-bullets li::before { content: '•'; color: var(--ac); flex-shrink: 0; }
   .theme-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--b1); padding-top: 10px; margin-top: 4px; }
-  .theme-score-wrap { display: none; }
   .theme-tickers { display: flex; gap: 4px; flex-wrap: wrap; }
   .ticker-chip { font-size: 10px; padding: 2px 6px; border-radius: 4px; background: var(--s3); color: var(--t2); border: 1px solid var(--b1); }
 
@@ -220,11 +217,6 @@
   .sent-bear  { border-color: rgba(232,96,96,0.45);   color: #ff9b9b; background: rgba(232,96,96,0.10); }
   .sent-mixed { border-color: rgba(255,204,48,0.45);  color: #ffe08a; background: rgba(255,204,48,0.10); }
   .mention-track { display: flex; align-items: center; gap: 8px; }
-  /* Right-align the numeric Mentions column on desktop (trading-table convention) */
-  @media (min-width: 769px) {
-    thead th:nth-child(3) { text-align: right; }
-    tbody td:nth-child(3) .mention-track { justify-content: flex-end; }
-  }
   .mbar { height: 4px; border-radius: 2px; background: var(--ac); opacity: 0.6; }
   .mention-num { font-size: 11px; color: var(--t2); }
   .signal-text { font-size: 11px; color: var(--t2); }
@@ -255,7 +247,6 @@
   .faq-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--t3); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
   .faq-title::before { content: ''; display: inline-block; width: 3px; height: 12px; background: var(--ac); border-radius: 2px; flex-shrink: 0; }
   .faq-list { display: flex; flex-direction: column; gap: 20px; }
-  .faq-item {}
   .faq-q { font-size: 13px; font-weight: 600; color: var(--t1); margin-bottom: 6px; }
   .faq-a { font-size: 12px; color: var(--t2); line-height: 1.7; }
 
@@ -334,11 +325,11 @@
 function buildGaugeSVG(score, scoreColor) {
   const W=300,H=200,cx=150,cy=144,ro=112,ri=70,mid=91,GAP=1.8;
   const segs=[
-    {a1:180,a2:144,color:'#c03838',label:['EXTREME','FEAR']},
+    {a1:180,a2:144,color:'#E86060',label:['EXTREME','FEAR']},
     {a1:144,a2:108,color:'#c07020',label:['FEAR']},
     {a1:108,a2:72, color:'#3a5870',label:['NEUTRAL']},
     {a1:72, a2:36, color:'#1880b0',label:['GREED']},
-    {a1:36, a2:0,  color:'#18a880',label:['EXTREME','GREED']},
+    {a1:36, a2:0,  color:'#3CC8B8',label:['EXTREME','GREED']},
   ];
   const activeIdx=Math.min(Math.floor(score/20),4);
   function p(r,deg){const rad=deg*Math.PI/180;return[(cx+r*Math.cos(rad)).toFixed(1),(cy-r*Math.sin(rad)).toFixed(1)];}
@@ -422,13 +413,13 @@ function buildHistoryChart(history) {
 
   // Line
   const points = entries.map((e, i) => `${toX(i).toFixed(1)},${toY(e.score).toFixed(1)}`).join(' ');
-  const line = `<polyline points="${points}" fill="none" stroke="rgba(96,168,214,0.75)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+  const line = `<polyline points="${points}" fill="none" stroke="rgba(74,144,226,0.75)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
 
   // Dots
   const dots = entries.map((e, i) => {
     const x = toX(i).toFixed(1), y = toY(e.score).toFixed(1);
     const col = e.score >= 80 ? '#18a880' : e.score >= 60 ? '#1880b0' : e.score >= 40 ? '#3a5870' : e.score >= 20 ? '#c07020' : '#c03838';
-    const labelCol = e.score >= 80 ? '#3CC8B8' : e.score >= 60 ? '#60A8D6' : e.score >= 40 ? '#c8daf0' : e.score >= 20 ? '#FFCC30' : '#E86060';
+    const labelCol = e.score >= 80 ? '#3CC8B8' : e.score >= 60 ? '#4A90E2' : e.score >= 40 ? '#c8daf0' : e.score >= 20 ? '#FFCC30' : '#E86060';
     const isLast = i === entries.length - 1;
     const r = isLast ? (mobile ? 8 : 7) : (mobile ? 7 : 6);
     const visDot = `<circle cx="${x}" cy="${y}" r="${r}" fill="${col}" stroke="#07090f" stroke-width="2" pointer-events="none"/>`;
