@@ -28,6 +28,23 @@
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { background: var(--bg); color: var(--t1); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+
+  /* Lock digit width so values don't jitter as they change (finance convention) */
+  .score-number, .kpi-value, .mention-num, .bb-pct, .header-ts, .header-ts span,
+  .score-tag, .sent-pill, .ticker-chip, td .sym, .tt-score, .tt-ts {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+  }
+  svg text { font-variant-numeric: tabular-nums; }
+
+  /* Keyboard focus visibility */
+  a:focus-visible, .history-dot:focus-visible {
+    outline: 2px solid var(--ac); outline-offset: 2px; border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
   body {
     min-height: 100vh; padding: 0 0 4rem;
     background:
@@ -195,6 +212,11 @@
   .sent-bear  { border-color: rgba(232,96,96,0.45);   color: #ff9b9b; background: rgba(232,96,96,0.10); }
   .sent-mixed { border-color: rgba(255,204,48,0.45);  color: #ffe08a; background: rgba(255,204,48,0.10); }
   .mention-track { display: flex; align-items: center; gap: 8px; }
+  /* Right-align the numeric Mentions column on desktop (trading-table convention) */
+  @media (min-width: 769px) {
+    thead th:nth-child(3) { text-align: right; }
+    tbody td:nth-child(3) .mention-track { justify-content: flex-end; }
+  }
   .mbar { height: 4px; border-radius: 2px; background: var(--ac); opacity: 0.6; }
   .mention-num { font-size: 11px; color: var(--t2); }
   .signal-text { font-size: 11px; color: var(--t2); }
@@ -228,6 +250,11 @@
   .faq-item {}
   .faq-q { font-size: 13px; font-weight: 600; color: var(--t1); margin-bottom: 6px; }
   .faq-a { font-size: 12px; color: var(--t2); line-height: 1.7; }
+
+  /* ── Footer / disclaimer ── */
+  .site-footer { max-width: 1100px; margin: 0 auto; padding: 1.5rem 2rem 0; border-top: 1px solid var(--b1); }
+  .site-footer .disclaimer { font-size: 11px; color: var(--t3); line-height: 1.6; max-width: 760px; }
+  .site-footer .footer-meta { font-size: 10px; color: var(--t3); margin-top: 10px; letter-spacing: 0.04em; }
 
   @media (max-width: 768px) {
     .container { padding: 1rem; }
@@ -276,7 +303,7 @@
   <div>
     <div class="logo-title">
       WSB <span>Sentiment</span> Monitor
-      <span class="live-pill"><span class="live-dot"></span><span>Live</span></span>
+      <span class="live-pill" title="Recalculated twice daily at 05:00 and 20:00 HKT"><span class="live-dot"></span><span>Auto · 2&times;/Day</span></span>
       <span class="live-pill" id="ts-date">—</span>
     </div>
   </div>
@@ -663,6 +690,11 @@ load();
     </div>
   </div>
 </section>
+
+<footer class="site-footer">
+  <p class="disclaimer">For informational purposes only. Sentiment is AI-derived from public r/wallstreetbets posts and is not investment advice.</p>
+  <p class="footer-meta">WSB Sentiment Monitor &middot; Cherin Kim</p>
+</footer>
 
 
 </body>
