@@ -1,17 +1,17 @@
 {
-  "bull_pct": 34,
-  "bear_pct": 34,
-  "neutral_pct": 32,
-  "bull_bear_ratio": 1.0,
-  "overall_score": 44,
+  "bull_pct": 41,
+  "bear_pct": 23,
+  "neutral_pct": 36,
+  "bull_bear_ratio": 1.8,
+  "overall_score": 51,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 34,
-    "ai_score": 48,
-    "bull_count": 15,
-    "bear_count": 15,
+    "formula_score": 41,
+    "ai_score": 56,
+    "bull_count": 16,
+    "bear_count": 9,
     "neutral_count": 14,
-    "total_posts": 44,
+    "total_posts": 39,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,111 +19,114 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 44,
+  "post_count": 39,
   "hours_window": 24,
   "themes": [
     {
-      "id": "fomc-warsh",
-      "title": "FOMC & New Fed Chief Warsh",
-      "icon": "building-bank",
-      "heat": "hot",
-      "bullets": [
-        "Rate hike fears rattle Wall Street",
-        "Dow tumbles on hawkish surprise",
-        "Warsh sentiment sharply negative",
-        "Rates held at 3.50-3.75%"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "SPY",
-        "SPX"
-      ]
-    },
-    {
-      "id": "spacex-ipo",
-      "title": "SpaceX / SPCX Speculation",
+      "id": "spacex-spcx-ipo",
+      "title": "SpaceX IPO Speculation",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Newly listed options draw speculators",
-        "Bull and bear positions both opening",
-        "Burry tempted to short but passes",
-        "Valuation debates intensify"
+        "Retail piling into SPCX options",
+        "Large high-conviction positions opened",
+        "Forced buying narratives spreading",
+        "Skepticism on overstretched valuation"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 60,
       "tickers": [
         "SPCX",
-        "TSLA"
+        "TSLA",
+        "T"
       ]
     },
     {
-      "id": "ai-semis",
-      "title": "AI & Semiconductor Rotation",
+      "id": "fed-fomc-policy",
+      "title": "Fed Policy & New Chair",
+      "icon": "building-bank",
+      "heat": "hot",
+      "bullets": [
+        "Rates held at 3.50%-3.75%",
+        "Warsh rate-hike fears rattle traders",
+        "Dow tumbles on hawkish concerns",
+        "FOMC dip-buying attempts emerge"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "GOOG"
+      ]
+    },
+    {
+      "id": "semiconductors-memory",
+      "title": "Semiconductors & Memory Chips",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Micron earnings play in focus",
-        "Chip designers warned of weakness",
-        "OpenAI cash burn questioned",
-        "AI fear spreading to hardware"
+        "Micron earnings play anticipation",
+        "DRAM pricing crunch in focus",
+        "Apple-Intel chip deal speculation",
+        "Bearish warnings on chip designers"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 58,
       "tickers": [
         "MU",
-        "NBIS",
-        "TXN"
+        "INTC",
+        "ARM",
+        "AAPL"
       ]
     },
     {
-      "id": "loss-posts",
-      "title": "Account Blow-ups & Despair",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Multiple full-position loss posts",
-        "Revenge trading confessions surface",
-        "Buying every dip, becoming exit liquidity",
-        "Defeated, somber tone emerging"
-      ],
-      "sentiment_score": 15,
-      "tickers": [
-        "SPY",
-        "PLTR"
-      ]
-    },
-    {
-      "id": "big-wins",
-      "title": "Profit Posts & Euphoria",
+      "id": "profit-loss-posts",
+      "title": "Profit & Loss Posts",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Large NBIS gains cashed out",
-        "Profit-taking on HOOD calls",
-        "Boastful winning screenshots",
-        "Euphoric tone among winners"
+        "Large profit posts circulating",
+        "Account blow-up confessions surface",
+        "Millionaire AMA fuels euphoria",
+        "Mixed wins and painful losses"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 62,
       "tickers": [
         "NBIS",
-        "HOOD"
+        "INTC",
+        "HOOD",
+        "QQQ"
       ]
     },
     {
-      "id": "sector-rotation",
-      "title": "Value & Sector Plays",
-      "icon": "chart-pie",
-      "heat": "normal",
+      "id": "rare-earths-geopolitics",
+      "title": "Rare Earths & Geopolitics",
+      "icon": "world",
+      "heat": "building",
       "bullets": [
-        "Healthcare mean-reversion debated",
-        "Microsoft cheap on compressed P/E",
-        "Rare earth supply chain catalyst",
-        "Fusion energy touted as future"
+        "G7 targets China supply reduction",
+        "MP Materials supply chain debate",
+        "US-Iran deal headlines surface",
+        "Strategic resource positioning grows"
       ],
       "sentiment_score": 55,
       "tickers": [
-        "MSFT",
-        "MP",
-        "T"
+        "MP"
+      ]
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "flame",
+      "heat": "normal",
+      "bullets": [
+        "Heavy irony and meme posting",
+        "Speculative high-leverage positioning",
+        "Mixed conviction across tickers",
+        "Catalyst-driven trader engagement"
+      ],
+      "sentiment_score": 52,
+      "tickers": [
+        "SPY",
+        "QQQ"
       ]
     }
   ],
@@ -131,74 +134,74 @@
     {
       "symbol": "SPCX",
       "sentiment": "mixed",
-      "mentions": 7,
-      "signal": "Heavy speculation both long and short",
+      "mentions": 8,
+      "signal": "Heavy IPO speculation and YOLOs",
       "company_name": "Space Exploration Technologies "
     },
     {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "FOMC-driven options churn",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "symbol": "QQQ",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "Active 0DTE day-trading",
+      "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
-      "symbol": "NBIS",
+      "symbol": "INTC",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Big winners cashing out",
-      "company_name": "Nebius Group N.V."
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Value case building",
-      "company_name": "Microsoft Corporation"
+      "signal": "Apple deal optimism",
+      "company_name": "Intel Corporation"
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Earnings print anticipation",
+      "mentions": 3,
+      "signal": "Earnings play conviction",
       "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "SPX",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Awaiting post-FOMC direction",
-      "company_name": "S&P 500 INDEX"
-    },
-    {
-      "symbol": "T",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "CFO exit weighing on shares",
-      "company_name": "AT&T Inc."
     },
     {
       "symbol": "MP",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Rare earth supply tailwind",
+      "mentions": 3,
+      "signal": "Rare earth supply catalyst",
       "company_name": "MP Materials Corp."
+    },
+    {
+      "symbol": "AAPL",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Chip deal and price hikes",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "ARM",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Full-port long underwater",
+      "company_name": "Arm Holdings plc"
+    },
+    {
+      "symbol": "GOOG",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "FOMC dip-buying target",
+      "company_name": "Alphabet Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment turned defensive after a hawkish FOMC under new chief Warsh sent the Dow tumbling on rate-hike fears. Traders crowded SPY and SPX options around the event, with bearish positioning and visible frustration dominating the immediate reaction.",
+      "text": "The batch is dominated by SpaceX IPO mania, with retail traders aggressively opening leveraged SPCX option positions while skeptics warn the speculative spike signals a market top. Euphoria runs high alongside palpable caution.",
+      "tag": "notable"
+    },
+    {
+      "text": "Fed policy anxiety weighs heavily as a new chair stokes rate-hike fears, sending the Dow lower and rattling positioning. Despite the hawkish tone, dip-buyers are deploying capital into mega-caps on the FOMC decision.",
       "tag": "bearish"
     },
     {
-      "text": "Newly live SpaceX options via SPCX became the batch's hottest speculative arena, drawing both aggressive bulls and Burry-style bears debating an stretched valuation. The split positioning reflects genuine uncertainty rather than conviction.",
-      "tag": "notable"
-    },
-    {
-      "text": "A widening gulf between euphoric profit posts on names like NBIS and a cluster of somber account blow-ups underscores a polarized, late-cycle mood. Rotation chatter into healthcare and value names like Microsoft hints at fading appetite for crowded semiconductor trades.",
-      "tag": "notable"
+      "text": "Semiconductor and memory names including Micron and Intel draw bullish earnings and deal speculation, while large profit posts and the occasional blow-up keep speculative energy elevated across the board.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-06-17T21:02:52.488631+00:00",
-  "updated_hkt": "2026-06-18 05:02 HKT"
+  "updated_at": "2026-06-18T12:03:36.776746+00:00",
+  "updated_hkt": "2026-06-18 20:03 HKT"
 }
