@@ -1,17 +1,17 @@
 {
-  "bull_pct": 63,
-  "bear_pct": 21,
-  "neutral_pct": 16,
-  "bull_bear_ratio": 3.0,
-  "overall_score": 72,
-  "overall_label": "Greed",
+  "bull_pct": 48,
+  "bear_pct": 30,
+  "neutral_pct": 22,
+  "bull_bear_ratio": 1.6,
+  "overall_score": 58,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 63,
-    "ai_score": 76,
-    "bull_count": 33,
-    "bear_count": 11,
-    "neutral_count": 8,
-    "total_posts": 52,
+    "formula_score": 48,
+    "ai_score": 63,
+    "bull_count": 13,
+    "bear_count": 8,
+    "neutral_count": 6,
+    "total_posts": 27,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,109 +19,111 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 52,
+  "post_count": 27,
   "hours_window": 24,
   "themes": [
     {
-      "id": "dram-memory-rally",
-      "title": "DRAM & Memory Supercycle",
+      "id": "memory-semis",
+      "title": "Memory & Semiconductor Plays",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Micron calls dominating retail flow",
-        "Aggressive yolos targeting $100+ levels",
-        "Earnings catalyst fueling conviction",
-        "Memory pricing tailwind narrative entrenched"
+        "Micron DRAM trades dominate flows",
+        "Large all-in positions targeting triple digits",
+        "SOXL spreads and options speculation",
+        "Strong upside momentum conviction"
       ],
-      "sentiment_score": 88,
+      "sentiment_score": 74,
       "tickers": [
         "MU",
-        "SNDK",
-        "WDC"
+        "SOXL",
+        "ASML",
+        "IBM"
       ]
     },
     {
-      "id": "spacex-spcx",
-      "title": "SpaceX / SPCX Speculation",
-      "icon": "rocket",
-      "heat": "building",
+      "id": "profit-posts",
+      "title": "Big Win Posts",
+      "icon": "trending-up",
+      "heat": "hot",
       "bullets": [
-        "Index inclusion forced-buy thesis debated",
-        "Active scalping both directions",
-        "$20B bond sale headline circulating",
-        "Mixed wins and account blow-ups"
+        "Multi-year cumulative gains showcased",
+        "Aggressive scalping turning small into large",
+        "Roth accounts deployed irresponsibly",
+        "Euphoric profit-taking energy"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 80,
       "tickers": [
-        "SPCX"
+        "MU",
+        "HIMS"
       ]
     },
     {
-      "id": "ai-capex-skepticism",
-      "title": "AI CAPEX Scrutiny",
+      "id": "geopolitics",
+      "title": "Iran–Israel Geopolitical Risk",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Megacap AI spending questioned",
-        "Microsoft valuation seen as undervalued",
-        "Copilot competitiveness doubts raised",
-        "Component price relief anticipated"
+        "Cancelled negotiations raise tensions",
+        "Defense and firearms names in focus",
+        "Macro uncertainty entering positioning",
+        "Risk-off undertone forming"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 40,
+      "tickers": [
+        "SWBI"
+      ]
+    },
+    {
+      "id": "ai-capex",
+      "title": "AI Capex Skepticism",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Big Tech spending questioned harshly",
+        "Copilot and Meta AI deemed inferior",
+        "Margins pressured by heavy investment",
+        "Bearish reassessment of AI bets"
+      ],
+      "sentiment_score": 33,
       "tickers": [
         "MSFT",
         "META"
       ]
     },
     {
-      "id": "profit-flexing",
-      "title": "Profit Posts & Account Wins",
-      "icon": "trending-up",
+      "id": "speculative-yolo",
+      "title": "Speculative high-conviction Bets",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Big realized gains widely shared",
-        "Options vindication narrative strong",
-        "Retail euphoria broadly spreading",
-        "Risk appetite running elevated"
+        "LEAP spreads on critical minerals",
+        "Single-stock all-in conviction plays",
+        "Hated LNG name re-rating thesis",
+        "High-risk options stacking"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 68,
       "tickers": [
-        "MU",
-        "SNDK",
-        "ACN"
+        "TMC",
+        "VG",
+        "BFLY",
+        "TTWO"
       ]
     },
     {
-      "id": "geopolitical-risk",
-      "title": "Geopolitical & Macro Overhang",
-      "icon": "skull",
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-neutral",
       "heat": "normal",
       "bullets": [
-        "US-Iran talks postponed abruptly",
-        "Israel intensifying regional strikes",
-        "Private credit outflows accelerating",
-        "Japan inflation below BOJ target"
+        "Juneteenth holiday low liquidity",
+        "Private credit outflows noted",
+        "Japan inflation data digested",
+        "SpaceX index inclusion debate"
       ],
-      "sentiment_score": 35,
-      "tickers": []
-    },
-    {
-      "id": "single-name-yolos",
-      "title": "Single-Name Speculative Bets",
-      "icon": "target",
-      "heat": "normal",
-      "bullets": [
-        "Defense and LNG niche plays touted",
-        "QCOM investor day positioning",
-        "SNAP and HOOD sentiment improving",
-        "High-conviction lottery options favored"
-      ],
-      "sentiment_score": 70,
+      "sentiment_score": 48,
       "tickers": [
-        "SWBI",
-        "VG",
-        "QCOM",
-        "HOOD"
+        "QQQ"
       ]
     }
   ],
@@ -129,74 +131,74 @@
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "Memory rally darling, $100+ targets",
+      "mentions": 4,
+      "signal": "DRAM conviction toward triple digits",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "SPCX",
+      "symbol": "SOXL",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Scalped both ways, index hype debated",
-      "company_name": "Space Exploration Technologies "
+      "mentions": 2,
+      "signal": "Accidental short causing anxiety",
+      "company_name": "Direxion Daily Semiconductor Bu"
     },
     {
-      "symbol": "SNDK",
+      "symbol": "TMC",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Memory momentum tailwind",
-      "company_name": "Sandisk Corporation"
+      "mentions": 2,
+      "signal": "Critical mineral LEAP play",
+      "company_name": "TMC the metals company Inc."
+    },
+    {
+      "symbol": "META",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "AI capex burn criticized",
+      "company_name": "Meta Platforms, Inc."
     },
     {
       "symbol": "MSFT",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Undervalued vs AI spending doubts",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Capital destruction concerns",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "WDC",
+      "symbol": "TTWO",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Storage rally participation",
-      "company_name": "Western Digital Corporation"
+      "mentions": 1,
+      "signal": "GTA VI valuation optimism",
+      "company_name": "Take-Two Interactive Software, "
     },
     {
-      "symbol": "QCOM",
+      "symbol": "SWBI",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Investor day catalyst bet",
-      "company_name": "QUALCOMM Incorporated"
+      "mentions": 1,
+      "signal": "Earnings beat, room to run",
+      "company_name": "Smith & Wesson Brands, Inc."
     },
     {
-      "symbol": "NBIS",
+      "symbol": "VG",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Relisting multi-bagger celebration",
-      "company_name": "Nebius Group N.V."
-    },
-    {
-      "symbol": "HOOD",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Retail platform affection",
-      "company_name": "Robinhood Markets, Inc."
+      "mentions": 1,
+      "signal": "Hated LNG re-rate thesis",
+      "company_name": "Venture Global, Inc."
     }
   ],
   "summary": [
     {
-      "text": "The batch radiates greed, anchored by an aggressive memory-chip rally where Micron calls dominate flow and traders openly target triple-digit levels into earnings. Profit posts and high-conviction conviction reinforce a euphoric, risk-on tone across retail positioning.",
+      "text": "Memory semiconductors anchor the batch, with Micron DRAM bets and large single-stock positions targeting triple-digit prices. Speculative traders are stacking options aggressively, and a steady flow of profit posts keeps the energy distinctly euphoric.",
       "tag": "bullish"
     },
     {
-      "text": "SpaceX-linked SPCX speculation is gathering energy as traders debate index inclusion forced-buying against a fresh $20 billion bond sale, though scalping in both directions and visible account blow-ups signal a genuinely two-sided, uncertain setup.",
-      "tag": "notable"
+      "text": "A clear contrarian thread challenges AI spending, with traders warning that Big Tech capex is destroying once-pristine software margins. Combined with private credit outflows, it signals a skeptical undercurrent beneath the broader greed.",
+      "tag": "bearish"
     },
     {
-      "text": "Beneath the optimism sit real overhangs: postponed US-Iran talks, intensifying Middle East strikes, and accelerating private credit outflows. Skepticism toward megacap AI CAPEX adds a cautious counterweight to the otherwise exuberant mood.",
-      "tag": "bearish"
+      "text": "Escalating Iran–Israel headlines inject geopolitical risk, channeling interest into defense and firearms names while pressuring macro sentiment. With holiday-thinned liquidity, positioning remains tactical and event-driven heading into the weekend.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-19T12:03:14.496764+00:00",
-  "updated_hkt": "2026-06-19 20:03 HKT"
+  "updated_at": "2026-06-19T21:01:56.585830+00:00",
+  "updated_hkt": "2026-06-20 05:01 HKT"
 }
