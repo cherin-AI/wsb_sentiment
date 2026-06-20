@@ -1,17 +1,17 @@
 {
-  "bull_pct": 35,
-  "bear_pct": 35,
-  "neutral_pct": 30,
-  "bull_bear_ratio": 1.0,
-  "overall_score": 47,
+  "bull_pct": 31,
+  "bear_pct": 44,
+  "neutral_pct": 25,
+  "bull_bear_ratio": 0.7,
+  "overall_score": 40,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 35,
-    "ai_score": 52,
-    "bull_count": 6,
-    "bear_count": 6,
-    "neutral_count": 5,
-    "total_posts": 17,
+    "formula_score": 31,
+    "ai_score": 44,
+    "bull_count": 5,
+    "bear_count": 7,
+    "neutral_count": 4,
+    "total_posts": 16,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,179 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 17,
+  "post_count": 16,
   "hours_window": 24,
   "themes": [
     {
-      "id": "critical-minerals",
-      "title": "Critical Minerals Speculation",
+      "id": "musk-tesla-empire",
+      "title": "Musk, Tesla & SpaceX Saga",
       "icon": "rocket",
-      "heat": "building",
+      "heat": "hot",
       "bullets": [
-        "TMC deep-sea mining play draws conviction",
-        "US-China rivalry framed as catalyst",
-        "Long-dated LEAP spreads being opened",
-        "Speculative traders eye multibagger upside"
+        "Heavy debate over Musk leadership",
+        "SpaceX-Tesla merger speculation building",
+        "Stock-driven sentiment swings persist",
+        "Polarized retail opinions dominate threads"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 50,
       "tickers": [
-        "TMC"
+        "TSLA"
       ]
     },
     {
-      "id": "semis-ai",
-      "title": "Semiconductors & AI Demand",
-      "icon": "cpu",
+      "id": "options-speculation",
+      "title": "Options Speculation Frenzy",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "NVDA self-disruption thesis debated",
-        "DRAM and memory cycle interest building",
-        "ASML chip-tool China headline circulating",
-        "ARM covered call positioning underwater"
+        "Record retail options activity cited",
+        "High-premium gambles celebrated",
+        "Outsized gains and blow-ups mixed",
+        "Risk appetite remains elevated"
       ],
       "sentiment_score": 55,
       "tickers": [
-        "NVDA",
         "ARM",
-        "ASML",
-        "MU",
-        "SNXX"
-      ]
-    },
-    {
-      "id": "loss-posts",
-      "title": "Account Blow-Ups",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Overnight trading losses on high premiums",
-        "Regret over mistimed exits surfacing",
-        "Self-deprecating loss confessions common",
-        "Gamba mentality openly acknowledged"
-      ],
-      "sentiment_score": 25,
-      "tickers": []
-    },
-    {
-      "id": "big-wins",
-      "title": "Profit Posts & Big Wins",
-      "icon": "trophy",
-      "heat": "normal",
-      "bullets": [
-        "Multi-year profit screenshots shared",
-        "First multibagger holds celebrated",
-        "Crypto-miner rebrand sparked rally",
-        "Withdrawals locking in realized gains"
-      ],
-      "sentiment_score": 78,
-      "tickers": []
-    },
-    {
-      "id": "volatility-bets",
-      "title": "Volatility & Macro Hedges",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "VXX puts betting on calming markets",
-        "Geopolitical headline risk weighing on futures",
-        "Traders awaiting weekend catalysts",
-        "Elevated volatility expected near-term"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
         "VXX"
       ]
     },
     {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
+      "id": "account-blowups",
+      "title": "Trading Losses & Bag Holders",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Multiple overnight account blow-ups",
+        "Bag holders heading into holiday",
+        "Tax-loss harvesting deliberations surface",
+        "Regret over long-dated positions"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "ARM"
+      ]
+    },
+    {
+      "id": "big-wins",
+      "title": "Outsized Profit Posts",
       "icon": "trending-up",
+      "bullets": [
+        "Large multi-bagger gain screenshots",
+        "Realized profits rotated into chips",
+        "Euphoric tone on winning trades",
+        "Lottery-ticket mentality reinforced"
+      ],
+      "heat": "building",
+      "sentiment_score": 78,
+      "tickers": [
+        "MU",
+        "SNAP"
+      ]
+    },
+    {
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Outlook",
+      "icon": "cpu",
       "heat": "normal",
       "bullets": [
-        "Record retail options activity highlighted",
-        "Mid-year WSB pick performance review",
-        "Charter deep-value thesis pitched",
-        "TTWO and GTA VI optimism circulating"
+        "NVDA demand thesis questioned long-term",
+        "DRAM and memory plays in focus",
+        "AI designing chips as risk",
+        "Speculative chip rotation continues"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 52,
       "tickers": [
-        "CHTR",
-        "TTWO"
+        "NVDA",
+        "MU"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-neutral",
+      "heat": "normal",
+      "bullets": [
+        "Traders await Monday open eagerly",
+        "Geopolitical headline risk weighs",
+        "Volatility positioning around catalysts",
+        "Mixed greed and fear tone"
+      ],
+      "sentiment_score": 45,
+      "tickers": [
+        "VXX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "TMC",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "High-conviction critical mineral LEAP play",
-      "company_name": "TMC the metals company Inc."
+      "symbol": "TSLA",
+      "sentiment": "mixed",
+      "mentions": 8,
+      "signal": "Musk drama and merger speculation",
+      "company_name": "Tesla, Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Bullish demand, self-disruption fears",
+      "mentions": 6,
+      "signal": "AI demand thesis debated",
       "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "ARM",
       "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Covered calls underwater, regret",
+      "mentions": 5,
+      "signal": "Covered call regret and losses",
       "company_name": "Arm Holdings plc"
-    },
-    {
-      "symbol": "VXX",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Puts betting on fading volatility",
-      "company_name": "iPath Series B S&P 500 VIX Shor"
-    },
-    {
-      "symbol": "TTWO",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "GTA VI and AI upside thesis",
-      "company_name": "Take-Two Interactive Software, "
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "DRAM cycle optimism",
+      "mentions": 4,
+      "signal": "DRAM rotation conviction",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "ASML",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "China chip-tool headline risk",
-      "company_name": "ASML Holding N.V. - New York Re"
+      "symbol": "VXX",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Volatility puts underwater",
+      "company_name": "iPath Series B S&P 500 VIX Shor"
     },
     {
-      "symbol": "CHTR",
+      "symbol": "SNAP",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Deep-value broadband multibagger pitch",
-      "company_name": "Charter Communications, Inc."
+      "mentions": 2,
+      "signal": "Bottom-fishing optimism",
+      "company_name": "Snap Inc."
+    },
+    {
+      "symbol": "UBI",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Headline-driven downside fear",
+      "company_name": "GLOBAL X 0 TO 3 MONTH US T BILL"
+    },
+    {
+      "symbol": "SNXX",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Realized gains celebrated",
+      "company_name": "Tradr 2X Long SNDK Daily ETF"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment sits near neutral as speculative conviction in critical-mineral play TMC and deep-value pitches on Charter and Take-Two offset a steady stream of loss confessions and underwater options positions. Energy is fragmented rather than euphoric.",
+      "text": "Sentiment sits near neutral with a defensive tilt as a cluster of overnight account blow-ups and bag-holder posts collide with celebratory multi-bagger screenshots. The crowd remains highly speculative, leaning into high-premium options despite mounting regret on longer-dated positions.",
       "tag": "notable"
     },
     {
-      "text": "Semiconductors remain the gravitational center, with traders weighing AI-driven GPU demand against an ironic self-disruption thesis on NVDA, while DRAM optimism and an ASML China headline keep the memory and equipment names in focus.",
-      "tag": "bullish"
+      "text": "Musk, Tesla and SpaceX merger chatter dominates engagement, generating intense but polarized reactions rather than unified conviction. Traders appear more entertained by the spectacle than positioned with directional confidence.",
+      "tag": "notable"
     },
     {
-      "text": "A visible undercurrent of overnight account blow-ups, mistimed ARM exits, and VXX volatility hedges signals lingering caution beneath the speculative bravado, tempering the batch's overall risk appetite.",
+      "text": "Record retail options activity underpins the euphoria, yet pain is visible in ARM covered calls and underwater VXX volatility puts. The energy is restless and gamble-heavy, suggesting fragile sentiment ahead of upcoming catalysts.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-20T12:01:30.299359+00:00",
-  "updated_hkt": "2026-06-20 20:01 HKT"
+  "updated_at": "2026-06-20T21:01:24.179514+00:00",
+  "updated_hkt": "2026-06-21 05:01 HKT"
 }
