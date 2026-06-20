@@ -1,17 +1,17 @@
 {
-  "bull_pct": 48,
-  "bear_pct": 30,
-  "neutral_pct": 22,
-  "bull_bear_ratio": 1.6,
-  "overall_score": 58,
+  "bull_pct": 35,
+  "bear_pct": 35,
+  "neutral_pct": 30,
+  "bull_bear_ratio": 1.0,
+  "overall_score": 47,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 48,
-    "ai_score": 63,
-    "bull_count": 13,
-    "bear_count": 8,
-    "neutral_count": 6,
-    "total_posts": 27,
+    "formula_score": 35,
+    "ai_score": 52,
+    "bull_count": 6,
+    "bear_count": 6,
+    "neutral_count": 5,
+    "total_posts": 17,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,186 +19,179 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 27,
+  "post_count": 17,
   "hours_window": 24,
   "themes": [
     {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Plays",
+      "id": "critical-minerals",
+      "title": "Critical Minerals Speculation",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "TMC deep-sea mining play draws conviction",
+        "US-China rivalry framed as catalyst",
+        "Long-dated LEAP spreads being opened",
+        "Speculative traders eye multibagger upside"
+      ],
+      "sentiment_score": 70,
+      "tickers": [
+        "TMC"
+      ]
+    },
+    {
+      "id": "semis-ai",
+      "title": "Semiconductors & AI Demand",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Micron DRAM trades dominate flows",
-        "Large all-in positions targeting triple digits",
-        "SOXL spreads and options speculation",
-        "Strong upside momentum conviction"
+        "NVDA self-disruption thesis debated",
+        "DRAM and memory cycle interest building",
+        "ASML chip-tool China headline circulating",
+        "ARM covered call positioning underwater"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 55,
       "tickers": [
-        "MU",
-        "SOXL",
+        "NVDA",
+        "ARM",
         "ASML",
-        "IBM"
-      ]
-    },
-    {
-      "id": "profit-posts",
-      "title": "Big Win Posts",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Multi-year cumulative gains showcased",
-        "Aggressive scalping turning small into large",
-        "Roth accounts deployed irresponsibly",
-        "Euphoric profit-taking energy"
-      ],
-      "sentiment_score": 80,
-      "tickers": [
         "MU",
-        "HIMS"
+        "SNXX"
       ]
     },
     {
-      "id": "geopolitics",
-      "title": "Iran–Israel Geopolitical Risk",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "Cancelled negotiations raise tensions",
-        "Defense and firearms names in focus",
-        "Macro uncertainty entering positioning",
-        "Risk-off undertone forming"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "SWBI"
-      ]
-    },
-    {
-      "id": "ai-capex",
-      "title": "AI Capex Skepticism",
+      "id": "loss-posts",
+      "title": "Account Blow-Ups",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Big Tech spending questioned harshly",
-        "Copilot and Meta AI deemed inferior",
-        "Margins pressured by heavy investment",
-        "Bearish reassessment of AI bets"
+        "Overnight trading losses on high premiums",
+        "Regret over mistimed exits surfacing",
+        "Self-deprecating loss confessions common",
+        "Gamba mentality openly acknowledged"
       ],
-      "sentiment_score": 33,
-      "tickers": [
-        "MSFT",
-        "META"
-      ]
+      "sentiment_score": 25,
+      "tickers": []
     },
     {
-      "id": "speculative-yolo",
-      "title": "Speculative high-conviction Bets",
-      "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "LEAP spreads on critical minerals",
-        "Single-stock all-in conviction plays",
-        "Hated LNG name re-rating thesis",
-        "High-risk options stacking"
-      ],
-      "sentiment_score": 68,
-      "tickers": [
-        "TMC",
-        "VG",
-        "BFLY",
-        "TTWO"
-      ]
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-neutral",
+      "id": "big-wins",
+      "title": "Profit Posts & Big Wins",
+      "icon": "trophy",
       "heat": "normal",
       "bullets": [
-        "Juneteenth holiday low liquidity",
-        "Private credit outflows noted",
-        "Japan inflation data digested",
-        "SpaceX index inclusion debate"
+        "Multi-year profit screenshots shared",
+        "First multibagger holds celebrated",
+        "Crypto-miner rebrand sparked rally",
+        "Withdrawals locking in realized gains"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 78,
+      "tickers": []
+    },
+    {
+      "id": "volatility-bets",
+      "title": "Volatility & Macro Hedges",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "VXX puts betting on calming markets",
+        "Geopolitical headline risk weighing on futures",
+        "Traders awaiting weekend catalysts",
+        "Elevated volatility expected near-term"
+      ],
+      "sentiment_score": 40,
       "tickers": [
-        "QQQ"
+        "VXX"
+      ]
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "trending-up",
+      "heat": "normal",
+      "bullets": [
+        "Record retail options activity highlighted",
+        "Mid-year WSB pick performance review",
+        "Charter deep-value thesis pitched",
+        "TTWO and GTA VI optimism circulating"
+      ],
+      "sentiment_score": 55,
+      "tickers": [
+        "CHTR",
+        "TTWO"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "DRAM conviction toward triple digits",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "SOXL",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Accidental short causing anxiety",
-      "company_name": "Direxion Daily Semiconductor Bu"
-    },
-    {
       "symbol": "TMC",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Critical mineral LEAP play",
+      "mentions": 6,
+      "signal": "High-conviction critical mineral LEAP play",
       "company_name": "TMC the metals company Inc."
     },
     {
-      "symbol": "META",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "AI capex burn criticized",
-      "company_name": "Meta Platforms, Inc."
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Bullish demand, self-disruption fears",
+      "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "MSFT",
+      "symbol": "ARM",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Capital destruction concerns",
-      "company_name": "Microsoft Corporation"
+      "signal": "Covered calls underwater, regret",
+      "company_name": "Arm Holdings plc"
+    },
+    {
+      "symbol": "VXX",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Puts betting on fading volatility",
+      "company_name": "iPath Series B S&P 500 VIX Shor"
     },
     {
       "symbol": "TTWO",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "GTA VI valuation optimism",
+      "mentions": 2,
+      "signal": "GTA VI and AI upside thesis",
       "company_name": "Take-Two Interactive Software, "
     },
     {
-      "symbol": "SWBI",
+      "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Earnings beat, room to run",
-      "company_name": "Smith & Wesson Brands, Inc."
+      "mentions": 2,
+      "signal": "DRAM cycle optimism",
+      "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "VG",
+      "symbol": "ASML",
+      "sentiment": "neutral",
+      "mentions": 1,
+      "signal": "China chip-tool headline risk",
+      "company_name": "ASML Holding N.V. - New York Re"
+    },
+    {
+      "symbol": "CHTR",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "Hated LNG re-rate thesis",
-      "company_name": "Venture Global, Inc."
+      "signal": "Deep-value broadband multibagger pitch",
+      "company_name": "Charter Communications, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Memory semiconductors anchor the batch, with Micron DRAM bets and large single-stock positions targeting triple-digit prices. Speculative traders are stacking options aggressively, and a steady flow of profit posts keeps the energy distinctly euphoric.",
+      "text": "Sentiment sits near neutral as speculative conviction in critical-mineral play TMC and deep-value pitches on Charter and Take-Two offset a steady stream of loss confessions and underwater options positions. Energy is fragmented rather than euphoric.",
+      "tag": "notable"
+    },
+    {
+      "text": "Semiconductors remain the gravitational center, with traders weighing AI-driven GPU demand against an ironic self-disruption thesis on NVDA, while DRAM optimism and an ASML China headline keep the memory and equipment names in focus.",
       "tag": "bullish"
     },
     {
-      "text": "A clear contrarian thread challenges AI spending, with traders warning that Big Tech capex is destroying once-pristine software margins. Combined with private credit outflows, it signals a skeptical undercurrent beneath the broader greed.",
+      "text": "A visible undercurrent of overnight account blow-ups, mistimed ARM exits, and VXX volatility hedges signals lingering caution beneath the speculative bravado, tempering the batch's overall risk appetite.",
       "tag": "bearish"
-    },
-    {
-      "text": "Escalating Iran–Israel headlines inject geopolitical risk, channeling interest into defense and firearms names while pressuring macro sentiment. With holiday-thinned liquidity, positioning remains tactical and event-driven heading into the weekend.",
-      "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-19T21:01:56.585830+00:00",
-  "updated_hkt": "2026-06-20 05:01 HKT"
+  "updated_at": "2026-06-20T12:01:30.299359+00:00",
+  "updated_hkt": "2026-06-20 20:01 HKT"
 }
