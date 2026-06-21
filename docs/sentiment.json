@@ -1,17 +1,17 @@
 {
-  "bull_pct": 36,
-  "bear_pct": 29,
-  "neutral_pct": 35,
-  "bull_bear_ratio": 1.2,
-  "overall_score": 50,
+  "bull_pct": 32,
+  "bear_pct": 21,
+  "neutral_pct": 47,
+  "bull_bear_ratio": 1.5,
+  "overall_score": 49,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 36,
+    "formula_score": 32,
     "ai_score": 56,
-    "bull_count": 5,
+    "bull_count": 6,
     "bear_count": 4,
-    "neutral_count": 5,
-    "total_posts": 14,
+    "neutral_count": 9,
+    "total_posts": 19,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,21 +19,39 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 14,
+  "post_count": 19,
   "hours_window": 24,
   "themes": [
     {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Plays",
-      "icon": "cpu",
+      "id": "geopolitical-risk",
+      "title": "Middle East Risk Premium",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "MU earnings catalyst Wednesday",
-        "DRAM momentum drawing speculation",
-        "LEAPS positioning ahead of prints",
-        "Short semi trades backfiring"
+        "Strait of Hormuz tensions dominate weekend chatter",
+        "Iran headlines fuel red/green open speculation",
+        "Traders bracing for gap volatility Monday",
+        "War narrative cited as positioning catalyst"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 42,
+      "tickers": [
+        "USO",
+        "SPY",
+        "QQQ"
+      ]
+    },
+    {
+      "id": "memory-semis",
+      "title": "Memory & Semiconductor Momentum",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "MU earnings Wednesday in focus",
+        "DRAM and WDC riding upside momentum",
+        "LEAPS profit-taking across memory names",
+        "Sector rotation into chip suppliers"
+      ],
+      "sentiment_score": 70,
       "tickers": [
         "MU",
         "DRAM",
@@ -43,86 +61,73 @@
       ]
     },
     {
-      "id": "big-wins",
-      "title": "High-Conviction Profit Posts",
-      "icon": "rocket",
+      "id": "ai-megacap",
+      "title": "AI Mega-Cap Conviction",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Outsized options gains celebrated",
-        "Concentrated bets paying off",
-        "Retail euphoria spreading",
-        "Cashing out LEAPS profits"
+        "Institutions doubling Amazon stakes noted",
+        "GPU/CPU/memory shortage thesis persists",
+        "High-growth large caps favored as defense",
+        "Repeated AI-stock losses humble some traders"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 64,
       "tickers": [
-        "CRSR",
-        "USO"
+        "AMZN",
+        "NVDA",
+        "GOOGL",
+        "AAPL"
+      ]
+    },
+    {
+      "id": "bull-bear-standoff",
+      "title": "Bull vs Bear Standoff",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Bears challenged on exit strategy",
+        "Victory-lap bears mocked for inconsistency",
+        "Short SPY/QQQ trades unwound painfully",
+        "Dip-buyers questioning bearish conviction"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "SPY",
+        "QQQ"
       ]
     },
     {
       "id": "loss-posts",
       "title": "Account Blow-Ups",
-      "icon": "skull",
+      "icon": "trending-down",
       "heat": "building",
       "bullets": [
-        "Multi-year savings wiped shorting semis",
-        "Repeated losses across AI names",
-        "Poorly timed entries warned",
-        "Speculative pain on display"
+        "Years of savings lost shorting semis",
+        "Repeated mistimed AI entries highlighted",
+        "Paper-hands execution despite right thesis",
+        "Index-fund discipline urged by commenters"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 28,
       "tickers": [
         "NVDA",
-        "SMCI"
+        "SMCI",
+        "SPY"
       ]
     },
     {
-      "id": "gold-rates",
-      "title": "Gold & Rate Outlook",
-      "icon": "trending-down",
-      "heat": "normal",
-      "bullets": [
-        "Short gold conviction trade",
-        "Rates expected to stay high",
-        "Rising 10-year yield pressure",
-        "No near-term cuts anticipated"
-      ],
-      "sentiment_score": 35,
-      "tickers": [
-        "GC"
-      ]
-    },
-    {
-      "id": "ai-defense",
-      "title": "AI & Defense Speculation",
-      "icon": "flame",
+      "id": "gaming-catalyst",
+      "title": "GTA VI Catalyst Hype",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "AI defense narrative gaining attention",
-        "SpaceX upside speculation",
-        "Geopolitical Iran headlines",
-        "Momentum chasing tech themes"
+        "TTWO jumps on pre-order trailer",
+        "Most hyped game launch ever cited",
+        "Speculators positioning for vertical move",
+        "Consumer entertainment narrative gaining traction"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 75,
       "tickers": [
-        "NVDA"
-      ]
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-smile",
-      "heat": "normal",
-      "bullets": [
-        "Restless post-holiday anticipation",
-        "Mixed speculation on single names",
-        "Snap and Meta debates",
-        "Risk appetite holding up"
-      ],
-      "sentiment_score": 52,
-      "tickers": [
-        "SNAP",
-        "META"
+        "TTWO"
       ]
     }
   ],
@@ -131,73 +136,73 @@
       "symbol": "MU",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Earnings catalyst hype",
+      "signal": "earnings momentum play",
       "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "loved but mistimed",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "shorts unwinding painfully",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "QQQ",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "bearish bets reversed",
+      "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
       "symbol": "DRAM",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Memory momentum chase",
+      "signal": "memory upside chase",
       "company_name": "Roundhill Memory ETF"
     },
     {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "AI darling, painful entries",
-      "company_name": "NVIDIA Corporation"
+      "symbol": "TTWO",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "GTA VI catalyst hype",
+      "company_name": "Take-Two Interactive Software, "
     },
     {
       "symbol": "AMD",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "LEAPS profit-taking",
+      "signal": "semi momentum",
       "company_name": "Advanced Micro Devices, Inc."
     },
     {
-      "symbol": "WDC",
+      "symbol": "USO",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Memory cycle exposure",
-      "company_name": "Western Digital Corporation"
-    },
-    {
-      "symbol": "GC",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Conviction short on gold",
-      "company_name": "Gold Aug 26"
-    },
-    {
-      "symbol": "SNAP",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Speculative bottom-fishing",
-      "company_name": "Snap Inc."
-    },
-    {
-      "symbol": "SMCI",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Earnings timing risk",
-      "company_name": "Super Micro Computer, Inc."
+      "mentions": 2,
+      "signal": "oil geopolitical bid",
+      "company_name": "United States Oil Fund"
     }
   ],
   "summary": [
     {
-      "text": "Memory and semiconductor names dominate the tape as traders position aggressively ahead of MU earnings, with LEAPS and momentum plays drawing fresh interest across DRAM, AMD and WDC. The energy skews optimistic into the catalyst.",
+      "text": "Memory and semiconductor names lead the speculative energy ahead of MU earnings, with traders chasing DRAM and WDC upside while institutions reportedly double down on AI mega-caps like Amazon. The momentum trade remains firmly intact.",
       "tag": "bullish"
     },
     {
-      "text": "A vocal undercurrent of pain persists, with account blow-ups from mistimed semi shorts and repeated losses across AI names reminding the board that conviction trades cut both ways. Defeated tones coexist with euphoric profit posts.",
-      "tag": "bearish"
+      "text": "Geopolitical risk dominates the weekend narrative as Strait of Hormuz and Iran headlines drive uncertainty into Monday's open. Traders are positioning around oil and bracing for a volatile gap in either direction.",
+      "tag": "notable"
     },
     {
-      "text": "Macro positioning leans defensive in pockets, notably a high-conviction gold short premised on sticky rates and rising yields, while AI-defense headlines and post-holiday restlessness keep speculative appetite elevated overall.",
-      "tag": "notable"
+      "text": "A cluster of capitulation posts—from blown semi shorts to repeatedly mistimed AI entries—underscores the pain of fighting the tape. Commenters increasingly invoke index-fund discipline as bearish conviction faces sustained ridicule.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-21T12:01:16.175088+00:00",
-  "updated_hkt": "2026-06-21 20:01 HKT"
+  "updated_at": "2026-06-21T21:01:29.847668+00:00",
+  "updated_hkt": "2026-06-22 05:01 HKT"
 }
