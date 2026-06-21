@@ -1,17 +1,17 @@
 {
-  "bull_pct": 31,
-  "bear_pct": 44,
-  "neutral_pct": 25,
-  "bull_bear_ratio": 0.7,
-  "overall_score": 40,
+  "bull_pct": 36,
+  "bear_pct": 29,
+  "neutral_pct": 35,
+  "bull_bear_ratio": 1.2,
+  "overall_score": 50,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 31,
-    "ai_score": 44,
+    "formula_score": 36,
+    "ai_score": 56,
     "bull_count": 5,
-    "bear_count": 7,
-    "neutral_count": 4,
-    "total_posts": 16,
+    "bear_count": 4,
+    "neutral_count": 5,
+    "total_posts": 14,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,181 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 16,
+  "post_count": 14,
   "hours_window": 24,
   "themes": [
     {
-      "id": "musk-tesla-empire",
-      "title": "Musk, Tesla & SpaceX Saga",
-      "icon": "rocket",
+      "id": "memory-semis",
+      "title": "Memory & Semiconductor Plays",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Heavy debate over Musk leadership",
-        "SpaceX-Tesla merger speculation building",
-        "Stock-driven sentiment swings persist",
-        "Polarized retail opinions dominate threads"
+        "MU earnings catalyst Wednesday",
+        "DRAM momentum drawing speculation",
+        "LEAPS positioning ahead of prints",
+        "Short semi trades backfiring"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 68,
       "tickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "id": "options-speculation",
-      "title": "Options Speculation Frenzy",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Record retail options activity cited",
-        "High-premium gambles celebrated",
-        "Outsized gains and blow-ups mixed",
-        "Risk appetite remains elevated"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "ARM",
-        "VXX"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Trading Losses & Bag Holders",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Multiple overnight account blow-ups",
-        "Bag holders heading into holiday",
-        "Tax-loss harvesting deliberations surface",
-        "Regret over long-dated positions"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "ARM"
+        "MU",
+        "DRAM",
+        "WDC",
+        "AMD",
+        "NVDA"
       ]
     },
     {
       "id": "big-wins",
-      "title": "Outsized Profit Posts",
-      "icon": "trending-up",
-      "bullets": [
-        "Large multi-bagger gain screenshots",
-        "Realized profits rotated into chips",
-        "Euphoric tone on winning trades",
-        "Lottery-ticket mentality reinforced"
-      ],
+      "title": "High-Conviction Profit Posts",
+      "icon": "rocket",
       "heat": "building",
-      "sentiment_score": 78,
+      "bullets": [
+        "Outsized options gains celebrated",
+        "Concentrated bets paying off",
+        "Retail euphoria spreading",
+        "Cashing out LEAPS profits"
+      ],
+      "sentiment_score": 80,
       "tickers": [
-        "MU",
-        "SNAP"
+        "CRSR",
+        "USO"
       ]
     },
     {
-      "id": "ai-semis",
-      "title": "AI & Semiconductor Outlook",
-      "icon": "cpu",
-      "heat": "normal",
+      "id": "loss-posts",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "building",
       "bullets": [
-        "NVDA demand thesis questioned long-term",
-        "DRAM and memory plays in focus",
-        "AI designing chips as risk",
-        "Speculative chip rotation continues"
+        "Multi-year savings wiped shorting semis",
+        "Repeated losses across AI names",
+        "Poorly timed entries warned",
+        "Speculative pain on display"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 22,
       "tickers": [
         "NVDA",
-        "MU"
+        "SMCI"
+      ]
+    },
+    {
+      "id": "gold-rates",
+      "title": "Gold & Rate Outlook",
+      "icon": "trending-down",
+      "heat": "normal",
+      "bullets": [
+        "Short gold conviction trade",
+        "Rates expected to stay high",
+        "Rising 10-year yield pressure",
+        "No near-term cuts anticipated"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "GC"
+      ]
+    },
+    {
+      "id": "ai-defense",
+      "title": "AI & Defense Speculation",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "AI defense narrative gaining attention",
+        "SpaceX upside speculation",
+        "Geopolitical Iran headlines",
+        "Momentum chasing tech themes"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "NVDA"
       ]
     },
     {
       "id": "market-mood",
       "title": "General Market Mood",
-      "icon": "mood-neutral",
+      "icon": "mood-smile",
       "heat": "normal",
       "bullets": [
-        "Traders await Monday open eagerly",
-        "Geopolitical headline risk weighs",
-        "Volatility positioning around catalysts",
-        "Mixed greed and fear tone"
+        "Restless post-holiday anticipation",
+        "Mixed speculation on single names",
+        "Snap and Meta debates",
+        "Risk appetite holding up"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 52,
       "tickers": [
-        "VXX"
+        "SNAP",
+        "META"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "TSLA",
-      "sentiment": "mixed",
-      "mentions": 8,
-      "signal": "Musk drama and merger speculation",
-      "company_name": "Tesla, Inc."
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Earnings catalyst hype",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "DRAM",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Memory momentum chase",
+      "company_name": "Roundhill Memory ETF"
     },
     {
       "symbol": "NVDA",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "AI demand thesis debated",
+      "mentions": 3,
+      "signal": "AI darling, painful entries",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "ARM",
-      "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "Covered call regret and losses",
-      "company_name": "Arm Holdings plc"
-    },
-    {
-      "symbol": "MU",
+      "symbol": "AMD",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "DRAM rotation conviction",
-      "company_name": "Micron Technology, Inc."
+      "mentions": 2,
+      "signal": "LEAPS profit-taking",
+      "company_name": "Advanced Micro Devices, Inc."
     },
     {
-      "symbol": "VXX",
+      "symbol": "WDC",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Memory cycle exposure",
+      "company_name": "Western Digital Corporation"
+    },
+    {
+      "symbol": "GC",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Volatility puts underwater",
-      "company_name": "iPath Series B S&P 500 VIX Shor"
+      "mentions": 1,
+      "signal": "Conviction short on gold",
+      "company_name": "Gold Aug 26"
     },
     {
       "symbol": "SNAP",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Bottom-fishing optimism",
+      "mentions": 1,
+      "signal": "Speculative bottom-fishing",
       "company_name": "Snap Inc."
     },
     {
-      "symbol": "UBI",
+      "symbol": "SMCI",
       "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Headline-driven downside fear",
-      "company_name": "GLOBAL X 0 TO 3 MONTH US T BILL"
-    },
-    {
-      "symbol": "SNXX",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Realized gains celebrated",
-      "company_name": "Tradr 2X Long SNDK Daily ETF"
+      "mentions": 1,
+      "signal": "Earnings timing risk",
+      "company_name": "Super Micro Computer, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment sits near neutral with a defensive tilt as a cluster of overnight account blow-ups and bag-holder posts collide with celebratory multi-bagger screenshots. The crowd remains highly speculative, leaning into high-premium options despite mounting regret on longer-dated positions.",
-      "tag": "notable"
+      "text": "Memory and semiconductor names dominate the tape as traders position aggressively ahead of MU earnings, with LEAPS and momentum plays drawing fresh interest across DRAM, AMD and WDC. The energy skews optimistic into the catalyst.",
+      "tag": "bullish"
     },
     {
-      "text": "Musk, Tesla and SpaceX merger chatter dominates engagement, generating intense but polarized reactions rather than unified conviction. Traders appear more entertained by the spectacle than positioned with directional confidence.",
-      "tag": "notable"
-    },
-    {
-      "text": "Record retail options activity underpins the euphoria, yet pain is visible in ARM covered calls and underwater VXX volatility puts. The energy is restless and gamble-heavy, suggesting fragile sentiment ahead of upcoming catalysts.",
+      "text": "A vocal undercurrent of pain persists, with account blow-ups from mistimed semi shorts and repeated losses across AI names reminding the board that conviction trades cut both ways. Defeated tones coexist with euphoric profit posts.",
       "tag": "bearish"
+    },
+    {
+      "text": "Macro positioning leans defensive in pockets, notably a high-conviction gold short premised on sticky rates and rising yields, while AI-defense headlines and post-holiday restlessness keep speculative appetite elevated overall.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-20T21:01:24.179514+00:00",
-  "updated_hkt": "2026-06-21 05:01 HKT"
+  "updated_at": "2026-06-21T12:01:16.175088+00:00",
+  "updated_hkt": "2026-06-21 20:01 HKT"
 }
