@@ -1,17 +1,17 @@
 {
   "bull_pct": 32,
-  "bear_pct": 21,
-  "neutral_pct": 47,
-  "bull_bear_ratio": 1.5,
-  "overall_score": 49,
+  "bear_pct": 23,
+  "neutral_pct": 45,
+  "bull_bear_ratio": 1.4,
+  "overall_score": 50,
   "overall_label": "Neutral",
   "methodology": {
     "formula_score": 32,
-    "ai_score": 56,
-    "bull_count": 6,
-    "bear_count": 4,
-    "neutral_count": 9,
-    "total_posts": 19,
+    "ai_score": 58,
+    "bull_count": 7,
+    "bear_count": 5,
+    "neutral_count": 10,
+    "total_posts": 22,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,190 +19,175 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 19,
+  "post_count": 22,
   "hours_window": 24,
   "themes": [
     {
-      "id": "geopolitical-risk",
-      "title": "Middle East Risk Premium",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Strait of Hormuz tensions dominate weekend chatter",
-        "Iran headlines fuel red/green open speculation",
-        "Traders bracing for gap volatility Monday",
-        "War narrative cited as positioning catalyst"
-      ],
-      "sentiment_score": 42,
-      "tickers": [
-        "USO",
-        "SPY",
-        "QQQ"
-      ]
-    },
-    {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Momentum",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "MU earnings Wednesday in focus",
-        "DRAM and WDC riding upside momentum",
-        "LEAPS profit-taking across memory names",
-        "Sector rotation into chip suppliers"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "MU",
-        "DRAM",
-        "WDC",
-        "AMD",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "ai-megacap",
-      "title": "AI Mega-Cap Conviction",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Institutions doubling Amazon stakes noted",
-        "GPU/CPU/memory shortage thesis persists",
-        "High-growth large caps favored as defense",
-        "Repeated AI-stock losses humble some traders"
-      ],
-      "sentiment_score": 64,
-      "tickers": [
-        "AMZN",
-        "NVDA",
-        "GOOGL",
-        "AAPL"
-      ]
-    },
-    {
-      "id": "bull-bear-standoff",
-      "title": "Bull vs Bear Standoff",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Bears challenged on exit strategy",
-        "Victory-lap bears mocked for inconsistency",
-        "Short SPY/QQQ trades unwound painfully",
-        "Dip-buyers questioning bearish conviction"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "SPY",
-        "QQQ"
-      ]
-    },
-    {
-      "id": "loss-posts",
-      "title": "Account Blow-Ups",
-      "icon": "trending-down",
-      "heat": "building",
-      "bullets": [
-        "Years of savings lost shorting semis",
-        "Repeated mistimed AI entries highlighted",
-        "Paper-hands execution despite right thesis",
-        "Index-fund discipline urged by commenters"
-      ],
-      "sentiment_score": 28,
-      "tickers": [
-        "NVDA",
-        "SMCI",
-        "SPY"
-      ]
-    },
-    {
-      "id": "gaming-catalyst",
-      "title": "GTA VI Catalyst Hype",
+      "id": "ttwo-gta6",
+      "title": "GTA VI Pre-order Hype",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "TTWO jumps on pre-order trailer",
-        "Most hyped game launch ever cited",
-        "Speculators positioning for vertical move",
-        "Consumer entertainment narrative gaining traction"
+        "Pre-orders open June 25 catalyst",
+        "Traders front-running trailer momentum",
+        "Generational hype fuels upside conviction",
+        "Sell-the-spike strategies under debate"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 78,
       "tickers": [
         "TTWO"
+      ]
+    },
+    {
+      "id": "bull-bear-war",
+      "title": "Bull vs Bear Standoff",
+      "icon": "swords",
+      "heat": "hot",
+      "bullets": [
+        "Bears challenged on exit triggers",
+        "Bullish victory laps gaining volume",
+        "Skepticism toward perma-bear positioning",
+        "Dip-buying conviction reasserting itself"
+      ],
+      "sentiment_score": 62,
+      "tickers": []
+    },
+    {
+      "id": "fed-rates",
+      "title": "Fed Rate Path Concerns",
+      "icon": "building-bank",
+      "heat": "building",
+      "bullets": [
+        "BofA sees hikes, no cuts to 2028",
+        "Sticky inflation outlook weighs",
+        "Policy rate seen near 4.50%",
+        "Higher-for-longer narrative rebuilding"
+      ],
+      "sentiment_score": 32,
+      "tickers": []
+    },
+    {
+      "id": "musk-valuation",
+      "title": "Musk & Mega-Wealth Debate",
+      "icon": "skull",
+      "heat": "normal",
+      "bullets": [
+        "Skepticism toward Tesla intercompany flows",
+        "Questioning concentrated wealth value",
+        "Cross-entity profit accounting scrutinized",
+        "Cultural fascination with extreme net worth"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "TSLA"
+      ]
+    },
+    {
+      "id": "semis-memory",
+      "title": "Memory & Semiconductor Plays",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "DRAM upcycle driving call buying",
+        "Micron positioning paying off",
+        "Speculative leverage into chip names",
+        "Strong conviction on continued upside"
+      ],
+      "sentiment_score": 80,
+      "tickers": [
+        "MU"
+      ]
+    },
+    {
+      "id": "retail-losses",
+      "title": "Retail Risk & Account Blow-ups",
+      "icon": "trending-down",
+      "heat": "normal",
+      "bullets": [
+        "Six-year option losses confessed",
+        "Life savings concentrated in few names",
+        "Caution on full-port speculation",
+        "RDDT bull thesis questioned"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "RDDT",
+        "AMZN"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "TTWO",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "GTA VI pre-order momentum play",
+      "company_name": "Take-Two Interactive Software, "
+    },
+    {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "earnings momentum play",
+      "mentions": 5,
+      "signal": "DRAM upcycle conviction calls",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "NVDA",
+      "symbol": "TSLA",
       "sentiment": "mixed",
       "mentions": 4,
-      "signal": "loved but mistimed",
-      "company_name": "NVIDIA Corporation"
+      "signal": "Valuation and accounting skepticism",
+      "company_name": "Tesla, Inc."
+    },
+    {
+      "symbol": "RDDT",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Bull thesis flagged as flawed",
+      "company_name": "Reddit, Inc."
+    },
+    {
+      "symbol": "MSFT",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Bag-holder mockery",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "AMZN",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Top funds doubling stakes",
+      "company_name": "Amazon.com, Inc."
     },
     {
       "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "shorts unwinding painfully",
+      "mentions": 2,
+      "signal": "Bull-bear direction debate",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "QQQ",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "bearish bets reversed",
-      "company_name": "Invesco QQQ Trust, Series 1"
-    },
-    {
-      "symbol": "DRAM",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "memory upside chase",
-      "company_name": "Roundhill Memory ETF"
-    },
-    {
-      "symbol": "TTWO",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "GTA VI catalyst hype",
-      "company_name": "Take-Two Interactive Software, "
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "semi momentum",
-      "company_name": "Advanced Micro Devices, Inc."
-    },
-    {
-      "symbol": "USO",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "oil geopolitical bid",
-      "company_name": "United States Oil Fund"
+      "symbol": "XAI",
+      "sentiment": "neutral",
+      "mentions": 1,
+      "signal": "Mentioned in Musk entity critique",
+      "company_name": "E-mini Industrial Select Sector"
     }
   ],
   "summary": [
     {
-      "text": "Memory and semiconductor names lead the speculative energy ahead of MU earnings, with traders chasing DRAM and WDC upside while institutions reportedly double down on AI mega-caps like Amazon. The momentum trade remains firmly intact.",
+      "text": "Sentiment leans constructive as bulls openly challenge bears to define exit triggers, while GTA VI pre-order speculation pushes TTWO into a momentum favorite ahead of the June 25 catalyst.",
       "tag": "bullish"
     },
     {
-      "text": "Geopolitical risk dominates the weekend narrative as Strait of Hormuz and Iran headlines drive uncertainty into Monday's open. Traders are positioning around oil and bracing for a volatile gap in either direction.",
-      "tag": "notable"
+      "text": "Memory and semiconductor enthusiasm runs strong, with leveraged Micron and DRAM positioning rewarding speculative traders and reinforcing a risk-on appetite across the batch.",
+      "tag": "bullish"
     },
     {
-      "text": "A cluster of capitulation posts—from blown semi shorts to repeatedly mistimed AI entries—underscores the pain of fighting the tape. Commenters increasingly invoke index-fund discipline as bearish conviction faces sustained ridicule.",
-      "tag": "bearish"
+      "text": "A counterweight persists: BofA's higher-for-longer rate outlook, RDDT valuation skepticism, and candid account blow-up confessions remind the crowd that euphoria carries elevated downside risk.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-21T21:01:29.847668+00:00",
-  "updated_hkt": "2026-06-22 05:01 HKT"
+  "updated_at": "2026-06-22T12:01:45.356060+00:00",
+  "updated_hkt": "2026-06-22 20:01 HKT"
 }

@@ -334,5 +334,12 @@
     "label": "Neutral",
     "formula_score": 32,
     "ai_score": 56
+  },
+  {
+    "ts": "2026-06-22 20:01 HKT",
+    "score": 50,
+    "label": "Neutral",
+    "formula_score": 32,
+    "ai_score": 58
   }
 ]
