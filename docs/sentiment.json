@@ -1,17 +1,17 @@
 {
-  "bull_pct": 32,
-  "bear_pct": 23,
-  "neutral_pct": 45,
-  "bull_bear_ratio": 1.4,
-  "overall_score": 50,
+  "bull_pct": 49,
+  "bear_pct": 29,
+  "neutral_pct": 22,
+  "bull_bear_ratio": 1.7,
+  "overall_score": 55,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 32,
+    "formula_score": 49,
     "ai_score": 58,
-    "bull_count": 7,
-    "bear_count": 5,
-    "neutral_count": 10,
-    "total_posts": 22,
+    "bull_count": 20,
+    "bear_count": 12,
+    "neutral_count": 9,
+    "total_posts": 41,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,175 +19,186 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 22,
+  "post_count": 41,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ttwo-gta6",
-      "title": "GTA VI Pre-order Hype",
+      "id": "spacex-ipo",
+      "title": "SpaceX IPO Aftermath",
       "icon": "rocket",
-      "heat": "building",
+      "heat": "hot",
       "bullets": [
-        "Pre-orders open June 25 catalyst",
-        "Traders front-running trailer momentum",
-        "Generational hype fuels upside conviction",
-        "Sell-the-spike strategies under debate"
+        "Post-IPO selloff sparking losses",
+        "Rug-pull accusations spreading",
+        "Compute deals fail to lift shares",
+        "Bearish put positioning ahead of lockup"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 28,
       "tickers": [
-        "TTWO"
+        "SPCX"
       ]
     },
     {
-      "id": "bull-bear-war",
-      "title": "Bull vs Bear Standoff",
-      "icon": "swords",
+      "id": "memory-semis",
+      "title": "Memory & Semiconductor Rally",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Bears challenged on exit triggers",
-        "Bullish victory laps gaining volume",
-        "Skepticism toward perma-bear positioning",
-        "Dip-buying conviction reasserting itself"
+        "Micron DRAM calls printing strong gains",
+        "AMD long-hold conviction high",
+        "INTC speculative upside momentum",
+        "Cyclical memory demand fueling bids"
       ],
-      "sentiment_score": 62,
-      "tickers": []
+      "sentiment_score": 82,
+      "tickers": [
+        "MU",
+        "AMD",
+        "INTC",
+        "CRDO"
+      ]
     },
     {
-      "id": "fed-rates",
-      "title": "Fed Rate Path Concerns",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure & Compute",
+      "icon": "server",
+      "heat": "building",
+      "bullets": [
+        "Localized AI inference plays emerging",
+        "Hyperscaler lease anticipation building",
+        "Circular compute deals draw skepticism",
+        "Data center power demand thesis"
+      ],
+      "sentiment_score": 65,
+      "tickers": [
+        "CRSR",
+        "KEEL",
+        "HIVE",
+        "SHAZ"
+      ]
+    },
+    {
+      "id": "macro-fed",
+      "title": "Macro & Fed Policy",
       "icon": "building-bank",
       "heat": "building",
       "bullets": [
-        "BofA sees hikes, no cuts to 2028",
-        "Sticky inflation outlook weighs",
-        "Policy rate seen near 4.50%",
-        "Higher-for-longer narrative rebuilding"
+        "BofA warns no cuts until 2028",
+        "Sticky inflation pressuring rate path",
+        "Systemic bubble warnings circulating",
+        "Greenspan passing marks an era"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 35,
       "tickers": []
     },
     {
-      "id": "musk-valuation",
-      "title": "Musk & Mega-Wealth Debate",
+      "id": "loss-blowups",
+      "title": "Trading Losses & Capitulation",
       "icon": "skull",
-      "heat": "normal",
-      "bullets": [
-        "Skepticism toward Tesla intercompany flows",
-        "Questioning concentrated wealth value",
-        "Cross-entity profit accounting scrutinized",
-        "Cultural fascination with extreme net worth"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "id": "semis-memory",
-      "title": "Memory & Semiconductor Plays",
-      "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "DRAM upcycle driving call buying",
-        "Micron positioning paying off",
-        "Speculative leverage into chip names",
-        "Strong conviction on continued upside"
+        "Multiple account blow-up posts",
+        "Traders quitting options for investing",
+        "Years of cumulative losses tallied",
+        "Defeated tone amid green tape"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 22,
       "tickers": [
-        "MU"
+        "SPCX"
       ]
     },
     {
-      "id": "retail-losses",
-      "title": "Retail Risk & Account Blow-ups",
-      "icon": "trending-down",
-      "heat": "normal",
+      "id": "speculative-yolo",
+      "title": "Speculative high-conviction Plays",
+      "icon": "flame",
+      "heat": "building",
       "bullets": [
-        "Six-year option losses confessed",
-        "Life savings concentrated in few names",
-        "Caution on full-port speculation",
-        "RDDT bull thesis questioned"
+        "Russell reconstitution arbitrage trades",
+        "Biotech phase 3 catalyst chasing",
+        "Full-port small-cap gambles",
+        "GTA6 preorder anticipation on TTWO"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 68,
       "tickers": [
-        "RDDT",
-        "AMZN"
+        "DFTX",
+        "INFQ",
+        "ONDS",
+        "RCAT",
+        "TTWO"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "TTWO",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "GTA VI pre-order momentum play",
-      "company_name": "Take-Two Interactive Software, "
+      "symbol": "SPCX",
+      "sentiment": "bearish",
+      "mentions": 7,
+      "signal": "Post-IPO rug-pull fears, put buyers circling",
+      "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "DRAM upcycle conviction calls",
+      "mentions": 6,
+      "signal": "DRAM cycle calls printing, profit-taking",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "TSLA",
-      "sentiment": "mixed",
+      "symbol": "CRDO",
+      "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Valuation and accounting skepticism",
-      "company_name": "Tesla, Inc."
+      "signal": "Exponential revenue, momentum chasing",
+      "company_name": "Credo Technology Group Holding "
+    },
+    {
+      "symbol": "DFTX",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Phase 3 catalyst rally",
+      "company_name": "Definium Therapeutics, Inc."
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "High-conviction long hold",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "INTC",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Speculative outsized upside",
+      "company_name": "Intel Corporation"
+    },
+    {
+      "symbol": "KEEL",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Hyperscaler lease anticipation",
+      "company_name": "Keel Infrastructure Corp."
     },
     {
       "symbol": "RDDT",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Bull thesis flagged as flawed",
-      "company_name": "Reddit, Inc."
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Bag-holder mockery",
-      "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "AMZN",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Top funds doubling stakes",
-      "company_name": "Amazon.com, Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Bull-bear direction debate",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "XAI",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Mentioned in Musk entity critique",
-      "company_name": "E-mini Industrial Select Sector"
+      "signal": "Overvaluation warning, ad-model skepticism",
+      "company_name": "Reddit, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans constructive as bulls openly challenge bears to define exit triggers, while GTA VI pre-order speculation pushes TTWO into a momentum favorite ahead of the June 25 catalyst.",
+      "text": "The freshly public SpaceX dominates the tape with disappointment, as post-IPO weakness fuels rug-pull accusations and put positioning into the lockup window, even as billion-dollar compute deals fail to arrest the share-price slide.",
+      "tag": "bearish"
+    },
+    {
+      "text": "Memory and semiconductor names remain the profit engine, with Micron DRAM calls and AMD conviction holds driving euphoric gain posts, reflecting persistent appetite for the AI hardware cycle despite stretched valuations.",
       "tag": "bullish"
     },
     {
-      "text": "Memory and semiconductor enthusiasm runs strong, with leveraged Micron and DRAM positioning rewarding speculative traders and reinforcing a risk-on appetite across the batch.",
-      "tag": "bullish"
-    },
-    {
-      "text": "A counterweight persists: BofA's higher-for-longer rate outlook, RDDT valuation skepticism, and candid account blow-up confessions remind the crowd that euphoria carries elevated downside risk.",
+      "text": "Macro undercurrents turned cautious as BofA signaled no Fed cuts until 2028 and systemic-bubble warnings circulated, while capitulation posts from defeated traders contrast sharply with the speculative greed elsewhere in the batch.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-22T12:01:45.356060+00:00",
-  "updated_hkt": "2026-06-22 20:01 HKT"
+  "updated_at": "2026-06-22T21:02:38.333909+00:00",
+  "updated_hkt": "2026-06-23 05:02 HKT"
 }
