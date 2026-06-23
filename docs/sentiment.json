@@ -1,17 +1,17 @@
 {
-  "bull_pct": 49,
-  "bear_pct": 29,
-  "neutral_pct": 22,
-  "bull_bear_ratio": 1.7,
-  "overall_score": 55,
+  "bull_pct": 48,
+  "bear_pct": 38,
+  "neutral_pct": 14,
+  "bull_bear_ratio": 1.3,
+  "overall_score": 48,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 49,
-    "ai_score": 58,
-    "bull_count": 20,
-    "bear_count": 12,
-    "neutral_count": 9,
-    "total_posts": 41,
+    "formula_score": 48,
+    "ai_score": 48,
+    "bull_count": 23,
+    "bear_count": 18,
+    "neutral_count": 7,
+    "total_posts": 48,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,19 +19,19 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 41,
+  "post_count": 48,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-ipo",
-      "title": "SpaceX IPO Aftermath",
+      "id": "spacex-ipo-fallout",
+      "title": "SpaceX IPO Disappointment",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Post-IPO selloff sparking losses",
-        "Rug-pull accusations spreading",
-        "Compute deals fail to lift shares",
-        "Bearish put positioning ahead of lockup"
+        "Post-IPO share price slides sharply",
+        "Speculative traders nursing heavy losses",
+        "Put buyers positioning for further downside",
+        "Reflection compute deal fails to lift shares"
       ],
       "sentiment_score": 28,
       "tickers": [
@@ -39,91 +39,91 @@
       ]
     },
     {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Rally",
+      "id": "semiconductor-memory",
+      "title": "Semiconductors & Memory",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Micron DRAM calls printing strong gains",
-        "AMD long-hold conviction high",
-        "INTC speculative upside momentum",
-        "Cyclical memory demand fueling bids"
+        "Micron rally rewards high-conviction holders",
+        "AMD and Broadcom drive AI demand",
+        "Profit-taking after strong upside momentum",
+        "Mixed entries near all-time highs"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 68,
       "tickers": [
         "MU",
         "AMD",
-        "INTC",
-        "CRDO"
+        "AVGO",
+        "INTC"
       ]
     },
     {
       "id": "ai-infrastructure",
-      "title": "AI Infrastructure & Compute",
-      "icon": "server",
+      "title": "AI Infrastructure & Power",
+      "icon": "bolt",
       "heat": "building",
       "bullets": [
-        "Localized AI inference plays emerging",
-        "Hyperscaler lease anticipation building",
-        "Circular compute deals draw skepticism",
-        "Data center power demand thesis"
+        "Local inference plays gaining attention",
+        "Power market demand seen accelerating",
+        "Hyperscaler leasing speculation builds",
+        "CRDO revenue growth draws bulls"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 70,
       "tickers": [
-        "CRSR",
+        "CRDO",
         "KEEL",
         "HIVE",
         "SHAZ"
       ]
     },
     {
-      "id": "macro-fed",
-      "title": "Macro & Fed Policy",
-      "icon": "building-bank",
+      "id": "credit-systemic-risk",
+      "title": "Credit & Systemic Risk",
+      "icon": "alert-triangle",
       "heat": "building",
       "bullets": [
-        "BofA warns no cuts until 2028",
-        "Sticky inflation pressuring rate path",
-        "Systemic bubble warnings circulating",
-        "Greenspan passing marks an era"
+        "Private credit fund redemptions surge",
+        "Liquidity gates trap exiting investors",
+        "Warnings of systemic collapse circulate",
+        "Bubble fears compared to 2008"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 22,
       "tickers": []
     },
     {
-      "id": "loss-blowups",
-      "title": "Trading Losses & Capitulation",
-      "icon": "skull",
-      "heat": "building",
+      "id": "yolo-gambling",
+      "title": "high-conviction Speculation",
+      "icon": "dice",
+      "heat": "hot",
       "bullets": [
-        "Multiple account blow-up posts",
-        "Traders quitting options for investing",
-        "Years of cumulative losses tallied",
-        "Defeated tone amid green tape"
+        "Full-port bets on small caps",
+        "0DTE options remain popular",
+        "Casino mentality dominates positioning",
+        "Big swings between profit and loss"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 55,
       "tickers": [
-        "SPCX"
+        "RCAT",
+        "DFTX",
+        "MSTR",
+        "KORU"
       ]
     },
     {
-      "id": "speculative-yolo",
-      "title": "Speculative high-conviction Plays",
-      "icon": "flame",
+      "id": "index-arbitrage",
+      "title": "Russell Reconstitution Trade",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Russell reconstitution arbitrage trades",
-        "Biotech phase 3 catalyst chasing",
-        "Full-port small-cap gambles",
-        "GTA6 preorder anticipation on TTWO"
+        "Passive funds forced buying Friday",
+        "Deep ITM calls loaded on adds",
+        "INFQ and ONDS targeted",
+        "Low IV crush positioning"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 65,
       "tickers": [
-        "DFTX",
         "INFQ",
-        "ONDS",
-        "RCAT",
-        "TTWO"
+        "ONDS"
       ]
     }
   ],
@@ -131,74 +131,74 @@
     {
       "symbol": "SPCX",
       "sentiment": "bearish",
-      "mentions": 7,
-      "signal": "Post-IPO rug-pull fears, put buyers circling",
+      "mentions": 12,
+      "signal": "Post-IPO disappointment and short positioning",
       "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
       "mentions": 6,
-      "signal": "DRAM cycle calls printing, profit-taking",
+      "signal": "Memory rally rewards conviction holders",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "CRDO",
+      "symbol": "AMD",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Exponential revenue, momentum chasing",
-      "company_name": "Credo Technology Group Holding "
+      "mentions": 3,
+      "signal": "AI chip leader, long-term favorite",
+      "company_name": "Advanced Micro Devices, Inc."
     },
     {
       "symbol": "DFTX",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Phase 3 catalyst rally",
+      "signal": "Phase 3 catalyst driving speculation",
       "company_name": "Definium Therapeutics, Inc."
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "High-conviction long hold",
-      "company_name": "Advanced Micro Devices, Inc."
-    },
-    {
-      "symbol": "INTC",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Speculative outsized upside",
-      "company_name": "Intel Corporation"
     },
     {
       "symbol": "KEEL",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Hyperscaler lease anticipation",
+      "signal": "Hyperscaler lease catalyst awaited",
       "company_name": "Keel Infrastructure Corp."
     },
     {
-      "symbol": "RDDT",
+      "symbol": "MSFT",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Overvaluation warning, ad-model skepticism",
-      "company_name": "Reddit, Inc."
+      "signal": "Underwater traders needing recovery",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "INTC",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Outsized gains posted",
+      "company_name": "Intel Corporation"
+    },
+    {
+      "symbol": "CRDO",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Exponential revenue, rich multiple debated",
+      "company_name": "Credo Technology Group Holding "
     }
   ],
   "summary": [
     {
-      "text": "The freshly public SpaceX dominates the tape with disappointment, as post-IPO weakness fuels rug-pull accusations and put positioning into the lockup window, even as billion-dollar compute deals fail to arrest the share-price slide.",
+      "text": "The SpaceX IPO has become a focal point of pain, with the post-listing slide trapping speculative traders and triggering a wave of loss posts and bearish put positioning ahead of the lockup expiry.",
       "tag": "bearish"
     },
     {
-      "text": "Memory and semiconductor names remain the profit engine, with Micron DRAM calls and AMD conviction holds driving euphoric gain posts, reflecting persistent appetite for the AI hardware cycle despite stretched valuations.",
+      "text": "Semiconductor and AI infrastructure names remain the bullish counterweight, as Micron, AMD and CRDO reward high-conviction holders while power and local-inference plays attract fresh speculative interest.",
       "tag": "bullish"
     },
     {
-      "text": "Macro undercurrents turned cautious as BofA signaled no Fed cuts until 2028 and systemic-bubble warnings circulated, while capitulation posts from defeated traders contrast sharply with the speculative greed elsewhere in the batch.",
+      "text": "Beneath the casino energy, warnings around private credit fund redemptions and systemic bubble risk are gaining traction, leaving the batch finely balanced between euphoria and creeping anxiety.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-22T21:02:38.333909+00:00",
-  "updated_hkt": "2026-06-23 05:02 HKT"
+  "updated_at": "2026-06-23T12:03:03.719451+00:00",
+  "updated_hkt": "2026-06-23 20:03 HKT"
 }
