@@ -1,17 +1,17 @@
 {
   "bull_pct": 48,
-  "bear_pct": 38,
-  "neutral_pct": 14,
-  "bull_bear_ratio": 1.3,
-  "overall_score": 48,
+  "bear_pct": 28,
+  "neutral_pct": 24,
+  "bull_bear_ratio": 1.8,
+  "overall_score": 52,
   "overall_label": "Neutral",
   "methodology": {
     "formula_score": 48,
-    "ai_score": 48,
-    "bull_count": 23,
-    "bear_count": 18,
+    "ai_score": 54,
+    "bull_count": 14,
+    "bear_count": 8,
     "neutral_count": 7,
-    "total_posts": 48,
+    "total_posts": 29,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,186 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 48,
+  "post_count": 29,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-ipo-fallout",
-      "title": "SpaceX IPO Disappointment",
-      "icon": "rocket",
+      "id": "msft-earnings-bets",
+      "title": "Microsoft Earnings Positioning",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Post-IPO share price slides sharply",
-        "Speculative traders nursing heavy losses",
-        "Put buyers positioning for further downside",
-        "Reflection compute deal fails to lift shares"
+        "Large speculative call positions ahead of July earnings",
+        "Traders chasing IV spike and recovery",
+        "Pain reported on underwater MSFT bets",
+        "Break-even hopes pinned to earnings catalyst"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 58,
+      "tickers": [
+        "MSFT"
+      ]
+    },
+    {
+      "id": "spcx-space",
+      "title": "SpaceX / SPCX Speculation",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "Mixed bullish and bearish positioning on SPCX",
+        "Some traders booking profits, others underwater",
+        "Bearish puts gaining traction",
+        "Active retail interest in space narrative"
+      ],
+      "sentiment_score": 45,
       "tickers": [
         "SPCX"
       ]
     },
     {
-      "id": "semiconductor-memory",
-      "title": "Semiconductors & Memory",
-      "icon": "cpu",
+      "id": "ai-chips",
+      "title": "AI & Chip Plays",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Micron rally rewards high-conviction holders",
-        "AMD and Broadcom drive AI demand",
-        "Profit-taking after strong upside momentum",
-        "Mixed entries near all-time highs"
+        "Cerebras posts strong revenue growth post-IPO",
+        "Hunt for second-order AI beneficiaries",
+        "Semiconductor selloff bruising leveraged longs",
+        "AMD and Broadcom positioning under pressure"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 60,
       "tickers": [
-        "MU",
         "AMD",
         "AVGO",
-        "INTC"
+        "NVDA",
+        "MU"
       ]
     },
     {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure & Power",
-      "icon": "bolt",
-      "heat": "building",
-      "bullets": [
-        "Local inference plays gaining attention",
-        "Power market demand seen accelerating",
-        "Hyperscaler leasing speculation builds",
-        "CRDO revenue growth draws bulls"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "CRDO",
-        "KEEL",
-        "HIVE",
-        "SHAZ"
-      ]
-    },
-    {
-      "id": "credit-systemic-risk",
-      "title": "Credit & Systemic Risk",
-      "icon": "alert-triangle",
-      "heat": "building",
-      "bullets": [
-        "Private credit fund redemptions surge",
-        "Liquidity gates trap exiting investors",
-        "Warnings of systemic collapse circulate",
-        "Bubble fears compared to 2008"
-      ],
-      "sentiment_score": 22,
-      "tickers": []
-    },
-    {
-      "id": "yolo-gambling",
-      "title": "high-conviction Speculation",
-      "icon": "dice",
-      "heat": "hot",
-      "bullets": [
-        "Full-port bets on small caps",
-        "0DTE options remain popular",
-        "Casino mentality dominates positioning",
-        "Big swings between profit and loss"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "RCAT",
-        "DFTX",
-        "MSTR",
-        "KORU"
-      ]
-    },
-    {
-      "id": "index-arbitrage",
-      "title": "Russell Reconstitution Trade",
+      "id": "crypto-leverage",
+      "title": "Crypto-Linked Leverage",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Passive funds forced buying Friday",
-        "Deep ITM calls loaded on adds",
-        "INFQ and ONDS targeted",
-        "Low IV crush positioning"
+        "Bitcoin drawdown drawing line-in-sand bets",
+        "Leveraged MSTU high-conviction positions opened",
+        "High-conviction all-in crypto proxy trades",
+        "Volatility attracting speculative flows"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 55,
       "tickers": [
-        "INFQ",
-        "ONDS"
+        "MSTU"
+      ]
+    },
+    {
+      "id": "loss-and-gain-posts",
+      "title": "Account Swings & Yolos",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Mix of profit posts and account blow-ups",
+        "Margin-fueled losses on chip selloffs",
+        "Diamond-hands holders booking partial gains",
+        "Top-tick award culture in full swing"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "MSFT",
+        "AMD",
+        "MU"
+      ]
+    },
+    {
+      "id": "valuation-credit",
+      "title": "Valuation & Credit Watch",
+      "icon": "chart-line",
+      "heat": "normal",
+      "bullets": [
+        "Debate over PEG versus P/E discipline",
+        "Private credit fund redemption pressure rising",
+        "Constellation nuclear deal with Walmart noted",
+        "ServiceNow flagged as bottom-fishing candidate"
+      ],
+      "sentiment_score": 50,
+      "tickers": [
+        "NOW",
+        "CEG",
+        "FLUT"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "MSFT",
+      "sentiment": "mixed",
+      "mentions": 5,
+      "signal": "Earnings recovery hopes amid pain",
+      "company_name": "Microsoft Corporation"
+    },
+    {
       "symbol": "SPCX",
-      "sentiment": "bearish",
-      "mentions": 12,
-      "signal": "Post-IPO disappointment and short positioning",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Divided longs and bears",
       "company_name": "Space Exploration Technologies "
+    },
+    {
+      "symbol": "MSTU",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Leveraged crypto line-in-sand bet",
+      "company_name": "T-Rex 2X Long MSTR Daily Target"
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Caught in chip selloff",
+      "company_name": "Advanced Micro Devices, Inc."
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Memory rally rewards conviction holders",
+      "mentions": 2,
+      "signal": "Diamond-hands chip holders",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "AMD",
+      "symbol": "NOW",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "AI chip leader, long-term favorite",
-      "company_name": "Advanced Micro Devices, Inc."
+      "mentions": 1,
+      "signal": "Bottom-fishing into earnings",
+      "company_name": "ServiceNow, Inc."
     },
     {
-      "symbol": "DFTX",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Phase 3 catalyst driving speculation",
-      "company_name": "Definium Therapeutics, Inc."
-    },
-    {
-      "symbol": "KEEL",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Hyperscaler lease catalyst awaited",
-      "company_name": "Keel Infrastructure Corp."
-    },
-    {
-      "symbol": "MSFT",
+      "symbol": "FLUT",
       "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Underwater traders needing recovery",
-      "company_name": "Microsoft Corporation"
+      "mentions": 1,
+      "signal": "Earnings collapse warning",
+      "company_name": "Flutter Entertainment plc"
     },
     {
-      "symbol": "INTC",
+      "symbol": "CEG",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Outsized gains posted",
-      "company_name": "Intel Corporation"
-    },
-    {
-      "symbol": "CRDO",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Exponential revenue, rich multiple debated",
-      "company_name": "Credo Technology Group Holding "
+      "mentions": 1,
+      "signal": "Nuclear supply deal optimism",
+      "company_name": "Constellation Energy Corporatio"
     }
   ],
   "summary": [
     {
-      "text": "The SpaceX IPO has become a focal point of pain, with the post-listing slide trapping speculative traders and triggering a wave of loss posts and bearish put positioning ahead of the lockup expiry.",
+      "text": "Sentiment skews cautiously greedy as speculative traders pile into Microsoft calls and leveraged crypto proxies ahead of July earnings, betting on an IV spike and recovery despite visible underwater positions across the board.",
+      "tag": "notable"
+    },
+    {
+      "text": "A sharp semiconductor selloff has bruised margin-fueled longs in AMD, Broadcom, and chip names, producing painful account blow-ups even as a Cerebras growth report and AI narrative keep the upside story alive.",
       "tag": "bearish"
     },
     {
-      "text": "Semiconductor and AI infrastructure names remain the bullish counterweight, as Micron, AMD and CRDO reward high-conviction holders while power and local-inference plays attract fresh speculative interest.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Beneath the casino energy, warnings around private credit fund redemptions and systemic bubble risk are gaining traction, leaving the batch finely balanced between euphoria and creeping anxiety.",
+      "text": "SpaceX-linked SPCX trades split the crowd between profit-takers and bears, while macro undertones — rising private credit redemptions and nuclear power deals — add a layer of more sober institutional flavor to the speculative froth.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-23T12:03:03.719451+00:00",
-  "updated_hkt": "2026-06-23 20:03 HKT"
+  "updated_at": "2026-06-23T21:02:13.696746+00:00",
+  "updated_hkt": "2026-06-24 05:02 HKT"
 }
