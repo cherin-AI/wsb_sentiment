@@ -1,17 +1,17 @@
 {
-  "bull_pct": 48,
-  "bear_pct": 28,
-  "neutral_pct": 24,
-  "bull_bear_ratio": 1.8,
-  "overall_score": 52,
+  "bull_pct": 44,
+  "bear_pct": 18,
+  "neutral_pct": 38,
+  "bull_bear_ratio": 2.4,
+  "overall_score": 57,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 48,
-    "ai_score": 54,
-    "bull_count": 14,
-    "bear_count": 8,
-    "neutral_count": 7,
-    "total_posts": 29,
+    "formula_score": 44,
+    "ai_score": 62,
+    "bull_count": 17,
+    "bear_count": 7,
+    "neutral_count": 15,
+    "total_posts": 39,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,182 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 29,
+  "post_count": 39,
   "hours_window": 24,
   "themes": [
     {
-      "id": "msft-earnings-bets",
-      "title": "Microsoft Earnings Positioning",
-      "icon": "cpu",
+      "id": "ai-power-infrastructure",
+      "title": "AI Power & Energy Plays",
+      "icon": "bolt",
       "heat": "hot",
       "bullets": [
-        "Large speculative call positions ahead of July earnings",
-        "Traders chasing IV spike and recovery",
-        "Pain reported on underwater MSFT bets",
-        "Break-even hopes pinned to earnings catalyst"
+        "Data center power bottleneck driving fuel cell bets",
+        "Bloom Energy and FuelCell strategic deals",
+        "Constellation nuclear supply to Walmart",
+        "Energy as second-order AI beneficiary"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 74,
       "tickers": [
-        "MSFT"
+        "BE",
+        "FCEL",
+        "CEG"
       ]
     },
     {
-      "id": "spcx-space",
-      "title": "SpaceX / SPCX Speculation",
+      "id": "big-tech-megacaps",
+      "title": "Megacap Conviction Trades",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "GOOGL all-in despite household tension",
+        "Alphabet added to Dow Jones",
+        "MSFT large high-conviction positions ahead of earnings",
+        "Apple-Disney merger talks surface"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
+        "GOOGL",
+        "MSFT",
+        "AAPL"
+      ]
+    },
+    {
+      "id": "space-speculation",
+      "title": "Space & Satellite Speculation",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Mixed bullish and bearish positioning on SPCX",
-        "Some traders booking profits, others underwater",
-        "Bearish puts gaining traction",
-        "Active retail interest in space narrative"
-      ],
-      "sentiment_score": 45,
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "id": "ai-chips",
-      "title": "AI & Chip Plays",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Cerebras posts strong revenue growth post-IPO",
-        "Hunt for second-order AI beneficiaries",
-        "Semiconductor selloff bruising leveraged longs",
-        "AMD and Broadcom positioning under pressure"
+        "RKLB and ASTS runs cooling off",
+        "ASTX positions loaded on dips",
+        "Speculative names stuck sideways",
+        "Retail chasing high-beta space themes"
       ],
       "sentiment_score": 60,
       "tickers": [
-        "AMD",
-        "AVGO",
-        "NVDA",
-        "MU"
+        "RKLB",
+        "ASTS",
+        "ASTX"
       ]
     },
     {
-      "id": "crypto-leverage",
-      "title": "Crypto-Linked Leverage",
-      "icon": "trending-up",
+      "id": "oil-short-thesis",
+      "title": "Oil Supply Glut Shorts",
+      "icon": "trending-down",
       "heat": "building",
       "bullets": [
-        "Bitcoin drawdown drawing line-in-sand bets",
-        "Leveraged MSTU high-conviction positions opened",
-        "High-conviction all-in crypto proxy trades",
-        "Volatility attracting speculative flows"
+        "Hormuz stranded barrels flooding market",
+        "Geopolitical catalysts pressuring crude",
+        "Multi-year downtrend thesis building",
+        "Traders positioning short oil"
       ],
-      "sentiment_score": 55,
-      "tickers": [
-        "MSTU"
-      ]
+      "sentiment_score": 28,
+      "tickers": []
     },
     {
-      "id": "loss-and-gain-posts",
-      "title": "Account Swings & Yolos",
-      "icon": "skull",
+      "id": "meme-loss-culture",
+      "title": "Loss Posts & Meme Culture",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Mix of profit posts and account blow-ups",
-        "Margin-fueled losses on chip selloffs",
-        "Diamond-hands holders booking partial gains",
-        "Top-tick award culture in full swing"
+        "Wendy's dumpster memes purged by mods",
+        "Account blow-ups and questionable trades",
+        "Self-deprecating retail humor persists",
+        "SPCX chatter dominating feed"
       ],
-      "sentiment_score": 48,
-      "tickers": [
-        "MSFT",
-        "AMD",
-        "MU"
-      ]
+      "sentiment_score": 42,
+      "tickers": []
     },
     {
-      "id": "valuation-credit",
-      "title": "Valuation & Credit Watch",
-      "icon": "chart-line",
-      "heat": "normal",
+      "id": "semiconductor-memory",
+      "title": "Memory & Chip Earnings",
+      "icon": "device-sd-card",
+      "heat": "building",
       "bullets": [
-        "Debate over PEG versus P/E discipline",
-        "Private credit fund redemption pressure rising",
-        "Constellation nuclear deal with Walmart noted",
-        "ServiceNow flagged as bottom-fishing candidate"
+        "MU earnings catalyst awaited",
+        "SK Hynix $29B ADR listing",
+        "Cerebras strong revenue growth post-IPO",
+        "SNDK speculative upside bets"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 66,
       "tickers": [
-        "NOW",
-        "CEG",
-        "FLUT"
+        "MU",
+        "SNDK",
+        "NVDA"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "GOOGL",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "High-conviction all-in on Dow addition",
+      "company_name": "Alphabet Inc."
+    },
+    {
       "symbol": "MSFT",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Earnings recovery hopes amid pain",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "Large YOLOs into July earnings",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "SPCX",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Divided longs and bears",
-      "company_name": "Space Exploration Technologies "
-    },
-    {
-      "symbol": "MSTU",
+      "symbol": "BE",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Leveraged crypto line-in-sand bet",
-      "company_name": "T-Rex 2X Long MSTR Daily Target"
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Caught in chip selloff",
-      "company_name": "Advanced Micro Devices, Inc."
+      "mentions": 5,
+      "signal": "AI power bottleneck long thesis",
+      "company_name": "Bloom Energy Corporation"
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Diamond-hands chip holders",
+      "mentions": 4,
+      "signal": "Earnings catalyst anticipation",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "NOW",
+      "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Bottom-fishing into earnings",
-      "company_name": "ServiceNow, Inc."
+      "mentions": 3,
+      "signal": "Prior run, momentum cooling",
+      "company_name": "Rocket Lab Corporation"
+    },
+    {
+      "symbol": "ASTS",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Space speculation favorite",
+      "company_name": "AST SpaceMobile, Inc."
     },
     {
       "symbol": "FLUT",
       "sentiment": "bearish",
-      "mentions": 1,
+      "mentions": 3,
       "signal": "Earnings collapse warning",
       "company_name": "Flutter Entertainment plc"
     },
     {
-      "symbol": "CEG",
+      "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Nuclear supply deal optimism",
-      "company_name": "Constellation Energy Corporatio"
+      "mentions": 3,
+      "signal": "Core AI anchor name",
+      "company_name": "NVIDIA Corporation"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment skews cautiously greedy as speculative traders pile into Microsoft calls and leveraged crypto proxies ahead of July earnings, betting on an IV spike and recovery despite visible underwater positions across the board.",
-      "tag": "notable"
+      "text": "Retail energy skews greedy, anchored by megacap conviction as Alphabet's Dow inclusion fuels aggressive GOOGL and MSFT positioning. AI power infrastructure plays like Bloom Energy and FuelCell are drawing fresh speculative capital ahead of memory earnings.",
+      "tag": "bullish"
     },
     {
-      "text": "A sharp semiconductor selloff has bruised margin-fueled longs in AMD, Broadcom, and chip names, producing painful account blow-ups even as a Cerebras growth report and AI narrative keep the upside story alive.",
+      "text": "A vocal bearish faction is building around oil, with traders citing Hormuz-stranded barrels and supply gluts to justify multi-year short theses. FuelCell rival FLUT warns of earnings collapse, tempering the otherwise euphoric tone.",
       "tag": "bearish"
     },
     {
-      "text": "SpaceX-linked SPCX trades split the crowd between profit-takers and bears, while macro undertones — rising private credit redemptions and nuclear power deals — add a layer of more sober institutional flavor to the speculative froth.",
+      "text": "Meme culture remains the emotional undercurrent, with Wendy's dumpster jokes purged and account blow-ups providing comic relief. The throne-scalping SPX humor and self-deprecation signal a casino mood that runs hot regardless of direction.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-23T21:02:13.696746+00:00",
-  "updated_hkt": "2026-06-24 05:02 HKT"
+  "updated_at": "2026-06-24T12:02:42.827486+00:00",
+  "updated_hkt": "2026-06-24 20:02 HKT"
 }
