@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 18,
-  "neutral_pct": 38,
-  "bull_bear_ratio": 2.4,
-  "overall_score": 57,
-  "overall_label": "Neutral",
+  "bull_pct": 59,
+  "bear_pct": 13,
+  "neutral_pct": 28,
+  "bull_bear_ratio": 4.6,
+  "overall_score": 70,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 44,
-    "ai_score": 62,
-    "bull_count": 17,
-    "bear_count": 7,
-    "neutral_count": 15,
-    "total_posts": 39,
+    "formula_score": 59,
+    "ai_score": 74,
+    "bull_count": 55,
+    "bear_count": 12,
+    "neutral_count": 27,
+    "total_posts": 94,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,182 +19,184 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 39,
+  "post_count": 94,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-power-infrastructure",
-      "title": "AI Power & Energy Plays",
-      "icon": "bolt",
+      "id": "wendys-meme",
+      "title": "Wendy's Meme Frenzy",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Data center power bottleneck driving fuel cell bets",
-        "Bloom Energy and FuelCell strategic deals",
-        "Constellation nuclear supply to Walmart",
-        "Energy as second-order AI beneficiary"
+        "Retail piling into WEN as meme play",
+        "Value thesis blended with dumpster jokes",
+        "Heavy call buying and full-port YOLOs",
+        "New CEO/CFO fueling turnaround hype"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 78,
       "tickers": [
-        "BE",
-        "FCEL",
-        "CEG"
+        "WEN"
       ]
     },
     {
-      "id": "big-tech-megacaps",
-      "title": "Megacap Conviction Trades",
+      "id": "micron-earnings",
+      "title": "Micron Earnings Beat",
       "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "MU crushes Q3 estimates after hours",
+        "Memory crunch quadruples revenue",
+        "Largest conviction position for many",
+        "Dividend declared, outlook raised"
+      ],
+      "sentiment_score": 82,
+      "tickers": [
+        "MU",
+        "SNDK"
+      ]
+    },
+    {
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Buildout",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "GOOGL all-in despite household tension",
-        "Alphabet added to Dow Jones",
-        "MSFT large high-conviction positions ahead of earnings",
-        "Apple-Disney merger talks surface"
+        "Japan unveils massive chip investment plan",
+        "SK Hynix files large US ADR listing",
+        "OpenAI-Broadcom inference chip unveiled",
+        "AI token prices warn of softness"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 68,
+      "tickers": [
+        "AVGO",
+        "NVDA",
+        "MU"
+      ]
+    },
+    {
+      "id": "power-plays",
+      "title": "AI Power & Energy Bets",
+      "icon": "bolt",
+      "heat": "building",
+      "bullets": [
+        "Bloom Energy as data center power fix",
+        "FuelCell strikes clean power deal",
+        "Nuclear supply chain loans announced",
+        "Grid bottleneck thesis gaining traction"
+      ],
+      "sentiment_score": 70,
+      "tickers": [
+        "BE",
+        "FCEL"
+      ]
+    },
+    {
+      "id": "googl-dow",
+      "title": "Alphabet Joins the Dow",
+      "icon": "replace",
+      "heat": "building",
+      "bullets": [
+        "GOOGL added to Dow, replacing Verizon",
+        "Early assignment on covered calls",
+        "One trader all-in IRA on GOOGL",
+        "AAPL/GOOGL rallies timed well"
+      ],
+      "sentiment_score": 62,
       "tickers": [
         "GOOGL",
-        "MSFT",
         "AAPL"
       ]
     },
     {
-      "id": "space-speculation",
-      "title": "Space & Satellite Speculation",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "RKLB and ASTS runs cooling off",
-        "ASTX positions loaded on dips",
-        "Speculative names stuck sideways",
-        "Retail chasing high-beta space themes"
-      ],
-      "sentiment_score": 60,
-      "tickers": [
-        "RKLB",
-        "ASTS",
-        "ASTX"
-      ]
-    },
-    {
-      "id": "oil-short-thesis",
-      "title": "Oil Supply Glut Shorts",
+      "id": "oil-shorts",
+      "title": "Oil Short & Loss Posts",
       "icon": "trending-down",
-      "heat": "building",
+      "heat": "normal",
       "bullets": [
-        "Hormuz stranded barrels flooding market",
-        "Geopolitical catalysts pressuring crude",
-        "Multi-year downtrend thesis building",
-        "Traders positioning short oil"
+        "Oil short thesis on supply glut",
+        "Hormuz barrels flooding the market",
+        "Account blow-ups and gambling confessions",
+        "Short gains on Nebius rug setups"
       ],
-      "sentiment_score": 28,
-      "tickers": []
-    },
-    {
-      "id": "meme-loss-culture",
-      "title": "Loss Posts & Meme Culture",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Wendy's dumpster memes purged by mods",
-        "Account blow-ups and questionable trades",
-        "Self-deprecating retail humor persists",
-        "SPCX chatter dominating feed"
-      ],
-      "sentiment_score": 42,
-      "tickers": []
-    },
-    {
-      "id": "semiconductor-memory",
-      "title": "Memory & Chip Earnings",
-      "icon": "device-sd-card",
-      "heat": "building",
-      "bullets": [
-        "MU earnings catalyst awaited",
-        "SK Hynix $29B ADR listing",
-        "Cerebras strong revenue growth post-IPO",
-        "SNDK speculative upside bets"
-      ],
-      "sentiment_score": 66,
+      "sentiment_score": 32,
       "tickers": [
-        "MU",
-        "SNDK",
-        "NVDA"
+        "FDX",
+        "NBIS"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "GOOGL",
+      "symbol": "WEN",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "High-conviction all-in on Dow addition",
-      "company_name": "Alphabet Inc."
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Large YOLOs into July earnings",
-      "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "BE",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "AI power bottleneck long thesis",
-      "company_name": "Bloom Energy Corporation"
+      "mentions": 35,
+      "signal": "Meme frenzy, full-port YOLOs",
+      "company_name": "Wendy's Company (The)"
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Earnings catalyst anticipation",
+      "mentions": 28,
+      "signal": "Earnings beat euphoria",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "RKLB",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Prior run, momentum cooling",
-      "company_name": "Rocket Lab Corporation"
+      "symbol": "GOOGL",
+      "sentiment": "mixed",
+      "mentions": 7,
+      "signal": "Dow inclusion, concentrated bets",
+      "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "ASTS",
+      "symbol": "SNDK",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Space speculation favorite",
-      "company_name": "AST SpaceMobile, Inc."
+      "mentions": 5,
+      "signal": "Call options printing",
+      "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "FLUT",
-      "sentiment": "bearish",
+      "symbol": "BE",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "AI power bottleneck play",
+      "company_name": "Bloom Energy Corporation"
+    },
+    {
+      "symbol": "AAPL",
+      "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Earnings collapse warning",
-      "company_name": "Flutter Entertainment plc"
+      "signal": "Lucky rally timing",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "FCEL",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Clean power deal optimism",
+      "company_name": "FuelCell Energy, Inc."
     },
     {
       "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Core AI anchor name",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "AI buildout backbone",
       "company_name": "NVIDIA Corporation"
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews greedy, anchored by megacap conviction as Alphabet's Dow inclusion fuels aggressive GOOGL and MSFT positioning. AI power infrastructure plays like Bloom Energy and FuelCell are drawing fresh speculative capital ahead of memory earnings.",
+      "text": "Risk appetite is running hot as Micron's blowout earnings and a quadrupling of revenue ignited semiconductor enthusiasm, while a Wendy's meme frenzy drew full-port YOLOs and heavy call buying. The energy is unmistakably euphoric across the batch.",
       "tag": "bullish"
     },
     {
-      "text": "A vocal bearish faction is building around oil, with traders citing Hormuz-stranded barrels and supply gluts to justify multi-year short theses. FuelCell rival FLUT warns of earnings collapse, tempering the otherwise euphoric tone.",
-      "tag": "bearish"
+      "text": "The Wendy's narrative blends genuine value arguments — low multiple, dividend, new management — with characteristic forum irony, signaling a speculative meme cycle gathering real momentum rather than fading.",
+      "tag": "notable"
     },
     {
-      "text": "Meme culture remains the emotional undercurrent, with Wendy's dumpster jokes purged and account blow-ups providing comic relief. The throne-scalping SPX humor and self-deprecation signal a casino mood that runs hot regardless of direction.",
-      "tag": "notable"
+      "text": "Counterweights remain: oil short theses on supply gluts, AI token price softness warnings, and scattered account blow-ups remind that pockets of fear and over-concentration persist beneath the greed.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-24T12:02:42.827486+00:00",
-  "updated_hkt": "2026-06-24 20:02 HKT"
+  "updated_at": "2026-06-24T21:03:49.691282+00:00",
+  "updated_hkt": "2026-06-25 05:03 HKT"
 }
