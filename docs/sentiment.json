@@ -1,17 +1,17 @@
 {
-  "bull_pct": 59,
-  "bear_pct": 13,
-  "neutral_pct": 28,
-  "bull_bear_ratio": 4.6,
-  "overall_score": 70,
+  "bull_pct": 70,
+  "bear_pct": 14,
+  "neutral_pct": 16,
+  "bull_bear_ratio": 4.9,
+  "overall_score": 74,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 59,
-    "ai_score": 74,
-    "bull_count": 55,
-    "bear_count": 12,
-    "neutral_count": 27,
-    "total_posts": 94,
+    "formula_score": 70,
+    "ai_score": 76,
+    "bull_count": 64,
+    "bear_count": 13,
+    "neutral_count": 15,
+    "total_posts": 92,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,35 +19,35 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 94,
+  "post_count": 92,
   "hours_window": 24,
   "themes": [
     {
-      "id": "wendys-meme",
+      "id": "wen-meme-play",
       "title": "Wendy's Meme Frenzy",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Retail piling into WEN as meme play",
-        "Value thesis blended with dumpster jokes",
-        "Heavy call buying and full-port YOLOs",
-        "New CEO/CFO fueling turnaround hype"
+        "Retail piling into low-priced restaurant name",
+        "Heavy borrow rate fuels squeeze hopes",
+        "New CEO/CFO cited as catalyst",
+        "Employee-discount jokes signal peak euphoria"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 80,
       "tickers": [
         "WEN"
       ]
     },
     {
       "id": "micron-earnings",
-      "title": "Micron Earnings Beat",
-      "icon": "cpu",
+      "title": "Micron Earnings Blowout",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
-        "MU crushes Q3 estimates after hours",
-        "Memory crunch quadruples revenue",
-        "Largest conviction position for many",
-        "Dividend declared, outlook raised"
+        "Strong Q3 beat and raised outlook",
+        "Memory pricing crunch quadruples revenue",
+        "Speculative call buyers celebrating",
+        "Some retirement accounts burned pre-print"
       ],
       "sentiment_score": 82,
       "tickers": [
@@ -56,72 +56,76 @@
       ]
     },
     {
-      "id": "ai-semis",
-      "title": "AI & Semiconductor Buildout",
-      "icon": "trending-up",
+      "id": "semiconductor-ai-capex",
+      "title": "Semiconductor & AI Capex",
+      "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Japan unveils massive chip investment plan",
-        "SK Hynix files large US ADR listing",
-        "OpenAI-Broadcom inference chip unveiled",
-        "AI token prices warn of softness"
+        "Qualcomm doubles non-handset revenue target",
+        "SK Hynix files for large Nasdaq listing",
+        "Japan announces multi-trillion chip plan",
+        "OpenAI-Broadcom unveil inference chip"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 78,
       "tickers": [
-        "AVGO",
+        "QCOM",
         "NVDA",
-        "MU"
+        "AVGO"
       ]
     },
     {
-      "id": "power-plays",
-      "title": "AI Power & Energy Bets",
-      "icon": "bolt",
-      "heat": "building",
+      "id": "big-tech-pressure",
+      "title": "Big Tech Under Pressure",
+      "icon": "building-bank",
+      "heat": "normal",
       "bullets": [
-        "Bloom Energy as data center power fix",
-        "FuelCell strikes clean power deal",
-        "Nuclear supply chain loans announced",
-        "Grid bottleneck thesis gaining traction"
+        "Alphabet equity raise weighs on shares",
+        "Class-action threat over AI capex",
+        "Microsoft bagholders lament drawdowns",
+        "Assignment risk on covered positions"
       ],
-      "sentiment_score": 70,
-      "tickers": [
-        "BE",
-        "FCEL"
-      ]
-    },
-    {
-      "id": "googl-dow",
-      "title": "Alphabet Joins the Dow",
-      "icon": "replace",
-      "heat": "building",
-      "bullets": [
-        "GOOGL added to Dow, replacing Verizon",
-        "Early assignment on covered calls",
-        "One trader all-in IRA on GOOGL",
-        "AAPL/GOOGL rallies timed well"
-      ],
-      "sentiment_score": 62,
+      "sentiment_score": 40,
       "tickers": [
         "GOOGL",
+        "MSFT",
         "AAPL"
       ]
     },
     {
-      "id": "oil-shorts",
-      "title": "Oil Short & Loss Posts",
-      "icon": "trending-down",
-      "heat": "normal",
+      "id": "loss-posts",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "building",
       "bullets": [
-        "Oil short thesis on supply glut",
-        "Hormuz barrels flooding the market",
-        "Account blow-ups and gambling confessions",
-        "Short gains on Nebius rug setups"
+        "Options gambling losses mount",
+        "Traders admitting addiction struggles",
+        "Leveraged plays wiping retirement funds",
+        "Dark humor masking real distress"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 20,
       "tickers": [
-        "FDX",
-        "NBIS"
+        "SPY",
+        "MU",
+        "ASTS"
+      ]
+    },
+    {
+      "id": "speculative-yolos",
+      "title": "Speculative high-conviction Bets",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "Full-port margin gambles on conviction",
+        "Treasury-company arbitrage trades",
+        "Biotech catalyst plays in focus",
+        "0DTE quick-strike wins flaunted"
+      ],
+      "sentiment_score": 65,
+      "tickers": [
+        "BMNR",
+        "MSTR",
+        "ASTS",
+        "HELP"
       ]
     }
   ],
@@ -130,73 +134,73 @@
       "symbol": "WEN",
       "sentiment": "bullish",
       "mentions": 35,
-      "signal": "Meme frenzy, full-port YOLOs",
+      "signal": "Meme squeeze euphoria",
       "company_name": "Wendy's Company (The)"
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 28,
-      "signal": "Earnings beat euphoria",
+      "mentions": 24,
+      "signal": "Earnings beat celebration",
       "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "GOOGL",
       "sentiment": "mixed",
-      "mentions": 7,
-      "signal": "Dow inclusion, concentrated bets",
+      "mentions": 6,
+      "signal": "Equity raise overhang",
       "company_name": "Alphabet Inc."
     },
     {
       "symbol": "SNDK",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Call options printing",
+      "mentions": 4,
+      "signal": "Repeat call winner",
       "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "BE",
+      "symbol": "ASTS",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Diamond-hand holders",
+      "company_name": "AST SpaceMobile, Inc."
+    },
+    {
+      "symbol": "QCOM",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "AI power bottleneck play",
-      "company_name": "Bloom Energy Corporation"
+      "mentions": 2,
+      "signal": "Data center upside",
+      "company_name": "QUALCOMM Incorporated"
+    },
+    {
+      "symbol": "MSTR",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Record unrealized loss",
+      "company_name": "Strategy Inc"
     },
     {
       "symbol": "AAPL",
       "sentiment": "bullish",
-      "mentions": 3,
+      "mentions": 2,
       "signal": "Lucky rally timing",
       "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "FCEL",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Clean power deal optimism",
-      "company_name": "FuelCell Energy, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "AI buildout backbone",
-      "company_name": "NVIDIA Corporation"
     }
   ],
   "summary": [
     {
-      "text": "Risk appetite is running hot as Micron's blowout earnings and a quadrupling of revenue ignited semiconductor enthusiasm, while a Wendy's meme frenzy drew full-port YOLOs and heavy call buying. The energy is unmistakably euphoric across the batch.",
+      "text": "Retail sentiment is firmly risk-on, dominated by a frenzied meme rally in Wendy's and euphoric reactions to Micron's earnings beat. The combination of squeeze speculation and a memory-pricing catalyst has traders piling into high-conviction, leveraged positions.",
       "tag": "bullish"
     },
     {
-      "text": "The Wendy's narrative blends genuine value arguments — low multiple, dividend, new management — with characteristic forum irony, signaling a speculative meme cycle gathering real momentum rather than fading.",
+      "text": "Semiconductor and AI capex narratives remain a powerful undercurrent, with Qualcomm's raised targets, SK Hynix's listing, and Japan's multi-trillion chip plan reinforcing the structural bull case. Big Tech, however, shows cracks as Alphabet's equity raise and capex concerns pressure shares.",
       "tag": "notable"
     },
     {
-      "text": "Counterweights remain: oil short theses on supply gluts, AI token price softness warnings, and scattered account blow-ups remind that pockets of fear and over-concentration persist beneath the greed.",
+      "text": "Beneath the euphoria sits a counterweight of painful account blow-ups and candid admissions of gambling stress, a reminder that aggressive options speculation is producing casualties even amid the broader greed.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-24T21:03:49.691282+00:00",
-  "updated_hkt": "2026-06-25 05:03 HKT"
+  "updated_at": "2026-06-25T12:03:49.165930+00:00",
+  "updated_hkt": "2026-06-25 20:03 HKT"
 }
