@@ -1,17 +1,17 @@
 {
-  "bull_pct": 64,
-  "bear_pct": 21,
-  "neutral_pct": 15,
-  "bull_bear_ratio": 3.0,
-  "overall_score": 70,
+  "bull_pct": 60,
+  "bear_pct": 19,
+  "neutral_pct": 21,
+  "bull_bear_ratio": 3.2,
+  "overall_score": 66,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 64,
-    "ai_score": 72,
-    "bull_count": 60,
-    "bear_count": 20,
-    "neutral_count": 14,
-    "total_posts": 94,
+    "formula_score": 60,
+    "ai_score": 68,
+    "bull_count": 54,
+    "bear_count": 17,
+    "neutral_count": 19,
+    "total_posts": 90,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,111 +19,112 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 94,
+  "post_count": 90,
   "hours_window": 24,
   "themes": [
     {
-      "id": "wendys-meme-squeeze",
-      "title": "Wendy's Meme Frenzy",
+      "id": "wendys-meme-frenzy",
+      "title": "Wendy's Meme Trade Mania",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Retail piling into speculative meme play",
-        "Heavy options and full-port positioning",
-        "DCF bull cases circulating",
-        "Trading halts fueling momentum"
+        "WEN turned cult meme play",
+        "Screwworm cattle outbreak fuels speculation",
+        "Limit-down moves draw heavy piling-in",
+        "DCF bull case spreads across posts"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 70,
       "tickers": [
         "WEN"
       ]
     },
     {
-      "id": "micron-earnings-rip",
-      "title": "Micron Earnings Rally",
-      "icon": "trending-up",
+      "id": "micron-memory-earnings",
+      "title": "Micron Earnings Blowout",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Post-earnings beat ignites euphoria",
-        "Weekly call buyers booking big wins",
-        "Bears squeezed after doom calls",
-        "Memory cycle re-rating debate"
+        "MU earnings sparked rapid profit-taking",
+        "Memory and DRAM strength dominates",
+        "Same-day call flips printing wins",
+        "Console price hikes cite memory costs"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 82,
       "tickers": [
         "MU",
-        "SNDK"
+        "SNDK",
+        "MSFT"
       ]
     },
     {
-      "id": "crypto-treasury-pain",
-      "title": "Crypto Treasury Blow-ups",
-      "icon": "skull",
+      "id": "ai-bubble-debate",
+      "title": "AI Bubble Anxiety",
+      "icon": "robot",
       "heat": "building",
       "bullets": [
-        "MSTR sitting on record unrealized loss",
-        "BMNR trading below ETH value",
-        "Treasury-discount thesis under fire",
-        "Loss posts mounting"
+        "Traders debate peak valuation signals",
+        "Sports sponsorships flagged as top warning",
+        "Samsung mega chip investment headline",
+        "OpenAI IPO possibly delayed to 2027"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 48,
+      "tickers": [
+        "SMCI",
+        "IONQ",
+        "GOOGL",
+        "INTC"
+      ]
+    },
+    {
+      "id": "crypto-treasury-plays",
+      "title": "Crypto Treasury Pain",
+      "icon": "currency-bitcoin",
+      "heat": "building",
+      "bullets": [
+        "BMNR loss posts pile up",
+        "MSTR puts rescue blown accounts",
+        "Saylor blamed for sector weakness",
+        "Bitcoin bubble narrative resurfacing"
+      ],
+      "sentiment_score": 38,
       "tickers": [
         "MSTR",
         "BMNR",
-        "BTC"
+        "BITO"
       ]
     },
     {
-      "id": "ai-semis-narrative",
-      "title": "AI & Semiconductor Story",
-      "icon": "cpu",
+      "id": "account-blowups-losses",
+      "title": "Account Blow-Ups & Losses",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Qualcomm data-center targets lift sentiment",
-        "SK Hynix Nasdaq listing surge",
-        "AMD long thesis circulating",
-        "Cheap Chinese models extend bubble debate"
+        "Large trading losses confessed openly",
+        "Leveraged positions and loans wiped out",
+        "Software dip-buyers caught offside",
+        "Gambling addiction admissions surface"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 25,
       "tickers": [
-        "QCOM",
-        "AMD",
-        "GOOGL"
+        "Z",
+        "SPY"
       ]
     },
     {
-      "id": "options-blowups",
-      "title": "Options Account Blow-ups",
-      "icon": "bomb",
+      "id": "macro-inflation-global",
+      "title": "Macro & Global Selloffs",
+      "icon": "world",
       "heat": "normal",
       "bullets": [
-        "0DTE addiction confessions surfacing",
-        "Margin and loan-funded gambles",
-        "GFV warnings and liquidations",
-        "Speculative traders chasing recovery"
+        "KOSPI circuit breaker on foreign selling",
+        "Inflation hits multi-year high",
+        "Rate hike talk returns",
+        "Oil retreats to pre-war levels"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 35,
       "tickers": [
-        "SPY",
-        "SPX"
-      ]
-    },
-    {
-      "id": "macro-inflation",
-      "title": "Inflation & Rate Watch",
-      "icon": "chart-line",
-      "heat": "normal",
-      "bullets": [
-        "Core inflation hits three-year high",
-        "Rate-hike chatter resurfacing",
-        "Mega-cap tech under pressure",
-        "Mixed macro positioning"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "MSFT",
-        "META",
-        "AMZN"
+        "SOXL",
+        "SOXS"
       ]
     }
   ],
@@ -131,74 +132,74 @@
     {
       "symbol": "WEN",
       "sentiment": "bullish",
-      "mentions": 24,
-      "signal": "Meme-driven full-port mania",
+      "mentions": 18,
+      "signal": "Cult meme trade frenzy",
       "company_name": "Wendy's Company (The)"
     },
     {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 22,
-      "signal": "Earnings rip euphoria",
+      "mentions": 15,
+      "signal": "Earnings winners cashing out",
       "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "SNDK",
-      "sentiment": "bullish",
+      "sentiment": "mixed",
       "mentions": 6,
-      "signal": "Memory rally winners",
+      "signal": "Memory swing trades both ways",
       "company_name": "Sandisk Corporation"
     },
     {
       "symbol": "MSTR",
-      "sentiment": "bearish",
+      "sentiment": "mixed",
       "mentions": 4,
-      "signal": "Record unrealized losses",
+      "signal": "Puts saving blown accounts",
       "company_name": "Strategy Inc"
     },
     {
-      "symbol": "ASTS",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "High-conviction holders defiant",
-      "company_name": "AST SpaceMobile, Inc."
-    },
-    {
-      "symbol": "GOOGL",
+      "symbol": "BMNR",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Equity raise weighing on shares",
-      "company_name": "Alphabet Inc."
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Long-term AI thesis",
-      "company_name": "Advanced Micro Devices, Inc."
+      "signal": "Crypto treasury bleeding",
+      "company_name": "BitMine Immersion Technologies,"
     },
     {
       "symbol": "MSFT",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Bagholder frustration",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Life-savings high-conviction conviction",
       "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "SMCI",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Buildout and quantum thesis",
+      "company_name": "Super Micro Computer, Inc."
+    },
+    {
+      "symbol": "IONQ",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Quantum computing leaps",
+      "company_name": "IonQ, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment skews decisively greedy as a meme-driven Wendy's frenzy and a powerful post-earnings Micron rally dominate the board, with traders booking outsized weekly-options wins and bears unwound after pre-earnings doom calls proved wrong.",
+      "text": "Retail euphoria is centered on a Wendy's meme stampede and a Micron earnings beat, with traders flipping same-day calls and celebrating rapid wins. The energy is unmistakably greedy, fueled by fast-money momentum and viral fast-food-themed conviction.",
       "tag": "bullish"
     },
     {
-      "text": "Crypto-treasury names tell the opposite story, with MSTR carrying a record unrealized loss and ETH-backed vehicles trading below net asset value, while leveraged options confessions reveal serious account damage beneath the euphoria.",
+      "text": "Beneath the celebration runs a steady undercurrent of pain: sizable account blow-ups, crypto treasury bleeding around MSTR and BMNR, and software dip-buyers caught offside. Confession posts of leveraged losses temper the otherwise frothy mood.",
       "tag": "bearish"
     },
     {
-      "text": "A three-year high in core inflation and renewed rate-hike chatter pressure mega-cap tech, even as Qualcomm and SK Hynix headlines keep the AI-semiconductor narrative alive — a notable tension between micro euphoria and macro risk.",
+      "text": "Macro headwinds loom as inflation prints a multi-year high, rate-hike chatter returns, and the KOSPI triggers a circuit breaker on foreign selling. AI-bubble warnings are building even as speculative appetite stays elevated.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-25T21:03:49.860029+00:00",
-  "updated_hkt": "2026-06-26 05:03 HKT"
+  "updated_at": "2026-06-26T12:03:53.032265+00:00",
+  "updated_hkt": "2026-06-26 20:03 HKT"
 }
