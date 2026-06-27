@@ -1,17 +1,17 @@
 {
-  "bull_pct": 47,
-  "bear_pct": 21,
-  "neutral_pct": 32,
-  "bull_bear_ratio": 2.2,
-  "overall_score": 52,
+  "bull_pct": 41,
+  "bear_pct": 41,
+  "neutral_pct": 18,
+  "bull_bear_ratio": 1.0,
+  "overall_score": 42,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 47,
-    "ai_score": 54,
-    "bull_count": 33,
+    "formula_score": 41,
+    "ai_score": 42,
+    "bull_count": 15,
     "bear_count": 15,
-    "neutral_count": 22,
-    "total_posts": 70,
+    "neutral_count": 7,
+    "total_posts": 37,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,187 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 70,
+  "post_count": 37,
   "hours_window": 24,
   "themes": [
     {
-      "id": "wendys-yolo",
-      "title": "Wendy's Turnaround Mania",
-      "icon": "flame",
+      "id": "memory-chips",
+      "title": "Memory Chip Mania",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "New management with prior turnaround track record",
-        "Real estate value cited versus market cap",
-        "Elevated short interest fueling squeeze hopes",
-        "Retail piling into speculative recovery play"
+        "MU posts record revenue and margins",
+        "Speculative traders eyeing aggressive price targets",
+        "Leveraged memory products fueling earnings bets",
+        "Sharp intraday drawdowns testing conviction"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 62,
+      "tickers": [
+        "MU",
+        "MRVL",
+        "MVLL",
+        "SNDK"
+      ]
+    },
+    {
+      "id": "ai-rotation",
+      "title": "AI Trade Wobble",
+      "icon": "trending-down",
+      "heat": "hot",
+      "bullets": [
+        "Nasdaq strings together red sessions",
+        "OpenAI IPO reportedly delayed",
+        "Capital rotating away from AI names",
+        "Open-source threat questions IPO valuations"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "MSFT",
+        "GOOGL",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Life savings wiped in days",
+        "0DTE options destroying portfolios",
+        "Accidental put assignment triggers liquidation",
+        "Defeated tone across loss posts"
+      ],
+      "sentiment_score": 12,
+      "tickers": [
+        "QQQ",
+        "MU"
+      ]
+    },
+    {
+      "id": "wendys-meme",
+      "title": "Wendy's Meme Play",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "Speculation around burger-driven catalyst",
+        "Skeptics warn of orchestrated hype",
+        "Comparisons to past consumer-stock pops",
+        "Mixed conviction among traders"
+      ],
+      "sentiment_score": 50,
       "tickers": [
         "WEN"
       ]
     },
     {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Frenzy",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "MU euphoria and leveraged earnings bets",
-        "SNDK volatility traded aggressively",
-        "Marvell call positions stacked on dips",
-        "Sharp reversals warn of instability"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "MU",
-        "MRVL",
-        "SNDK",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "ai-bubble",
-      "title": "AI Bubble Doubts",
-      "icon": "trending-down",
+      "id": "china-tech",
+      "title": "China Tech Tensions",
+      "icon": "world",
       "heat": "building",
       "bullets": [
-        "Nasdaq printing consecutive red days",
-        "OpenAI IPO reportedly delayed",
-        "Open-source threatens closed-model valuations",
-        "Insider selling at Nvidia noted"
+        "FCC expands import bans",
+        "Apple sourcing from blacklisted supplier",
+        "BABA weighed down by relations",
+        "Geopolitical overhang on Chinese names"
       ],
-      "sentiment_score": 34,
+      "sentiment_score": 33,
       "tickers": [
-        "NVDA",
-        "GOOGL"
+        "BABA",
+        "AAPL"
       ]
     },
     {
-      "id": "msft-bottom",
-      "title": "Microsoft Bottom Hunting",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Major support line drawing dip buyers",
-        "Ackman and Burry cited as long",
-        "Earnings catalyst anticipated",
-        "Cheap valuation narrative spreading"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "MSFT"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Account Blow-Ups & Glitches",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Severe drawdowns and liquidations reported",
-        "Misclick option assignment debts",
-        "Broker split and pricing glitches",
-        "Defeated traders posting losses"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "QQQ",
-        "SPY"
-      ]
-    },
-    {
-      "id": "spacex-space",
-      "title": "SpaceX & Space Economy",
-      "icon": "rocket",
+      "id": "big-tech",
+      "title": "Mega-Cap Positioning",
+      "icon": "building-skyscraper",
       "heat": "normal",
       "bullets": [
-        "Starlink mobile push targeting carriers",
-        "Cheap implied volatility on calls cited",
-        "EchoStar spectrum acquisition leverage",
-        "Speculative IPO-era positioning"
+        "MSFT dip framed as buying opportunity",
+        "META holders managing underwater cost basis",
+        "Copilot adoption seen as long-term tailwind",
+        "Unusual after-hours volume noted"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 52,
       "tickers": [
-        "TMUS"
+        "MSFT",
+        "META",
+        "GOOGL"
       ]
     }
   ],
   "tickers": [
     {
       "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "Meme-driven price target euphoria",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "WEN",
-      "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "Turnaround squeeze obsession",
-      "company_name": "Wendy's Company (The)"
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "Support-buying conviction",
-      "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "NVDA",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Bagholders vs insider selling",
-      "company_name": "NVIDIA Corporation"
+      "mentions": 9,
+      "signal": "Earnings euphoria meets sharp dip",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "MRVL",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Chasing dips with calls",
+      "mentions": 5,
+      "signal": "Aggressive call buying after rally",
       "company_name": "Marvell Technology, Inc."
     },
     {
-      "symbol": "SNDK",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Volatility traded both ways",
-      "company_name": "Sandisk Corporation"
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "Dip viewed as discount entry",
+      "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "SPY",
+      "symbol": "WEN",
       "sentiment": "mixed",
       "mentions": 4,
-      "signal": "Pricing glitches and confusion",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "signal": "Meme hype versus skepticism",
+      "company_name": "Wendy's Company (The)"
     },
     {
-      "symbol": "BB",
+      "symbol": "META",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Underwater holders averaging down",
+      "company_name": "Meta Platforms, Inc."
+    },
+    {
+      "symbol": "GOOGL",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Momentum chasers on QNX story",
-      "company_name": "BlackBerry Limited"
+      "signal": "Seen as AI consolidation winner",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "BABA",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Regret trade weighed by China",
+      "company_name": "Alibaba Group Holding Limited"
+    },
+    {
+      "symbol": "QQQ",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "0DTE options blamed for losses",
+      "company_name": "Invesco QQQ Trust, Series 1"
     }
   ],
   "summary": [
     {
-      "text": "Retail energy is split between speculative turnaround bets, with Wendy's and Microsoft drawing dip-buying conviction, while memory names like MU fuel meme-tier price targets and leveraged earnings gambles across the batch.",
+      "text": "Memory names dominate the tape as MU delivers blowout results, igniting leveraged bets and bold price targets. Speculative traders are piling into chip exposure even as sharp intraday drawdowns test conviction across the cohort.",
       "tag": "bullish"
     },
     {
-      "text": "A growing undercurrent of AI bubble skepticism is emerging, with consecutive Nasdaq red days, a delayed OpenAI IPO, open-source valuation concerns and noted Nvidia insider selling weighing on sentiment.",
+      "text": "The AI trade is visibly wobbling, with the Nasdaq stringing together red sessions, OpenAI reportedly delaying its IPO, and capital rotating away from crowded mega-cap names toward alternative themes.",
       "tag": "bearish"
     },
     {
-      "text": "Notable cluster of account blow-ups, liquidations and broker glitches signals real pain beneath the bravado, even as profit posts and squeeze hopes keep the overall tone tilted modestly toward greed.",
+      "text": "Account blow-ups headline the batch, with life-savings wipeouts, 0DTE disasters, and accidental liquidations underscoring a defeated undertone beneath the speculative bravado.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-27T12:03:45.533266+00:00",
-  "updated_hkt": "2026-06-27 20:03 HKT"
+  "updated_at": "2026-06-27T21:02:26.914967+00:00",
+  "updated_hkt": "2026-06-28 05:02 HKT"
 }
