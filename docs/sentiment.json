@@ -1,17 +1,17 @@
 {
-  "bull_pct": 49,
+  "bull_pct": 47,
   "bear_pct": 21,
-  "neutral_pct": 30,
-  "bull_bear_ratio": 2.4,
-  "overall_score": 55,
+  "neutral_pct": 32,
+  "bull_bear_ratio": 2.2,
+  "overall_score": 52,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 49,
-    "ai_score": 58,
-    "bull_count": 36,
+    "formula_score": 47,
+    "ai_score": 54,
+    "bull_count": 33,
     "bear_count": 15,
     "neutral_count": 22,
-    "total_posts": 73,
+    "total_posts": 70,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,180 +19,183 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 73,
+  "post_count": 70,
   "hours_window": 24,
   "themes": [
     {
-      "id": "msft-conviction",
-      "title": "Microsoft Support Bet",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Traders piling into MSFT near support line",
-        "Ackman and Burry long cited as conviction",
-        "Heavy contrarian buying amid bearish comments",
-        "Earnings catalyst drawing speculative positioning"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "MSFT"
-      ]
-    },
-    {
-      "id": "wendys-meme",
-      "title": "Wendy's Meme Surge",
+      "id": "wendys-yolo",
+      "title": "Wendy's Turnaround Mania",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "WEN running as cult meme trade",
-        "Short squeeze enthusiasm after trading halt",
-        "Retail piling in on momentum",
-        "High-conviction speculative crowd buying"
+        "New management with prior turnaround track record",
+        "Real estate value cited versus market cap",
+        "Elevated short interest fueling squeeze hopes",
+        "Retail piling into speculative recovery play"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 78,
       "tickers": [
         "WEN"
       ]
     },
     {
-      "id": "spacex-debt",
-      "title": "SpaceX Speculation",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Starlink mobile push challenging carriers",
-        "Bond losses on new SpaceX debt growing",
-        "Cheap calls drawing volatility speculators",
-        "T-Mobile acquisition chatter circulating"
-      ],
-      "sentiment_score": 52,
-      "tickers": [
-        "TMUS"
-      ]
-    },
-    {
-      "id": "memory-chips",
-      "title": "Memory Chip Volatility",
+      "id": "memory-semis",
+      "title": "Memory & Semiconductor Frenzy",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MU earnings beat fueling quick profits",
-        "SNDK puts and calls both printing",
-        "Wild intraday swings traded aggressively",
-        "Semiconductor momentum cooling intraday"
+        "MU euphoria and leveraged earnings bets",
+        "SNDK volatility traded aggressively",
+        "Marvell call positions stacked on dips",
+        "Sharp reversals warn of instability"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 58,
       "tickers": [
         "MU",
+        "MRVL",
         "SNDK",
         "NVDA"
       ]
     },
     {
       "id": "ai-bubble",
-      "title": "AI Bubble Debate",
-      "icon": "alert-triangle",
+      "title": "AI Bubble Doubts",
+      "icon": "trending-down",
       "heat": "building",
       "bullets": [
-        "Traders questioning stretched AI valuations",
-        "Software dip-buyers nursing fresh losses",
-        "Insider selling at Nvidia raising flags",
-        "Bubble-burst speculation gaining attention"
+        "Nasdaq printing consecutive red days",
+        "OpenAI IPO reportedly delayed",
+        "Open-source threatens closed-model valuations",
+        "Insider selling at Nvidia noted"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 34,
       "tickers": [
         "NVDA",
-        "CRM",
-        "NOW"
+        "GOOGL"
       ]
     },
     {
-      "id": "global-selloff",
-      "title": "Global Market Jitters",
-      "icon": "world",
+      "id": "msft-bottom",
+      "title": "Microsoft Bottom Hunting",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "KOSPI plunges triggering circuit breaker",
-        "Asia markets red across the board",
-        "Oil falling to pre-war levels",
-        "Foreign investors dumping shares heavily"
+        "Major support line drawing dip buyers",
+        "Ackman and Burry cited as long",
+        "Earnings catalyst anticipated",
+        "Cheap valuation narrative spreading"
       ],
-      "sentiment_score": 28,
-      "tickers": []
+      "sentiment_score": 70,
+      "tickers": [
+        "MSFT"
+      ]
+    },
+    {
+      "id": "account-blowups",
+      "title": "Account Blow-Ups & Glitches",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Severe drawdowns and liquidations reported",
+        "Misclick option assignment debts",
+        "Broker split and pricing glitches",
+        "Defeated traders posting losses"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "QQQ",
+        "SPY"
+      ]
+    },
+    {
+      "id": "spacex-space",
+      "title": "SpaceX & Space Economy",
+      "icon": "rocket",
+      "heat": "normal",
+      "bullets": [
+        "Starlink mobile push targeting carriers",
+        "Cheap implied volatility on calls cited",
+        "EchoStar spectrum acquisition leverage",
+        "Speculative IPO-era positioning"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "TMUS"
+      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MSFT",
+      "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 12,
-      "signal": "Contrarian support-line conviction buy",
-      "company_name": "Microsoft Corporation"
+      "mentions": 9,
+      "signal": "Meme-driven price target euphoria",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "WEN",
       "sentiment": "bullish",
-      "mentions": 10,
-      "signal": "Cult meme momentum trade",
+      "mentions": 9,
+      "signal": "Turnaround squeeze obsession",
       "company_name": "Wendy's Company (The)"
     },
     {
-      "symbol": "SNDK",
-      "sentiment": "mixed",
-      "mentions": 7,
-      "signal": "Both puts and calls printing",
-      "company_name": "Sandisk Corporation"
-    },
-    {
-      "symbol": "MU",
+      "symbol": "MSFT",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Earnings beat quick scalps",
-      "company_name": "Micron Technology, Inc."
+      "mentions": 7,
+      "signal": "Support-buying conviction",
+      "company_name": "Microsoft Corporation"
     },
     {
       "symbol": "NVDA",
       "sentiment": "mixed",
       "mentions": 6,
-      "signal": "high-conviction calls despite insider selling",
+      "signal": "Bagholders vs insider selling",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "MSTR",
-      "sentiment": "bearish",
+      "symbol": "MRVL",
+      "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Profitable short exits",
-      "company_name": "Strategy Inc"
+      "signal": "Chasing dips with calls",
+      "company_name": "Marvell Technology, Inc."
     },
     {
-      "symbol": "AAOI",
+      "symbol": "SNDK",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Volatility traded both ways",
+      "company_name": "Sandisk Corporation"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Pricing glitches and confusion",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "BB",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Full-port revenue growth bet",
-      "company_name": "Applied Optoelectronics, Inc."
-    },
-    {
-      "symbol": "RKLB",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "NASA contract optimism",
-      "company_name": "Rocket Lab Corporation"
+      "signal": "Momentum chasers on QNX story",
+      "company_name": "BlackBerry Limited"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans cautiously greedy as retail piles into the Wendy's meme trade and a contrarian Microsoft support-line bet, with speculative call buying dominating despite a noisy mix of profit and loss screenshots.",
+      "text": "Retail energy is split between speculative turnaround bets, with Wendy's and Microsoft drawing dip-buying conviction, while memory names like MU fuel meme-tier price targets and leveraged earnings gambles across the batch.",
       "tag": "bullish"
     },
     {
-      "text": "Memory chip names MU and SNDK delivered whipsaw volatility, with traders scalping both directions around earnings, while Nvidia insider selling and stretched AI valuations are stoking renewed bubble-burst chatter.",
-      "tag": "notable"
+      "text": "A growing undercurrent of AI bubble skepticism is emerging, with consecutive Nasdaq red days, a delayed OpenAI IPO, open-source valuation concerns and noted Nvidia insider selling weighing on sentiment.",
+      "tag": "bearish"
     },
     {
-      "text": "Underlying anxiety persists: KOSPI's circuit-breaker plunge, red Asian markets, and oil sliding to pre-war levels remind speculators that the macro backdrop remains fragile beneath the meme euphoria.",
-      "tag": "bearish"
+      "text": "Notable cluster of account blow-ups, liquidations and broker glitches signals real pain beneath the bravado, even as profit posts and squeeze hopes keep the overall tone tilted modestly toward greed.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-26T21:03:45.130278+00:00",
-  "updated_hkt": "2026-06-27 05:03 HKT"
+  "updated_at": "2026-06-27T12:03:45.533266+00:00",
+  "updated_hkt": "2026-06-27 20:03 HKT"
 }
