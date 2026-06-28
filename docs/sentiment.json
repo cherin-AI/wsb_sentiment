@@ -1,17 +1,17 @@
 {
-  "bull_pct": 41,
-  "bear_pct": 41,
-  "neutral_pct": 18,
-  "bull_bear_ratio": 1.0,
-  "overall_score": 42,
+  "bull_pct": 45,
+  "bear_pct": 32,
+  "neutral_pct": 23,
+  "bull_bear_ratio": 1.4,
+  "overall_score": 54,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 41,
-    "ai_score": 42,
-    "bull_count": 15,
-    "bear_count": 15,
-    "neutral_count": 7,
-    "total_posts": 37,
+    "formula_score": 45,
+    "ai_score": 58,
+    "bull_count": 10,
+    "bear_count": 7,
+    "neutral_count": 5,
+    "total_posts": 22,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,187 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 37,
+  "post_count": 22,
   "hours_window": 24,
   "themes": [
     {
-      "id": "memory-chips",
-      "title": "Memory Chip Mania",
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Momentum",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MU posts record revenue and margins",
-        "Speculative traders eyeing aggressive price targets",
-        "Leveraged memory products fueling earnings bets",
-        "Sharp intraday drawdowns testing conviction"
+        "Micron blowout reignites memory super-cycle bets",
+        "Hyperscaler AI capex framed as opportunity",
+        "Run-up-to-earnings strategies gaining traction",
+        "Regulatory model bans spark policy concerns"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 72,
       "tickers": [
         "MU",
-        "MRVL",
-        "MVLL",
-        "SNDK"
-      ]
-    },
-    {
-      "id": "ai-rotation",
-      "title": "AI Trade Wobble",
-      "icon": "trending-down",
-      "heat": "hot",
-      "bullets": [
-        "Nasdaq strings together red sessions",
-        "OpenAI IPO reportedly delayed",
-        "Capital rotating away from AI names",
-        "Open-source threat questions IPO valuations"
-      ],
-      "sentiment_score": 35,
-      "tickers": [
         "MSFT",
-        "GOOGL",
-        "NVDA"
+        "NBIS",
+        "GOOGL"
       ]
     },
     {
-      "id": "trading-losses",
-      "title": "Account Blow-Ups",
-      "icon": "skull",
-      "heat": "hot",
+      "id": "msft-dip",
+      "title": "Microsoft Dip Buying",
+      "icon": "trending-up",
+      "heat": "building",
       "bullets": [
-        "Life savings wiped in days",
-        "0DTE options destroying portfolios",
-        "Accidental put assignment triggers liquidation",
-        "Defeated tone across loss posts"
+        "Worst month since dot-com draws buyers",
+        "Bull case: AI spend equals dominance",
+        "LEAPS and long-dated calls accumulating",
+        "Speculative traders piling into calls"
       ],
-      "sentiment_score": 12,
+      "sentiment_score": 70,
       "tickers": [
-        "QQQ",
-        "MU"
+        "MSFT"
       ]
     },
     {
-      "id": "wendys-meme",
-      "title": "Wendy's Meme Play",
+      "id": "geopolitics",
+      "title": "Middle East Geopolitical Risk",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Speculation around burger-driven catalyst",
-        "Skeptics warn of orchestrated hype",
-        "Comparisons to past consumer-stock pops",
-        "Mixed conviction among traders"
+        "Trump escalates rhetoric against Iran",
+        "Kuwait and Bahrain report attacks",
+        "Oil supply through Hormuz in focus",
+        "Traders eyeing energy volatility plays"
       ],
-      "sentiment_score": 50,
-      "tickers": [
-        "WEN"
-      ]
+      "sentiment_score": 45,
+      "tickers": []
     },
     {
-      "id": "china-tech",
-      "title": "China Tech Tensions",
-      "icon": "world",
-      "heat": "building",
-      "bullets": [
-        "FCC expands import bans",
-        "Apple sourcing from blacklisted supplier",
-        "BABA weighed down by relations",
-        "Geopolitical overhang on Chinese names"
-      ],
-      "sentiment_score": 33,
-      "tickers": [
-        "BABA",
-        "AAPL"
-      ]
-    },
-    {
-      "id": "big-tech",
-      "title": "Mega-Cap Positioning",
-      "icon": "building-skyscraper",
+      "id": "account-blowups",
+      "title": "Margin Calls & Trading Losses",
+      "icon": "skull",
       "heat": "normal",
       "bullets": [
-        "MSFT dip framed as buying opportunity",
-        "META holders managing underwater cost basis",
-        "Copilot adoption seen as long-term tailwind",
-        "Unusual after-hours volume noted"
+        "Margin call posts highlight overleverage",
+        "Sarcastic loss confessions circulating",
+        "META position underwater despite averaging down",
+        "Free-money trades backfire for some"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 28,
       "tickers": [
-        "MSFT",
-        "META",
-        "GOOGL"
+        "META"
+      ]
+    },
+    {
+      "id": "value-plays",
+      "title": "Deep Value & Turnaround Bets",
+      "icon": "search",
+      "heat": "normal",
+      "bullets": [
+        "Wendy's pitched as deep value turnaround",
+        "UiPath thesis weighs secular growth tailwinds",
+        "Take-Two long ahead of GTA6 catalyst",
+        "Fundamental DD gaining a niche audience"
+      ],
+      "sentiment_score": 64,
+      "tickers": [
+        "TTWO",
+        "PATH"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "activity",
+      "heat": "normal",
+      "bullets": [
+        "Treasuries correlating with stocks worries hedgers",
+        "60/40 bond hedge quietly weakening",
+        "Unusual after-hours volume sparks speculation",
+        "Recession indicators traded with irony"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "SPY",
+        "QQQ"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "mixed",
-      "mentions": 9,
-      "signal": "Earnings euphoria meets sharp dip",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "MRVL",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Aggressive call buying after rally",
-      "company_name": "Marvell Technology, Inc."
-    },
-    {
       "symbol": "MSFT",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "Dip viewed as discount entry",
+      "signal": "Dip-buying conviction on AI spend",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "WEN",
-      "sentiment": "mixed",
+      "symbol": "MU",
+      "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Meme hype versus skepticism",
-      "company_name": "Wendy's Company (The)"
+      "signal": "Blowout earnings reignite memory bulls",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "META",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Underwater holders averaging down",
+      "signal": "Position underwater, averaging down",
       "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "TTWO",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Seen as AI consolidation winner",
-      "company_name": "Alphabet Inc."
+      "mentions": 2,
+      "signal": "Long into GTA6 catalyst",
+      "company_name": "Take-Two Interactive Software, "
     },
     {
-      "symbol": "BABA",
-      "sentiment": "bearish",
+      "symbol": "PATH",
+      "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Regret trade weighed by China",
-      "company_name": "Alibaba Group Holding Limited"
+      "signal": "Slow-growth turnaround thesis",
+      "company_name": "UiPath, Inc."
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "Heavy after-hours volume noted",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "QQQ",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "0DTE options blamed for losses",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "Unusual flow watched closely",
       "company_name": "Invesco QQQ Trust, Series 1"
+    },
+    {
+      "symbol": "NBIS",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Diversification narrative building",
+      "company_name": "Nebius Group N.V."
     }
   ],
   "summary": [
     {
-      "text": "Memory names dominate the tape as MU delivers blowout results, igniting leveraged bets and bold price targets. Speculative traders are piling into chip exposure even as sharp intraday drawdowns test conviction across the cohort.",
+      "text": "AI and semiconductor enthusiasm dominates the batch, with Micron's blowout quarter resetting expectations and traders piling into Microsoft's pullback as a long-term AI capex play through LEAPS and calls.",
       "tag": "bullish"
     },
     {
-      "text": "The AI trade is visibly wobbling, with the Nasdaq stringing together red sessions, OpenAI reportedly delaying its IPO, and capital rotating away from crowded mega-cap names toward alternative themes.",
-      "tag": "bearish"
+      "text": "Geopolitical risk is building as escalating Iran rhetoric and reported Gulf attacks push energy and volatility into focus, while weakening Treasury-equity correlation raises questions about traditional hedging.",
+      "tag": "notable"
     },
     {
-      "text": "Account blow-ups headline the batch, with life-savings wipeouts, 0DTE disasters, and accidental liquidations underscoring a defeated undertone beneath the speculative bravado.",
-      "tag": "notable"
+      "text": "Beneath the euphoria, margin calls, underwater META positions, and sarcastic loss confessions reveal pockets of overleverage and pain, tempering the otherwise greed-leaning tone.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-27T21:02:26.914967+00:00",
-  "updated_hkt": "2026-06-28 05:02 HKT"
+  "updated_at": "2026-06-28T12:01:44.348290+00:00",
+  "updated_hkt": "2026-06-28 20:01 HKT"
 }
