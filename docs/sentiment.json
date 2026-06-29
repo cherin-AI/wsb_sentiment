@@ -1,17 +1,17 @@
 {
   "bull_pct": 58,
-  "bear_pct": 15,
-  "neutral_pct": 27,
-  "bull_bear_ratio": 3.8,
+  "bear_pct": 21,
+  "neutral_pct": 21,
+  "bull_bear_ratio": 2.8,
   "overall_score": 61,
   "overall_label": "Greed",
   "methodology": {
     "formula_score": 58,
-    "ai_score": 63,
-    "bull_count": 15,
-    "bear_count": 4,
-    "neutral_count": 7,
-    "total_posts": 26,
+    "ai_score": 62,
+    "bull_count": 14,
+    "bear_count": 5,
+    "neutral_count": 5,
+    "total_posts": 24,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,182 +19,179 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 26,
+  "post_count": 24,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-semiconductors",
-      "title": "AI & Semiconductor Run-Up",
+      "id": "ai-infrastructure",
+      "title": "AI Trade & Infrastructure",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Memory chips drive earnings momentum",
-        "Speculators chase pre-earnings semiconductor positioning",
-        "Oracle viewed as AI infrastructure backbone",
-        "Sector pullback seen as entry"
+        "Open-source models threaten incumbent margins",
+        "JPM questions AI capex durability",
+        "Google restricts Meta's Gemini access",
+        "Oracle weakness puzzles retail bulls"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 55,
       "tickers": [
-        "MU",
         "ORCL",
-        "NVDA"
+        "META"
       ]
     },
     {
-      "id": "nuclear-energy",
-      "title": "Nuclear & Data Center Power",
+      "id": "nuclear-power",
+      "title": "Nuclear & Power for Data Centers",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Walmart signs long-term nuclear supply deal",
-        "Constellation Energy benefits from AI demand",
-        "Hyperscalers securing power capacity",
-        "Retail enthusiasm building around nuclear"
+        "Walmart signs 15-year nuclear PPA",
+        "Constellation Energy printing green",
+        "Hyperscalers buying power capacity",
+        "Retail rotating into utility plays"
       ],
-      "sentiment_score": 76,
+      "sentiment_score": 78,
       "tickers": [
         "CEG",
         "WMT"
       ]
     },
     {
-      "id": "geopolitics",
-      "title": "Iran Tensions & War Trades",
-      "icon": "bolt",
-      "heat": "hot",
-      "bullets": [
-        "US and Iran halt strikes ahead of talks",
-        "Regional attack reports drive volatility",
-        "Traders position around geopolitical headlines",
-        "Ceasefire optimism lifts risk appetite"
-      ],
-      "sentiment_score": 58,
-      "tickers": []
-    },
-    {
-      "id": "biotech-speculation",
-      "title": "Biotech Speculation",
-      "icon": "dna",
+      "id": "blackberry-revival",
+      "title": "BlackBerry QNX Comeback",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "SLS draws high-conviction speculative buyers",
-        "Ongoing trial and buyout thesis cited",
-        "Volatility deters cautious participants",
-        "Comparisons to prior biotech hype cycles"
+        "QNX positioned for physical AI",
+        "Deterministic microkernel praised",
+        "Auto sales drag fading",
+        "Community rallying around revival"
       ],
-      "sentiment_score": 64,
+      "sentiment_score": 72,
       "tickers": [
-        "SLS",
-        "IBRX"
+        "BB"
       ]
     },
     {
-      "id": "leverage-blowups",
-      "title": "Margin & Account Blow-Ups",
-      "icon": "skull",
+      "id": "semiconductor-capex",
+      "title": "Korean Semiconductor Megaspend",
+      "icon": "device-desktop",
       "heat": "building",
       "bullets": [
-        "Margin calls hitting overextended accounts",
-        "Large loan-funded positions raise risk",
-        "Defeated tone among leveraged traders",
-        "Casino mentality on full display"
+        "Samsung, SK to invest over decade",
+        "New South Korean fabrication sites",
+        "Memory cycle optimism rising",
+        "KOSPI options launch postponed"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 65,
       "tickers": [
         "MU"
       ]
     },
     {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "trending-up",
-      "heat": "normal",
+      "id": "geopolitics",
+      "title": "Geopolitical De-escalation",
+      "icon": "shield",
+      "heat": "hot",
       "bullets": [
-        "Mixed retail euphoria and caution",
-        "Deep-value turnaround theses circulating",
-        "Crypto stocks slumping despite buying",
-        "0DTE gambling remains popular"
+        "US, Iran halt strikes before talks",
+        "Risk-on relief into the week",
+        "War premium unwinding",
+        "Traders welcoming weekend calm"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 70,
+      "tickers": []
+    },
+    {
+      "id": "margin-degenerates",
+      "title": "Leveraged Speculation & Loss Posts",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Margin and loan-funded positions",
+        "0DTE break-even gambles celebrated",
+        "Speculative high-conviction holds",
+        "Mixed wins and account stress"
+      ],
+      "sentiment_score": 50,
       "tickers": [
-        "TMUS",
-        "COIN",
-        "PATH"
+        "MU",
+        "SLS"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
+      "symbol": "BB",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Post-earnings momentum chase",
-      "company_name": "Micron Technology, Inc."
+      "mentions": 3,
+      "signal": "QNX physical-AI revival thesis",
+      "company_name": "BlackBerry Limited"
     },
     {
       "symbol": "SLS",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Speculative biotech conviction play",
+      "mentions": 3,
+      "signal": "Buyout speculation, high conviction",
       "company_name": "SELLAS Life Sciences Group, Inc"
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "0DTE call gambling, memory cycle",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "CEG",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Nuclear AI power optimism",
-      "company_name": "Constellation Energy Corporatio"
-    },
-    {
-      "symbol": "WMT",
-      "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Nuclear PPA catalyst",
-      "company_name": "Walmart Inc."
+      "signal": "Nuclear PPA momentum play",
+      "company_name": "Constellation Energy Corporatio"
     },
     {
       "symbol": "ORCL",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Viewed as AI backbone",
+      "signal": "Dip-buy on AI infrastructure",
       "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "TMUS",
+      "symbol": "WMT",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Overlooked large-cap value",
+      "signal": "Nuclear deal catalyst",
+      "company_name": "Walmart Inc."
+    },
+    {
+      "symbol": "TMUS",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "Overlooked large-cap debate",
       "company_name": "T-Mobile US, Inc."
     },
     {
-      "symbol": "COIN",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Slumping despite institutional buys",
-      "company_name": "Coinbase Global, Inc."
-    },
-    {
-      "symbol": "MSFT",
+      "symbol": "META",
       "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Bearish chart pattern flagged",
-      "company_name": "Microsoft Corporation"
+      "mentions": 1,
+      "signal": "Gemini access restriction overhang",
+      "company_name": "Meta Platforms, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Risk appetite skews greedy as traders pile into AI and semiconductor names ahead of earnings, with memory-chip momentum and nuclear power catalysts like the Walmart-Constellation deal fueling speculative enthusiasm across the board.",
+      "text": "Sentiment leans constructive as geopolitical de-escalation between the US and Iran removes a war-risk premium, while nuclear-power and semiconductor capex narratives draw fresh capital. Retail is rotating toward Constellation, Walmart, and Korean memory plays with notable enthusiasm.",
       "tag": "bullish"
     },
     {
-      "text": "A ceasefire narrative around Iran tensions, paired with reported regional attacks, keeps geopolitical headlines live and traders positioning aggressively, treating volatility as an opportunity rather than a warning.",
+      "text": "The AI trade shows the first cracks of skepticism, with traders citing JPMorgan caution, open-source model disruption, and Google's restriction of Meta's Gemini access. Oracle's weakness puzzles bulls who view it as undervalued AI infrastructure.",
       "tag": "notable"
     },
     {
-      "text": "Beneath the euphoria, leveraged blow-ups and margin calls reveal the fragile underside of this rally, as loan-funded gambles and 0DTE bets remind the crowd that the casino still collects.",
+      "text": "Leverage culture remains alive, with margin- and loan-funded positions, 0DTE break-even gambles, and buyout-driven SLS conviction. The tone is opportunistic rather than defeated, though account-blow-up risk runs high beneath the bravado.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-28T21:01:57.075900+00:00",
-  "updated_hkt": "2026-06-29 05:01 HKT"
+  "updated_at": "2026-06-29T12:01:51.916344+00:00",
+  "updated_hkt": "2026-06-29 20:01 HKT"
 }
