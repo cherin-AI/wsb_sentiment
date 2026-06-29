@@ -1,17 +1,17 @@
 {
-  "bull_pct": 58,
-  "bear_pct": 21,
-  "neutral_pct": 21,
-  "bull_bear_ratio": 2.8,
-  "overall_score": 61,
+  "bull_pct": 57,
+  "bear_pct": 18,
+  "neutral_pct": 25,
+  "bull_bear_ratio": 3.3,
+  "overall_score": 62,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 58,
-    "ai_score": 62,
-    "bull_count": 14,
-    "bear_count": 5,
-    "neutral_count": 5,
-    "total_posts": 24,
+    "formula_score": 57,
+    "ai_score": 64,
+    "bull_count": 23,
+    "bear_count": 7,
+    "neutral_count": 10,
+    "total_posts": 40,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,104 +19,110 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 24,
+  "post_count": 40,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-infrastructure",
-      "title": "AI Trade & Infrastructure",
-      "icon": "cpu",
+      "id": "bb-qnx-revival",
+      "title": "BlackBerry QNX Revival Thesis",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Open-source models threaten incumbent margins",
-        "JPM questions AI capex durability",
-        "Google restricts Meta's Gemini access",
-        "Oracle weakness puzzles retail bulls"
+        "QNX embedded software in millions of vehicles",
+        "Speculative call buying piling in",
+        "Bulls citing cybersecurity and AI contracts",
+        "Multiple high-conviction posts converging"
       ],
-      "sentiment_score": 55,
-      "tickers": [
-        "ORCL",
-        "META"
-      ]
-    },
-    {
-      "id": "nuclear-power",
-      "title": "Nuclear & Power for Data Centers",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "Walmart signs 15-year nuclear PPA",
-        "Constellation Energy printing green",
-        "Hyperscalers buying power capacity",
-        "Retail rotating into utility plays"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "CEG",
-        "WMT"
-      ]
-    },
-    {
-      "id": "blackberry-revival",
-      "title": "BlackBerry QNX Comeback",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "QNX positioned for physical AI",
-        "Deterministic microkernel praised",
-        "Auto sales drag fading",
-        "Community rallying around revival"
-      ],
-      "sentiment_score": 72,
+      "sentiment_score": 80,
       "tickers": [
         "BB"
       ]
     },
     {
-      "id": "semiconductor-capex",
-      "title": "Korean Semiconductor Megaspend",
-      "icon": "device-desktop",
-      "heat": "building",
+      "id": "wendys-meme-trade",
+      "title": "Wendy's Meme-Stock Frenzy",
+      "icon": "flame",
+      "heat": "hot",
       "bullets": [
-        "Samsung, SK to invest over decade",
-        "New South Korean fabrication sites",
-        "Memory cycle optimism rising",
-        "KOSPI options launch postponed"
+        "Retail crowding into failing-business narrative",
+        "Life savings and college funds risked",
+        "Echoes of prior meme-stock manias",
+        "Pure momentum-driven speculation"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 70,
       "tickers": [
-        "MU"
+        "WEN"
       ]
     },
     {
-      "id": "geopolitics",
-      "title": "Geopolitical De-escalation",
-      "icon": "shield",
-      "heat": "hot",
+      "id": "ai-circular-financing",
+      "title": "AI Circular Financing Concerns",
+      "icon": "cpu",
+      "heat": "building",
       "bullets": [
-        "US, Iran halt strikes before talks",
-        "Risk-on relief into the week",
-        "War premium unwinding",
-        "Traders welcoming weekend calm"
+        "Same dollars cycling between AI giants",
+        "Open-source migration threatens premium models",
+        "JPM and analysts flagging caution",
+        "Skepticism on token-maxing economics building"
       ],
-      "sentiment_score": 70,
-      "tickers": []
+      "sentiment_score": 35,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "GOOGL",
+        "META"
+      ]
     },
     {
-      "id": "margin-degenerates",
-      "title": "Leveraged Speculation & Loss Posts",
+      "id": "smci-smuggling-probe",
+      "title": "Super Micro Chip Smuggling Probe",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Margin and loan-funded positions",
-        "0DTE break-even gambles celebrated",
-        "Speculative high-conviction holds",
-        "Mixed wins and account stress"
+        "Taiwan raids widen Nvidia chip investigation",
+        "Shares slid on regulatory headlines",
+        "Legal overhang weighing on sentiment",
+        "Traders questioning governance integrity"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 25,
       "tickers": [
-        "MU",
-        "SLS"
+        "SMCI",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "options-yolo-speculation",
+      "title": "High-Risk Options Speculation",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "0DTE and full-port call gambits",
+        "Margin leverage and Netflix all-ins",
+        "Solar and semiconductor breakout chasing",
+        "Euphoric risk appetite dominant"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
+        "NFLX",
+        "GLW",
+        "SNDK",
+        "FIG"
+      ]
+    },
+    {
+      "id": "korea-semis-investment",
+      "title": "Korean Semiconductor Capex Wave",
+      "icon": "building-factory",
+      "heat": "building",
+      "bullets": [
+        "Samsung, SK Hynix announce massive fab investment",
+        "Multi-year trillion-scale capital commitment",
+        "Memory demand optimism rising",
+        "KOSPI volatile on options policy delay"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "SSNLF"
       ]
     }
   ],
@@ -124,74 +130,74 @@
     {
       "symbol": "BB",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "QNX physical-AI revival thesis",
+      "mentions": 18,
+      "signal": "QNX revival conviction trade",
       "company_name": "BlackBerry Limited"
     },
     {
-      "symbol": "SLS",
+      "symbol": "WEN",
+      "sentiment": "bullish",
+      "mentions": 9,
+      "signal": "Meme-stock frenzy, all-in bets",
+      "company_name": "Wendy's Company (The)"
+    },
+    {
+      "symbol": "SMCI",
+      "sentiment": "bearish",
+      "mentions": 6,
+      "signal": "Smuggling probe overhang",
+      "company_name": "Super Micro Computer, Inc."
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "Circular AI financing scrutiny",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "NFLX",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Full-port oversold bounce bet",
+      "company_name": "Netflix, Inc."
+    },
+    {
+      "symbol": "RDDT",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Long-dated calls, mispricing thesis",
+      "company_name": "Reddit, Inc."
+    },
+    {
+      "symbol": "GLW",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Buyout speculation, high conviction",
-      "company_name": "SELLAS Life Sciences Group, Inc"
+      "signal": "Solar breakout momentum",
+      "company_name": "Corning Incorporated"
     },
     {
-      "symbol": "MU",
+      "symbol": "ASTS",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "0DTE call gambling, memory cycle",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "CEG",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Nuclear PPA momentum play",
-      "company_name": "Constellation Energy Corporatio"
-    },
-    {
-      "symbol": "ORCL",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Dip-buy on AI infrastructure",
-      "company_name": "Oracle Corporation"
-    },
-    {
-      "symbol": "WMT",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Nuclear deal catalyst",
-      "company_name": "Walmart Inc."
-    },
-    {
-      "symbol": "TMUS",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "Overlooked large-cap debate",
-      "company_name": "T-Mobile US, Inc."
-    },
-    {
-      "symbol": "META",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Gemini access restriction overhang",
-      "company_name": "Meta Platforms, Inc."
+      "mentions": 3,
+      "signal": "Diamond-hands despite losses",
+      "company_name": "AST SpaceMobile, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans constructive as geopolitical de-escalation between the US and Iran removes a war-risk premium, while nuclear-power and semiconductor capex narratives draw fresh capital. Retail is rotating toward Constellation, Walmart, and Korean memory plays with notable enthusiasm.",
+      "text": "Sentiment skews greedy, with retail piling into BlackBerry's QNX revival thesis and the Wendy's meme frenzy, even risking college savings. High-conviction call buying and margin leverage signal euphoric, momentum-chasing risk appetite across the batch.",
       "tag": "bullish"
     },
     {
-      "text": "The AI trade shows the first cracks of skepticism, with traders citing JPMorgan caution, open-source model disruption, and Google's restriction of Meta's Gemini access. Oracle's weakness puzzles bulls who view it as undervalued AI infrastructure.",
-      "tag": "notable"
+      "text": "Counterweights are emerging: Super Micro's chip-smuggling probe pressures shares, while skepticism over circular AI financing and open-source model migration draws analyst caution. These narratives are building rather than dominating the overall mood.",
+      "tag": "bearish"
     },
     {
-      "text": "Leverage culture remains alive, with margin- and loan-funded positions, 0DTE break-even gambles, and buyout-driven SLS conviction. The tone is opportunistic rather than defeated, though account-blow-up risk runs high beneath the bravado.",
-      "tag": "bearish"
+      "text": "Korean semiconductor capex commitments from Samsung and SK Hynix underscore structural memory optimism, even as KOSPI wobbles on an options-policy delay. The batch reflects a market torn between speculative exuberance and selective fundamental concern.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-29T12:01:51.916344+00:00",
-  "updated_hkt": "2026-06-29 20:01 HKT"
+  "updated_at": "2026-06-29T21:02:39.511856+00:00",
+  "updated_hkt": "2026-06-30 05:02 HKT"
 }
