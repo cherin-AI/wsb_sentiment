@@ -1,17 +1,17 @@
 {
-  "bull_pct": 57,
-  "bear_pct": 18,
-  "neutral_pct": 25,
-  "bull_bear_ratio": 3.3,
-  "overall_score": 62,
+  "bull_pct": 66,
+  "bear_pct": 16,
+  "neutral_pct": 18,
+  "bull_bear_ratio": 4.2,
+  "overall_score": 70,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 57,
-    "ai_score": 64,
-    "bull_count": 23,
-    "bear_count": 7,
-    "neutral_count": 10,
-    "total_posts": 40,
+    "formula_score": 66,
+    "ai_score": 72,
+    "bull_count": 21,
+    "bear_count": 5,
+    "neutral_count": 6,
+    "total_posts": 32,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,19 +19,36 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 40,
+  "post_count": 32,
   "hours_window": 24,
   "themes": [
     {
-      "id": "bb-qnx-revival",
-      "title": "BlackBerry QNX Revival Thesis",
+      "id": "rocket-lab-space",
+      "title": "Rocket Lab & Space Plays",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "QNX embedded software in millions of vehicles",
-        "Speculative call buying piling in",
-        "Bulls citing cybersecurity and AI contracts",
-        "Multiple high-conviction posts converging"
+        "Rocket Lab acquires Iridium in $8B deal",
+        "RKLB shares surge in overnight session",
+        "Outbid ASTS and rivals for asset",
+        "Speculative satellite enthusiasm spreading"
+      ],
+      "sentiment_score": 82,
+      "tickers": [
+        "RKLB",
+        "ASTS"
+      ]
+    },
+    {
+      "id": "blackberry-qnx",
+      "title": "BlackBerry QNX Embedded Software",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "QNX installed in 1 in 6 vehicles",
+        "Large call positions piling in",
+        "Government contracts and AI narrative",
+        "Bears warned on rerating thesis"
       ],
       "sentiment_score": 80,
       "tickers": [
@@ -39,165 +56,149 @@
       ]
     },
     {
-      "id": "wendys-meme-trade",
-      "title": "Wendy's Meme-Stock Frenzy",
+      "id": "bitcoin-mstr",
+      "title": "Bitcoin & MSTR Leverage",
+      "icon": "currency-bitcoin",
+      "heat": "building",
+      "bullets": [
+        "Strategy preparing $1.25B Bitcoin sale",
+        "Retail using overdrafts to buy MSTR",
+        "High-leverage crypto exposure questionable",
+        "Saylor model imitated aggressively"
+      ],
+      "sentiment_score": 55,
+      "tickers": [
+        "MSTR",
+        "BTC"
+      ]
+    },
+    {
+      "id": "macro-yen",
+      "title": "Macro & Yen Risk",
+      "icon": "alert-triangle",
+      "heat": "building",
+      "bullets": [
+        "Japan signals yen support at 40-year low",
+        "Treasury liquidation fears emerging",
+        "Speculators positioning in volatility calls",
+        "Geopolitical macro tail risk rising"
+      ],
+      "sentiment_score": 32,
+      "tickers": [
+        "UVXY"
+      ]
+    },
+    {
+      "id": "yolo-options",
+      "title": "high-conviction Options & 0DTE Speculation",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Retail crowding into failing-business narrative",
-        "Life savings and college funds risked",
-        "Echoes of prior meme-stock manias",
-        "Pure momentum-driven speculation"
+        "Aggressive single-name call bets",
+        "0DTE discovery fueling gambling energy",
+        "College savings and overdrafts wagered",
+        "Outsized short-dated profit posts"
       ],
       "sentiment_score": 70,
       "tickers": [
-        "WEN"
-      ]
-    },
-    {
-      "id": "ai-circular-financing",
-      "title": "AI Circular Financing Concerns",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "Same dollars cycling between AI giants",
-        "Open-source migration threatens premium models",
-        "JPM and analysts flagging caution",
-        "Skepticism on token-maxing economics building"
-      ],
-      "sentiment_score": 35,
-      "tickers": [
-        "NVDA",
-        "MSFT",
-        "GOOGL",
-        "META"
-      ]
-    },
-    {
-      "id": "smci-smuggling-probe",
-      "title": "Super Micro Chip Smuggling Probe",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Taiwan raids widen Nvidia chip investigation",
-        "Shares slid on regulatory headlines",
-        "Legal overhang weighing on sentiment",
-        "Traders questioning governance integrity"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "SMCI",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "options-yolo-speculation",
-      "title": "High-Risk Options Speculation",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "0DTE and full-port call gambits",
-        "Margin leverage and Netflix all-ins",
-        "Solar and semiconductor breakout chasing",
-        "Euphoric risk appetite dominant"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "NFLX",
         "GLW",
+        "ORCL",
         "SNDK",
         "FIG"
       ]
     },
     {
-      "id": "korea-semis-investment",
-      "title": "Korean Semiconductor Capex Wave",
-      "icon": "building-factory",
+      "id": "earnings-catalysts",
+      "title": "Earnings & Corporate Catalysts",
+      "icon": "building-bank",
       "heat": "building",
       "bullets": [
-        "Samsung, SK Hynix announce massive fab investment",
-        "Multi-year trillion-scale capital commitment",
-        "Memory demand optimism rising",
-        "KOSPI volatile on options policy delay"
+        "Comcast soars on NBCUniversal spinoff",
+        "Supermicro slides on Taiwan chip probe",
+        "Nike earnings play positioning",
+        "Mattel deep-value contrarian thesis"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 58,
       "tickers": [
-        "SSNLF"
+        "CMCSA",
+        "SMCI",
+        "NKE",
+        "MAT"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "RKLB",
+      "sentiment": "bullish",
+      "mentions": 9,
+      "signal": "Iridium deal euphoria",
+      "company_name": "Rocket Lab Corporation"
+    },
+    {
       "symbol": "BB",
       "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "QNX revival conviction trade",
+      "mentions": 7,
+      "signal": "QNX rerating conviction",
       "company_name": "BlackBerry Limited"
     },
     {
-      "symbol": "WEN",
-      "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "Meme-stock frenzy, all-in bets",
-      "company_name": "Wendy's Company (The)"
-    },
-    {
-      "symbol": "SMCI",
-      "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "Smuggling probe overhang",
-      "company_name": "Super Micro Computer, Inc."
-    },
-    {
-      "symbol": "NVDA",
+      "symbol": "ASTS",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Circular AI financing scrutiny",
-      "company_name": "NVIDIA Corporation"
+      "mentions": 5,
+      "signal": "Loyal holders averaging down",
+      "company_name": "AST SpaceMobile, Inc."
     },
     {
-      "symbol": "NFLX",
+      "symbol": "MSTR",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Full-port oversold bounce bet",
-      "company_name": "Netflix, Inc."
-    },
-    {
-      "symbol": "RDDT",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Long-dated calls, mispricing thesis",
-      "company_name": "Reddit, Inc."
+      "signal": "Leveraged crypto bet",
+      "company_name": "Strategy Inc"
     },
     {
       "symbol": "GLW",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Solar breakout momentum",
+      "signal": "Solar momentum riders",
       "company_name": "Corning Incorporated"
     },
     {
-      "symbol": "ASTS",
+      "symbol": "AMD",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Diamond-hands despite losses",
-      "company_name": "AST SpaceMobile, Inc."
+      "signal": "Profit-taking and trimming",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "SMCI",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Chip smuggling probe overhang",
+      "company_name": "Super Micro Computer, Inc."
+    },
+    {
+      "symbol": "FIG",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "SaaS disruption skepticism",
+      "company_name": "Figma, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment skews greedy, with retail piling into BlackBerry's QNX revival thesis and the Wendy's meme frenzy, even risking college savings. High-conviction call buying and margin leverage signal euphoric, momentum-chasing risk appetite across the batch.",
+      "text": "Rocket Lab's $8B Iridium acquisition dominates the tape, igniting space-sector enthusiasm and overnight upside as traders pile into RKLB ahead of rivals like ASTS. The energy is distinctly risk-on, with speculative satellite and rerating narratives spreading fast.",
       "tag": "bullish"
     },
     {
-      "text": "Counterweights are emerging: Super Micro's chip-smuggling probe pressures shares, while skepticism over circular AI financing and open-source model migration draws analyst caution. These narratives are building rather than dominating the overall mood.",
-      "tag": "bearish"
+      "text": "Single-name conviction is running hot, from BlackBerry's QNX embedded-software thesis to leveraged Bitcoin proxies via MSTR. Aggressive call buying, 0DTE experimentation, and overdraft-funded wagers signal an elevated greed regime among speculative retail traders.",
+      "tag": "notable"
     },
     {
-      "text": "Korean semiconductor capex commitments from Samsung and SK Hynix underscore structural memory optimism, even as KOSPI wobbles on an options-policy delay. The batch reflects a market torn between speculative exuberance and selective fundamental concern.",
-      "tag": "notable"
+      "text": "Macro tail risk lingers beneath the euphoria, with Japan's yen support warnings raising Treasury-liquidation fears and Supermicro sliding on a Taiwan chip-smuggling probe. A minority is hedging into volatility, but the broad mood remains defiantly optimistic.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-06-29T21:02:39.511856+00:00",
-  "updated_hkt": "2026-06-30 05:02 HKT"
+  "updated_at": "2026-06-30T12:02:20.642344+00:00",
+  "updated_hkt": "2026-06-30 20:02 HKT"
 }
