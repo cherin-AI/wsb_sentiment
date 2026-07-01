@@ -1,17 +1,17 @@
 {
-  "bull_pct": 60,
-  "bear_pct": 21,
-  "neutral_pct": 19,
-  "bull_bear_ratio": 2.8,
-  "overall_score": 66,
+  "bull_pct": 56,
+  "bear_pct": 18,
+  "neutral_pct": 26,
+  "bull_bear_ratio": 3.1,
+  "overall_score": 67,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 60,
-    "ai_score": 68,
-    "bull_count": 25,
-    "bear_count": 9,
-    "neutral_count": 8,
-    "total_posts": 42,
+    "formula_score": 56,
+    "ai_score": 72,
+    "bull_count": 22,
+    "bear_count": 7,
+    "neutral_count": 10,
+    "total_posts": 39,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,189 +19,192 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 42,
+  "post_count": 39,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-satellite",
-      "title": "SpaceX & Satellite Plays",
+      "id": "spacex-nasdaq-inclusion",
+      "title": "SpaceX Nasdaq Inclusion Trade",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Nasdaq inclusion July 7 frontrunning",
-        "Forced index buying thesis",
-        "Japan subsidizes Rakuten-AST network",
-        "Aggressive call spread positioning"
+        "SPCX joins Nasdaq 100 July 7th",
+        "Traders front-running forced index buying",
+        "Limited float fuels squeeze thesis",
+        "Space names RKLB, ASTS ride momentum"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 82,
       "tickers": [
-        "ASTS",
-        "SPCX"
+        "SPCX",
+        "RKLB",
+        "ASTS"
       ]
     },
     {
-      "id": "crypto-mstr",
-      "title": "Bitcoin & Strategy Skepticism",
-      "icon": "currency-bitcoin",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Momentum",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MSTR puts gaining conviction",
-        "Strategy preparing $1.25B BTC sale",
-        "Bears positioning for BTC selloff",
-        "Leveraged all-in bets mocked"
+        "Export controls lifted on AI models",
+        "AMD, ASML, AMAT extending upside",
+        "Enterprise AI deployment deals expanding",
+        "Semiconductor names on a tear"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 85,
+      "tickers": [
+        "AMD",
+        "ASML",
+        "AMAT",
+        "NBIS",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "speculative-yolo",
+      "title": "High-Conviction Speculation",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "Large leveraged bets into SOXL",
+        "Options recovery plays and doubling down",
+        "Genomics AI names catching bids",
+        "Retail chasing concentrated positions"
+      ],
+      "sentiment_score": 75,
+      "tickers": [
+        "SOXL",
+        "PRME",
+        "UWMC"
+      ]
+    },
+    {
+      "id": "bearish-hedges",
+      "title": "Bearish Positioning & Hedges",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Analyst warns of September correction",
+        "MSTR and IBIT puts opened",
+        "Crypto sell-off bets emerging",
+        "Caterpillar short disclosed"
+      ],
+      "sentiment_score": 28,
       "tickers": [
         "MSTR",
         "IBIT",
-        "BTC"
+        "CAT",
+        "SPY"
       ]
     },
     {
-      "id": "semis-ai",
-      "title": "Semiconductors & AI Momentum",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "ASML first major multi-bagger wins",
-        "AMAT and NBIS riding strong",
-        "SOXL leverage chasing continues",
-        "NVDA short setups debated"
-      ],
-      "sentiment_score": 74,
-      "tickers": [
-        "ASML",
-        "AMAT",
-        "NVDA",
-        "SOXL"
-      ]
-    },
-    {
-      "id": "earnings-plays",
-      "title": "Earnings & Single-Name Bets",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "NKE earnings positioning ahead",
-        "MAT contrarian value thesis",
-        "Oracle swing trade speculation",
-        "Portillo's oversold turnaround pitch"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "NKE",
-        "MAT",
-        "ORCL"
-      ]
-    },
-    {
-      "id": "macro-risk",
-      "title": "Macro & Correction Warnings",
-      "icon": "alert-triangle",
+      "id": "earnings-consumer",
+      "title": "Consumer & Earnings Reactions",
+      "icon": "shopping-cart",
       "heat": "normal",
       "bullets": [
-        "BofA warns of September correction",
-        "Japan yen at 40-year low",
-        "Treasury selling fears spark hedges",
-        "UVXY and VIX calls accumulating"
+        "Nike tops estimates despite China drop",
+        "Tariff refund cushions retailer outlook",
+        "Portillo's deep-value turnaround thesis",
+        "New leadership sparks recovery hopes"
       ],
-      "sentiment_score": 38,
+      "sentiment_score": 58,
       "tickers": [
-        "UVXY",
-        "VIX"
+        "NKE",
+        "PTLO"
       ]
     },
     {
-      "id": "yolo-culture",
-      "title": "high-conviction Speculation & Vibes Trading",
-      "icon": "flame",
-      "heat": "hot",
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "trending-up",
+      "heat": "normal",
       "bullets": [
-        "Vibe-based concentrated positions multiplying",
-        "Overdraft-funded all-in bets",
-        "Recovery and revenge trading energy",
-        "High-risk binary catalyst plays"
+        "Market only goes up sentiment",
+        "Bears repeatedly punished on shorts",
+        "Profit-taking on year-long holds",
+        "Euphoric retail risk appetite"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 70,
       "tickers": [
-        "QBTS",
-        "VERA",
-        "PRME"
+        "SPY",
+        "BB",
+        "RDDT"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MSTR",
-      "sentiment": "bearish",
-      "mentions": 9,
-      "signal": "Puts and skepticism on leveraged BTC bet",
-      "company_name": "Strategy Inc"
-    },
-    {
-      "symbol": "ASML",
+      "symbol": "SPCX",
       "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "Celebrated multi-bagger holds",
-      "company_name": "ASML Holding N.V. - New York Re"
-    },
-    {
-      "symbol": "NKE",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Earnings play with battered holders",
-      "company_name": "Nike, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Short-term short setups debated",
-      "company_name": "NVIDIA Corporation"
+      "mentions": 14,
+      "signal": "Nasdaq inclusion front-running frenzy",
+      "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "AMD",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Profit-taking and diversification",
+      "mentions": 9,
+      "signal": "Relentless upside momentum",
       "company_name": "Advanced Micro Devices, Inc."
     },
     {
-      "symbol": "IBIT",
+      "symbol": "ASML",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "Dip-buyers celebrating gains",
+      "company_name": "ASML Holding N.V. - New York Re"
+    },
+    {
+      "symbol": "NBIS",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "Long-hold options windfall",
+      "company_name": "Nebius Group N.V."
+    },
+    {
+      "symbol": "MSTR",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Puts expecting crypto selloff",
-      "company_name": "iShares Bitcoin Trust ETF"
+      "mentions": 6,
+      "signal": "Put buyers targeting crypto proxy",
+      "company_name": "Strategy Inc"
     },
     {
       "symbol": "AMAT",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Dip-buy conviction holds",
+      "mentions": 5,
+      "signal": "Semi rally participants confident",
       "company_name": "Applied Materials, Inc."
     },
     {
-      "symbol": "SPCX",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Profits locked on rebound",
-      "company_name": "Space Exploration Technologies "
+      "symbol": "IBIT",
+      "sentiment": "bearish",
+      "mentions": 5,
+      "signal": "Betting on Bitcoin pullback",
+      "company_name": "iShares Bitcoin Trust ETF"
+    },
+    {
+      "symbol": "NKE",
+      "sentiment": "mixed",
+      "mentions": 5,
+      "signal": "Earnings beat, holders skeptical",
+      "company_name": "Nike, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews bullish, anchored by SpaceX Nasdaq inclusion frontrunning and a resilient semiconductor-AI complex where ASML, AMAT and NBIS holders are celebrating long-held conviction. Speculative positioning remains aggressive across leveraged ETFs and single names.",
+      "text": "Risk appetite runs hot as traders aggressively front-run SpaceX's Nasdaq 100 inclusion on July 7th, positioning across SPCX, RKLB, and ASTS ahead of anticipated forced index buying into a constrained float.",
       "tag": "bullish"
     },
     {
-      "text": "A clear bearish undercurrent targets Strategy and Bitcoin, with traders stacking MSTR and IBIT puts ahead of a reported $1.25B BTC sale. BofA's September correction warning and yen-driven Treasury fears add a hedging dimension via UVXY and VIX calls.",
-      "tag": "bearish"
+      "text": "AI and semiconductor names dominate the tape, with AMD, ASML, and AMAT extending gains as export-control relief and enterprise deployment deals reinforce a euphoric, buy-everything narrative across the batch.",
+      "tag": "bullish"
     },
     {
-      "text": "The batch reflects classic late-cycle euphoria: vibe-based concentrated bets, overdraft-funded all-ins, and revenge trades coexist with binary FDA catalyst plays. Sentiment is greedy but increasingly two-sided as macro skeptics position against crypto exuberance.",
+      "text": "A minority of skeptics are hedging into MSTR and IBIT puts and citing analyst warnings of a September correction, but the prevailing mood dismisses bears amid persistent upside momentum.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-06-30T21:02:46.952805+00:00",
-  "updated_hkt": "2026-07-01 05:02 HKT"
+  "updated_at": "2026-07-01T12:02:40.276196+00:00",
+  "updated_hkt": "2026-07-01 20:02 HKT"
 }
