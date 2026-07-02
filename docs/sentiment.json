@@ -1,17 +1,17 @@
 {
-  "bull_pct": 46,
-  "bear_pct": 32,
-  "neutral_pct": 22,
-  "bull_bear_ratio": 1.4,
-  "overall_score": 54,
+  "bull_pct": 42,
+  "bear_pct": 38,
+  "neutral_pct": 20,
+  "bull_bear_ratio": 1.1,
+  "overall_score": 49,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 46,
-    "ai_score": 58,
-    "bull_count": 26,
-    "bear_count": 18,
-    "neutral_count": 12,
-    "total_posts": 56,
+    "formula_score": 42,
+    "ai_score": 52,
+    "bull_count": 19,
+    "bear_count": 17,
+    "neutral_count": 9,
+    "total_posts": 45,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 56,
+  "post_count": 45,
   "hours_window": 24,
   "themes": [
     {
-      "id": "meta-ai-compute",
-      "title": "Meta AI Compute Swing",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure & Bubble Debate",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Meta options driving major swings",
-        "Excess AI compute cloud pivot",
-        "Big call winners after semi selloff",
-        "Traders crediting Zuckerberg for moves"
+        "Burry places fresh AI short bets",
+        "Palantir CEO warns of over-hyped models",
+        "Nvidia rolls out revenue-sharing cloud model",
+        "Compute-efficiency thesis questions data-center peak"
       ],
-      "sentiment_score": 62,
-      "tickers": [
-        "META"
-      ]
-    },
-    {
-      "id": "semi-selloff",
-      "title": "Semiconductor Selloff",
-      "icon": "trending-down",
-      "heat": "hot",
-      "bullets": [
-        "NVDA, MU near ATH then tanking",
-        "AMD puts pay off big",
-        "NBIS losses and put reversals",
-        "Compute glut fears building"
-      ],
-      "sentiment_score": 40,
+      "sentiment_score": 42,
       "tickers": [
         "NVDA",
-        "AMD",
-        "MU",
+        "PLTR",
+        "MSFT",
         "NBIS"
       ]
     },
     {
-      "id": "wen-meme",
-      "title": "WEN Meme Wave",
+      "id": "korea-markets",
+      "title": "South Korea Market Frenzy",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Large speculative bets on WEN",
-        "Framed as safer than semis",
-        "Community piling into the meme",
-        "Six-figure positions disclosed"
+        "24-hour won trading launches next week",
+        "KOSPI circuit-breaker workarounds circulate",
+        "SK Hynix files for Nasdaq debut",
+        "Traders eye US investor liquidity"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 55,
       "tickers": [
-        "WEN"
+        "SKHY"
       ]
     },
     {
-      "id": "blackberry-rerate",
-      "title": "Blackberry AI Rerate Thesis",
+      "id": "rklb-space",
+      "title": "Rocket Lab & Space Speculation",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "QNX powers 275M+ vehicles",
-        "Positioned as AI infrastructure play",
-        "LEAPS accumulation on royalty revenue",
-        "Beat earnings, raised guidance"
+        "Big wins and painful losses coexist",
+        "Traders regret not taking profits",
+        "SPCX IPO lead-up disappoints holders",
+        "Conviction remains despite pullbacks"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 50,
       "tickers": [
-        "BB"
+        "RKLB"
       ]
     },
     {
-      "id": "loss-porn",
-      "title": "Account Blow-Ups",
+      "id": "loss-posts",
+      "title": "Margin Blow-Ups & Trading Losses",
       "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Liquidations from over-leveraged margin bets",
+        "Down-payment funds gambled pre-earnings",
+        "Crypto and equity bags underwater",
+        "Repeated FOMO mistakes acknowledged"
+      ],
+      "sentiment_score": 20,
+      "tickers": [
+        "AVAV",
+        "MSTY"
+      ]
+    },
+    {
+      "id": "profit-posts",
+      "title": "Big Wins & Retirement Dreams",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Large single-day trading losses shared",
-        "Margin positions underwater",
-        "RKLB and DRAM bag-holding",
-        "Mix of despair and gallows humor"
+        "Meta calls deliver life-changing profits",
+        "USO short pays off handsomely",
+        "Young traders claim early retirement",
+        "Profit-taking discipline debated"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 78,
       "tickers": [
-        "RKLB",
-        "NBIS",
-        "META"
+        "META",
+        "USO",
+        "HOOD"
       ]
     },
     {
       "id": "macro-signals",
-      "title": "Macro & Rate Watch",
-      "icon": "chart-line",
-      "heat": "normal",
+      "title": "Macro Data & Risk Signals",
+      "icon": "alert-triangle",
+      "heat": "building",
       "bullets": [
-        "Atlanta Fed cuts GDP forecast",
-        "Warsh warns inflation too high",
-        "Euro area inflation cools",
-        "SKEW index at historic high"
+        "Payrolls miss expectations sharply",
+        "Atlanta Fed slashes GDP forecast",
+        "SKEW Index at historic highs",
+        "Tesla deliveries top estimates"
       ],
-      "sentiment_score": 42,
+      "sentiment_score": 40,
       "tickers": [
-        "USO"
+        "TSLA",
+        "SPY"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "META",
-      "sentiment": "bullish",
+      "symbol": "RKLB",
+      "sentiment": "mixed",
+      "mentions": 12,
+      "signal": "Wild swings between wins and regret",
+      "company_name": "Rocket Lab Corporation"
+    },
+    {
+      "symbol": "TSLA",
+      "sentiment": "mixed",
       "mentions": 9,
-      "signal": "Call buyers riding AI compute pivot",
-      "company_name": "Meta Platforms, Inc."
+      "signal": "Deliveries beat, but puts nervous",
+      "company_name": "Tesla, Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "mixed",
-      "mentions": 7,
-      "signal": "Top-callers versus buyers at ATH",
+      "mentions": 8,
+      "signal": "Near ATH amid bubble doubts",
       "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "WEN",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Meme conviction bets piling in",
+      "mentions": 6,
+      "signal": "Meme-driven crowd piling in",
       "company_name": "Wendy's Company (The)"
     },
     {
-      "symbol": "NBIS",
-      "sentiment": "mixed",
+      "symbol": "META",
+      "sentiment": "bullish",
       "mentions": 5,
-      "signal": "Puts swinging from loss to gain",
-      "company_name": "Nebius Group N.V."
+      "signal": "Calls printing big for holders",
+      "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "BB",
+      "symbol": "MSFT",
+      "sentiment": "neutral",
+      "mentions": 5,
+      "signal": "Earnings run-up speculation",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "USO",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "AI infrastructure rerate thesis",
-      "company_name": "BlackBerry Limited"
+      "signal": "Oil shorts profiting nicely",
+      "company_name": "United States Oil Fund"
     },
     {
-      "symbol": "RKLB",
+      "symbol": "PLTR",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Bag-holders and loss posts",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Put buyers cash in on selloff",
-      "company_name": "Advanced Micro Devices, Inc."
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Near ATH, memory glut fears",
-      "company_name": "Micron Technology, Inc."
+      "mentions": 4,
+      "signal": "CEO cools AI enthusiasm",
+      "company_name": "Palantir Technologies Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment skews cautiously greedy as Meta's AI compute pivot fuels euphoric call winners, while WEN and Blackberry rerate theses draw speculative conviction bets. Retail traders are actively positioning, with buying energy outpacing the fear across the batch.",
-      "tag": "bullish"
-    },
-    {
-      "text": "The semiconductor complex is fracturing: NVDA and MU near all-time highs sparked top-calling, and AMD and NBIS put buyers profited from a sharp selloff. Compute-glut narratives around excess Meta capacity are stoking downside speculation.",
+      "text": "The batch reads as a split market: euphoric profit posts and retirement claims sit beside a heavy stream of margin liquidations and underwater bags, leaving overall sentiment balanced near neutral despite loud extremes on both ends.",
       "tag": "notable"
     },
     {
-      "text": "Beneath the wins lies real pain, with margin blow-ups, RKLB bag-holding, and large single-day losses shared alongside a historic-high SKEW index and downgraded Atlanta Fed GDP forecast signaling underlying fragility.",
+      "text": "AI infrastructure narratives are cracking, with Burry's fresh shorts, Palantir's CEO warning of over-hyped models, and a compute-efficiency thesis questioning the data-center buildout, injecting genuine caution into the previously untouchable trade.",
+      "tag": "bearish"
+    },
+    {
+      "text": "Macro undercurrents are darkening as payrolls miss, the Atlanta Fed slashes GDP forecasts, and the SKEW Index touches historic highs, signaling elevated tail-risk hedging even while indices hover near record levels.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-02T12:03:27.724900+00:00",
-  "updated_hkt": "2026-07-02 20:03 HKT"
+  "updated_at": "2026-07-02T21:02:56.616174+00:00",
+  "updated_hkt": "2026-07-03 05:02 HKT"
 }
