@@ -1,17 +1,17 @@
 {
-  "bull_pct": 49,
-  "bear_pct": 37,
-  "neutral_pct": 14,
-  "bull_bear_ratio": 1.3,
-  "overall_score": 51,
+  "bull_pct": 50,
+  "bear_pct": 21,
+  "neutral_pct": 29,
+  "bull_bear_ratio": 2.4,
+  "overall_score": 56,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 49,
-    "ai_score": 52,
-    "bull_count": 17,
-    "bear_count": 13,
-    "neutral_count": 5,
-    "total_posts": 35,
+    "formula_score": 50,
+    "ai_score": 58,
+    "bull_count": 12,
+    "bear_count": 5,
+    "neutral_count": 7,
+    "total_posts": 24,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,189 +19,183 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 35,
+  "post_count": 24,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-trade-fatigue",
-      "title": "AI Trade Under Scrutiny",
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Trades",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Burry warns on new AI short bets",
-        "Palantir CEO flags overhyped models",
-        "Meta-Samsung chip partnership advances",
-        "Bagholders lament semiconductor drawdowns"
+        "Micron sell-off puzzles memory bulls",
+        "Meta-Samsung custom chip partnership eyed",
+        "AAOI optical transceiver thesis touted",
+        "NVDA bagholders nursing wounds"
       ],
-      "sentiment_score": 42,
+      "sentiment_score": 60,
       "tickers": [
-        "NVDA",
+        "MU",
         "META",
-        "PLTR",
-        "MU"
+        "AAOI",
+        "NVDA"
       ]
     },
     {
       "id": "options-yolo",
-      "title": "High-Conviction Options Bets",
+      "title": "High-Risk Options Gambling",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Aggressive call plays on speculative names",
-        "Margin-fueled directional wagers",
-        "Vertical spreads and LEAPs favored",
-        "Weekend positions held out of spite"
+        "Deep OTM lottery tickets celebrated",
+        "Margin-fueled account swings shared",
+        "Oracle post-earnings dip bet",
+        "Big multiplier speculation dominates"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 65,
       "tickers": [
         "ORCL",
-        "AAOI",
-        "VCX",
-        "NFLX"
+        "CVNA",
+        "WEN"
       ]
     },
     {
-      "id": "blow-ups",
-      "title": "Account Blow-Ups",
+      "id": "profit-posts",
+      "title": "Profit Screenshots",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Large percentage gains flaunted",
+        "Recovery-from-blow-up narratives circulating",
+        "Retail euphoria energy building",
+        "AMA-style bragging threads active"
+      ],
+      "sentiment_score": 78,
+      "tickers": [
+        "CVNA",
+        "WEN"
+      ]
+    },
+    {
+      "id": "loss-posts",
+      "title": "Trading Losses & Bad Dips",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Liquidations from over-leveraged positions",
-        "Emotional numbness after volatile swings",
-        "Down-payment funds put fully at risk",
-        "Falling knives caught repeatedly"
+        "Failed dip-buying attempts confessed",
+        "Falling knife catches backfire",
+        "AI stock losing streak persists",
+        "Bag-holding sentiment spreading"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 25,
       "tickers": [
-        "AVAV",
-        "MSTY",
+        "MU",
         "AVGU"
       ]
     },
     {
-      "id": "space-defense",
-      "title": "Space & Defense Momentum",
-      "icon": "trending-up",
+      "id": "space-satellites",
+      "title": "Space & Satellite Plays",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "SpaceX index inclusion speculation",
-        "Rocket Lab riding upside momentum",
-        "Defense earnings anticipation",
-        "Drone plays drawing fresh interest"
+        "Amazon Leo reaches commercial threshold",
+        "Starlink rivalry heating up",
+        "SpaceX QQQ inclusion speculation",
+        "Large positioning ahead of catalysts"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 68,
       "tickers": [
-        "RKLB",
-        "ONDS",
-        "AVAV"
+        "AMZN"
       ]
     },
     {
-      "id": "macro-data",
-      "title": "Macro & Jobs Data",
-      "icon": "flame",
-      "heat": "building",
+      "id": "global-markets",
+      "title": "Global & Asia Markets",
+      "icon": "world",
+      "heat": "normal",
       "bullets": [
-        "Payrolls miss expectations sharply",
-        "Unemployment ticks lower to 4.2%",
-        "Selloff sparks cash-gang chatter",
-        "Risk-on trades regain momentum abroad"
+        "Nikkei resilient amid Nasdaq weakness",
+        "Korean stocks rally on risk-on flows",
+        "Foreign investor rotation into Asia",
+        "Jersey Mikes IPO filing noted"
       ],
-      "sentiment_score": 40,
-      "tickers": [
-        "QQQ",
-        "TSLA"
-      ]
-    },
-    {
-      "id": "tesla-deliveries",
-      "title": "Tesla Delivery Catalyst",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Q2 deliveries top expectations",
-        "Put holders sweating pre-print",
-        "Delivery beat pressures bearish bets",
-        "Speculative traders positioning both ways"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "TSLA"
-      ]
+      "sentiment_score": 62,
+      "tickers": []
     }
   ],
   "tickers": [
     {
-      "symbol": "TSLA",
+      "symbol": "MU",
       "sentiment": "mixed",
-      "mentions": 9,
-      "signal": "Delivery beat squeezing put holders",
-      "company_name": "Tesla, Inc."
+      "mentions": 4,
+      "signal": "memory supercycle hope meets sell-off pain",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "CVNA",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "persistent put buyers targeting downside",
+      "company_name": "Carvana Co."
     },
     {
       "symbol": "NVDA",
-      "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "Bagholder fatigue at elevated levels",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "bagholders wounded near highs",
       "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "RKLB",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Strong upside momentum, profit-taking regret",
-      "company_name": "Rocket Lab Corporation"
     },
     {
       "symbol": "META",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "AI chip partnership optimism",
+      "mentions": 2,
+      "signal": "custom AI chip ambitions",
       "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "PLTR",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "CEO overhype warning weighs",
-      "company_name": "Palantir Technologies Inc."
-    },
-    {
-      "symbol": "AAOI",
+      "symbol": "AAPL",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Optical transceiver bull thesis",
-      "company_name": "Applied Optoelectronics, Inc."
+      "mentions": 2,
+      "signal": "buy-the-dip conviction on pricing power",
+      "company_name": "Apple Inc."
     },
     {
       "symbol": "ORCL",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Oversold post-earnings dip buy",
+      "mentions": 2,
+      "signal": "oversold post-earnings speculation",
       "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "QQQ",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Selloff jitters amid risk-on rotation",
-      "company_name": "Invesco QQQ Trust, Series 1"
+      "symbol": "AAOI",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "optical connectivity growth thesis",
+      "company_name": "Applied Optoelectronics, Inc."
+    },
+    {
+      "symbol": "AMZN",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "satellite service milestone optimism",
+      "company_name": "Amazon.com, Inc."
     }
   ],
   "summary": [
     {
-      "text": "The AI trade faces fresh skepticism as Burry adds short bets and Palantir's chief flags overhyped models, yet retail continues piling into speculative call structures on Oracle, AAOI, and Netflix with high conviction and minimal due diligence.",
-      "tag": "notable"
-    },
-    {
-      "text": "Space and defense names lead the bullish energy, with Rocket Lab and SpaceX inclusion speculation drawing enthusiasm, while Tesla's delivery beat squeezes late-stage put holders scrambling before the print.",
+      "text": "Holiday-thinned sentiment leans constructive, with speculative traders piling into AI-adjacent names like Meta, Oracle, and AAOI while celebrating outsized options wins. Retail energy remains elevated despite a puzzling memory-sector pullback that has bulls questioning the supercycle narrative.",
       "tag": "bullish"
     },
     {
-      "text": "A steady drumbeat of margin liquidations and account blow-ups underscores the fragility beneath the euphoria, compounded by a soft payrolls miss that revived cash-gang caution across the board.",
+      "text": "Micron's post-earnings sell-off and a wave of failed dip-buying attempts reveal genuine anxiety beneath the bravado. Several traders confess to catching falling knives and enduring AI-stock losing streaks, signaling fragile conviction under the surface.",
       "tag": "bearish"
+    },
+    {
+      "text": "Global rotation is a notable undercurrent: the Nikkei and Korean equities are attracting risk-on flows even as Nasdaq wobbles, while space plays around Amazon's Leo and SpaceX's QQQ inclusion draw fresh speculative positioning.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-03T12:02:23.317568+00:00",
-  "updated_hkt": "2026-07-03 20:02 HKT"
+  "updated_at": "2026-07-03T21:01:53.195122+00:00",
+  "updated_hkt": "2026-07-04 05:01 HKT"
 }
