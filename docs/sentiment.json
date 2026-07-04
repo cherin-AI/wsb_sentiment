@@ -1,17 +1,17 @@
 {
-  "bull_pct": 50,
-  "bear_pct": 21,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 2.4,
-  "overall_score": 56,
+  "bull_pct": 33,
+  "bear_pct": 27,
+  "neutral_pct": 40,
+  "bull_bear_ratio": 1.2,
+  "overall_score": 46,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 50,
-    "ai_score": 58,
-    "bull_count": 12,
-    "bear_count": 5,
-    "neutral_count": 7,
-    "total_posts": 24,
+    "formula_score": 33,
+    "ai_score": 52,
+    "bull_count": 5,
+    "bear_count": 4,
+    "neutral_count": 6,
+    "total_posts": 15,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 24,
+  "post_count": 15,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-semis",
-      "title": "AI & Semiconductor Trades",
+      "id": "adbe-options",
+      "title": "Adobe Options Struggles",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Long-dated calls averaging down after selloff",
+        "AI competition pressuring Adobe narrative",
+        "Traders defending high-conviction positions",
+        "Firefly training and copyright concerns cited"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "ADBE"
+      ]
+    },
+    {
+      "id": "ai-bubble",
+      "title": "AI Bubble Concerns",
       "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "Pre-IPO OpenAI stock funding home purchases",
+        "Late-cycle euphoria signals flagged",
+        "Real estate froth seen as warning",
+        "Speculative excess drawing skepticism"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "OPENAI"
+      ]
+    },
+    {
+      "id": "semis-selloff",
+      "title": "Memory Chip Selloff",
+      "icon": "chart-line",
+      "heat": "building",
+      "bullets": [
+        "Micron reports solid quarter yet sells off",
+        "Profit-taking after extended run cited",
+        "Valuations viewed as stretched",
+        "Sector rotation confusion among traders"
+      ],
+      "sentiment_score": 42,
+      "tickers": [
+        "MU"
+      ]
+    },
+    {
+      "id": "winning-trades",
+      "title": "Profitable Options Plays",
+      "icon": "cash",
       "heat": "hot",
       "bullets": [
-        "Micron sell-off puzzles memory bulls",
-        "Meta-Samsung custom chip partnership eyed",
-        "AAOI optical transceiver thesis touted",
-        "NVDA bagholders nursing wounds"
-      ],
-      "sentiment_score": 60,
-      "tickers": [
-        "MU",
-        "META",
-        "AAOI",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "options-yolo",
-      "title": "High-Risk Options Gambling",
-      "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "Deep OTM lottery tickets celebrated",
-        "Margin-fueled account swings shared",
-        "Oracle post-earnings dip bet",
-        "Big multiplier speculation dominates"
-      ],
-      "sentiment_score": 65,
-      "tickers": [
-        "ORCL",
-        "CVNA",
-        "WEN"
-      ]
-    },
-    {
-      "id": "profit-posts",
-      "title": "Profit Screenshots",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Large percentage gains flaunted",
-        "Recovery-from-blow-up narratives circulating",
-        "Retail euphoria energy building",
-        "AMA-style bragging threads active"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "CVNA",
-        "WEN"
-      ]
-    },
-    {
-      "id": "loss-posts",
-      "title": "Trading Losses & Bad Dips",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Failed dip-buying attempts confessed",
-        "Falling knife catches backfire",
-        "AI stock losing streak persists",
-        "Bag-holding sentiment spreading"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "MU",
-        "AVGU"
-      ]
-    },
-    {
-      "id": "space-satellites",
-      "title": "Space & Satellite Plays",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Amazon Leo reaches commercial threshold",
-        "Starlink rivalry heating up",
-        "SpaceX QQQ inclusion speculation",
-        "Large positioning ahead of catalysts"
+        "Weekly CVNA puts printing consistently",
+        "WEN calls booking strong realized gains",
+        "Traders rolling into second half",
+        "High-conviction positioning celebrated"
       ],
       "sentiment_score": 68,
+      "tickers": [
+        "CVNA",
+        "WEN",
+        "HOOD",
+        "AAPL"
+      ]
+    },
+    {
+      "id": "ipo-space",
+      "title": "IPOs & Space Race",
+      "icon": "rocket",
+      "heat": "normal",
+      "bullets": [
+        "Jersey Mikes files for public offering",
+        "Amazon Leo reaches commercial service milestone",
+        "Starlink competition intensifying",
+        "New listings drawing speculative interest"
+      ],
+      "sentiment_score": 60,
       "tickers": [
         "AMZN"
       ]
     },
     {
-      "id": "global-markets",
-      "title": "Global & Asia Markets",
-      "icon": "world",
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Nikkei resilient amid Nasdaq weakness",
-        "Korean stocks rally on risk-on flows",
-        "Foreign investor rotation into Asia",
-        "Jersey Mikes IPO filing noted"
+        "Holiday weekend low-volume chatter",
+        "Nikkei outperforming amid Nasdaq weakness",
+        "Bitcoin range-bound and directionless",
+        "Community humor and reflection dominate"
       ],
-      "sentiment_score": 62,
-      "tickers": []
+      "sentiment_score": 52,
+      "tickers": [
+        "BTC"
+      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "memory supercycle hope meets sell-off pain",
-      "company_name": "Micron Technology, Inc."
+      "symbol": "ADBE",
+      "sentiment": "bearish",
+      "mentions": 12,
+      "signal": "Underwater calls, averaging down",
+      "company_name": "Adobe Inc."
     },
     {
       "symbol": "CVNA",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "persistent put buyers targeting downside",
+      "mentions": 8,
+      "signal": "Weekly puts printing profits",
       "company_name": "Carvana Co."
     },
     {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "bagholders wounded near highs",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "META",
+      "symbol": "WEN",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "custom AI chip ambitions",
-      "company_name": "Meta Platforms, Inc."
+      "mentions": 5,
+      "signal": "Calls booking gains",
+      "company_name": "Wendy's Company (The)"
     },
     {
       "symbol": "AAPL",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "buy-the-dip conviction on pricing power",
+      "mentions": 5,
+      "signal": "Buying the dip on price hikes",
       "company_name": "Apple Inc."
     },
     {
-      "symbol": "ORCL",
+      "symbol": "HOOD",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "oversold post-earnings speculation",
-      "company_name": "Oracle Corporation"
+      "mentions": 4,
+      "signal": "Momentum onboarding play",
+      "company_name": "Robinhood Markets, Inc."
     },
     {
-      "symbol": "AAOI",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "optical connectivity growth thesis",
-      "company_name": "Applied Optoelectronics, Inc."
+      "symbol": "MU",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Solid quarter, puzzling selloff",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "BTC",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Directionless consolidation",
+      "company_name": "Bitcoin USD"
     },
     {
       "symbol": "AMZN",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "satellite service milestone optimism",
+      "mentions": 3,
+      "signal": "Leo satellites go commercial",
       "company_name": "Amazon.com, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Holiday-thinned sentiment leans constructive, with speculative traders piling into AI-adjacent names like Meta, Oracle, and AAOI while celebrating outsized options wins. Retail energy remains elevated despite a puzzling memory-sector pullback that has bulls questioning the supercycle narrative.",
+      "text": "Holiday-weekend trading skews quiet but mildly constructive, with dip-buyers accumulating Apple and momentum chasers eyeing Robinhood. Successful weekly options traders dominate the profit narrative, rolling CVNA puts and WEN calls into a confident second-half positioning stance.",
       "tag": "bullish"
     },
     {
-      "text": "Micron's post-earnings sell-off and a wave of failed dip-buying attempts reveal genuine anxiety beneath the bravado. Several traders confess to catching falling knives and enduring AI-stock losing streaks, signaling fragile conviction under the surface.",
+      "text": "Adobe remains the batch's pain point, as traders average down underwater long-dated calls amid AI competition and copyright uncertainty. Micron's solid quarter met an unexpected selloff, fueling confusion over stretched semiconductor valuations and possible sector rotation.",
       "tag": "bearish"
     },
     {
-      "text": "Global rotation is a notable undercurrent: the Nikkei and Korean equities are attracting risk-on flows even as Nasdaq wobbles, while space plays around Amazon's Leo and SpaceX's QQQ inclusion draw fresh speculative positioning.",
+      "text": "Late-cycle warning signs are emerging, with pre-IPO OpenAI stock reportedly funding San Francisco home purchases and froth flagged as bubble behavior. Fresh IPOs and Amazon's Leo satellite milestone add speculative texture to an otherwise reflective, low-volume session.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-03T21:01:53.195122+00:00",
-  "updated_hkt": "2026-07-04 05:01 HKT"
+  "updated_at": "2026-07-04T12:01:29.284737+00:00",
+  "updated_hkt": "2026-07-04 20:01 HKT"
 }
