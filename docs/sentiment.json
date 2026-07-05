@@ -1,17 +1,17 @@
 {
-  "bull_pct": 57,
-  "bear_pct": 14,
-  "neutral_pct": 29,
+  "bull_pct": 44,
+  "bear_pct": 11,
+  "neutral_pct": 45,
   "bull_bear_ratio": 4.0,
-  "overall_score": 63,
-  "overall_label": "Greed",
+  "overall_score": 57,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 57,
-    "ai_score": 66,
-    "bull_count": 4,
-    "bear_count": 1,
-    "neutral_count": 2,
-    "total_posts": 7,
+    "formula_score": 44,
+    "ai_score": 62,
+    "bull_count": 8,
+    "bear_count": 2,
+    "neutral_count": 8,
+    "total_posts": 18,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,179 +19,180 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 7,
+  "post_count": 18,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Boom",
+      "id": "ai-semiconductors",
+      "title": "AI & Semiconductor Rotation",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Foxconn revenue beats on AI demand",
-        "Nvidia server supply chain strengthening",
-        "Retail chasing AI compute names",
-        "Strong secular growth narrative intact"
+        "AI hardware demand drives supplier revenue beats",
+        "Chip-to-software capital rotation intensifies",
+        "Memory names in focus on HBM cycle",
+        "Overcapacity fears trigger sharp swings"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 66,
       "tickers": [
-        "NVDA",
-        "NBIS"
+        "MU",
+        "SKHY",
+        "NVDA"
       ]
     },
     {
-      "id": "space-plays",
-      "title": "Space Sector Speculation",
-      "icon": "rocket",
+      "id": "korean-chip-leverage",
+      "title": "Korean Chip Leverage Frenzy",
+      "icon": "flame",
       "heat": "building",
       "bullets": [
-        "RocketLab high-conviction positioning continues",
-        "SpaceX IPO draws congressional buying",
-        "Retail piling into space names",
-        "High-conviction moonshot mentality"
+        "Leveraged ETF assets dwarf daily volume",
+        "SK Hynix speculation reaches extreme levels",
+        "Samsung leveraged exposure surges sharply",
+        "Retail crowding raises volatility risk"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "SKHY"
+      ]
+    },
+    {
+      "id": "single-stock-yolos",
+      "title": "High-Conviction high-conviction Bets",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Large positions in GOOGL, RKLB, IBM",
+        "Pre-earnings breakout setups favored",
+        "Technicals-driven entries despite weak charts",
+        "Retail chasing upside momentum"
       ],
       "sentiment_score": 72,
       "tickers": [
-        "RKLB"
+        "GOOGL",
+        "RKLB",
+        "IBM"
       ]
     },
     {
-      "id": "leverage-risk",
-      "title": "Leverage & Concentration Risk",
-      "icon": "alert-triangle",
+      "id": "spy-index-outlook",
+      "title": "Index & SPY Direction",
+      "icon": "trending-down",
+      "heat": "normal",
+      "bullets": [
+        "Bearish SPY retest warnings circulating",
+        "Bull-trap caution ahead of week",
+        "0DTE speculation remains elevated",
+        "Mixed macro positioning debated"
+      ],
+      "sentiment_score": 42,
+      "tickers": [
+        "SPY"
+      ]
+    },
+    {
+      "id": "healthcare-momentum",
+      "title": "Healthcare Momentum Plays",
+      "icon": "activity",
       "heat": "building",
       "bullets": [
-        "Korean chip leveraged ETFs surge",
-        "Assets far exceed daily volume",
-        "Systemic unwind risk building",
-        "Speculative excess warning signs"
+        "HIMS trending higher on weekly buys",
+        "Dip-buying strategy on every pullback",
+        "Bag-holder washout thesis in play",
+        "Speculative upside targets set"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 68,
       "tickers": [
-        "SK Hynix"
+        "HIMS"
       ]
     },
     {
-      "id": "full-port-yolo",
-      "title": "Full-Port Conviction Bets",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Retirement account fully deployed",
-        "Leaps rotated into single names",
-        "All-in risk appetite elevated",
-        "Euphoric position sizing prevalent"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "SNXX",
-        "NBIS"
-      ]
-    },
-    {
-      "id": "congress-trades",
-      "title": "Congressional Trading Watch",
-      "icon": "building-bank",
+      "id": "macro-policy-energy",
+      "title": "Macro, Policy & Energy",
+      "icon": "world",
       "heat": "normal",
       "bullets": [
-        "First SpaceX buys surface post-IPO",
-        "Insider flow drawing attention",
-        "Retail mirrors political positioning",
-        "Notable signal for space sector"
+        "OPEC+ approves further oil output increase",
+        "Hormuz exports begin recovery",
+        "New retail investment accounts go live",
+        "Global politics flagged as volatile"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 52,
       "tickers": []
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "trending-up",
-      "heat": "normal",
-      "bullets": [
-        "Risk-on tone dominates batch",
-        "Speculative energy broadly elevated",
-        "Selloffs viewed as buying dips",
-        "Retail confidence running high"
-      ],
-      "sentiment_score": 64,
-      "tickers": [
-        "NVDA",
-        "NBIS"
-      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "NBIS",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "High-conviction call buying",
-      "company_name": "Nebius Group N.V."
+      "symbol": "SKHY",
+      "sentiment": "mixed",
+      "mentions": 8,
+      "signal": "Korean memory meme, leverage-fueled hype",
+      "company_name": "SKhynix    GDS"
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Persistent moonshot high-conviction",
+      "mentions": 7,
+      "signal": "Technicals-driven high-conviction speculation",
       "company_name": "Rocket Lab Corporation"
     },
     {
-      "symbol": "SNXX",
+      "symbol": "GOOGL",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Full-port retirement bet",
-      "company_name": "Tradr 2X Long SNDK Daily ETF"
+      "mentions": 6,
+      "signal": "Pre-earnings breakout conviction",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "Chart-chasing rocket targets",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Bull-trap and retest warnings",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "IBM",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Large position holding up",
+      "company_name": "International Business Machines"
+    },
+    {
+      "symbol": "HIMS",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Dip-buying momentum play",
+      "company_name": "Hims & Hers Health, Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "AI supply chain optimism",
+      "signal": "AI supply-chain anchor",
       "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "SK Hynix",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "Leverage overcrowding concern",
-      "company_name": ""
-    },
-    {
-      "symbol": "AAPL",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Steady supply chain demand",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "RDDT",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Rotated out for powder",
-      "company_name": "Reddit, Inc."
-    },
-    {
-      "symbol": "HIMS",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Leaps sold to fund bets",
-      "company_name": "Hims & Hers Health, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Risk appetite runs hot across the batch, with retail traders rotating into AI infrastructure and space plays. Foxconn's strong AI-driven beat validates the compute narrative, while Nebius and RocketLab draw high-conviction positioning from speculative buyers viewing recent selloffs as overdone.",
+      "text": "Sentiment leans constructive, driven by AI-supply-chain optimism after strong Foxconn revenue and persistent chip enthusiasm. Traders are rotating aggressively between memory names and software, with high-conviction high-conviction bets stacking into GOOGL, RKLB, and IBM ahead of catalysts.",
       "tag": "bullish"
     },
     {
-      "text": "Full-port conviction bets dominate the psychology, from retirement accounts deployed into single names to long-dated calls funded by rotating out of prior leaps. This all-in behavior signals elevated euphoria rather than measured allocation.",
+      "text": "Korean semiconductor leverage stands out as a notable structural risk, with leveraged ETF assets on SK Hynix and Samsung dwarfing average daily volume, signaling crowded speculative positioning vulnerable to sharp unwinds.",
       "tag": "notable"
     },
     {
-      "text": "Beneath the greed lies a warning: Korean chip leveraged ETF assets now dwarf daily trading volume by multiples, flagging dangerous concentration and potential for a violent unwind if momentum reverses.",
+      "text": "A vocal bearish minority warns of a SPY retest and potential bull trap, keeping index positioning cautious even as single-stock speculation and 0DTE activity remain elevated.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-05T12:01:01.037439+00:00",
-  "updated_hkt": "2026-07-05 20:01 HKT"
+  "updated_at": "2026-07-05T21:01:36.333090+00:00",
+  "updated_hkt": "2026-07-06 05:01 HKT"
 }
