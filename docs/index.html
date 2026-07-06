@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WSB Sentiment Monitor: Fear &amp; Greed Index</title>
-<meta name="description" content="An AI-derived Fear &amp; Greed index for r/wallstreetbets. Tracks retail sentiment, trending themes, and the most-mentioned tickers, updated twice daily.">
+<title>WSB Sentiment Monitor · Retail Fear &amp; Greed Index</title>
+<meta name="description" content="Retail sentiment intelligence dashboard tracking r/wallstreetbets market mood, ticker attention, and Fear &amp; Greed conditions. Updated twice daily.">
 <meta name="theme-color" content="#07090f">
 <meta property="og:type" content="website">
-<meta property="og:title" content="WSB Sentiment Monitor: Fear &amp; Greed Index">
-<meta property="og:description" content="An AI-derived Fear &amp; Greed index for r/wallstreetbets. Tracks retail sentiment, trending themes, and the most-mentioned tickers, updated twice daily.">
+<meta property="og:title" content="WSB Sentiment Monitor · Retail Fear &amp; Greed Index">
+<meta property="og:description" content="Retail sentiment intelligence dashboard tracking r/wallstreetbets market mood, ticker attention, and Fear &amp; Greed conditions. Updated twice daily.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WSB Sentiment Monitor: Fear &amp; Greed Index">
-<meta name="twitter:description" content="An AI-derived Fear &amp; Greed index for r/wallstreetbets. Tracks retail sentiment, trending themes, and the most-mentioned tickers, updated twice daily.">
+<meta name="twitter:title" content="WSB Sentiment Monitor · Retail Fear &amp; Greed Index">
+<meta name="twitter:description" content="Retail sentiment intelligence dashboard tracking r/wallstreetbets market mood, ticker attention, and Fear &amp; Greed conditions. Updated twice daily.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M15 72 A38 38 0 0 1 85 72' fill='none' stroke='%234A90E2' stroke-width='13' stroke-linecap='round'/%3E%3Cline x1='50' y1='72' x2='73' y2='44' stroke='%23f5f8ff' stroke-width='8' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='72' r='9' fill='%23f5f8ff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -38,15 +39,16 @@
   html { background: var(--bg); color: var(--t1); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
 
   /* Lock digit width so values don't jitter as they change (finance convention) */
-  .kpi-value, .mention-num, .bb-pct, .header-ts, .header-ts span,
-  .score-tag, .sent-pill, .ticker-chip, td .sym, .tt-score, .tt-ts {
+  .kpi-value, .kpi-delta, .mention-num, .bb-pct, .header-ts, .header-ts span,
+  .score-tag, .sent-pill, .ticker-chip, td .sym, .tt-score, .tt-ts,
+  .method-num, .band-range {
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum" 1;
   }
   svg text { font-variant-numeric: tabular-nums; }
 
   /* Keyboard focus visibility */
-  a:focus-visible, .history-dot:focus-visible {
+  a:focus-visible, button:focus-visible, .history-dot:focus-visible {
     outline: 2px solid var(--ac); outline-offset: 2px; border-radius: 2px;
   }
 
@@ -56,39 +58,29 @@
   body {
     min-height: 100vh; padding: 0 0 4rem;
     background:
-      radial-gradient(circle at top left, rgba(74,144,226,0.12), transparent 28%),
-      radial-gradient(circle at top right, rgba(60,200,184,0.10), transparent 24%),
+      radial-gradient(circle at top left, rgba(74,144,226,0.10), transparent 28%),
+      radial-gradient(circle at top right, rgba(60,200,184,0.07), transparent 24%),
       linear-gradient(180deg, #07090f 0%, #090d14 100%);
   }
 
   /* ── Header ── */
   header {
-    padding: 14px 24px;
+    padding: 12px 24px;
     border-bottom: 1px solid var(--b1);
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
     position: sticky; top: 0; z-index: 30;
     background: rgba(11,16,24,0.92);
     backdrop-filter: blur(12px);
   }
-  .logo-title { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .logo-title { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
   .logo-title span { color: var(--ac); }
-  .wsb-source-link { font-size: 10px; font-weight: 400; color: var(--t3); text-decoration: none; letter-spacing: 0.04em; border-bottom: 1px solid var(--t4); padding-bottom: 1px; }
+  .header-sub { font-size: 10px; color: var(--t3); letter-spacing: 0.05em; margin-top: 3px; }
+  .wsb-source-link { color: var(--t3); text-decoration: none; border-bottom: 1px solid var(--t4); padding-bottom: 1px; }
   .wsb-source-link:hover { color: var(--ac); border-bottom-color: var(--ac); }
-  .header-right { text-align: right; }
-  .header-author { font-size: 10px; color: var(--t3); margin-bottom: 4px; }
-  .header-ts { font-size: 11px; color: var(--t3); margin-top: 4px; }
-  .live-pill {
-    display: inline-flex; align-items: center; gap: 7px;
-    padding: 4px 10px; border: 1px solid var(--b2); border-radius: 4px;
-    background: var(--s3); color: var(--t2);
-    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
-  }
-  .live-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--gr); box-shadow: 0 0 8px rgba(60,200,184,0.85);
-    animation: pulse 2s infinite; flex-shrink: 0;
-  }
-  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+  .header-right { text-align: right; flex-shrink: 0; }
+  .header-author { font-size: 10px; color: var(--t3); }
+  .header-ts { font-size: 11px; color: var(--t2); margin-top: 3px; }
+  .header-cadence { font-size: 10px; color: var(--t3); margin-top: 2px; letter-spacing: 0.04em; }
 
   /* ── Layout ── */
   .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
@@ -98,12 +90,34 @@
     font-size: 10px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.18em; color: var(--t1);
     border-bottom: 1px solid var(--b1); padding-bottom: 8px; margin-bottom: 16px;
-    display: flex; align-items: center; gap: 10px;
+    display: flex; align-items: baseline; gap: 10px;
   }
   .section-title::before {
     content: ''; display: inline-block; width: 3px; height: 12px;
-    background: var(--ac); border-radius: 2px; flex-shrink: 0;
+    background: var(--ac); border-radius: 2px; flex-shrink: 0; align-self: center;
   }
+  .section-note { font-weight: 400; color: var(--t3); letter-spacing: 0.06em; text-transform: none; margin-left: auto; }
+
+  /* ── KPI cards ── */
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+  .kpi-card {
+    background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
+    padding: 14px 16px; min-height: 110px;
+    display: flex; flex-direction: column;
+  }
+  .kpi-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); margin-bottom: 8px; }
+  .kpi-value { font-size: 26px; font-weight: 700; }
+  .kpi-value.g { color: var(--gr); }
+  .kpi-value.r { color: var(--rd); }
+  .kpi-value.b { color: var(--ac); }
+  .kpi-value.a { color: var(--am); }
+  .kpi-value.n { color: var(--t2); }
+  .kpi-sub { font-size: 10px; color: var(--t3); line-height: 1.45; margin-top: 4px; }
+  .kpi-delta { font-size: 11px; font-weight: 600; margin-top: 4px; }
+  .kpi-delta.up { color: var(--gr); }
+  .kpi-delta.down { color: var(--rd); }
+  .kpi-delta.flat { color: var(--t3); }
+  .kpi-company { font-size: 10px; color: var(--t3); margin-top: 2px; margin-bottom: 4px; }
 
   /* ── Score section ── */
   .score-section {
@@ -111,7 +125,7 @@
     background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
     padding: 20px 24px;
   }
-  .score-top { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 1.25rem; }
+  .score-top { display: flex; align-items: flex-start; gap: 2rem; }
   .score-top > div { flex: 1; }
   .score-label { font-size: 10px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 6px; }
   .score-tag {
@@ -120,8 +134,9 @@
     font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
     text-transform: uppercase; line-height: 1.4; margin-top: 8px;
   }
-  .score-ai-header { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
+  .score-ai-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
   .score-ai-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); }
+  .score-ai-note { font-size: 10px; color: var(--t3); }
   .score-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .score-bullet-card {
     border-radius: 8px; padding: 11px 13px;
@@ -141,22 +156,6 @@
   .score-bullet-text { font-size: 12px; line-height: 1.55; color: var(--t1); }
   .score-gauge-col { flex: 0 0 300px; max-width: 300px; text-align: center; }
   .score-gauge-col .score-label { text-align: left; }
-  .learn-more { display: block; margin-top: 8px; }
-
-  /* ── KPI cards ── */
-  .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
-  .kpi-card {
-    background: var(--s2); border: 1px solid var(--b1); border-radius: 8px;
-    padding: 14px 16px; min-height: 110px;
-    display: flex; flex-direction: column;
-  }
-  .kpi-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); margin-bottom: 8px; }
-  .kpi-value { font-size: 26px; font-weight: 700; }
-  .kpi-value.g { color: var(--gr); }
-  .kpi-value.r { color: var(--rd); }
-  .kpi-value.b { color: var(--ac); }
-  .kpi-value.a { color: var(--am); }
-  .kpi-sub { font-size: 10px; color: var(--t3); line-height: 1.35; margin-top: 4px; }
 
   /* ── Sentiment bar ── */
   .bull-bear { margin-bottom: 1.5rem; background: var(--s2); border: 1px solid var(--b1); border-radius: 8px; padding: 14px 16px; }
@@ -174,7 +173,7 @@
     padding: 14px 16px; cursor: default; transition: border-color 0.15s;
   }
   .theme-card:hover { border-color: var(--b2); }
-  .theme-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .theme-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 8px; }
   .theme-title { font-size: 12px; font-weight: 600; color: var(--t1); }
   .heat-badge {
     display: inline-flex; align-items: center;
@@ -206,7 +205,6 @@
   tbody td { padding: 10px 14px; font-size: 12px; }
   .sym { font-size: 13px; font-weight: 600; color: var(--t1); }
   .sym-name { font-size: 10px; color: var(--t3); margin-top: 2px; }
-  .kpi-company { font-size: 10px; color: var(--t3); margin-top: 2px; margin-bottom: 4px; }
   .sent-pill {
     display: inline-flex; align-items: center;
     padding: 3px 8px; border-radius: 999px; border: 1px solid;
@@ -221,6 +219,27 @@
   .mention-num { font-size: 11px; color: var(--t2); }
   .signal-text { font-size: 11px; color: var(--t2); }
 
+  /* ── Methodology / How to read ── */
+  .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+  .method-card { background: var(--s2); border: 1px solid var(--b1); border-radius: 8px; padding: 14px 16px; }
+  .method-head { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--t2); margin-bottom: 10px; }
+  .method-body { font-size: 11px; color: var(--t2); line-height: 1.6; }
+  .method-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .method-name { font-size: 10px; color: var(--t3); width: 110px; flex-shrink: 0; text-transform: uppercase; letter-spacing: 0.05em; }
+  .method-bar { flex: 1; height: 5px; background: var(--s3); border-radius: 3px; overflow: hidden; }
+  .method-fill { height: 100%; border-radius: 3px; }
+  .method-num { font-size: 11px; font-weight: 600; width: 26px; text-align: right; color: var(--t1); }
+  .method-note { font-size: 10px; color: var(--t3); line-height: 1.55; margin-top: 10px; border-top: 1px solid var(--b1); padding-top: 8px; }
+  .band-row { display: flex; align-items: center; gap: 8px; padding: 3px 0; }
+  .band-swatch { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  .band-range { font-size: 10px; color: var(--t3); width: 52px; flex-shrink: 0; }
+  .band-label { font-size: 11px; color: var(--t2); }
+  .method-list { list-style: none; }
+  .method-list li { font-size: 11px; color: var(--t2); padding: 2px 0; display: flex; gap: 6px; line-height: 1.5; }
+  .method-list li::before { content: '•'; color: var(--t3); flex-shrink: 0; }
+  .cov-row { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; font-size: 11px; }
+  .cov-key { color: var(--t3); text-transform: uppercase; font-size: 10px; letter-spacing: 0.05em; }
+  .cov-val { color: var(--t1); font-weight: 500; text-align: right; }
 
   /* ── History tooltip ── */
   #history-tooltip {
@@ -234,16 +253,33 @@
   #history-tooltip .tt-ts { font-size: 10px; color: var(--t3); margin-top: 3px; }
 
   /* ── Loading / Error ── */
-  .loading { text-align: center; padding: 4rem; font-size: 13px; color: var(--t3); }
-  .error { background: rgba(232,96,96,0.10); border: 1px solid rgba(232,96,96,0.3); border-radius: 8px; padding: 12px 16px; color: #ff9b9b; font-size: 12px; margin-bottom: 1rem; }
+  .loading { padding: 0.5rem 0; }
+  .loading-note { text-align: center; font-size: 12px; color: var(--t3); margin-bottom: 16px; }
+  .skel { border: 1px solid var(--b1); border-radius: 8px; background: linear-gradient(100deg, var(--s2) 35%, var(--s3) 50%, var(--s2) 65%); background-size: 300% 100%; animation: shimmer 1.6s infinite linear; }
+  @keyframes shimmer { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+  .skel-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 12px; }
+  .skel-kpi { height: 110px; }
+  .skel-main { height: 260px; margin-bottom: 12px; }
+  .skel-wide { height: 150px; }
+  .error {
+    background: rgba(232,96,96,0.08); border: 1px solid rgba(232,96,96,0.3); border-radius: 8px;
+    padding: 16px 18px; color: var(--t2); font-size: 12px; line-height: 1.6; margin-bottom: 1rem;
+  }
+  .error strong { color: #ff9b9b; display: block; margin-bottom: 4px; font-size: 12px; }
+  .retry-btn {
+    display: inline-block; margin-top: 10px; padding: 6px 14px;
+    background: var(--s3); color: var(--t1); border: 1px solid var(--b2); border-radius: 5px;
+    font-family: inherit; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    cursor: pointer;
+  }
+  .retry-btn:hover { border-color: var(--ac); color: var(--ac); }
 
   /* ── Learn more link ── */
   .learn-more { display: block; font-size: 11px; color: var(--ac); margin-top: 10px; text-decoration: underline; text-underline-offset: 3px; opacity: 0.85; }
   .learn-more:hover { opacity: 1; }
 
   /* ── FAQ ── */
-  .faq-section { max-width: 1100px; margin: 0 auto; padding: 0 2rem 4rem; }
-  .faq-divider { border: none; border-top: 1px solid var(--b1); margin: 2rem 0; }
+  .faq-section { max-width: 1100px; margin: 0 auto; padding: 0 2rem 3rem; }
   .faq-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--t3); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
   .faq-title::before { content: ''; display: inline-block; width: 3px; height: 12px; background: var(--ac); border-radius: 2px; flex-shrink: 0; }
   .faq-list { display: flex; flex-direction: column; gap: 20px; }
@@ -252,20 +288,22 @@
 
   /* ── Footer / disclaimer ── */
   .site-footer { max-width: 1100px; margin: 0 auto; padding: 1.5rem 2rem 0; border-top: 1px solid var(--b1); }
-  .site-footer .disclaimer { font-size: 11px; color: var(--t3); line-height: 1.6; max-width: 760px; }
+  .site-footer .disclaimer { font-size: 11px; color: var(--t3); line-height: 1.6; }
   .site-footer .footer-meta { font-size: 10px; color: var(--t3); margin-top: 10px; letter-spacing: 0.04em; }
 
   @media (max-width: 768px) {
     .container { padding: 1rem; }
-    .metrics { grid-template-columns: 1fr; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .skel-row { grid-template-columns: repeat(2, 1fr); }
     .theme-grid { grid-template-columns: 1fr; }
+    .method-grid { grid-template-columns: 1fr; }
     header { padding: 12px 16px; }
     .score-top { flex-direction: column; gap: 1rem; }
     .score-gauge-col { flex: unset; max-width: 100%; }
 
     /* Bump reading copy for legibility on small screens */
     .faq-a, .score-bullet-text, tbody td { font-size: 13px; }
-    .theme-bullets li, .signal-text, .kpi-sub { font-size: 12px; }
+    .theme-bullets li, .signal-text, .kpi-sub, .method-body { font-size: 12px; }
 
     /* Hot Tickers: collapse table into cards */
     .ticker-table-wrap table,
@@ -298,30 +336,60 @@
     .ticker-table-wrap tbody td:nth-child(4) { grid-column: 1 / -1; grid-row: 3; }
     .signal-text { white-space: normal; word-wrap: break-word; color: var(--t3); }
   }
+  @media (max-width: 480px) {
+    .metrics { grid-template-columns: 1fr; }
+    .skel-row { grid-template-columns: 1fr; }
+    .section-note { display: none; }
+    header { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .header-right { text-align: left; }
+    .header-author { display: none; }
+    .header-ts { margin-top: 0; }
+  }
 </style>
 </head>
 <body id="top">
 
 <header>
   <div>
-    <div class="logo-title">
-      WSB <span>Sentiment</span> Monitor
-      <span class="live-pill"><span class="live-dot"></span><span>Auto · 5am / 8pm HKT</span></span>
-      <span class="live-pill" id="ts-date">—</span>
-    </div>
+    <div class="logo-title">WSB <span>Sentiment</span> Monitor</div>
+    <div class="header-sub">Retail sentiment intelligence · Source: <a href="https://www.reddit.com/r/wallstreetbets/top/?t=day" target="_blank" rel="noopener" class="wsb-source-link">r/wallstreetbets ↗</a></div>
   </div>
   <div class="header-right">
-    <div class="header-author">Cherin Kim | cherin0508@gmail.com</div>
-    <div class="header-ts">Last updated as <span id="ts">—</span></div>
-    <div style="text-align:right;font-size:10px;color:var(--t3);">Source: <a href="https://www.reddit.com/r/wallstreetbets/top/?t=day" target="_blank" rel="noopener" class="wsb-source-link">r/wallstreetbets ↗</a></div>
+    <div class="header-author">Cherin Kim · cherin0508@gmail.com</div>
+    <div class="header-ts">Last updated: <span id="ts">—</span></div>
+    <div class="header-cadence">Updates 05:00 / 20:00 HKT · trailing 24h window</div>
   </div>
 </header>
 
 <main class="container" id="root">
-  <div class="loading">Loading sentiment data…</div>
+  <div class="loading" role="status" aria-label="Loading sentiment data">
+    <div class="loading-note">Loading latest sentiment data…</div>
+    <div class="skel-row"><div class="skel skel-kpi"></div><div class="skel skel-kpi"></div><div class="skel skel-kpi"></div><div class="skel skel-kpi"></div></div>
+    <div class="skel skel-main"></div>
+    <div class="skel skel-wide"></div>
+  </div>
 </main>
 
 <script>
+// Escape data-driven strings before innerHTML interpolation
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function(c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+
+// Single source of truth for the five sentiment regimes (0-20 / 21-40 / 41-60 / 61-80 / 81-100)
+function regimeOf(score) {
+  if (score <= 20) return { label: 'Extreme Fear', color: '#E86060', text: '#ff9b9b' };
+  if (score <= 40) return { label: 'Fear',         color: '#c07020', text: '#ffc27a' };
+  if (score <= 60) return { label: 'Neutral',      color: '#3a5870', text: '#a8c2dc' };
+  if (score <= 80) return { label: 'Greed',        color: '#1880b0', text: '#7cc4e8' };
+  return               { label: 'Extreme Greed',   color: '#18a880', text: '#8de9df' };
+}
+function regimePillStyle(r) {
+  return 'border-color:' + r.color + '99;color:' + r.text + ';background:' + r.color + '1f';
+}
+
 function buildGaugeSVG(score, scoreColor) {
   const W=300,H=200,cx=150,cy=144,ro=112,ri=70,mid=91,GAP=1.8;
   const segs=[
@@ -362,7 +430,8 @@ function buildGaugeSVG(score, scoreColor) {
   const needle='<polygon points="'+b1x+','+b1y+' '+nx+','+ny+' '+b2x+','+b2y+'" fill="'+scoreColor+'"/>';
   const pivot='<circle cx="'+cx+'" cy="'+cy+'" r="6" fill="var(--s1)" stroke="'+scoreColor+'" stroke-width="2"/>';
   const scoreNum='<text x="'+cx+'" y="'+(cy+30)+'" text-anchor="middle" fill="'+scoreColor+'" font-size="30" font-weight="700" font-family="Inter,system-ui,sans-serif">'+score+'</text>';
-  return'<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+W+'px;display:block;margin:8px 0;" xmlns="http://www.w3.org/2000/svg">'+paths+dots+nums+labels+needle+pivot+scoreNum+'</svg>';
+  const aria=' role="img" aria-label="Fear and Greed gauge reading '+score+' out of 100, '+regimeOf(score).label+'"';
+  return'<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+W+'px;display:block;margin:8px 0;" xmlns="http://www.w3.org/2000/svg"'+aria+'>'+paths+dots+nums+labels+needle+pivot+scoreNum+'</svg>';
 }
 
 function buildHistoryChart(history) {
@@ -408,7 +477,7 @@ function buildHistoryChart(history) {
     { v: 70,  label: 'Greed'   },
     { v: 90,  label: 'Ex. Greed' },
   ].map(({ v, label }) =>
-    `<text x="${padL - 4}" y="${toY(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" fill="#f5f8ff" font-size="${yFont}" font-family="Inter,system-ui,sans-serif">${label}</text>`
+    `<text x="${padL - 4}" y="${toY(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" fill="#90aec8" font-size="${yFont}" font-family="Inter,system-ui,sans-serif">${label}</text>`
   ).join('');
 
   // Line
@@ -418,28 +487,30 @@ function buildHistoryChart(history) {
   // Dots
   const dots = entries.map((e, i) => {
     const x = toX(i).toFixed(1), y = toY(e.score).toFixed(1);
-    const col = e.score >= 80 ? '#18a880' : e.score >= 60 ? '#1880b0' : e.score >= 40 ? '#3a5870' : e.score >= 20 ? '#c07020' : '#c03838';
-    const labelCol = e.score >= 80 ? '#3CC8B8' : e.score >= 60 ? '#4A90E2' : e.score >= 40 ? '#c8daf0' : e.score >= 20 ? '#FFCC30' : '#E86060';
+    const r0 = regimeOf(e.score);
+    const col = r0.color, labelCol = r0.text;
     const isLast = i === entries.length - 1;
     const r = isLast ? (mobile ? 8 : 7) : (mobile ? 7 : 6);
     const visDot = `<circle cx="${x}" cy="${y}" r="${r}" fill="${col}" stroke="#07090f" stroke-width="2" pointer-events="none"/>`;
     const labelY = (parseFloat(y) - r - 6).toFixed(1);
-    const scoreLabel = `<text x="${x}" y="${labelY}" text-anchor="middle" fill="${labelCol}" font-size="${scoreFont}" font-weight="700" font-family="Inter,system-ui,sans-serif" pointer-events="none">${e.score}</text>`;
-    const hitArea = `<circle cx="${x}" cy="${y}" r="12" fill="transparent" class="history-dot" data-ts="${e.ts}" data-score="${e.score}" data-label="${e.label}" style="cursor:pointer"/>`;
+    // Clamp score labels inside the plot area so the first/last don't collide with axis labels
+    const labelX = Math.min(Math.max(parseFloat(x), padL + 10), W - padR - 10).toFixed(1);
+    const scoreLabel = `<text x="${labelX}" y="${labelY}" text-anchor="middle" fill="${labelCol}" font-size="${scoreFont}" font-weight="700" font-family="Inter,system-ui,sans-serif" pointer-events="none">${e.score}</text>`;
+    const hitArea = `<circle cx="${x}" cy="${y}" r="12" fill="transparent" class="history-dot" data-ts="${esc(e.ts)}" data-score="${e.score}" data-label="${esc(e.label)}" style="cursor:pointer"/>`;
     return visDot + scoreLabel + hitArea;
   }).join('');
 
-  // X-axis labels: show every ~7th entry + last
+  // X-axis labels: first print of each date
   const seenDates = new Set();
   const xLabels = entries.map((e, i) => {
     const ts = e.ts || '';
     const dateStr = ts.length >= 10 ? ts.slice(5, 10) : ts;
     if (seenDates.has(dateStr)) return '';
     seenDates.add(dateStr);
-    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#f5f8ff" font-size="${xFont}" font-family="Inter,system-ui,sans-serif">${dateStr}</text>`;
+    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#90aec8" font-size="${xFont}" font-family="Inter,system-ui,sans-serif">${dateStr}</text>`;
   }).join('');
 
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">${zoneBands}${dividers}${yLabels}${line}${dots}${xLabels}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fear and Greed score history, last ${entries.length} prints">${zoneBands}${dividers}${yLabels}${line}${dots}${xLabels}</svg>`;
 }
 
 async function load() {
@@ -450,7 +521,13 @@ async function load() {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     data = await r.json();
   } catch (e) {
-    root.innerHTML = `<div class="error">Failed to load sentiment.json — ${e.message}</div>`;
+    root.innerHTML = `
+      <div class="error">
+        <strong>Sentiment feed unavailable</strong>
+        The latest data could not be loaded (${esc(e.message)}). The feed publishes at 05:00 and 20:00 HKT.
+        Refresh to retry; if the issue persists, the most recent pipeline run may still be in progress.
+        <br><button class="retry-btn" onclick="load()">Retry</button>
+      </div>`;
     return;
   }
   try {
@@ -460,78 +537,107 @@ async function load() {
 
   const ts = data.updated_hkt || data.updated_at || '—';
   document.getElementById('ts').textContent = ts;
-  const datePart = ts !== '—' ? ts.split(' ')[0] : '—';
-  document.getElementById('ts-date').textContent = `DATE: ${datePart}`;
 
-  const scoreColor = data.overall_score >= 70 ? 'var(--gr)' : data.overall_score >= 40 ? 'var(--am)' : 'var(--rd)';
-  const scoreTagStyle = data.overall_score >= 70
-    ? 'border-color:rgba(60,200,184,0.45);color:#8de9df;background:rgba(60,200,184,0.10)'
-    : data.overall_score >= 40
-    ? 'border-color:rgba(255,204,48,0.45);color:#ffe08a;background:rgba(255,204,48,0.10)'
-    : 'border-color:rgba(232,96,96,0.45);color:#ff9b9b;background:rgba(232,96,96,0.10)';
+  const score = data.overall_score;
+  const reg = regimeOf(score);
+  const scoreColor = reg.color === '#3a5870' ? '#a8c2dc' : reg.color;  // neutral band too dark for needle/number
+  const scoreTagStyle = regimePillStyle(reg);
 
-  const gaugeColor = data.overall_score >= 70 ? '#3CC8B8' : data.overall_score >= 40 ? '#FFCC30' : '#E86060';
+  // Change vs prior print (from history.json)
+  let prev = null;
+  if (Array.isArray(history) && history.length) {
+    const last = history[history.length - 1];
+    if (last && last.ts === ts && history.length >= 2) prev = history[history.length - 2];
+    else if (last && last.ts !== ts) prev = last;
+  }
+  const delta = prev ? score - prev.score : null;
+  let deltaHTML = '<span class="kpi-delta flat">No prior print available</span>';
+  if (delta !== null) {
+    const cls = delta > 0 ? 'up' : delta < 0 ? 'down' : 'flat';
+    const arrow = delta > 0 ? '▲' : delta < 0 ? '▼' : '·';
+    const num = delta > 0 ? '+' + delta : String(delta);
+    const prevTs = String(prev.ts || '').replace(' HKT', '');
+    deltaHTML = `<span class="kpi-delta ${cls}">${arrow} ${num} vs prior print (${esc(prevTs)})</span>`;
+  }
 
   const maxMentions = Math.max(...(data.tickers || []).map(t => t.mentions || 0), 1);
   const m = data.methodology || null;
+  const ratio = data.bull_bear_ratio || 0;
+  const ratioCls = ratio > 1 ? 'g' : ratio < 1 ? 'r' : 'n';
+  const postCount = data.post_count || 0;
+  const smallSample = postCount > 0 && postCount < 30;
+  const topTicker = (data.tickers && data.tickers[0]) || null;
 
   root.innerHTML = `
+    <!-- KPI strip -->
+    <div class="metrics">
+      <div class="kpi-card">
+        <div class="kpi-label">Fear &amp; Greed Score</div>
+        <div style="flex:1">
+          <div class="kpi-value" style="color:${scoreColor}">${score}</div>
+          <div style="margin-top:2px"><span class="score-tag" style="${scoreTagStyle};margin-top:0">${esc(data.overall_label || reg.label)}</span></div>
+          ${deltaHTML}
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Bull/Bear Ratio</div>
+        <div style="flex:1">
+          <div class="kpi-value ${ratioCls}">${ratio.toFixed(1)}x</div>
+          <div class="kpi-sub">${m ? `${m.bull_count} bullish · ${m.bear_count} bearish · ${m.neutral_count} neutral posts` : 'Post-level classification mix'}</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Post Coverage</div>
+        <div style="flex:1">
+          <div class="kpi-value b">${postCount}</div>
+          <div class="kpi-sub">Trailing ${data.hours_window || 24}h · titles, bodies, top comments${smallSample ? '<br>Limited sample; prints can swing on few posts' : ''}</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Top Ticker Attention</div>
+        <div style="flex:1">
+          <div class="kpi-value">${topTicker ? esc(topTicker.symbol) : '—'}</div>
+          ${topTicker && topTicker.company_name ? `<div class="kpi-company">${esc(topTicker.company_name)}</div>` : ''}
+          <div class="kpi-sub">${topTicker ? `${(topTicker.mentions || 0).toLocaleString()} mentions in window` : 'No ticker data in this window'}</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Score Section -->
     <div class="score-section">
       <div class="score-top">
         <div class="score-gauge-col">
           <div class="score-label">WSB Fear &amp; Greed Index</div>
-          ${buildGaugeSVG(data.overall_score, scoreColor)}
-          <span class="score-tag" style="${scoreTagStyle}">${data.overall_label || ''}</span>
-          <a href="#faq" class="learn-more">Learn more about the index</a>
+          ${buildGaugeSVG(score, scoreColor)}
+          <span class="score-tag" style="${scoreTagStyle}">${esc(data.overall_label || reg.label)}</span>
+          <a href="#faq" class="learn-more">About this index</a>
         </div>
         <div class="score-summary">
           <div class="score-ai-header">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gr)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.85" aria-hidden="true">
-              <path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/>
-              <path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/>
-            </svg>
-            <span class="score-ai-label">AI Analysis</span>
+            <span class="score-ai-label">Market Color</span>
+            <span class="score-ai-note">Model-derived read of the latest post batch</span>
           </div>
           <ul class="score-bullets">
             ${(Array.isArray(data.summary) ? data.summary : []).slice(0, 3).map(item => {
-              const tag = item.tag || 'notable';
+              const tag = ['bullish', 'bearish', 'notable'].includes(item.tag) ? item.tag : 'notable';
               const label = tag.charAt(0).toUpperCase() + tag.slice(1);
-              return `<li><div class="score-bullet-card tag-${tag}"><span class="score-bullet-tag">${label}</span><span class="score-bullet-text">${item.text || ''}</span></div></li>`;
+              return `<li><div class="score-bullet-card tag-${tag}"><span class="score-bullet-tag">${label}</span><span class="score-bullet-text">${esc(item.text)}</span></div></li>`;
             }).join('')}
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Metric Cards -->
-    <div class="metrics">
-      <div class="kpi-card">
-        <div class="kpi-label">Bull/Bear Ratio</div>
-        <div style="flex:1">
-          <div class="kpi-value g">${(data.bull_bear_ratio || 0).toFixed(1)}x</div>
-          <div class="kpi-sub">${m ? m.bull_count : '?'} bull · ${m ? m.bear_count : '?'} bear posts</div>
-        </div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">Posts Analyzed</div>
-        <div style="flex:1">
-          <div class="kpi-value b">${data.post_count || 0}</div>
-          <div class="kpi-sub">Last ${data.hours_window || 24}h · title + body + comments</div>
-        </div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">#1 Ticker</div>
-        <div style="flex:1">
-          <div class="kpi-value">${(data.tickers && data.tickers[0]) ? data.tickers[0].symbol : '—'}</div>
-          ${(data.tickers && data.tickers[0] && data.tickers[0].company_name) ? `<div class="kpi-company">${data.tickers[0].company_name}</div>` : ''}
-          <div class="kpi-sub">${(data.tickers && data.tickers[0]) ? `${(data.tickers[0].mentions||0).toLocaleString()} mentions` : '—'}</div>
-        </div>
-      </div>
+    ${history.length >= 2 ? `
+    <!-- Score History -->
+    <div class="section-title">Score History<span class="section-note">Twice-daily prints · 05:00 / 20:00 HKT</span></div>
+    <div class="bull-bear" style="padding:14px 16px 10px;">
+      ${buildHistoryChart(history)}
     </div>
+    ` : ''}
 
-    <!-- Bull/Bear Bar -->
-    <div class="section-title">Sentiment Breakdown</div>
+    <!-- Sentiment Mix -->
+    <div class="section-title">Sentiment Mix<span class="section-note">Share of classified posts</span></div>
     <div class="bull-bear">
       <div class="bb-row">
         <span class="bb-name">Bullish</span>
@@ -551,7 +657,7 @@ async function load() {
     </div>
 
     <!-- Themes -->
-    <div class="section-title">Trending Themes &amp; Post Highlights</div>
+    <div class="section-title">Thematic Momentum<span class="section-note">Where retail attention is concentrated</span></div>
     <div class="theme-grid">
       ${(data.themes || []).map(th => {
         const heatRaw = (th.heat || '').toLowerCase();
@@ -564,15 +670,15 @@ async function load() {
         return `
           <div class="theme-card">
             <div class="theme-head">
-              <span class="theme-title">${th.title}</span>
+              <span class="theme-title">${esc(th.title)}</span>
               ${badge}
             </div>
             <ul class="theme-bullets">
-              ${(th.bullets || []).map(b => `<li>${b}</li>`).join('')}
+              ${(th.bullets || []).map(b => `<li>${esc(b)}</li>`).join('')}
             </ul>
             <div class="theme-footer">
               <div class="theme-tickers">
-                ${(th.tickers || []).map(t => `<span class="ticker-chip">${t}</span>`).join('')}
+                ${(th.tickers || []).map(t => `<span class="ticker-chip">${esc(t)}</span>`).join('')}
               </div>
             </div>
           </div>`;
@@ -580,7 +686,7 @@ async function load() {
     </div>
 
     <!-- Ticker Table -->
-    <div class="section-title">Hot Tickers</div>
+    <div class="section-title">Ticker Attention<span class="section-note">Most-mentioned symbols in window</span></div>
     <div class="ticker-table-wrap">
       <table>
         <thead>
@@ -588,7 +694,7 @@ async function load() {
             <th>Ticker</th>
             <th>Sentiment</th>
             <th>Mentions</th>
-            <th>Top Signal</th>
+            <th>Signal</th>
           </tr>
         </thead>
         <tbody>
@@ -598,32 +704,73 @@ async function load() {
             return `
               <tr>
                 <td>
-                  <span class="sym">${t.symbol}</span>
-                  ${t.company_name ? `<div class="sym-name">${t.company_name}</div>` : ''}
+                  <span class="sym">${esc(t.symbol)}</span>
+                  ${t.company_name ? `<div class="sym-name">${esc(t.company_name)}</div>` : ''}
                 </td>
-                <td><span class="sent-pill ${pillCls}">${t.sentiment}</span></td>
+                <td><span class="sent-pill ${pillCls}">${esc(t.sentiment)}</span></td>
                 <td>
                   <div class="mention-track">
                     <div class="mbar" style="width:${barW}px;"></div>
                     <span class="mention-num">${(t.mentions||0).toLocaleString()}</span>
                   </div>
                 </td>
-                <td><span class="signal-text">${t.signal || '—'}</span></td>
+                <td><span class="signal-text">${esc(t.signal || '—')}</span></td>
               </tr>`;
           }).join('')}
         </tbody>
       </table>
     </div>
 
-
-
-    ${history.length >= 2 ? `
-    <!-- Score History -->
-    <div class="section-title">Score History</div>
-    <div class="bull-bear" style="padding:14px 16px 10px;">
-      ${buildHistoryChart(history)}
+    <!-- Methodology -->
+    <div class="section-title">Methodology &amp; Coverage</div>
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-head">Score Construction</div>
+        <div class="method-body">
+          Composite of a quantitative post-mix signal (30%) and a model-based holistic read of tone across the batch (70%).
+        </div>
+        ${m ? `
+        <div style="margin-top:12px">
+          <div class="method-row">
+            <span class="method-name">Post-mix signal</span>
+            <div class="method-bar"><div class="method-fill" style="width:${m.formula_score}%;background:var(--t3)"></div></div>
+            <span class="method-num">${m.formula_score}</span>
+          </div>
+          <div class="method-row">
+            <span class="method-name">Model read</span>
+            <div class="method-bar"><div class="method-fill" style="width:${m.ai_score}%;background:var(--ac)"></div></div>
+            <span class="method-num">${m.ai_score}</span>
+          </div>
+          <div class="method-row" style="margin-bottom:0">
+            <span class="method-name">Composite</span>
+            <div class="method-bar"><div class="method-fill" style="width:${score}%;background:${scoreColor}"></div></div>
+            <span class="method-num" style="color:${scoreColor}">${score}</span>
+          </div>
+        </div>` : ''}
+        <div class="method-note">The holistic read is weighted higher because the forum communicates heavily in irony; raw post counts alone misclassify tone.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-head">How to Read the Score</div>
+        <div class="band-row"><span class="band-swatch" style="background:#E86060"></span><span class="band-range">0–20</span><span class="band-label">Extreme Fear</span></div>
+        <div class="band-row"><span class="band-swatch" style="background:#c07020"></span><span class="band-range">21–40</span><span class="band-label">Fear</span></div>
+        <div class="band-row"><span class="band-swatch" style="background:#3a5870"></span><span class="band-range">41–60</span><span class="band-label">Neutral</span></div>
+        <div class="band-row"><span class="band-swatch" style="background:#1880b0"></span><span class="band-range">61–80</span><span class="band-label">Greed</span></div>
+        <div class="band-row"><span class="band-swatch" style="background:#18a880"></span><span class="band-range">81–100</span><span class="band-label">Extreme Greed</span></div>
+        <div class="method-note">Extremes are typically used as contrarian positioning context: elevated greed can indicate crowded retail exposure, deep fear can accompany capitulation. Not a directional signal on its own.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-head">Coverage &amp; Limitations</div>
+        <div class="cov-row"><span class="cov-key">Sample</span><span class="cov-val">${postCount} posts${m ? ` (${m.total_posts} classified)` : ''}</span></div>
+        <div class="cov-row"><span class="cov-key">Window</span><span class="cov-val">Trailing ${data.hours_window || 24}h</span></div>
+        <div class="cov-row"><span class="cov-key">Cadence</span><span class="cov-val">05:00 / 20:00 HKT</span></div>
+        <div class="cov-row"><span class="cov-key">Venue</span><span class="cov-val">r/wallstreetbets public feed</span></div>
+        <ul class="method-list" style="margin-top:10px;border-top:1px solid var(--b1);padding-top:8px">
+          <li>Single-venue view of retail; not representative of all retail flow</li>
+          <li>Small batches can swing individual prints</li>
+          <li>Classification is model-based and probabilistic</li>
+        </ul>
+      </div>
     </div>
-    ` : ''}
   `;
 }
 
@@ -638,65 +785,65 @@ load();
     tip.innerHTML = '<div><span class="tt-score"></span><span class="tt-label"></span></div><div class="tt-ts"></div>';
     document.body.appendChild(tip);
   }
+  let visible = false;
   document.addEventListener('mouseover', e => {
     const dot = e.target.closest('.history-dot');
     if (!dot) return;
-    const score = dot.dataset.score;
-    const label = dot.dataset.label || '';
-    const labelCol = score >= 80 ? '#18a880' : score >= 60 ? '#1880b0' : score >= 40 ? '#3a5870' : score >= 20 ? '#c07020' : '#c03838';
+    const score = Number(dot.dataset.score);
     tip.querySelector('.tt-score').textContent = score;
-    tip.querySelector('.tt-label').style.color = labelCol;
-    tip.querySelector('.tt-label').textContent = label;
+    tip.querySelector('.tt-label').style.color = regimeOf(score).text;
+    tip.querySelector('.tt-label').textContent = dot.dataset.label || '';
     tip.querySelector('.tt-ts').textContent = dot.dataset.ts;
     tip.style.display = 'block';
+    visible = true;
   });
   document.addEventListener('mousemove', e => {
-    if (tip.style.display === 'none') return;
+    if (!visible) return;
     tip.style.left = (e.clientX + 16) + 'px';
     tip.style.top  = (e.clientY - 44) + 'px';
   });
   document.addEventListener('mouseout', e => {
-    if (e.target.closest('.history-dot')) tip.style.display = 'none';
+    if (e.target.closest('.history-dot')) { tip.style.display = 'none'; visible = false; }
   });
 }());
 </script>
 
 <section id="faq">
   <div class="faq-section">
-    <div class="section-title">Fear &amp; Greed Index FAQs</div>
+    <div class="section-title">About the Index</div>
     <div class="faq-list">
 
       <div class="faq-item">
         <div class="faq-q">What is the WSB Fear &amp; Greed Index?</div>
-        <div class="faq-a">The WSB Fear &amp; Greed Index measures the collective mood of Reddit's WallStreetBets (WSB) forum, one of the most active retail trading forums for US stock and options markets. When WSB is greedy, retail traders are piling in and chasing momentum. When fearful, they're pulling back, cutting exposure, and bracing for further downside. The index gives you a single number (0–100) to cut through the noise.</div>
+        <div class="faq-a">A sentiment gauge for r/wallstreetbets, one of the most active retail trading forums for US equities and options. The index condenses the forum's aggregate tone into a single 0–100 reading: higher values indicate risk-seeking, momentum-chasing behavior; lower values indicate defensiveness and de-risking. It is intended as market color on retail positioning, not as a trading signal.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q">How is WSB Fear &amp; Greed Calculated?</div>
-        <div class="faq-a">Each day's WSB posts are analyzed by AI and classified as bullish, bearish or neutral. The final score blends a quantitative signal (share of bullish vs. bearish posts, weighted 30%) with AI's holistic read of the batch (weighted 70%), covering its overall energy, sarcasm, and tone. WSB communicates heavily in irony and memes, so raw post counts alone can miss the actual sentiment.</div>
+        <div class="faq-q">How is the score constructed?</div>
+        <div class="faq-a">Each print, posts from the trailing 24 hours are classified as bullish, bearish, or neutral. The composite blends a quantitative post-mix signal (share of bullish versus bearish posts, weighted 30%) with a model-based holistic read of the batch's overall tone (weighted 70%). The holistic component carries more weight because the forum communicates heavily in irony and memes, which raw classification counts tend to misread.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q">How Often is the Index Updated?</div>
-        <div class="faq-a">The index is recalculated twice daily at 5:00 AM and 8:00 PM HKT. Each update analyzes all WSB posts from the prior 24 hours, typically 50–100 posts.</div>
+        <div class="faq-q">How often does it update?</div>
+        <div class="faq-a">Twice daily, at 05:00 and 20:00 HKT. Each print covers all qualifying posts from the prior 24 hours, including titles, bodies, and top comments. Sample size varies with forum activity and is reported in the Post Coverage panel; smaller batches are flagged as limited samples.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q">How to Use the WSB Fear &amp; Greed Index?</div>
-        <div class="faq-a">Use it as a contrarian signal, not trading advice. Extreme Greed (80+) often means retail is overextended; Extreme Fear (below 20) can signal capitulation. Combined with the trending themes and hot tickers, it gives you a ground-level view of where retail attention is concentrated.</div>
+        <div class="faq-q">How should the index be used?</div>
+        <div class="faq-a">As contrarian positioning context. Readings above 80 have historically coincided with crowded, extended retail exposure; readings below 20 can accompany capitulation. Combined with the thematic and ticker-attention panels, it offers a ground-level view of where retail attention and risk appetite are concentrated. It is not investment advice and should not be used in isolation.</div>
       </div>
 
     </div>
 
     <div style="padding-top:1.5rem;">
-      <a href="#top" style="font-size:11px;color:var(--ac);text-decoration:none;border-bottom:1px solid var(--ac);padding-bottom:1px;">&#8593; Return to WSB Fear &amp; Greed Index</a>
+      <a href="#top" style="font-size:11px;color:var(--ac);text-decoration:none;border-bottom:1px solid var(--ac);padding-bottom:1px;">&#8593; Back to dashboard</a>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <p class="disclaimer">For informational purposes only. Sentiment is AI-derived from public r/wallstreetbets posts and is not investment advice.</p>
-  <p class="footer-meta">WSB Sentiment Monitor &middot; Cherin Kim</p>
+  <p class="disclaimer">For informational purposes only. Sentiment readings are model-derived from public r/wallstreetbets posts and reflect the tone of a single retail venue over a trailing 24-hour window. <br> Nothing on this page constitutes investment advice, research, or a recommendation to transact in any security.</p>
+  <p class="footer-meta">WSB Sentiment Monitor &middot; Built and maintained by Cherin Kim &middot; Data: r/wallstreetbets public feed </p>
 </footer>
 
 
