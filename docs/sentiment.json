@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 11,
-  "neutral_pct": 45,
-  "bull_bear_ratio": 4.0,
-  "overall_score": 57,
+  "bull_pct": 47,
+  "bear_pct": 29,
+  "neutral_pct": 24,
+  "bull_bear_ratio": 1.6,
+  "overall_score": 58,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 44,
-    "ai_score": 62,
+    "formula_score": 47,
+    "ai_score": 63,
     "bull_count": 8,
-    "bear_count": 2,
-    "neutral_count": 8,
-    "total_posts": 18,
+    "bear_count": 5,
+    "neutral_count": 4,
+    "total_posts": 17,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,180 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 18,
+  "post_count": 17,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-semiconductors",
-      "title": "AI & Semiconductor Rotation",
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Wave",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "AI hardware demand drives supplier revenue beats",
-        "Chip-to-software capital rotation intensifies",
-        "Memory names in focus on HBM cycle",
-        "Overcapacity fears trigger sharp swings"
+        "SK Hynix eyes major US listing",
+        "HBM demand tied to AI supply chain",
+        "Memory names drawing speculative flows",
+        "Chip-versus-software rotation narrative building"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 72,
       "tickers": [
-        "MU",
         "SKHY",
         "NVDA"
       ]
     },
     {
-      "id": "korean-chip-leverage",
-      "title": "Korean Chip Leverage Frenzy",
-      "icon": "flame",
+      "id": "defense-momentum",
+      "title": "Defense Sector Momentum",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Leveraged ETF assets dwarf daily volume",
-        "SK Hynix speculation reaches extreme levels",
-        "Samsung leveraged exposure surges sharply",
-        "Retail crowding raises volatility risk"
+        "AVAV posts strong revenue beat",
+        "Leveraged bets on defense upside",
+        "Geopolitical tailwinds supporting sector",
+        "LMT drawing speculative calls"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 78,
       "tickers": [
-        "SKHY"
+        "AVAV",
+        "LMT"
       ]
     },
     {
-      "id": "single-stock-yolos",
-      "title": "High-Conviction high-conviction Bets",
-      "icon": "rocket",
-      "heat": "hot",
+      "id": "oil-energy",
+      "title": "Oil Price Confusion",
+      "icon": "flame",
+      "heat": "building",
       "bullets": [
-        "Large positions in GOOGL, RKLB, IBM",
-        "Pre-earnings breakout setups favored",
-        "Technicals-driven entries despite weak charts",
-        "Retail chasing upside momentum"
+        "Hormuz disruption fails to lift prices",
+        "OPEC+ approves further output increase",
+        "XOM call holders forced to roll",
+        "Supply shocks not moving crude"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 35,
+      "tickers": [
+        "XOM"
+      ]
+    },
+    {
+      "id": "big-tech-earnings",
+      "title": "Big Tech Earnings Setups",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "GOOGL pre-earnings breakout setup eyed",
+        "Netflix audience retention concerns grow",
+        "Warner merger talks stir sentiment",
+        "IBM positions holding steady gains"
+      ],
+      "sentiment_score": 58,
       "tickers": [
         "GOOGL",
-        "RKLB",
+        "NFLX",
         "IBM"
       ]
     },
     {
-      "id": "spy-index-outlook",
-      "title": "Index & SPY Direction",
-      "icon": "trending-down",
-      "heat": "normal",
+      "id": "casino-culture",
+      "title": "Casino Trading Culture",
+      "icon": "skull",
+      "heat": "hot",
       "bullets": [
-        "Bearish SPY retest warnings circulating",
-        "Bull-trap caution ahead of week",
-        "0DTE speculation remains elevated",
-        "Mixed macro positioning debated"
+        "Trading losses shared with dark humor",
+        "Market viewed as rigged casino",
+        "Leveraged high-conviction positions dominate",
+        "Retail self-aware yet undeterred"
       ],
-      "sentiment_score": 42,
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "healthcare-momentum",
-      "title": "Healthcare Momentum Plays",
-      "icon": "activity",
-      "heat": "building",
-      "bullets": [
-        "HIMS trending higher on weekly buys",
-        "Dip-buying strategy on every pullback",
-        "Bag-holder washout thesis in play",
-        "Speculative upside targets set"
-      ],
-      "sentiment_score": 68,
-      "tickers": [
-        "HIMS"
-      ]
-    },
-    {
-      "id": "macro-policy-energy",
-      "title": "Macro, Policy & Energy",
-      "icon": "world",
-      "heat": "normal",
-      "bullets": [
-        "OPEC+ approves further oil output increase",
-        "Hormuz exports begin recovery",
-        "New retail investment accounts go live",
-        "Global politics flagged as volatile"
-      ],
-      "sentiment_score": 52,
+      "sentiment_score": 48,
       "tickers": []
+    },
+    {
+      "id": "speculative-smallcaps",
+      "title": "Speculative Small-Cap Bets",
+      "icon": "coin",
+      "heat": "normal",
+      "bullets": [
+        "HIMS weekly options on every dip",
+        "SPCX price-target wishes noted",
+        "Baggage-holder exit thesis floated",
+        "Position sharing and diversification hunts"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "HIMS",
+        "SPCX"
+      ]
     }
   ],
   "tickers": [
     {
       "symbol": "SKHY",
-      "sentiment": "mixed",
-      "mentions": 8,
-      "signal": "Korean memory meme, leverage-fueled hype",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "AI memory listing hype",
       "company_name": "SKhynix    GDS"
     },
     {
-      "symbol": "RKLB",
+      "symbol": "AVAV",
       "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "Technicals-driven high-conviction speculation",
-      "company_name": "Rocket Lab Corporation"
+      "mentions": 3,
+      "signal": "Leveraged on earnings beat",
+      "company_name": "AeroVironment, Inc."
     },
     {
       "symbol": "GOOGL",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Pre-earnings breakout conviction",
+      "mentions": 3,
+      "signal": "Pre-earnings breakout high-conviction",
       "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Chart-chasing rocket targets",
-      "company_name": "Micron Technology, Inc."
+      "symbol": "XOM",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Calls rolling on weak oil",
+      "company_name": "ExxonMobil Holdings Corporation"
     },
     {
-      "symbol": "SPY",
+      "symbol": "LMT",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Defense calls in favor",
+      "company_name": "Lockheed Martin Corporation"
+    },
+    {
+      "symbol": "NFLX",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Bull-trap and retest warnings",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "mentions": 2,
+      "signal": "Retention worries, selling off",
+      "company_name": "Netflix, Inc."
     },
     {
       "symbol": "IBM",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Large position holding up",
+      "mentions": 1,
+      "signal": "Large position holding well",
       "company_name": "International Business Machines"
     },
     {
       "symbol": "HIMS",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Dip-buying momentum play",
+      "mentions": 1,
+      "signal": "Weekly dip-buying momentum",
       "company_name": "Hims & Hers Health, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "AI supply-chain anchor",
-      "company_name": "NVIDIA Corporation"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans constructive, driven by AI-supply-chain optimism after strong Foxconn revenue and persistent chip enthusiasm. Traders are rotating aggressively between memory names and software, with high-conviction high-conviction bets stacking into GOOGL, RKLB, and IBM ahead of catalysts.",
+      "text": "Retail energy skews constructive, anchored by the AI and semiconductor narrative as SK Hynix's US listing plans and HBM supply-chain enthusiasm draw speculative flows. Defense names like AVAV are riding strong earnings beats into leveraged upside bets.",
       "tag": "bullish"
     },
     {
-      "text": "Korean semiconductor leverage stands out as a notable structural risk, with leveraged ETF assets on SK Hynix and Samsung dwarfing average daily volume, signaling crowded speculative positioning vulnerable to sharp unwinds.",
-      "tag": "notable"
+      "text": "Oil positioning is the batch's pain point, with call holders forced to roll as OPEC+ output increases and Hormuz disruptions inexplicably fail to lift crude. Netflix sentiment is also souring on retention concerns and merger-driven headlines.",
+      "tag": "bearish"
     },
     {
-      "text": "A vocal bearish minority warns of a SPY retest and potential bull trap, keeping index positioning cautious even as single-stock speculation and 0DTE activity remain elevated.",
-      "tag": "bearish"
+      "text": "Underlying tone remains classic casino culture: self-aware traders sharing losses with humor while piling into leveraged YOLOs on GOOGL, IBM, and small-caps. Big-tech earnings setups and meme-driven Korean tickers keep engagement lively.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-05T21:01:36.333090+00:00",
-  "updated_hkt": "2026-07-06 05:01 HKT"
+  "updated_at": "2026-07-06T12:01:33.468956+00:00",
+  "updated_hkt": "2026-07-06 20:01 HKT"
 }
