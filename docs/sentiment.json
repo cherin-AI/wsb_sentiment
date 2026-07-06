@@ -1,17 +1,17 @@
 {
-  "bull_pct": 47,
-  "bear_pct": 29,
-  "neutral_pct": 24,
-  "bull_bear_ratio": 1.6,
-  "overall_score": 58,
-  "overall_label": "Neutral",
+  "bull_pct": 55,
+  "bear_pct": 25,
+  "neutral_pct": 20,
+  "bull_bear_ratio": 2.2,
+  "overall_score": 61,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 47,
-    "ai_score": 63,
-    "bull_count": 8,
+    "formula_score": 55,
+    "ai_score": 64,
+    "bull_count": 11,
     "bear_count": 5,
     "neutral_count": 4,
-    "total_posts": 17,
+    "total_posts": 20,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,181 +19,183 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 17,
+  "post_count": 20,
   "hours_window": 24,
   "themes": [
     {
       "id": "ai-semis",
-      "title": "AI & Semiconductor Wave",
+      "title": "AI & Semiconductor Momentum",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "SK Hynix eyes major US listing",
-        "HBM demand tied to AI supply chain",
-        "Memory names drawing speculative flows",
-        "Chip-versus-software rotation narrative building"
+        "AMD calls printing on bounce plays",
+        "Nvidia server delay rattles Asian chips",
+        "SK Hynix eyes massive US listing",
+        "AI infrastructure narrative still dominant"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 68,
       "tickers": [
-        "SKHY",
-        "NVDA"
+        "AMD",
+        "NVDA",
+        "WULF"
       ]
     },
     {
-      "id": "defense-momentum",
-      "title": "Defense Sector Momentum",
+      "id": "crypto-bitcoin",
+      "title": "Bitcoin & Crypto Treasuries",
+      "icon": "coin",
+      "heat": "building",
+      "bullets": [
+        "Saylor's Strategy trims Bitcoin holdings",
+        "Bitcoin declared victorious by bulls",
+        "Corporate treasury crypto plays scrutinized",
+        "Mixed conviction on further upside"
+      ],
+      "sentiment_score": 52,
+      "tickers": [
+        "BTC",
+        "MSTR"
+      ]
+    },
+    {
+      "id": "meme-yolo",
+      "title": "Meme high-conviction Speculation",
       "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "WEN November calls stacking up",
+        "SPCX wish posts show euphoria",
+        "0DTE gambling narrative persistent",
+        "Speculative traders chasing lottery bets"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
+        "WEN",
+        "SPCX",
+        "AAPL"
+      ]
+    },
+    {
+      "id": "defense-plays",
+      "title": "Defense & Drone Names",
+      "icon": "target",
       "heat": "building",
       "bullets": [
         "AVAV posts strong revenue beat",
         "Leveraged bets on defense upside",
-        "Geopolitical tailwinds supporting sector",
-        "LMT drawing speculative calls"
+        "Stock ripped on earnings momentum",
+        "High-conviction bull run thesis"
       ],
       "sentiment_score": 78,
       "tickers": [
-        "AVAV",
-        "LMT"
+        "AVAV"
       ]
     },
     {
-      "id": "oil-energy",
-      "title": "Oil Price Confusion",
-      "icon": "flame",
-      "heat": "building",
+      "id": "energy-oil",
+      "title": "Oil & Energy Confusion",
+      "icon": "droplet",
+      "heat": "normal",
       "bullets": [
-        "Hormuz disruption fails to lift prices",
-        "OPEC+ approves further output increase",
-        "XOM call holders forced to roll",
-        "Supply shocks not moving crude"
+        "Trader baffled by weak oil prices",
+        "XOM calls repeatedly rolled",
+        "Hormuz tensions failing to lift crude",
+        "Bearish frustration on energy longs"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 32,
       "tickers": [
         "XOM"
       ]
     },
     {
-      "id": "big-tech-earnings",
-      "title": "Big Tech Earnings Setups",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "GOOGL pre-earnings breakout setup eyed",
-        "Netflix audience retention concerns grow",
-        "Warner merger talks stir sentiment",
-        "IBM positions holding steady gains"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "GOOGL",
-        "NFLX",
-        "IBM"
-      ]
-    },
-    {
-      "id": "casino-culture",
-      "title": "Casino Trading Culture",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Trading losses shared with dark humor",
-        "Market viewed as rigged casino",
-        "Leveraged high-conviction positions dominate",
-        "Retail self-aware yet undeterred"
-      ],
-      "sentiment_score": 48,
-      "tickers": []
-    },
-    {
-      "id": "speculative-smallcaps",
-      "title": "Speculative Small-Cap Bets",
-      "icon": "coin",
+      "id": "media-earnings",
+      "title": "Media & Consumer Stocks",
+      "icon": "trending-down",
       "heat": "normal",
       "bullets": [
-        "HIMS weekly options on every dip",
-        "SPCX price-target wishes noted",
-        "Baggage-holder exit thesis floated",
-        "Position sharing and diversification hunts"
+        "Netflix audience retention weakening",
+        "Warner merger talks pressuring shares",
+        "Holdings being slowly trimmed",
+        "Cautious tone on streaming names"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 34,
       "tickers": [
-        "HIMS",
-        "SPCX"
+        "NFLX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SKHY",
+      "symbol": "AMD",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "AI memory listing hype",
-      "company_name": "SKhynix    GDS"
+      "mentions": 5,
+      "signal": "Calls bought on the dip bounce",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "WEN",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Meme high-conviction with November calls",
+      "company_name": "Wendy's Company (The)"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Server delay weighs on sentiment",
+      "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "AVAV",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Leveraged on earnings beat",
+      "mentions": 2,
+      "signal": "Leveraged bet on earnings beat",
       "company_name": "AeroVironment, Inc."
-    },
-    {
-      "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Pre-earnings breakout high-conviction",
-      "company_name": "Alphabet Inc."
     },
     {
       "symbol": "XOM",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Calls rolling on weak oil",
+      "signal": "Frustrated oil longs rolling calls",
       "company_name": "ExxonMobil Holdings Corporation"
-    },
-    {
-      "symbol": "LMT",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Defense calls in favor",
-      "company_name": "Lockheed Martin Corporation"
     },
     {
       "symbol": "NFLX",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Retention worries, selling off",
+      "signal": "Trimming on retention concerns",
       "company_name": "Netflix, Inc."
     },
     {
-      "symbol": "IBM",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Large position holding well",
-      "company_name": "International Business Machines"
+      "symbol": "BTC",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Treasury selling versus bull chorus",
+      "company_name": "Bitcoin USD"
     },
     {
-      "symbol": "HIMS",
+      "symbol": "SPCX",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "Weekly dip-buying momentum",
-      "company_name": "Hims & Hers Health, Inc."
+      "signal": "Speculative moonshot wish plays",
+      "company_name": "Space Exploration Technologies "
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews constructive, anchored by the AI and semiconductor narrative as SK Hynix's US listing plans and HBM supply-chain enthusiasm draw speculative flows. Defense names like AVAV are riding strong earnings beats into leveraged upside bets.",
+      "text": "Retail energy skews greedy, with AI and semiconductor names driving conviction. AMD dip-buying calls and AVAV's blowout earnings beat fuel high-conviction leveraged positioning, while defense and chip infrastructure themes anchor the bullish narrative across the batch.",
       "tag": "bullish"
     },
     {
-      "text": "Oil positioning is the batch's pain point, with call holders forced to roll as OPEC+ output increases and Hormuz disruptions inexplicably fail to lift crude. Netflix sentiment is also souring on retention concerns and merger-driven headlines.",
-      "tag": "bearish"
+      "text": "Meme speculation remains euphoric, with WEN November calls and SPCX moonshot wishes reflecting classic lottery-ticket behavior. Speculative traders continue chasing asymmetric upside despite an undercurrent of ironic self-awareness about 0DTE gambling.",
+      "tag": "notable"
     },
     {
-      "text": "Underlying tone remains classic casino culture: self-aware traders sharing losses with humor while piling into leveraged YOLOs on GOOGL, IBM, and small-caps. Big-tech earnings setups and meme-driven Korean tickers keep engagement lively.",
-      "tag": "notable"
+      "text": "Pockets of frustration persist in energy and media, where oil longs question weak crude despite geopolitical shocks and Netflix holders trim on retention worries. The Nvidia server delay also introduces caution into the otherwise buoyant AI trade.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-06T12:01:33.468956+00:00",
-  "updated_hkt": "2026-07-06 20:01 HKT"
+  "updated_at": "2026-07-06T21:01:38.014528+00:00",
+  "updated_hkt": "2026-07-07 05:01 HKT"
 }
