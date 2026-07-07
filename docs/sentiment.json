@@ -1,17 +1,17 @@
 {
-  "bull_pct": 55,
-  "bear_pct": 25,
-  "neutral_pct": 20,
-  "bull_bear_ratio": 2.2,
-  "overall_score": 61,
-  "overall_label": "Greed",
+  "bull_pct": 48,
+  "bear_pct": 31,
+  "neutral_pct": 21,
+  "bull_bear_ratio": 1.6,
+  "overall_score": 55,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 55,
-    "ai_score": 64,
-    "bull_count": 11,
-    "bear_count": 5,
-    "neutral_count": 4,
-    "total_posts": 20,
+    "formula_score": 48,
+    "ai_score": 58,
+    "bull_count": 14,
+    "bear_count": 9,
+    "neutral_count": 6,
+    "total_posts": 29,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,108 +19,107 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 20,
+  "post_count": 29,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-semis",
-      "title": "AI & Semiconductor Momentum",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Buildout",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "AMD calls printing on bounce plays",
+        "Micron breaks ground on memory megafab",
         "Nvidia server delay rattles Asian chips",
-        "SK Hynix eyes massive US listing",
-        "AI infrastructure narrative still dominant"
+        "WULF signs major Anthropic compute deal",
+        "China curbs overseas AI model access"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 62,
       "tickers": [
-        "AMD",
+        "MU",
         "NVDA",
-        "WULF"
+        "WULF",
+        "AMD"
       ]
     },
     {
-      "id": "crypto-bitcoin",
-      "title": "Bitcoin & Crypto Treasuries",
-      "icon": "coin",
-      "heat": "building",
-      "bullets": [
-        "Saylor's Strategy trims Bitcoin holdings",
-        "Bitcoin declared victorious by bulls",
-        "Corporate treasury crypto plays scrutinized",
-        "Mixed conviction on further upside"
-      ],
-      "sentiment_score": 52,
-      "tickers": [
-        "BTC",
-        "MSTR"
-      ]
-    },
-    {
-      "id": "meme-yolo",
-      "title": "Meme high-conviction Speculation",
+      "id": "amd-momentum",
+      "title": "AMD Options Momentum",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "WEN November calls stacking up",
-        "SPCX wish posts show euphoria",
-        "0DTE gambling narrative persistent",
-        "Speculative traders chasing lottery bets"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "WEN",
-        "SPCX",
-        "AAPL"
-      ]
-    },
-    {
-      "id": "defense-plays",
-      "title": "Defense & Drone Names",
-      "icon": "target",
-      "heat": "building",
-      "bullets": [
-        "AVAV posts strong revenue beat",
-        "Leveraged bets on defense upside",
-        "Stock ripped on earnings momentum",
-        "High-conviction bull run thesis"
+        "Traders piling into short-dated calls",
+        "Profit-taking after sharp bounce",
+        "Volatility crush concerns fading",
+        "High-conviction speculative positioning"
       ],
       "sentiment_score": 78,
       "tickers": [
-        "AVAV"
+        "AMD"
       ]
     },
     {
-      "id": "energy-oil",
-      "title": "Oil & Energy Confusion",
-      "icon": "droplet",
-      "heat": "normal",
+      "id": "spacex-squeeze",
+      "title": "SpaceX Squeeze Debate",
+      "icon": "flame",
+      "heat": "building",
       "bullets": [
-        "Trader baffled by weak oil prices",
-        "XOM calls repeatedly rolled",
-        "Hormuz tensions failing to lift crude",
-        "Bearish frustration on energy longs"
+        "Lockup expiry and first earnings loom",
+        "Thin float fuels squeeze speculation",
+        "Short thesis flags heavy cash burn",
+        "Longs and shorts sharply divided"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 50,
       "tickers": [
-        "XOM"
+        "SPCX"
       ]
     },
     {
-      "id": "media-earnings",
-      "title": "Media & Consumer Stocks",
-      "icon": "trending-down",
+      "id": "meme-food",
+      "title": "Wendy's Meme Trade",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Speculators adding November calls",
+        "Playful high-risk positioning persists",
+        "Retail energy chasing the ticker",
+        "Pure momentum, thin fundamentals"
+      ],
+      "sentiment_score": 65,
+      "tickers": [
+        "WEN"
+      ]
+    },
+    {
+      "id": "crypto-treasury",
+      "title": "Bitcoin Treasury Moves",
+      "icon": "coin",
       "heat": "normal",
       "bullets": [
-        "Netflix audience retention weakening",
-        "Warner merger talks pressuring shares",
-        "Holdings being slowly trimmed",
-        "Cautious tone on streaming names"
+        "Strategy trims sizable Bitcoin holdings",
+        "Traders declare crypto vindication",
+        "Corporate treasury selling draws scrutiny",
+        "Mixed conviction on next leg"
       ],
-      "sentiment_score": 34,
+      "sentiment_score": 55,
       "tickers": [
-        "NFLX"
+        "MSTR",
+        "BTC"
+      ]
+    },
+    {
+      "id": "loss-fatigue",
+      "title": "Trading Losses and Fatigue",
+      "icon": "skull",
+      "heat": "normal",
+      "bullets": [
+        "Perma-bears warn of account risk",
+        "Long-term NIO holder capitulates",
+        "Traders selling into weakness",
+        "General account blow-up sentiment"
+      ],
+      "sentiment_score": 28,
+      "tickers": [
+        "NIO"
       ]
     }
   ],
@@ -128,74 +127,74 @@
     {
       "symbol": "AMD",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Calls bought on the dip bounce",
+      "mentions": 6,
+      "signal": "aggressive call buying and profit-taking",
       "company_name": "Advanced Micro Devices, Inc."
     },
     {
       "symbol": "WEN",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Meme high-conviction with November calls",
+      "mentions": 4,
+      "signal": "playful meme momentum trade",
       "company_name": "Wendy's Company (The)"
     },
     {
-      "symbol": "NVDA",
+      "symbol": "SPCX",
       "sentiment": "mixed",
       "mentions": 3,
-      "signal": "Server delay weighs on sentiment",
+      "signal": "squeeze hopes versus short thesis",
+      "company_name": "Space Exploration Technologies "
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "AI memory capex optimism",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "server delay pressures sentiment",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "AVAV",
+      "symbol": "WULF",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Leveraged bet on earnings beat",
-      "company_name": "AeroVironment, Inc."
+      "signal": "Anthropic deal sparks rally",
+      "company_name": "TeraWulf Inc."
     },
     {
-      "symbol": "XOM",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Frustrated oil longs rolling calls",
-      "company_name": "ExxonMobil Holdings Corporation"
-    },
-    {
-      "symbol": "NFLX",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Trimming on retention concerns",
-      "company_name": "Netflix, Inc."
-    },
-    {
-      "symbol": "BTC",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Treasury selling versus bull chorus",
-      "company_name": "Bitcoin USD"
-    },
-    {
-      "symbol": "SPCX",
+      "symbol": "RDDT",
       "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "high-conviction call position",
+      "company_name": "Reddit, Inc."
+    },
+    {
+      "symbol": "NIO",
+      "sentiment": "bearish",
       "mentions": 1,
-      "signal": "Speculative moonshot wish plays",
-      "company_name": "Space Exploration Technologies "
+      "signal": "long-term holder capitulation",
+      "company_name": "NIO Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews greedy, with AI and semiconductor names driving conviction. AMD dip-buying calls and AVAV's blowout earnings beat fuel high-conviction leveraged positioning, while defense and chip infrastructure themes anchor the bullish narrative across the batch.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Meme speculation remains euphoric, with WEN November calls and SPCX moonshot wishes reflecting classic lottery-ticket behavior. Speculative traders continue chasing asymmetric upside despite an undercurrent of ironic self-awareness about 0DTE gambling.",
+      "text": "AI infrastructure dominates the tape as Micron breaks ground on a memory megafab and Terawulf inks a major Anthropic deal, though a reported Nvidia server delay injected caution across Asian tech names and cooled the buildout narrative.",
       "tag": "notable"
     },
     {
-      "text": "Pockets of frustration persist in energy and media, where oil longs question weak crude despite geopolitical shocks and Netflix holders trim on retention worries. The Nvidia server delay also introduces caution into the otherwise buoyant AI trade.",
+      "text": "Retail energy remains firmly risk-on, with speculative traders piling into short-dated AMD calls and reviving the Wendy's meme trade, reflecting persistent appetite for high-conviction momentum plays despite stretched valuations.",
+      "tag": "bullish"
+    },
+    {
+      "text": "Pockets of fatigue linger as perma-bears warn of account blow-ups, a long-term NIO holder capitulates, and skeptics question parabolic KOSPI gains, underscoring an undercurrent of caution beneath the greed.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-06T21:01:38.014528+00:00",
-  "updated_hkt": "2026-07-07 05:01 HKT"
+  "updated_at": "2026-07-07T12:02:02.865796+00:00",
+  "updated_hkt": "2026-07-07 20:02 HKT"
 }
