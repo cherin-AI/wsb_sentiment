@@ -21,6 +21,7 @@ Python's job: calculate every metric from those classifications.
 
 import os
 import re
+import time
 import json
 import subprocess
 import requests
@@ -506,19 +507,36 @@ def analyze_with_claude(posts_text: str, post_count: int, api_key: str) -> dict:
     client  = anthropic.Anthropic(api_key=api_key, timeout=120.0, max_retries=2)
     now_utc = datetime.now(timezone.utc).isoformat()
 
-    message = client.messages.create(
-        model="claude-opus-4-8",
-        max_tokens=8000,
-        system=SYSTEM_PROMPT,
-        messages=[{
-            "role": "user",
-            "content": (
-                f"Current time: {now_utc}\n"
-                f"Total posts to classify: {post_count}\n\n"
-                f"Analyze these WSB posts:\n\n{posts_text}"
-            ),
-        }],
-    )
+    # The API intermittently returns 403 "Request not allowed" for the same
+    # request that succeeds moments later. The SDK does NOT auto-retry 403s
+    # (only 408/409/429/5xx), so a single flaky response would otherwise kill
+    # the whole daily run. Retry 403s explicitly with backoff.
+    def _create():
+        return client.messages.create(
+            model="claude-opus-4-8",
+            max_tokens=8000,
+            system=SYSTEM_PROMPT,
+            messages=[{
+                "role": "user",
+                "content": (
+                    f"Current time: {now_utc}\n"
+                    f"Total posts to classify: {post_count}\n\n"
+                    f"Analyze these WSB posts:\n\n{posts_text}"
+                ),
+            }],
+        )
+
+    message = None
+    for attempt in range(1, 6):
+        try:
+            message = _create()
+            break
+        except anthropic.PermissionDeniedError as e:
+            if attempt == 5:
+                raise
+            wait = 5 * attempt
+            print(f"  403 from Claude (attempt {attempt}/5), retrying in {wait}s… ({e})")
+            time.sleep(wait)
 
     raw = message.content[0].text.strip()
     if raw.startswith("```"):
