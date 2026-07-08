@@ -23,184 +23,187 @@
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-datacenter-plays",
-      "title": "AI & Data Center Trades",
+      "id": "semis-ai-hardware",
+      "title": "Semiconductors & AI Hardware",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "NBIS drawdown draws bag-holder debate",
-        "DELL positioned as resilient large-cap bet",
-        "AMD's cyclical swings dominate discussion",
-        "Data as core investment thesis"
+        "AMD swing traders track predictable cycles",
+        "DELL positions held with conviction",
+        "NBIS pullback drawing dip buyers",
+        "AI infrastructure remains core narrative"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 62,
       "tickers": [
-        "NBIS",
+        "AMD",
         "DELL",
-        "AMD"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Account Blow-Ups & Losses",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Trader describes life-changing capital wipeout",
-        "80k account destroyed then partially recovered",
-        "NIO bag-holder capitulating after years",
-        "Emotional posts warning of overleverage"
-      ],
-      "sentiment_score": 20,
-      "tickers": [
-        "NIO",
-        "SNDK"
-      ]
-    },
-    {
-      "id": "options-speculation",
-      "title": "Options Speculation",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "SPX over SPY tax-efficiency debate",
-        "0DTE and long-dated call plays",
-        "Margin-fueled all-in positioning",
-        "Big premiums bet on RDDT upside"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "SPY",
-        "SPX",
-        "RDDT",
+        "NBIS",
         "IBM"
       ]
     },
     {
-      "id": "squeeze-hunting",
-      "title": "Squeeze & Deep-Value Hunting",
+      "id": "leveraged-conviction-bets",
+      "title": "High-Conviction Leverage Bets",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "All-in margin portfolios on IBM",
+        "Mortgage-sized bets placed on AMD",
+        "Multi-million dollar single-name positions",
+        "Retail conviction overriding risk management"
+      ],
+      "sentiment_score": 60,
+      "tickers": [
+        "IBM",
+        "AMD",
+        "DELL"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Bag Holders & Trading Losses",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "NBIS holders down heavily from peak",
+        "Chinese small-caps described as dead money",
+        "NIO holder considering capitulation",
+        "Painful red days across accounts"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "NBIS",
+        "NIO",
+        "CMG"
+      ]
+    },
+    {
+      "id": "squeeze-speculation",
+      "title": "Short Squeeze Speculation",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "SpaceX float and short thesis outlined",
-        "GRPN deep-value DD resurfaces",
-        "SRRK momentum chart-reading conviction",
-        "Contrarian buyers stepping into weakness"
+        "SpaceX pre-IPO squeeze thesis circulating",
+        "SRRK technical setups touted repeatedly",
+        "RDDT long-dated call bets stacking",
+        "Speculators positioning for upside momentum"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 70,
       "tickers": [
-        "GRPN",
+        "RDDT",
         "SRRK"
       ]
     },
     {
-      "id": "consumer-weakness",
-      "title": "Consumer & Retail Stress",
-      "icon": "trending-down",
+      "id": "value-dip-buying",
+      "title": "Value & Dip-Buying Theses",
+      "icon": "trending-up",
       "heat": "normal",
       "bullets": [
-        "Chipotle traffic declines four straight quarters",
-        "JPMorgan flags rare valuation opportunity",
-        "Broad consumer pullback across income groups",
-        "Options traders scalped the volatility"
+        "CMG called rare valuation opportunity",
+        "GRPN deep-value fundamentals DD posted",
+        "CCOI telecom cash flow thesis",
+        "Contrarians buying beaten-down names"
       ],
-      "sentiment_score": 42,
+      "sentiment_score": 55,
       "tickers": [
         "CMG",
-        "AMZN"
+        "GRPN",
+        "CCOI"
       ]
     },
     {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "activity",
+      "id": "index-options-mechanics",
+      "title": "Index Options & Market Mechanics",
+      "icon": "chart-line",
       "heat": "normal",
       "bullets": [
-        "Oil and 10-year yields rattling positioning",
-        "TSLA and QQQ providing daily support",
-        "Mixed profit-taking and defeated tones",
-        "Traders positioning for July session"
+        "SPX favored over SPY for settlement",
+        "SPY puts and hedges in play",
+        "Amazon $25B bond sale flagged",
+        "0DTE speculation remains active"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 45,
       "tickers": [
-        "TSLA",
-        "QQQ",
-        "SPY"
+        "SPY",
+        "SPX",
+        "AMZN",
+        "QQQ"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "NBIS",
+      "symbol": "AMD",
       "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Painful drawdown, bag-holders averaging down",
+      "mentions": 9,
+      "signal": "Cyclical swing plays and leveraged bets",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "NBIS",
+      "sentiment": "bearish",
+      "mentions": 7,
+      "signal": "Painful drawdown, still averaging down",
       "company_name": "Nebius Group N.V."
     },
     {
       "symbol": "DELL",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Large-cap conviction buys",
+      "mentions": 6,
+      "signal": "Held with high conviction",
       "company_name": "Dell Technologies Inc."
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Cyclical swing-trade favorite",
-      "company_name": "Advanced Micro Devices, Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Options venue debate, put plays",
-      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "CMG",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Value dip vs consumer weakness",
+      "mentions": 5,
+      "signal": "Rough stretch called valuation opportunity",
       "company_name": "Chipotle Mexican Grill, Inc."
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 5,
+      "signal": "Puts and options mechanics debated",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "IBM",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "All-in margin conviction play",
+      "company_name": "International Business Machines"
     },
     {
       "symbol": "RDDT",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Aggressive call speculation",
+      "mentions": 3,
+      "signal": "Aggressive long-dated call bets",
       "company_name": "Reddit, Inc."
     },
     {
       "symbol": "NIO",
       "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Long-suffering bag-holder capitulation",
+      "mentions": 3,
+      "signal": "Long-term bag holder near capitulation",
       "company_name": "NIO Inc."
-    },
-    {
-      "symbol": "GRPN",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Deep-value turnaround thesis",
-      "company_name": "Groupon, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment sits near neutral as euphoric profit posts and margin-fueled conviction bets collide with a steady stream of account blow-ups and capitulating bag-holders. The batch reads as a market caught between greed and exhaustion.",
+      "text": "Sentiment reads balanced but bifurcated: conviction longs pile into AMD, DELL and IBM with leveraged single-name bets, while a parallel undercurrent of bag holders in NBIS, NIO and Chinese small-caps nurse deep drawdowns. Energy is active rather than euphoric.",
       "tag": "notable"
     },
     {
-      "text": "AI and data-center names dominate the tape, with NBIS's sharp drawdown testing conviction while DELL and AMD keep speculative traders engaged. Squeeze hunters and deep-value theses on SpaceX and GRPN add speculative energy.",
+      "text": "Speculative squeeze narratives are building around SpaceX pre-IPO mechanics, SRRK technicals and RDDT calls, reflecting persistent appetite for asymmetric upside despite recent painful red sessions across many accounts.",
       "tag": "bullish"
     },
     {
-      "text": "The undercurrent of pain is palpable: life-changing losses, blown 80k accounts, and years-long NIO bag-holders warn of overleverage. Consumer weakness at Chipotle and jittery oil and yield moves reinforce a cautious undertone.",
+      "text": "Contrarian value theses on Chipotle, Groupon and CCOI show traders hunting beaten-down names, but the recurring loss posts and capitulation talk warn that conviction is being tested by choppy price action.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-08T02:17:57.926060+00:00",
-  "updated_hkt": "2026-07-08 10:17 HKT"
+  "updated_at": "2026-07-08T03:34:06.648930+00:00",
+  "updated_hkt": "2026-07-08 11:34 HKT"
 }
