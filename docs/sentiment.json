@@ -1,17 +1,17 @@
 {
-  "bull_pct": 54,
-  "bear_pct": 25,
-  "neutral_pct": 21,
-  "bull_bear_ratio": 2.1,
-  "overall_score": 53,
+  "bull_pct": 55,
+  "bear_pct": 21,
+  "neutral_pct": 24,
+  "bull_bear_ratio": 2.7,
+  "overall_score": 59,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 54,
-    "ai_score": 52,
-    "bull_count": 15,
-    "bear_count": 7,
-    "neutral_count": 6,
-    "total_posts": 28,
+    "formula_score": 55,
+    "ai_score": 61,
+    "bull_count": 16,
+    "bear_count": 6,
+    "neutral_count": 7,
+    "total_posts": 29,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,115 +19,114 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 28,
+  "post_count": 29,
   "hours_window": 24,
   "themes": [
     {
-      "id": "semis-ai-hardware",
-      "title": "Semiconductors & AI Hardware",
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Trade",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
+        "Apple-Broadcom custom silicon deal drives buzz",
         "AMD swing traders track predictable cycles",
-        "DELL positions held with conviction",
-        "NBIS pullback drawing dip buyers",
-        "AI infrastructure remains core narrative"
+        "AI leadership dominates monthly performance narrative",
+        "NBIS volatility punishing late buyers"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 68,
       "tickers": [
+        "AVGO",
+        "AAPL",
         "AMD",
-        "DELL",
-        "NBIS",
-        "IBM"
+        "NBIS"
       ]
     },
     {
-      "id": "leveraged-conviction-bets",
-      "title": "High-Conviction Leverage Bets",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "All-in margin portfolios on IBM",
-        "Mortgage-sized bets placed on AMD",
-        "Multi-million dollar single-name positions",
-        "Retail conviction overriding risk management"
-      ],
-      "sentiment_score": 60,
-      "tickers": [
-        "IBM",
-        "AMD",
-        "DELL"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Bag Holders & Trading Losses",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "NBIS holders down heavily from peak",
-        "Chinese small-caps described as dead money",
-        "NIO holder considering capitulation",
-        "Painful red days across accounts"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "NBIS",
-        "NIO",
-        "CMG"
-      ]
-    },
-    {
-      "id": "squeeze-speculation",
-      "title": "Short Squeeze Speculation",
+      "id": "high-conviction-bets",
+      "title": "All-In Conviction Plays",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "SpaceX pre-IPO squeeze thesis circulating",
-        "SRRK technical setups touted repeatedly",
-        "RDDT long-dated call bets stacking",
-        "Speculators positioning for upside momentum"
+        "Large single-name margin positions in DELL, IBM",
+        "Mortgage equity redeployed into AMD",
+        "Full-conviction bets ignore diversification",
+        "Diamond-hand mentality despite red days"
       ],
       "sentiment_score": 70,
       "tickers": [
-        "RDDT",
-        "SRRK"
+        "DELL",
+        "IBM",
+        "AMD"
       ]
     },
     {
-      "id": "value-dip-buying",
-      "title": "Value & Dip-Buying Theses",
+      "id": "profit-posts",
+      "title": "Profit & Win Screenshots",
       "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Chipotle options flipping quick profits",
+        "Small accounts multiplying rapidly",
+        "Monthly gains celebrated across threads",
+        "Retail euphoria spreading on wins"
+      ],
+      "sentiment_score": 78,
+      "tickers": [
+        "CMG",
+        "HUM"
+      ]
+    },
+    {
+      "id": "loss-posts",
+      "title": "Drawdowns & Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Large NBIS drawdown from June peak",
+        "Trader exits after blowing up account",
+        "Bag holders trapped in illiquid names",
+        "Painful red days across positions"
+      ],
+      "sentiment_score": 24,
+      "tickers": [
+        "NBIS",
+        "SPY"
+      ]
+    },
+    {
+      "id": "value-turnaround",
+      "title": "Value & Turnaround Ideas",
+      "icon": "search",
       "heat": "normal",
       "bullets": [
-        "CMG called rare valuation opportunity",
-        "GRPN deep-value fundamentals DD posted",
-        "CCOI telecom cash flow thesis",
+        "JPMorgan flags Chipotle valuation opportunity",
+        "CCOI free-cash-flow thesis debated",
+        "GRPN deep-value DD circulating",
         "Contrarians buying beaten-down names"
+      ],
+      "sentiment_score": 60,
+      "tickers": [
+        "CMG",
+        "CCOI",
+        "GRPN"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "flame",
+      "heat": "normal",
+      "bullets": [
+        "SPX versus SPY options mechanics discussed",
+        "Amazon bond sale draws attention",
+        "TSLA and QQQ provide cover",
+        "Daily discussion positioning active"
       ],
       "sentiment_score": 55,
       "tickers": [
-        "CMG",
-        "GRPN",
-        "CCOI"
-      ]
-    },
-    {
-      "id": "index-options-mechanics",
-      "title": "Index Options & Market Mechanics",
-      "icon": "chart-line",
-      "heat": "normal",
-      "bullets": [
-        "SPX favored over SPY for settlement",
-        "SPY puts and hedges in play",
-        "Amazon $25B bond sale flagged",
-        "0DTE speculation remains active"
-      ],
-      "sentiment_score": 45,
-      "tickers": [
         "SPY",
-        "SPX",
         "AMZN",
+        "TSLA",
         "QQQ"
       ]
     }
@@ -136,74 +135,74 @@
     {
       "symbol": "AMD",
       "sentiment": "mixed",
-      "mentions": 9,
-      "signal": "Cyclical swing plays and leveraged bets",
+      "mentions": 4,
+      "signal": "Cyclical swings and leveraged conviction",
       "company_name": "Advanced Micro Devices, Inc."
     },
     {
       "symbol": "NBIS",
       "sentiment": "bearish",
-      "mentions": 7,
-      "signal": "Painful drawdown, still averaging down",
+      "mentions": 3,
+      "signal": "Deep drawdown, averaging down painfully",
       "company_name": "Nebius Group N.V."
     },
     {
       "symbol": "DELL",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Held with high conviction",
+      "mentions": 3,
+      "signal": "Large positions holding firm",
       "company_name": "Dell Technologies Inc."
     },
     {
       "symbol": "CMG",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Rough stretch called valuation opportunity",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Turnaround value with quick option wins",
       "company_name": "Chipotle Mexican Grill, Inc."
     },
     {
       "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Puts and options mechanics debated",
+      "mentions": 3,
+      "signal": "Puts and options mechanics debate",
       "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "AVGO",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Apple silicon deal tailwind",
+      "company_name": "Broadcom Inc."
+    },
+    {
+      "symbol": "AAPL",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Chip deal boosts sentiment",
+      "company_name": "Apple Inc."
     },
     {
       "symbol": "IBM",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "All-in margin conviction play",
+      "mentions": 1,
+      "signal": "Full-margin conviction bet",
       "company_name": "International Business Machines"
-    },
-    {
-      "symbol": "RDDT",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Aggressive long-dated call bets",
-      "company_name": "Reddit, Inc."
-    },
-    {
-      "symbol": "NIO",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Long-term bag holder near capitulation",
-      "company_name": "NIO Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment reads balanced but bifurcated: conviction longs pile into AMD, DELL and IBM with leveraged single-name bets, while a parallel undercurrent of bag holders in NBIS, NIO and Chinese small-caps nurse deep drawdowns. Energy is active rather than euphoric.",
-      "tag": "notable"
-    },
-    {
-      "text": "Speculative squeeze narratives are building around SpaceX pre-IPO mechanics, SRRK technicals and RDDT calls, reflecting persistent appetite for asymmetric upside despite recent painful red sessions across many accounts.",
+      "text": "Sentiment leans greedy as the AI and semiconductor trade dominates, headlined by Apple's multibillion-dollar Broadcom silicon deal. Retail is chasing single-name conviction bets in DELL, IBM and AMD, several with aggressive margin and leverage, reflecting elevated risk appetite.",
       "tag": "bullish"
     },
     {
-      "text": "Contrarian value theses on Chipotle, Groupon and CCOI show traders hunting beaten-down names, but the recurring loss posts and capitulation talk warn that conviction is being tested by choppy price action.",
+      "text": "Beneath the euphoria, pain is visible: a sizable NBIS drawdown, an account blow-up prompting a trader to step away, and bag holders trapped in illiquid names. These loss posts run hot with engagement, a counterweight to the profit screenshots.",
       "tag": "bearish"
+    },
+    {
+      "text": "Contrarian value themes are quietly building, with JPMorgan's Chipotle call, a CCOI cash-flow thesis, and GRPN deep-value DD circulating. The mix of speculative leverage and fundamental bargain-hunting signals a market late in an upcycle but not yet fearful.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-08T03:34:06.648930+00:00",
-  "updated_hkt": "2026-07-08 11:34 HKT"
+  "updated_at": "2026-07-08T12:02:12.255700+00:00",
+  "updated_hkt": "2026-07-08 20:02 HKT"
 }
