@@ -1,17 +1,17 @@
 {
-  "bull_pct": 48,
-  "bear_pct": 31,
+  "bull_pct": 54,
+  "bear_pct": 25,
   "neutral_pct": 21,
-  "bull_bear_ratio": 1.6,
-  "overall_score": 55,
+  "bull_bear_ratio": 2.1,
+  "overall_score": 53,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 48,
-    "ai_score": 58,
-    "bull_count": 14,
-    "bear_count": 9,
+    "formula_score": 54,
+    "ai_score": 52,
+    "bull_count": 15,
+    "bear_count": 7,
     "neutral_count": 6,
-    "total_posts": 29,
+    "total_posts": 28,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,182 +19,188 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 29,
+  "post_count": 28,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Buildout",
+      "id": "ai-datacenter-plays",
+      "title": "AI & Data Center Trades",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Micron breaks ground on memory megafab",
-        "Nvidia server delay rattles Asian chips",
-        "WULF signs major Anthropic compute deal",
-        "China curbs overseas AI model access"
+        "NBIS drawdown draws bag-holder debate",
+        "DELL positioned as resilient large-cap bet",
+        "AMD's cyclical swings dominate discussion",
+        "Data as core investment thesis"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 58,
       "tickers": [
-        "MU",
-        "NVDA",
-        "WULF",
+        "NBIS",
+        "DELL",
         "AMD"
       ]
     },
     {
-      "id": "amd-momentum",
-      "title": "AMD Options Momentum",
-      "icon": "rocket",
+      "id": "account-blowups",
+      "title": "Account Blow-Ups & Losses",
+      "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Traders piling into short-dated calls",
-        "Profit-taking after sharp bounce",
-        "Volatility crush concerns fading",
-        "High-conviction speculative positioning"
+        "Trader describes life-changing capital wipeout",
+        "80k account destroyed then partially recovered",
+        "NIO bag-holder capitulating after years",
+        "Emotional posts warning of overleverage"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 20,
       "tickers": [
-        "AMD"
+        "NIO",
+        "SNDK"
       ]
     },
     {
-      "id": "spacex-squeeze",
-      "title": "SpaceX Squeeze Debate",
+      "id": "options-speculation",
+      "title": "Options Speculation",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Lockup expiry and first earnings loom",
-        "Thin float fuels squeeze speculation",
-        "Short thesis flags heavy cash burn",
-        "Longs and shorts sharply divided"
-      ],
-      "sentiment_score": 50,
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "id": "meme-food",
-      "title": "Wendy's Meme Trade",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Speculators adding November calls",
-        "Playful high-risk positioning persists",
-        "Retail energy chasing the ticker",
-        "Pure momentum, thin fundamentals"
-      ],
-      "sentiment_score": 65,
-      "tickers": [
-        "WEN"
-      ]
-    },
-    {
-      "id": "crypto-treasury",
-      "title": "Bitcoin Treasury Moves",
-      "icon": "coin",
-      "heat": "normal",
-      "bullets": [
-        "Strategy trims sizable Bitcoin holdings",
-        "Traders declare crypto vindication",
-        "Corporate treasury selling draws scrutiny",
-        "Mixed conviction on next leg"
+        "SPX over SPY tax-efficiency debate",
+        "0DTE and long-dated call plays",
+        "Margin-fueled all-in positioning",
+        "Big premiums bet on RDDT upside"
       ],
       "sentiment_score": 55,
       "tickers": [
-        "MSTR",
-        "BTC"
+        "SPY",
+        "SPX",
+        "RDDT",
+        "IBM"
       ]
     },
     {
-      "id": "loss-fatigue",
-      "title": "Trading Losses and Fatigue",
-      "icon": "skull",
+      "id": "squeeze-hunting",
+      "title": "Squeeze & Deep-Value Hunting",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "SpaceX float and short thesis outlined",
+        "GRPN deep-value DD resurfaces",
+        "SRRK momentum chart-reading conviction",
+        "Contrarian buyers stepping into weakness"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "GRPN",
+        "SRRK"
+      ]
+    },
+    {
+      "id": "consumer-weakness",
+      "title": "Consumer & Retail Stress",
+      "icon": "trending-down",
       "heat": "normal",
       "bullets": [
-        "Perma-bears warn of account risk",
-        "Long-term NIO holder capitulates",
-        "Traders selling into weakness",
-        "General account blow-up sentiment"
+        "Chipotle traffic declines four straight quarters",
+        "JPMorgan flags rare valuation opportunity",
+        "Broad consumer pullback across income groups",
+        "Options traders scalped the volatility"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 42,
       "tickers": [
-        "NIO"
+        "CMG",
+        "AMZN"
+      ]
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "activity",
+      "heat": "normal",
+      "bullets": [
+        "Oil and 10-year yields rattling positioning",
+        "TSLA and QQQ providing daily support",
+        "Mixed profit-taking and defeated tones",
+        "Traders positioning for July session"
+      ],
+      "sentiment_score": 50,
+      "tickers": [
+        "TSLA",
+        "QQQ",
+        "SPY"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "AMD",
+      "symbol": "NBIS",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Painful drawdown, bag-holders averaging down",
+      "company_name": "Nebius Group N.V."
+    },
+    {
+      "symbol": "DELL",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "aggressive call buying and profit-taking",
+      "mentions": 3,
+      "signal": "Large-cap conviction buys",
+      "company_name": "Dell Technologies Inc."
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Cyclical swing-trade favorite",
       "company_name": "Advanced Micro Devices, Inc."
     },
     {
-      "symbol": "WEN",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "playful meme momentum trade",
-      "company_name": "Wendy's Company (The)"
-    },
-    {
-      "symbol": "SPCX",
+      "symbol": "SPY",
       "sentiment": "mixed",
       "mentions": 3,
-      "signal": "squeeze hopes versus short thesis",
-      "company_name": "Space Exploration Technologies "
+      "signal": "Options venue debate, put plays",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "MU",
-      "sentiment": "bullish",
+      "symbol": "CMG",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "AI memory capex optimism",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "server delay pressures sentiment",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "WULF",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Anthropic deal sparks rally",
-      "company_name": "TeraWulf Inc."
+      "signal": "Value dip vs consumer weakness",
+      "company_name": "Chipotle Mexican Grill, Inc."
     },
     {
       "symbol": "RDDT",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "high-conviction call position",
+      "signal": "Aggressive call speculation",
       "company_name": "Reddit, Inc."
     },
     {
       "symbol": "NIO",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "long-term holder capitulation",
+      "signal": "Long-suffering bag-holder capitulation",
       "company_name": "NIO Inc."
+    },
+    {
+      "symbol": "GRPN",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Deep-value turnaround thesis",
+      "company_name": "Groupon, Inc."
     }
   ],
   "summary": [
     {
-      "text": "AI infrastructure dominates the tape as Micron breaks ground on a memory megafab and Terawulf inks a major Anthropic deal, though a reported Nvidia server delay injected caution across Asian tech names and cooled the buildout narrative.",
+      "text": "Sentiment sits near neutral as euphoric profit posts and margin-fueled conviction bets collide with a steady stream of account blow-ups and capitulating bag-holders. The batch reads as a market caught between greed and exhaustion.",
       "tag": "notable"
     },
     {
-      "text": "Retail energy remains firmly risk-on, with speculative traders piling into short-dated AMD calls and reviving the Wendy's meme trade, reflecting persistent appetite for high-conviction momentum plays despite stretched valuations.",
+      "text": "AI and data-center names dominate the tape, with NBIS's sharp drawdown testing conviction while DELL and AMD keep speculative traders engaged. Squeeze hunters and deep-value theses on SpaceX and GRPN add speculative energy.",
       "tag": "bullish"
     },
     {
-      "text": "Pockets of fatigue linger as perma-bears warn of account blow-ups, a long-term NIO holder capitulates, and skeptics question parabolic KOSPI gains, underscoring an undercurrent of caution beneath the greed.",
+      "text": "The undercurrent of pain is palpable: life-changing losses, blown 80k accounts, and years-long NIO bag-holders warn of overleverage. Consumer weakness at Chipotle and jittery oil and yield moves reinforce a cautious undertone.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-07T12:02:02.865796+00:00",
-  "updated_hkt": "2026-07-07 20:02 HKT"
+  "updated_at": "2026-07-08T02:17:57.926060+00:00",
+  "updated_hkt": "2026-07-08 10:17 HKT"
 }
