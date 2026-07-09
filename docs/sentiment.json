@@ -1,17 +1,17 @@
 {
-  "bull_pct": 48,
-  "bear_pct": 26,
-  "neutral_pct": 26,
-  "bull_bear_ratio": 1.8,
-  "overall_score": 55,
-  "overall_label": "Neutral",
+  "bull_pct": 57,
+  "bear_pct": 18,
+  "neutral_pct": 25,
+  "bull_bear_ratio": 3.2,
+  "overall_score": 65,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 48,
-    "ai_score": 58,
-    "bull_count": 11,
-    "bear_count": 6,
-    "neutral_count": 6,
-    "total_posts": 23,
+    "formula_score": 57,
+    "ai_score": 68,
+    "bull_count": 16,
+    "bear_count": 5,
+    "neutral_count": 7,
+    "total_posts": 28,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,192 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 23,
+  "post_count": 28,
   "hours_window": 24,
   "themes": [
     {
       "id": "memory-semis",
-      "title": "Memory & Semiconductor Rush",
+      "title": "Memory & Semiconductor Boom",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Meta RAM shortage fuels memory thesis",
         "SK Hynix listing heavily oversubscribed",
-        "MU and HBM narratives dominate",
-        "TSMC leverage plays gaining traction"
+        "Micron capex investment fuels optimism",
+        "Memory demand narrative gaining conviction",
+        "Traders piling into MU, VECO, PENG"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 78,
       "tickers": [
         "MU",
-        "TSM",
-        "RMBS"
+        "VECO",
+        "PENG",
+        "TSMC"
       ]
     },
     {
       "id": "ai-capex",
-      "title": "AI CapEx Spending Debate",
-      "icon": "server",
+      "title": "AI CapEx Cycle",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Hyperscaler CapEx scaling toward record highs",
-        "Return-on-investment framework questioned",
-        "Starbucks builds in-house AI tools",
-        "Infrastructure demand supports hardware suppliers"
-      ],
-      "sentiment_score": 60,
-      "tickers": [
-        "MSFT",
-        "META",
-        "IBM"
-      ]
-    },
-    {
-      "id": "rare-earth",
-      "title": "Rare Earth & Strategic Minerals",
-      "icon": "diamond",
-      "heat": "building",
-      "bullets": [
-        "US-backed magnet producers in focus",
-        "Government support underpins domestic supply chain",
-        "Avionics and defense demand cited",
-        "Speculative entries on production ramp"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "USAR",
-        "MP"
-      ]
-    },
-    {
-      "id": "options-gambling",
-      "title": "0DTE Options Gambling",
-      "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "Large intraday SPY and SPX profit posts",
-        "Traders openly call it gambling",
-        "Geopolitical headlines whipsaw positioning",
-        "Both call and put punts celebrated"
+        "Hyperscaler spending framework scrutinized",
+        "Meta enters AI coding market",
+        "Starbucks builds in-house AI tooling",
+        "Return on capex remains open question"
       ],
       "sentiment_score": 62,
       "tickers": [
-        "SPY",
-        "SPX"
+        "MSFT",
+        "META",
+        "AMD"
       ]
     },
     {
-      "id": "loss-posts",
-      "title": "Account Blow-Ups & Losses",
+      "id": "high-conviction-yolos",
+      "title": "High-Conviction YOLOs",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Full-port bets into AMD and PENG",
+        "TSMC leveraged positions stacking up",
+        "Short-dated Broadcom calls chased",
+        "Speculative aggression running high"
+      ],
+      "sentiment_score": 80,
+      "tickers": [
+        "AMD",
+        "PENG",
+        "TSMC",
+        "AVGO"
+      ]
+    },
+    {
+      "id": "account-blowups",
+      "title": "Account Blow-ups",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Margin calls and naked options pain",
-        "Repeated account resets confessed",
-        "Savings from years wiped out",
-        "MSFT bagholder frustration voiced"
+        "Margin calls on naked options",
+        "Gambling accounts wiped clean",
+        "SPX call losses stacking up",
+        "Solidarity posts on trading losses"
       ],
-      "sentiment_score": 24,
+      "sentiment_score": 22,
       "tickers": [
         "BE",
+        "SPX",
         "MSFT"
       ]
     },
     {
-      "id": "energy-macro",
-      "title": "Energy & Macro Catalysts",
+      "id": "rare-earth-cannabis",
+      "title": "Thematic Speculation",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Russia diesel export ban lifts futures",
-        "Biggest daily diesel gains in years",
-        "Geopolitical supply shocks in focus",
-        "Media merger scrutiny aids NFLX narrative"
+        "Rare earth plays backed by government",
+        "Cannabis rescheduling reappraisal thesis",
+        "Nike turnaround pitch circulating",
+        "Off-beat DD drawing curiosity"
+      ],
+      "sentiment_score": 60,
+      "tickers": [
+        "MP",
+        "USAR",
+        "MSOS",
+        "NKE"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-smile",
+      "heat": "normal",
+      "bullets": [
+        "Bull-bear split for July debated",
+        "Gold cited as safe haven",
+        "Crypto miners swinging violently",
+        "Risk appetite broadly elevated"
       ],
       "sentiment_score": 58,
       "tickers": [
-        "NFLX"
+        "WULF",
+        "GLD"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "AMD",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "aggressive call buying",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
       "symbol": "MU",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Memory upcycle enthusiasm",
+      "mentions": 5,
+      "signal": "memory upside bets",
       "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "PENG",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "high-conviction full-port play",
+      "company_name": "Penguin Solutions, Inc."
     },
     {
       "symbol": "MSFT",
       "sentiment": "bearish",
       "mentions": 4,
-      "signal": "Bagholder frustration",
+      "signal": "frustrated bagholders",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "SPY",
+      "symbol": "TSMC",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "0DTE speculation",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "signal": "leveraged upside chase",
+      "company_name": "TAIWANSMFAC DRN"
     },
     {
-      "symbol": "SPX",
+      "symbol": "BE",
       "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Put buyers clawing back",
-      "company_name": "S&P 500 INDEX"
+      "mentions": 3,
+      "signal": "margin-called holder",
+      "company_name": "Bloom Energy Corporation"
     },
     {
       "symbol": "MP",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Rare earth conviction",
+      "signal": "rare earth speculation",
       "company_name": "MP Materials Corp."
     },
     {
-      "symbol": "BE",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Margin-called and holding",
-      "company_name": "Bloom Energy Corporation"
-    },
-    {
-      "symbol": "TSM",
+      "symbol": "AVGO",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Leveraged upside bets",
-      "company_name": "Taiwan Semiconductor Manufactur"
-    },
-    {
-      "symbol": "NFLX",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Merger hurdle seen as tailwind",
-      "company_name": "Netflix, Inc."
+      "signal": "short-dated call momentum",
+      "company_name": "Broadcom Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans constructively bullish, anchored by a semiconductor and memory narrative as Meta's RAM shortfall and SK Hynix's heavily oversubscribed listing energize traders piling into MU, TSMC, and related plays.",
+      "text": "Retail energy skews decisively risk-on, with memory and semiconductor names dominating the tape after Micron's capex commitment and SK Hynix's heavily oversubscribed US listing. Speculative traders are stacking leveraged and short-dated positions into AMD, TSMC, and PENG.",
       "tag": "bullish"
     },
     {
-      "text": "Speculative fervor remains elevated in 0DTE index options, with outsized SPY and SPX profit posts celebrated even as participants openly acknowledge the gambling dynamic and headline-driven whipsaws.",
+      "text": "The AI capex narrative is maturing, with more skeptical framing on returns emerging alongside Meta's coding push and Starbucks reducing software reliance. Traders are increasingly probing whether hyperscaler spending can justify current valuations.",
       "tag": "notable"
     },
     {
-      "text": "A persistent undercurrent of pain tempers the mood, with margin calls on BE, repeated account blow-ups, and MSFT bagholder frustration reminding the crowd that leverage cuts both ways.",
+      "text": "A visible undercurrent of pain persists, with margin calls on naked options, wiped gambling accounts, and frustrated mega-cap holders. These blow-up posts temper the otherwise euphoric mood and highlight elevated leverage across the board.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-09T12:01:47.708326+00:00",
-  "updated_hkt": "2026-07-09 20:01 HKT"
+  "updated_at": "2026-07-09T21:02:11.448518+00:00",
+  "updated_hkt": "2026-07-10 05:02 HKT"
 }

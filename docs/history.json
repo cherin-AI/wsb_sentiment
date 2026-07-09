@@ -572,5 +572,12 @@
     "label": "Neutral",
     "formula_score": 48,
     "ai_score": 58
+  },
+  {
+    "ts": "2026-07-10 05:02 HKT",
+    "score": 65,
+    "label": "Greed",
+    "formula_score": 57,
+    "ai_score": 68
   }
 ]
