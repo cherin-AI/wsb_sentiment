@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 32,
-  "neutral_pct": 24,
-  "bull_bear_ratio": 1.4,
-  "overall_score": 50,
+  "bull_pct": 48,
+  "bear_pct": 26,
+  "neutral_pct": 26,
+  "bull_bear_ratio": 1.8,
+  "overall_score": 55,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 44,
-    "ai_score": 52,
+    "formula_score": 48,
+    "ai_score": 58,
     "bull_count": 11,
-    "bear_count": 8,
+    "bear_count": 6,
     "neutral_count": 6,
-    "total_posts": 25,
+    "total_posts": 23,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,19 +19,72 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 25,
+  "post_count": 23,
   "hours_window": 24,
   "themes": [
     {
-      "id": "0dte-options-gambling",
-      "title": "0DTE Options Speculation",
+      "id": "memory-semis",
+      "title": "Memory & Semiconductor Rush",
+      "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "Meta RAM shortage fuels memory thesis",
+        "SK Hynix listing heavily oversubscribed",
+        "MU and HBM narratives dominate",
+        "TSMC leverage plays gaining traction"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "MU",
+        "TSM",
+        "RMBS"
+      ]
+    },
+    {
+      "id": "ai-capex",
+      "title": "AI CapEx Spending Debate",
+      "icon": "server",
+      "heat": "building",
+      "bullets": [
+        "Hyperscaler CapEx scaling toward record highs",
+        "Return-on-investment framework questioned",
+        "Starbucks builds in-house AI tools",
+        "Infrastructure demand supports hardware suppliers"
+      ],
+      "sentiment_score": 60,
+      "tickers": [
+        "MSFT",
+        "META",
+        "IBM"
+      ]
+    },
+    {
+      "id": "rare-earth",
+      "title": "Rare Earth & Strategic Minerals",
+      "icon": "diamond",
+      "heat": "building",
+      "bullets": [
+        "US-backed magnet producers in focus",
+        "Government support underpins domestic supply chain",
+        "Avionics and defense demand cited",
+        "Speculative entries on production ramp"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
+        "USAR",
+        "MP"
+      ]
+    },
+    {
+      "id": "options-gambling",
+      "title": "0DTE Options Gambling",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SPY and SPX same-day plays dominate",
-        "Large profit posts drawing engagement",
-        "Both call and put speculation active",
-        "High-conviction leverage in short-dated contracts"
+        "Large intraday SPY and SPX profit posts",
+        "Traders openly call it gambling",
+        "Geopolitical headlines whipsaw positioning",
+        "Both call and put punts celebrated"
       ],
       "sentiment_score": 62,
       "tickers": [
@@ -40,163 +93,111 @@
       ]
     },
     {
-      "id": "ai-semis-datacenter",
-      "title": "AI & Semiconductor Buildout",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "Apple-Broadcom custom silicon deal announced",
-        "Meta expands data center footprint",
-        "Memory pricing concerns raised on demand",
-        "Neocloud names under pressure after pullback"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "AAPL",
-        "AVGO",
-        "NBIS",
-        "MU"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Account Blow-Ups",
+      "id": "loss-posts",
+      "title": "Account Blow-Ups & Losses",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "College savings wiped out trading",
-        "Drawdowns from recent highs mounting",
-        "Averaging down into losing positions",
-        "Bag-holding narratives spreading"
+        "Margin calls and naked options pain",
+        "Repeated account resets confessed",
+        "Savings from years wiped out",
+        "MSFT bagholder frustration voiced"
       ],
-      "sentiment_score": 25,
+      "sentiment_score": 24,
       "tickers": [
-        "NBIS",
-        "ONDS"
+        "BE",
+        "MSFT"
       ]
     },
     {
-      "id": "energy-commodities",
-      "title": "Energy & Commodities Shock",
+      "id": "energy-macro",
+      "title": "Energy & Macro Catalysts",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Diesel futures post four-year daily gain",
-        "Russia export ban drives supply fears",
-        "Geopolitical catalyst reshaping energy trades",
-        "Traders positioning around price spike"
+        "Russia diesel export ban lifts futures",
+        "Biggest daily diesel gains in years",
+        "Geopolitical supply shocks in focus",
+        "Media merger scrutiny aids NFLX narrative"
       ],
-      "sentiment_score": 60,
-      "tickers": []
-    },
-    {
-      "id": "value-plays",
-      "title": "Beaten-Down Value Names",
-      "icon": "trending-up",
-      "heat": "normal",
-      "bullets": [
-        "Chipotle flagged as rare valuation opportunity",
-        "Telecom name buying into weakness",
-        "Healthcare insurer earnings thesis pitched",
-        "PPG calls into distressed selloff"
-      ],
-      "sentiment_score": 55,
+      "sentiment_score": 58,
       "tickers": [
-        "CMG",
-        "CCOI",
-        "ALHC",
-        "PPG"
-      ]
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-neutral",
-      "heat": "normal",
-      "bullets": [
-        "Diamond-hand conviction amid red days",
-        "Generational money mindset debate",
-        "Daily discussion positioning threads",
-        "Mixed euphoria and defeat coexisting"
-      ],
-      "sentiment_score": 48,
-      "tickers": [
-        "SPY"
+        "NFLX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPY",
+      "symbol": "MU",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Favored 0DTE surfing vehicle",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "signal": "Memory upcycle enthusiasm",
+      "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "AAPL",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Broadcom deal met with skepticism",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "AVGO",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Muted premarket reaction to chip win",
-      "company_name": "Broadcom Inc."
-    },
-    {
-      "symbol": "NBIS",
+      "symbol": "MSFT",
       "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Bagholder frustration",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Heavy drawdown, averaging down",
-      "company_name": "Nebius Group N.V."
+      "signal": "0DTE speculation",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "SPX",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Put plays clawing back losses",
+      "signal": "Put buyers clawing back",
       "company_name": "S&P 500 INDEX"
     },
     {
-      "symbol": "CMG",
+      "symbol": "MP",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Rare earth conviction",
+      "company_name": "MP Materials Corp."
+    },
+    {
+      "symbol": "BE",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Value debate after steep decline",
-      "company_name": "Chipotle Mexican Grill, Inc."
+      "signal": "Margin-called and holding",
+      "company_name": "Bloom Energy Corporation"
     },
     {
-      "symbol": "CCOI",
+      "symbol": "TSM",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Contrarian buying into selloff",
-      "company_name": "Cogent Communications Holdings,"
+      "signal": "Leveraged upside bets",
+      "company_name": "Taiwan Semiconductor Manufactur"
     },
     {
-      "symbol": "MU",
+      "symbol": "NFLX",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "Memory rally enthusiasm",
-      "company_name": "Micron Technology, Inc."
+      "signal": "Merger hurdle seen as tailwind",
+      "company_name": "Netflix, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Short-dated index options remain the epicenter of retail energy, with large SPY and SPX profit posts fueling euphoric engagement. Speculative traders are chasing leverage aggressively, though the tone splits between big-win screenshots and painful account blow-ups.",
-      "tag": "notable"
-    },
-    {
-      "text": "The AI and semiconductor complex drives fundamental interest as Apple's $30B Broadcom deal and Meta's data center expansion hit the tape, yet muted premarket reactions and memory-pricing concerns temper the bullish narrative.",
+      "text": "Sentiment leans constructively bullish, anchored by a semiconductor and memory narrative as Meta's RAM shortfall and SK Hynix's heavily oversubscribed listing energize traders piling into MU, TSMC, and related plays.",
       "tag": "bullish"
     },
     {
-      "text": "Beneath the euphoria lies clear pain, with drawdowns on neocloud names, wiped-out college savings, and bag-holding confessions signaling that recent volatility has punished over-leveraged positions across the board.",
+      "text": "Speculative fervor remains elevated in 0DTE index options, with outsized SPY and SPX profit posts celebrated even as participants openly acknowledge the gambling dynamic and headline-driven whipsaws.",
+      "tag": "notable"
+    },
+    {
+      "text": "A persistent undercurrent of pain tempers the mood, with margin calls on BE, repeated account blow-ups, and MSFT bagholder frustration reminding the crowd that leverage cuts both ways.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-08T21:02:04.096492+00:00",
-  "updated_hkt": "2026-07-09 05:02 HKT"
+  "updated_at": "2026-07-09T12:01:47.708326+00:00",
+  "updated_hkt": "2026-07-09 20:01 HKT"
 }
