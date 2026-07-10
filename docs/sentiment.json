@@ -1,17 +1,17 @@
 {
-  "bull_pct": 58,
-  "bear_pct": 13,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 4.5,
-  "overall_score": 68,
+  "bull_pct": 44,
+  "bear_pct": 26,
+  "neutral_pct": 30,
+  "bull_bear_ratio": 1.7,
+  "overall_score": 61,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 58,
-    "ai_score": 72,
-    "bull_count": 18,
-    "bear_count": 4,
-    "neutral_count": 9,
-    "total_posts": 31,
+    "formula_score": 44,
+    "ai_score": 68,
+    "bull_count": 12,
+    "bear_count": 7,
+    "neutral_count": 8,
+    "total_posts": 27,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,187 +19,186 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 31,
+  "post_count": 27,
   "hours_window": 24,
   "themes": [
     {
-      "id": "semiconductors-memory",
-      "title": "Semiconductor & Memory Mania",
+      "id": "ai-chips-semis",
+      "title": "AI & Semiconductor Boom",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Micron commits massive US capex spending",
-        "Memory demand thesis dominates conviction plays",
-        "CapEx names pitched as next leg",
-        "Chip trade framed as generational"
+        "Micron commits massive US capex through 2035",
+        "Memory and chip trades printing gains",
+        "AI narrative dominates market positioning",
+        "Silicon labeled trade of the year"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 78,
       "tickers": [
         "MU",
-        "VECO",
-        "PENG",
-        "AMD"
+        "MSFT",
+        "META",
+        "ASTS"
       ]
     },
     {
-      "id": "sk-hynix-ipo",
-      "title": "SK Hynix Nasdaq Debut",
-      "icon": "flame",
+      "id": "index-highs-skepticism",
+      "title": "All-Time High Skepticism",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Record foreign listing hits US market",
-        "Demand reportedly running well oversubscribed",
-        "Traders nervous ahead of open",
-        "Second-largest IPO drawing speculation"
+        "Traders question stretched market valuations",
+        "S&P near record despite macro noise",
+        "Put buyers frustrated by relentless rally",
+        "Debate over AI bubble sustainability"
       ],
-      "sentiment_score": 60,
-      "tickers": []
-    },
-    {
-      "id": "ai-datacenter",
-      "title": "AI & Data Center Narrative",
-      "icon": "robot",
-      "heat": "hot",
-      "bullets": [
-        "Meta enters AI coding race",
-        "Nvidia partner ecosystem fuels enthusiasm",
-        "AI valuation skepticism emerging",
-        "Space-and-chips trade blended together"
-      ],
-      "sentiment_score": 68,
+      "sentiment_score": 45,
       "tickers": [
-        "ASTS",
-        "AVGO"
+        "SPY"
       ]
     },
     {
-      "id": "options-yolo",
-      "title": "High-Risk Options Speculation",
-      "icon": "rocket",
+      "id": "0dte-flash-crash",
+      "title": "0DTE & Flash Crash Plays",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Short-dated calls driving quick gains",
-        "Full-port YOLOs across single names",
-        "Broadcom weekly calls chased aggressively",
-        "Reckless sizing celebrated as usual"
+        "Traders caught intraday SPY dip",
+        "Quick cash-outs on 0DTE puts",
+        "Speculative options churn intensifies",
+        "Volatility trading energy elevated"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 55,
       "tickers": [
-        "AMD",
-        "AVGO",
-        "SPX",
-        "PENG"
+        "SPY"
+      ]
+    },
+    {
+      "id": "big-tech-narrative",
+      "title": "Big Tech AI Positioning",
+      "icon": "brand-meta",
+      "heat": "building",
+      "bullets": [
+        "Full-port MSFT LEAP conviction bets",
+        "META rebound on consumer AI thesis",
+        "Apple-OpenAI legal clash surfaces",
+        "OpenAI cash-burn concerns emerge"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "MSFT",
+        "META",
+        "AAPL",
+        "GOOG"
       ]
     },
     {
       "id": "account-blowups",
-      "title": "Margin Calls & Account Blow-Ups",
+      "title": "Margin Calls & Losses",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Margin call wipes leveraged accounts",
-        "Speculative gambling accounts fully drained",
-        "Cautionary tales of hobby turning costly",
-        "Losses shared alongside euphoric wins"
+        "Leveraged SOXL trade wipes account",
+        "Margin call despite multi-monitor setup",
+        "Warnings on stock-picking addiction",
+        "Speculative traders count painful lessons"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 28,
       "tickers": [
-        "SPX",
-        "AMD"
+        "SOXL"
       ]
     },
     {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "trending-up",
+      "id": "defense-geopolitics",
+      "title": "Defense & Geopolitical Flows",
+      "icon": "shield",
       "heat": "normal",
       "bullets": [
-        "Indices pinned at all-time highs",
-        "Stretched valuations questioned by skeptics",
-        "Gold and cannabis pitched as diversifiers",
-        "Bull-versus-bear July debate ongoing"
+        "NATO unveils major defense agreements",
+        "US-Iran tensions rattle commodities",
+        "China restricts helium exports",
+        "Defense primes drawing fresh interest"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 60,
       "tickers": [
-        "MSOS",
-        "NKE",
-        "PATH",
-        "LI"
+        "LMT",
+        "NOC",
+        "RTX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Micron capex hype fuels conviction longs",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "AMD",
+      "symbol": "META",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "Chased via short-dated calls",
-      "company_name": "Advanced Micro Devices, Inc."
+      "signal": "consumer-AI rebound conviction",
+      "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "PENG",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Full-port memory growth high-conviction",
-      "company_name": "Penguin Solutions, Inc."
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 5,
+      "signal": "0DTE and put/call churn",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "AVGO",
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "full-port LEAP bets",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "MU",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Weekly calls piled into after pump",
-      "company_name": "Broadcom Inc."
+      "signal": "memory supercycle winner",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "ASTS",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Space-and-chips crossover trade",
+      "signal": "space-chip crossover trade",
       "company_name": "AST SpaceMobile, Inc."
     },
     {
-      "symbol": "VECO",
+      "symbol": "GOOG",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Pitched as next degen capex play",
-      "company_name": "Veeco Instruments Inc."
+      "signal": "contrarian buy validated",
+      "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "MSOS",
-      "sentiment": "mixed",
+      "symbol": "AAPL",
+      "sentiment": "neutral",
       "mentions": 2,
-      "signal": "Contrarian cannabis rescheduling bet",
-      "company_name": "AdvisorShares Pure US Cannabis "
+      "signal": "OpenAI legal overhang",
+      "company_name": "Apple Inc."
     },
     {
-      "symbol": "NKE",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Turnaround DD gaining traction",
-      "company_name": "Nike, Inc."
+      "symbol": "SOXL",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "leverage burns traders",
+      "company_name": "Direxion Daily Semiconductor Bu"
     }
   ],
   "summary": [
     {
-      "text": "Semiconductor and memory names dominate the tape, with Micron's massive US investment commitments anchoring a broadly euphoric mood. Traders are stacking chip conviction plays and framing 2026 as a generational silicon cycle, extending enthusiasm into capex suppliers and AI infrastructure.",
+      "text": "Silicon dominates the tape as semiconductor and AI trades draw euphoric positioning, with Micron's mega capex commitment and profit posts fueling conviction that 2026 belongs to chips and memory names.",
       "tag": "bullish"
     },
     {
-      "text": "Speculative energy runs hot through short-dated options and full-port YOLOs, but blow-up posts and margin-call screenshots reveal the underlying fragility. The mix of euphoric wins and account wipeouts signals a stretched, late-cycle greed dynamic among retail participants.",
+      "text": "A vocal minority questions record index levels and stretched valuations, with frustrated put buyers watching the S&P grind higher despite macro noise from Iran tensions and helium export curbs.",
       "tag": "notable"
     },
     {
-      "text": "The SK Hynix Nasdaq debut is a live catalyst drawing anxious positioning, while skeptics question all-time-high indices and elevated valuations. Defensive interest in gold and contrarian cannabis bets hints at a minority hedging against the prevailing risk-on tone.",
-      "tag": "notable"
+      "text": "Beneath the greed, account blow-ups and margin calls from leveraged SOXL and options bets serve as cautionary tales, underscoring the thin line between speculative wins and rapid capital destruction.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-10T12:02:18.945247+00:00",
-  "updated_hkt": "2026-07-10 20:02 HKT"
+  "updated_at": "2026-07-10T21:02:04.413003+00:00",
+  "updated_hkt": "2026-07-11 05:02 HKT"
 }
