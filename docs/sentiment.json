@@ -1,17 +1,17 @@
 {
-  "bull_pct": 57,
-  "bear_pct": 18,
-  "neutral_pct": 25,
-  "bull_bear_ratio": 3.2,
-  "overall_score": 65,
+  "bull_pct": 58,
+  "bear_pct": 13,
+  "neutral_pct": 29,
+  "bull_bear_ratio": 4.5,
+  "overall_score": 68,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 57,
-    "ai_score": 68,
-    "bull_count": 16,
-    "bear_count": 5,
-    "neutral_count": 7,
-    "total_posts": 28,
+    "formula_score": 58,
+    "ai_score": 72,
+    "bull_count": 18,
+    "bear_count": 4,
+    "neutral_count": 9,
+    "total_posts": 31,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,192 +19,187 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 28,
+  "post_count": 31,
   "hours_window": 24,
   "themes": [
     {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Boom",
+      "id": "semiconductors-memory",
+      "title": "Semiconductor & Memory Mania",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "SK Hynix listing heavily oversubscribed",
-        "Micron capex investment fuels optimism",
-        "Memory demand narrative gaining conviction",
-        "Traders piling into MU, VECO, PENG"
+        "Micron commits massive US capex spending",
+        "Memory demand thesis dominates conviction plays",
+        "CapEx names pitched as next leg",
+        "Chip trade framed as generational"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 82,
       "tickers": [
         "MU",
         "VECO",
         "PENG",
-        "TSMC"
-      ]
-    },
-    {
-      "id": "ai-capex",
-      "title": "AI CapEx Cycle",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Hyperscaler spending framework scrutinized",
-        "Meta enters AI coding market",
-        "Starbucks builds in-house AI tooling",
-        "Return on capex remains open question"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "MSFT",
-        "META",
         "AMD"
       ]
     },
     {
-      "id": "high-conviction-yolos",
-      "title": "High-Conviction YOLOs",
-      "icon": "rocket",
+      "id": "sk-hynix-ipo",
+      "title": "SK Hynix Nasdaq Debut",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "Record foreign listing hits US market",
+        "Demand reportedly running well oversubscribed",
+        "Traders nervous ahead of open",
+        "Second-largest IPO drawing speculation"
+      ],
+      "sentiment_score": 60,
+      "tickers": []
+    },
+    {
+      "id": "ai-datacenter",
+      "title": "AI & Data Center Narrative",
+      "icon": "robot",
       "heat": "hot",
       "bullets": [
-        "Full-port bets into AMD and PENG",
-        "TSMC leveraged positions stacking up",
-        "Short-dated Broadcom calls chased",
-        "Speculative aggression running high"
+        "Meta enters AI coding race",
+        "Nvidia partner ecosystem fuels enthusiasm",
+        "AI valuation skepticism emerging",
+        "Space-and-chips trade blended together"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 68,
       "tickers": [
-        "AMD",
-        "PENG",
-        "TSMC",
+        "ASTS",
         "AVGO"
       ]
     },
     {
+      "id": "options-yolo",
+      "title": "High-Risk Options Speculation",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Short-dated calls driving quick gains",
+        "Full-port YOLOs across single names",
+        "Broadcom weekly calls chased aggressively",
+        "Reckless sizing celebrated as usual"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "AMD",
+        "AVGO",
+        "SPX",
+        "PENG"
+      ]
+    },
+    {
       "id": "account-blowups",
-      "title": "Account Blow-ups",
+      "title": "Margin Calls & Account Blow-Ups",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Margin calls on naked options",
-        "Gambling accounts wiped clean",
-        "SPX call losses stacking up",
-        "Solidarity posts on trading losses"
+        "Margin call wipes leveraged accounts",
+        "Speculative gambling accounts fully drained",
+        "Cautionary tales of hobby turning costly",
+        "Losses shared alongside euphoric wins"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 30,
       "tickers": [
-        "BE",
         "SPX",
-        "MSFT"
+        "AMD"
       ]
     },
     {
-      "id": "rare-earth-cannabis",
-      "title": "Thematic Speculation",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "Rare earth plays backed by government",
-        "Cannabis rescheduling reappraisal thesis",
-        "Nike turnaround pitch circulating",
-        "Off-beat DD drawing curiosity"
-      ],
-      "sentiment_score": 60,
-      "tickers": [
-        "MP",
-        "USAR",
-        "MSOS",
-        "NKE"
-      ]
-    },
-    {
-      "id": "market-mood",
+      "id": "general-market-mood",
       "title": "General Market Mood",
-      "icon": "mood-smile",
+      "icon": "trending-up",
       "heat": "normal",
       "bullets": [
-        "Bull-bear split for July debated",
-        "Gold cited as safe haven",
-        "Crypto miners swinging violently",
-        "Risk appetite broadly elevated"
+        "Indices pinned at all-time highs",
+        "Stretched valuations questioned by skeptics",
+        "Gold and cannabis pitched as diversifiers",
+        "Bull-versus-bear July debate ongoing"
       ],
       "sentiment_score": 58,
       "tickers": [
-        "WULF",
-        "GLD"
+        "MSOS",
+        "NKE",
+        "PATH",
+        "LI"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "Micron capex hype fuels conviction longs",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
       "symbol": "AMD",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "aggressive call buying",
+      "signal": "Chased via short-dated calls",
       "company_name": "Advanced Micro Devices, Inc."
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "memory upside bets",
-      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "PENG",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "high-conviction full-port play",
+      "mentions": 3,
+      "signal": "Full-port memory growth high-conviction",
       "company_name": "Penguin Solutions, Inc."
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "frustrated bagholders",
-      "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "TSMC",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "leveraged upside chase",
-      "company_name": "TAIWANSMFAC DRN"
-    },
-    {
-      "symbol": "BE",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "margin-called holder",
-      "company_name": "Bloom Energy Corporation"
-    },
-    {
-      "symbol": "MP",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "rare earth speculation",
-      "company_name": "MP Materials Corp."
     },
     {
       "symbol": "AVGO",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "short-dated call momentum",
+      "mentions": 3,
+      "signal": "Weekly calls piled into after pump",
       "company_name": "Broadcom Inc."
+    },
+    {
+      "symbol": "ASTS",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Space-and-chips crossover trade",
+      "company_name": "AST SpaceMobile, Inc."
+    },
+    {
+      "symbol": "VECO",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Pitched as next degen capex play",
+      "company_name": "Veeco Instruments Inc."
+    },
+    {
+      "symbol": "MSOS",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Contrarian cannabis rescheduling bet",
+      "company_name": "AdvisorShares Pure US Cannabis "
+    },
+    {
+      "symbol": "NKE",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Turnaround DD gaining traction",
+      "company_name": "Nike, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews decisively risk-on, with memory and semiconductor names dominating the tape after Micron's capex commitment and SK Hynix's heavily oversubscribed US listing. Speculative traders are stacking leveraged and short-dated positions into AMD, TSMC, and PENG.",
+      "text": "Semiconductor and memory names dominate the tape, with Micron's massive US investment commitments anchoring a broadly euphoric mood. Traders are stacking chip conviction plays and framing 2026 as a generational silicon cycle, extending enthusiasm into capex suppliers and AI infrastructure.",
       "tag": "bullish"
     },
     {
-      "text": "The AI capex narrative is maturing, with more skeptical framing on returns emerging alongside Meta's coding push and Starbucks reducing software reliance. Traders are increasingly probing whether hyperscaler spending can justify current valuations.",
+      "text": "Speculative energy runs hot through short-dated options and full-port YOLOs, but blow-up posts and margin-call screenshots reveal the underlying fragility. The mix of euphoric wins and account wipeouts signals a stretched, late-cycle greed dynamic among retail participants.",
       "tag": "notable"
     },
     {
-      "text": "A visible undercurrent of pain persists, with margin calls on naked options, wiped gambling accounts, and frustrated mega-cap holders. These blow-up posts temper the otherwise euphoric mood and highlight elevated leverage across the board.",
-      "tag": "bearish"
+      "text": "The SK Hynix Nasdaq debut is a live catalyst drawing anxious positioning, while skeptics question all-time-high indices and elevated valuations. Defensive interest in gold and contrarian cannabis bets hints at a minority hedging against the prevailing risk-on tone.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-09T21:02:11.448518+00:00",
-  "updated_hkt": "2026-07-10 05:02 HKT"
+  "updated_at": "2026-07-10T12:02:18.945247+00:00",
+  "updated_hkt": "2026-07-10 20:02 HKT"
 }
