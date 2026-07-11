@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 26,
-  "neutral_pct": 30,
-  "bull_bear_ratio": 1.7,
-  "overall_score": 61,
+  "bull_pct": 60,
+  "bear_pct": 15,
+  "neutral_pct": 25,
+  "bull_bear_ratio": 4.0,
+  "overall_score": 66,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 44,
+    "formula_score": 60,
     "ai_score": 68,
     "bull_count": 12,
-    "bear_count": 7,
-    "neutral_count": 8,
-    "total_posts": 27,
+    "bear_count": 3,
+    "neutral_count": 5,
+    "total_posts": 20,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,54 +19,38 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 27,
+  "post_count": 20,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-chips-semis",
-      "title": "AI & Semiconductor Boom",
+      "id": "megacap-tech-ai",
+      "title": "Mega-Cap Tech & AI Plays",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Micron commits massive US capex through 2035",
-        "Memory and chip trades printing gains",
-        "AI narrative dominates market positioning",
-        "Silicon labeled trade of the year"
+        "META profits rotated into MSFT, NFLX",
+        "Traders bullish on AI monetization",
+        "MSFT LEAPs and NFLX YOLOs stacking",
+        "META calls delivering outsized wins"
       ],
       "sentiment_score": 78,
       "tickers": [
-        "MU",
-        "MSFT",
         "META",
-        "ASTS"
+        "MSFT",
+        "NFLX",
+        "GOOG"
       ]
     },
     {
-      "id": "index-highs-skepticism",
-      "title": "All-Time High Skepticism",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Traders question stretched market valuations",
-        "S&P near record despite macro noise",
-        "Put buyers frustrated by relentless rally",
-        "Debate over AI bubble sustainability"
-      ],
-      "sentiment_score": 45,
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "0dte-flash-crash",
-      "title": "0DTE & Flash Crash Plays",
+      "id": "spy-0dte",
+      "title": "SPY 0DTE & Index Speculation",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Traders caught intraday SPY dip",
-        "Quick cash-outs on 0DTE puts",
-        "Speculative options churn intensifies",
-        "Volatility trading energy elevated"
+        "Traders catching intraday flash crashes",
+        "0DTE puts cashed out fast",
+        "Index put/call whipsaw plays active",
+        "Inflation data eyed as catalyst"
       ],
       "sentiment_score": 55,
       "tickers": [
@@ -74,56 +58,73 @@
       ]
     },
     {
-      "id": "big-tech-narrative",
-      "title": "Big Tech AI Positioning",
-      "icon": "brand-meta",
+      "id": "profit-posts",
+      "title": "Profit Posts & Euphoria",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Full-port MSFT LEAP conviction bets",
-        "META rebound on consumer AI thesis",
-        "Apple-OpenAI legal clash surfaces",
-        "OpenAI cash-burn concerns emerge"
+        "Large realized gains being flexed",
+        "Retirement-tier profit screenshots circulating",
+        "Winners reloading into fresh positions",
+        "Euphoric tone dominates the batch"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 82,
       "tickers": [
-        "MSFT",
         "META",
-        "AAPL",
-        "GOOG"
+        "MSFT",
+        "SPY"
       ]
     },
     {
-      "id": "account-blowups",
-      "title": "Margin Calls & Losses",
-      "icon": "skull",
+      "id": "space-launch",
+      "title": "Space & Launch Names",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Leveraged SOXL trade wipes account",
-        "Margin call despite multi-monitor setup",
-        "Warnings on stock-picking addiction",
-        "Speculative traders count painful lessons"
+        "RKLB bottom-fishing with sizable calls",
+        "SPCX lock-up unlock overhang flagged",
+        "Nasdaq100 inclusion failing to hold bid",
+        "Supply dynamics questioned by traders"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 48,
       "tickers": [
-        "SOXL"
+        "RKLB",
+        "SPCX"
       ]
     },
     {
       "id": "defense-geopolitics",
-      "title": "Defense & Geopolitical Flows",
+      "title": "Defense & Geopolitical Catalysts",
       "icon": "shield",
-      "heat": "normal",
+      "heat": "building",
       "bullets": [
-        "NATO unveils major defense agreements",
-        "US-Iran tensions rattle commodities",
-        "China restricts helium exports",
-        "Defense primes drawing fresh interest"
+        "NATO unveils $50B+ defense deals",
+        "LMT, NOC, RTX in focus",
+        "US-Iran tensions and helium export ban",
+        "BOJ rate hikes on the radar"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 62,
       "tickers": [
         "LMT",
         "NOC",
         "RTX"
+      ]
+    },
+    {
+      "id": "leverage-losses",
+      "title": "Leverage Blow-Ups & Losses",
+      "icon": "skull",
+      "heat": "normal",
+      "bullets": [
+        "Leveraged SOXL calls warned against",
+        "Traders questioning bearish put positioning",
+        "Cautionary tales on timing volatility",
+        "Some accounts underwater on hedges"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "SOXL",
+        "SPY"
       ]
     }
   ],
@@ -131,74 +132,74 @@
     {
       "symbol": "META",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "consumer-AI rebound conviction",
+      "mentions": 8,
+      "signal": "profit engine, calls printing",
       "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "0DTE and put/call churn",
-      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "MSFT",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "full-port LEAP bets",
+      "mentions": 5,
+      "signal": "high-conviction LEAPs bets",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "MU",
+      "symbol": "NFLX",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "memory supercycle winner",
-      "company_name": "Micron Technology, Inc."
+      "mentions": 4,
+      "signal": "weekend high-conviction favorite",
+      "company_name": "Netflix, Inc."
     },
     {
-      "symbol": "ASTS",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "space-chip crossover trade",
-      "company_name": "AST SpaceMobile, Inc."
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "0DTE crash scalping",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "GOOG",
+      "symbol": "RKLB",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "contrarian buy validated",
-      "company_name": "Alphabet Inc."
+      "signal": "bottom-fishing call buyers",
+      "company_name": "Rocket Lab Corporation"
     },
     {
-      "symbol": "AAPL",
-      "sentiment": "neutral",
+      "symbol": "SPCX",
+      "sentiment": "bearish",
       "mentions": 2,
-      "signal": "OpenAI legal overhang",
-      "company_name": "Apple Inc."
+      "signal": "lock-up unlock overhang",
+      "company_name": "Space Exploration Technologies "
+    },
+    {
+      "symbol": "LMT",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "NATO defense tailwind",
+      "company_name": "Lockheed Martin Corporation"
     },
     {
       "symbol": "SOXL",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "leverage burns traders",
+      "signal": "leverage regret",
       "company_name": "Direxion Daily Semiconductor Bu"
     }
   ],
   "summary": [
     {
-      "text": "Silicon dominates the tape as semiconductor and AI trades draw euphoric positioning, with Micron's mega capex commitment and profit posts fueling conviction that 2026 belongs to chips and memory names.",
+      "text": "Sentiment skews euphoric, with mega-cap tech dominating the tape as traders rotate META windfalls into MSFT LEAPs and NFLX weekend positions. The energy is unmistakably risk-on, driven by AI monetization conviction and a string of oversized profit posts.",
       "tag": "bullish"
     },
     {
-      "text": "A vocal minority questions record index levels and stretched valuations, with frustrated put buyers watching the S&P grind higher despite macro noise from Iran tensions and helium export curbs.",
+      "text": "SPY 0DTE speculation runs hot, with traders scalping intraday flash crashes and cashing out puts quickly ahead of Tuesday's inflation print. Positioning remains twitchy, reflecting caution beneath the broader greed.",
       "tag": "notable"
     },
     {
-      "text": "Beneath the greed, account blow-ups and margin calls from leveraged SOXL and options bets serve as cautionary tales, underscoring the thin line between speculative wins and rapid capital destruction.",
+      "text": "Pockets of pain persist as leveraged SOXL blow-ups and underwater put positions serve as cautionary tales, while SPCX faces a heavy lock-up unlock overhang. These bearish undercurrents temper an otherwise celebratory batch.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-10T21:02:04.413003+00:00",
-  "updated_hkt": "2026-07-11 05:02 HKT"
+  "updated_at": "2026-07-11T12:01:43.794176+00:00",
+  "updated_hkt": "2026-07-11 20:01 HKT"
 }
