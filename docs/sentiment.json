@@ -1,17 +1,17 @@
 {
-  "bull_pct": 60,
-  "bear_pct": 15,
-  "neutral_pct": 25,
+  "bull_pct": 73,
+  "bear_pct": 18,
+  "neutral_pct": 9,
   "bull_bear_ratio": 4.0,
   "overall_score": 66,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 60,
-    "ai_score": 68,
-    "bull_count": 12,
-    "bear_count": 3,
-    "neutral_count": 5,
-    "total_posts": 20,
+    "formula_score": 73,
+    "ai_score": 63,
+    "bull_count": 8,
+    "bear_count": 2,
+    "neutral_count": 1,
+    "total_posts": 11,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,187 +19,175 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 20,
+  "post_count": 11,
   "hours_window": 24,
   "themes": [
     {
-      "id": "megacap-tech-ai",
-      "title": "Mega-Cap Tech & AI Plays",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "META profits rotated into MSFT, NFLX",
-        "Traders bullish on AI monetization",
-        "MSFT LEAPs and NFLX YOLOs stacking",
-        "META calls delivering outsized wins"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "META",
-        "MSFT",
-        "NFLX",
-        "GOOG"
-      ]
-    },
-    {
-      "id": "spy-0dte",
-      "title": "SPY 0DTE & Index Speculation",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Traders catching intraday flash crashes",
-        "0DTE puts cashed out fast",
-        "Index put/call whipsaw plays active",
-        "Inflation data eyed as catalyst"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "profit-posts",
-      "title": "Profit Posts & Euphoria",
+      "id": "streaming-megacap",
+      "title": "Streaming & Megacap Bets",
       "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Repeated NFLX speculative call positions",
+        "MSFT allocations funded by prior wins",
+        "Weekend high-conviction plays stacking up",
+        "Megacap momentum drawing retail flow"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "NFLX",
+        "MSFT",
+        "META"
+      ]
+    },
+    {
+      "id": "options-blowups",
+      "title": "Options Account Blow-Ups",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Large realized gains being flexed",
-        "Retirement-tier profit screenshots circulating",
-        "Winners reloading into fresh positions",
-        "Euphoric tone dominates the batch"
+        "Signal-following traders repeatedly blowing accounts",
+        "Oversized short-dated positions warned against",
+        "Cautionary tale on guru trade signals",
+        "Risk management concerns surfacing"
       ],
-      "sentiment_score": 82,
-      "tickers": [
-        "META",
-        "MSFT",
-        "SPY"
-      ]
+      "sentiment_score": 22,
+      "tickers": []
     },
     {
-      "id": "space-launch",
-      "title": "Space & Launch Names",
+      "id": "space-plays",
+      "title": "Space & Launch Speculation",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "RKLB bottom-fishing with sizable calls",
-        "SPCX lock-up unlock overhang flagged",
-        "Nasdaq100 inclusion failing to hold bid",
-        "Supply dynamics questioned by traders"
+        "RKLB dip-buying with sizable call bets",
+        "SPCX lockup unlock pressuring the bid",
+        "Data center IPO interest emerging",
+        "Traders positioning for potential bottom"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 55,
       "tickers": [
         "RKLB",
         "SPCX"
       ]
     },
     {
-      "id": "defense-geopolitics",
-      "title": "Defense & Geopolitical Catalysts",
-      "icon": "shield",
+      "id": "bank-earnings",
+      "title": "Bank Earnings Kickoff",
+      "icon": "building-bank",
       "heat": "building",
       "bullets": [
-        "NATO unveils $50B+ defense deals",
-        "LMT, NOC, RTX in focus",
-        "US-Iran tensions and helium export ban",
-        "BOJ rate hikes on the radar"
+        "Big bank profit engines expected strong",
+        "Resilient consumer spending backdrop",
+        "Earnings season catalyst approaching",
+        "Financials positioned for upside"
       ],
-      "sentiment_score": 62,
-      "tickers": [
-        "LMT",
-        "NOC",
-        "RTX"
-      ]
+      "sentiment_score": 66,
+      "tickers": []
     },
     {
-      "id": "leverage-losses",
-      "title": "Leverage Blow-Ups & Losses",
-      "icon": "skull",
+      "id": "macro-rates",
+      "title": "Global Rates & Macro",
+      "icon": "world",
       "heat": "normal",
       "bullets": [
-        "Leveraged SOXL calls warned against",
-        "Traders questioning bearish put positioning",
-        "Cautionary tales on timing volatility",
-        "Some accounts underwater on hedges"
+        "BOJ signals policy rate beyond 2%",
+        "Rate normalization risk in focus",
+        "Post-close headline timing noted",
+        "Global tightening backdrop watched"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 42,
+      "tickers": []
+    },
+    {
+      "id": "long-term-value",
+      "title": "Long-Term Value Ideas",
+      "icon": "cpu",
+      "heat": "normal",
+      "bullets": [
+        "BlackBerry QNX robotics thesis pitched",
+        "Embedded software growth angle",
+        "Data center IPO plays flagged",
+        "Off-radar tickers gaining attention"
+      ],
+      "sentiment_score": 60,
       "tickers": [
-        "SOXL",
-        "SPY"
+        "BB"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "META",
+      "symbol": "NFLX",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "profit engine, calls printing",
-      "company_name": "Meta Platforms, Inc."
+      "mentions": 3,
+      "signal": "Repeat weekend speculative plays",
+      "company_name": "Netflix, Inc."
     },
     {
       "symbol": "MSFT",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "high-conviction LEAPs bets",
+      "mentions": 2,
+      "signal": "Megacap allocation from prior gains",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "NFLX",
+      "symbol": "META",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "weekend high-conviction favorite",
-      "company_name": "Netflix, Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "0DTE crash scalping",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "mentions": 2,
+      "signal": "Funding source for new bets",
+      "company_name": "Meta Platforms, Inc."
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "bottom-fishing call buyers",
+      "signal": "Dip-buying calls, bottom hunting",
       "company_name": "Rocket Lab Corporation"
     },
     {
       "symbol": "SPCX",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "lock-up unlock overhang",
+      "signal": "Lockup unlock weighs on price",
       "company_name": "Space Exploration Technologies "
     },
     {
-      "symbol": "LMT",
+      "symbol": "BB",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "NATO defense tailwind",
-      "company_name": "Lockheed Martin Corporation"
+      "signal": "Long-term QNX robotics thesis",
+      "company_name": "BlackBerry Limited"
     },
     {
-      "symbol": "SOXL",
-      "sentiment": "bearish",
+      "symbol": "CSQUARE",
+      "sentiment": "bullish",
       "mentions": 1,
-      "signal": "leverage regret",
-      "company_name": "Direxion Daily Semiconductor Bu"
+      "signal": "Under-the-radar data center IPO",
+      "company_name": ""
+    },
+    {
+      "symbol": "CBRS",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Speculative early accumulation",
+      "company_name": "Cerebras Systems Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment skews euphoric, with mega-cap tech dominating the tape as traders rotate META windfalls into MSFT LEAPs and NFLX weekend positions. The energy is unmistakably risk-on, driven by AI monetization conviction and a string of oversized profit posts.",
+      "text": "Retail energy skews bullish, with megacap names like NFLX and MSFT dominating weekend speculative positioning while banks head into earnings on a resilient consumer narrative. The tone is confident, bordering on euphoric among profit-flush traders redeploying gains.",
       "tag": "bullish"
     },
     {
-      "text": "SPY 0DTE speculation runs hot, with traders scalping intraday flash crashes and cashing out puts quickly ahead of Tuesday's inflation print. Positioning remains twitchy, reflecting caution beneath the broader greed.",
-      "tag": "notable"
+      "text": "A sobering counterweight emerges via a cautionary account-blow-up post detailing repeated options losses from signal-chasing, underscoring the fine line between conviction and recklessness in this crowd.",
+      "tag": "bearish"
     },
     {
-      "text": "Pockets of pain persist as leveraged SOXL blow-ups and underwater put positions serve as cautionary tales, while SPCX faces a heavy lock-up unlock overhang. These bearish undercurrents temper an otherwise celebratory batch.",
-      "tag": "bearish"
+      "text": "Space names split the room: RKLB draws bottom-fishing call buyers while SPCX faces a lockup unlock exceeding its IPO float, a structural overhang worth monitoring alongside hawkish BOJ rate signals.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-11T12:01:43.794176+00:00",
-  "updated_hkt": "2026-07-11 20:01 HKT"
+  "updated_at": "2026-07-11T21:01:13.041559+00:00",
+  "updated_hkt": "2026-07-12 05:01 HKT"
 }
