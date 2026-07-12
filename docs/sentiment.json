@@ -1,17 +1,17 @@
 {
-  "bull_pct": 57,
-  "bear_pct": 14,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 4.0,
-  "overall_score": 58,
-  "overall_label": "Neutral",
+  "bull_pct": 22,
+  "bear_pct": 56,
+  "neutral_pct": 22,
+  "bull_bear_ratio": 0.4,
+  "overall_score": 35,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 57,
-    "ai_score": 58,
-    "bull_count": 4,
-    "bear_count": 1,
+    "formula_score": 22,
+    "ai_score": 41,
+    "bull_count": 2,
+    "bear_count": 5,
     "neutral_count": 2,
-    "total_posts": 7,
+    "total_posts": 9,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,147 +19,158 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 7,
+  "post_count": 9,
   "hours_window": 24,
   "themes": [
     {
-      "id": "squeeze-watch",
-      "title": "Short Squeeze Speculation",
-      "icon": "flame",
-      "heat": "building",
+      "id": "macro-fomc-cpi",
+      "title": "Macro & Rate Anxiety",
+      "icon": "scale",
+      "heat": "hot",
       "bullets": [
-        "Battle for key price floor near $150",
-        "Traders eyeing remaining squeeze potential",
-        "Tightest range since IPO noted",
-        "Positioning ahead of August volatility"
+        "FOMC July 29 rate-hike odds debated",
+        "CPI print seen as key catalyst",
+        "Sticky inflation from oil shortages",
+        "Treasuries vs index puts positioning"
       ],
-      "sentiment_score": 65,
-      "tickers": []
-    },
-    {
-      "id": "cpi-macro",
-      "title": "CPI and Rate Positioning",
-      "icon": "trending-down",
-      "heat": "building",
-      "bullets": [
-        "Debate over hotter-than-expected June CPI",
-        "Treasuries versus index puts weighed",
-        "Gas prices masking broader inflation",
-        "Hedging into key data release"
-      ],
-      "sentiment_score": 38,
+      "sentiment_score": 35,
       "tickers": [
         "SPY",
         "QQQ"
       ]
     },
     {
-      "id": "bank-earnings",
-      "title": "Bank Earnings Season",
-      "icon": "building-bank",
-      "heat": "building",
-      "bullets": [
-        "Big bank profit engines expected strong",
-        "Resilient consumer spending supports outlook",
-        "Earnings catalyst approaching",
-        "Financials positioned as upside play"
-      ],
-      "sentiment_score": 68,
-      "tickers": []
-    },
-    {
-      "id": "ipo-speculation",
-      "title": "IPO and Data Center Plays",
+      "id": "spacex-spcx",
+      "title": "SpaceX Squeeze Watch",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Fresh interest in data center IPOs",
-        "Traders chasing under-the-radar names",
-        "Speculative allocations into new listings",
-        "Rotation away from crowded tickers"
+        "Battle over $150 versus $135 floor",
+        "Anomalous Friday tightest range since IPO",
+        "Squeeze risk lingering before August",
+        "Speculators piling into options"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 48,
       "tickers": [
-        "BB"
+        "SPCX"
       ]
     },
     {
-      "id": "long-term-tech",
-      "title": "Long-Term Tech Conviction",
-      "icon": "cpu",
-      "heat": "normal",
+      "id": "sofi-earnings",
+      "title": "SoFi Earnings Bet",
+      "icon": "trending-up",
+      "heat": "building",
       "bullets": [
-        "BlackBerry QNX robotics thesis in focus",
-        "Safety-critical embedded systems highlighted",
-        "High-conviction long-term positioning",
-        "Underappreciated software value cited"
+        "Large speculative call position ahead of earnings",
+        "Betting Fed holds before midterms",
+        "Earnings and FOMC same window",
+        "High-conviction directional high-conviction"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 68,
       "tickers": [
-        "BB"
+        "SOFI"
       ]
     },
     {
-      "id": "general-mood",
-      "title": "General Market Mood",
-      "icon": "mood-neutral",
+      "id": "liquidity-warning",
+      "title": "Liquidity & Debt Warnings",
+      "icon": "alert-triangle",
       "heat": "normal",
       "bullets": [
-        "Mixed personal anecdotes alongside gains",
-        "Retail chatter around geopolitical headlines",
-        "Cautious optimism into data week",
-        "Speculative appetite remains intact"
+        "Debt levels flagged as excessive",
+        "Private credit ecosystem under stress",
+        "Major IPOs draining market liquidity",
+        "Caution urged on chasing rallies"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 30,
       "tickers": [
         "SPY"
+      ]
+    },
+    {
+      "id": "loss-porn",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Portfolio ruined chasing lottery puts",
+        "Traders hoping for improbable rebounds",
+        "Personal losses spilling into life",
+        "Defeated but ironic tone"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "SPCX"
+      ]
+    },
+    {
+      "id": "crypto-btc",
+      "title": "Crypto Momentum",
+      "icon": "currency-bitcoin",
+      "heat": "normal",
+      "bullets": [
+        "Daily signal shows continued upside",
+        "Short leverage underwater on BTC",
+        "Roughly favorable continuation odds cited",
+        "Speculative long-bias positioning"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "BTC"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "BB",
+      "symbol": "SPCX",
+      "sentiment": "bearish",
+      "mentions": 7,
+      "signal": "Squeeze hopes fading, losses mounting",
+      "company_name": "Space Exploration Technologies "
+    },
+    {
+      "symbol": "SOFI",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Long-term QNX robotics thesis",
-      "company_name": "BlackBerry Limited"
+      "mentions": 5,
+      "signal": "Large earnings call conviction",
+      "company_name": "SoFi Technologies, Inc."
     },
     {
       "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Puts weighed against CPI risk",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "CPI puts and hedging debated",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "QQQ",
       "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Downside hedge on hot inflation",
+      "mentions": 3,
+      "signal": "Downside protection sought",
       "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
-      "symbol": "CBRS",
+      "symbol": "BTC",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Speculative under-the-radar bet",
-      "company_name": "Cerebras Systems Inc."
+      "mentions": 2,
+      "signal": "Continuation signal favored",
+      "company_name": "Bitcoin USD"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans cautiously bullish as traders position around a potential short squeeze near a key price floor and eye resilient bank earnings driven by steady consumer spending. Energy is speculative but not euphoric.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Macro anxiety persists ahead of the June CPI print, with participants debating whether Treasuries or index puts offer the better hedge against hotter-than-expected inflation. This tempers broader risk appetite.",
+      "text": "The batch skews cautious as traders position around the July 29 FOMC and an upcoming CPI print, weighing Treasuries against index puts amid warnings on debt, sticky inflation, and shrinking liquidity from major IPOs.",
       "tag": "bearish"
     },
     {
-      "text": "Retail attention is drifting toward fresh IPO and data center plays alongside a long-term BlackBerry QNX thesis, signaling rotation away from crowded tickers into speculative under-the-radar names.",
+      "text": "SpaceX's SPCX dominates chatter, with speculators debating whether the squeeze has passed or a fresh floor near $135 holds, while others nurse painful losses on lottery-style put positions.",
       "tag": "notable"
+    },
+    {
+      "text": "Pockets of high-conviction bullishness persist, notably a large SoFi earnings bet wagering the Fed stays on hold before midterms, alongside constructive crypto momentum calls.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-07-12T12:00:56.433324+00:00",
-  "updated_hkt": "2026-07-12 20:00 HKT"
+  "updated_at": "2026-07-12T21:01:03.425362+00:00",
+  "updated_hkt": "2026-07-13 05:01 HKT"
 }
