@@ -1,17 +1,17 @@
 {
-  "bull_pct": 73,
-  "bear_pct": 18,
-  "neutral_pct": 9,
+  "bull_pct": 57,
+  "bear_pct": 14,
+  "neutral_pct": 29,
   "bull_bear_ratio": 4.0,
-  "overall_score": 66,
-  "overall_label": "Greed",
+  "overall_score": 58,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 73,
-    "ai_score": 63,
-    "bull_count": 8,
-    "bear_count": 2,
-    "neutral_count": 1,
-    "total_posts": 11,
+    "formula_score": 57,
+    "ai_score": 58,
+    "bull_count": 4,
+    "bear_count": 1,
+    "neutral_count": 2,
+    "total_posts": 7,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,175 +19,147 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 11,
+  "post_count": 7,
   "hours_window": 24,
   "themes": [
     {
-      "id": "streaming-megacap",
-      "title": "Streaming & Megacap Bets",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Repeated NFLX speculative call positions",
-        "MSFT allocations funded by prior wins",
-        "Weekend high-conviction plays stacking up",
-        "Megacap momentum drawing retail flow"
-      ],
-      "sentiment_score": 74,
-      "tickers": [
-        "NFLX",
-        "MSFT",
-        "META"
-      ]
-    },
-    {
-      "id": "options-blowups",
-      "title": "Options Account Blow-Ups",
-      "icon": "skull",
+      "id": "squeeze-watch",
+      "title": "Short Squeeze Speculation",
+      "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Signal-following traders repeatedly blowing accounts",
-        "Oversized short-dated positions warned against",
-        "Cautionary tale on guru trade signals",
-        "Risk management concerns surfacing"
+        "Battle for key price floor near $150",
+        "Traders eyeing remaining squeeze potential",
+        "Tightest range since IPO noted",
+        "Positioning ahead of August volatility"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 65,
       "tickers": []
     },
     {
-      "id": "space-plays",
-      "title": "Space & Launch Speculation",
-      "icon": "rocket",
+      "id": "cpi-macro",
+      "title": "CPI and Rate Positioning",
+      "icon": "trending-down",
       "heat": "building",
       "bullets": [
-        "RKLB dip-buying with sizable call bets",
-        "SPCX lockup unlock pressuring the bid",
-        "Data center IPO interest emerging",
-        "Traders positioning for potential bottom"
+        "Debate over hotter-than-expected June CPI",
+        "Treasuries versus index puts weighed",
+        "Gas prices masking broader inflation",
+        "Hedging into key data release"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 38,
       "tickers": [
-        "RKLB",
-        "SPCX"
+        "SPY",
+        "QQQ"
       ]
     },
     {
       "id": "bank-earnings",
-      "title": "Bank Earnings Kickoff",
+      "title": "Bank Earnings Season",
       "icon": "building-bank",
       "heat": "building",
       "bullets": [
         "Big bank profit engines expected strong",
-        "Resilient consumer spending backdrop",
-        "Earnings season catalyst approaching",
-        "Financials positioned for upside"
+        "Resilient consumer spending supports outlook",
+        "Earnings catalyst approaching",
+        "Financials positioned as upside play"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 68,
       "tickers": []
     },
     {
-      "id": "macro-rates",
-      "title": "Global Rates & Macro",
-      "icon": "world",
-      "heat": "normal",
+      "id": "ipo-speculation",
+      "title": "IPO and Data Center Plays",
+      "icon": "rocket",
+      "heat": "building",
       "bullets": [
-        "BOJ signals policy rate beyond 2%",
-        "Rate normalization risk in focus",
-        "Post-close headline timing noted",
-        "Global tightening backdrop watched"
+        "Fresh interest in data center IPOs",
+        "Traders chasing under-the-radar names",
+        "Speculative allocations into new listings",
+        "Rotation away from crowded tickers"
       ],
-      "sentiment_score": 42,
-      "tickers": []
+      "sentiment_score": 62,
+      "tickers": [
+        "BB"
+      ]
     },
     {
-      "id": "long-term-value",
-      "title": "Long-Term Value Ideas",
+      "id": "long-term-tech",
+      "title": "Long-Term Tech Conviction",
       "icon": "cpu",
       "heat": "normal",
       "bullets": [
-        "BlackBerry QNX robotics thesis pitched",
-        "Embedded software growth angle",
-        "Data center IPO plays flagged",
-        "Off-radar tickers gaining attention"
+        "BlackBerry QNX robotics thesis in focus",
+        "Safety-critical embedded systems highlighted",
+        "High-conviction long-term positioning",
+        "Underappreciated software value cited"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 66,
       "tickers": [
         "BB"
+      ]
+    },
+    {
+      "id": "general-mood",
+      "title": "General Market Mood",
+      "icon": "mood-neutral",
+      "heat": "normal",
+      "bullets": [
+        "Mixed personal anecdotes alongside gains",
+        "Retail chatter around geopolitical headlines",
+        "Cautious optimism into data week",
+        "Speculative appetite remains intact"
+      ],
+      "sentiment_score": 52,
+      "tickers": [
+        "SPY"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "NFLX",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Repeat weekend speculative plays",
-      "company_name": "Netflix, Inc."
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Megacap allocation from prior gains",
-      "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "META",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Funding source for new bets",
-      "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "RKLB",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Dip-buying calls, bottom hunting",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "SPCX",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Lockup unlock weighs on price",
-      "company_name": "Space Exploration Technologies "
-    },
-    {
       "symbol": "BB",
       "sentiment": "bullish",
-      "mentions": 1,
+      "mentions": 3,
       "signal": "Long-term QNX robotics thesis",
       "company_name": "BlackBerry Limited"
     },
     {
-      "symbol": "CSQUARE",
-      "sentiment": "bullish",
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Puts weighed against CPI risk",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "QQQ",
+      "sentiment": "bearish",
       "mentions": 1,
-      "signal": "Under-the-radar data center IPO",
-      "company_name": ""
+      "signal": "Downside hedge on hot inflation",
+      "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
       "symbol": "CBRS",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "Speculative early accumulation",
+      "signal": "Speculative under-the-radar bet",
       "company_name": "Cerebras Systems Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews bullish, with megacap names like NFLX and MSFT dominating weekend speculative positioning while banks head into earnings on a resilient consumer narrative. The tone is confident, bordering on euphoric among profit-flush traders redeploying gains.",
+      "text": "Sentiment leans cautiously bullish as traders position around a potential short squeeze near a key price floor and eye resilient bank earnings driven by steady consumer spending. Energy is speculative but not euphoric.",
       "tag": "bullish"
     },
     {
-      "text": "A sobering counterweight emerges via a cautionary account-blow-up post detailing repeated options losses from signal-chasing, underscoring the fine line between conviction and recklessness in this crowd.",
+      "text": "Macro anxiety persists ahead of the June CPI print, with participants debating whether Treasuries or index puts offer the better hedge against hotter-than-expected inflation. This tempers broader risk appetite.",
       "tag": "bearish"
     },
     {
-      "text": "Space names split the room: RKLB draws bottom-fishing call buyers while SPCX faces a lockup unlock exceeding its IPO float, a structural overhang worth monitoring alongside hawkish BOJ rate signals.",
+      "text": "Retail attention is drifting toward fresh IPO and data center plays alongside a long-term BlackBerry QNX thesis, signaling rotation away from crowded tickers into speculative under-the-radar names.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-11T21:01:13.041559+00:00",
-  "updated_hkt": "2026-07-12 05:01 HKT"
+  "updated_at": "2026-07-12T12:00:56.433324+00:00",
+  "updated_hkt": "2026-07-12 20:00 HKT"
 }
