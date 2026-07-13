@@ -1,17 +1,17 @@
 {
-  "bull_pct": 22,
-  "bear_pct": 56,
-  "neutral_pct": 22,
-  "bull_bear_ratio": 0.4,
-  "overall_score": 35,
-  "overall_label": "Fear",
+  "bull_pct": 40,
+  "bear_pct": 30,
+  "neutral_pct": 30,
+  "bull_bear_ratio": 1.3,
+  "overall_score": 53,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 22,
-    "ai_score": 41,
-    "bull_count": 2,
-    "bear_count": 5,
-    "neutral_count": 2,
-    "total_posts": 9,
+    "formula_score": 40,
+    "ai_score": 58,
+    "bull_count": 4,
+    "bear_count": 3,
+    "neutral_count": 3,
+    "total_posts": 10,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,158 +19,178 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 9,
+  "post_count": 10,
   "hours_window": 24,
   "themes": [
     {
-      "id": "macro-fomc-cpi",
-      "title": "Macro & Rate Anxiety",
-      "icon": "scale",
-      "heat": "hot",
+      "id": "ai-software-rotation",
+      "title": "AI Software Rotation",
+      "icon": "cpu",
+      "heat": "building",
       "bullets": [
-        "FOMC July 29 rate-hike odds debated",
-        "CPI print seen as key catalyst",
-        "Sticky inflation from oil shortages",
-        "Treasuries vs index puts positioning"
+        "Rotation from hardware into oversold software",
+        "PATH cited as cash-rich automation leader",
+        "AI monetization thesis gaining traction",
+        "Traders eyeing beaten-down quality names"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 68,
       "tickers": [
-        "SPY",
-        "QQQ"
+        "PATH"
       ]
     },
     {
-      "id": "spacex-spcx",
-      "title": "SpaceX Squeeze Watch",
-      "icon": "rocket",
+      "id": "data-center-capex",
+      "title": "Data Center Capex Surge",
+      "icon": "server",
       "heat": "building",
       "bullets": [
-        "Battle over $150 versus $135 floor",
-        "Anomalous Friday tightest range since IPO",
-        "Squeeze risk lingering before August",
-        "Speculators piling into options"
+        "Meta Louisiana buildout tops $250 billion",
+        "Massive infrastructure spend draws attention",
+        "AI capex arms race intensifying",
+        "Big-tech commitment underpins bullish narrative"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 62,
       "tickers": [
+        "META"
+      ]
+    },
+    {
+      "id": "0dte-yolo",
+      "title": "0DTE and high-conviction Bets",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Large QQQ 0DTE calls held over weekend",
+        "High-conviction single-name speculative wagers",
+        "Traders chasing outsized leveraged payoffs",
+        "Risk appetite remains elevated"
+      ],
+      "sentiment_score": 55,
+      "tickers": [
+        "QQQ",
+        "SOFI",
         "SPCX"
       ]
     },
     {
-      "id": "sofi-earnings",
-      "title": "SoFi Earnings Bet",
-      "icon": "trending-up",
+      "id": "fed-rate-watch",
+      "title": "Fed Rate Path Watch",
+      "icon": "landmark",
       "heat": "building",
       "bullets": [
-        "Large speculative call position ahead of earnings",
-        "Betting Fed holds before midterms",
-        "Earnings and FOMC same window",
-        "High-conviction directional high-conviction"
+        "FOMC decision framed as key catalyst",
+        "Markets pricing potential single hike",
+        "Midterm-year policy expectations debated",
+        "Rate outlook shaping directional positioning"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 52,
       "tickers": [
         "SOFI"
       ]
     },
     {
-      "id": "liquidity-warning",
-      "title": "Liquidity & Debt Warnings",
+      "id": "caution-macro-risk",
+      "title": "Macro Caution Signals",
       "icon": "alert-triangle",
       "heat": "normal",
       "bullets": [
-        "Debt levels flagged as excessive",
-        "Private credit ecosystem under stress",
-        "Major IPOs draining market liquidity",
-        "Caution urged on chasing rallies"
+        "Warnings on debt and sticky inflation",
+        "Private credit stress flagged as risk",
+        "IPO supply draining market liquidity",
+        "Calls for holding cash reserves"
       ],
-      "sentiment_score": 30,
-      "tickers": [
-        "SPY"
-      ]
+      "sentiment_score": 35,
+      "tickers": []
     },
     {
-      "id": "loss-porn",
+      "id": "account-blowups",
       "title": "Account Blow-Ups",
       "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Portfolio ruined chasing lottery puts",
-        "Traders hoping for improbable rebounds",
-        "Personal losses spilling into life",
-        "Defeated but ironic tone"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "id": "crypto-btc",
-      "title": "Crypto Momentum",
-      "icon": "currency-bitcoin",
       "heat": "normal",
       "bullets": [
-        "Daily signal shows continued upside",
-        "Short leverage underwater on BTC",
-        "Roughly favorable continuation odds cited",
-        "Speculative long-bias positioning"
+        "SPCX position wrecks portfolio",
+        "Trader banking on unlikely put recovery",
+        "Overleveraged bets facing severe drawdown",
+        "Gallows humor masking real losses"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 28,
       "tickers": [
-        "BTC"
+        "SPCX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPCX",
-      "sentiment": "bearish",
-      "mentions": 7,
-      "signal": "Squeeze hopes fading, losses mounting",
-      "company_name": "Space Exploration Technologies "
+      "symbol": "PATH",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "oversold software rotation play",
+      "company_name": "UiPath, Inc."
     },
     {
       "symbol": "SOFI",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Large earnings call conviction",
+      "mentions": 3,
+      "signal": "earnings and FOMC high-conviction",
       "company_name": "SoFi Technologies, Inc."
     },
     {
-      "symbol": "SPY",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "CPI puts and hedging debated",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "symbol": "QQQ",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "weekend 0DTE gamble",
+      "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
-      "symbol": "QQQ",
+      "symbol": "SPCX",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Downside protection sought",
-      "company_name": "Invesco QQQ Trust, Series 1"
+      "mentions": 2,
+      "signal": "portfolio blow-up, desperate puts",
+      "company_name": "Space Exploration Technologies "
+    },
+    {
+      "symbol": "META",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "massive data center capex",
+      "company_name": "Meta Platforms, Inc."
+    },
+    {
+      "symbol": "WEN",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "meme long shot",
+      "company_name": "Wendy's Company (The)"
     },
     {
       "symbol": "BTC",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Continuation signal favored",
+      "mentions": 1,
+      "signal": "still leaning calls",
       "company_name": "Bitcoin USD"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "broad index positioning",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     }
   ],
   "summary": [
     {
-      "text": "The batch skews cautious as traders position around the July 29 FOMC and an upcoming CPI print, weighing Treasuries against index puts amid warnings on debt, sticky inflation, and shrinking liquidity from major IPOs.",
-      "tag": "bearish"
+      "text": "Risk appetite remains firm as traders rotate from crowded AI hardware into oversold software names like PATH, while Meta's escalating data center capex reinforces the structural bull thesis around infrastructure spend.",
+      "tag": "bullish"
     },
     {
-      "text": "SpaceX's SPCX dominates chatter, with speculators debating whether the squeeze has passed or a fresh floor near $135 holds, while others nurse painful losses on lottery-style put positions.",
+      "text": "Speculative fervor is evident in large weekend 0DTE QQQ calls and high-conviction SOFI wagers ahead of earnings and the July FOMC, with rate-path uncertainty framed as the pivotal near-term catalyst.",
       "tag": "notable"
     },
     {
-      "text": "Pockets of high-conviction bullishness persist, notably a large SoFi earnings bet wagering the Fed stays on hold before midterms, alongside constructive crypto momentum calls.",
-      "tag": "bullish"
+      "text": "Cautionary voices warn of stretched debt, sticky inflation, and thinning liquidity from IPO supply, and account blow-up posts underscore the real cost of overleveraged bets amid the prevailing euphoria.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-12T21:01:03.425362+00:00",
-  "updated_hkt": "2026-07-13 05:01 HKT"
+  "updated_at": "2026-07-13T12:01:11.259787+00:00",
+  "updated_hkt": "2026-07-13 20:01 HKT"
 }
