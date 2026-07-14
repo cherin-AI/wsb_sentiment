@@ -1,17 +1,17 @@
 {
-  "bull_pct": 43,
-  "bear_pct": 35,
-  "neutral_pct": 22,
-  "bull_bear_ratio": 1.2,
-  "overall_score": 51,
+  "bull_pct": 32,
+  "bear_pct": 32,
+  "neutral_pct": 36,
+  "bull_bear_ratio": 1.0,
+  "overall_score": 46,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 43,
-    "ai_score": 54,
-    "bull_count": 10,
+    "formula_score": 32,
+    "ai_score": 52,
+    "bull_count": 8,
     "bear_count": 8,
-    "neutral_count": 5,
-    "total_posts": 23,
+    "neutral_count": 9,
+    "total_posts": 25,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,182 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 23,
+  "post_count": 25,
   "hours_window": 24,
   "themes": [
     {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Cycle",
-      "icon": "cpu",
+      "id": "ibm-saas-selloff",
+      "title": "IBM & SaaS Weakness",
+      "icon": "trending-down",
       "heat": "hot",
       "bullets": [
-        "Memory stocks parabolic over past year",
-        "DDR5 prices stagnating, demand questioned",
-        "Traders debating timing the top",
-        "AI-driven demand narrative still intact"
+        "IBM guides revenue below estimates",
+        "Legacy SaaS names under pressure",
+        "AI automation cutting software seats",
+        "ORCL debated as oversold value"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 32,
       "tickers": [
-        "MU",
-        "MSFT"
+        "IBM",
+        "ORCL"
       ]
     },
     {
-      "id": "megacap-tech",
-      "title": "Mega-Cap Tech Conviction",
-      "icon": "trending-up",
+      "id": "crypto-btc",
+      "title": "Bitcoin & IBIT Speculation",
+      "icon": "currency-bitcoin",
       "heat": "building",
       "bullets": [
-        "Large MSFT positions being opened",
-        "Cash-generative franchises viewed as safe",
-        "Call options bought aggressively",
-        "IBM guidance triggers SaaS selloff"
+        "Large multi-leg IBIT option spreads",
+        "First six-figure realized day posted",
+        "Traders awaiting fresh BTC volatility",
+        "Long-dated 2028 positioning in play"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 72,
       "tickers": [
-        "MSFT",
-        "IBM"
+        "IBIT",
+        "BTC"
       ]
     },
     {
-      "id": "high-conviction-yolo",
-      "title": "High-Conviction high-conviction Plays",
-      "icon": "rocket",
-      "heat": "building",
+      "id": "cpi-macro",
+      "title": "Cooler CPI Print",
+      "icon": "chart-bar",
+      "heat": "hot",
       "bullets": [
-        "Full-port bets on MSFT and HOOD",
-        "Speculative traders chasing all-time highs",
-        "Long-suffering holders refusing to fold",
-        "Options speculation broadly elevated"
+        "June CPI beats to the downside",
+        "Core inflation softer than expected",
+        "Rate-cut optimism rekindled",
+        "Broad risk sentiment supported"
       ],
-      "sentiment_score": 70,
-      "tickers": [
-        "MSFT",
-        "HOOD",
-        "TDOC"
-      ]
-    },
-    {
-      "id": "geopolitical-risk",
-      "title": "Geopolitical & Event Risk",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "Iran and Hormuz oil concerns cited",
-        "Japan earthquake short thesis floated",
-        "Bank earnings catalyst awaited",
-        "Traders hedging headline volatility"
-      ],
-      "sentiment_score": 38,
-      "tickers": [
-        "AFL",
-        "SPY"
-      ]
-    },
-    {
-      "id": "margin-stress",
-      "title": "Leverage & Margin Stress",
-      "icon": "alert-triangle",
-      "heat": "normal",
-      "bullets": [
-        "South Korea margin call ratio spiking",
-        "Third-highest reading on record",
-        "Warns of forced liquidation risk",
-        "Systemic leverage building globally"
-      ],
-      "sentiment_score": 25,
-      "tickers": []
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "activity",
-      "heat": "normal",
-      "bullets": [
-        "Index scalping strategies discussed",
-        "Charts dropping hard, pain visible",
-        "Paramount-Warner merger faces lawsuits",
-        "Mixed energy between greed and fear"
-      ],
-      "sentiment_score": 48,
+      "sentiment_score": 74,
       "tickers": [
         "SPY",
         "SPX"
+      ]
+    },
+    {
+      "id": "ai-narrative-shift",
+      "title": "AI Narrative Rotation",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "Focus shifting to vertical AI models",
+        "General models burning heavy cash",
+        "Skepticism on write-up quality",
+        "Memory demand thesis questioned"
+      ],
+      "sentiment_score": 50,
+      "tickers": []
+    },
+    {
+      "id": "yolo-losses",
+      "title": "high-conviction Bets & Account Blow-Ups",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "NFLX high-conviction turns painful",
+        "Naked short puts under margin stress",
+        "Small speculative bets celebrated",
+        "Mixed loss and profit posts"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "NFLX",
+        "BE"
+      ]
+    },
+    {
+      "id": "margin-risk",
+      "title": "Global Margin & Leverage Risk",
+      "icon": "alert-triangle",
+      "heat": "normal",
+      "bullets": [
+        "South Korea margin-call ratio spikes",
+        "Leverage stress warnings emerge",
+        "Forced liquidation risk flagged",
+        "Speculative theses on small caps"
+      ],
+      "sentiment_score": 38,
+      "tickers": [
+        "BSP",
+        "CMPS"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Full-port conviction buy",
-      "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "HOOD",
-      "sentiment": "bullish",
+      "symbol": "IBM",
+      "sentiment": "bearish",
       "mentions": 5,
-      "signal": "high-conviction awaiting new highs",
-      "company_name": "Robinhood Markets, Inc."
+      "signal": "weak guidance drives selloff",
+      "company_name": "International Business Machines"
     },
     {
-      "symbol": "TDOC",
+      "symbol": "IBIT",
       "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "aggressive long-dated option bets",
+      "company_name": "iShares Bitcoin Trust ETF"
+    },
+    {
+      "symbol": "ORCL",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "oversold value vs frustration",
+      "company_name": "Oracle Corporation"
+    },
+    {
+      "symbol": "NFLX",
+      "sentiment": "bearish",
       "mentions": 3,
-      "signal": "Diamond-hand recovery hope",
-      "company_name": "Teladoc Health, Inc."
+      "signal": "high-conviction underwater",
+      "company_name": "Netflix, Inc."
+    },
+    {
+      "symbol": "BE",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "margin-called leverage play",
+      "company_name": "Bloom Energy Corporation"
     },
     {
       "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Late-day scalping favorite",
+      "sentiment": "neutral",
+      "mentions": 2,
+      "signal": "afternoon scalping favorite",
       "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "AFL",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Speculative earthquake short",
-      "company_name": "AFLAC Incorporated"
-    },
-    {
-      "symbol": "IBM",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Weak guidance sparks selloff",
-      "company_name": "International Business Machines"
     },
     {
       "symbol": "CMPS",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Structural mispricing thesis",
+      "signal": "structural mispricing thesis",
       "company_name": "COMPASS Pathways Plc - American"
     },
     {
-      "symbol": "SPX",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "Intraday scalp target",
-      "company_name": "S&P 500 INDEX"
+      "symbol": "BSP",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "short thesis on debt load",
+      "company_name": "Bending Spoons S.p.A."
     }
   ],
   "summary": [
     {
-      "text": "The batch leans cautiously greedy, driven by high-conviction mega-cap bets on MSFT and HOOD alongside persistent enthusiasm for the memory and semiconductor cycle. Retail traders remain willing to deploy sizeable full-port positions despite stretched valuations.",
+      "text": "A cooler-than-expected June CPI print reignited rate-cut hopes and lifted broad risk appetite, providing a constructive macro backdrop even as retail engagement stayed split between euphoric IBIT bets and painful software positions.",
       "tag": "bullish"
     },
     {
-      "text": "Undercurrents of stress are visible: South Korea's margin call ratio hitting near-record highs and IBM's soft guidance triggering a SaaS selloff both warn of building leverage and fundamental fragility beneath the euphoria.",
+      "text": "IBM's soft revenue guidance triggered a SaaS sell-off, while ORCL's slide sparked debate between value hunters and frustrated bulls. AI narrative fatigue and questioned memory demand added a cautious undertone to the tech complex.",
       "tag": "bearish"
     },
     {
-      "text": "Geopolitical event risk is drawing fresh attention, with Iran and Hormuz oil dynamics, a speculative Japan earthquake short, and upcoming bank earnings positioning traders around near-term catalysts.",
+      "text": "Leverage stress signals are flashing, with South Korea's margin-call ratio near record highs and several traders nursing margin-called or naked-option positions. The batch reflects a market balancing macro optimism against building tail risks.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-14T12:01:46.963133+00:00",
-  "updated_hkt": "2026-07-14 20:01 HKT"
+  "updated_at": "2026-07-14T21:02:00.562710+00:00",
+  "updated_hkt": "2026-07-15 05:02 HKT"
 }
