@@ -1,17 +1,17 @@
 {
-  "bull_pct": 32,
-  "bear_pct": 32,
-  "neutral_pct": 36,
-  "bull_bear_ratio": 1.0,
+  "bull_pct": 42,
+  "bear_pct": 30,
+  "neutral_pct": 28,
+  "bull_bear_ratio": 1.4,
   "overall_score": 46,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 32,
-    "ai_score": 52,
-    "bull_count": 8,
-    "bear_count": 8,
+    "formula_score": 42,
+    "ai_score": 48,
+    "bull_count": 14,
+    "bear_count": 10,
     "neutral_count": 9,
-    "total_posts": 25,
+    "total_posts": 33,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,106 +19,107 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 25,
+  "post_count": 33,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ibm-saas-selloff",
-      "title": "IBM & SaaS Weakness",
-      "icon": "trending-down",
+      "id": "semis-ai-chips",
+      "title": "Semiconductors & AI Chips",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "IBM guides revenue below estimates",
-        "Legacy SaaS names under pressure",
-        "AI automation cutting software seats",
-        "ORCL debated as oversold value"
+        "ASML lifts forecast on AI demand",
+        "SK Hynix rallies, Samsung listing chatter",
+        "DRAM and semi volatility punishing options",
+        "Leveraged chip bets whipsaw traders"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 58,
+      "tickers": [
+        "ASML",
+        "HNX3"
+      ]
+    },
+    {
+      "id": "ai-narrative-shift",
+      "title": "AI Narrative Rotation",
+      "icon": "brain",
+      "heat": "building",
+      "bullets": [
+        "Hype shifting from raw compute to verticals",
+        "Legacy SaaS crushed by seat cuts",
+        "IBM plunges as spend moves to AI",
+        "Vertical models seen as real money"
+      ],
+      "sentiment_score": 50,
       "tickers": [
         "IBM",
         "ORCL"
       ]
     },
     {
-      "id": "crypto-btc",
-      "title": "Bitcoin & IBIT Speculation",
+      "id": "trading-losses",
+      "title": "Account Blow-ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Multiple large trading losses shared",
+        "0DTE and DRAM calls devastating accounts",
+        "SpaceX and Roth IRA drawdowns confessed",
+        "Defeated tone across confession posts"
+      ],
+      "sentiment_score": 20,
+      "tickers": [
+        "SpaceX"
+      ]
+    },
+    {
+      "id": "crypto-ibit",
+      "title": "Bitcoin & IBIT",
       "icon": "currency-bitcoin",
       "heat": "building",
       "bullets": [
-        "Large multi-leg IBIT option spreads",
+        "Traders eager for BTC to reignite",
+        "Large IBIT call spread positioning",
         "First six-figure realized day posted",
-        "Traders awaiting fresh BTC volatility",
-        "Long-dated 2028 positioning in play"
+        "Long-dated 2028 leaps in play"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 68,
       "tickers": [
         "IBIT",
         "BTC"
       ]
     },
     {
-      "id": "cpi-macro",
-      "title": "Cooler CPI Print",
-      "icon": "chart-bar",
+      "id": "macro-inflation",
+      "title": "Inflation & Macro Data",
+      "icon": "chart-line",
       "heat": "hot",
       "bullets": [
-        "June CPI beats to the downside",
-        "Core inflation softer than expected",
-        "Rate-cut optimism rekindled",
-        "Broad risk sentiment supported"
+        "June CPI cooler than estimates",
+        "Core CPI flat month-over-month",
+        "Disinflation narrative supports risk appetite",
+        "Fed easing hopes rekindled"
       ],
-      "sentiment_score": 74,
-      "tickers": [
-        "SPY",
-        "SPX"
-      ]
-    },
-    {
-      "id": "ai-narrative-shift",
-      "title": "AI Narrative Rotation",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "Focus shifting to vertical AI models",
-        "General models burning heavy cash",
-        "Skepticism on write-up quality",
-        "Memory demand thesis questioned"
-      ],
-      "sentiment_score": 50,
+      "sentiment_score": 70,
       "tickers": []
     },
     {
-      "id": "yolo-losses",
-      "title": "high-conviction Bets & Account Blow-Ups",
-      "icon": "flame",
+      "id": "single-name-plays",
+      "title": "Single-Name Speculation",
+      "icon": "target",
       "heat": "building",
       "bullets": [
-        "NFLX high-conviction turns painful",
-        "Naked short puts under margin stress",
-        "Small speculative bets celebrated",
-        "Mixed loss and profit posts"
+        "FIG options activity draws speculators",
+        "NFLX leaps facing IV crush risk",
+        "PayPal buyout bid sparks interest",
+        "BE naked put strategies riding bounce"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 52,
       "tickers": [
+        "FIG",
         "NFLX",
+        "PYPL",
         "BE"
-      ]
-    },
-    {
-      "id": "margin-risk",
-      "title": "Global Margin & Leverage Risk",
-      "icon": "alert-triangle",
-      "heat": "normal",
-      "bullets": [
-        "South Korea margin-call ratio spikes",
-        "Leverage stress warnings emerge",
-        "Forced liquidation risk flagged",
-        "Speculative theses on small caps"
-      ],
-      "sentiment_score": 38,
-      "tickers": [
-        "BSP",
-        "CMPS"
       ]
     }
   ],
@@ -126,74 +127,74 @@
     {
       "symbol": "IBM",
       "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "weak guidance drives selloff",
-      "company_name": "International Business Machines"
-    },
-    {
-      "symbol": "IBIT",
-      "sentiment": "bullish",
       "mentions": 4,
-      "signal": "aggressive long-dated option bets",
-      "company_name": "iShares Bitcoin Trust ETF"
+      "signal": "Plunge as AI spend shifts away",
+      "company_name": "International Business Machines"
     },
     {
       "symbol": "ORCL",
       "sentiment": "mixed",
       "mentions": 4,
-      "signal": "oversold value vs frustration",
+      "signal": "Oversold bounce debate",
       "company_name": "Oracle Corporation"
     },
     {
       "symbol": "NFLX",
       "sentiment": "bearish",
       "mentions": 3,
-      "signal": "high-conviction underwater",
+      "signal": "Leaps fear IV crush into earnings",
       "company_name": "Netflix, Inc."
     },
     {
-      "symbol": "BE",
-      "sentiment": "bearish",
+      "symbol": "IBIT",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Aggressive long-dated call spreads",
+      "company_name": "iShares Bitcoin Trust ETF"
+    },
+    {
+      "symbol": "ASML",
+      "sentiment": "bullish",
       "mentions": 2,
-      "signal": "margin-called leverage play",
+      "signal": "Forecast hike on AI demand",
+      "company_name": "ASML Holding N.V. - New York Re"
+    },
+    {
+      "symbol": "FIG",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Speculative options momentum",
+      "company_name": "Figma, Inc."
+    },
+    {
+      "symbol": "BE",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Riding the bounce, selling puts",
       "company_name": "Bloom Energy Corporation"
     },
     {
-      "symbol": "SPY",
-      "sentiment": "neutral",
-      "mentions": 2,
-      "signal": "afternoon scalping favorite",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "CMPS",
+      "symbol": "PYPL",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "structural mispricing thesis",
-      "company_name": "COMPASS Pathways Plc - American"
-    },
-    {
-      "symbol": "BSP",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "short thesis on debt load",
-      "company_name": "Bending Spoons S.p.A."
+      "mentions": 1,
+      "signal": "Buyout bid speculation",
+      "company_name": "PayPal Holdings, Inc."
     }
   ],
   "summary": [
     {
-      "text": "A cooler-than-expected June CPI print reignited rate-cut hopes and lifted broad risk appetite, providing a constructive macro backdrop even as retail engagement stayed split between euphoric IBIT bets and painful software positions.",
+      "text": "Cooler-than-expected June CPI reignited disinflation optimism, supporting risk appetite even as the tape stayed choppy. Semiconductor strength led by ASML's forecast hike and SK Hynix's rally kept AI hardware firmly in focus despite heavy options whipsaw.",
       "tag": "bullish"
     },
     {
-      "text": "IBM's soft revenue guidance triggered a SaaS sell-off, while ORCL's slide sparked debate between value hunters and frustrated bulls. AI narrative fatigue and questioned memory demand added a cautious undertone to the tech complex.",
+      "text": "A wave of confessional loss posts dominated engagement, with traders detailing account blow-ups from 0DTE bets, DRAM calls, and leveraged SpaceX and semi positions. The defeated tone underscores how brutal recent volatility has been for over-leveraged speculators.",
       "tag": "bearish"
     },
     {
-      "text": "Leverage stress signals are flashing, with South Korea's margin-call ratio near record highs and several traders nursing margin-called or naked-option positions. The batch reflects a market balancing macro optimism against building tail risks.",
+      "text": "A structural AI narrative shift is emerging: capital is rotating from raw compute flexing toward vertical applications, punishing legacy names like IBM while sparking oversold-bounce debates around Oracle. Crypto enthusiasm builds around long-dated IBIT positioning.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-14T21:02:00.562710+00:00",
-  "updated_hkt": "2026-07-15 05:02 HKT"
+  "updated_at": "2026-07-15T12:02:22.420449+00:00",
+  "updated_hkt": "2026-07-15 20:02 HKT"
 }
