@@ -1,17 +1,17 @@
 {
-  "bull_pct": 29,
-  "bear_pct": 42,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 0.7,
-  "overall_score": 35,
+  "bull_pct": 24,
+  "bear_pct": 50,
+  "neutral_pct": 26,
+  "bull_bear_ratio": 0.5,
+  "overall_score": 30,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 29,
-    "ai_score": 38,
+    "formula_score": 24,
+    "ai_score": 32,
     "bull_count": 9,
-    "bear_count": 13,
-    "neutral_count": 9,
-    "total_posts": 31,
+    "bear_count": 19,
+    "neutral_count": 10,
+    "total_posts": 38,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,189 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 31,
+  "post_count": 38,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-space-plays",
-      "title": "SpaceX & Space Sector Losses",
+      "id": "semiconductor-carnage",
+      "title": "Semiconductor Trading Losses",
+      "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "Momentum indices post historic July sell-off",
+        "MU, SNDK, STX blow up accounts",
+        "Chip enthusiasm reverses into steep drawdowns",
+        "Traders capitulating after failed rebounds"
+      ],
+      "sentiment_score": 28,
+      "tickers": [
+        "MU",
+        "SNDK",
+        "STX",
+        "TSM"
+      ]
+    },
+    {
+      "id": "space-sector-pain",
+      "title": "Space Sector Blow-ups",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Heavy losses on RKLB, ASTS positions",
-        "SpaceX exposure crushing retail accounts",
-        "Space speculation turned painful",
-        "Young traders wiped out chasing gains"
+        "ASTS convertible note offering pressures shares",
+        "RKLB and ASTS swing traders wiped out",
+        "Large single-name liquidations reported",
+        "Sector sentiment turning sharply negative"
       ],
       "sentiment_score": 22,
       "tickers": [
-        "RKLB",
-        "ASTS"
-      ]
-    },
-    {
-      "id": "paypal-buyout",
-      "title": "PayPal Buyout Speculation",
-      "icon": "briefcase",
-      "heat": "building",
-      "bullets": [
-        "Stripe/Advent offer exceeds $53 billion",
-        "Bagholders question forced liquidation risk",
-        "Call option holders weigh breakeven",
-        "Fresh M&A catalyst drawing attention"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "PYPL"
-      ]
-    },
-    {
-      "id": "ai-semiconductors",
-      "title": "AI & Semiconductor Demand",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "ASML hikes sales forecast twice",
-        "Strong AI chip demand narrative persists",
-        "IBM plunges on AI spending shift",
-        "SK Hynix rising but leveraged plays lag"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "ASML",
-        "IBM",
-        "HNX3"
+        "ASTS",
+        "RKLB"
       ]
     },
     {
       "id": "account-blowups",
-      "title": "Account Blow-Ups & Losses",
+      "title": "Account Blow-ups",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "0DTE speculation destroying accounts",
-        "Traders confessing lost self-belief",
-        "Roth IRAs down sharply on options",
-        "Recurring theme of capitulation"
+        "Multiple full-account loss posts surfacing",
+        "Options speculation erases pandemic-era savings",
+        "Community rallies around defeated traders",
+        "Fatigue and capitulation dominate tone"
       ],
       "sentiment_score": 15,
       "tickers": [
-        "SOUN",
-        "NFLX",
+        "ASTS",
+        "MU",
         "IONQ"
       ]
     },
     {
-      "id": "macro-data",
-      "title": "Macro & Market Commentary",
-      "icon": "trending-up",
-      "heat": "normal",
-      "bullets": [
-        "Wholesale prices unexpectedly declined in June",
-        "Buffett warns on gambling-driven valuations",
-        "Gasoline drop eases inflation reads",
-        "Anthropic mega-IPO chatter emerging"
-      ],
-      "sentiment_score": 50,
-      "tickers": []
-    },
-    {
-      "id": "big-wins",
-      "title": "Profit Posts & High-Conviction Bets",
+      "id": "options-speculation",
+      "title": "0DTE and Options Gambling",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "BABA calls delivering strong gains",
-        "HOOD momentum rewarding holders",
-        "Oil trading turning profitable",
-        "FIG showing unusual options activity"
+        "0DTE scalping strategies gaining followers",
+        "SPX/SPY intraday scalp claims traction",
+        "Buffett warns gambling has replaced value",
+        "Reckless expiry confusion causing losses"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 40,
+      "tickers": [
+        "SPX",
+        "SPY"
+      ]
+    },
+    {
+      "id": "buyout-speculation",
+      "title": "PayPal Buyout Chatter",
+      "icon": "briefcase",
+      "heat": "building",
+      "bullets": [
+        "Stripe bid sparks bagholder anxiety",
+        "Call buyers questioning buyout mechanics",
+        "Forced liquidation concerns raised",
+        "Skepticism on PYPL and ADBE trades"
+      ],
+      "sentiment_score": 38,
+      "tickers": [
+        "PYPL",
+        "ADBE"
+      ]
+    },
+    {
+      "id": "isolated-winners",
+      "title": "Isolated Winning Trades",
+      "icon": "trending-up",
+      "heat": "normal",
+      "bullets": [
+        "BABA call trades print strong returns",
+        "HOOD delivering consistent weekly gains",
+        "TSMC earnings reward select bulls",
+        "Bright spots amid broad pain"
+      ],
+      "sentiment_score": 68,
       "tickers": [
         "BABA",
         "HOOD",
-        "FIG"
+        "TSM",
+        "MSTR"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "PYPL",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Buyout uncertainty divides holders",
-      "company_name": "PayPal Holdings, Inc."
+      "symbol": "ASTS",
+      "sentiment": "bearish",
+      "mentions": 5,
+      "signal": "Convertible dilution triggers heavy selling",
+      "company_name": "AST SpaceMobile, Inc."
     },
     {
-      "symbol": "BABA",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Calls printing on bounce",
-      "company_name": "Alibaba Group Holding Limited"
+      "symbol": "MU",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Momentum trades collapse to zero",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "RKLB",
       "sentiment": "bearish",
       "mentions": 3,
-      "signal": "Space swing trades collapsing",
+      "signal": "Swing traders wiped out",
       "company_name": "Rocket Lab Corporation"
     },
     {
-      "symbol": "ASTS",
+      "symbol": "SNDK",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Round-trip from top to bottom",
+      "company_name": "Sandisk Corporation"
+    },
+    {
+      "symbol": "PYPL",
       "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Buyout uncertainty rattles holders",
+      "company_name": "PayPal Holdings, Inc."
+    },
+    {
+      "symbol": "BABA",
+      "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Losses on space speculation",
-      "company_name": "AST SpaceMobile, Inc."
+      "signal": "Call buyers celebrating bounce",
+      "company_name": "Alibaba Group Holding Limited"
     },
     {
       "symbol": "HOOD",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Steady weekly gains",
+      "signal": "Reliable weekly gains",
       "company_name": "Robinhood Markets, Inc."
     },
     {
-      "symbol": "ASML",
+      "symbol": "TSM",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Raised forecast on AI demand",
-      "company_name": "ASML Holding N.V. - New York Re"
-    },
-    {
-      "symbol": "IBM",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Plunge on AI spending shift",
-      "company_name": "International Business Machines"
-    },
-    {
-      "symbol": "SOUN",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Deep underwater, second-guessing hold",
-      "company_name": "SoundHound AI, Inc."
+      "signal": "Earnings reward bulls",
+      "company_name": "Taiwan Semiconductor Manufactur"
     }
   ],
   "summary": [
     {
-      "text": "The batch skews defeated, dominated by capitulation posts around SpaceX, space names, and 0DTE options that have wiped out retail accounts. Multiple traders openly confess lost conviction, marking a notably fearful tone despite scattered wins.",
+      "text": "The batch is dominated by capitulation, as semiconductor and space names unwind violently after a historic momentum sell-off. Multiple full-account blow-ups from MU, SNDK, and ASTS trades signal exhausted, defeated retail positioning rather than buying enthusiasm.",
       "tag": "bearish"
     },
     {
-      "text": "PayPal's $53 billion Stripe/Advent buyout is the freshest live catalyst, sparking confusion over forced liquidation and call option breakevens. Traders are actively positioning around the deal without clear consensus.",
-      "tag": "notable"
+      "text": "AST SpaceMobile's $1 billion convertible note offering added dilution fears to an already battered space sector, with RKLB and ASTS swing traders reporting steep losses and abandoned positions.",
+      "tag": "bearish"
     },
     {
-      "text": "Pockets of greed survive in AI semiconductors, with ASML raising forecasts twice and BABA and HOOD rewarding holders, though IBM's plunge on AI spending shifts underscores the split market.",
-      "tag": "bullish"
+      "text": "Pockets of greed persist through BABA, HOOD, and TSMC winners, alongside growing 0DTE scalping bravado, even as Buffett's caution that gambling has replaced value investing captures the prevailing froth.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-15T21:02:21.023775+00:00",
-  "updated_hkt": "2026-07-16 05:02 HKT"
+  "updated_at": "2026-07-16T12:02:38.812204+00:00",
+  "updated_hkt": "2026-07-16 20:02 HKT"
 }
