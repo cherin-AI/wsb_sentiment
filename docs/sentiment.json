@@ -1,17 +1,17 @@
 {
-  "bull_pct": 24,
-  "bear_pct": 50,
-  "neutral_pct": 26,
-  "bull_bear_ratio": 0.5,
-  "overall_score": 30,
+  "bull_pct": 20,
+  "bear_pct": 56,
+  "neutral_pct": 24,
+  "bull_bear_ratio": 0.4,
+  "overall_score": 24,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 24,
-    "ai_score": 32,
-    "bull_count": 9,
-    "bear_count": 19,
-    "neutral_count": 10,
-    "total_posts": 38,
+    "formula_score": 20,
+    "ai_score": 26,
+    "bull_count": 11,
+    "bear_count": 30,
+    "neutral_count": 13,
+    "total_posts": 54,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,189 +19,190 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 38,
+  "post_count": 54,
   "hours_window": 24,
   "themes": [
     {
-      "id": "semiconductor-carnage",
-      "title": "Semiconductor Trading Losses",
-      "icon": "cpu",
+      "id": "momentum-crash",
+      "title": "Momentum & High-Beta Meltdown",
+      "icon": "trending-down",
       "heat": "hot",
       "bullets": [
-        "Momentum indices post historic July sell-off",
-        "MU, SNDK, STX blow up accounts",
-        "Chip enthusiasm reverses into steep drawdowns",
-        "Traders capitulating after failed rebounds"
+        "Worst momentum drawdown since 2009",
+        "Growth names relentlessly repriced lower",
+        "Institutional indices flagging record declines",
+        "July pullback deepening into rout"
       ],
-      "sentiment_score": 28,
-      "tickers": [
-        "MU",
-        "SNDK",
-        "STX",
-        "TSM"
-      ]
-    },
-    {
-      "id": "space-sector-pain",
-      "title": "Space Sector Blow-ups",
-      "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "ASTS convertible note offering pressures shares",
-        "RKLB and ASTS swing traders wiped out",
-        "Large single-name liquidations reported",
-        "Sector sentiment turning sharply negative"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "ASTS",
-        "RKLB"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Account Blow-ups",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Multiple full-account loss posts surfacing",
-        "Options speculation erases pandemic-era savings",
-        "Community rallies around defeated traders",
-        "Fatigue and capitulation dominate tone"
-      ],
-      "sentiment_score": 15,
-      "tickers": [
-        "ASTS",
-        "MU",
-        "IONQ"
-      ]
-    },
-    {
-      "id": "options-speculation",
-      "title": "0DTE and Options Gambling",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "0DTE scalping strategies gaining followers",
-        "SPX/SPY intraday scalp claims traction",
-        "Buffett warns gambling has replaced value",
-        "Reckless expiry confusion causing losses"
-      ],
-      "sentiment_score": 40,
+      "sentiment_score": 12,
       "tickers": [
         "SPX",
         "SPY"
       ]
     },
     {
-      "id": "buyout-speculation",
-      "title": "PayPal Buyout Chatter",
-      "icon": "briefcase",
-      "heat": "building",
+      "id": "semiconductor-pain",
+      "title": "Semiconductor Trades Unravel",
+      "icon": "cpu",
+      "heat": "hot",
       "bullets": [
-        "Stripe bid sparks bagholder anxiety",
-        "Call buyers questioning buyout mechanics",
-        "Forced liquidation concerns raised",
-        "Skepticism on PYPL and ADBE trades"
+        "MU, SNDK, STX inflict heavy damage",
+        "Chip calls bleeding across accounts",
+        "TSMC bright spot amid weakness",
+        "Traders questioning sector direction"
       ],
-      "sentiment_score": 38,
+      "sentiment_score": 28,
       "tickers": [
-        "PYPL",
-        "ADBE"
+        "MU",
+        "SNDK",
+        "STX",
+        "TSMC",
+        "MRVL",
+        "ARM"
       ]
     },
     {
-      "id": "isolated-winners",
-      "title": "Isolated Winning Trades",
-      "icon": "trending-up",
-      "heat": "normal",
+      "id": "loss-posts",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
       "bullets": [
-        "BABA call trades print strong returns",
-        "HOOD delivering consistent weekly gains",
-        "TSMC earnings reward select bulls",
-        "Bright spots amid broad pain"
+        "Cascade of capitulation loss posts",
+        "Options speculation wiping out savings",
+        "Traders declaring themselves finished",
+        "Defeated, gallows-humor tone dominant"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 8,
       "tickers": [
-        "BABA",
-        "HOOD",
-        "TSM",
+        "MU",
+        "ASTS",
+        "ARM"
+      ]
+    },
+    {
+      "id": "space-selloff",
+      "title": "Space Sector Bleeding",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "ASTS convertible note offering pressures shares",
+        "Bag holders enduring brutal week",
+        "RKLB and sector savaged despite news",
+        "Wash-sale exits piling up"
+      ],
+      "sentiment_score": 18,
+      "tickers": [
+        "ASTS",
+        "RKLB",
+        "SPCX"
+      ]
+    },
+    {
+      "id": "profit-posts",
+      "title": "Isolated Big Wins",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "IBM and TSMC earnings plays print",
+        "Covered-call campers weathering the storm",
+        "Rare euphoria against bearish tide",
+        "Disciplined entries rewarded"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "IBM",
+        "TSMC",
         "MSTR"
+      ]
+    },
+    {
+      "id": "netflix-earnings",
+      "title": "Netflix Earnings Reaction",
+      "icon": "player-play",
+      "heat": "building",
+      "bullets": [
+        "Shares fall on lukewarm results",
+        "Viewing-data disclosure shake-up rattles traders",
+        "Earnings high-conviction positions at risk",
+        "Volatility around release elevated"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "NFLX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "ASTS",
-      "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "Convertible dilution triggers heavy selling",
-      "company_name": "AST SpaceMobile, Inc."
-    },
-    {
       "symbol": "MU",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Momentum trades collapse to zero",
+      "mentions": 6,
+      "signal": "Relentless calls decay, capitulation",
       "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "RKLB",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Swing traders wiped out",
-      "company_name": "Rocket Lab Corporation"
     },
     {
       "symbol": "SNDK",
       "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Round-trip from top to bottom",
+      "mentions": 5,
+      "signal": "Wild swings, some timed exits",
       "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "PYPL",
+      "symbol": "ASTS",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Buyout uncertainty rattles holders",
-      "company_name": "PayPal Holdings, Inc."
+      "mentions": 5,
+      "signal": "Dilution and heavy bag-holding",
+      "company_name": "AST SpaceMobile, Inc."
     },
     {
-      "symbol": "BABA",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Call buyers celebrating bounce",
-      "company_name": "Alibaba Group Holding Limited"
+      "symbol": "NFLX",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Earnings disappointment, drop",
+      "company_name": "Netflix, Inc."
     },
     {
-      "symbol": "HOOD",
+      "symbol": "TSMC",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Reliable weekly gains",
-      "company_name": "Robinhood Markets, Inc."
+      "mentions": 4,
+      "signal": "Earnings win, US expansion",
+      "company_name": "TAIWANSMFAC DRN"
     },
     {
-      "symbol": "TSM",
+      "symbol": "IBM",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Earnings reward bulls",
-      "company_name": "Taiwan Semiconductor Manufactur"
+      "signal": "Well-timed dip-buy payoff",
+      "company_name": "International Business Machines"
+    },
+    {
+      "symbol": "RKLB",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Dragged down with space sector",
+      "company_name": "Rocket Lab Corporation"
+    },
+    {
+      "symbol": "STX",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Contributed to semi round-trip losses",
+      "company_name": "Seagate Technology Holdings PLC"
     }
   ],
   "summary": [
     {
-      "text": "The batch is dominated by capitulation, as semiconductor and space names unwind violently after a historic momentum sell-off. Multiple full-account blow-ups from MU, SNDK, and ASTS trades signal exhausted, defeated retail positioning rather than buying enthusiasm.",
+      "text": "A historic momentum unwind dominates the tape, with high-beta and growth names suffering their steepest monthly drawdown since 2009. Semiconductor trades led by MU and SNDK cratered, dragging retail options books into deep losses.",
       "tag": "bearish"
     },
     {
-      "text": "AST SpaceMobile's $1 billion convertible note offering added dilution fears to an already battered space sector, with RKLB and ASTS swing traders reporting steep losses and abandoned positions.",
+      "text": "Sentiment is broadly defeated: the feed is saturated with capitulation loss posts, blown-up accounts, and gallows humor. Speculative traders openly declaring surrender signals fear rather than the buy-the-dip energy typically seen at bottoms.",
       "tag": "bearish"
     },
     {
-      "text": "Pockets of greed persist through BABA, HOOD, and TSMC winners, alongside growing 0DTE scalping bravado, even as Buffett's caution that gambling has replaced value investing captures the prevailing froth.",
+      "text": "Bright spots remain isolated—TSMC and IBM earnings plays printed, and covered-call campers weathered the storm. The Netflix earnings miss and ASTS convertible offering add fresh downside catalysts into an already fragile market.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-16T12:02:38.812204+00:00",
-  "updated_hkt": "2026-07-16 20:02 HKT"
+  "updated_at": "2026-07-16T21:03:36.025250+00:00",
+  "updated_hkt": "2026-07-17 05:03 HKT"
 }
