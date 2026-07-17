@@ -1,17 +1,17 @@
 {
-  "bull_pct": 17,
-  "bear_pct": 60,
-  "neutral_pct": 23,
-  "bull_bear_ratio": 0.3,
-  "overall_score": 25,
-  "overall_label": "Fear",
+  "bull_pct": 36,
+  "bear_pct": 33,
+  "neutral_pct": 31,
+  "bull_bear_ratio": 1.1,
+  "overall_score": 44,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 17,
-    "ai_score": 28,
-    "bull_count": 7,
-    "bear_count": 25,
-    "neutral_count": 10,
-    "total_posts": 42,
+    "formula_score": 36,
+    "ai_score": 48,
+    "bull_count": 13,
+    "bear_count": 12,
+    "neutral_count": 11,
+    "total_posts": 36,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,192 +19,189 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 42,
+  "post_count": 36,
   "hours_window": 24,
   "themes": [
     {
-      "id": "memory-chip-selloff",
-      "title": "Memory & Semiconductor Rout",
+      "id": "spy-0dte-gambling",
+      "title": "SPY 0DTE Speculation",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "High-conviction directional gambles dominate flow",
+        "Wild intraday swings from wins to blowups",
+        "Bears positioning for Monday downside",
+        "Retail chasing same-day option lotteries"
+      ],
+      "sentiment_score": 45,
+      "tickers": [
+        "SPY"
+      ]
+    },
+    {
+      "id": "big-tech-earnings",
+      "title": "Big Tech Earnings Bets",
       "icon": "cpu",
-      "heat": "hot",
+      "heat": "building",
       "bullets": [
-        "Memory names selling off relentlessly",
-        "Micron, Sandisk, WDC under pressure",
-        "Traders trapped in ITM calls",
-        "No clear catalyst despite TSMC strength"
+        "GOOGL viewed as undervalued into Q2",
+        "AAPL overtakes Nvidia in market cap",
+        "AMZN and NFLX earnings speculation active",
+        "Traders position ahead of catalysts"
       ],
-      "sentiment_score": 25,
+      "sentiment_score": 58,
       "tickers": [
-        "MU",
-        "SNDK",
-        "WDC",
-        "TSM"
+        "GOOGL",
+        "AAPL",
+        "NVDA",
+        "AMZN",
+        "NFLX"
       ]
     },
     {
-      "id": "growth-drawdown",
-      "title": "High-Beta Growth Meltdown",
-      "icon": "trending-down",
-      "heat": "hot",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Deals",
+      "icon": "brain",
+      "heat": "building",
       "bullets": [
-        "Momentum stocks sharply annihilated",
-        "Comparisons to dot-com scale drawdown",
-        "Seasonal July pullback intensifying",
-        "Regret over missing put positioning"
+        "Meta-Anthropic compute lease reported",
+        "DeepSeek valuation draws attention",
+        "AI capital shifts reshaping leadership",
+        "Cloud and compute narratives strengthen"
       ],
-      "sentiment_score": 18,
+      "sentiment_score": 62,
       "tickers": [
-        "NBIS",
-        "MRVL",
-        "ARM",
-        "AMD"
+        "META",
+        "GOOGL"
       ]
     },
     {
-      "id": "loss-posts",
+      "id": "trading-losses",
       "title": "Account Blow-Ups",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Widespread trading losses on display",
-        "0DTE strategies wiping accounts",
-        "Shares-only holders still stung",
-        "Hopes pinned on year-end recovery"
+        "Multiple large drawdowns confessed",
+        "Deep YTD losses on 0DTE strategies",
+        "Greed cited as recurring cause",
+        "Traders hoping to recover into year-end"
       ],
-      "sentiment_score": 12,
+      "sentiment_score": 22,
       "tickers": [
         "SPY",
-        "ARM",
-        "WDC"
+        "AMD",
+        "ORCL"
       ]
     },
     {
-      "id": "earnings-reactions",
-      "title": "Earnings Disappointments",
-      "icon": "flame",
-      "heat": "building",
+      "id": "semiconductors",
+      "title": "Semiconductor Weakness",
+      "icon": "trending-down",
+      "heat": "normal",
       "bullets": [
-        "Netflix drops on lukewarm results",
-        "Doubling down into NFLX earnings",
-        "Guidance concerns pressure names",
-        "Volatility around report catalysts"
+        "Memory stocks sliding without catalyst",
+        "TSM strong earnings fail to lift peers",
+        "Micron pressured by weak sentiment",
+        "Traders debate bottom timing"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 35,
       "tickers": [
-        "NFLX",
-        "AMZN",
-        "IBM"
+        "MU",
+        "TSM",
+        "MRAM"
       ]
     },
     {
-      "id": "tesla-space-shorts",
-      "title": "Tesla & SpaceX Shorts",
+      "id": "leveraged-yolos",
+      "title": "Leveraged high-conviction Positions",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Starship test launch aborted",
-        "Leveraged short ETFs bleeding",
-        "Elon-linked bag-holding pain",
-        "Loss-harvest debates ongoing"
+        "Six-figure borrowed capital in LEAPS",
+        "Concentrated single-name conviction plays",
+        "Themed catalyst bets on consumer names",
+        "Speculative traders swinging for max upside"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 55,
       "tickers": [
-        "TSLQ",
-        "SPCX",
-        "SSPC"
-      ]
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-sad",
-      "heat": "normal",
-      "bullets": [
-        "Defeated tone dominating discussion",
-        "Occasional big wins amid losses",
-        "Crypto proxies flagged as weak",
-        "Truth API stokes manipulation fears"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "BMNR",
-        "RDDT",
-        "UBER"
+        "TE",
+        "CLX",
+        "MUU"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Trapped call holders, three-week decline",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "SNDK",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Volatile, painful bag-holding",
-      "company_name": "Sandisk Corporation"
-    },
-    {
-      "symbol": "NFLX",
+      "symbol": "SPY",
       "sentiment": "mixed",
+      "mentions": 8,
+      "signal": "0DTE battleground, both sides betting",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "GOOGL",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "seen as undervalued into earnings",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "AAPL",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "top market cap but overextension warnings",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "META",
+      "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Earnings drop, contrarian doubling down",
-      "company_name": "Netflix, Inc."
+      "signal": "AI compute deal optimism",
+      "company_name": "Meta Platforms, Inc."
     },
     {
       "symbol": "TSM",
-      "sentiment": "bullish",
+      "sentiment": "mixed",
       "mentions": 3,
-      "signal": "Strong earnings, US capacity pledge",
+      "signal": "strong earnings, muted peer reaction",
       "company_name": "Taiwan Semiconductor Manufactur"
     },
     {
-      "symbol": "WDC",
+      "symbol": "MU",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Memory losses on display",
-      "company_name": "Western Digital Corporation"
+      "signal": "memory weakness, no catalyst",
+      "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "ARM",
+      "symbol": "ORCL",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Capitulation after heavy losses",
-      "company_name": "Arm Holdings plc"
+      "signal": "over-leveraged calls underwater",
+      "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "IBM",
+      "symbol": "NFLX",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Rare winning call trade",
-      "company_name": "International Business Machines"
-    },
-    {
-      "symbol": "AMZN",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Hype-driven earnings optimism",
-      "company_name": "Amazon.com, Inc."
+      "signal": "reasonless high-conviction conviction",
+      "company_name": "Netflix, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment across the batch is decisively defeated, with memory and high-beta growth names in freefall. Traders describe a drawdown rivaling historic corrections, and loss posts dominate the feed as capitulation spreads through semiconductor and momentum positions.",
-      "tag": "bearish"
-    },
-    {
-      "text": "Semiconductors are the epicenter of pain, with Micron, Sandisk and WDC bleeding despite TSMC's strong earnings and fresh $100B US expansion pledge, highlighting a disconnect between fundamentals and battered retail positioning.",
+      "text": "Sentiment sits near neutral as euphoric 0DTE winners collide with painful account blow-ups. SPY dominates as the speculative battleground, with bears loading Monday puts while bulls chase same-day lottery tickets, reflecting a market split between conviction and capitulation.",
       "tag": "notable"
     },
     {
-      "text": "Isolated winners on IBM and speculative bets on Netflix earnings and Reddit provide flickers of bullishness, but the prevailing energy is fear, forced trimming, and hopes pinned on a year-end recovery.",
+      "text": "Big tech carries the bullish undertone, with GOOGL framed as undervalued into Q2 earnings, AAPL claiming top market cap, and Meta-Anthropic AI compute deals reinforcing the infrastructure narrative. Traders are actively positioning around imminent catalysts.",
+      "tag": "bullish"
+    },
+    {
+      "text": "Beneath the speculation runs a strong current of pain: heavy year-to-date drawdowns, leveraged positions underwater, and semiconductor weakness despite TSM's strong results. Greed-driven losses temper the batch's overall risk appetite.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-17T12:02:56.907620+00:00",
-  "updated_hkt": "2026-07-17 20:02 HKT"
+  "updated_at": "2026-07-17T21:02:33.507030+00:00",
+  "updated_hkt": "2026-07-18 05:02 HKT"
 }

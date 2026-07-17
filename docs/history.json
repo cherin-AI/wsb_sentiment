@@ -684,5 +684,12 @@
     "label": "Fear",
     "formula_score": 17,
     "ai_score": 28
+  },
+  {
+    "ts": "2026-07-18 05:02 HKT",
+    "score": 44,
+    "label": "Neutral",
+    "formula_score": 36,
+    "ai_score": 48
   }
 ]
