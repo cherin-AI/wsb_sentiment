@@ -1,17 +1,17 @@
 {
-  "bull_pct": 20,
-  "bear_pct": 56,
-  "neutral_pct": 24,
-  "bull_bear_ratio": 0.4,
-  "overall_score": 24,
+  "bull_pct": 17,
+  "bear_pct": 60,
+  "neutral_pct": 23,
+  "bull_bear_ratio": 0.3,
+  "overall_score": 25,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 20,
-    "ai_score": 26,
-    "bull_count": 11,
-    "bear_count": 30,
-    "neutral_count": 13,
-    "total_posts": 54,
+    "formula_score": 17,
+    "ai_score": 28,
+    "bull_count": 7,
+    "bear_count": 25,
+    "neutral_count": 10,
+    "total_posts": 42,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,45 +19,45 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 54,
+  "post_count": 42,
   "hours_window": 24,
   "themes": [
     {
-      "id": "momentum-crash",
-      "title": "Momentum & High-Beta Meltdown",
-      "icon": "trending-down",
-      "heat": "hot",
-      "bullets": [
-        "Worst momentum drawdown since 2009",
-        "Growth names relentlessly repriced lower",
-        "Institutional indices flagging record declines",
-        "July pullback deepening into rout"
-      ],
-      "sentiment_score": 12,
-      "tickers": [
-        "SPX",
-        "SPY"
-      ]
-    },
-    {
-      "id": "semiconductor-pain",
-      "title": "Semiconductor Trades Unravel",
+      "id": "memory-chip-selloff",
+      "title": "Memory & Semiconductor Rout",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "MU, SNDK, STX inflict heavy damage",
-        "Chip calls bleeding across accounts",
-        "TSMC bright spot amid weakness",
-        "Traders questioning sector direction"
+        "Memory names selling off relentlessly",
+        "Micron, Sandisk, WDC under pressure",
+        "Traders trapped in ITM calls",
+        "No clear catalyst despite TSMC strength"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 25,
       "tickers": [
         "MU",
         "SNDK",
-        "STX",
-        "TSMC",
+        "WDC",
+        "TSM"
+      ]
+    },
+    {
+      "id": "growth-drawdown",
+      "title": "High-Beta Growth Meltdown",
+      "icon": "trending-down",
+      "heat": "hot",
+      "bullets": [
+        "Momentum stocks sharply annihilated",
+        "Comparisons to dot-com scale drawdown",
+        "Seasonal July pullback intensifying",
+        "Regret over missing put positioning"
+      ],
+      "sentiment_score": 18,
+      "tickers": [
+        "NBIS",
         "MRVL",
-        "ARM"
+        "ARM",
+        "AMD"
       ]
     },
     {
@@ -66,68 +66,70 @@
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Cascade of capitulation loss posts",
-        "Options speculation wiping out savings",
-        "Traders declaring themselves finished",
-        "Defeated, gallows-humor tone dominant"
+        "Widespread trading losses on display",
+        "0DTE strategies wiping accounts",
+        "Shares-only holders still stung",
+        "Hopes pinned on year-end recovery"
       ],
-      "sentiment_score": 8,
+      "sentiment_score": 12,
       "tickers": [
-        "MU",
-        "ASTS",
-        "ARM"
+        "SPY",
+        "ARM",
+        "WDC"
       ]
     },
     {
-      "id": "space-selloff",
-      "title": "Space Sector Bleeding",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "ASTS convertible note offering pressures shares",
-        "Bag holders enduring brutal week",
-        "RKLB and sector savaged despite news",
-        "Wash-sale exits piling up"
-      ],
-      "sentiment_score": 18,
-      "tickers": [
-        "ASTS",
-        "RKLB",
-        "SPCX"
-      ]
-    },
-    {
-      "id": "profit-posts",
-      "title": "Isolated Big Wins",
+      "id": "earnings-reactions",
+      "title": "Earnings Disappointments",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "IBM and TSMC earnings plays print",
-        "Covered-call campers weathering the storm",
-        "Rare euphoria against bearish tide",
-        "Disciplined entries rewarded"
+        "Netflix drops on lukewarm results",
+        "Doubling down into NFLX earnings",
+        "Guidance concerns pressure names",
+        "Volatility around report catalysts"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 32,
       "tickers": [
-        "IBM",
-        "TSMC",
-        "MSTR"
+        "NFLX",
+        "AMZN",
+        "IBM"
       ]
     },
     {
-      "id": "netflix-earnings",
-      "title": "Netflix Earnings Reaction",
-      "icon": "player-play",
+      "id": "tesla-space-shorts",
+      "title": "Tesla & SpaceX Shorts",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Shares fall on lukewarm results",
-        "Viewing-data disclosure shake-up rattles traders",
-        "Earnings high-conviction positions at risk",
-        "Volatility around release elevated"
+        "Starship test launch aborted",
+        "Leveraged short ETFs bleeding",
+        "Elon-linked bag-holding pain",
+        "Loss-harvest debates ongoing"
       ],
       "sentiment_score": 30,
       "tickers": [
-        "NFLX"
+        "TSLQ",
+        "SPCX",
+        "SSPC"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-sad",
+      "heat": "normal",
+      "bullets": [
+        "Defeated tone dominating discussion",
+        "Occasional big wins amid losses",
+        "Crypto proxies flagged as weak",
+        "Truth API stokes manipulation fears"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "BMNR",
+        "RDDT",
+        "UBER"
       ]
     }
   ],
@@ -135,74 +137,74 @@
     {
       "symbol": "MU",
       "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "Relentless calls decay, capitulation",
+      "mentions": 4,
+      "signal": "Trapped call holders, three-week decline",
       "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "SNDK",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Wild swings, some timed exits",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Volatile, painful bag-holding",
       "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "ASTS",
-      "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "Dilution and heavy bag-holding",
-      "company_name": "AST SpaceMobile, Inc."
-    },
-    {
       "symbol": "NFLX",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Earnings disappointment, drop",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Earnings drop, contrarian doubling down",
       "company_name": "Netflix, Inc."
     },
     {
-      "symbol": "TSMC",
+      "symbol": "TSM",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Earnings win, US expansion",
-      "company_name": "TAIWANSMFAC DRN"
+      "mentions": 3,
+      "signal": "Strong earnings, US capacity pledge",
+      "company_name": "Taiwan Semiconductor Manufactur"
+    },
+    {
+      "symbol": "WDC",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Memory losses on display",
+      "company_name": "Western Digital Corporation"
+    },
+    {
+      "symbol": "ARM",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Capitulation after heavy losses",
+      "company_name": "Arm Holdings plc"
     },
     {
       "symbol": "IBM",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Well-timed dip-buy payoff",
+      "signal": "Rare winning call trade",
       "company_name": "International Business Machines"
     },
     {
-      "symbol": "RKLB",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Dragged down with space sector",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "STX",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Contributed to semi round-trip losses",
-      "company_name": "Seagate Technology Holdings PLC"
+      "symbol": "AMZN",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Hype-driven earnings optimism",
+      "company_name": "Amazon.com, Inc."
     }
   ],
   "summary": [
     {
-      "text": "A historic momentum unwind dominates the tape, with high-beta and growth names suffering their steepest monthly drawdown since 2009. Semiconductor trades led by MU and SNDK cratered, dragging retail options books into deep losses.",
+      "text": "Sentiment across the batch is decisively defeated, with memory and high-beta growth names in freefall. Traders describe a drawdown rivaling historic corrections, and loss posts dominate the feed as capitulation spreads through semiconductor and momentum positions.",
       "tag": "bearish"
     },
     {
-      "text": "Sentiment is broadly defeated: the feed is saturated with capitulation loss posts, blown-up accounts, and gallows humor. Speculative traders openly declaring surrender signals fear rather than the buy-the-dip energy typically seen at bottoms.",
-      "tag": "bearish"
-    },
-    {
-      "text": "Bright spots remain isolated—TSMC and IBM earnings plays printed, and covered-call campers weathered the storm. The Netflix earnings miss and ASTS convertible offering add fresh downside catalysts into an already fragile market.",
+      "text": "Semiconductors are the epicenter of pain, with Micron, Sandisk and WDC bleeding despite TSMC's strong earnings and fresh $100B US expansion pledge, highlighting a disconnect between fundamentals and battered retail positioning.",
       "tag": "notable"
+    },
+    {
+      "text": "Isolated winners on IBM and speculative bets on Netflix earnings and Reddit provide flickers of bullishness, but the prevailing energy is fear, forced trimming, and hopes pinned on a year-end recovery.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-16T21:03:36.025250+00:00",
-  "updated_hkt": "2026-07-17 05:03 HKT"
+  "updated_at": "2026-07-17T12:02:56.907620+00:00",
+  "updated_hkt": "2026-07-17 20:02 HKT"
 }
