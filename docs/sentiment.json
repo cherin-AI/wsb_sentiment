@@ -1,16 +1,16 @@
 {
-  "bull_pct": 36,
-  "bear_pct": 33,
-  "neutral_pct": 31,
-  "bull_bear_ratio": 1.1,
-  "overall_score": 44,
+  "bull_pct": 50,
+  "bear_pct": 36,
+  "neutral_pct": 14,
+  "bull_bear_ratio": 1.4,
+  "overall_score": 56,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 36,
-    "ai_score": 48,
-    "bull_count": 13,
-    "bear_count": 12,
-    "neutral_count": 11,
+    "formula_score": 50,
+    "ai_score": 58,
+    "bull_count": 18,
+    "bear_count": 13,
+    "neutral_count": 5,
     "total_posts": 36,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
@@ -23,110 +23,112 @@
   "hours_window": 24,
   "themes": [
     {
-      "id": "spy-0dte-gambling",
-      "title": "SPY 0DTE Speculation",
-      "icon": "flame",
+      "id": "spacex-spcx",
+      "title": "SpaceX IPO Speculation",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "High-conviction directional gambles dominate flow",
-        "Wild intraday swings from wins to blowups",
-        "Bears positioning for Monday downside",
-        "Retail chasing same-day option lotteries"
+        "Starship launch catalyst draws traders",
+        "Below-IPO price framed as opportunity",
+        "Aggressive puts and calls positioning",
+        "GOOGL indirect SpaceX exposure discussed"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 60,
       "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "big-tech-earnings",
-      "title": "Big Tech Earnings Bets",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "GOOGL viewed as undervalued into Q2",
-        "AAPL overtakes Nvidia in market cap",
-        "AMZN and NFLX earnings speculation active",
-        "Traders position ahead of catalysts"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "GOOGL",
-        "AAPL",
-        "NVDA",
-        "AMZN",
-        "NFLX"
-      ]
-    },
-    {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure Deals",
-      "icon": "brain",
-      "heat": "building",
-      "bullets": [
-        "Meta-Anthropic compute lease reported",
-        "DeepSeek valuation draws attention",
-        "AI capital shifts reshaping leadership",
-        "Cloud and compute narratives strengthen"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "META",
+        "SPCX",
         "GOOGL"
       ]
     },
     {
-      "id": "trading-losses",
+      "id": "spy-0dte",
+      "title": "SPY 0DTE Scalping",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Heavy 0DTE options gambling activity",
+        "Big wins and rapid blow-ups",
+        "Bears positioning for Monday drop",
+        "Extreme intraday swings dominate feed"
+      ],
+      "sentiment_score": 52,
+      "tickers": [
+        "SPY",
+        "SPX"
+      ]
+    },
+    {
+      "id": "ai-megacaps",
+      "title": "AI Megacap Bets",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "Meta-Anthropic compute lease deal",
+        "Apple overtakes Nvidia in value",
+        "GOOGL earnings anticipation building",
+        "Sovereign AI investment thesis circulating"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "META",
+        "GOOGL",
+        "AAPL",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "loss-posts",
       "title": "Account Blow-Ups",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Multiple large drawdowns confessed",
-        "Deep YTD losses on 0DTE strategies",
-        "Greed cited as recurring cause",
-        "Traders hoping to recover into year-end"
+        "Greed-driven margin puts backfire",
+        "0DTE spirals into debt",
+        "Multiple portfolio wipeouts shared",
+        "Recovery attempts compound losses"
       ],
       "sentiment_score": 22,
       "tickers": [
-        "SPY",
-        "AMD",
+        "CRWV",
+        "ORCL",
+        "MU",
+        "SLV"
+      ]
+    },
+    {
+      "id": "earnings-season",
+      "title": "Earnings Positioning",
+      "icon": "calendar",
+      "heat": "building",
+      "bullets": [
+        "GOOGL reports July 22",
+        "Weekly earnings thread active",
+        "Long-dated LEAPS bets placed",
+        "Traders eyeing megacap catalysts"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "GOOGL",
+        "NFLX",
         "ORCL"
       ]
     },
     {
-      "id": "semiconductors",
-      "title": "Semiconductor Weakness",
-      "icon": "trending-down",
+      "id": "volatility-plays",
+      "title": "Volatility & Contrarian Trades",
+      "icon": "trending-up",
       "heat": "normal",
       "bullets": [
-        "Memory stocks sliding without catalyst",
-        "TSM strong earnings fail to lift peers",
-        "Micron pressured by weak sentiment",
-        "Traders debate bottom timing"
+        "UVXY volatility scalp profits",
+        "Bearish VIX positioning discussed",
+        "Speculative single-name YOLOs",
+        "Contrarian catalyst-driven bets"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 45,
       "tickers": [
-        "MU",
-        "TSM",
-        "MRAM"
-      ]
-    },
-    {
-      "id": "leveraged-yolos",
-      "title": "Leveraged high-conviction Positions",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Six-figure borrowed capital in LEAPS",
-        "Concentrated single-name conviction plays",
-        "Themed catalyst bets on consumer names",
-        "Speculative traders swinging for max upside"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "TE",
+        "UVXY",
+        "VIX",
         "CLX",
-        "MUU"
+        "MRAM"
       ]
     }
   ],
@@ -135,73 +137,73 @@
       "symbol": "SPY",
       "sentiment": "mixed",
       "mentions": 8,
-      "signal": "0DTE battleground, both sides betting",
+      "signal": "0DTE scalp battleground",
       "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "SPCX",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "IPO speculation frenzy",
+      "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "GOOGL",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "seen as undervalued into earnings",
+      "signal": "earnings upside bets",
       "company_name": "Alphabet Inc."
-    },
-    {
-      "symbol": "AAPL",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "top market cap but overextension warnings",
-      "company_name": "Apple Inc."
     },
     {
       "symbol": "META",
       "sentiment": "bullish",
-      "mentions": 3,
+      "mentions": 4,
       "signal": "AI compute deal optimism",
       "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "TSM",
+      "symbol": "SPX",
       "sentiment": "mixed",
       "mentions": 3,
-      "signal": "strong earnings, muted peer reaction",
-      "company_name": "Taiwan Semiconductor Manufactur"
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "memory weakness, no catalyst",
-      "company_name": "Micron Technology, Inc."
+      "signal": "index options gambling",
+      "company_name": "S&P 500 INDEX"
     },
     {
       "symbol": "ORCL",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "over-leveraged calls underwater",
+      "signal": "over-leveraged recovery bet",
       "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "NFLX",
+      "symbol": "MU",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "last-stand portfolio hope",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "AAPL",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "reasonless high-conviction conviction",
-      "company_name": "Netflix, Inc."
+      "signal": "most valuable company narrative",
+      "company_name": "Apple Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment sits near neutral as euphoric 0DTE winners collide with painful account blow-ups. SPY dominates as the speculative battleground, with bears loading Monday puts while bulls chase same-day lottery tickets, reflecting a market split between conviction and capitulation.",
+      "text": "Retail energy centers on the SpaceX IPO frenzy and Starship launch catalyst, with speculative traders piling into SPCX positions below IPO price while GOOGL earnings anticipation builds ahead of the July 22 report.",
       "tag": "notable"
     },
     {
-      "text": "Big tech carries the bullish undertone, with GOOGL framed as undervalued into Q2 earnings, AAPL claiming top market cap, and Meta-Anthropic AI compute deals reinforcing the infrastructure narrative. Traders are actively positioning around imminent catalysts.",
-      "tag": "bullish"
+      "text": "The feed is saturated with 0DTE SPY scalping and account blow-ups, as greed-driven margin plays and over-leveraged options bets produce spectacular swings and painful wipeouts across the board.",
+      "tag": "bearish"
     },
     {
-      "text": "Beneath the speculation runs a strong current of pain: heavy year-to-date drawdowns, leveraged positions underwater, and semiconductor weakness despite TSM's strong results. Greed-driven losses temper the batch's overall risk appetite.",
-      "tag": "bearish"
+      "text": "AI megacap optimism persists on the Meta-Anthropic compute deal and Apple overtaking Nvidia, sustaining a cautiously greedy tone despite a heavy undercurrent of trading losses.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-07-17T21:02:33.507030+00:00",
-  "updated_hkt": "2026-07-18 05:02 HKT"
+  "updated_at": "2026-07-18T12:02:35.804251+00:00",
+  "updated_hkt": "2026-07-18 20:02 HKT"
 }
