@@ -1,17 +1,17 @@
 {
-  "bull_pct": 46,
-  "bear_pct": 15,
-  "neutral_pct": 39,
-  "bull_bear_ratio": 3.0,
-  "overall_score": 58,
+  "bull_pct": 44,
+  "bear_pct": 33,
+  "neutral_pct": 23,
+  "bull_bear_ratio": 1.3,
+  "overall_score": 54,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 46,
-    "ai_score": 63,
-    "bull_count": 6,
-    "bear_count": 2,
-    "neutral_count": 5,
-    "total_posts": 13,
+    "formula_score": 44,
+    "ai_score": 58,
+    "bull_count": 4,
+    "bear_count": 3,
+    "neutral_count": 2,
+    "total_posts": 9,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,74 +19,71 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 13,
+  "post_count": 9,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-trade",
-      "title": "AI Megacap Momentum",
+      "id": "ai-secular-thesis",
+      "title": "AI Secular Bull Thesis",
       "icon": "cpu",
-      "heat": "hot",
+      "heat": "building",
       "bullets": [
-        "AI cycle compared to 1998 internet run",
-        "Nvidia earnings and CapEx catalysts eyed",
-        "Pension fund adoption thesis floated",
-        "Hardware bubble fears dismissed"
+        "Late-1998 internet analogy resurfaces",
+        "Traders anchoring to Mag 7 upside",
+        "AI stocks framed as generational",
+        "Buy-the-dip conviction intact"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 78,
       "tickers": [
         "NVDA",
-        "GOOGL",
-        "META",
-        "MSFT"
+        "IREN"
       ]
     },
     {
-      "id": "odte-speculation",
-      "title": "0DTE Speculation",
+      "id": "0dte-speculation",
+      "title": "0DTE Options Speculation",
       "icon": "flame",
-      "heat": "building",
+      "heat": "hot",
       "bullets": [
-        "SPX intraday coin-flip trades",
-        "Call and put credit spreads active",
-        "High-risk scalping resurgence",
-        "Retail chasing quick premium"
+        "SPX 0DTE coin-flip scalping",
+        "Half-paycheck degenerate intraday trades",
+        "High-risk gambling energy persists",
+        "Retail chasing quick flips"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 55,
       "tickers": [
         "SPX",
-        "TSLA"
+        "SPY"
       ]
     },
     {
-      "id": "crypto-miners",
-      "title": "Crypto & Miners",
-      "icon": "trending-up",
-      "bullets": [
-        "IREN round-trip volatility highlighted",
-        "IBIT covered-call routines disrupted",
-        "Leveraged ETF losses noted",
-        "Options schedule changes questioned"
-      ],
-      "heat": "normal",
-      "sentiment_score": 48,
-      "tickers": [
-        "IREN",
-        "IBIT"
-      ]
-    },
-    {
-      "id": "drone-defense",
-      "title": "Drone Defense Plays",
-      "icon": "rocket",
+      "id": "earnings-plays",
+      "title": "Earnings Season Positioning",
+      "icon": "calendar",
       "heat": "building",
       "bullets": [
-        "Drones framed as warfare future",
-        "DoD contract upside speculated",
-        "ONDS dilution pressures shares",
-        "AVEX weakness puzzles bulls"
+        "Covered calls into PM earnings",
+        "ATH pump-then-fade thesis",
+        "Wheeling strategy generating income",
+        "Traders positioning around catalysts"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 60,
+      "tickers": [
+        "PM"
+      ]
+    },
+    {
+      "id": "defense-drones",
+      "title": "Defense & Drone Names",
+      "icon": "drone",
+      "heat": "normal",
+      "bullets": [
+        "Drone stocks slid on institutional rotation",
+        "DoD contract thesis under scrutiny",
+        "ONDS dilution weighs on sentiment",
+        "Warfare-future narrative questioned"
+      ],
+      "sentiment_score": 38,
       "tickers": [
         "AVEX",
         "ONDS"
@@ -94,111 +91,109 @@
     },
     {
       "id": "leaps-strategy",
-      "title": "LEAPS & Buy-the-Dip",
-      "icon": "calendar",
+      "title": "LEAPS Long-Term Strategy",
+      "icon": "trending-up",
       "heat": "normal",
       "bullets": [
-        "Long-dated Mag 7 calls favored",
-        "Buy time, avoid day trading",
-        "Roth IRA fully deployed",
-        "Discipline over intraday timing"
+        "Roth IRA fully deployed into LEAPS",
+        "Mag 7 names favored",
+        "Buy time, close the app",
+        "Tax-efficient long-dated conviction"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 72,
       "tickers": [
-        "NVDA",
-        "META"
+        "NVDA"
       ]
     },
     {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-neutral",
-      "heat": "normal",
+      "id": "account-blowups",
+      "title": "Round-Trip Losses",
+      "icon": "skull",
+      "heat": "building",
       "bullets": [
-        "Mixed profit and loss posts",
-        "Sarcastic bearish undertones present",
-        "Recovery hopes after drawdowns",
-        "Speculative energy still elevated"
+        "IREN positions round-tripped twice",
+        "Leveraged ETF and oil losses",
+        "Cautionary tale of overexposure",
+        "Sobering counterweight to euphoria"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 22,
       "tickers": [
-        "SPX",
-        "SMG"
+        "IREN"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Earnings and AI adoption bets",
-      "company_name": "NVIDIA Corporation"
+      "symbol": "IREN",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "painful round-trip losses",
+      "company_name": "IREN LIMITED"
     },
     {
       "symbol": "SPX",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "0DTE coin-flip scalping",
+      "mentions": 2,
+      "signal": "0DTE coin-flip gambling",
       "company_name": "S&P 500 INDEX"
     },
     {
-      "symbol": "IREN",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Round-trip volatility pain",
-      "company_name": "IREN LIMITED"
+      "symbol": "PM",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "earnings covered-call wheel",
+      "company_name": "Philip Morris International Inc"
     },
     {
-      "symbol": "IBIT",
-      "sentiment": "neutral",
-      "mentions": 3,
-      "signal": "Covered-call schedule concern",
-      "company_name": "iShares Bitcoin Trust ETF"
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Regretted put purchase",
-      "company_name": "Tesla, Inc."
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "AI Mag 7 conviction",
+      "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "AVEX",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Drone defense thesis intact",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "drone thesis wavering",
       "company_name": "AEVEX Corp."
     },
     {
       "symbol": "ONDS",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Dilution weighs on shares",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "dilution overhang",
       "company_name": "Ondas Inc"
     },
     {
-      "symbol": "SMG",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Seasonal drought recovery play",
-      "company_name": "Scotts Miracle-Gro Company (The"
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "broad index scalping",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "WTI",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "leveraged oil losses",
+      "company_name": "W&T Offshore, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans constructively bullish, anchored by an AI megacap narrative that frames the current cycle as an echo of 1998, with traders positioning ahead of Nvidia, Google, Meta and Microsoft catalysts and dismissing hardware bubble concerns.",
+      "text": "The batch leans constructively bullish, driven by an AI secular-growth thesis drawing 1998 internet parallels and disciplined LEAPS positioning in Mag 7 names. Retail conviction remains firmly in buy-the-dip mode.",
       "tag": "bullish"
     },
     {
-      "text": "Speculative energy remains elevated as retail revives 0DTE SPX scalping and leveraged ETF gambling, though the crop of mixed profit-and-loss posts reveals genuine round-trip pain beneath the euphoric surface.",
+      "text": "Speculative energy runs hot on SPX 0DTE coin-flip scalping and earnings pump-fade plays, underscoring persistent appetite for high-risk, short-duration gambles despite elevated index levels.",
       "tag": "notable"
     },
     {
-      "text": "Thematic breadth is widening into drone defense names and disciplined LEAPS strategies, signaling traders seeking longer-duration exposure and next-catalyst plays rather than pure intraday churn.",
-      "tag": "bullish"
+      "text": "Defense drone names and a cautionary IREN round-trip loss post provide a sobering counterweight, reminding traders that institutional rotation and dilution can swiftly unwind speculative gains.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-19T12:01:22.344053+00:00",
-  "updated_hkt": "2026-07-19 20:01 HKT"
+  "updated_at": "2026-07-19T21:13:25.325299+00:00",
+  "updated_hkt": "2026-07-20 05:13 HKT"
 }
