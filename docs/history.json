@@ -705,5 +705,12 @@
     "label": "Neutral",
     "formula_score": 48,
     "ai_score": 54
+  },
+  {
+    "ts": "2026-07-19 20:01 HKT",
+    "score": 58,
+    "label": "Neutral",
+    "formula_score": 46,
+    "ai_score": 63
   }
 ]
