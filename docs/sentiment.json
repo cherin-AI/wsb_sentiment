@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 33,
-  "neutral_pct": 23,
-  "bull_bear_ratio": 1.3,
-  "overall_score": 54,
-  "overall_label": "Neutral",
+  "bull_pct": 36,
+  "bear_pct": 43,
+  "neutral_pct": 21,
+  "bull_bear_ratio": 0.8,
+  "overall_score": 37,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 44,
-    "ai_score": 58,
-    "bull_count": 4,
-    "bear_count": 3,
-    "neutral_count": 2,
-    "total_posts": 9,
+    "formula_score": 36,
+    "ai_score": 38,
+    "bull_count": 5,
+    "bear_count": 6,
+    "neutral_count": 3,
+    "total_posts": 14,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,181 +19,184 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 9,
+  "post_count": 14,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-secular-thesis",
-      "title": "AI Secular Bull Thesis",
+      "id": "memory-chips",
+      "title": "Memory & Chip Pain",
       "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "Late-1998 internet analogy resurfaces",
-        "Traders anchoring to Mag 7 upside",
-        "AI stocks framed as generational",
-        "Buy-the-dip conviction intact"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "NVDA",
-        "IREN"
-      ]
-    },
-    {
-      "id": "0dte-speculation",
-      "title": "0DTE Options Speculation",
-      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "SPX 0DTE coin-flip scalping",
-        "Half-paycheck degenerate intraday trades",
-        "High-risk gambling energy persists",
-        "Retail chasing quick flips"
+        "DRAM bets unraveling for retail",
+        "Micron, SanDisk holders underwater",
+        "SK Hynix, Samsung leveraged bets collapse",
+        "Semiconductor speculation turning painful"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 30,
       "tickers": [
-        "SPX",
-        "SPY"
+        "MU",
+        "NBIS",
+        "DRAM"
       ]
     },
     {
-      "id": "earnings-plays",
-      "title": "Earnings Season Positioning",
+      "id": "oil-supply",
+      "title": "Oil Supply Shock",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "Strait of Hormuz closure squeezing supply",
+        "US crude inventories at 45-year low",
+        "Oil back above $90 per barrel",
+        "Inflation complacency looks exposed"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "USO",
+        "CL"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Retail down heavily across positions",
+        "Buying the dip that keeps dipping",
+        "Leveraged bets fully unwound",
+        "Defeated tone dominating loss posts"
+      ],
+      "sentiment_score": 18,
+      "tickers": [
+        "LULU",
+        "NFLX",
+        "NBIS"
+      ]
+    },
+    {
+      "id": "ai-bubble",
+      "title": "AI Bubble Doubts",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Nvidia jacket sale fuels bubble jokes",
+        "AI data center leases still expanding",
+        "Hut 8 commercializes Texas campus",
+        "Skepticism versus continued buildout spending"
+      ],
+      "sentiment_score": 45,
+      "tickers": [
+        "NVDA",
+        "HUT"
+      ]
+    },
+    {
+      "id": "big-tech-earnings",
+      "title": "Big Tech Earnings",
       "icon": "calendar",
       "heat": "building",
       "bullets": [
-        "Covered calls into PM earnings",
-        "ATH pump-then-fade thesis",
-        "Wheeling strategy generating income",
-        "Traders positioning around catalysts"
+        "Google record earnings Wednesday",
+        "Traders expect blowout numbers",
+        "Skepticism on post-earnings reaction",
+        "Ad revenue at record highs"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 62,
+      "tickers": [
+        "GOOGL"
+      ]
+    },
+    {
+      "id": "options-plays",
+      "title": "Earnings Options Plays",
+      "icon": "chart-candle",
+      "heat": "normal",
+      "bullets": [
+        "Wheeling PM into earnings week",
+        "Covered calls near all-time highs",
+        "Speculative positioning on catalysts",
+        "Retail chasing premium income"
+      ],
+      "sentiment_score": 58,
       "tickers": [
         "PM"
-      ]
-    },
-    {
-      "id": "defense-drones",
-      "title": "Defense & Drone Names",
-      "icon": "drone",
-      "heat": "normal",
-      "bullets": [
-        "Drone stocks slid on institutional rotation",
-        "DoD contract thesis under scrutiny",
-        "ONDS dilution weighs on sentiment",
-        "Warfare-future narrative questioned"
-      ],
-      "sentiment_score": 38,
-      "tickers": [
-        "AVEX",
-        "ONDS"
-      ]
-    },
-    {
-      "id": "leaps-strategy",
-      "title": "LEAPS Long-Term Strategy",
-      "icon": "trending-up",
-      "heat": "normal",
-      "bullets": [
-        "Roth IRA fully deployed into LEAPS",
-        "Mag 7 names favored",
-        "Buy time, close the app",
-        "Tax-efficient long-dated conviction"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "NVDA"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Round-Trip Losses",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "IREN positions round-tripped twice",
-        "Leveraged ETF and oil losses",
-        "Cautionary tale of overexposure",
-        "Sobering counterweight to euphoria"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "IREN"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "IREN",
+      "symbol": "NBIS",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "painful round-trip losses",
-      "company_name": "IREN LIMITED"
+      "mentions": 6,
+      "signal": "All-in bet gone sour",
+      "company_name": "Nebius Group N.V."
     },
     {
-      "symbol": "SPX",
+      "symbol": "MU",
+      "sentiment": "bearish",
+      "mentions": 5,
+      "signal": "Holders praying for a rebound",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "GOOGL",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "Record earnings anticipation",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "NVDA",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "0DTE coin-flip gambling",
-      "company_name": "S&P 500 INDEX"
+      "mentions": 4,
+      "signal": "AI bubble skepticism building",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "NFLX",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Heavy drawdown pain",
+      "company_name": "Netflix, Inc."
+    },
+    {
+      "symbol": "LULU",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Yoga pants can't pay rent",
+      "company_name": "lululemon athletica inc."
+    },
+    {
+      "symbol": "RKLB",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "High-conviction all-in position",
+      "company_name": "Rocket Lab Corporation"
     },
     {
       "symbol": "PM",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "earnings covered-call wheel",
+      "mentions": 3,
+      "signal": "Steady covered-call income",
       "company_name": "Philip Morris International Inc"
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "AI Mag 7 conviction",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "AVEX",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "drone thesis wavering",
-      "company_name": "AEVEX Corp."
-    },
-    {
-      "symbol": "ONDS",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "dilution overhang",
-      "company_name": "Ondas Inc"
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "broad index scalping",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "WTI",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "leveraged oil losses",
-      "company_name": "W&T Offshore, Inc."
     }
   ],
   "summary": [
     {
-      "text": "The batch leans constructively bullish, driven by an AI secular-growth thesis drawing 1998 internet parallels and disciplined LEAPS positioning in Mag 7 names. Retail conviction remains firmly in buy-the-dip mode.",
+      "text": "Sentiment leans defeated as retail traders nurse heavy losses across memory chips, streaming, and apparel names. Leveraged semiconductor bets on SK Hynix, Samsung, and Micron have unraveled, with dip-buyers openly capitulating amid a wave of account blow-up posts.",
+      "tag": "bearish"
+    },
+    {
+      "text": "Energy is the clear bright spot: crude above $90 with US inventories at a 45-year low and the Strait of Hormuz shut, exposing the market's inflation complacency and drawing fresh bullish positioning into oil.",
       "tag": "bullish"
     },
     {
-      "text": "Speculative energy runs hot on SPX 0DTE coin-flip scalping and earnings pump-fade plays, underscoring persistent appetite for high-risk, short-duration gambles despite elevated index levels.",
+      "text": "Attention now shifts to Google's Wednesday earnings, where traders expect blowout numbers but remain wary of a counterintuitive selloff, while AI-bubble skepticism percolates despite continued data-center buildout spending.",
       "tag": "notable"
-    },
-    {
-      "text": "Defense drone names and a cautionary IREN round-trip loss post provide a sobering counterweight, reminding traders that institutional rotation and dilution can swiftly unwind speculative gains.",
-      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-19T21:13:25.325299+00:00",
-  "updated_hkt": "2026-07-20 05:13 HKT"
+  "updated_at": "2026-07-20T12:02:07.292632+00:00",
+  "updated_hkt": "2026-07-20 20:02 HKT"
 }
