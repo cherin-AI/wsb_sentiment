@@ -526,16 +526,20 @@ def analyze_with_claude(posts_text: str, post_count: int, api_key: str) -> dict:
             }],
         )
 
+    # Backoff spans ~17min: a 50s budget was too short and lost the 2026-07-20
+    # 05:01 run to a 403 window that had cleared by the time anyone looked.
+    # This is a twice-daily batch job, so waiting minutes costs nothing.
+    backoff = [15, 30, 60, 120, 240, 300, 300]
     message = None
-    for attempt in range(1, 6):
+    for attempt, wait in enumerate(backoff + [None], start=1):
         try:
             message = _create()
             break
         except anthropic.PermissionDeniedError as e:
-            if attempt == 5:
+            if wait is None:
                 raise
-            wait = 5 * attempt
-            print(f"  403 from Claude (attempt {attempt}/5), retrying in {wait}s… ({e})")
+            print(f"  403 from Claude (attempt {attempt}/{len(backoff) + 1}), "
+                  f"retrying in {wait}s… ({e})")
             time.sleep(wait)
 
     raw = message.content[0].text.strip()

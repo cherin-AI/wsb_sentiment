@@ -39,6 +39,11 @@ $(date '+%Y-%m-%d %H:%M HKT')
   exit 1
 }
 
+# Without these, a wedged ssh hangs the run forever with no timeout: on
+# 2026-07-20 a push sat 9min after already transferring the data. Keepalives
+# make ssh give up in ~30s instead of blocking the job.
+export GIT_SSH_COMMAND="ssh -o ConnectTimeout=15 -o ServerAliveInterval=10 -o ServerAliveCountMax=3"
+
 # --- pipeline (each step alerts on failure) ---
 git pull --rebase --autostash                  || fail "git pull"
 python3 scripts/fetch_and_analyze.py           || fail "analysis"
