@@ -1,17 +1,17 @@
 {
-  "bull_pct": 20,
-  "bear_pct": 35,
-  "neutral_pct": 45,
-  "bull_bear_ratio": 0.6,
-  "overall_score": 37,
-  "overall_label": "Fear",
+  "bull_pct": 46,
+  "bear_pct": 17,
+  "neutral_pct": 37,
+  "bull_bear_ratio": 2.8,
+  "overall_score": 60,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 20,
-    "ai_score": 44,
-    "bull_count": 4,
-    "bear_count": 7,
+    "formula_score": 46,
+    "ai_score": 66,
+    "bull_count": 11,
+    "bear_count": 4,
     "neutral_count": 9,
-    "total_posts": 20,
+    "total_posts": 24,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,192 +19,191 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 20,
+  "post_count": 24,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-mega-cap-capex",
-      "title": "AI Mega-Cap Capex & Valuation",
+      "id": "ai-nuclear-datacenter",
+      "title": "AI & Nuclear Power Buildout",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "NVDA bear case debated on efficiency gains",
-        "GOOGL selloff into earnings play",
-        "META acquisition speculation on OpenAI",
-        "Hyperscaler capex guidance in focus"
+        "Oklo joins $200M federal nuclear initiative",
+        "Microsoft and Nvidia anchor AI power demand",
+        "Data center electricity needs driving speculation",
+        "Long-term buildout thesis attracting capital"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 78,
       "tickers": [
+        "OKLO",
         "NVDA",
-        "GOOGL",
-        "META",
         "MSFT"
       ]
     },
     {
-      "id": "options-losses",
-      "title": "Options Losses & Account Blow-Ups",
-      "icon": "skull",
+      "id": "memory-semis",
+      "title": "Memory & Semiconductor Bets",
+      "icon": "microchip",
+      "heat": "building",
+      "bullets": [
+        "DRAM shortage warning stokes long-term demand",
+        "High-conviction leaps piled into SMCI",
+        "MU and Sandisk drawing speculative flows",
+        "MRVL calls riding upside momentum"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "MU",
+        "SNDK",
+        "SMCI",
+        "MRVL"
+      ]
+    },
+    {
+      "id": "options-yolo",
+      "title": "High-Conviction Options Gambling",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "SPY 1DTE put loss posts surface",
-        "Early assignment pain on SPCX",
-        "Loss posts framed with dark humor",
-        "Retail lamenting memecoin-like volatility"
+        "Full-port leaps and 0DTE flip-flopping",
+        "College funds committed to single names",
+        "Breakeven-or-bust earnings positioning",
+        "Impulsive intraday buying and selling"
       ],
-      "sentiment_score": 26,
+      "sentiment_score": 70,
       "tickers": [
+        "SMCI",
+        "MRVL",
         "SPY",
-        "SPCX",
-        "NVDA",
-        "MSFT"
+        "NBIS",
+        "HOOD"
       ]
     },
     {
-      "id": "earnings-plays",
-      "title": "Earnings Positioning",
-      "icon": "calendar",
+      "id": "trading-losses",
+      "title": "Trading Losses & Discipline",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "HAS reports pre-market on MTG strength",
-        "HOOD run-up-then-fade pattern flagged",
-        "GOOGL earnings recovery bet",
-        "Speculative traders loading pre-print"
+        "Retail traders seeking profitable strategies",
+        "Account blow-ups prompting help requests",
+        "Panic buying and selling behavior admitted",
+        "Emotional decision-making under pressure"
       ],
-      "sentiment_score": 56,
+      "sentiment_score": 30,
       "tickers": [
-        "HAS",
-        "HOOD",
-        "GOOGL"
+        "NBIS"
       ]
     },
     {
-      "id": "crypto-eth-tokenization",
-      "title": "Crypto & Tokenization",
-      "icon": "coin",
+      "id": "ma-corporate",
+      "title": "M&A and Corporate Moves",
+      "icon": "building-bank",
       "heat": "building",
       "bullets": [
-        "DTCC live tokenized asset trades",
-        "BMNR pitched on ETH at highs",
-        "Buy ETH underlying debate continues",
-        "Bitcoin technical analysis mocked"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "BMNR",
-        "ETH",
-        "BTC"
-      ]
-    },
-    {
-      "id": "single-stock-yolo",
-      "title": "High-Conviction Single-Stock Bets",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Large AMPG concentrated position disclosed",
-        "NBIS panic in-and-out trading",
-        "Thin-DD conviction plays proliferating",
-        "Retail chasing momentum names"
+        "Utz taken private at steep premium",
+        "Novo Nordisk sues Eli Lilly on advertising",
+        "Meta acquisition speculation on AI labs",
+        "Goldman private market platform criticism"
       ],
       "sentiment_score": 58,
       "tickers": [
-        "AMPG",
-        "NBIS",
-        "BE",
-        "SPY"
+        "UTZ",
+        "NVO",
+        "LLY",
+        "META"
       ]
     },
     {
-      "id": "general-market-mood",
+      "id": "market-mood",
       "title": "General Market Mood",
       "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Paramount-Warner merger paused by judge",
-        "Volatility likened to memecoin trading",
-        "Mixed risk appetite across the board",
-        "Dark humor masking real losses"
+        "Tariff headlines dominate daily discussion",
+        "Geopolitical noise met with dark humor",
+        "Inflation gripes over everyday costs",
+        "Mixed bull-bear positioning into earnings"
       ],
-      "sentiment_score": 42,
+      "sentiment_score": 52,
       "tickers": [
-        "PARA",
-        "WBD"
+        "SPY",
+        "NVDA"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "SMCI",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Full-port leap conviction",
+      "company_name": "Super Micro Computer, Inc."
+    },
+    {
       "symbol": "NVDA",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Bear case debated amid AI dominance",
+      "mentions": 4,
+      "signal": "Bull thesis vs bear case debate",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "GOOGL",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Selloff sparks earnings bounce bets",
-      "company_name": "Alphabet Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "Put buyers repeatedly punished",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "META",
+      "symbol": "MRVL",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Acquisition and momentum optimism",
-      "company_name": "Meta Platforms, Inc."
+      "mentions": 3,
+      "signal": "Calls riding momentum",
+      "company_name": "Marvell Technology, Inc."
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "DRAM shortage tailwind",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "OKLO",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Nuclear AI catalyst",
+      "company_name": "Oklo Inc."
     },
     {
       "symbol": "HOOD",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Earnings run-up call before fade",
+      "mentions": 2,
+      "signal": "Earnings run-up play",
       "company_name": "Robinhood Markets, Inc."
     },
     {
-      "symbol": "BMNR",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "ETH-proxy moonshot conviction",
-      "company_name": "BitMine Immersion Technologies,"
-    },
-    {
-      "symbol": "HAS",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "MTG strength earnings beat thesis",
-      "company_name": "Hasbro, Inc."
-    },
-    {
-      "symbol": "AMPG",
-      "sentiment": "bullish",
+      "symbol": "NBIS",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Concentrated high-conviction high-conviction",
-      "company_name": "Amplitech Group, Inc."
+      "signal": "Panic-driven churn",
+      "company_name": "Nebius Group N.V."
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "0DTE directional flip-flop",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     }
   ],
   "summary": [
     {
-      "text": "The batch centers on AI mega-cap positioning, with an NVDA bear thesis and a GOOGL post-selloff earnings play dominating discussion as traders debate whether hyperscaler capex guidance can sustain elevated valuations.",
+      "text": "Speculative appetite runs high, with capital flowing into AI-nuclear infrastructure and memory semiconductors. Oklo's federal initiative and persistent DRAM shortage warnings anchor a long-duration buildout thesis, while high-conviction leaps and earnings calls dominate the risk-on positioning.",
+      "tag": "bullish"
+    },
+    {
+      "text": "The options table remains reckless, with traders committing full portfolios and children's college funds to single-name bets on SMCI, MRVL and Sandisk. Breakeven-or-bust framing and admitted panic churning signal euphoria detached from discipline.",
       "tag": "notable"
     },
     {
-      "text": "Options pain is prominent, with SPY 1DTE put losses and SPCX early-assignment distress showcased through the community's signature dark humor, underscoring frustration with choppy, memecoin-like price action.",
+      "text": "Beneath the greed, a bearish undercurrent persists via account blow-up confessions, a detailed Nvidia bear case, and inflation frustration in daily discussion. M&A activity from Utz and the Novo-Lilly dispute add corporate texture to an otherwise momentum-chasing tape.",
       "tag": "bearish"
-    },
-    {
-      "text": "Speculative energy persists in crypto and single-name bets, from DTCC tokenization headlines and ETH-linked BMNR optimism to concentrated conviction plays, keeping overall sentiment near neutral with a modestly cautious tilt.",
-      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-21T12:05:16.755862+00:00",
-  "updated_hkt": "2026-07-21 20:05 HKT"
+  "updated_at": "2026-07-21T21:02:50.647391+00:00",
+  "updated_hkt": "2026-07-22 05:02 HKT"
 }
