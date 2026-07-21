@@ -1,17 +1,17 @@
 {
-  "bull_pct": 36,
-  "bear_pct": 40,
-  "neutral_pct": 24,
-  "bull_bear_ratio": 0.9,
-  "overall_score": 40,
-  "overall_label": "Neutral",
+  "bull_pct": 20,
+  "bear_pct": 35,
+  "neutral_pct": 45,
+  "bull_bear_ratio": 0.6,
+  "overall_score": 37,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 36,
-    "ai_score": 42,
-    "bull_count": 9,
-    "bear_count": 10,
-    "neutral_count": 6,
-    "total_posts": 25,
+    "formula_score": 20,
+    "ai_score": 44,
+    "bull_count": 4,
+    "bear_count": 7,
+    "neutral_count": 9,
+    "total_posts": 20,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,192 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 25,
+  "post_count": 20,
   "hours_window": 24,
   "themes": [
     {
-      "id": "semis-memory-pain",
-      "title": "Memory & Semiconductor Pain",
+      "id": "ai-mega-cap-capex",
+      "title": "AI Mega-Cap Capex & Valuation",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Micron and SanDisk positions underwater",
-        "DRAM plays unraveling for retail",
-        "SK Hynix, Samsung leveraged bets collapse",
-        "Hope trades pinned on rebound"
+        "NVDA bear case debated on efficiency gains",
+        "GOOGL selloff into earnings play",
+        "META acquisition speculation on OpenAI",
+        "Hyperscaler capex guidance in focus"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 48,
       "tickers": [
-        "MU",
-        "NBIS",
-        "RKLB"
-      ]
-    },
-    {
-      "id": "google-earnings",
-      "title": "Google Earnings Setup",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "GOOGL selloff on delayed model, badge changes",
-        "Buffett capex backing cited as bullish",
-        "Record earnings expected Wednesday",
-        "Traders debate buy-the-dip conviction"
-      ],
-      "sentiment_score": 60,
-      "tickers": [
+        "NVDA",
         "GOOGL",
-        "META"
+        "META",
+        "MSFT"
       ]
     },
     {
-      "id": "energy-oil",
-      "title": "Oil & Energy Squeeze",
-      "icon": "flame",
+      "id": "options-losses",
+      "title": "Options Losses & Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "SPY 1DTE put loss posts surface",
+        "Early assignment pain on SPCX",
+        "Loss posts framed with dark humor",
+        "Retail lamenting memecoin-like volatility"
+      ],
+      "sentiment_score": 26,
+      "tickers": [
+        "SPY",
+        "SPCX",
+        "NVDA",
+        "MSFT"
+      ]
+    },
+    {
+      "id": "earnings-plays",
+      "title": "Earnings Positioning",
+      "icon": "calendar",
       "heat": "building",
       "bullets": [
-        "Crude back above $90",
-        "Strait of Hormuz shut again",
-        "US inventories at 45-year low",
-        "Inflation complacency looks exposed"
+        "HAS reports pre-market on MTG strength",
+        "HOOD run-up-then-fade pattern flagged",
+        "GOOGL earnings recovery bet",
+        "Speculative traders loading pre-print"
+      ],
+      "sentiment_score": 56,
+      "tickers": [
+        "HAS",
+        "HOOD",
+        "GOOGL"
+      ]
+    },
+    {
+      "id": "crypto-eth-tokenization",
+      "title": "Crypto & Tokenization",
+      "icon": "coin",
+      "heat": "building",
+      "bullets": [
+        "DTCC live tokenized asset trades",
+        "BMNR pitched on ETH at highs",
+        "Buy ETH underlying debate continues",
+        "Bitcoin technical analysis mocked"
       ],
       "sentiment_score": 62,
       "tickers": [
-        "CL"
+        "BMNR",
+        "ETH",
+        "BTC"
       ]
     },
     {
-      "id": "spx-scalping",
-      "title": "Index Options Speculation",
+      "id": "single-stock-yolo",
+      "title": "High-Conviction Single-Stock Bets",
       "icon": "rocket",
-      "heat": "normal",
+      "heat": "building",
       "bullets": [
-        "SPX scalping strategies showcased",
-        "SPY put bets realize losses",
-        "1DTE gambling remains popular",
-        "Covered call profit management debated"
+        "Large AMPG concentrated position disclosed",
+        "NBIS panic in-and-out trading",
+        "Thin-DD conviction plays proliferating",
+        "Retail chasing momentum names"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 58,
       "tickers": [
-        "SPX",
+        "AMPG",
+        "NBIS",
+        "BE",
         "SPY"
       ]
     },
     {
-      "id": "crypto-ai-infra",
-      "title": "Crypto & AI Infrastructure",
-      "icon": "bolt",
-      "heat": "building",
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "flame",
+      "heat": "normal",
       "bullets": [
-        "Hut 8 signs large AI data center lease",
-        "BMNR tied to Ethereum highs",
-        "Bitcoin technical analysis circulating",
-        "Capex-driven infrastructure optimism"
+        "Paramount-Warner merger paused by judge",
+        "Volatility likened to memecoin trading",
+        "Mixed risk appetite across the board",
+        "Dark humor masking real losses"
       ],
-      "sentiment_score": 63,
+      "sentiment_score": 42,
       "tickers": [
-        "BMNR",
-        "HUT"
-      ]
-    },
-    {
-      "id": "loss-porn",
-      "title": "Account Blow-Ups",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Large trading losses across LULU, NFLX",
-        "All-in bets left with pennies",
-        "Buy-the-dip regret spreading",
-        "Defeated tone dominates loss posts"
-      ],
-      "sentiment_score": 20,
-      "tickers": [
-        "LULU",
-        "NFLX",
-        "MU"
+        "PARA",
+        "WBD"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "Bear case debated amid AI dominance",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
       "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "dip-buying ahead of earnings",
+      "sentiment": "mixed",
+      "mentions": 5,
+      "signal": "Selloff sparks earnings bounce bets",
       "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "MU",
-      "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "underwater memory bets",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
       "symbol": "SPY",
-      "sentiment": "mixed",
+      "sentiment": "bearish",
       "mentions": 5,
-      "signal": "puts punished, bears bruised",
+      "signal": "Put buyers repeatedly punished",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "SPX",
+      "symbol": "META",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Acquisition and momentum optimism",
+      "company_name": "Meta Platforms, Inc."
+    },
+    {
+      "symbol": "HOOD",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "scalping wins touted",
-      "company_name": "S&P 500 INDEX"
+      "signal": "Earnings run-up call before fade",
+      "company_name": "Robinhood Markets, Inc."
     },
     {
       "symbol": "BMNR",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Ethereum-linked moonshot",
+      "signal": "ETH-proxy moonshot conviction",
       "company_name": "BitMine Immersion Technologies,"
     },
     {
-      "symbol": "NFLX",
-      "sentiment": "bearish",
+      "symbol": "HAS",
+      "sentiment": "bullish",
       "mentions": 3,
-      "signal": "heavy drawdown pain",
-      "company_name": ""
+      "signal": "MTG strength earnings beat thesis",
+      "company_name": "Hasbro, Inc."
     },
     {
-      "symbol": "RKLB",
-      "sentiment": "bearish",
+      "symbol": "AMPG",
+      "sentiment": "bullish",
       "mentions": 2,
-      "signal": "all-in regret",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "LULU",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "bagholder frustration",
-      "company_name": "lululemon athletica inc."
+      "signal": "Concentrated high-conviction high-conviction",
+      "company_name": "Amplitech Group, Inc."
     }
   ],
   "summary": [
     {
-      "text": "The batch skews defeated as memory and semiconductor names crush leveraged retail positions, with Micron, SanDisk and Korean chip bets unraveling into visible account blow-ups. Loss posts dominate the emotional tone despite scattered profit boasts.",
+      "text": "The batch centers on AI mega-cap positioning, with an NVDA bear thesis and a GOOGL post-selloff earnings play dominating discussion as traders debate whether hyperscaler capex guidance can sustain elevated valuations.",
+      "tag": "notable"
+    },
+    {
+      "text": "Options pain is prominent, with SPY 1DTE put losses and SPCX early-assignment distress showcased through the community's signature dark humor, underscoring frustration with choppy, memecoin-like price action.",
       "tag": "bearish"
     },
     {
-      "text": "Google anchors the bullish counter-narrative, with traders framing its selloff as an overreaction and citing Buffett-backed capex conviction ahead of an expected earnings blowout Wednesday. Dip-buyers are positioning aggressively.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Energy is quietly building momentum as crude reclaims $90 on Hormuz disruption and multi-decade-low inventories, exposing the market's inflation complacency. AI infrastructure and crypto-linked plays add speculative upside pockets.",
+      "text": "Speculative energy persists in crypto and single-name bets, from DTCC tokenization headlines and ETH-linked BMNR optimism to concentrated conviction plays, keeping overall sentiment near neutral with a modestly cautious tilt.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-20T21:05:40.168240+00:00",
-  "updated_hkt": "2026-07-21 05:05 HKT"
+  "updated_at": "2026-07-21T12:05:16.755862+00:00",
+  "updated_hkt": "2026-07-21 20:05 HKT"
 }
