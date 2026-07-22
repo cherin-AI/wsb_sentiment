@@ -1,17 +1,17 @@
 {
-  "bull_pct": 46,
-  "bear_pct": 17,
-  "neutral_pct": 37,
-  "bull_bear_ratio": 2.8,
-  "overall_score": 60,
-  "overall_label": "Greed",
+  "bull_pct": 23,
+  "bear_pct": 53,
+  "neutral_pct": 24,
+  "bull_bear_ratio": 0.4,
+  "overall_score": 34,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 46,
-    "ai_score": 66,
-    "bull_count": 11,
-    "bear_count": 4,
-    "neutral_count": 9,
-    "total_posts": 24,
+    "formula_score": 23,
+    "ai_score": 38,
+    "bull_count": 7,
+    "bear_count": 16,
+    "neutral_count": 7,
+    "total_posts": 30,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,191 +19,186 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 24,
+  "post_count": 30,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-nuclear-datacenter",
-      "title": "AI & Nuclear Power Buildout",
-      "icon": "cpu",
+      "id": "earnings-season",
+      "title": "Big Tech Earnings Season",
+      "icon": "calendar-event",
       "heat": "hot",
       "bullets": [
-        "Oklo joins $200M federal nuclear initiative",
-        "Microsoft and Nvidia anchor AI power demand",
-        "Data center electricity needs driving speculation",
-        "Long-term buildout thesis attracting capital"
+        "Tesla profit falls despite sales rebound",
+        "Alphabet, ServiceNow, IBM report live",
+        "IBM lowers full-year forecast on warning",
+        "Traders positioning ahead of prints"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 42,
       "tickers": [
-        "OKLO",
-        "NVDA",
-        "MSFT"
+        "TSLA",
+        "GOOGL",
+        "NOW",
+        "IBM"
       ]
     },
     {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Bets",
-      "icon": "microchip",
-      "heat": "building",
-      "bullets": [
-        "DRAM shortage warning stokes long-term demand",
-        "High-conviction leaps piled into SMCI",
-        "MU and Sandisk drawing speculative flows",
-        "MRVL calls riding upside momentum"
-      ],
-      "sentiment_score": 74,
-      "tickers": [
-        "MU",
-        "SNDK",
-        "SMCI",
-        "MRVL"
-      ]
-    },
-    {
-      "id": "options-yolo",
-      "title": "High-Conviction Options Gambling",
+      "id": "spacex-spcx",
+      "title": "SpaceX IPO Skepticism",
       "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "Speculators loading puts on SPCX",
+        "Manipulation and hype accusations widespread",
+        "Launch cancellation conspiracy theories circulating",
+        "Musk narrative viewed with distrust"
+      ],
+      "sentiment_score": 28,
+      "tickers": [
+        "SPCX",
+        "TSLA",
+        "BE"
+      ]
+    },
+    {
+      "id": "market-crash-fears",
+      "title": "Systemic Crash Fears",
+      "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Full-port leaps and 0DTE flip-flopping",
-        "College funds committed to single names",
-        "Breakeven-or-bust earnings positioning",
-        "Impulsive intraday buying and selling"
+        "Korean market meltdown cited as warning",
+        "Concentration risk in top S&P names",
+        "Private credit compared to 2008",
+        "Calls to short manipulated market"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 18,
       "tickers": [
+        "SPY"
+      ]
+    },
+    {
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Bets",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "AMD to invest in Anthropic",
+        "SMCI surges on order and margins",
+        "NVDA intraday momentum plays",
+        "Long-term semi conviction debated"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "NVDA",
         "SMCI",
-        "MRVL",
-        "SPY",
-        "NBIS",
-        "HOOD"
+        "AMD",
+        "AVGO"
       ]
     },
     {
-      "id": "trading-losses",
-      "title": "Trading Losses & Discipline",
-      "icon": "skull",
+      "id": "loss-posts",
+      "title": "Trading Losses & Regret",
+      "icon": "trending-down",
       "heat": "building",
       "bullets": [
-        "Retail traders seeking profitable strategies",
-        "Account blow-ups prompting help requests",
-        "Panic buying and selling behavior admitted",
-        "Emotional decision-making under pressure"
+        "Retail asking how bad it is",
+        "AI position sold at steep loss",
+        "Prior gains fully round-tripped",
+        "Market described as rigged"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 20,
       "tickers": [
-        "NBIS"
+        "NGFB"
       ]
     },
     {
-      "id": "ma-corporate",
-      "title": "M&A and Corporate Moves",
-      "icon": "building-bank",
-      "heat": "building",
-      "bullets": [
-        "Utz taken private at steep premium",
-        "Novo Nordisk sues Eli Lilly on advertising",
-        "Meta acquisition speculation on AI labs",
-        "Goldman private market platform criticism"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "UTZ",
-        "NVO",
-        "LLY",
-        "META"
-      ]
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "flame",
+      "id": "cash-defensive",
+      "title": "Cash & Defensive Positioning",
+      "icon": "shield",
       "heat": "normal",
       "bullets": [
-        "Tariff headlines dominate daily discussion",
-        "Geopolitical noise met with dark humor",
-        "Inflation gripes over everyday costs",
-        "Mixed bull-bear positioning into earnings"
+        "SGOV cash gang awaiting dip",
+        "Yield collection seen as safer",
+        "Skepticism toward chasing rallies",
+        "Risk-off sentiment building"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 35,
       "tickers": [
-        "SPY",
-        "NVDA"
+        "SGOV"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "SPCX",
+      "sentiment": "bearish",
+      "mentions": 12,
+      "signal": "Heavy put buying on IPO",
+      "company_name": "Space Exploration Technologies "
+    },
+    {
+      "symbol": "TSLA",
+      "sentiment": "bearish",
+      "mentions": 10,
+      "signal": "Profit falls, earnings skepticism",
+      "company_name": "Tesla, Inc."
+    },
+    {
       "symbol": "SMCI",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Full-port leap conviction",
+      "mentions": 7,
+      "signal": "Order and margin surge conviction",
       "company_name": "Super Micro Computer, Inc."
     },
     {
       "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Bull thesis vs bear case debate",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "Fast intraday momentum plays",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "MRVL",
+      "symbol": "GOOGL",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Calls riding momentum",
-      "company_name": "Marvell Technology, Inc."
+      "mentions": 5,
+      "signal": "Earnings anticipation upside",
+      "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "MU",
+      "symbol": "IBM",
+      "sentiment": "bearish",
+      "mentions": 5,
+      "signal": "Forecast cut disappoints",
+      "company_name": "International Business Machines"
+    },
+    {
+      "symbol": "AMD",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "DRAM shortage tailwind",
-      "company_name": "Micron Technology, Inc."
+      "mentions": 4,
+      "signal": "Anthropic investment optimism",
+      "company_name": "Advanced Micro Devices, Inc."
     },
     {
-      "symbol": "OKLO",
+      "symbol": "NOW",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Nuclear AI catalyst",
-      "company_name": "Oklo Inc."
-    },
-    {
-      "symbol": "HOOD",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Earnings run-up play",
-      "company_name": "Robinhood Markets, Inc."
-    },
-    {
-      "symbol": "NBIS",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Panic-driven churn",
-      "company_name": "Nebius Group N.V."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "0DTE directional flip-flop",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "mentions": 4,
+      "signal": "Earnings bet on strong CEO",
+      "company_name": "ServiceNow, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Speculative appetite runs high, with capital flowing into AI-nuclear infrastructure and memory semiconductors. Oklo's federal initiative and persistent DRAM shortage warnings anchor a long-duration buildout thesis, while high-conviction leaps and earnings calls dominate the risk-on positioning.",
-      "tag": "bullish"
-    },
-    {
-      "text": "The options table remains reckless, with traders committing full portfolios and children's college funds to single-name bets on SMCI, MRVL and Sandisk. Breakeven-or-bust framing and admitted panic churning signal euphoria detached from discipline.",
+      "text": "A packed earnings calendar dominates the tape, with Tesla missing on profit and IBM cutting guidance, while Alphabet and ServiceNow prints keep speculative traders positioning aggressively into the volatility.",
       "tag": "notable"
     },
     {
-      "text": "Beneath the greed, a bearish undercurrent persists via account blow-up confessions, a detailed Nvidia bear case, and inflation frustration in daily discussion. M&A activity from Utz and the Novo-Lilly dispute add corporate texture to an otherwise momentum-chasing tape.",
+      "text": "Systemic anxiety is running hot as traders cite Korea's margin-call cascade, S&P concentration risk, and private-credit fragility, fueling bearish short theses and defensive cash rotation into SGOV.",
       "tag": "bearish"
+    },
+    {
+      "text": "Pockets of greed persist in AI and semiconductors, with Super Micro surging on new orders, AMD's Anthropic investment, and NVDA momentum trades sustaining high-conviction upside bets.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-07-21T21:02:50.647391+00:00",
-  "updated_hkt": "2026-07-22 05:02 HKT"
+  "updated_at": "2026-07-22T21:02:08.149330+00:00",
+  "updated_hkt": "2026-07-23 05:02 HKT"
 }
