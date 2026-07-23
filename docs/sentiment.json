@@ -1,17 +1,17 @@
 {
-  "bull_pct": 25,
-  "bear_pct": 50,
-  "neutral_pct": 25,
-  "bull_bear_ratio": 0.5,
-  "overall_score": 34,
+  "bull_pct": 28,
+  "bear_pct": 44,
+  "neutral_pct": 28,
+  "bull_bear_ratio": 0.6,
+  "overall_score": 35,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 25,
+    "formula_score": 28,
     "ai_score": 38,
-    "bull_count": 7,
+    "bull_count": 9,
     "bear_count": 14,
-    "neutral_count": 7,
-    "total_posts": 28,
+    "neutral_count": 9,
+    "total_posts": 32,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,186 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 28,
+  "post_count": 32,
   "hours_window": 24,
   "themes": [
     {
-      "id": "big-tech-earnings",
-      "title": "Big Tech Earnings Season",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "Alphabet, ServiceNow, IBM reporting live",
-        "Google slapped with EU fine",
-        "IBM cuts forecast after warning",
-        "Traders positioning around results"
-      ],
-      "sentiment_score": 45,
-      "tickers": [
-        "GOOGL",
-        "IBM",
-        "NOW",
-        "AVGO"
-      ]
-    },
-    {
-      "id": "ai-capex-bubble",
-      "title": "AI Capex Bubble Fears",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Hyperscalers all-in on massive spending",
-        "S&P concentration risk warnings mount",
-        "Korea liquidation cited as cautionary tale",
-        "AMD backing Anthropic with billions"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "AMD",
-        "GOOGL",
-        "META",
-        "AVGO"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Account Blow-Ups",
+      "id": "tesla-collapse",
+      "title": "Tesla Short Squeeze Play",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Space stock wipes out margin",
-        "Traders searching for jobs after losses",
-        "Praying for breakeven recovery",
-        "Loss posts dominating the feed"
+        "Leveraged shorts finally paying off",
+        "Musk earnings call tone rattles bulls",
+        "Long-term holders trapped and hopeful",
+        "Snapback speculation building intraday"
       ],
-      "sentiment_score": 15,
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "id": "tesla-watch",
-      "title": "Tesla Earnings Watch",
-      "icon": "car",
-      "heat": "building",
-      "bullets": [
-        "Profit falls despite sales rebound",
-        "Bulls calling for 300 target",
-        "Earnings call transcript circulating",
-        "Musk pump narrative resurfaces"
-      ],
-      "sentiment_score": 42,
+      "sentiment_score": 30,
       "tickers": [
         "TSLA"
       ]
     },
     {
-      "id": "market-crash-calls",
-      "title": "Crash & Short Positioning",
-      "icon": "trending-down",
-      "heat": "building",
+      "id": "chip-earnings",
+      "title": "Semiconductor Earnings Surge",
+      "icon": "cpu",
+      "heat": "hot",
       "bullets": [
-        "Calls to short manipulated market",
-        "Warnings against being exit liquidity",
-        "Concentration risk fuels bearish thesis",
-        "Cash gang waiting for the dip"
+        "Intel posts fastest sales growth in years",
+        "Unprecedented demand narrative gains traction",
+        "AMD approaching all-time highs debate",
+        "AI-driven order books expanding"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 68,
       "tickers": [
-        "SGOV"
+        "INTC",
+        "AMD",
+        "NOK"
       ]
     },
     {
-      "id": "chip-momentum",
-      "title": "Semiconductor Momentum",
+      "id": "big-tech-headwinds",
+      "title": "Big Tech Regulatory Pressure",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Alphabet hit with EU billion fine",
+        "GOOGL closing red on soft sentiment",
+        "Regulatory overhang weighing on names",
+        "Product UX complaints add noise"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "GOOGL"
+      ]
+    },
+    {
+      "id": "account-blowups",
+      "title": "Account Blow-Ups & Despair",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Traders reporting heavy multi-day losses",
+        "Debt piling up from speculation",
+        "Job searches after portfolio wipeouts",
+        "Concentration in single names punished"
+      ],
+      "sentiment_score": 15,
+      "tickers": [
+        "TSLA"
+      ]
+    },
+    {
+      "id": "ai-capex",
+      "title": "AI Capex Bubble Debate",
       "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "Hyperscalers all-in on massive spending",
+        "Questioning sustainability of returns",
+        "Apple notably sitting out",
+        "Global wealth propped by few names"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "GOOGL",
+        "META",
+        "AMZN",
+        "ORCL",
+        "MSFT"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "NVDA rapid intraday gains reported",
-        "AMD ATH speculation building",
-        "Nokia AI and Cloud orders surge",
-        "Chip names driving speculation"
+        "0DTE frustration with rigged feel",
+        "Big wins funding luxury purchases",
+        "Nasdaq short conviction persists",
+        "Oil put positioning on peace hopes"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 42,
       "tickers": [
-        "NVDA",
-        "AMD",
-        "NOK"
+        "USO",
+        "SNDK"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "GOOGL",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Earnings and EU fine overhang",
-      "company_name": "Alphabet Inc."
-    },
-    {
       "symbol": "TSLA",
       "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Profit miss vs bullish targets",
+      "mentions": 6,
+      "signal": "Shorts celebrating, longs trapped",
       "company_name": "Tesla, Inc."
     },
     {
-      "symbol": "AMD",
-      "sentiment": "bullish",
+      "symbol": "GOOGL",
+      "sentiment": "bearish",
       "mentions": 4,
-      "signal": "ATH hopes and Anthropic bet",
+      "signal": "EU fine and red days frustrate holders",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "INTC",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Earnings beat euphoria",
+      "company_name": "Intel Corporation"
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "ATH hopes versus put buyers",
       "company_name": "Advanced Micro Devices, Inc."
     },
     {
-      "symbol": "NVDA",
+      "symbol": "NOK",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Fast intraday gains chased",
-      "company_name": "NVIDIA Corporation"
+      "mentions": 1,
+      "signal": "Strong AI and cloud order growth",
+      "company_name": "Nokia Corporation Sponsored"
     },
     {
-      "symbol": "IBM",
+      "symbol": "USO",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Forecast cut disappoints",
-      "company_name": "International Business Machines"
+      "mentions": 1,
+      "signal": "Puts betting on peace and lower oil",
+      "company_name": "United States Oil Fund"
     },
     {
-      "symbol": "SPCX",
+      "symbol": "SNDK",
+      "sentiment": "neutral",
+      "mentions": 1,
+      "signal": "Speculative flyer",
+      "company_name": "Sandisk Corporation"
+    },
+    {
+      "symbol": "CMCSA",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Unlock overhang and crash calls",
-      "company_name": "Space Exploration Technologies "
-    },
-    {
-      "symbol": "NOW",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Pre-earnings conviction plays",
-      "company_name": "ServiceNow, Inc."
-    },
-    {
-      "symbol": "AVGO",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Long ahead of Google earnings",
-      "company_name": "Broadcom Inc."
+      "mentions": 1,
+      "signal": "Post-earnings crash to new lows",
+      "company_name": "Comcast Corporation"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans defensive as big tech earnings collide with mounting AI capex bubble anxiety. Traders cite Korea's mass liquidations and S&P concentration risk while a wave of account blow-ups and space-stock wipeouts underscores the fragility beneath the euphoria.",
+      "text": "Chip earnings dominate the bullish narrative, with Intel's blowout results and AMD all-time-high chatter energizing traders, while Nokia's AI and cloud order growth adds fuel to the semiconductor optimism sweeping the board.",
+      "tag": "bullish"
+    },
+    {
+      "text": "Tesla remains the emotional epicenter, with shorts finally profiting off a weak Musk earnings call while long-term holders cling to hope. The polarized positioning keeps the name intensely active on both sides.",
+      "tag": "notable"
+    },
+    {
+      "text": "A heavy undercurrent of despair persists as traders detail multi-day account blow-ups, mounting debt, and job hunts after single-stock concentration. The tension between euphoric wins and defeated losses caps overall greed.",
       "tag": "bearish"
-    },
-    {
-      "text": "Earnings season dominates the tape with Alphabet, ServiceNow, IBM, and Tesla in focus. IBM's forecast cut and Tesla's profit decline temper enthusiasm, while Google contends with a fresh EU fine and Reddit reels on AI deal uncertainty.",
-      "tag": "notable"
-    },
-    {
-      "text": "Pockets of greed persist in semiconductors, with NVDA and AMD drawing aggressive speculation and Nokia touting strong AI and cloud orders. Yet crash callers and cash-heavy holders signal a market bracing for the next shoe to drop.",
-      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-23T12:02:08.820360+00:00",
-  "updated_hkt": "2026-07-23 20:02 HKT"
+  "updated_at": "2026-07-23T21:02:17.241608+00:00",
+  "updated_hkt": "2026-07-24 05:02 HKT"
 }
