@@ -1,17 +1,17 @@
 {
-  "bull_pct": 23,
-  "bear_pct": 53,
-  "neutral_pct": 24,
-  "bull_bear_ratio": 0.4,
+  "bull_pct": 25,
+  "bear_pct": 50,
+  "neutral_pct": 25,
+  "bull_bear_ratio": 0.5,
   "overall_score": 34,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 23,
+    "formula_score": 25,
     "ai_score": 38,
     "bull_count": 7,
-    "bear_count": 16,
+    "bear_count": 14,
     "neutral_count": 7,
-    "total_posts": 30,
+    "total_posts": 28,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,186 +19,186 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 30,
+  "post_count": 28,
   "hours_window": 24,
   "themes": [
     {
-      "id": "earnings-season",
+      "id": "big-tech-earnings",
       "title": "Big Tech Earnings Season",
-      "icon": "calendar-event",
-      "heat": "hot",
-      "bullets": [
-        "Tesla profit falls despite sales rebound",
-        "Alphabet, ServiceNow, IBM report live",
-        "IBM lowers full-year forecast on warning",
-        "Traders positioning ahead of prints"
-      ],
-      "sentiment_score": 42,
-      "tickers": [
-        "TSLA",
-        "GOOGL",
-        "NOW",
-        "IBM"
-      ]
-    },
-    {
-      "id": "spacex-spcx",
-      "title": "SpaceX IPO Skepticism",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Speculators loading puts on SPCX",
-        "Manipulation and hype accusations widespread",
-        "Launch cancellation conspiracy theories circulating",
-        "Musk narrative viewed with distrust"
-      ],
-      "sentiment_score": 28,
-      "tickers": [
-        "SPCX",
-        "TSLA",
-        "BE"
-      ]
-    },
-    {
-      "id": "market-crash-fears",
-      "title": "Systemic Crash Fears",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Korean market meltdown cited as warning",
-        "Concentration risk in top S&P names",
-        "Private credit compared to 2008",
-        "Calls to short manipulated market"
-      ],
-      "sentiment_score": 18,
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "ai-semis",
-      "title": "AI & Semiconductor Bets",
       "icon": "cpu",
-      "heat": "building",
+      "heat": "hot",
       "bullets": [
-        "AMD to invest in Anthropic",
-        "SMCI surges on order and margins",
-        "NVDA intraday momentum plays",
-        "Long-term semi conviction debated"
+        "Alphabet, ServiceNow, IBM reporting live",
+        "Google slapped with EU fine",
+        "IBM cuts forecast after warning",
+        "Traders positioning around results"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 45,
       "tickers": [
-        "NVDA",
-        "SMCI",
-        "AMD",
+        "GOOGL",
+        "IBM",
+        "NOW",
         "AVGO"
       ]
     },
     {
-      "id": "loss-posts",
-      "title": "Trading Losses & Regret",
-      "icon": "trending-down",
-      "heat": "building",
+      "id": "ai-capex-bubble",
+      "title": "AI Capex Bubble Fears",
+      "icon": "flame",
+      "heat": "hot",
       "bullets": [
-        "Retail asking how bad it is",
-        "AI position sold at steep loss",
-        "Prior gains fully round-tripped",
-        "Market described as rigged"
+        "Hyperscalers all-in on massive spending",
+        "S&P concentration risk warnings mount",
+        "Korea liquidation cited as cautionary tale",
+        "AMD backing Anthropic with billions"
       ],
-      "sentiment_score": 20,
+      "sentiment_score": 40,
       "tickers": [
-        "NGFB"
+        "AMD",
+        "GOOGL",
+        "META",
+        "AVGO"
       ]
     },
     {
-      "id": "cash-defensive",
-      "title": "Cash & Defensive Positioning",
-      "icon": "shield",
-      "heat": "normal",
+      "id": "account-blowups",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
       "bullets": [
-        "SGOV cash gang awaiting dip",
-        "Yield collection seen as safer",
-        "Skepticism toward chasing rallies",
-        "Risk-off sentiment building"
+        "Space stock wipes out margin",
+        "Traders searching for jobs after losses",
+        "Praying for breakeven recovery",
+        "Loss posts dominating the feed"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 15,
+      "tickers": [
+        "SPCX"
+      ]
+    },
+    {
+      "id": "tesla-watch",
+      "title": "Tesla Earnings Watch",
+      "icon": "car",
+      "heat": "building",
+      "bullets": [
+        "Profit falls despite sales rebound",
+        "Bulls calling for 300 target",
+        "Earnings call transcript circulating",
+        "Musk pump narrative resurfaces"
+      ],
+      "sentiment_score": 42,
+      "tickers": [
+        "TSLA"
+      ]
+    },
+    {
+      "id": "market-crash-calls",
+      "title": "Crash & Short Positioning",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Calls to short manipulated market",
+        "Warnings against being exit liquidity",
+        "Concentration risk fuels bearish thesis",
+        "Cash gang waiting for the dip"
+      ],
+      "sentiment_score": 22,
       "tickers": [
         "SGOV"
+      ]
+    },
+    {
+      "id": "chip-momentum",
+      "title": "Semiconductor Momentum",
+      "icon": "cpu",
+      "heat": "normal",
+      "bullets": [
+        "NVDA rapid intraday gains reported",
+        "AMD ATH speculation building",
+        "Nokia AI and Cloud orders surge",
+        "Chip names driving speculation"
+      ],
+      "sentiment_score": 60,
+      "tickers": [
+        "NVDA",
+        "AMD",
+        "NOK"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPCX",
-      "sentiment": "bearish",
-      "mentions": 12,
-      "signal": "Heavy put buying on IPO",
-      "company_name": "Space Exploration Technologies "
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "bearish",
-      "mentions": 10,
-      "signal": "Profit falls, earnings skepticism",
-      "company_name": "Tesla, Inc."
-    },
-    {
-      "symbol": "SMCI",
-      "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "Order and margin surge conviction",
-      "company_name": "Super Micro Computer, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Fast intraday momentum plays",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
       "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Earnings anticipation upside",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "Earnings and EU fine overhang",
       "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "IBM",
-      "sentiment": "bearish",
+      "symbol": "TSLA",
+      "sentiment": "mixed",
       "mentions": 5,
-      "signal": "Forecast cut disappoints",
-      "company_name": "International Business Machines"
+      "signal": "Profit miss vs bullish targets",
+      "company_name": "Tesla, Inc."
     },
     {
       "symbol": "AMD",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Anthropic investment optimism",
+      "signal": "ATH hopes and Anthropic bet",
       "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Fast intraday gains chased",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "IBM",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Forecast cut disappoints",
+      "company_name": "International Business Machines"
+    },
+    {
+      "symbol": "SPCX",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Unlock overhang and crash calls",
+      "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "NOW",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Earnings bet on strong CEO",
+      "mentions": 2,
+      "signal": "Pre-earnings conviction plays",
       "company_name": "ServiceNow, Inc."
+    },
+    {
+      "symbol": "AVGO",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Long ahead of Google earnings",
+      "company_name": "Broadcom Inc."
     }
   ],
   "summary": [
     {
-      "text": "A packed earnings calendar dominates the tape, with Tesla missing on profit and IBM cutting guidance, while Alphabet and ServiceNow prints keep speculative traders positioning aggressively into the volatility.",
-      "tag": "notable"
-    },
-    {
-      "text": "Systemic anxiety is running hot as traders cite Korea's margin-call cascade, S&P concentration risk, and private-credit fragility, fueling bearish short theses and defensive cash rotation into SGOV.",
+      "text": "Sentiment leans defensive as big tech earnings collide with mounting AI capex bubble anxiety. Traders cite Korea's mass liquidations and S&P concentration risk while a wave of account blow-ups and space-stock wipeouts underscores the fragility beneath the euphoria.",
       "tag": "bearish"
     },
     {
-      "text": "Pockets of greed persist in AI and semiconductors, with Super Micro surging on new orders, AMD's Anthropic investment, and NVDA momentum trades sustaining high-conviction upside bets.",
-      "tag": "bullish"
+      "text": "Earnings season dominates the tape with Alphabet, ServiceNow, IBM, and Tesla in focus. IBM's forecast cut and Tesla's profit decline temper enthusiasm, while Google contends with a fresh EU fine and Reddit reels on AI deal uncertainty.",
+      "tag": "notable"
+    },
+    {
+      "text": "Pockets of greed persist in semiconductors, with NVDA and AMD drawing aggressive speculation and Nokia touting strong AI and cloud orders. Yet crash callers and cash-heavy holders signal a market bracing for the next shoe to drop.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-22T21:02:08.149330+00:00",
-  "updated_hkt": "2026-07-23 05:02 HKT"
+  "updated_at": "2026-07-23T12:02:08.820360+00:00",
+  "updated_hkt": "2026-07-23 20:02 HKT"
 }
