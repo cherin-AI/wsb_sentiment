@@ -1,17 +1,17 @@
 {
-  "bull_pct": 28,
-  "bear_pct": 44,
-  "neutral_pct": 28,
-  "bull_bear_ratio": 0.6,
-  "overall_score": 35,
-  "overall_label": "Fear",
+  "bull_pct": 35,
+  "bear_pct": 39,
+  "neutral_pct": 26,
+  "bull_bear_ratio": 0.9,
+  "overall_score": 43,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 28,
-    "ai_score": 38,
-    "bull_count": 9,
-    "bear_count": 14,
-    "neutral_count": 9,
-    "total_posts": 32,
+    "formula_score": 35,
+    "ai_score": 46,
+    "bull_count": 8,
+    "bear_count": 9,
+    "neutral_count": 6,
+    "total_posts": 23,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,110 +19,108 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 32,
+  "post_count": 23,
   "hours_window": 24,
   "themes": [
     {
-      "id": "tesla-collapse",
-      "title": "Tesla Short Squeeze Play",
-      "icon": "skull",
+      "id": "tesla-pain",
+      "title": "Tesla Volatility Trap",
+      "icon": "car-crash",
       "heat": "hot",
       "bullets": [
-        "Leveraged shorts finally paying off",
-        "Musk earnings call tone rattles bulls",
-        "Long-term holders trapped and hopeful",
-        "Snapback speculation building intraday"
+        "Options traders whipsawed by sharp swings",
+        "Cash-secured put writers absorbing losses",
+        "Overnight rallies rewarding a lucky few",
+        "Long holders bruised by Elon narrative"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 40,
       "tickers": [
         "TSLA"
       ]
     },
     {
-      "id": "chip-earnings",
-      "title": "Semiconductor Earnings Surge",
+      "id": "intel-earnings",
+      "title": "Intel Earnings Surge",
       "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "Intel posts fastest sales growth in years",
-        "Unprecedented demand narrative gains traction",
-        "AMD approaching all-time highs debate",
-        "AI-driven order books expanding"
-      ],
-      "sentiment_score": 68,
-      "tickers": [
-        "INTC",
-        "AMD",
-        "NOK"
-      ]
-    },
-    {
-      "id": "big-tech-headwinds",
-      "title": "Big Tech Regulatory Pressure",
-      "icon": "trending-down",
       "heat": "building",
       "bullets": [
-        "Alphabet hit with EU billion fine",
-        "GOOGL closing red on soft sentiment",
-        "Regulatory overhang weighing on names",
-        "Product UX complaints add noise"
+        "Fastest sales growth in fifteen years",
+        "Beat estimates on strong demand",
+        "Government chip narrative gaining traction",
+        "Live transcript drawing active attention"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 72,
       "tickers": [
-        "GOOGL"
+        "INTC"
       ]
     },
     {
       "id": "account-blowups",
-      "title": "Account Blow-Ups & Despair",
+      "title": "Account Blow-Ups",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Traders reporting heavy multi-day losses",
-        "Debt piling up from speculation",
-        "Job searches after portfolio wipeouts",
-        "Concentration in single names punished"
+        "Traders posting steep cash losses",
+        "Debt and sleepless nights admitted",
+        "Half of savings gone quickly",
+        "Cautionary tone spreading across feed"
       ],
-      "sentiment_score": 15,
+      "sentiment_score": 20,
       "tickers": [
-        "TSLA"
+        "TSLA",
+        "GOOGL"
       ]
     },
     {
-      "id": "ai-capex",
-      "title": "AI Capex Bubble Debate",
-      "icon": "cpu",
+      "id": "nuclear-defense",
+      "title": "Nuclear & Defense Plays",
+      "icon": "atom",
       "heat": "building",
       "bullets": [
-        "Hyperscalers all-in on massive spending",
-        "Questioning sustainability of returns",
-        "Apple notably sitting out",
-        "Global wealth propped by few names"
+        "Oklo cleared for reactor fuel loading",
+        "Oracle-Pentagon deal speculation building",
+        "Government contracts as bullish catalyst",
+        "Emerging positioning in energy names"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 70,
       "tickers": [
-        "GOOGL",
-        "META",
-        "AMZN",
+        "OKLO",
         "ORCL",
-        "MSFT"
+        "INTC"
       ]
     },
     {
-      "id": "market-mood",
-      "title": "General Market Mood",
+      "id": "korea-speculation",
+      "title": "Korean Overnight Speculation",
       "icon": "flame",
-      "heat": "normal",
+      "heat": "building",
       "bullets": [
-        "0DTE frustration with rigged feel",
-        "Big wins funding luxury purchases",
-        "Nasdaq short conviction persists",
-        "Oil put positioning on peace hopes"
+        "Korean names pumping and dumping overnight",
+        "High-volatility swing trades rewarded",
+        "Speculative traders chasing quick wins",
+        "Luxury purchases flexed after gains"
       ],
-      "sentiment_score": 42,
+      "sentiment_score": 62,
       "tickers": [
+        "SKHY"
+      ]
+    },
+    {
+      "id": "short-conviction",
+      "title": "Bearish Conviction Bets",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Stubborn Nasdaq short being held daily",
+        "Leveraged shorts starting to pay off",
+        "Oil puts on geopolitical peace hopes",
+        "Comcast bankruptcy thesis circulating"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "CMCSA",
         "USO",
-        "SNDK"
+        "TSLA"
       ]
     }
   ],
@@ -130,74 +128,74 @@
     {
       "symbol": "TSLA",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Shorts celebrating, longs trapped",
+      "mentions": 5,
+      "signal": "Whipsaw pain and lottery wins",
       "company_name": "Tesla, Inc."
-    },
-    {
-      "symbol": "GOOGL",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "EU fine and red days frustrate holders",
-      "company_name": "Alphabet Inc."
     },
     {
       "symbol": "INTC",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Earnings beat euphoria",
+      "signal": "Earnings beat fueling optimism",
       "company_name": "Intel Corporation"
     },
     {
-      "symbol": "AMD",
-      "sentiment": "mixed",
+      "symbol": "GOOGL",
+      "sentiment": "bearish",
       "mentions": 2,
-      "signal": "ATH hopes versus put buyers",
-      "company_name": "Advanced Micro Devices, Inc."
+      "signal": "Trust broken after losses",
+      "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "NOK",
+      "symbol": "ORCL",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Government deal speculation",
+      "company_name": "Oracle Corporation"
+    },
+    {
+      "symbol": "OKLO",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "Strong AI and cloud order growth",
-      "company_name": "Nokia Corporation Sponsored"
+      "signal": "Nuclear catalyst cleared",
+      "company_name": "Oklo Inc."
     },
     {
-      "symbol": "USO",
-      "sentiment": "bearish",
+      "symbol": "SKHY",
+      "sentiment": "bullish",
       "mentions": 1,
-      "signal": "Puts betting on peace and lower oil",
-      "company_name": "United States Oil Fund"
-    },
-    {
-      "symbol": "SNDK",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Speculative flyer",
-      "company_name": "Sandisk Corporation"
+      "signal": "Overnight swing trade winner",
+      "company_name": "SK hynix Inc."
     },
     {
       "symbol": "CMCSA",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "Post-earnings crash to new lows",
+      "signal": "Long-term bankruptcy thesis",
       "company_name": "Comcast Corporation"
+    },
+    {
+      "symbol": "USO",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "Puts on peace hopes",
+      "company_name": "United States Oil Fund"
     }
   ],
   "summary": [
     {
-      "text": "Chip earnings dominate the bullish narrative, with Intel's blowout results and AMD all-time-high chatter energizing traders, while Nokia's AI and cloud order growth adds fuel to the semiconductor optimism sweeping the board.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Tesla remains the emotional epicenter, with shorts finally profiting off a weak Musk earnings call while long-term holders cling to hope. The polarized positioning keeps the name intensely active on both sides.",
+      "text": "Sentiment is sharply bifurcated, with Tesla acting as both wealth generator and wealth destroyer as violent volatility rewards overnight speculators while punishing put writers and stubborn long holders enduring the Elon narrative.",
       "tag": "notable"
     },
     {
-      "text": "A heavy undercurrent of despair persists as traders detail multi-day account blow-ups, mounting debt, and job hunts after single-stock concentration. The tension between euphoric wins and defeated losses caps overall greed.",
+      "text": "Intel's earnings beat and Oklo's reactor authorization inject genuine bullish energy into semiconductor and nuclear-defense names, with government-contract speculation drawing fresh positioning across Oracle and chip plays.",
+      "tag": "bullish"
+    },
+    {
+      "text": "A steady drumbeat of account blow-ups, mounting debt confessions, and defiant short positions underscores real fear beneath the surface, tempering the euphoria and keeping overall mood cautiously balanced.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-23T21:02:17.241608+00:00",
-  "updated_hkt": "2026-07-24 05:02 HKT"
+  "updated_at": "2026-07-24T12:01:49.552504+00:00",
+  "updated_hkt": "2026-07-24 20:01 HKT"
 }
