@@ -1,17 +1,17 @@
 {
-  "bull_pct": 35,
-  "bear_pct": 39,
-  "neutral_pct": 26,
+  "bull_pct": 32,
+  "bear_pct": 36,
+  "neutral_pct": 32,
   "bull_bear_ratio": 0.9,
-  "overall_score": 43,
-  "overall_label": "Neutral",
+  "overall_score": 38,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 35,
-    "ai_score": 46,
-    "bull_count": 8,
-    "bear_count": 9,
-    "neutral_count": 6,
-    "total_posts": 23,
+    "formula_score": 32,
+    "ai_score": 41,
+    "bull_count": 9,
+    "bear_count": 10,
+    "neutral_count": 9,
+    "total_posts": 28,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,182 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 23,
+  "post_count": 28,
   "hours_window": 24,
   "themes": [
     {
-      "id": "tesla-pain",
-      "title": "Tesla Volatility Trap",
-      "icon": "car-crash",
-      "heat": "hot",
-      "bullets": [
-        "Options traders whipsawed by sharp swings",
-        "Cash-secured put writers absorbing losses",
-        "Overnight rallies rewarding a lucky few",
-        "Long holders bruised by Elon narrative"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "id": "intel-earnings",
-      "title": "Intel Earnings Surge",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "Fastest sales growth in fifteen years",
-        "Beat estimates on strong demand",
-        "Government chip narrative gaining traction",
-        "Live transcript drawing active attention"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "INTC"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Account Blow-Ups",
+      "id": "options-blowups",
+      "title": "Options Account Blow-Ups",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Traders posting steep cash losses",
-        "Debt and sleepless nights admitted",
-        "Half of savings gone quickly",
-        "Cautionary tone spreading across feed"
+        "0DTE speculation wiping out accounts",
+        "Averaging down deepens losses",
+        "Young traders learning painful lessons",
+        "Large single-day account losses"
       ],
-      "sentiment_score": 20,
+      "sentiment_score": 22,
       "tickers": [
+        "MU",
         "TSLA",
-        "GOOGL"
+        "SPY",
+        "SPX"
       ]
     },
     {
-      "id": "nuclear-defense",
-      "title": "Nuclear & Defense Plays",
-      "icon": "atom",
-      "heat": "building",
-      "bullets": [
-        "Oklo cleared for reactor fuel loading",
-        "Oracle-Pentagon deal speculation building",
-        "Government contracts as bullish catalyst",
-        "Emerging positioning in energy names"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "OKLO",
-        "ORCL",
-        "INTC"
-      ]
-    },
-    {
-      "id": "korea-speculation",
-      "title": "Korean Overnight Speculation",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "Korean names pumping and dumping overnight",
-        "High-volatility swing trades rewarded",
-        "Speculative traders chasing quick wins",
-        "Luxury purchases flexed after gains"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "SKHY"
-      ]
-    },
-    {
-      "id": "short-conviction",
-      "title": "Bearish Conviction Bets",
+      "id": "spacex-selloff",
+      "title": "SpaceX Post-IPO Selloff",
       "icon": "trending-down",
       "heat": "building",
       "bullets": [
-        "Stubborn Nasdaq short being held daily",
-        "Leveraged shorts starting to pay off",
-        "Oil puts on geopolitical peace hopes",
-        "Comcast bankruptcy thesis circulating"
+        "Down sharply from IPO peak",
+        "Front-week IV spiking hard",
+        "Dip-buyers debating capitulation",
+        "Bagholder comparisons to prior cycles"
       ],
       "sentiment_score": 30,
       "tickers": [
-        "CMCSA",
-        "USO",
-        "TSLA"
+        "SPACEX"
+      ]
+    },
+    {
+      "id": "nuclear-energy",
+      "title": "Advanced Nuclear Momentum",
+      "icon": "atom",
+      "heat": "building",
+      "bullets": [
+        "White House hosting reactor CEOs",
+        "Oklo clears DOE startup authorization",
+        "Microreactors reaching first criticality",
+        "Policy tailwinds fueling optimism"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "OKLO"
+      ]
+    },
+    {
+      "id": "ai-demand-debate",
+      "title": "AI Demand Sustainability",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "Hyperscaler capex scrutiny growing",
+        "Napkin-math on data center demand",
+        "Skeptics questioning AI value creation",
+        "Speculators chasing AI narrative anyway"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "ORCL"
+      ]
+    },
+    {
+      "id": "china-value",
+      "title": "China Value Plays",
+      "icon": "discount",
+      "heat": "normal",
+      "bullets": [
+        "Alibaba pitched as cheap AI exposure",
+        "Domestic chip production highlighted",
+        "Burry-linked undervaluation thesis",
+        "Strong fundamentals versus low multiple"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "BABA"
+      ]
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "chart-line",
+      "heat": "normal",
+      "bullets": [
+        "Max pain theories around Friday expiry",
+        "Buffett cash pile speculation",
+        "Disciplined scalping success stories",
+        "Mixed retail conviction into weekend"
+      ],
+      "sentiment_score": 47,
+      "tickers": [
+        "SPY",
+        "BRK"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "TSLA",
+      "symbol": "SPY",
       "sentiment": "mixed",
       "mentions": 5,
-      "signal": "Whipsaw pain and lottery wins",
+      "signal": "0DTE scalping and put plays",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "TSLA",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "cash-secured puts inflicting pain",
       "company_name": "Tesla, Inc."
     },
     {
-      "symbol": "INTC",
+      "symbol": "BABA",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Earnings beat fueling optimism",
-      "company_name": "Intel Corporation"
+      "mentions": 4,
+      "signal": "cheap AI value thesis",
+      "company_name": "Alibaba Group Holding Limited"
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "OKLO",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "nuclear catalyst optimism",
+      "company_name": "Oklo Inc."
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "0DTE calls blown up",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "RKLB",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Trust broken after losses",
-      "company_name": "Alphabet Inc."
+      "signal": "options wiped out winners",
+      "company_name": "Rocket Lab Corporation"
     },
     {
       "symbol": "ORCL",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Government deal speculation",
+      "signal": "government contract speculation",
       "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "OKLO",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Nuclear catalyst cleared",
-      "company_name": "Oklo Inc."
-    },
-    {
-      "symbol": "SKHY",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Overnight swing trade winner",
-      "company_name": "SK hynix Inc."
-    },
-    {
-      "symbol": "CMCSA",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Long-term bankruptcy thesis",
-      "company_name": "Comcast Corporation"
-    },
-    {
-      "symbol": "USO",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Puts on peace hopes",
-      "company_name": "United States Oil Fund"
+      "symbol": "SPX",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "spread positioning into expiry",
+      "company_name": "S&P 500 INDEX"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment is sharply bifurcated, with Tesla acting as both wealth generator and wealth destroyer as violent volatility rewards overnight speculators while punishing put writers and stubborn long holders enduring the Elon narrative.",
+      "text": "Retail pain dominates this snapshot, with a cluster of options account blow-ups spanning TSLA cash-secured puts, MU 0DTE calls, and a former RKLB winner reportedly giving it all back. The tone skews defeated rather than euphoric.",
+      "tag": "bearish"
+    },
+    {
+      "text": "The SpaceX post-IPO selloff has traders debating capitulation versus a generational dip-buy, with spiking implied volatility and bagholder comparisons keeping the name front of mind heading into the weekend.",
       "tag": "notable"
     },
     {
-      "text": "Intel's earnings beat and Oklo's reactor authorization inject genuine bullish energy into semiconductor and nuclear-defense names, with government-contract speculation drawing fresh positioning across Oracle and chip plays.",
+      "text": "Pockets of genuine bullishness persist in advanced nuclear names on White House and DOE catalysts, alongside a value case for Alibaba, offering a constructive counterweight to the broader risk-off mood.",
       "tag": "bullish"
-    },
-    {
-      "text": "A steady drumbeat of account blow-ups, mounting debt confessions, and defiant short positions underscores real fear beneath the surface, tempering the euphoria and keeping overall mood cautiously balanced.",
-      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-24T12:01:49.552504+00:00",
-  "updated_hkt": "2026-07-24 20:01 HKT"
+  "updated_at": "2026-07-24T21:02:01.604037+00:00",
+  "updated_hkt": "2026-07-25 05:02 HKT"
 }
