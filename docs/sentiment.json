@@ -1,17 +1,17 @@
 {
-  "bull_pct": 43,
-  "bear_pct": 30,
-  "neutral_pct": 27,
-  "bull_bear_ratio": 1.4,
-  "overall_score": 51,
+  "bull_pct": 57,
+  "bear_pct": 36,
+  "neutral_pct": 7,
+  "bull_bear_ratio": 1.6,
+  "overall_score": 54,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 43,
-    "ai_score": 54,
-    "bull_count": 10,
-    "bear_count": 7,
-    "neutral_count": 6,
-    "total_posts": 23,
+    "formula_score": 57,
+    "ai_score": 52,
+    "bull_count": 8,
+    "bear_count": 5,
+    "neutral_count": 1,
+    "total_posts": 14,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,181 +19,180 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 23,
+  "post_count": 14,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-semiconductors",
-      "title": "AI & Semiconductor Momentum",
+      "id": "big-tech-earnings",
+      "title": "Big Tech Earnings Week",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Samsung-Broadcom supply pact fuels optimism",
-        "SK Hynix-NVDA partnership draws attention",
-        "Qualcomm robotics presentation buzz",
-        "AI data-center demand debated for durability"
+        "Meta and Microsoft report this week",
+        "Traders positioning calls into results",
+        "MSFT trading below average target",
+        "Speculative options plays into volatility"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 62,
       "tickers": [
-        "NVDA",
-        "AVGO",
-        "QCOM"
+        "META",
+        "MSFT"
       ]
     },
     {
-      "id": "options-losses",
-      "title": "Options Blow-Ups",
+      "id": "ai-semiconductors",
+      "title": "AI & Semiconductor Deals",
+      "icon": "microchip",
+      "heat": "building",
+      "bullets": [
+        "Samsung-Broadcom multi-year supply agreement",
+        "SK Hynix and NVDA partnership news",
+        "Qualcomm AI robot presentation buzz",
+        "Oracle secures Pentagon software contract"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "AVGO",
+        "NVDA",
+        "QCOM",
+        "ORCL"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "0DTE speculators averaging down painfully",
-        "Young trader warns on options risk",
-        "Premium decay crushing call positions",
-        "Chasing losses draws self-criticism"
+        "Multiple loss posts flooding the feed",
+        "Averaging down into falling premiums",
+        "Weekend gap-risk anxiety widespread",
+        "Self-deprecating capitulation tone"
       ],
       "sentiment_score": 22,
       "tickers": [
         "TSLA",
         "MU",
-        "SPY"
+        "NBIS"
       ]
     },
     {
       "id": "googl-yolo",
-      "title": "Big-Cap Conviction Bets",
-      "icon": "rocket",
+      "title": "GOOGL Conviction Play",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Six-figure GOOGL share position opened",
-        "Trader targeting meaningful upside",
-        "High-conviction long-term hold",
-        "Retail piling into mega-caps"
+        "Large single-name share position opened",
+        "Targeting meaningful upside over months",
+        "Willing to hold long-term if wrong",
+        "High-conviction retail bet"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 70,
       "tickers": [
         "GOOGL"
       ]
     },
     {
-      "id": "nuclear-energy",
-      "title": "Nuclear Energy Catalyst",
-      "icon": "flame",
+      "id": "comeback-stories",
+      "title": "Rags-to-Riches Narratives",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "White House hosting advanced reactor CEOs",
-        "Microreactors reach first criticality",
-        "Policy tailwinds accelerating deployment",
-        "Speculative interest in nuclear names"
+        "Dramatic account recovery claims circulating",
+        "Debt-to-wealth transformation stories",
+        "Retail chasing outsized returns",
+        "Survivorship-bias euphoria on display"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 68,
       "tickers": []
     },
     {
-      "id": "trading-discipline",
-      "title": "Trading Discipline & Strategy",
-      "icon": "trending-up",
-      "heat": "normal",
-      "bullets": [
-        "Scalping resistance for small daily gains",
-        "Consistency and stop-loss discipline emphasized",
-        "AI-assisted signal tools tested",
-        "Trend-following over reversal catching"
-      ],
-      "sentiment_score": 60,
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "id": "market-mood",
+      "id": "general-mood",
       "title": "General Market Mood",
-      "icon": "mood-neutral",
+      "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Mixed retail sentiment across posts",
-        "Sarcasm masking real trading pain",
-        "Weekend positioning uncertainty",
-        "Euphoria and copium coexist"
+        "Mix of euphoria and defeat",
+        "Heavy sarcasm around dip-buying",
+        "Weekend positioning jitters",
+        "Casino mentality dominates discussion"
       ],
       "sentiment_score": 48,
-      "tickers": [
-        "TSLA",
-        "SPY"
-      ]
+      "tickers": []
     }
   ],
   "tickers": [
     {
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Earnings calls into oversold setup",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "META",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Bullish earnings positioning",
+      "company_name": "Meta Platforms, Inc."
+    },
+    {
       "symbol": "TSLA",
       "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "Post-earnings call buyers underwater",
+      "mentions": 3,
+      "signal": "Averaging down post-earnings dump",
       "company_name": "Tesla, Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "SK Hynix partnership optimism",
+      "mentions": 2,
+      "signal": "AI partnership optimism",
       "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "GOOGL",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Six-figure conviction long",
+      "mentions": 2,
+      "signal": "High-conviction share bet",
       "company_name": "Alphabet Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "0DTE scalping both directions",
-      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "AVGO",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Samsung mega-deal catalyst",
+      "mentions": 2,
+      "signal": "Massive supply deal tailwind",
       "company_name": "Broadcom Inc."
     },
     {
-      "symbol": "QCOM",
+      "symbol": "ORCL",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Robotics narrative building",
-      "company_name": "QUALCOMM Incorporated"
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "0DTE calls imploded",
-      "company_name": "Micron Technology, Inc."
+      "mentions": 1,
+      "signal": "Pentagon contract catalyst",
+      "company_name": "Oracle Corporation"
     },
     {
       "symbol": "NBIS",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "Weekend gamma anxiety",
+      "signal": "Weekend gap-risk anxiety",
       "company_name": "Nebius Group N.V."
     }
   ],
   "summary": [
     {
-      "text": "Semiconductor and AI narratives dominate the batch, with Samsung's massive Broadcom supply pact and an SK Hynix-NVDA partnership igniting genuine optimism, alongside speculative interest in advanced nuclear reactors following White House engagement.",
+      "text": "AI and semiconductor deal flow dominates the constructive narrative, with Samsung-Broadcom, SK Hynix-NVDA, and Oracle's Pentagon contract fueling optimism ahead of a pivotal Meta and Microsoft earnings week that traders are aggressively positioning around.",
       "tag": "bullish"
     },
     {
-      "text": "Countering the enthusiasm, a cluster of options blow-ups on TSLA and MU underscores painful post-earnings positioning, as speculative traders average down into decaying premium and publicly acknowledge their mistakes.",
+      "text": "Beneath the enthusiasm, a steady stream of loss posts and averaging-down confessions on names like TSLA and MU reveals real pain, with weekend gap-risk anxiety and capitulation tone weighing on speculative options traders.",
       "tag": "bearish"
     },
     {
-      "text": "The overall tone is bifurcated: euphoric mega-cap conviction bets and AI hardware hype coexist with defeated 0DTE loss posts, leaving batch sentiment balanced near neutral with a slight greed tilt.",
+      "text": "The batch reads as genuinely split: euphoric comeback stories and high-conviction single-name bets clash with defeated blow-up posts, leaving overall sentiment near neutral as retail balances greed against fresh scars.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-25T12:01:44.791348+00:00",
-  "updated_hkt": "2026-07-25 20:01 HKT"
+  "updated_at": "2026-07-25T21:01:37.407396+00:00",
+  "updated_hkt": "2026-07-26 05:01 HKT"
 }
