@@ -1,17 +1,17 @@
 {
-  "bull_pct": 32,
-  "bear_pct": 36,
-  "neutral_pct": 32,
-  "bull_bear_ratio": 0.9,
-  "overall_score": 38,
-  "overall_label": "Fear",
+  "bull_pct": 43,
+  "bear_pct": 30,
+  "neutral_pct": 27,
+  "bull_bear_ratio": 1.4,
+  "overall_score": 51,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 32,
-    "ai_score": 41,
-    "bull_count": 9,
-    "bear_count": 10,
-    "neutral_count": 9,
-    "total_posts": 28,
+    "formula_score": 43,
+    "ai_score": 54,
+    "bull_count": 10,
+    "bear_count": 7,
+    "neutral_count": 6,
+    "total_posts": 23,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,182 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 28,
+  "post_count": 23,
   "hours_window": 24,
   "themes": [
     {
-      "id": "options-blowups",
-      "title": "Options Account Blow-Ups",
-      "icon": "skull",
+      "id": "ai-semiconductors",
+      "title": "AI & Semiconductor Momentum",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "0DTE speculation wiping out accounts",
-        "Averaging down deepens losses",
-        "Young traders learning painful lessons",
-        "Large single-day account losses"
+        "Samsung-Broadcom supply pact fuels optimism",
+        "SK Hynix-NVDA partnership draws attention",
+        "Qualcomm robotics presentation buzz",
+        "AI data-center demand debated for durability"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 72,
       "tickers": [
-        "MU",
-        "TSLA",
-        "SPY",
-        "SPX"
+        "NVDA",
+        "AVGO",
+        "QCOM"
       ]
     },
     {
-      "id": "spacex-selloff",
-      "title": "SpaceX Post-IPO Selloff",
-      "icon": "trending-down",
+      "id": "options-losses",
+      "title": "Options Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "0DTE speculators averaging down painfully",
+        "Young trader warns on options risk",
+        "Premium decay crushing call positions",
+        "Chasing losses draws self-criticism"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "TSLA",
+        "MU",
+        "SPY"
+      ]
+    },
+    {
+      "id": "googl-yolo",
+      "title": "Big-Cap Conviction Bets",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Down sharply from IPO peak",
-        "Front-week IV spiking hard",
-        "Dip-buyers debating capitulation",
-        "Bagholder comparisons to prior cycles"
+        "Six-figure GOOGL share position opened",
+        "Trader targeting meaningful upside",
+        "High-conviction long-term hold",
+        "Retail piling into mega-caps"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 68,
       "tickers": [
-        "SPACEX"
+        "GOOGL"
       ]
     },
     {
       "id": "nuclear-energy",
-      "title": "Advanced Nuclear Momentum",
-      "icon": "atom",
+      "title": "Nuclear Energy Catalyst",
+      "icon": "flame",
       "heat": "building",
       "bullets": [
-        "White House hosting reactor CEOs",
-        "Oklo clears DOE startup authorization",
-        "Microreactors reaching first criticality",
-        "Policy tailwinds fueling optimism"
+        "White House hosting advanced reactor CEOs",
+        "Microreactors reach first criticality",
+        "Policy tailwinds accelerating deployment",
+        "Speculative interest in nuclear names"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 66,
+      "tickers": []
+    },
+    {
+      "id": "trading-discipline",
+      "title": "Trading Discipline & Strategy",
+      "icon": "trending-up",
+      "heat": "normal",
+      "bullets": [
+        "Scalping resistance for small daily gains",
+        "Consistency and stop-loss discipline emphasized",
+        "AI-assisted signal tools tested",
+        "Trend-following over reversal catching"
+      ],
+      "sentiment_score": 60,
       "tickers": [
-        "OKLO"
+        "SPY"
       ]
     },
     {
-      "id": "ai-demand-debate",
-      "title": "AI Demand Sustainability",
-      "icon": "cpu",
-      "heat": "building",
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-neutral",
+      "heat": "normal",
       "bullets": [
-        "Hyperscaler capex scrutiny growing",
-        "Napkin-math on data center demand",
-        "Skeptics questioning AI value creation",
-        "Speculators chasing AI narrative anyway"
+        "Mixed retail sentiment across posts",
+        "Sarcasm masking real trading pain",
+        "Weekend positioning uncertainty",
+        "Euphoria and copium coexist"
       ],
       "sentiment_score": 48,
       "tickers": [
-        "ORCL"
-      ]
-    },
-    {
-      "id": "china-value",
-      "title": "China Value Plays",
-      "icon": "discount",
-      "heat": "normal",
-      "bullets": [
-        "Alibaba pitched as cheap AI exposure",
-        "Domestic chip production highlighted",
-        "Burry-linked undervaluation thesis",
-        "Strong fundamentals versus low multiple"
-      ],
-      "sentiment_score": 68,
-      "tickers": [
-        "BABA"
-      ]
-    },
-    {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "chart-line",
-      "heat": "normal",
-      "bullets": [
-        "Max pain theories around Friday expiry",
-        "Buffett cash pile speculation",
-        "Disciplined scalping success stories",
-        "Mixed retail conviction into weekend"
-      ],
-      "sentiment_score": 47,
-      "tickers": [
-        "SPY",
-        "BRK"
+        "TSLA",
+        "SPY"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "0DTE scalping and put plays",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
       "symbol": "TSLA",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "cash-secured puts inflicting pain",
+      "mentions": 6,
+      "signal": "Post-earnings call buyers underwater",
       "company_name": "Tesla, Inc."
     },
     {
-      "symbol": "BABA",
+      "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "cheap AI value thesis",
-      "company_name": "Alibaba Group Holding Limited"
+      "mentions": 5,
+      "signal": "SK Hynix partnership optimism",
+      "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "OKLO",
+      "symbol": "GOOGL",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Six-figure conviction long",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "0DTE scalping both directions",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "AVGO",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "nuclear catalyst optimism",
-      "company_name": "Oklo Inc."
+      "signal": "Samsung mega-deal catalyst",
+      "company_name": "Broadcom Inc."
+    },
+    {
+      "symbol": "QCOM",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Robotics narrative building",
+      "company_name": "QUALCOMM Incorporated"
     },
     {
       "symbol": "MU",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "0DTE calls blown up",
+      "mentions": 2,
+      "signal": "0DTE calls imploded",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "RKLB",
+      "symbol": "NBIS",
       "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "options wiped out winners",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "ORCL",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "government contract speculation",
-      "company_name": "Oracle Corporation"
-    },
-    {
-      "symbol": "SPX",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "spread positioning into expiry",
-      "company_name": "S&P 500 INDEX"
+      "mentions": 1,
+      "signal": "Weekend gamma anxiety",
+      "company_name": "Nebius Group N.V."
     }
   ],
   "summary": [
     {
-      "text": "Retail pain dominates this snapshot, with a cluster of options account blow-ups spanning TSLA cash-secured puts, MU 0DTE calls, and a former RKLB winner reportedly giving it all back. The tone skews defeated rather than euphoric.",
+      "text": "Semiconductor and AI narratives dominate the batch, with Samsung's massive Broadcom supply pact and an SK Hynix-NVDA partnership igniting genuine optimism, alongside speculative interest in advanced nuclear reactors following White House engagement.",
+      "tag": "bullish"
+    },
+    {
+      "text": "Countering the enthusiasm, a cluster of options blow-ups on TSLA and MU underscores painful post-earnings positioning, as speculative traders average down into decaying premium and publicly acknowledge their mistakes.",
       "tag": "bearish"
     },
     {
-      "text": "The SpaceX post-IPO selloff has traders debating capitulation versus a generational dip-buy, with spiking implied volatility and bagholder comparisons keeping the name front of mind heading into the weekend.",
+      "text": "The overall tone is bifurcated: euphoric mega-cap conviction bets and AI hardware hype coexist with defeated 0DTE loss posts, leaving batch sentiment balanced near neutral with a slight greed tilt.",
       "tag": "notable"
-    },
-    {
-      "text": "Pockets of genuine bullishness persist in advanced nuclear names on White House and DOE catalysts, alongside a value case for Alibaba, offering a constructive counterweight to the broader risk-off mood.",
-      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-07-24T21:02:01.604037+00:00",
-  "updated_hkt": "2026-07-25 05:02 HKT"
+  "updated_at": "2026-07-25T12:01:44.791348+00:00",
+  "updated_hkt": "2026-07-25 20:01 HKT"
 }
