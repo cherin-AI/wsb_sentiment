@@ -1,17 +1,17 @@
 {
-  "bull_pct": 71,
-  "bear_pct": 14,
-  "neutral_pct": 15,
-  "bull_bear_ratio": 5.0,
-  "overall_score": 65,
-  "overall_label": "Greed",
+  "bull_pct": 33,
+  "bear_pct": 0,
+  "neutral_pct": 67,
+  "bull_bear_ratio": 2.0,
+  "overall_score": 53,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 71,
-    "ai_score": 63,
-    "bull_count": 5,
-    "bear_count": 1,
-    "neutral_count": 1,
-    "total_posts": 7,
+    "formula_score": 33,
+    "ai_score": 62,
+    "bull_count": 2,
+    "bear_count": 0,
+    "neutral_count": 4,
+    "total_posts": 6,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,145 +19,180 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 7,
+  "post_count": 6,
   "hours_window": 24,
   "themes": [
     {
-      "id": "big-tech-earnings",
-      "title": "Big Tech Earnings Week",
+      "id": "spacex-stake",
+      "title": "Big Tech Private Bets",
       "icon": "cpu",
-      "heat": "hot",
+      "heat": "building",
       "bullets": [
-        "Meta and Microsoft report this week",
-        "Traders positioning with call options",
-        "Microsoft trading below average price target",
-        "Speculative bets into volatility catalyst"
+        "Google discloses major SpaceX stake",
+        "Private valuations reaching record levels",
+        "Retail eyeing indirect exposure",
+        "Space economy narrative strengthening"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 68,
       "tickers": [
-        "META",
-        "MSFT"
+        "GOOGL"
       ]
     },
     {
-      "id": "moonshot-yolos",
-      "title": "High-Conviction Moonshot Yolos",
-      "icon": "rocket",
+      "id": "psychedelics",
+      "title": "Psychedelic Biotech Wave",
+      "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Six and seven-figure account milestones shared",
-        "Aggressive margin and options concentration",
-        "Long-term believers doubling down",
-        "Retail euphoria on outsized returns"
+        "Eli Lilly buyout sparks sector optimism",
+        "Psilocybin and MDMA gaining mainstream traction",
+        "Long-term believers finally vindicated",
+        "Speculative positioning increasing"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 72,
+      "tickers": [
+        "LLY"
+      ]
+    },
+    {
+      "id": "single-stock-futures",
+      "title": "Single Stock Futures Launch",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "CME launches single stock futures",
+        "New leveraged trading instrument",
+        "Mega-cap names covered",
+        "Traders eyeing fresh speculation tools"
+      ],
+      "sentiment_score": 60,
+      "tickers": [
+        "AAPL",
+        "AMD",
+        "AMZN",
+        "AVGO"
+      ]
+    },
+    {
+      "id": "high-conviction-yolo",
+      "title": "High-Conviction Concentrated Bets",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Seven-figure single-stock position disclosed",
+        "Margin used to amplify exposure",
+        "Long-term science-driven conviction",
+        "Retail piling into concentrated wagers"
+      ],
+      "sentiment_score": 75,
       "tickers": [
         "SLS"
       ]
     },
     {
-      "id": "portfolio-pain",
-      "title": "Portfolio Drawdowns",
-      "icon": "skull",
-      "heat": "building",
+      "id": "media-mergers",
+      "title": "Media Consolidation Delays",
+      "icon": "clock",
+      "heat": "normal",
       "bullets": [
-        "Buy-the-dip turning into repeated losses",
-        "Account values eroding through the month",
-        "Assigned calls creating unexpected exposure",
-        "Gallows humor around trading pain"
+        "Paramount-Warner merger pushed to 2027",
+        "Deal uncertainty weighs on sentiment",
+        "Regulatory and timing risks persist",
+        "Limited near-term catalyst"
       ],
-      "sentiment_score": 28,
-      "tickers": []
-    },
-    {
-      "id": "government-contracts",
-      "title": "Government Contract Wins",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Oracle signs multibillion Pentagon software deal",
-        "Ten-year revenue visibility supports valuation",
-        "Defense spending tailwind for tech",
-        "Strong cash flow narrative building"
-      ],
-      "sentiment_score": 72,
+      "sentiment_score": 45,
       "tickers": [
-        "ORCL"
+        "PARA",
+        "WBD"
       ]
     },
     {
-      "id": "space-plays",
-      "title": "Space and Aerospace Speculation",
-      "icon": "flame",
+      "id": "general-mood",
+      "title": "General Market Mood",
+      "icon": "activity",
       "heat": "normal",
       "bullets": [
-        "SpaceX launch referenced in portfolio talk",
-        "Retail chasing space-linked exposure",
-        "High volatility and questionable timing",
-        "Speculative appetite remains elevated"
+        "Weekend positioning ahead of Monday",
+        "Speculative appetite remains healthy",
+        "Mixed catalysts across sectors",
+        "Retail leaning risk-on"
       ],
-      "sentiment_score": 55,
-      "tickers": []
-    },
-    {
-      "id": "global-macro",
-      "title": "Global Market Mood",
-      "icon": "world",
-      "heat": "normal",
-      "bullets": [
-        "Japan earnings tracking gaining attention",
-        "AI trades interconnecting global markets",
-        "International catalysts influencing US stocks",
-        "Broadening focus beyond US earnings"
-      ],
-      "sentiment_score": 55,
+      "sentiment_score": 58,
       "tickers": []
     }
   ],
   "tickers": [
     {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Calls into earnings, below price target",
-      "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "META",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Speculative earnings call bets",
-      "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "ORCL",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Pentagon deal fuels optimism",
-      "company_name": "Oracle Corporation"
-    },
-    {
       "symbol": "SLS",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "High-conviction moonshot high-conviction",
+      "mentions": 6,
+      "signal": "High-conviction concentrated wager",
       "company_name": "SELLAS Life Sciences Group, Inc"
+    },
+    {
+      "symbol": "LLY",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Psychedelic buyout momentum",
+      "company_name": "Eli Lilly and Company"
+    },
+    {
+      "symbol": "GOOGL",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "SpaceX stake disclosure",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "AAPL",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "New futures underlying",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Futures speculation tool",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "AMZN",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Mega-cap futures listing",
+      "company_name": "Amazon.com, Inc."
+    },
+    {
+      "symbol": "PARA",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Merger delay uncertainty",
+      "company_name": "Paramount Skydance Corporation"
+    },
+    {
+      "symbol": "WBD",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Deal pushed to 2027",
+      "company_name": "Warner Bros. Discovery, Inc. - "
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans greedy as retail piles into Meta and Microsoft calls ahead of a heavy big-tech earnings week, with Microsoft's discount to targets drawing speculative buyers positioning for upside momentum.",
+      "text": "Sentiment leans risk-on as speculative traders chase concentrated single-stock bets and an emerging psychedelic biotech wave following Eli Lilly's buyout. Retail conviction remains high, with margin-fueled positioning signaling healthy appetite for aggressive exposure.",
       "tag": "bullish"
     },
     {
-      "text": "Moonshot profit posts and multibillion-dollar account milestones dominate the euphoric energy, with traders leaning on margin and concentrated options bets while celebrating outsized returns.",
-      "tag": "bullish"
+      "text": "Structural catalysts dominate the tape: Google's disclosure of a major SpaceX stake and CME's launch of single stock futures introduce fresh instruments and narratives that traders are actively positioning around ahead of Monday's session.",
+      "tag": "notable"
     },
     {
-      "text": "Counterbalancing the euphoria, portfolio drawdown posts reveal painful buy-the-dip losses and unexpected assignment exposure, a reminder that beneath the celebratory tone real accounts are bleeding.",
-      "tag": "bearish"
+      "text": "Media consolidation offers a rare soft spot, with the Paramount-Warner merger delay into 2027 injecting uncertainty. Overall the batch reads euphoric-leaning, driven by high-conviction wagers rather than defensive caution.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-07-26T12:00:55.462819+00:00",
-  "updated_hkt": "2026-07-26 20:00 HKT"
+  "updated_at": "2026-07-26T21:00:52.970053+00:00",
+  "updated_hkt": "2026-07-27 05:00 HKT"
 }
