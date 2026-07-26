@@ -1,17 +1,17 @@
 {
-  "bull_pct": 57,
-  "bear_pct": 36,
-  "neutral_pct": 7,
-  "bull_bear_ratio": 1.6,
-  "overall_score": 54,
-  "overall_label": "Neutral",
+  "bull_pct": 71,
+  "bear_pct": 14,
+  "neutral_pct": 15,
+  "bull_bear_ratio": 5.0,
+  "overall_score": 65,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 57,
-    "ai_score": 52,
-    "bull_count": 8,
-    "bear_count": 5,
+    "formula_score": 71,
+    "ai_score": 63,
+    "bull_count": 5,
+    "bear_count": 1,
     "neutral_count": 1,
-    "total_posts": 14,
+    "total_posts": 7,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,7 +19,7 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 14,
+  "post_count": 7,
   "hours_window": 24,
   "themes": [
     {
@@ -29,95 +29,88 @@
       "heat": "hot",
       "bullets": [
         "Meta and Microsoft report this week",
-        "Traders positioning calls into results",
-        "MSFT trading below average target",
-        "Speculative options plays into volatility"
+        "Traders positioning with call options",
+        "Microsoft trading below average price target",
+        "Speculative bets into volatility catalyst"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 66,
       "tickers": [
         "META",
         "MSFT"
       ]
     },
     {
-      "id": "ai-semiconductors",
-      "title": "AI & Semiconductor Deals",
-      "icon": "microchip",
+      "id": "moonshot-yolos",
+      "title": "High-Conviction Moonshot Yolos",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Samsung-Broadcom multi-year supply agreement",
-        "SK Hynix and NVDA partnership news",
-        "Qualcomm AI robot presentation buzz",
-        "Oracle secures Pentagon software contract"
+        "Six and seven-figure account milestones shared",
+        "Aggressive margin and options concentration",
+        "Long-term believers doubling down",
+        "Retail euphoria on outsized returns"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 82,
       "tickers": [
-        "AVGO",
-        "NVDA",
-        "QCOM",
+        "SLS"
+      ]
+    },
+    {
+      "id": "portfolio-pain",
+      "title": "Portfolio Drawdowns",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Buy-the-dip turning into repeated losses",
+        "Account values eroding through the month",
+        "Assigned calls creating unexpected exposure",
+        "Gallows humor around trading pain"
+      ],
+      "sentiment_score": 28,
+      "tickers": []
+    },
+    {
+      "id": "government-contracts",
+      "title": "Government Contract Wins",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Oracle signs multibillion Pentagon software deal",
+        "Ten-year revenue visibility supports valuation",
+        "Defense spending tailwind for tech",
+        "Strong cash flow narrative building"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
         "ORCL"
       ]
     },
     {
-      "id": "trading-losses",
-      "title": "Account Blow-Ups",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Multiple loss posts flooding the feed",
-        "Averaging down into falling premiums",
-        "Weekend gap-risk anxiety widespread",
-        "Self-deprecating capitulation tone"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "TSLA",
-        "MU",
-        "NBIS"
-      ]
-    },
-    {
-      "id": "googl-yolo",
-      "title": "GOOGL Conviction Play",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Large single-name share position opened",
-        "Targeting meaningful upside over months",
-        "Willing to hold long-term if wrong",
-        "High-conviction retail bet"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "GOOGL"
-      ]
-    },
-    {
-      "id": "comeback-stories",
-      "title": "Rags-to-Riches Narratives",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Dramatic account recovery claims circulating",
-        "Debt-to-wealth transformation stories",
-        "Retail chasing outsized returns",
-        "Survivorship-bias euphoria on display"
-      ],
-      "sentiment_score": 68,
-      "tickers": []
-    },
-    {
-      "id": "general-mood",
-      "title": "General Market Mood",
+      "id": "space-plays",
+      "title": "Space and Aerospace Speculation",
       "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Mix of euphoria and defeat",
-        "Heavy sarcasm around dip-buying",
-        "Weekend positioning jitters",
-        "Casino mentality dominates discussion"
+        "SpaceX launch referenced in portfolio talk",
+        "Retail chasing space-linked exposure",
+        "High volatility and questionable timing",
+        "Speculative appetite remains elevated"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 55,
+      "tickers": []
+    },
+    {
+      "id": "global-macro",
+      "title": "Global Market Mood",
+      "icon": "world",
+      "heat": "normal",
+      "bullets": [
+        "Japan earnings tracking gaining attention",
+        "AI trades interconnecting global markets",
+        "International catalysts influencing US stocks",
+        "Broadening focus beyond US earnings"
+      ],
+      "sentiment_score": 55,
       "tickers": []
     }
   ],
@@ -125,74 +118,46 @@
     {
       "symbol": "MSFT",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Earnings calls into oversold setup",
+      "mentions": 3,
+      "signal": "Calls into earnings, below price target",
       "company_name": "Microsoft Corporation"
     },
     {
       "symbol": "META",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Bullish earnings positioning",
+      "signal": "Speculative earnings call bets",
       "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Averaging down post-earnings dump",
-      "company_name": "Tesla, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "AI partnership optimism",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "High-conviction share bet",
-      "company_name": "Alphabet Inc."
-    },
-    {
-      "symbol": "AVGO",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Massive supply deal tailwind",
-      "company_name": "Broadcom Inc."
     },
     {
       "symbol": "ORCL",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Pentagon contract catalyst",
+      "mentions": 2,
+      "signal": "Pentagon deal fuels optimism",
       "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "NBIS",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Weekend gap-risk anxiety",
-      "company_name": "Nebius Group N.V."
+      "symbol": "SLS",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "High-conviction moonshot high-conviction",
+      "company_name": "SELLAS Life Sciences Group, Inc"
     }
   ],
   "summary": [
     {
-      "text": "AI and semiconductor deal flow dominates the constructive narrative, with Samsung-Broadcom, SK Hynix-NVDA, and Oracle's Pentagon contract fueling optimism ahead of a pivotal Meta and Microsoft earnings week that traders are aggressively positioning around.",
+      "text": "Sentiment leans greedy as retail piles into Meta and Microsoft calls ahead of a heavy big-tech earnings week, with Microsoft's discount to targets drawing speculative buyers positioning for upside momentum.",
       "tag": "bullish"
     },
     {
-      "text": "Beneath the enthusiasm, a steady stream of loss posts and averaging-down confessions on names like TSLA and MU reveals real pain, with weekend gap-risk anxiety and capitulation tone weighing on speculative options traders.",
-      "tag": "bearish"
+      "text": "Moonshot profit posts and multibillion-dollar account milestones dominate the euphoric energy, with traders leaning on margin and concentrated options bets while celebrating outsized returns.",
+      "tag": "bullish"
     },
     {
-      "text": "The batch reads as genuinely split: euphoric comeback stories and high-conviction single-name bets clash with defeated blow-up posts, leaving overall sentiment near neutral as retail balances greed against fresh scars.",
-      "tag": "notable"
+      "text": "Counterbalancing the euphoria, portfolio drawdown posts reveal painful buy-the-dip losses and unexpected assignment exposure, a reminder that beneath the celebratory tone real accounts are bleeding.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-25T21:01:37.407396+00:00",
-  "updated_hkt": "2026-07-26 05:01 HKT"
+  "updated_at": "2026-07-26T12:00:55.462819+00:00",
+  "updated_hkt": "2026-07-26 20:00 HKT"
 }
