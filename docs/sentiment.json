@@ -1,17 +1,17 @@
 {
-  "bull_pct": 33,
+  "bull_pct": 44,
   "bear_pct": 0,
-  "neutral_pct": 67,
-  "bull_bear_ratio": 2.0,
-  "overall_score": 53,
+  "neutral_pct": 56,
+  "bull_bear_ratio": 4.0,
+  "overall_score": 57,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 33,
+    "formula_score": 44,
     "ai_score": 62,
-    "bull_count": 2,
+    "bull_count": 4,
     "bear_count": 0,
-    "neutral_count": 4,
-    "total_posts": 6,
+    "neutral_count": 5,
+    "total_posts": 9,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,39 +19,56 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 6,
+  "post_count": 9,
   "hours_window": 24,
   "themes": [
     {
-      "id": "spacex-stake",
-      "title": "Big Tech Private Bets",
+      "id": "ai-capex-debate",
+      "title": "AI Capex Bull-Bear Debate",
       "icon": "cpu",
-      "heat": "building",
+      "heat": "hot",
       "bullets": [
-        "Google discloses major SpaceX stake",
-        "Private valuations reaching record levels",
-        "Retail eyeing indirect exposure",
-        "Space economy narrative strengthening"
+        "Google cloud commentary reignites debate",
+        "Bears warn on capex and free cash flow",
+        "Bulls defend structural AI demand",
+        "Both sides increasingly entrenched"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 55,
       "tickers": [
-        "GOOGL"
+        "GOOGL",
+        "NVDA"
       ]
     },
     {
-      "id": "psychedelics",
-      "title": "Psychedelic Biotech Wave",
+      "id": "nvidia-openai-financing",
+      "title": "Nvidia-OpenAI Circular Financing",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "Massive data center financing pledge reported",
+        "Traders eye circular funding concerns",
+        "Skepticism on sustainability of arrangement",
+        "Momentum narrative remains intact"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "id": "memory-chips",
+      "title": "Memory Chip Boom",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Eli Lilly buyout sparks sector optimism",
-        "Psilocybin and MDMA gaining mainstream traction",
-        "Long-term believers finally vindicated",
-        "Speculative positioning increasing"
+        "CXMT debut surges sharply in Shanghai",
+        "Strong DRAM demand drives valuations",
+        "IPO proceeds fund production expansion",
+        "China memory sector gaining spotlight"
       ],
       "sentiment_score": 72,
       "tickers": [
-        "LLY"
+        "CXMT"
       ]
     },
     {
@@ -60,139 +77,124 @@
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "CME launches single stock futures",
-        "New leveraged trading instrument",
-        "Mega-cap names covered",
-        "Traders eyeing fresh speculation tools"
+        "CME debuts single stock futures",
+        "New leveraged speculation vehicle",
+        "Coverage across mega-cap names",
+        "Traders assessing new instruments"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 55,
       "tickers": [
         "AAPL",
         "AMD",
-        "AMZN",
         "AVGO"
       ]
     },
     {
-      "id": "high-conviction-yolo",
-      "title": "High-Conviction Concentrated Bets",
-      "icon": "rocket",
-      "heat": "hot",
+      "id": "psychedelics",
+      "title": "Psychedelic Sector Speculation",
+      "icon": "flask",
+      "heat": "building",
       "bullets": [
-        "Seven-figure single-stock position disclosed",
-        "Margin used to amplify exposure",
-        "Long-term science-driven conviction",
-        "Retail piling into concentrated wagers"
+        "Eli Lilly buyout energizes psychedelic names",
+        "Speculative traders eye emerging catalysts",
+        "Long-followed niche moving mainstream",
+        "Early-stage upside positioning"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 68,
       "tickers": [
-        "SLS"
+        "LLY"
       ]
     },
     {
       "id": "media-mergers",
-      "title": "Media Consolidation Delays",
-      "icon": "clock",
+      "title": "Media Merger Dynamics",
+      "icon": "movie",
       "heat": "normal",
       "bullets": [
-        "Paramount-Warner merger pushed to 2027",
-        "Deal uncertainty weighs on sentiment",
-        "Regulatory and timing risks persist",
-        "Limited near-term catalyst"
+        "Paramount delays Warner Bros merger",
+        "Deal timeline pushed into 2027",
+        "Consolidation narrative continues",
+        "Limited immediate trading catalyst"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 48,
       "tickers": [
         "PARA",
         "WBD"
       ]
-    },
-    {
-      "id": "general-mood",
-      "title": "General Market Mood",
-      "icon": "activity",
-      "heat": "normal",
-      "bullets": [
-        "Weekend positioning ahead of Monday",
-        "Speculative appetite remains healthy",
-        "Mixed catalysts across sectors",
-        "Retail leaning risk-on"
-      ],
-      "sentiment_score": 58,
-      "tickers": []
     }
   ],
   "tickers": [
     {
-      "symbol": "SLS",
+      "symbol": "GOOGL",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "High-conviction concentrated wager",
-      "company_name": "SELLAS Life Sciences Group, Inc"
+      "mentions": 5,
+      "signal": "cloud earnings fuel ownership pride",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "circular AI financing optimism",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "CXMT",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "explosive memory IPO debut",
+      "company_name": "ChangXin Memory Technologies (Derivatives) USD"
     },
     {
       "symbol": "LLY",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Psychedelic buyout momentum",
+      "mentions": 2,
+      "signal": "psychedelic buyout catalyst",
       "company_name": "Eli Lilly and Company"
-    },
-    {
-      "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "SpaceX stake disclosure",
-      "company_name": "Alphabet Inc."
     },
     {
       "symbol": "AAPL",
       "sentiment": "mixed",
       "mentions": 2,
-      "signal": "New futures underlying",
+      "signal": "single stock futures underlying",
       "company_name": "Apple Inc."
     },
     {
       "symbol": "AMD",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Futures speculation tool",
+      "mentions": 1,
+      "signal": "listed among new futures",
       "company_name": "Advanced Micro Devices, Inc."
     },
     {
-      "symbol": "AMZN",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Mega-cap futures listing",
-      "company_name": "Amazon.com, Inc."
-    },
-    {
       "symbol": "PARA",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Merger delay uncertainty",
-      "company_name": "Paramount Skydance Corporation"
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "merger delay uncertainty",
+      "company_name": "PARADIGM"
     },
     {
       "symbol": "WBD",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Deal pushed to 2027",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "deal pushed to 2027",
       "company_name": "Warner Bros. Discovery, Inc. - "
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans risk-on as speculative traders chase concentrated single-stock bets and an emerging psychedelic biotech wave following Eli Lilly's buyout. Retail conviction remains high, with margin-fueled positioning signaling healthy appetite for aggressive exposure.",
-      "tag": "bullish"
-    },
-    {
-      "text": "Structural catalysts dominate the tape: Google's disclosure of a major SpaceX stake and CME's launch of single stock futures introduce fresh instruments and narratives that traders are actively positioning around ahead of Monday's session.",
+      "text": "The batch centers on the AI trade, with Google's cloud strength and Nvidia's massive OpenAI financing pledge dominating discussion. Bulls and bears remain deeply entrenched over ballooning capex and shrinking free cash flow, keeping the debate energetic.",
       "tag": "notable"
     },
     {
-      "text": "Media consolidation offers a rare soft spot, with the Paramount-Warner merger delay into 2027 injecting uncertainty. Overall the batch reads euphoric-leaning, driven by high-conviction wagers rather than defensive caution.",
+      "text": "Memory chips stole attention as CXMT's explosive Shanghai debut underscored surging DRAM demand, reinforcing a broadly constructive semiconductor narrative. Speculative appetite also spread to psychedelics following Eli Lilly's acquisition catalyst.",
       "tag": "bullish"
+    },
+    {
+      "text": "CME's launch of single stock futures introduces a fresh leveraged vehicle for retail speculation, while a delayed Paramount-Warner Bros merger adds structural noise. Overall tone leans greedy but tempered by persistent AI bubble skepticism.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-26T21:00:52.970053+00:00",
-  "updated_hkt": "2026-07-27 05:00 HKT"
+  "updated_at": "2026-07-27T12:01:04.459838+00:00",
+  "updated_hkt": "2026-07-27 20:01 HKT"
 }
