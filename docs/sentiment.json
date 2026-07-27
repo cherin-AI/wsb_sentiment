@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 0,
-  "neutral_pct": 56,
-  "bull_bear_ratio": 4.0,
-  "overall_score": 57,
+  "bull_pct": 35,
+  "bear_pct": 35,
+  "neutral_pct": 30,
+  "bull_bear_ratio": 1.0,
+  "overall_score": 47,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 44,
-    "ai_score": 62,
-    "bull_count": 4,
-    "bear_count": 0,
+    "formula_score": 35,
+    "ai_score": 52,
+    "bull_count": 6,
+    "bear_count": 6,
     "neutral_count": 5,
-    "total_posts": 9,
+    "total_posts": 17,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,182 +19,187 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 9,
+  "post_count": 17,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-capex-debate",
-      "title": "AI Capex Bull-Bear Debate",
+      "id": "ai-bubble-debate",
+      "title": "AI Bubble Debate",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Google cloud commentary reignites debate",
-        "Bears warn on capex and free cash flow",
-        "Bulls defend structural AI demand",
-        "Both sides increasingly entrenched"
+        "Nvidia-OpenAI $250B backstop sparks skepticism",
+        "Bears cite record AI capex",
+        "Circular financing concerns mounting",
+        "Bull-bear standoff intensifying"
+      ],
+      "sentiment_score": 42,
+      "tickers": [
+        "NVDA",
+        "GOOGL"
+      ]
+    },
+    {
+      "id": "semiconductor-geopolitics",
+      "title": "Semiconductor Geopolitics",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "China debuts homegrown DUV tools",
+        "CXMT IPO surges on debut",
+        "Memory names diverging sharply",
+        "SNDK pressured versus MU resilience"
       ],
       "sentiment_score": 55,
       "tickers": [
-        "GOOGL",
-        "NVDA"
+        "SNDK",
+        "MU",
+        "CXMT",
+        "INTC"
       ]
     },
     {
-      "id": "nvidia-openai-financing",
-      "title": "Nvidia-OpenAI Circular Financing",
+      "id": "options-speculation",
+      "title": "Options Speculation",
       "icon": "rocket",
-      "heat": "building",
+      "heat": "hot",
       "bullets": [
-        "Massive data center financing pledge reported",
-        "Traders eye circular funding concerns",
-        "Skepticism on sustainability of arrangement",
-        "Momentum narrative remains intact"
+        "0DTE SPX puts printing gains",
+        "Weeklies versus LEAPS debate",
+        "First-time options traders wiped out",
+        "High-conviction short-dated bets"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 50,
       "tickers": [
-        "NVDA"
+        "SPX",
+        "TSLA"
       ]
     },
     {
-      "id": "memory-chips",
-      "title": "Memory Chip Boom",
-      "icon": "flame",
+      "id": "trading-losses",
+      "title": "Trading Losses",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "CXMT debut surges sharply in Shanghai",
-        "Strong DRAM demand drives valuations",
-        "IPO proceeds fund production expansion",
-        "China memory sector gaining spotlight"
+        "Loss posts circulating widely",
+        "Dip-buyers caught offside",
+        "Account blow-ups on options",
+        "Painful realized damage shared"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 25,
       "tickers": [
-        "CXMT"
+        "TSLA",
+        "SNXX"
       ]
     },
     {
-      "id": "single-stock-futures",
-      "title": "Single Stock Futures Launch",
+      "id": "mega-cap-strength",
+      "title": "Mega-Cap Strength",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "CME debuts single stock futures",
-        "New leveraged speculation vehicle",
-        "Coverage across mega-cap names",
-        "Traders assessing new instruments"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "AAPL",
-        "AMD",
-        "AVGO"
-      ]
-    },
-    {
-      "id": "psychedelics",
-      "title": "Psychedelic Sector Speculation",
-      "icon": "flask",
-      "heat": "building",
-      "bullets": [
-        "Eli Lilly buyout energizes psychedelic names",
-        "Speculative traders eye emerging catalysts",
-        "Long-followed niche moving mainstream",
-        "Early-stage upside positioning"
+        "Apple hitting all-time highs",
+        "Old guard holding unrealized gains",
+        "Strong cash flow narrative persists",
+        "Long-term theses being tested"
       ],
       "sentiment_score": 68,
       "tickers": [
-        "LLY"
+        "AAPL",
+        "NVDA",
+        "GOOGL",
+        "MU"
       ]
     },
     {
-      "id": "media-mergers",
-      "title": "Media Merger Dynamics",
-      "icon": "movie",
+      "id": "reddit-earnings",
+      "title": "Reddit Earnings Play",
+      "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Paramount delays Warner Bros merger",
-        "Deal timeline pushed into 2027",
-        "Consolidation narrative continues",
-        "Limited immediate trading catalyst"
+        "RDDT calls ahead of earnings",
+        "Upside momentum into Thursday report",
+        "Speculative pre-earnings positioning",
+        "Trend pointing higher"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 72,
       "tickers": [
-        "PARA",
-        "WBD"
+        "RDDT"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "cloud earnings fuel ownership pride",
-      "company_name": "Alphabet Inc."
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 9,
+      "signal": "AI backstop fuels bubble worries",
+      "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "NVDA",
+      "symbol": "AAPL",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "circular AI financing optimism",
-      "company_name": "NVIDIA Corporation"
+      "mentions": 6,
+      "signal": "ATH strength puzzles traders",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "SNDK",
+      "sentiment": "bearish",
+      "mentions": 5,
+      "signal": "Pressured by DUV developments",
+      "company_name": "Sandisk Corporation"
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "Resilient amid memory volatility",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "CXMT",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "explosive memory IPO debut",
+      "mentions": 4,
+      "signal": "Explosive Shanghai debut",
       "company_name": "ChangXin Memory Technologies (Derivatives) USD"
     },
     {
-      "symbol": "LLY",
+      "symbol": "SPX",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "0DTE puts in favor",
+      "company_name": "Direxion Daily S&P 500 Bull 3X "
+    },
+    {
+      "symbol": "GOOGL",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Cloud commentary drives AI debate",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "RDDT",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "psychedelic buyout catalyst",
-      "company_name": "Eli Lilly and Company"
-    },
-    {
-      "symbol": "AAPL",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "single stock futures underlying",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "listed among new futures",
-      "company_name": "Advanced Micro Devices, Inc."
-    },
-    {
-      "symbol": "PARA",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "merger delay uncertainty",
-      "company_name": "PARADIGM"
-    },
-    {
-      "symbol": "WBD",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "deal pushed to 2027",
-      "company_name": "Warner Bros. Discovery, Inc. - "
+      "mentions": 3,
+      "signal": "Pre-earnings call buying",
+      "company_name": "Reddit, Inc."
     }
   ],
   "summary": [
     {
-      "text": "The batch centers on the AI trade, with Google's cloud strength and Nvidia's massive OpenAI financing pledge dominating discussion. Bulls and bears remain deeply entrenched over ballooning capex and shrinking free cash flow, keeping the debate energetic.",
+      "text": "The AI narrative dominates sentiment as the Nvidia-OpenAI $250B financing arrangement fuels sharp skepticism over circular funding and record capex. Bulls and bears have dug in harder, leaving the market's central theme balanced on a knife's edge.",
       "tag": "notable"
     },
     {
-      "text": "Memory chips stole attention as CXMT's explosive Shanghai debut underscored surging DRAM demand, reinforcing a broadly constructive semiconductor narrative. Speculative appetite also spread to psychedelics following Eli Lilly's acquisition catalyst.",
-      "tag": "bullish"
+      "text": "Semiconductor geopolitics is heating up, with China's homegrown DUV tools and CXMT's explosive Shanghai debut reshaping memory names. SNDK bore the brunt while MU showed relative resilience, exposing divergence within the sector.",
+      "tag": "notable"
     },
     {
-      "text": "CME's launch of single stock futures introduces a fresh leveraged vehicle for retail speculation, while a delayed Paramount-Warner Bros merger adds structural noise. Overall tone leans greedy but tempered by persistent AI bubble skepticism.",
-      "tag": "notable"
+      "text": "Options speculation remains frenetic, with 0DTE SPX puts printing and a chorus warning that short-dated contracts devastate accounts. Loss posts and blow-ups temper the euphoria, keeping the broader mood cautiously mixed.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-27T12:01:04.459838+00:00",
-  "updated_hkt": "2026-07-27 20:01 HKT"
+  "updated_at": "2026-07-27T21:01:24.902817+00:00",
+  "updated_hkt": "2026-07-28 05:01 HKT"
 }
