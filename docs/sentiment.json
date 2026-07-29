@@ -1,17 +1,17 @@
 {
-  "bull_pct": 34,
-  "bear_pct": 45,
-  "neutral_pct": 21,
-  "bull_bear_ratio": 0.8,
-  "overall_score": 37,
+  "bull_pct": 19,
+  "bear_pct": 52,
+  "neutral_pct": 29,
+  "bull_bear_ratio": 0.4,
+  "overall_score": 29,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 34,
-    "ai_score": 38,
-    "bull_count": 10,
-    "bear_count": 13,
-    "neutral_count": 6,
-    "total_posts": 29,
+    "formula_score": 19,
+    "ai_score": 34,
+    "bull_count": 5,
+    "bear_count": 14,
+    "neutral_count": 8,
+    "total_posts": 27,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,188 +19,182 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 29,
+  "post_count": 27,
   "hours_window": 24,
   "themes": [
     {
-      "id": "asia-selloff",
-      "title": "Asian Market Rout",
+      "id": "korea-kospi-crash",
+      "title": "Korea KOSPI Meltdown",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "KOSPI plunges, circuit breakers triggered",
-        "Nikkei sharply lower overnight",
-        "Global risk contagion fears spread",
-        "Korea-exposed traders nursing heavy losses"
+        "Second straight circuit breaker triggered",
+        "DRAM and semiconductor bagholders piling up",
+        "Aged margin debt amplifying downside",
+        "Geopolitical Iran risk compounding losses"
       ],
-      "sentiment_score": 20,
+      "sentiment_score": 15,
       "tickers": [
-        "SKHY"
+        "SSNLF",
+        "DRAM"
       ]
     },
     {
-      "id": "ai-tech-selloff",
-      "title": "AI & Tech Pullback",
+      "id": "semiconductor-pain",
+      "title": "Semiconductor & Memory Weakness",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Tech stocks broadly under pressure",
-        "NVDA leadership questioned amid drawdown",
-        "Momentum basket on track for record decline",
-        "Bulls holding conviction despite losses"
+        "Sandisk cratering after hours",
+        "DRAM positions underwater",
+        "Semi entries timed at highs",
+        "Memory cycle fears spreading"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 20,
       "tickers": [
-        "NVDA",
-        "SMCI",
-        "BE",
-        "META"
+        "SNDK",
+        "DRAM"
       ]
     },
     {
-      "id": "earnings-season",
-      "title": "Earnings Reactions",
-      "icon": "calendar-stats",
-      "heat": "building",
-      "bullets": [
-        "Meta capex concerns ahead of print",
-        "Boeing Q2 call in focus",
-        "AZN beats on revenue and guidance",
-        "Seagate profit soars on AI storage demand"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "META",
-        "BA",
-        "AZN",
-        "STX",
-        "BE"
-      ]
-    },
-    {
-      "id": "loss-posts",
+      "id": "trading-losses",
       "title": "Account Blow-Ups",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Loss posts becoming daily routine",
-        "Options bets on Sandisk erased savings",
-        "Traders averaging down into red",
-        "Casino mentality dominating threads"
+        "Max-margin earnings plays wiped out",
+        "Loss posts dominating the feed",
+        "Leverage regret widespread",
+        "Gallows humor over ruined accounts"
       ],
       "sentiment_score": 18,
-      "tickers": [
-        "SKHY"
-      ]
+      "tickers": []
     },
     {
-      "id": "options-speculation",
-      "title": "Options Speculation",
+      "id": "ai-speculation",
+      "title": "AI Infrastructure Bets",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "SPX credit spreads and put bets active",
-        "Leveraged wagers on single names",
-        "Line-of-credit funded gambling",
-        "High-conviction lottery tickets"
+        "NBIS high-conviction all-in wagers",
+        "Water infrastructure earnings play on TTEK",
+        "AI theme still drawing fresh capital",
+        "Speculative call buying continues"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 68,
       "tickers": [
-        "SPX",
-        "AZN",
-        "SKHY"
+        "NBIS",
+        "TTEK",
+        "BMNR"
       ]
     },
     {
-      "id": "megacap-leadership",
-      "title": "Mega-Cap Shakeup",
+      "id": "volatility-hedging",
+      "title": "Volatility & Hedging",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Apple retakes most-valuable crown from Nvidia",
-        "Long-term buy-and-hold narrative celebrated",
-        "Burry NVDA short debate resurfaces",
-        "Leadership rotation within mega-caps"
+        "VIX hedges paying off amid turmoil",
+        "0DTE SPY scalping funding rolls",
+        "Bears cautiously near break-even",
+        "Traders positioning for more downside"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 38,
       "tickers": [
-        "AAPL",
-        "NVDA"
+        "VIX",
+        "SPY"
+      ]
+    },
+    {
+      "id": "macro-earnings",
+      "title": "Macro & Earnings Catalysts",
+      "icon": "building-bank",
+      "heat": "normal",
+      "bullets": [
+        "Fed holds rates steady",
+        "Chipotle lifts same-store sales outlook",
+        "Mercedes cuts guidance on China weakness",
+        "Oil options delivering quick upside"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "CMG",
+        "ACI"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 8,
-      "signal": "leadership questioned amid selloff",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "SKHY",
+      "symbol": "DRAM",
       "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "averaging down into Korea rout",
-      "company_name": "SK hynix Inc."
-    },
-    {
-      "symbol": "AAPL",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "retakes most valuable crown",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "META",
-      "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "capex fears into earnings",
-      "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "SPX",
-      "sentiment": "mixed",
       "mentions": 4,
-      "signal": "aggressive spread bets",
-      "company_name": "S&P 500 INDEX"
+      "signal": "bagholders trapped near highs",
+      "company_name": "Roundhill Memory ETF"
     },
     {
-      "symbol": "SMCI",
-      "sentiment": "bullish",
+      "symbol": "SNDK",
+      "sentiment": "bearish",
       "mentions": 3,
-      "signal": "deep value thesis",
-      "company_name": "Super Micro Computer, Inc."
+      "signal": "sharp post-earnings crash",
+      "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "AZN",
+      "symbol": "NBIS",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "strong beat and guidance",
-      "company_name": "AstraZeneca PLC"
+      "signal": "high-conviction all-in bet",
+      "company_name": "Nebius Group N.V."
     },
     {
-      "symbol": "BE",
+      "symbol": "VIX",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "hopeful post-earnings bounce",
-      "company_name": "Bloom Energy Corporation"
+      "mentions": 2,
+      "signal": "hedge paying off in turmoil",
+      "company_name": "CBOE Volatility Index"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "0DTE scalping playground",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "TTEK",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "under-the-radar AI water play",
+      "company_name": "Tetra Tech, Inc."
+    },
+    {
+      "symbol": "CMG",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "improved same-store guidance",
+      "company_name": "Chipotle Mexican Grill, Inc."
+    },
+    {
+      "symbol": "ACI",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "short position on grocery drop",
+      "company_name": "Albertsons Companies, Inc."
     }
   ],
   "summary": [
     {
-      "text": "A global risk-off wave dominated the session, with Korea's KOSPI triggering circuit breakers and Asian indices cratering overnight. Retail traders exposed to Korea-linked names faced painful drawdowns, while loss posts turned into a near-daily ritual across the board.",
+      "text": "Sentiment is dominated by South Korea's KOSPI meltdown, with two consecutive circuit breakers dragging down memory and semiconductor names. DRAM and Sandisk holders are trapped, and account blow-up posts are multiplying across the feed.",
       "tag": "bearish"
     },
     {
-      "text": "The AI trade wobbled hard, with momentum baskets tracking record monthly declines and Nvidia's leadership challenged as Apple reclaimed the most-valuable crown. Bulls clung to conviction in tech, but the tone shifted from euphoria toward defensive hope.",
-      "tag": "bearish"
-    },
-    {
-      "text": "Earnings provided scattered bright spots, as AstraZeneca beat and reiterated guidance while Seagate profited on AI storage demand. All eyes turned to Meta's capex-heavy print and speculative SPX options positioning ahead of a pivotal session.",
+      "text": "Volatility hedgers are the rare winners, with VIX positions and 0DTE SPY scalps monetizing the turmoil. Bears near break-even remain wary of building buying pressure ahead of the September policy decision.",
       "tag": "notable"
+    },
+    {
+      "text": "Pockets of greed persist in AI infrastructure, with high-conviction all-in bets on NBIS and speculative earnings plays on water-engineering name TTEK, signaling risk appetite has not fully capitulated despite the macro shock.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-07-28T21:02:18.867256+00:00",
-  "updated_hkt": "2026-07-29 05:02 HKT"
+  "updated_at": "2026-07-29T21:02:04.089520+00:00",
+  "updated_hkt": "2026-07-30 05:02 HKT"
 }
