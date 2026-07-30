@@ -1,17 +1,17 @@
 {
-  "bull_pct": 19,
-  "bear_pct": 52,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 0.4,
-  "overall_score": 29,
+  "bull_pct": 25,
+  "bear_pct": 48,
+  "neutral_pct": 27,
+  "bull_bear_ratio": 0.5,
+  "overall_score": 30,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 19,
-    "ai_score": 34,
-    "bull_count": 5,
-    "bear_count": 14,
-    "neutral_count": 8,
-    "total_posts": 27,
+    "formula_score": 25,
+    "ai_score": 32,
+    "bull_count": 11,
+    "bear_count": 21,
+    "neutral_count": 12,
+    "total_posts": 44,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,182 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 27,
+  "post_count": 44,
   "hours_window": 24,
   "themes": [
     {
-      "id": "korea-kospi-crash",
-      "title": "Korea KOSPI Meltdown",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Second straight circuit breaker triggered",
-        "DRAM and semiconductor bagholders piling up",
-        "Aged margin debt amplifying downside",
-        "Geopolitical Iran risk compounding losses"
-      ],
-      "sentiment_score": 15,
-      "tickers": [
-        "SSNLF",
-        "DRAM"
-      ]
-    },
-    {
-      "id": "semiconductor-pain",
-      "title": "Semiconductor & Memory Weakness",
+      "id": "memory-semi-selloff",
+      "title": "Memory & Semiconductor Selloff",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Sandisk cratering after hours",
-        "DRAM positions underwater",
-        "Semi entries timed at highs",
-        "Memory cycle fears spreading"
+        "DRAM and storage names bleeding hard",
+        "Bagholders averaging down painfully",
+        "Micron dotcom-bubble comparisons circulating",
+        "Earnings strong but stocks punished"
       ],
-      "sentiment_score": 20,
+      "sentiment_score": 28,
       "tickers": [
-        "SNDK",
-        "DRAM"
+        "MU",
+        "AVGO",
+        "INTC"
       ]
     },
     {
-      "id": "trading-losses",
-      "title": "Account Blow-Ups",
-      "icon": "flame",
+      "id": "korea-ai-bubble",
+      "title": "Korea AI Bubble Burst",
+      "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Max-margin earnings plays wiped out",
-        "Loss posts dominating the feed",
-        "Leverage regret widespread",
-        "Gallows humor over ruined accounts"
+        "KOSPI drop dragging global tech",
+        "Korean retail wiped out en masse",
+        "Leveraged ETF dip-buying backfiring",
+        "AI bubble narrative gaining traction"
       ],
       "sentiment_score": 18,
-      "tickers": []
-    },
-    {
-      "id": "ai-speculation",
-      "title": "AI Infrastructure Bets",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "NBIS high-conviction all-in wagers",
-        "Water infrastructure earnings play on TTEK",
-        "AI theme still drawing fresh capital",
-        "Speculative call buying continues"
-      ],
-      "sentiment_score": 68,
       "tickers": [
-        "NBIS",
-        "TTEK",
-        "BMNR"
+        "MU"
       ]
     },
     {
-      "id": "volatility-hedging",
-      "title": "Volatility & Hedging",
-      "icon": "trending-up",
+      "id": "account-blowups",
+      "title": "Trading Losses & Blow-Ups",
+      "icon": "trending-down",
+      "heat": "hot",
+      "bullets": [
+        "Max-margin earnings plays destroyed",
+        "Portfolios halved in minutes",
+        "Gallows humor dominating comments",
+        "Retirement dreams deferred indefinitely"
+      ],
+      "sentiment_score": 15,
+      "tickers": [
+        "SPY",
+        "MRVL"
+      ]
+    },
+    {
+      "id": "geopolitics-oil",
+      "title": "Iran Conflict & Oil",
+      "icon": "flame",
       "heat": "building",
       "bullets": [
-        "VIX hedges paying off amid turmoil",
-        "0DTE SPY scalping funding rolls",
-        "Bears cautiously near break-even",
-        "Traders positioning for more downside"
+        "Trump vows retaliation against Iran",
+        "Oil positions delivering sharp gains",
+        "War fear weighing on tech demand",
+        "Volatility catalysts stacking up"
       ],
-      "sentiment_score": 38,
+      "sentiment_score": 55,
+      "tickers": [
+        "USO"
+      ]
+    },
+    {
+      "id": "vix-hedging",
+      "title": "Volatility Hedging",
+      "icon": "shield",
+      "heat": "building",
+      "bullets": [
+        "VIX hedges printing on turmoil",
+        "0DTE SPY scalps funding rolls",
+        "Traders positioning for more downside",
+        "Defensive posture spreading"
+      ],
+      "sentiment_score": 45,
       "tickers": [
         "VIX",
         "SPY"
       ]
     },
     {
-      "id": "macro-earnings",
-      "title": "Macro & Earnings Catalysts",
-      "icon": "building-bank",
+      "id": "contrarian-buys",
+      "title": "Contrarian Dip Buys",
+      "icon": "rocket",
       "heat": "normal",
       "bullets": [
-        "Fed holds rates steady",
-        "Chipotle lifts same-store sales outlook",
-        "Mercedes cuts guidance on China weakness",
-        "Oil options delivering quick upside"
+        "High-conviction all-in on NBIS",
+        "Speculative earnings plays on TTEK",
+        "Albertsons short-term grocery play",
+        "Generational-opportunity framing persists"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 62,
       "tickers": [
-        "CMG",
-        "ACI"
+        "NBIS",
+        "TTEK",
+        "ACI",
+        "BMNR"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "DRAM",
+      "symbol": "MU",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "bagholders trapped near highs",
-      "company_name": "Roundhill Memory ETF"
+      "mentions": 8,
+      "signal": "dotcom-bubble comparisons, memory rout",
+      "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "SNDK",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "sharp post-earnings crash",
-      "company_name": "Sandisk Corporation"
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "0DTE scalping amid volatility",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "VIX",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "hedges printing on turmoil",
+      "company_name": "CBOE Volatility Index"
     },
     {
       "symbol": "NBIS",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "high-conviction all-in bet",
+      "signal": "all-in generational-opportunity bet",
       "company_name": "Nebius Group N.V."
     },
     {
-      "symbol": "VIX",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "hedge paying off in turmoil",
-      "company_name": "CBOE Volatility Index"
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "0DTE scalping playground",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "symbol": "MRVL",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "heavy realized losses",
+      "company_name": "Marvell Technology, Inc."
     },
     {
       "symbol": "TTEK",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "under-the-radar AI water play",
+      "signal": "boring earnings speculation",
       "company_name": "Tetra Tech, Inc."
     },
     {
-      "symbol": "CMG",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "improved same-store guidance",
-      "company_name": "Chipotle Mexican Grill, Inc."
+      "symbol": "INTC",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "sold at a loss",
+      "company_name": "Intel Corporation"
     },
     {
       "symbol": "ACI",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "short position on grocery drop",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "short-term grocery-inflation play",
       "company_name": "Albertsons Companies, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment is dominated by South Korea's KOSPI meltdown, with two consecutive circuit breakers dragging down memory and semiconductor names. DRAM and Sandisk holders are trapped, and account blow-up posts are multiplying across the feed.",
+      "text": "Sentiment is decisively risk-off as a Korea-led AI and memory selloff cascades globally, with DRAM and storage bagholders averaging down into pain and dotcom-bubble comparisons to Micron circulating widely. Gallows humor dominates the loss threads.",
       "tag": "bearish"
     },
     {
-      "text": "Volatility hedgers are the rare winners, with VIX positions and 0DTE SPY scalps monetizing the turmoil. Bears near break-even remain wary of building buying pressure ahead of the September policy decision.",
+      "text": "Retail speculators leveraged into earnings plays are getting margin-called en masse, while VIX hedges and oil positions are the rare winners as volatility catalysts stack up around the Iran conflict and Fed hold.",
       "tag": "notable"
     },
     {
-      "text": "Pockets of greed persist in AI infrastructure, with high-conviction all-in bets on NBIS and speculative earnings plays on water-engineering name TTEK, signaling risk appetite has not fully capitulated despite the macro shock.",
+      "text": "A stubborn contrarian pocket persists, with high-conviction all-in bets on NBIS and speculative earnings plays framing the drawdown as a generational buying opportunity — classic capitulation-versus-conviction tension.",
       "tag": "bullish"
     }
   ],
-  "updated_at": "2026-07-29T21:02:04.089520+00:00",
-  "updated_hkt": "2026-07-30 05:02 HKT"
+  "updated_at": "2026-07-30T12:03:01.130310+00:00",
+  "updated_hkt": "2026-07-30 20:03 HKT"
 }
