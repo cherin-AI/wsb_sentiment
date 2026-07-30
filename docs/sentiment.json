@@ -1,17 +1,17 @@
 {
-  "bull_pct": 25,
-  "bear_pct": 48,
-  "neutral_pct": 27,
-  "bull_bear_ratio": 0.5,
-  "overall_score": 30,
-  "overall_label": "Fear",
+  "bull_pct": 37,
+  "bear_pct": 43,
+  "neutral_pct": 20,
+  "bull_bear_ratio": 0.9,
+  "overall_score": 40,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 25,
-    "ai_score": 32,
-    "bull_count": 11,
-    "bear_count": 21,
-    "neutral_count": 12,
-    "total_posts": 44,
+    "formula_score": 37,
+    "ai_score": 42,
+    "bull_count": 20,
+    "bear_count": 23,
+    "neutral_count": 11,
+    "total_posts": 54,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,184 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 44,
+  "post_count": 54,
   "hours_window": 24,
   "themes": [
     {
-      "id": "memory-semi-selloff",
-      "title": "Memory & Semiconductor Selloff",
+      "id": "ai-selloff-leopold",
+      "title": "AI Selloff & Leopold Liquidation",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "High-profile AI fund forced to unwind",
+        "Citadel accused of manipulation",
+        "Leveraged bets liquidated in swings",
+        "Traders debate bubble parallels"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "MU",
+        "SNDK",
+        "MSFT"
+      ]
+    },
+    {
+      "id": "memory-semis",
+      "title": "Memory & Semiconductor Bets",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "DRAM and storage names bleeding hard",
-        "Bagholders averaging down painfully",
-        "Micron dotcom-bubble comparisons circulating",
-        "Earnings strong but stocks punished"
+        "Micron demand still strong per earnings",
+        "SanDisk options wipeouts widespread",
+        "Samsung profit beats on AI chips",
+        "Dotcom-era Micron comparisons resurface"
+      ],
+      "sentiment_score": 45,
+      "tickers": [
+        "MU",
+        "SNDK",
+        "AVGO"
+      ]
+    },
+    {
+      "id": "msft-tech-earnings",
+      "title": "Microsoft & Big Tech Earnings",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Microsoft rally drives profit posts",
+        "Amazon defends heavy AI capex",
+        "Apple and Reddit report results",
+        "Meta reinvestment thesis in focus"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "MSFT",
+        "AMZN",
+        "META"
+      ]
+    },
+    {
+      "id": "korea-kospi",
+      "title": "Korea Retail Pain & KOSPI",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "Korean investors nursing steep losses",
+        "Leveraged ETF dip-buying fuels selloff",
+        "KOSPI open braced for volatility",
+        "Retail capitulation narrative spreading"
+      ],
+      "sentiment_score": 25,
+      "tickers": []
+    },
+    {
+      "id": "macro-fx",
+      "title": "Macro, Fed & FX Intervention",
+      "icon": "world",
+      "heat": "building",
+      "bullets": [
+        "Japan intervenes to buy yen",
+        "US growth slows to 1.5%",
+        "Rate-hike fears rattle markets",
+        "USD/JPY shorts pay off"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "MSFT"
+      ]
+    },
+    {
+      "id": "loss-blowups",
+      "title": "Account Blow-ups & Revenge Trades",
+      "icon": "mood-sad",
+      "heat": "hot",
+      "bullets": [
+        "Full-port options bets backfire",
+        "Revenge trading swings large accounts",
+        "Break-even math grows daunting",
+        "Bloodbath sentiment across portfolios"
       ],
       "sentiment_score": 28,
       "tickers": [
         "MU",
-        "AVGO",
-        "INTC"
-      ]
-    },
-    {
-      "id": "korea-ai-bubble",
-      "title": "Korea AI Bubble Burst",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "KOSPI drop dragging global tech",
-        "Korean retail wiped out en masse",
-        "Leveraged ETF dip-buying backfiring",
-        "AI bubble narrative gaining traction"
-      ],
-      "sentiment_score": 18,
-      "tickers": [
-        "MU"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Trading Losses & Blow-Ups",
-      "icon": "trending-down",
-      "heat": "hot",
-      "bullets": [
-        "Max-margin earnings plays destroyed",
-        "Portfolios halved in minutes",
-        "Gallows humor dominating comments",
-        "Retirement dreams deferred indefinitely"
-      ],
-      "sentiment_score": 15,
-      "tickers": [
-        "SPY",
+        "INTC",
         "MRVL"
-      ]
-    },
-    {
-      "id": "geopolitics-oil",
-      "title": "Iran Conflict & Oil",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "Trump vows retaliation against Iran",
-        "Oil positions delivering sharp gains",
-        "War fear weighing on tech demand",
-        "Volatility catalysts stacking up"
-      ],
-      "sentiment_score": 55,
-      "tickers": [
-        "USO"
-      ]
-    },
-    {
-      "id": "vix-hedging",
-      "title": "Volatility Hedging",
-      "icon": "shield",
-      "heat": "building",
-      "bullets": [
-        "VIX hedges printing on turmoil",
-        "0DTE SPY scalps funding rolls",
-        "Traders positioning for more downside",
-        "Defensive posture spreading"
-      ],
-      "sentiment_score": 45,
-      "tickers": [
-        "VIX",
-        "SPY"
-      ]
-    },
-    {
-      "id": "contrarian-buys",
-      "title": "Contrarian Dip Buys",
-      "icon": "rocket",
-      "heat": "normal",
-      "bullets": [
-        "High-conviction all-in on NBIS",
-        "Speculative earnings plays on TTEK",
-        "Albertsons short-term grocery play",
-        "Generational-opportunity framing persists"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "NBIS",
-        "TTEK",
-        "ACI",
-        "BMNR"
       ]
     }
   ],
   "tickers": [
     {
       "symbol": "MU",
-      "sentiment": "bearish",
-      "mentions": 8,
-      "signal": "dotcom-bubble comparisons, memory rout",
+      "sentiment": "mixed",
+      "mentions": 9,
+      "signal": "Memory bulls battered but hopeful",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "0DTE scalping amid volatility",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "Earnings winner, tendies flowing",
+      "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "VIX",
-      "sentiment": "bullish",
+      "symbol": "SNDK",
+      "sentiment": "bearish",
       "mentions": 4,
-      "signal": "hedges printing on turmoil",
-      "company_name": "CBOE Volatility Index"
+      "signal": "Options wipeouts dominate",
+      "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "NBIS",
+      "symbol": "META",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Zuck love-hate on results",
+      "company_name": "Meta Platforms, Inc."
+    },
+    {
+      "symbol": "AMZN",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "all-in generational-opportunity bet",
-      "company_name": "Nebius Group N.V."
+      "signal": "Capex thesis defended",
+      "company_name": "Amazon.com, Inc."
     },
     {
-      "symbol": "MRVL",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "heavy realized losses",
-      "company_name": "Marvell Technology, Inc."
-    },
-    {
-      "symbol": "TTEK",
+      "symbol": "CRWV",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "boring earnings speculation",
-      "company_name": "Tetra Tech, Inc."
+      "signal": "Shorts squeezed on rally",
+      "company_name": "CoreWeave, Inc."
     },
     {
-      "symbol": "INTC",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "sold at a loss",
-      "company_name": "Intel Corporation"
-    },
-    {
-      "symbol": "ACI",
+      "symbol": "IREN",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "short-term grocery-inflation play",
-      "company_name": "Albertsons Companies, Inc."
+      "signal": "Well-timed high-conviction paying off",
+      "company_name": "IREN LIMITED"
+    },
+    {
+      "symbol": "AVGO",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Sold at a loss in shakeout",
+      "company_name": "Broadcom Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment is decisively risk-off as a Korea-led AI and memory selloff cascades globally, with DRAM and storage bagholders averaging down into pain and dotcom-bubble comparisons to Micron circulating widely. Gallows humor dominates the loss threads.",
+      "text": "The AI trade fractured this session as a high-profile leveraged fund was forced to unwind, fueling manipulation conspiracies and dotcom-bubble comparisons. Memory and semiconductor names like Micron and SanDisk left a trail of blown-up accounts despite still-strong earnings.",
       "tag": "bearish"
     },
     {
-      "text": "Retail speculators leveraged into earnings plays are getting margin-called en masse, while VIX hedges and oil positions are the rare winners as volatility catalysts stack up around the Iran conflict and Fed hold.",
-      "tag": "notable"
+      "text": "Big Tech earnings offered a counterweight, with Microsoft's rally minting profit posts and Amazon defending its heavy capex character. Pockets of euphoria persisted in CoreWeave and IREN, where well-timed bets crushed shorts.",
+      "tag": "bullish"
     },
     {
-      "text": "A stubborn contrarian pocket persists, with high-conviction all-in bets on NBIS and speculative earnings plays framing the drawdown as a generational buying opportunity — classic capitulation-versus-conviction tension.",
-      "tag": "bullish"
+      "text": "Macro cross-currents dominate: Japan's yen intervention, slowing US growth, and rate-hike anxiety collide with Korean retail capitulation. Traders openly question what is still holding the market up as every ominous print prints green.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-30T12:03:01.130310+00:00",
-  "updated_hkt": "2026-07-30 20:03 HKT"
+  "updated_at": "2026-07-30T21:03:31.775001+00:00",
+  "updated_hkt": "2026-07-31 05:03 HKT"
 }
