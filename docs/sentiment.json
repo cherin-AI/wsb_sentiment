@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 33,
-  "neutral_pct": 23,
-  "bull_bear_ratio": 1.3,
-  "overall_score": 61,
+  "bull_pct": 42,
+  "bear_pct": 28,
+  "neutral_pct": 30,
+  "bull_bear_ratio": 1.5,
+  "overall_score": 60,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 44,
+    "formula_score": 42,
     "ai_score": 68,
-    "bull_count": 21,
-    "bear_count": 16,
-    "neutral_count": 11,
-    "total_posts": 48,
+    "bull_count": 18,
+    "bear_count": 12,
+    "neutral_count": 13,
+    "total_posts": 43,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 48,
+  "post_count": 43,
   "hours_window": 24,
   "themes": [
     {
-      "id": "leopold-liquidation",
-      "title": "Aschenbrenner Fund Blow-Up",
+      "id": "big-tech-earnings",
+      "title": "Big Tech Earnings Surge",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Apple rally rewards pre-earnings positioning",
+        "Amazon calls capitalize on AWS beat",
+        "Microsoft's massive rally fuels AI debate",
+        "Retail piling into mega-cap options"
+      ],
+      "sentiment_score": 78,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "MSFT",
+        "GOOGL"
+      ]
+    },
+    {
+      "id": "reddit-selloff",
+      "title": "Reddit Earnings Collapse",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Leveraged AI fund forced to unwind positions",
-        "Citadel absorbs distressed portfolio",
-        "Rate-hike fears triggered mass liquidation",
-        "Traders mock the high-conviction meltdown"
+        "Shares sink despite top and bottom beats",
+        "Large single-day trading losses reported",
+        "Bagholders doubling down defiantly",
+        "DAU decline blamed on AI bots"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 22,
       "tickers": [
-        "NBIS",
+        "RDDT"
+      ]
+    },
+    {
+      "id": "ai-buildout-rotation",
+      "title": "AI Buildout Rotation",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "Memory valuations flagged as peaked",
+        "Korean chipmakers surge over 20%",
+        "Capex ceiling debate intensifies",
+        "Money rotating within AI trade"
+      ],
+      "sentiment_score": 60,
+      "tickers": [
         "MU"
       ]
     },
     {
-      "id": "ai-megacap-earnings",
-      "title": "AI Mega-Cap Earnings Surge",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "Microsoft rally adds massive market value",
-        "Amazon AWS beat lifts shares sharply",
-        "AI capex reframed as growth character",
-        "Apple momentum extends strong run"
-      ],
-      "sentiment_score": 80,
-      "tickers": [
-        "MSFT",
-        "AMZN",
-        "AAPL"
-      ]
-    },
-    {
-      "id": "profit-posts",
-      "title": "Big Win Screenshots",
+      "id": "options-gambles",
+      "title": "High-Risk Options Gambles",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Revenge trades flipping losses into gains",
-        "Options bets printing on mega-caps",
-        "Retail euphoria spreading across the board",
-        "Full-port bailouts celebrated loudly"
+        "1DTE lottery tickets printing outsized wins",
+        "Leveraged AI positions cutting both ways",
+        "SOXL full-port high-conviction plays",
+        "Regret over selling winners early"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 70,
       "tickers": [
-        "MSFT",
-        "MU",
-        "IREN"
+        "SOXL",
+        "SPX",
+        "GOOGL"
       ]
     },
     {
-      "id": "memory-semis",
-      "title": "Memory & Semiconductor Rebound",
-      "icon": "trending-up",
-      "heat": "building",
+      "id": "macro-fed",
+      "title": "Macro & Fed Signals",
+      "icon": "building-bank",
+      "heat": "normal",
       "bullets": [
-        "SK Hynix and Samsung surge over 20%",
-        "MU and SNDK dip-buyers vindicated",
-        "AI hardware demand narrative reignites",
-        "Short sellers squeezed hard"
+        "Treasury signals possible yen intervention",
+        "Labor costs rise faster than expected",
+        "Warsh weighs fewer Fed meetings",
+        "Inflation concerns resurfacing"
       ],
-      "sentiment_score": 78,
-      "tickers": [
-        "MU",
-        "SNDK",
-        "CRWV"
-      ]
+      "sentiment_score": 42,
+      "tickers": []
     },
     {
-      "id": "loss-posts",
+      "id": "account-blowups",
       "title": "Account Blow-Ups",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "0DTE SPX bets erase large accounts",
-        "Averaging down deepens painful losses",
-        "Reflective posts on missed exits",
-        "Speculative all-or-nothing gambles backfire"
+        "SPX 0DTE wipeout after huge unrealized gain",
+        "Leopold fund implosion lessons shared",
+        "Leveraged bets punish overconfidence",
+        "Poetry of loss narratives resurface"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 25,
       "tickers": [
-        "MU"
-      ]
-    },
-    {
-      "id": "macro-fx",
-      "title": "Macro & Currency Moves",
-      "icon": "world",
-      "heat": "normal",
-      "bullets": [
-        "Japan intervenes to buy yen",
-        "US GDP growth slows to 1.5%",
-        "Fed rate stance rattles risk assets",
-        "Korean index posts record daily gain"
-      ],
-      "sentiment_score": 52,
-      "tickers": [
-        "CRWV"
+        "SPX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MSFT",
+      "symbol": "AAPL",
       "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Cloud beat fuels euphoric rally",
-      "company_name": "Microsoft Corporation"
+      "mentions": 9,
+      "signal": "Earnings beat rewards holders",
+      "company_name": "Apple Inc."
     },
     {
       "symbol": "AMZN",
       "sentiment": "bullish",
       "mentions": 7,
-      "signal": "AWS strength lifts sentiment",
+      "signal": "AWS beat drives call buying",
       "company_name": "Amazon.com, Inc."
+    },
+    {
+      "symbol": "GOOGL",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "Windfall calls amid post-earnings plunge",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "RDDT",
+      "sentiment": "bearish",
+      "mentions": 6,
+      "signal": "Selloff despite strong earnings",
+      "company_name": "Reddit, Inc."
+    },
+    {
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Massive rally fuels AI moat debate",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "SPX",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "0DTE spreads win and blow up",
+      "company_name": "S&P 500 INDEX"
+    },
+    {
+      "symbol": "SOXL",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Leveraged semis high-conviction conviction",
+      "company_name": "Direxion Daily Semiconductor Bu"
     },
     {
       "symbol": "MU",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Dip-buyers vindicated after pain",
+      "mentions": 2,
+      "signal": "Memory dip watched for entry",
       "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "AAPL",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Long hold delivers strong upside",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "NBIS",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "High-stakes leveraged conviction bet",
-      "company_name": "Nebius Group N.V."
-    },
-    {
-      "symbol": "CRWV",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Debt refinance sparks squeeze",
-      "company_name": "CoreWeave, Inc."
-    },
-    {
-      "symbol": "SNDK",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Memory rebound recovers losses",
-      "company_name": "Sandisk Corporation"
-    },
-    {
-      "symbol": "IREN",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Well-timed speculative upside",
-      "company_name": "IREN LIMITED"
     }
   ],
   "summary": [
     {
-      "text": "Mega-cap AI earnings from Microsoft and Amazon reignited retail euphoria, with profit screenshots and squeezed shorts dominating the board. Memory names and semiconductors rebounded sharply, reinforcing the AI hardware demand narrative and lifting overall risk appetite.",
+      "text": "Mega-cap earnings drove euphoric energy this cycle, with Apple, Amazon, and Microsoft rewarding aggressive options positioning. Retail traders celebrated windfall lottery tickets while Korean chipmakers surged over 20%, reinforcing the AI rally's renewed momentum across the tape.",
       "tag": "bullish"
     },
     {
-      "text": "The forced unwinding of a leveraged AI fund became the dominant cultural storyline, with traders mocking the high-conviction blow-up as Citadel absorbed the distressed portfolio. Rate-hike anxiety and the liquidation cast a cautionary shadow over the celebration.",
-      "tag": "notable"
+      "text": "Reddit's collapse despite beating top and bottom-line expectations delivered the batch's sharpest pain, triggering large trading losses and defiant bagholder doubling-down. The disconnect between fundamentals and price action fueled genuine frustration among positioned traders.",
+      "tag": "bearish"
     },
     {
-      "text": "Beneath the greed, account blow-ups from 0DTE gambles and all-or-nothing bets remind the crowd how quickly leverage cuts both ways. Slowing US GDP and Japanese yen intervention add macro cross-currents to an otherwise risk-on tape.",
-      "tag": "bearish"
+      "text": "Beneath the greed, warning signs accumulate: memory valuations flagged as peaked, macro anxieties around yen intervention and rising labor costs, and cautionary blow-up tales like the SPX 0DTE wipeout underscore fragile speculative conviction.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-31T12:03:15.542802+00:00",
-  "updated_hkt": "2026-07-31 20:03 HKT"
+  "updated_at": "2026-07-31T21:02:44.702157+00:00",
+  "updated_hkt": "2026-08-01 05:02 HKT"
 }
