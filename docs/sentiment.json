@@ -1,17 +1,17 @@
 {
-  "bull_pct": 37,
-  "bear_pct": 43,
-  "neutral_pct": 20,
-  "bull_bear_ratio": 0.9,
-  "overall_score": 40,
-  "overall_label": "Neutral",
+  "bull_pct": 44,
+  "bear_pct": 33,
+  "neutral_pct": 23,
+  "bull_bear_ratio": 1.3,
+  "overall_score": 61,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 37,
-    "ai_score": 42,
-    "bull_count": 20,
-    "bear_count": 23,
+    "formula_score": 44,
+    "ai_score": 68,
+    "bull_count": 21,
+    "bear_count": 16,
     "neutral_count": 11,
-    "total_posts": 54,
+    "total_posts": 48,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,184 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 54,
+  "post_count": 48,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-selloff-leopold",
-      "title": "AI Selloff & Leopold Liquidation",
+      "id": "leopold-liquidation",
+      "title": "Aschenbrenner Fund Blow-Up",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "High-profile AI fund forced to unwind",
-        "Citadel accused of manipulation",
-        "Leveraged bets liquidated in swings",
-        "Traders debate bubble parallels"
+        "Leveraged AI fund forced to unwind positions",
+        "Citadel absorbs distressed portfolio",
+        "Rate-hike fears triggered mass liquidation",
+        "Traders mock the high-conviction meltdown"
       ],
       "sentiment_score": 30,
       "tickers": [
+        "NBIS",
+        "MU"
+      ]
+    },
+    {
+      "id": "ai-megacap-earnings",
+      "title": "AI Mega-Cap Earnings Surge",
+      "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "Microsoft rally adds massive market value",
+        "Amazon AWS beat lifts shares sharply",
+        "AI capex reframed as growth character",
+        "Apple momentum extends strong run"
+      ],
+      "sentiment_score": 80,
+      "tickers": [
+        "MSFT",
+        "AMZN",
+        "AAPL"
+      ]
+    },
+    {
+      "id": "profit-posts",
+      "title": "Big Win Screenshots",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Revenge trades flipping losses into gains",
+        "Options bets printing on mega-caps",
+        "Retail euphoria spreading across the board",
+        "Full-port bailouts celebrated loudly"
+      ],
+      "sentiment_score": 85,
+      "tickers": [
+        "MSFT",
         "MU",
-        "SNDK",
-        "MSFT"
+        "IREN"
       ]
     },
     {
       "id": "memory-semis",
-      "title": "Memory & Semiconductor Bets",
-      "icon": "cpu",
-      "heat": "hot",
+      "title": "Memory & Semiconductor Rebound",
+      "icon": "trending-up",
+      "heat": "building",
       "bullets": [
-        "Micron demand still strong per earnings",
-        "SanDisk options wipeouts widespread",
-        "Samsung profit beats on AI chips",
-        "Dotcom-era Micron comparisons resurface"
+        "SK Hynix and Samsung surge over 20%",
+        "MU and SNDK dip-buyers vindicated",
+        "AI hardware demand narrative reignites",
+        "Short sellers squeezed hard"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 78,
       "tickers": [
         "MU",
         "SNDK",
-        "AVGO"
+        "CRWV"
       ]
     },
     {
-      "id": "msft-tech-earnings",
-      "title": "Microsoft & Big Tech Earnings",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Microsoft rally drives profit posts",
-        "Amazon defends heavy AI capex",
-        "Apple and Reddit report results",
-        "Meta reinvestment thesis in focus"
-      ],
-      "sentiment_score": 68,
-      "tickers": [
-        "MSFT",
-        "AMZN",
-        "META"
-      ]
-    },
-    {
-      "id": "korea-kospi",
-      "title": "Korea Retail Pain & KOSPI",
+      "id": "loss-posts",
+      "title": "Account Blow-Ups",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Korean investors nursing steep losses",
-        "Leveraged ETF dip-buying fuels selloff",
-        "KOSPI open braced for volatility",
-        "Retail capitulation narrative spreading"
+        "0DTE SPX bets erase large accounts",
+        "Averaging down deepens painful losses",
+        "Reflective posts on missed exits",
+        "Speculative all-or-nothing gambles backfire"
       ],
-      "sentiment_score": 25,
-      "tickers": []
-    },
-    {
-      "id": "macro-fx",
-      "title": "Macro, Fed & FX Intervention",
-      "icon": "world",
-      "heat": "building",
-      "bullets": [
-        "Japan intervenes to buy yen",
-        "US growth slows to 1.5%",
-        "Rate-hike fears rattle markets",
-        "USD/JPY shorts pay off"
-      ],
-      "sentiment_score": 40,
+      "sentiment_score": 22,
       "tickers": [
-        "MSFT"
+        "MU"
       ]
     },
     {
-      "id": "loss-blowups",
-      "title": "Account Blow-ups & Revenge Trades",
-      "icon": "mood-sad",
-      "heat": "hot",
+      "id": "macro-fx",
+      "title": "Macro & Currency Moves",
+      "icon": "world",
+      "heat": "normal",
       "bullets": [
-        "Full-port options bets backfire",
-        "Revenge trading swings large accounts",
-        "Break-even math grows daunting",
-        "Bloodbath sentiment across portfolios"
+        "Japan intervenes to buy yen",
+        "US GDP growth slows to 1.5%",
+        "Fed rate stance rattles risk assets",
+        "Korean index posts record daily gain"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 52,
       "tickers": [
-        "MU",
-        "INTC",
-        "MRVL"
+        "CRWV"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "mixed",
-      "mentions": 9,
-      "signal": "Memory bulls battered but hopeful",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
       "symbol": "MSFT",
       "sentiment": "bullish",
       "mentions": 8,
-      "signal": "Earnings winner, tendies flowing",
+      "signal": "Cloud beat fuels euphoric rally",
       "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "SNDK",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Options wipeouts dominate",
-      "company_name": "Sandisk Corporation"
-    },
-    {
-      "symbol": "META",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Zuck love-hate on results",
-      "company_name": "Meta Platforms, Inc."
     },
     {
       "symbol": "AMZN",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Capex thesis defended",
+      "mentions": 7,
+      "signal": "AWS strength lifts sentiment",
       "company_name": "Amazon.com, Inc."
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "Dip-buyers vindicated after pain",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "AAPL",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Long hold delivers strong upside",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "NBIS",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "High-stakes leveraged conviction bet",
+      "company_name": "Nebius Group N.V."
     },
     {
       "symbol": "CRWV",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Shorts squeezed on rally",
+      "signal": "Debt refinance sparks squeeze",
       "company_name": "CoreWeave, Inc."
+    },
+    {
+      "symbol": "SNDK",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Memory rebound recovers losses",
+      "company_name": "Sandisk Corporation"
     },
     {
       "symbol": "IREN",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Well-timed high-conviction paying off",
+      "signal": "Well-timed speculative upside",
       "company_name": "IREN LIMITED"
-    },
-    {
-      "symbol": "AVGO",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Sold at a loss in shakeout",
-      "company_name": "Broadcom Inc."
     }
   ],
   "summary": [
     {
-      "text": "The AI trade fractured this session as a high-profile leveraged fund was forced to unwind, fueling manipulation conspiracies and dotcom-bubble comparisons. Memory and semiconductor names like Micron and SanDisk left a trail of blown-up accounts despite still-strong earnings.",
-      "tag": "bearish"
-    },
-    {
-      "text": "Big Tech earnings offered a counterweight, with Microsoft's rally minting profit posts and Amazon defending its heavy capex character. Pockets of euphoria persisted in CoreWeave and IREN, where well-timed bets crushed shorts.",
+      "text": "Mega-cap AI earnings from Microsoft and Amazon reignited retail euphoria, with profit screenshots and squeezed shorts dominating the board. Memory names and semiconductors rebounded sharply, reinforcing the AI hardware demand narrative and lifting overall risk appetite.",
       "tag": "bullish"
     },
     {
-      "text": "Macro cross-currents dominate: Japan's yen intervention, slowing US growth, and rate-hike anxiety collide with Korean retail capitulation. Traders openly question what is still holding the market up as every ominous print prints green.",
+      "text": "The forced unwinding of a leveraged AI fund became the dominant cultural storyline, with traders mocking the high-conviction blow-up as Citadel absorbed the distressed portfolio. Rate-hike anxiety and the liquidation cast a cautionary shadow over the celebration.",
       "tag": "notable"
+    },
+    {
+      "text": "Beneath the greed, account blow-ups from 0DTE gambles and all-or-nothing bets remind the crowd how quickly leverage cuts both ways. Slowing US GDP and Japanese yen intervention add macro cross-currents to an otherwise risk-on tape.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-07-30T21:03:31.775001+00:00",
-  "updated_hkt": "2026-07-31 05:03 HKT"
+  "updated_at": "2026-07-31T12:03:15.542802+00:00",
+  "updated_hkt": "2026-07-31 20:03 HKT"
 }
