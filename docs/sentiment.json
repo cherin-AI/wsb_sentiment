@@ -1,17 +1,17 @@
 {
-  "bull_pct": 42,
-  "bear_pct": 28,
-  "neutral_pct": 30,
-  "bull_bear_ratio": 1.5,
-  "overall_score": 60,
-  "overall_label": "Greed",
+  "bull_pct": 36,
+  "bear_pct": 29,
+  "neutral_pct": 35,
+  "bull_bear_ratio": 1.2,
+  "overall_score": 44,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 42,
-    "ai_score": 68,
-    "bull_count": 18,
-    "bear_count": 12,
-    "neutral_count": 13,
-    "total_posts": 43,
+    "formula_score": 36,
+    "ai_score": 48,
+    "bull_count": 5,
+    "bear_count": 4,
+    "neutral_count": 5,
+    "total_posts": 14,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,181 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 43,
+  "post_count": 14,
   "hours_window": 24,
   "themes": [
     {
-      "id": "big-tech-earnings",
-      "title": "Big Tech Earnings Surge",
-      "icon": "trending-up",
+      "id": "earnings-season",
+      "title": "Earnings Season Speculation",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Apple rally rewards pre-earnings positioning",
-        "Amazon calls capitalize on AWS beat",
-        "Microsoft's massive rally fuels AI debate",
-        "Retail piling into mega-cap options"
+        "SNAP earnings bet drawing speculation",
+        "Traders lament fewer earnings catalysts",
+        "After-hours volatility fuels positioning",
+        "Options gambling tied to reports"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 55,
       "tickers": [
+        "SNAP",
         "AAPL",
-        "AMZN",
-        "MSFT",
-        "GOOGL"
+        "DNUT"
       ]
     },
     {
-      "id": "reddit-selloff",
-      "title": "Reddit Earnings Collapse",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Shares sink despite top and bottom beats",
-        "Large single-day trading losses reported",
-        "Bagholders doubling down defiantly",
-        "DAU decline blamed on AI bots"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "RDDT"
-      ]
-    },
-    {
-      "id": "ai-buildout-rotation",
-      "title": "AI Buildout Rotation",
-      "icon": "cpu",
+      "id": "single-name-plays",
+      "title": "Single-Name Deep Dives",
+      "icon": "search",
       "heat": "building",
       "bullets": [
-        "Memory valuations flagged as peaked",
-        "Korean chipmakers surge over 20%",
-        "Capex ceiling debate intensifies",
-        "Money rotating within AI trade"
+        "Krispy Kreme turnaround thesis pitched",
+        "Grindr framed as overlooked growth story",
+        "Long calls and shares disclosed",
+        "Retail hunting asymmetric setups"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 68,
       "tickers": [
-        "MU"
+        "DNUT",
+        "GRND"
       ]
     },
     {
-      "id": "options-gambles",
-      "title": "High-Risk Options Gambles",
-      "icon": "rocket",
-      "heat": "hot",
+      "id": "geopolitical-oil",
+      "title": "Iran War & Oil Prices",
+      "icon": "droplet",
+      "heat": "building",
       "bullets": [
-        "1DTE lottery tickets printing outsized wins",
-        "Leveraged AI positions cutting both ways",
-        "SOXL full-port high-conviction plays",
-        "Regret over selling winners early"
+        "Oil plummets on ceasefire pause",
+        "S&P futures inch higher",
+        "Traders digesting geopolitical de-escalation",
+        "Energy positioning in flux"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 52,
       "tickers": [
-        "SOXL",
-        "SPX",
-        "GOOGL"
+        "USO",
+        "CL"
       ]
     },
     {
-      "id": "macro-fed",
-      "title": "Macro & Fed Signals",
-      "icon": "building-bank",
+      "id": "bearish-bets",
+      "title": "Downside Bets & Puts",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Apple puts priced to perfection thesis",
+        "Goya put speculation posted",
+        "Traders fading overextended names",
+        "Short-dated contracts in favor"
+      ],
+      "sentiment_score": 32,
+      "tickers": [
+        "AAPL",
+        "GOYA"
+      ]
+    },
+    {
+      "id": "loss-culture",
+      "title": "Account Blow-Ups & Losses",
+      "icon": "skull",
       "heat": "normal",
       "bullets": [
-        "Treasury signals possible yen intervention",
-        "Labor costs rise faster than expected",
-        "Warsh weighs fewer Fed meetings",
-        "Inflation concerns resurfacing"
+        "Wendy's job return jokes resurface",
+        "KOSPI crash sparks relief posts",
+        "Self-deprecating loss humor persists",
+        "Retail resilience masks pain"
       ],
-      "sentiment_score": 42,
+      "sentiment_score": 30,
       "tickers": []
     },
     {
-      "id": "account-blowups",
-      "title": "Account Blow-Ups",
-      "icon": "flame",
-      "heat": "building",
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "activity",
+      "heat": "normal",
       "bullets": [
-        "SPX 0DTE wipeout after huge unrealized gain",
-        "Leopold fund implosion lessons shared",
-        "Leveraged bets punish overconfidence",
-        "Poetry of loss narratives resurface"
+        "Daily discussion threads active",
+        "Mixed positioning into new week",
+        "Speculation on next catalysts",
+        "Cautious optimism with irony"
       ],
-      "sentiment_score": 25,
+      "sentiment_score": 50,
       "tickers": [
-        "SPX"
+        "SPY"
       ]
     }
   ],
   "tickers": [
     {
       "symbol": "AAPL",
-      "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "Earnings beat rewards holders",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Puts on priced-to-perfection name",
       "company_name": "Apple Inc."
     },
     {
-      "symbol": "AMZN",
+      "symbol": "SNAP",
       "sentiment": "bullish",
-      "mentions": 7,
-      "signal": "AWS beat drives call buying",
-      "company_name": "Amazon.com, Inc."
+      "mentions": 3,
+      "signal": "Earnings lottery bet",
+      "company_name": "Snap Inc."
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "DNUT",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Turnaround long thesis",
+      "company_name": "Krispy Kreme, Inc."
+    },
+    {
+      "symbol": "GRND",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Overlooked growth pitch",
+      "company_name": "Grindr Inc."
+    },
+    {
+      "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Windfall calls amid post-earnings plunge",
-      "company_name": "Alphabet Inc."
+      "mentions": 2,
+      "signal": "Futures nudging higher",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "RDDT",
+      "symbol": "USO",
       "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "Selloff despite strong earnings",
-      "company_name": "Reddit, Inc."
+      "mentions": 1,
+      "signal": "Oil selloff on ceasefire",
+      "company_name": "United States Oil Fund"
     },
     {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Massive rally fuels AI moat debate",
-      "company_name": "Microsoft Corporation"
+      "symbol": "GOYA",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "Speculative put idea",
+      "company_name": "GOYAL ALUMINIUMS LIMITED"
     },
     {
-      "symbol": "SPX",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "0DTE spreads win and blow up",
-      "company_name": "S&P 500 INDEX"
-    },
-    {
-      "symbol": "SOXL",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Leveraged semis high-conviction conviction",
-      "company_name": "Direxion Daily Semiconductor Bu"
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Memory dip watched for entry",
-      "company_name": "Micron Technology, Inc."
+      "symbol": "CL",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "Crude weakness watched",
+      "company_name": "Colgate-Palmolive Company"
     }
   ],
   "summary": [
     {
-      "text": "Mega-cap earnings drove euphoric energy this cycle, with Apple, Amazon, and Microsoft rewarding aggressive options positioning. Retail traders celebrated windfall lottery tickets while Korean chipmakers surged over 20%, reinforcing the AI rally's renewed momentum across the tape.",
+      "text": "Sentiment sits near neutral as traders juggle earnings-season lottery tickets against geopolitical crosscurrents. The Iran ceasefire pause pressured oil sharply while nudging equity futures higher, leaving retail cautiously positioning around single-name catalysts.",
+      "tag": "notable"
+    },
+    {
+      "text": "Deep-dive long theses on Krispy Kreme and Grindr reflect a hunt for asymmetric, overlooked setups, with disclosed call positions signaling genuine conviction rather than pure momentum chasing.",
       "tag": "bullish"
     },
     {
-      "text": "Reddit's collapse despite beating top and bottom-line expectations delivered the batch's sharpest pain, triggering large trading losses and defiant bagholder doubling-down. The disconnect between fundamentals and price action fueled genuine frustration among positioned traders.",
+      "text": "Downside bets are gaining traction, with Apple puts framed around a priced-to-perfection AI narrative and lingering loss-culture humor around blow-ups and the KOSPI crash tempering the batch's overall energy.",
       "tag": "bearish"
-    },
-    {
-      "text": "Beneath the greed, warning signs accumulate: memory valuations flagged as peaked, macro anxieties around yen intervention and rising labor costs, and cautionary blow-up tales like the SPX 0DTE wipeout underscore fragile speculative conviction.",
-      "tag": "notable"
     }
   ],
-  "updated_at": "2026-07-31T21:02:44.702157+00:00",
-  "updated_hkt": "2026-08-01 05:02 HKT"
+  "updated_at": "2026-08-03T12:01:19.503606+00:00",
+  "updated_hkt": "2026-08-03 20:01 HKT"
 }
