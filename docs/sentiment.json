@@ -1,17 +1,17 @@
 {
-  "bull_pct": 36,
-  "bear_pct": 29,
-  "neutral_pct": 35,
-  "bull_bear_ratio": 1.2,
-  "overall_score": 44,
-  "overall_label": "Neutral",
+  "bull_pct": 50,
+  "bear_pct": 12,
+  "neutral_pct": 38,
+  "bull_bear_ratio": 4.2,
+  "overall_score": 63,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 36,
-    "ai_score": 48,
-    "bull_count": 5,
+    "formula_score": 50,
+    "ai_score": 68,
+    "bull_count": 17,
     "bear_count": 4,
-    "neutral_count": 5,
-    "total_posts": 14,
+    "neutral_count": 13,
+    "total_posts": 34,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,104 +19,110 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 14,
+  "post_count": 34,
   "hours_window": 24,
   "themes": [
     {
-      "id": "earnings-season",
-      "title": "Earnings Season Speculation",
-      "icon": "flame",
+      "id": "ai-megacap-rally",
+      "title": "AI Megacap Rally",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "SNAP earnings bet drawing speculation",
-        "Traders lament fewer earnings catalysts",
-        "After-hours volatility fuels positioning",
-        "Options gambling tied to reports"
+        "QQQ curling up toward all-time highs",
+        "GOOG, META, ORCL, MSFT pumping",
+        "AI bottom thesis gaining traction",
+        "Momentum names leading market breadth"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 82,
       "tickers": [
-        "SNAP",
-        "AAPL",
-        "DNUT"
+        "GOOG",
+        "MSFT",
+        "META",
+        "ORCL",
+        "QQQ"
       ]
     },
     {
-      "id": "single-name-plays",
-      "title": "Single-Name Deep Dives",
-      "icon": "search",
+      "id": "palantir-earnings",
+      "title": "Palantir Blowout Earnings",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "U.S. commercial revenue soaring sharply",
+        "Guidance raised on strong results",
+        "Karp calls business sales 'otherworldly'",
+        "Retail piling into momentum name"
+      ],
+      "sentiment_score": 85,
+      "tickers": [
+        "PLTR"
+      ]
+    },
+    {
+      "id": "spx-0dte",
+      "title": "0DTE Options Gambling",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "SPX 0DTE dominating retail flow",
+        "Large account blow-ups reported",
+        "Rapid intraday profit and loss swings",
+        "Speculative traders chasing quick moves"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "SPX",
+        "SPY"
+      ]
+    },
+    {
+      "id": "spy-ath",
+      "title": "SPY At All-Time Highs",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Krispy Kreme turnaround thesis pitched",
-        "Grindr framed as overlooked growth story",
-        "Long calls and shares disclosed",
-        "Retail hunting asymmetric setups"
+        "SPY ripping toward record levels",
+        "Traders questioning rally sustainability",
+        "Puts positioning against sharp advance",
+        "Rapid multi-day price swings"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 62,
       "tickers": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    {
+      "id": "consumer-turnarounds",
+      "title": "Consumer Turnaround Plays",
+      "icon": "building-store",
+      "heat": "building",
+      "bullets": [
+        "GRPN eyeing earnings catalyst Aug 6",
+        "DNUT turnaround thesis with leverage",
+        "CAKE consumer squeeze observations",
+        "Speculative value ideas emerging"
+      ],
+      "sentiment_score": 66,
+      "tickers": [
+        "GRPN",
         "DNUT",
+        "CAKE",
         "GRND"
       ]
     },
     {
-      "id": "geopolitical-oil",
-      "title": "Iran War & Oil Prices",
+      "id": "macro-oil-iran",
+      "title": "Oil & Geopolitics",
       "icon": "droplet",
-      "heat": "building",
-      "bullets": [
-        "Oil plummets on ceasefire pause",
-        "S&P futures inch higher",
-        "Traders digesting geopolitical de-escalation",
-        "Energy positioning in flux"
-      ],
-      "sentiment_score": 52,
-      "tickers": [
-        "USO",
-        "CL"
-      ]
-    },
-    {
-      "id": "bearish-bets",
-      "title": "Downside Bets & Puts",
-      "icon": "trending-down",
-      "heat": "building",
-      "bullets": [
-        "Apple puts priced to perfection thesis",
-        "Goya put speculation posted",
-        "Traders fading overextended names",
-        "Short-dated contracts in favor"
-      ],
-      "sentiment_score": 32,
-      "tickers": [
-        "AAPL",
-        "GOYA"
-      ]
-    },
-    {
-      "id": "loss-culture",
-      "title": "Account Blow-Ups & Losses",
-      "icon": "skull",
       "heat": "normal",
       "bullets": [
-        "Wendy's job return jokes resurface",
-        "KOSPI crash sparks relief posts",
-        "Self-deprecating loss humor persists",
-        "Retail resilience masks pain"
+        "Oil plummets on Iran war pause",
+        "S&P futures inch modestly higher",
+        "Ceasefire developments easing risk premium",
+        "Macro backdrop supporting equities"
       ],
-      "sentiment_score": 30,
-      "tickers": []
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "activity",
-      "heat": "normal",
-      "bullets": [
-        "Daily discussion threads active",
-        "Mixed positioning into new week",
-        "Speculation on next catalysts",
-        "Cautious optimism with irony"
-      ],
-      "sentiment_score": 50,
+      "sentiment_score": 55,
       "tickers": [
         "SPY"
       ]
@@ -124,76 +130,76 @@
   ],
   "tickers": [
     {
-      "symbol": "AAPL",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Puts on priced-to-perfection name",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "SNAP",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Earnings lottery bet",
-      "company_name": "Snap Inc."
-    },
-    {
-      "symbol": "DNUT",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Turnaround long thesis",
-      "company_name": "Krispy Kreme, Inc."
-    },
-    {
-      "symbol": "GRND",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Overlooked growth pitch",
-      "company_name": "Grindr Inc."
-    },
-    {
       "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Futures nudging higher",
+      "mentions": 14,
+      "signal": "ATH rally sparks both chasing and put buying",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "USO",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Oil selloff on ceasefire",
-      "company_name": "United States Oil Fund"
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 9,
+      "signal": "Undervalued thesis vindicated on rebound",
+      "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "GOYA",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Speculative put idea",
-      "company_name": "GOYAL ALUMINIUMS LIMITED"
+      "symbol": "SPX",
+      "sentiment": "mixed",
+      "mentions": 8,
+      "signal": "0DTE arena for outsized wins and blow-ups",
+      "company_name": "S&P 500 INDEX"
     },
     {
-      "symbol": "CL",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Crude weakness watched",
-      "company_name": "Colgate-Palmolive Company"
+      "symbol": "QQQ",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "AI-led momentum curling higher",
+      "company_name": "Invesco QQQ Trust, Series 1"
+    },
+    {
+      "symbol": "PLTR",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "Blowout earnings fuel euphoria",
+      "company_name": "Palantir Technologies Inc."
+    },
+    {
+      "symbol": "GOOG",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Full-port conviction plays",
+      "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "RKLB",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Calls underwater but hope remains",
+      "company_name": "Rocket Lab Corporation"
+    },
+    {
+      "symbol": "GRPN",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Overlooked earnings speculation",
+      "company_name": "Groupon, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment sits near neutral as traders juggle earnings-season lottery tickets against geopolitical crosscurrents. The Iran ceasefire pause pressured oil sharply while nudging equity futures higher, leaving retail cautiously positioning around single-name catalysts.",
-      "tag": "notable"
-    },
-    {
-      "text": "Deep-dive long theses on Krispy Kreme and Grindr reflect a hunt for asymmetric, overlooked setups, with disclosed call positions signaling genuine conviction rather than pure momentum chasing.",
+      "text": "Retail sentiment leans decisively greedy as AI megacaps and Palantir's blowout earnings drive momentum, with SPY pressing all-time highs. Traders are chasing upside conviction across GOOG, MSFT, and QQQ, positioning aggressively into a rally many concede they cannot fully explain.",
       "tag": "bullish"
     },
     {
-      "text": "Downside bets are gaining traction, with Apple puts framed around a priced-to-perfection AI narrative and lingering loss-culture humor around blow-ups and the KOSPI crash tempering the batch's overall energy.",
+      "text": "The 0DTE arena remains a double-edged theme: euphoric profit posts coexist with severe account blow-ups on SPX, underscoring the high-variance speculation dominating this snapshot. Options gambling energy runs hot regardless of direction.",
+      "tag": "notable"
+    },
+    {
+      "text": "A handful of skeptics are buying SPY puts and questioning the sustainability of rapid multi-day advances, while oil's plunge on the Iran ceasefire modestly supports equity futures. Contrarian bears remain a minority against the prevailing upside tape.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-03T12:01:19.503606+00:00",
-  "updated_hkt": "2026-08-03 20:01 HKT"
+  "updated_at": "2026-08-03T21:02:21.332743+00:00",
+  "updated_hkt": "2026-08-04 05:02 HKT"
 }
