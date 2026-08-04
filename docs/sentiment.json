@@ -1,17 +1,17 @@
 {
-  "bull_pct": 50,
-  "bear_pct": 12,
-  "neutral_pct": 38,
-  "bull_bear_ratio": 4.2,
+  "bull_pct": 51,
+  "bear_pct": 15,
+  "neutral_pct": 34,
+  "bull_bear_ratio": 3.5,
   "overall_score": 63,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 50,
+    "formula_score": 51,
     "ai_score": 68,
-    "bull_count": 17,
-    "bear_count": 4,
-    "neutral_count": 13,
-    "total_posts": 34,
+    "bull_count": 21,
+    "bear_count": 6,
+    "neutral_count": 14,
+    "total_posts": 41,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,187 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 34,
+  "post_count": 41,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-megacap-rally",
-      "title": "AI Megacap Rally",
+      "id": "ai-memory-boom",
+      "title": "AI & Memory Supercycle",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "QQQ curling up toward all-time highs",
-        "GOOG, META, ORCL, MSFT pumping",
-        "AI bottom thesis gaining traction",
-        "Momentum names leading market breadth"
+        "Micron valuation debate dominates flow",
+        "RAM shortage projected through 2028",
+        "AI names ripping to new highs",
+        "Optics and photonics build-out thesis"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 74,
       "tickers": [
-        "GOOG",
-        "MSFT",
-        "META",
-        "ORCL",
-        "QQQ"
+        "MU",
+        "NVDA",
+        "AAOI"
       ]
     },
     {
       "id": "palantir-earnings",
       "title": "Palantir Blowout Earnings",
-      "icon": "flame",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
         "U.S. commercial revenue soaring sharply",
-        "Guidance raised on strong results",
-        "Karp calls business sales 'otherworldly'",
-        "Retail piling into momentum name"
+        "Management calls sales 'otherworldly'",
+        "Guidance raised on strong demand",
+        "Retail piling into momentum"
       ],
-      "sentiment_score": 85,
+      "sentiment_score": 82,
       "tickers": [
         "PLTR"
       ]
     },
     {
-      "id": "spx-0dte",
-      "title": "0DTE Options Gambling",
-      "icon": "rocket",
+      "id": "spy-ath",
+      "title": "SPY Pressing All-Time Highs",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "SPX 0DTE dominating retail flow",
-        "Large account blow-ups reported",
-        "Rapid intraday profit and loss swings",
-        "Speculative traders chasing quick moves"
+        "Sharp multi-day rally puzzles traders",
+        "Ceasefire news fuels risk appetite",
+        "Bearish put buyers fading fast",
+        "QQQ momentum turning constructive"
       ],
-      "sentiment_score": 48,
-      "tickers": [
-        "SPX",
-        "SPY"
-      ]
-    },
-    {
-      "id": "spy-ath",
-      "title": "SPY At All-Time Highs",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "SPY ripping toward record levels",
-        "Traders questioning rally sustainability",
-        "Puts positioning against sharp advance",
-        "Rapid multi-day price swings"
-      ],
-      "sentiment_score": 62,
+      "sentiment_score": 66,
       "tickers": [
         "SPY",
         "QQQ"
       ]
     },
     {
-      "id": "consumer-turnarounds",
-      "title": "Consumer Turnaround Plays",
-      "icon": "building-store",
+      "id": "msft-conviction",
+      "title": "Microsoft Comeback Trade",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "GRPN eyeing earnings catalyst Aug 6",
-        "DNUT turnaround thesis with leverage",
-        "CAKE consumer squeeze observations",
-        "Speculative value ideas emerging"
+        "Full-port conviction plays paying off",
+        "LEAPS holders banking strong wins",
+        "Stock back in favor after selloff",
+        "Meaningful upside swing rewarded"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 78,
       "tickers": [
-        "GRPN",
-        "DNUT",
-        "CAKE",
-        "GRND"
+        "MSFT"
       ]
     },
     {
-      "id": "macro-oil-iran",
-      "title": "Oil & Geopolitics",
-      "icon": "droplet",
+      "id": "loss-porn",
+      "title": "High-Stakes Blow-Ups",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Large 0DTE trading losses posted",
+        "Retirement accounts used for gambling",
+        "Averaging down into deep drawdowns",
+        "Traders seeking recovery advice"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
+        "SPY",
+        "AAOI"
+      ]
+    },
+    {
+      "id": "speculative-yolo",
+      "title": "Speculative high-conviction Bets",
+      "icon": "dice",
       "heat": "normal",
       "bullets": [
-        "Oil plummets on Iran war pause",
-        "S&P futures inch modestly higher",
-        "Ceasefire developments easing risk premium",
-        "Macro backdrop supporting equities"
+        "Wheat calls and Groupon lottery tickets",
+        "Reddit and SoFi conviction plays",
+        "Small stakes chasing outsized returns",
+        "General Market Mood euphoric"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 62,
       "tickers": [
-        "SPY"
+        "SOFI",
+        "GRPN",
+        "WEAT",
+        "RKLB"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPY",
+      "symbol": "MU",
       "sentiment": "mixed",
-      "mentions": 14,
-      "signal": "ATH rally sparks both chasing and put buying",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "mentions": 9,
+      "signal": "Cyclical valuation debate rages",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "MSFT",
       "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "Undervalued thesis vindicated on rebound",
+      "mentions": 8,
+      "signal": "Comeback conviction rewarded",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "SPX",
+      "symbol": "SPY",
       "sentiment": "mixed",
       "mentions": 8,
-      "signal": "0DTE arena for outsized wins and blow-ups",
-      "company_name": "S&P 500 INDEX"
-    },
-    {
-      "symbol": "QQQ",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "AI-led momentum curling higher",
-      "company_name": "Invesco QQQ Trust, Series 1"
+      "signal": "ATH melt-up baffles bears",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "PLTR",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "Blowout earnings fuel euphoria",
+      "signal": "Blowout earnings euphoria",
       "company_name": "Palantir Technologies Inc."
     },
     {
-      "symbol": "GOOG",
+      "symbol": "NVDA",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Full-port conviction plays",
-      "company_name": "Alphabet Inc."
+      "signal": "Green-streak momentum chase",
+      "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "RKLB",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Calls underwater but hope remains",
-      "company_name": "Rocket Lab Corporation"
+      "symbol": "QQQ",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Momentum curling higher",
+      "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
-      "symbol": "GRPN",
+      "symbol": "AAOI",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Averaging down into pain",
+      "company_name": "Applied Optoelectronics, Inc."
+    },
+    {
+      "symbol": "SOFI",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Overlooked earnings speculation",
-      "company_name": "Groupon, Inc."
+      "signal": "Undervalued high-conviction thesis",
+      "company_name": "SoFi Technologies, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail sentiment leans decisively greedy as AI megacaps and Palantir's blowout earnings drive momentum, with SPY pressing all-time highs. Traders are chasing upside conviction across GOOG, MSFT, and QQQ, positioning aggressively into a rally many concede they cannot fully explain.",
+      "text": "Retail sentiment is decidedly greedy as SPY presses all-time highs and the AI-memory supercycle narrative dominates flow. Palantir's blowout quarter and a Microsoft comeback trade fuel euphoric positioning, with bears increasingly fading into a relentless melt-up.",
       "tag": "bullish"
     },
     {
-      "text": "The 0DTE arena remains a double-edged theme: euphoric profit posts coexist with severe account blow-ups on SPX, underscoring the high-variance speculation dominating this snapshot. Options gambling energy runs hot regardless of direction.",
+      "text": "Micron remains the batch's flashpoint, splitting traders between a deep-value cyclical thesis on collapsing forward multiples and warnings that peak-cycle earnings distort valuation. Memory shortages projected through 2028 keep conviction high.",
       "tag": "notable"
     },
     {
-      "text": "A handful of skeptics are buying SPY puts and questioning the sustainability of rapid multi-day advances, while oil's plunge on the Iran ceasefire modestly supports equity futures. Contrarian bears remain a minority against the prevailing upside tape.",
+      "text": "Counterbalancing the euphoria, high-stakes blow-ups underscore the risk beneath the surface, with large 0DTE losses and retirement-account gambling reminding the crowd that today's winners can reverse fast.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-03T21:02:21.332743+00:00",
-  "updated_hkt": "2026-08-04 05:02 HKT"
+  "updated_at": "2026-08-04T12:02:50.938665+00:00",
+  "updated_hkt": "2026-08-04 20:02 HKT"
 }
