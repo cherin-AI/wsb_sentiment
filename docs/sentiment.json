@@ -1,17 +1,17 @@
 {
-  "bull_pct": 51,
-  "bear_pct": 15,
-  "neutral_pct": 34,
-  "bull_bear_ratio": 3.5,
-  "overall_score": 63,
-  "overall_label": "Greed",
+  "bull_pct": 83,
+  "bear_pct": 10,
+  "neutral_pct": 7,
+  "bull_bear_ratio": 8.6,
+  "overall_score": 80,
+  "overall_label": "Extreme Greed",
   "methodology": {
-    "formula_score": 51,
-    "ai_score": 68,
-    "bull_count": 21,
-    "bear_count": 6,
-    "neutral_count": 14,
-    "total_posts": 41,
+    "formula_score": 83,
+    "ai_score": 78,
+    "bull_count": 43,
+    "bear_count": 5,
+    "neutral_count": 4,
+    "total_posts": 52,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,184 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 41,
+  "post_count": 52,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-memory-boom",
-      "title": "AI & Memory Supercycle",
-      "icon": "cpu",
+      "id": "0dte-yolo-lottery",
+      "title": "0DTE Lottery Wins",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Micron valuation debate dominates flow",
-        "RAM shortage projected through 2028",
-        "AI names ripping to new highs",
-        "Optics and photonics build-out thesis"
+        "Small stakes flipped into large gains",
+        "Wendy's parking lot escape narrative",
+        "Speculative traders chasing consecutive wins",
+        "Euphoric risk-taking dominating the feed"
       ],
-      "sentiment_score": 74,
-      "tickers": [
-        "MU",
-        "NVDA",
-        "AAOI"
-      ]
-    },
-    {
-      "id": "palantir-earnings",
-      "title": "Palantir Blowout Earnings",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "U.S. commercial revenue soaring sharply",
-        "Management calls sales 'otherworldly'",
-        "Guidance raised on strong demand",
-        "Retail piling into momentum"
-      ],
-      "sentiment_score": 82,
-      "tickers": [
-        "PLTR"
-      ]
-    },
-    {
-      "id": "spy-ath",
-      "title": "SPY Pressing All-Time Highs",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Sharp multi-day rally puzzles traders",
-        "Ceasefire news fuels risk appetite",
-        "Bearish put buyers fading fast",
-        "QQQ momentum turning constructive"
-      ],
-      "sentiment_score": 66,
+      "sentiment_score": 88,
       "tickers": [
         "SPY",
-        "QQQ"
+        "NDX"
       ]
     },
     {
-      "id": "msft-conviction",
-      "title": "Microsoft Comeback Trade",
+      "id": "spacex-space-stocks",
+      "title": "SpaceX First Earnings",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Full-port conviction plays paying off",
-        "LEAPS holders banking strong wins",
-        "Stock back in favor after selloff",
-        "Meaningful upside swing rewarded"
+        "First public report shows heavy cash burn",
+        "Space stocks facing near-term drag",
+        "Speculative SPCX call positioning",
+        "Divided read on the numbers"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 48,
       "tickers": [
-        "MSFT"
+        "SPCX"
       ]
     },
     {
-      "id": "loss-porn",
-      "title": "High-Stakes Blow-Ups",
-      "icon": "skull",
+      "id": "memory-crisis",
+      "title": "Memory Supercycle",
+      "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Large 0DTE trading losses posted",
-        "Retirement accounts used for gambling",
-        "Averaging down into deep drawdowns",
-        "Traders seeking recovery advice"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "SPY",
-        "AAOI"
-      ]
-    },
-    {
-      "id": "speculative-yolo",
-      "title": "Speculative high-conviction Bets",
-      "icon": "dice",
-      "heat": "normal",
-      "bullets": [
-        "Wheat calls and Groupon lottery tickets",
-        "Reddit and SoFi conviction plays",
-        "Small stakes chasing outsized returns",
-        "General Market Mood euphoric"
+        "RAM shortage projected to worsen",
+        "Micron cyclical valuation debate heats up",
+        "Supply relief not expected until 2029",
+        "Analysts warning on entry timing"
       ],
       "sentiment_score": 62,
       "tickers": [
-        "SOFI",
-        "GRPN",
-        "WEAT",
-        "RKLB"
+        "MU"
+      ]
+    },
+    {
+      "id": "ai-optics-china-ban",
+      "title": "AI Optics & China Ban",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "US drafting ban on Chinese components",
+        "Optical transceiver thesis gaining traction",
+        "Photonics build-out conviction rising",
+        "Data center infrastructure tailwinds"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
+        "AAOI",
+        "COHR"
+      ]
+    },
+    {
+      "id": "megacap-earnings",
+      "title": "Megacap Earnings Winners",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "MSFT and PLTR posting strong momentum",
+        "AAPL long-term holders sitting comfortably",
+        "AMD positioned ahead of earnings",
+        "Berkshire cash pile transformation thesis"
+      ],
+      "sentiment_score": 80,
+      "tickers": [
+        "MSFT",
+        "PLTR",
+        "AMD",
+        "AAPL"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-happy",
+      "heat": "hot",
+      "bullets": [
+        "Ceasefire news lifting broad sentiment",
+        "Rally exhaustion warnings from bears",
+        "Retail chasing green streaks",
+        "Euphoria running near peak levels"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "SPY",
+        "NVDA"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "mixed",
-      "mentions": 9,
-      "signal": "Cyclical valuation debate rages",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "Comeback conviction rewarded",
-      "company_name": "Microsoft Corporation"
-    },
-    {
       "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 8,
-      "signal": "ATH melt-up baffles bears",
+      "sentiment": "bullish",
+      "mentions": 9,
+      "signal": "0DTE lottery ticket of choice",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "PLTR",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "Blowout earnings euphoria",
+      "signal": "Momentum darling, still hodling",
       "company_name": "Palantir Technologies Inc."
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "mixed",
+      "mentions": 5,
+      "signal": "Memory cycle valuation debate",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Earnings positioning optimism",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Steak-dinner gains celebrated",
+      "company_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "SPCX",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Speculative call gambling post-earnings",
+      "company_name": "Space Exploration Technologies "
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Green-streak momentum chase",
+      "mentions": 3,
+      "signal": "Green streak momentum chasing",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "QQQ",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Momentum curling higher",
-      "company_name": "Invesco QQQ Trust, Series 1"
-    },
-    {
       "symbol": "AAOI",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Averaging down into pain",
-      "company_name": "Applied Optoelectronics, Inc."
-    },
-    {
-      "symbol": "SOFI",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Undervalued high-conviction thesis",
-      "company_name": "SoFi Technologies, Inc."
+      "signal": "High-conviction optics build-out",
+      "company_name": "Applied Optoelectronics, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail sentiment is decidedly greedy as SPY presses all-time highs and the AI-memory supercycle narrative dominates flow. Palantir's blowout quarter and a Microsoft comeback trade fuel euphoric positioning, with bears increasingly fading into a relentless melt-up.",
+      "text": "Retail euphoria dominates this batch, with a flood of profit posts turning small stakes into life-changing sums via 0DTE SPY plays. The energy is unmistakably greedy, with traders celebrating consecutive wins and chasing further upside.",
       "tag": "bullish"
     },
     {
-      "text": "Micron remains the batch's flashpoint, splitting traders between a deep-value cyclical thesis on collapsing forward multiples and warnings that peak-cycle earnings distort valuation. Memory shortages projected through 2028 keep conviction high.",
+      "text": "Megacap earnings winners MSFT, PLTR and AAPL fuel the optimism, while the memory supercycle and AI optics build-out draw fresh high-conviction positioning around MU, AAOI and COHR.",
       "tag": "notable"
     },
     {
-      "text": "Counterbalancing the euphoria, high-stakes blow-ups underscore the risk beneath the surface, with large 0DTE losses and retirement-account gambling reminding the crowd that today's winners can reverse fast.",
+      "text": "A minority of bears warn the rally looks like exhaustion, citing capital rotation out of tech and SpaceX's heavy cash burn, but their caution is drowned out by the prevailing risk-on mood.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-04T12:02:50.938665+00:00",
-  "updated_hkt": "2026-08-04 20:02 HKT"
+  "updated_at": "2026-08-04T21:03:19.602908+00:00",
+  "updated_hkt": "2026-08-05 05:03 HKT"
 }
