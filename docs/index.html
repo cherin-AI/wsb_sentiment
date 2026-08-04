@@ -39,8 +39,8 @@
   html { background: var(--bg); color: var(--t1); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
 
   /* Lock digit width so values don't jitter as they change (finance convention) */
-  .kpi-value, .kpi-delta, .mention-num, .bb-pct, .header-ts, .header-ts span,
-  .score-tag, .sent-pill, .ticker-chip, td .sym, .tt-score, .tt-ts,
+  .kpi-value, .mention-num, .bb-pct, .header-ts, .header-ts span,
+  .score-tag, .sent-pill, .ticker-chip, td .sym,
   .method-num, .band-range {
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum" 1;
@@ -48,7 +48,7 @@
   svg text { font-variant-numeric: tabular-nums; }
 
   /* Keyboard focus visibility */
-  a:focus-visible, button:focus-visible, .history-dot:focus-visible {
+  a:focus-visible, button:focus-visible {
     outline: 2px solid var(--ac); outline-offset: 2px; border-radius: 2px;
   }
 
@@ -113,10 +113,6 @@
   .kpi-value.a { color: var(--am); }
   .kpi-value.n { color: var(--t2); }
   .kpi-sub { font-size: 10px; color: var(--t3); line-height: 1.45; margin-top: 4px; }
-  .kpi-delta { font-size: 11px; font-weight: 600; margin-top: 4px; }
-  .kpi-delta.up { color: var(--gr); }
-  .kpi-delta.down { color: var(--rd); }
-  .kpi-delta.flat { color: var(--t3); }
   .kpi-company { font-size: 10px; color: var(--t3); margin-top: 2px; margin-bottom: 4px; }
 
   /* ── Score section ── */
@@ -240,17 +236,6 @@
   .cov-row { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; font-size: 11px; }
   .cov-key { color: var(--t3); text-transform: uppercase; font-size: 10px; letter-spacing: 0.05em; }
   .cov-val { color: var(--t1); font-weight: 500; text-align: right; }
-
-  /* ── History tooltip ── */
-  #history-tooltip {
-    position: fixed; display: none; pointer-events: none; z-index: 100;
-    background: var(--s3); border: 1px solid var(--b2); border-radius: 6px;
-    padding: 7px 11px; white-space: nowrap;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
-  }
-  #history-tooltip .tt-score { font-size: 15px; font-weight: 700; color: var(--t1); }
-  #history-tooltip .tt-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-left: 5px; }
-  #history-tooltip .tt-ts { font-size: 10px; color: var(--t3); margin-top: 3px; }
 
   /* ── Loading / Error ── */
   .loading { padding: 0.5rem 0; }
@@ -434,88 +419,9 @@ function buildGaugeSVG(score, scoreColor) {
   return'<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+W+'px;display:block;margin:8px 0;" xmlns="http://www.w3.org/2000/svg"'+aria+'>'+paths+dots+nums+labels+needle+pivot+scoreNum+'</svg>';
 }
 
-function buildHistoryChart(history) {
-  if (!history || history.length < 2) return '';
-  const entries = history.filter(e => {
-    const m = (e.ts || '').match(/(\d{2}):\d{2} HKT/);
-    return m && (m[1] === '05' || m[1] === '20');
-  }).slice(-10);  // last 5 days × 2 runs/day (05:00 + 20:00 HKT)
-  const mobile = window.innerWidth <= 768;
-  // Narrower viewBox on mobile so each element occupies more of the phone width.
-  // Wider left margin so the longest zone labels ("Ex. Greed") aren't clipped.
-  const W = mobile ? 480 : 900, H = 150, padL = mobile ? 60 : 52, padR = 12, padT = 18, padB = 28;
-  const scoreFont = mobile ? 17 : 13, xFont = mobile ? 11 : 8, yFont = mobile ? 11 : 8;
-  const chartW = W - padL - padR;
-  const chartH = H - padT - padB;
-
-  function toX(i) { return padL + (i / (entries.length - 1)) * chartW; }
-  function toY(v) { return padT + (1 - v / 100) * chartH; }
-
-  // Colored zone bands
-  const zoneBands = [
-    { min: 0,  max: 20,  fill: 'rgba(192,56,56,0.13)'  },
-    { min: 20, max: 40,  fill: 'rgba(192,112,32,0.10)' },
-    { min: 40, max: 60,  fill: 'rgba(58,88,112,0.10)'  },
-    { min: 60, max: 80,  fill: 'rgba(24,128,176,0.10)' },
-    { min: 80, max: 100, fill: 'rgba(24,168,128,0.13)' },
-  ].map(z => {
-    const y1 = toY(z.max).toFixed(1), y2 = toY(z.min).toFixed(1);
-    return `<rect x="${padL}" y="${y1}" width="${chartW}" height="${(parseFloat(y2)-parseFloat(y1)).toFixed(1)}" fill="${z.fill}"/>`;
-  }).join('');
-
-  // Horizontal dividers at zone boundaries
-  const dividers = [20, 40, 60, 80].map(v => {
-    const y = toY(v).toFixed(1);
-    return `<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>`;
-  }).join('');
-
-  // Y-axis labels
-  const yLabels = [
-    { v: 10,  label: 'Ex. Fear' },
-    { v: 30,  label: 'Fear'     },
-    { v: 50,  label: 'Neutral'  },
-    { v: 70,  label: 'Greed'   },
-    { v: 90,  label: 'Ex. Greed' },
-  ].map(({ v, label }) =>
-    `<text x="${padL - 4}" y="${toY(v).toFixed(1)}" text-anchor="end" dominant-baseline="middle" fill="#90aec8" font-size="${yFont}" font-family="Inter,system-ui,sans-serif">${label}</text>`
-  ).join('');
-
-  // Line
-  const points = entries.map((e, i) => `${toX(i).toFixed(1)},${toY(e.score).toFixed(1)}`).join(' ');
-  const line = `<polyline points="${points}" fill="none" stroke="rgba(74,144,226,0.75)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
-
-  // Dots
-  const dots = entries.map((e, i) => {
-    const x = toX(i).toFixed(1), y = toY(e.score).toFixed(1);
-    const r0 = regimeOf(e.score);
-    const col = r0.color, labelCol = r0.text;
-    const isLast = i === entries.length - 1;
-    const r = isLast ? (mobile ? 8 : 7) : (mobile ? 7 : 6);
-    const visDot = `<circle cx="${x}" cy="${y}" r="${r}" fill="${col}" stroke="#07090f" stroke-width="2" pointer-events="none"/>`;
-    const labelY = (parseFloat(y) - r - 6).toFixed(1);
-    // Clamp score labels inside the plot area so the first/last don't collide with axis labels
-    const labelX = Math.min(Math.max(parseFloat(x), padL + 10), W - padR - 10).toFixed(1);
-    const scoreLabel = `<text x="${labelX}" y="${labelY}" text-anchor="middle" fill="${labelCol}" font-size="${scoreFont}" font-weight="700" font-family="Inter,system-ui,sans-serif" pointer-events="none">${e.score}</text>`;
-    const hitArea = `<circle cx="${x}" cy="${y}" r="12" fill="transparent" class="history-dot" data-ts="${esc(e.ts)}" data-score="${e.score}" data-label="${esc(e.label)}" style="cursor:pointer"/>`;
-    return visDot + scoreLabel + hitArea;
-  }).join('');
-
-  // X-axis labels: first print of each date
-  const seenDates = new Set();
-  const xLabels = entries.map((e, i) => {
-    const ts = e.ts || '';
-    const dateStr = ts.length >= 10 ? ts.slice(5, 10) : ts;
-    if (seenDates.has(dateStr)) return '';
-    seenDates.add(dateStr);
-    return `<text x="${toX(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="#90aec8" font-size="${xFont}" font-family="Inter,system-ui,sans-serif">${dateStr}</text>`;
-  }).join('');
-
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fear and Greed score history, last ${entries.length} prints">${zoneBands}${dividers}${yLabels}${line}${dots}${xLabels}</svg>`;
-}
-
 async function load() {
   const root = document.getElementById('root');
-  let data, history = [];
+  let data;
   try {
     const r = await fetch(`sentiment.json?t=${Date.now()}`);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -530,11 +436,6 @@ async function load() {
       </div>`;
     return;
   }
-  try {
-    const rh = await fetch(`history.json?t=${Date.now()}`);
-    if (rh.ok) history = await rh.json();
-  } catch (_) {}
-
   const ts = data.updated_hkt || data.updated_at || '—';
   document.getElementById('ts').textContent = ts;
 
@@ -542,23 +443,6 @@ async function load() {
   const reg = regimeOf(score);
   const scoreColor = reg.color === '#3a5870' ? '#a8c2dc' : reg.color;  // neutral band too dark for needle/number
   const scoreTagStyle = regimePillStyle(reg);
-
-  // Change vs prior print (from history.json)
-  let prev = null;
-  if (Array.isArray(history) && history.length) {
-    const last = history[history.length - 1];
-    if (last && last.ts === ts && history.length >= 2) prev = history[history.length - 2];
-    else if (last && last.ts !== ts) prev = last;
-  }
-  const delta = prev ? score - prev.score : null;
-  let deltaHTML = '<span class="kpi-delta flat">No prior print available</span>';
-  if (delta !== null) {
-    const cls = delta > 0 ? 'up' : delta < 0 ? 'down' : 'flat';
-    const arrow = delta > 0 ? '▲' : delta < 0 ? '▼' : '·';
-    const num = delta > 0 ? '+' + delta : String(delta);
-    const prevTs = String(prev.ts || '').replace(' HKT', '');
-    deltaHTML = `<span class="kpi-delta ${cls}">${arrow} ${num} vs prior print (${esc(prevTs)})</span>`;
-  }
 
   const maxMentions = Math.max(...(data.tickers || []).map(t => t.mentions || 0), 1);
   const m = data.methodology || null;
@@ -576,7 +460,6 @@ async function load() {
         <div style="flex:1">
           <div class="kpi-value" style="color:${scoreColor}">${score}</div>
           <div style="margin-top:2px"><span class="score-tag" style="${scoreTagStyle};margin-top:0">${esc(data.overall_label || reg.label)}</span></div>
-          ${deltaHTML}
         </div>
       </div>
       <div class="kpi-card">
@@ -627,14 +510,6 @@ async function load() {
         </div>
       </div>
     </div>
-
-    ${history.length >= 2 ? `
-    <!-- Score History -->
-    <div class="section-title">Score History<span class="section-note">Twice-daily prints · 05:00 / 20:00 HKT</span></div>
-    <div class="bull-bear" style="padding:14px 16px 10px;">
-      ${buildHistoryChart(history)}
-    </div>
-    ` : ''}
 
     <!-- Sentiment Mix -->
     <div class="section-title">Sentiment Mix<span class="section-note">Share of classified posts</span></div>
@@ -775,37 +650,6 @@ async function load() {
 }
 
 load();
-
-// History chart tooltip
-(function() {
-  let tip = document.getElementById('history-tooltip');
-  if (!tip) {
-    tip = document.createElement('div');
-    tip.id = 'history-tooltip';
-    tip.innerHTML = '<div><span class="tt-score"></span><span class="tt-label"></span></div><div class="tt-ts"></div>';
-    document.body.appendChild(tip);
-  }
-  let visible = false;
-  document.addEventListener('mouseover', e => {
-    const dot = e.target.closest('.history-dot');
-    if (!dot) return;
-    const score = Number(dot.dataset.score);
-    tip.querySelector('.tt-score').textContent = score;
-    tip.querySelector('.tt-label').style.color = regimeOf(score).text;
-    tip.querySelector('.tt-label').textContent = dot.dataset.label || '';
-    tip.querySelector('.tt-ts').textContent = dot.dataset.ts;
-    tip.style.display = 'block';
-    visible = true;
-  });
-  document.addEventListener('mousemove', e => {
-    if (!visible) return;
-    tip.style.left = (e.clientX + 16) + 'px';
-    tip.style.top  = (e.clientY - 44) + 'px';
-  });
-  document.addEventListener('mouseout', e => {
-    if (e.target.closest('.history-dot')) { tip.style.display = 'none'; visible = false; }
-  });
-}());
 </script>
 
 <section id="faq">
