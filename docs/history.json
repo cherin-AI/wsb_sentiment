@@ -901,5 +901,12 @@
     "label": "Extreme Greed",
     "formula_score": 83,
     "ai_score": 78
+  },
+  {
+    "ts": "2026-08-05 20:03 HKT",
+    "score": 80,
+    "label": "Extreme Greed",
+    "formula_score": 75,
+    "ai_score": 82
   }
 ]

@@ -1,17 +1,17 @@
 {
-  "bull_pct": 83,
-  "bear_pct": 10,
-  "neutral_pct": 7,
-  "bull_bear_ratio": 8.6,
+  "bull_pct": 75,
+  "bear_pct": 15,
+  "neutral_pct": 10,
+  "bull_bear_ratio": 5.1,
   "overall_score": 80,
   "overall_label": "Extreme Greed",
   "methodology": {
-    "formula_score": 83,
-    "ai_score": 78,
-    "bull_count": 43,
-    "bear_count": 5,
-    "neutral_count": 4,
-    "total_posts": 52,
+    "formula_score": 75,
+    "ai_score": 82,
+    "bull_count": 41,
+    "bear_count": 8,
+    "neutral_count": 6,
+    "total_posts": 55,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,109 +19,112 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 52,
+  "post_count": 55,
   "hours_window": 24,
   "themes": [
     {
-      "id": "0dte-yolo-lottery",
-      "title": "0DTE Lottery Wins",
+      "id": "spy-0dte-gambling",
+      "title": "SPY 0DTE Lottery Tickets",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Small stakes flipped into large gains",
-        "Wendy's parking lot escape narrative",
-        "Speculative traders chasing consecutive wins",
-        "Euphoric risk-taking dominating the feed"
+        "Small stakes turned into life-changing wins",
+        "Retail piling into same-day options",
+        "Euphoric profit posts dominate feed",
+        "Peace-deal headlines fueling index rally"
       ],
-      "sentiment_score": 88,
+      "sentiment_score": 90,
       "tickers": [
         "SPY",
-        "NDX"
+        "SPX"
       ]
     },
     {
-      "id": "spacex-space-stocks",
-      "title": "SpaceX First Earnings",
-      "icon": "rocket",
+      "id": "ai-chip-rebound",
+      "title": "AI & Chip Rebound",
+      "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "First public report shows heavy cash burn",
-        "Space stocks facing near-term drag",
-        "Speculative SPCX call positioning",
-        "Divided read on the numbers"
+        "Memory and AI names recovering from July dip",
+        "MU, SNDK, MRVL back in favor",
+        "FOMO returning after brutal selloff",
+        "Speculative price targets resurfacing"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 78,
+      "tickers": [
+        "MU",
+        "SNDK",
+        "MRVL",
+        "NBIS",
+        "COHR"
+      ]
+    },
+    {
+      "id": "amd-earnings",
+      "title": "AMD Earnings Fallout",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Revenue climbs 50%, stock still drops",
+        "Earnings gamblers left disappointed",
+        "Data center strength ignored by market",
+        "Option bets underwater after print"
+      ],
+      "sentiment_score": 38,
+      "tickers": [
+        "AMD"
+      ]
+    },
+    {
+      "id": "spacex-ipo",
+      "title": "SpaceX Post-IPO Slide",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Shares slid well below debut price",
+        "Heavy cash burn flagged in filings",
+        "Speculators still eyeing SPCX calls",
+        "Elon commentary stirring fresh positioning"
+      ],
+      "sentiment_score": 55,
       "tickers": [
         "SPCX"
       ]
     },
     {
-      "id": "memory-crisis",
-      "title": "Memory Supercycle",
-      "icon": "cpu",
+      "id": "market-top-fears",
+      "title": "Top-Calling & Exhaustion",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "RAM shortage projected to worsen",
-        "Micron cyclical valuation debate heats up",
-        "Supply relief not expected until 2029",
-        "Analysts warning on entry timing"
+        "Burry warns of 1987-style fall",
+        "Capital rotating out of tech",
+        "Rally viewed as exhaustion by some",
+        "Contrarians hedging with index puts"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 25,
       "tickers": [
-        "MU"
+        "SPY",
+        "SPX"
       ]
     },
     {
-      "id": "ai-optics-china-ban",
-      "title": "AI Optics & China Ban",
-      "icon": "flame",
-      "heat": "building",
+      "id": "high-conviction-holds",
+      "title": "High-Conviction Long Holds",
+      "icon": "diamond",
+      "heat": "normal",
       "bullets": [
-        "US drafting ban on Chinese components",
-        "Optical transceiver thesis gaining traction",
-        "Photonics build-out conviction rising",
-        "Data center infrastructure tailwinds"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "AAOI",
-        "COHR"
-      ]
-    },
-    {
-      "id": "megacap-earnings",
-      "title": "Megacap Earnings Winners",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "MSFT and PLTR posting strong momentum",
-        "AAPL long-term holders sitting comfortably",
-        "AMD positioned ahead of earnings",
-        "Berkshire cash pile transformation thesis"
+        "PLTR and AAPL diamond-hand posts",
+        "LEAPs and long-term shares celebrated",
+        "Berkshire earnings bet on cash transformation",
+        "Patience touted over degenerate gambling"
       ],
       "sentiment_score": 80,
       "tickers": [
-        "MSFT",
         "PLTR",
-        "AMD",
-        "AAPL"
-      ]
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-happy",
-      "heat": "hot",
-      "bullets": [
-        "Ceasefire news lifting broad sentiment",
-        "Rally exhaustion warnings from bears",
-        "Retail chasing green streaks",
-        "Euphoria running near peak levels"
-      ],
-      "sentiment_score": 74,
-      "tickers": [
-        "SPY",
-        "NVDA"
+        "AAPL",
+        "MSFT",
+        "BRK"
       ]
     }
   ],
@@ -129,74 +132,74 @@
     {
       "symbol": "SPY",
       "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "0DTE lottery ticket of choice",
+      "mentions": 12,
+      "signal": "0DTE printing machine of the week",
       "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "SPX",
+      "sentiment": "bullish",
+      "mentions": 7,
+      "signal": "half-court lottery ticket plays",
+      "company_name": "S&P 500 INDEX"
+    },
+    {
+      "symbol": "AMD",
+      "sentiment": "bearish",
+      "mentions": 6,
+      "signal": "earnings beat, stock disappoints",
+      "company_name": "Advanced Micro Devices, Inc."
     },
     {
       "symbol": "PLTR",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "Momentum darling, still hodling",
+      "signal": "high-conviction hold favorite",
       "company_name": "Palantir Technologies Inc."
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "Memory cycle valuation debate",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Earnings positioning optimism",
-      "company_name": "Advanced Micro Devices, Inc."
-    },
-    {
-      "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Steak-dinner gains celebrated",
-      "company_name": "Microsoft Corporation"
     },
     {
       "symbol": "SPCX",
       "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Speculative call gambling post-earnings",
+      "mentions": 4,
+      "signal": "post-IPO speculation on Elon",
       "company_name": "Space Exploration Technologies "
     },
     {
-      "symbol": "NVDA",
+      "symbol": "MU",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Green streak momentum chasing",
-      "company_name": "NVIDIA Corporation"
+      "signal": "memory rebound bet after dip",
+      "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "AAOI",
+      "symbol": "SNDK",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "aggressive upside targets floated",
+      "company_name": "Sandisk Corporation"
+    },
+    {
+      "symbol": "AAPL",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "High-conviction optics build-out",
-      "company_name": "Applied Optoelectronics, Inc."
+      "signal": "decade-long diamond hands",
+      "company_name": "Apple Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail euphoria dominates this batch, with a flood of profit posts turning small stakes into life-changing sums via 0DTE SPY plays. The energy is unmistakably greedy, with traders celebrating consecutive wins and chasing further upside.",
+      "text": "Sentiment is overwhelmingly euphoric, with the feed flooded by same-day SPY and SPX option winners turning tiny stakes into outsized gains. Peace-deal headlines and a sharp index rally have flipped July's fear into aggressive greed and rampant FOMO.",
       "tag": "bullish"
     },
     {
-      "text": "Megacap earnings winners MSFT, PLTR and AAPL fuel the optimism, while the memory supercycle and AI optics build-out draw fresh high-conviction positioning around MU, AAOI and COHR.",
-      "tag": "notable"
+      "text": "AMD's post-earnings drop despite strong revenue growth stung options gamblers, while SpaceX's post-IPO slide and heavy cash burn tempered the enthusiasm around the year's biggest listing. Earnings-driven volatility remains a live catalyst.",
+      "tag": "bearish"
     },
     {
-      "text": "A minority of bears warn the rally looks like exhaustion, citing capital rotation out of tech and SpaceX's heavy cash burn, but their caution is drowned out by the prevailing risk-on mood.",
-      "tag": "bearish"
+      "text": "Beneath the celebration, contrarian voices led by Burry's 1987-style warning flag exhaustion and rotation out of tech. The mix of manic lottery-ticket euphoria and top-calling suggests a crowded, late-cycle mood worth watching.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-08-04T21:03:19.602908+00:00",
-  "updated_hkt": "2026-08-05 05:03 HKT"
+  "updated_at": "2026-08-05T12:03:43.455263+00:00",
+  "updated_hkt": "2026-08-05 20:03 HKT"
 }
