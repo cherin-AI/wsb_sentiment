@@ -1,16 +1,16 @@
 {
-  "bull_pct": 43,
-  "bear_pct": 31,
-  "neutral_pct": 26,
-  "bull_bear_ratio": 1.4,
-  "overall_score": 56,
-  "overall_label": "Neutral",
+  "bull_pct": 74,
+  "bear_pct": 9,
+  "neutral_pct": 17,
+  "bull_bear_ratio": 8.7,
+  "overall_score": 74,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 43,
-    "ai_score": 62,
-    "bull_count": 15,
-    "bear_count": 11,
-    "neutral_count": 9,
+    "formula_score": 74,
+    "ai_score": 74,
+    "bull_count": 26,
+    "bear_count": 3,
+    "neutral_count": 6,
     "total_posts": 35,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
@@ -23,188 +23,182 @@
   "hours_window": 24,
   "themes": [
     {
-      "id": "sndk-earnings-shock",
-      "title": "SanDisk Earnings Shock",
+      "id": "htz-squeeze",
+      "title": "Hertz Squeeze Frenzy",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Revenue forecast disappoints, stock tumbles late",
-        "Bulls insist demand visibility strong for years",
-        "Speculators loading up on shares",
-        "Sharp after-hours volatility confuses traders"
+        "High short interest fuels squeeze speculation",
+        "Traders full-porting life savings on margin",
+        "Rapid intraday spike drawing pile-on interest",
+        "Recovery target set at prior highs"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 82,
       "tickers": [
-        "SNDK",
-        "WDC"
+        "HTZ"
       ]
     },
     {
-      "id": "ai-datacenter-plays",
-      "title": "AI & Datacenter Trades",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Bulls",
       "icon": "cpu",
-      "heat": "hot",
+      "heat": "building",
       "bullets": [
-        "NVDA momentum thesis holding strong",
-        "Datacenter earnings mixed but demand rising",
-        "Options traders chasing GOOG and NVDA",
-        "AI capex narrative still dominant"
+        "Nuclear and data center AI plays hyped",
+        "Alphabet jumbo bond sale oversubscribed",
+        "Bubble skeptics dismissed as latecomers",
+        "Cloudflare and Nebius momentum trades"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 76,
       "tickers": [
-        "NVDA",
-        "GOOG",
-        "APLD",
-        "AMD"
+        "OKLO",
+        "GOOGL",
+        "NBIS",
+        "NET"
       ]
     },
     {
-      "id": "options-yolo-culture",
-      "title": "0DTE high-conviction Speculation",
+      "id": "yolo-culture",
+      "title": "high-conviction Culture Revival",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Extreme short-dated options gambling",
-        "Big win posts fueling euphoria",
-        "Traders chasing back losses same day",
-        "Retirement-or-bust mentality spreading"
+        "Large single-name concentrated speculative bets",
+        "Small stakes ballooning into big wins",
+        "Traders chasing high-conviction momentum",
+        "Options leverage stacked into earnings"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 80,
       "tickers": [
         "SPY",
-        "SPX",
-        "MU",
-        "GOOG"
+        "MSTR",
+        "HTZ"
       ]
     },
     {
-      "id": "profit-euphoria",
-      "title": "Windfall Profit Posts",
+      "id": "earnings-moves",
+      "title": "Earnings Reactions",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Multiple large win screenshots circulating",
-        "Advice to bank emergency reserves emerging",
-        "Multi-bagger option flips celebrated",
-        "Greed tempered by cash-out discipline"
+        "DOCS surges sharply on AI monetization",
+        "Double beats not guaranteeing upside",
+        "LYFT acquisition speculation building",
+        "Post-earnings volatility driving trades"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 68,
       "tickers": [
-        "GOOG",
-        "NVDA",
+        "DOCS",
+        "LYFT",
+        "TEAM"
+      ]
+    },
+    {
+      "id": "big-tech-rotation",
+      "title": "Big Tech Rotation",
+      "icon": "refresh",
+      "heat": "normal",
+      "bullets": [
+        "Rotating from MSFT into META",
+        "META viewed as undervalued play",
+        "Concerns over spending discounted",
+        "Locking gains and repositioning"
+      ],
+      "sentiment_score": 70,
+      "tickers": [
+        "META",
         "MSFT"
       ]
     },
     {
-      "id": "capitulation-losses",
-      "title": "Timing Regret & Losses",
+      "id": "loss-posts",
+      "title": "Account Blow-Ups",
       "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Sold winners too early, chased bad puts",
-        "Selling at the bottom lamented",
-        "Deep drawdowns on leveraged bets",
-        "Paper hands and greed punished"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "AMD",
-        "GOOG",
-        "SPY",
-        "CRM"
-      ]
-    },
-    {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "activity",
       "heat": "normal",
       "bullets": [
-        "End-of-day dump patterns exploited",
-        "Nintendo valuation debate emerging",
-        "Korean market volatility puzzles traders",
-        "Cash-vs-stay-invested indecision"
+        "Rug pull losses shared openly",
+        "First-time options traders lost",
+        "Self-deprecating loss-post humor",
+        "Vowing to stop posting stocks"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 22,
       "tickers": [
-        "MSFT",
-        "NTDOY",
-        "MCD"
+        "HTZ"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SNDK",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Earnings shock, bulls buying the dip",
-      "company_name": "Sandisk Corporation"
-    },
-    {
-      "symbol": "NVDA",
+      "symbol": "HTZ",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Momentum thesis intact, breakout chasers",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "GOOG",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Options flips, dip buyers piling in",
-      "company_name": "Alphabet Inc."
+      "mentions": 9,
+      "signal": "Squeeze mania, life savings deployed",
+      "company_name": "Hertz Global Holdings Inc"
     },
     {
       "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Bearish puts and index gambles",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Big swing win celebration",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "AMD",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Earnings volatility whipsaws traders",
-      "company_name": "Advanced Micro Devices, Inc."
+      "symbol": "MSTR",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Bitcoin proxy long-term high-conviction",
+      "company_name": "Strategy Inc"
+    },
+    {
+      "symbol": "DOCS",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Earnings surge puzzling bulls",
+      "company_name": "Doximity, Inc."
+    },
+    {
+      "symbol": "OKLO",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Nuclear AI moonshot hype",
+      "company_name": "Oklo Inc."
+    },
+    {
+      "symbol": "META",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Undervalued rotation target",
+      "company_name": "Meta Platforms, Inc."
     },
     {
       "symbol": "MSFT",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Rotation target above $400",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "Trimmed to fund META",
       "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "MU",
+      "symbol": "GOOGL",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Intraday zone scalps printing",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "SPX",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Gap-down puts and lucky fills",
-      "company_name": "S&P 500 INDEX"
+      "mentions": 1,
+      "signal": "Bond demand signals strength",
+      "company_name": "Alphabet Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail sentiment tilts greedy, driven by a wave of large win screenshots across NVDA and GOOG options and a durable AI-datacenter capex narrative. Speculative traders are chasing 0DTE gambles with a retirement-or-bust intensity that signals late-cycle euphoria.",
+      "text": "Hertz has become the batch's dominant obsession, with traders piling into a high short-interest squeeze thesis and deploying margin and full portfolios. The energy is euphoric and reckless, echoing the classic meme-stock playbook.",
       "tag": "bullish"
     },
     {
-      "text": "SanDisk dominates the board as its disappointing revenue forecast triggered a sharp after-hours drop, yet bulls insist demand visibility remains strong and are aggressively accumulating shares. The mixed reaction reflects real conviction colliding with a soft guide.",
+      "text": "AI infrastructure conviction remains firmly bullish, with speculators dismissing bubble warnings and chasing nuclear, cloud, and data center names. Alphabet's oversubscribed bond sale reinforces the broader risk-on appetite driving the tape.",
       "tag": "notable"
     },
     {
-      "text": "Beneath the celebration runs a persistent undercurrent of regret and capitulation: traders lament selling winners early, chasing losing puts, and paper-handing quality names. The euphoria is fragile and heavily leveraged.",
+      "text": "Beneath the euphoria sit scattered account blow-ups and rug-pull losses, delivered with the usual gallows humor. These loss posts warn that concentrated high-conviction positioning carries real downside as the crowd chases momentum.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-06T12:02:37.387775+00:00",
-  "updated_hkt": "2026-08-06 20:02 HKT"
+  "updated_at": "2026-08-07T12:02:44.260359+00:00",
+  "updated_hkt": "2026-08-07 20:02 HKT"
 }
