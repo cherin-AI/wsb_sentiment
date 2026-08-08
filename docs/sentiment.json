@@ -1,17 +1,17 @@
 {
-  "bull_pct": 59,
-  "bear_pct": 21,
-  "neutral_pct": 20,
-  "bull_bear_ratio": 2.9,
-  "overall_score": 65,
-  "overall_label": "Greed",
+  "bull_pct": 44,
+  "bear_pct": 28,
+  "neutral_pct": 28,
+  "bull_bear_ratio": 1.6,
+  "overall_score": 57,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 59,
-    "ai_score": 68,
-    "bull_count": 20,
-    "bear_count": 7,
-    "neutral_count": 7,
-    "total_posts": 34,
+    "formula_score": 44,
+    "ai_score": 62,
+    "bull_count": 8,
+    "bear_count": 5,
+    "neutral_count": 5,
+    "total_posts": 18,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,186 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 34,
+  "post_count": 18,
   "hours_window": 24,
   "themes": [
     {
-      "id": "htz-yolo",
-      "title": "Hertz Speculative Rush",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Multiple large HTZ high-conviction positions posted",
-        "Turnaround bet despite heavy debt",
-        "Retail piling into distressed name",
-        "Self-aware speculative conviction"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "HTZ"
-      ]
-    },
-    {
-      "id": "0dte-casino",
-      "title": "0DTE Options Frenzy",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Traders chasing daily contract wins",
-        "Addiction and revenge-trading themes",
-        "SPY/QQQ same-day gambles dominate",
-        "Big swings both directions"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "SPY",
-        "QQQ"
-      ]
-    },
-    {
-      "id": "ai-compute",
-      "title": "AI & Compute Names",
+      "id": "ai-capex-plays",
+      "title": "AI Capex & Growth Plays",
       "icon": "cpu",
-      "heat": "building",
+      "heat": "hot",
       "bullets": [
-        "PLTR breakout calls printing",
-        "SMCI seen as mispriced AI play",
-        "Corsair AI compute thesis",
-        "NBIS earnings positioning"
+        "PLTR breakout narratives dominate",
+        "SMCI framed as mispriced upside",
+        "PATH pivot draws speculative bets",
+        "NBIS earnings positioning building"
       ],
-      "sentiment_score": 76,
+      "sentiment_score": 74,
       "tickers": [
         "PLTR",
         "SMCI",
-        "CRSR",
+        "PATH",
         "NBIS"
       ]
     },
     {
-      "id": "space-rockets",
-      "title": "Space & Rocket Stocks",
-      "icon": "rocket",
+      "id": "earnings-speculation",
+      "title": "Earnings Week Positioning",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "RKLB round-trips post-earnings gains",
-        "LUNR dip buyers stepping in",
-        "SPCX long thesis defended",
-        "Speculative moon narratives persist"
+        "Traders hunting biggest earnings pops",
+        "ONDS, ASTS, RKLB calls stacked",
+        "BTDR data-center thesis floated",
+        "MU premium selling in focus"
+      ],
+      "sentiment_score": 66,
+      "tickers": [
+        "ONDS",
+        "ASTS",
+        "RKLB",
+        "MU",
+        "BTDR"
+      ]
+    },
+    {
+      "id": "options-blowups",
+      "title": "Options Losses & Blow-ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Intraday gains reversing into losses",
+        "Connectivity failure erased profits",
+        "Revenge trading cycle admitted",
+        "0DTE dependence spurs regret"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "MU"
+      ]
+    },
+    {
+      "id": "valuation-skeptics",
+      "title": "Valuation Skepticism",
+      "icon": "alert-triangle",
+      "heat": "normal",
+      "bullets": [
+        "PANW multiple questioned as excessive",
+        "Put positioning under consideration",
+        "AI premiums viewed as stretched",
+        "Rational caution amid froth"
+      ],
+      "sentiment_score": 36,
+      "tickers": [
+        "PANW"
+      ]
+    },
+    {
+      "id": "crash-nostalgia",
+      "title": "Crash & Market Psychology",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Dot-com and 2008 memories resurface",
+        "Warnings on speculative excess",
+        "Fear of downturn undercurrent",
+        "Contrarian caution among veterans"
+      ],
+      "sentiment_score": 30,
+      "tickers": []
+    },
+    {
+      "id": "value-cash-deployment",
+      "title": "Value & Cash Deployment",
+      "icon": "building-bank",
+      "heat": "normal",
+      "bullets": [
+        "Berkshire deploying record cash hoard",
+        "Operating earnings climb reported",
+        "Diversified business strength cited",
+        "Defensive value tone emerging"
       ],
       "sentiment_score": 64,
       "tickers": [
-        "RKLB",
-        "LUNR",
-        "SPCX"
-      ]
-    },
-    {
-      "id": "macro-warnings",
-      "title": "Macro Warning Signals",
-      "icon": "trending-down",
-      "heat": "building",
-      "bullets": [
-        "Payrolls unexpectedly contract 23,000",
-        "TLT pressing all-time lows",
-        "Dollar strength correction thesis",
-        "Crash-history caution posts surface"
-      ],
-      "sentiment_score": 28,
-      "tickers": [
-        "TLT",
-        "SPY"
-      ]
-    },
-    {
-      "id": "gta6-plays",
-      "title": "GTA6 Catalyst Trades",
-      "icon": "device-gamepad",
-      "heat": "normal",
-      "bullets": [
-        "TTWO earnings and preorder hype",
-        "Corsair pegged as GTA6 beneficiary",
-        "Holiday demand narrative building",
-        "Consumer hardware upside expected"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "TTWO",
-        "CRSR"
+        "BRK"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "HTZ",
-      "sentiment": "bullish",
-      "mentions": 9,
-      "signal": "Distressed turnaround high-conviction frenzy",
-      "company_name": "Hertz Global Holdings, Inc"
-    },
-    {
       "symbol": "PLTR",
       "sentiment": "bullish",
       "mentions": 8,
-      "signal": "Earnings breakout calls printing",
+      "signal": "high-conviction earnings breakout bets",
       "company_name": "Palantir Technologies Inc."
     },
     {
-      "symbol": "RKLB",
+      "symbol": "MU",
       "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Round-trip post-earnings, dip buyers",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "0DTE casino battleground",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "mentions": 5,
+      "signal": "IV crush and high-conviction calls",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "SMCI",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Seen as mispriced AI play",
+      "mentions": 4,
+      "signal": "seen as mispriced AI play",
       "company_name": "Super Micro Computer, Inc."
     },
     {
-      "symbol": "QQQ",
+      "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Same-day contract gambling",
-      "company_name": "Invesco QQQ Trust, Series 1"
+      "mentions": 3,
+      "signal": "0DTE grind, gains and losses",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "TTWO",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "GTA6 catalyst optimism",
-      "company_name": "Take-Two Interactive Software, "
-    },
-    {
-      "symbol": "CRSR",
+      "symbol": "NBIS",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "GTA6 and AI compute thesis",
-      "company_name": "Corsair Gaming, Inc."
+      "signal": "earnings call positioning",
+      "company_name": "Nebius Group N.V."
+    },
+    {
+      "symbol": "PANW",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "valuation viewed as excessive",
+      "company_name": "Palo Alto Networks, Inc."
+    },
+    {
+      "symbol": "BTDR",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "large data-center earnings bet",
+      "company_name": "Bitdeer Technologies Group"
+    },
+    {
+      "symbol": "PATH",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "agentic AI turnaround wager",
+      "company_name": "UiPath, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews euphoric, driven by AI compute leaders and a wave of large speculative bets on distressed names like Hertz. Profit posts and 0DTE win screenshots dominate the feed, reflecting aggressive risk appetite.",
+      "text": "AI capex enthusiasm dominates the batch, with PLTR, SMCI, and PATH driving high-conviction earnings-week positioning. Speculative traders are stacking calls into upcoming reports, and the prevailing energy skews euphoric despite stretched valuations.",
       "tag": "bullish"
     },
     {
-      "text": "An unexpected payrolls contraction and TLT pressing multi-decade lows inject genuine macro anxiety, echoed by veteran crash-history posts warning against complacency. These caution signals sit uneasily beneath the speculative froth.",
+      "text": "A meaningful undercurrent of caution persists: PANW's multiple draws put interest, veterans invoke dot-com and 2008 memories, and several account blow-ups highlight the cost of 0DTE and revenge trading.",
       "tag": "bearish"
     },
     {
-      "text": "Options gambling culture is running hot, with traders openly describing addiction to daily contracts. The GTA6 catalyst and space names add thematic momentum, but the reliance on lottery-ticket trades signals late-cycle greed.",
+      "text": "Berkshire's cash deployment signals a rare value anchor amid the froth. The batch reads as greedy but bifurcated, with AI momentum plays coexisting alongside painful loss posts and valuation skepticism.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-08-08T12:02:25.795821+00:00",
-  "updated_hkt": "2026-08-08 20:02 HKT"
+  "updated_at": "2026-08-08T21:01:36.124311+00:00",
+  "updated_hkt": "2026-08-09 05:01 HKT"
 }
