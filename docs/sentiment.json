@@ -1,17 +1,17 @@
 {
-  "bull_pct": 69,
-  "bear_pct": 13,
-  "neutral_pct": 18,
-  "bull_bear_ratio": 5.4,
-  "overall_score": 72,
+  "bull_pct": 59,
+  "bear_pct": 21,
+  "neutral_pct": 20,
+  "bull_bear_ratio": 2.9,
+  "overall_score": 65,
   "overall_label": "Greed",
   "methodology": {
-    "formula_score": 69,
-    "ai_score": 74,
-    "bull_count": 27,
-    "bear_count": 5,
-    "neutral_count": 6,
-    "total_posts": 39,
+    "formula_score": 59,
+    "ai_score": 68,
+    "bull_count": 20,
+    "bear_count": 7,
+    "neutral_count": 7,
+    "total_posts": 34,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,54 +19,73 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 39,
+  "post_count": 34,
   "hours_window": 24,
   "themes": [
     {
-      "id": "htz-squeeze",
-      "title": "Hertz Speculative Frenzy",
+      "id": "htz-yolo",
+      "title": "Hertz Speculative Rush",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Large margin positions piling in",
-        "Deep-value turnaround narrative",
-        "Speculative squeeze anticipation building",
-        "High-conviction retail concentration"
+        "Multiple large HTZ high-conviction positions posted",
+        "Turnaround bet despite heavy debt",
+        "Retail piling into distressed name",
+        "Self-aware speculative conviction"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 70,
       "tickers": [
         "HTZ"
       ]
     },
     {
-      "id": "nuclear-ai",
-      "title": "Nuclear & AI Infrastructure",
-      "icon": "atom",
+      "id": "0dte-casino",
+      "title": "0DTE Options Frenzy",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Traders chasing daily contract wins",
+        "Addiction and revenge-trading themes",
+        "SPY/QQQ same-day gambles dominate",
+        "Big swings both directions"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    {
+      "id": "ai-compute",
+      "title": "AI & Compute Names",
+      "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Data center power demand thesis",
-        "White House hosting mining CEOs",
-        "Lotto plays on small-cap names",
-        "Critical minerals catalyst awaited"
+        "PLTR breakout calls printing",
+        "SMCI seen as mispriced AI play",
+        "Corsair AI compute thesis",
+        "NBIS earnings positioning"
       ],
-      "sentiment_score": 80,
+      "sentiment_score": 76,
       "tickers": [
-        "OKLO",
-        "EU"
+        "PLTR",
+        "SMCI",
+        "CRSR",
+        "NBIS"
       ]
     },
     {
       "id": "space-rockets",
-      "title": "Space & Launch Names",
+      "title": "Space & Rocket Stocks",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "RKLB roundtrip erases earnings gains",
-        "LUNR dip-buying into weakness",
-        "SPCX dilution debate rages",
-        "Speculators chase moonshot narratives"
+        "RKLB round-trips post-earnings gains",
+        "LUNR dip buyers stepping in",
+        "SPCX long thesis defended",
+        "Speculative moon narratives persist"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 64,
       "tickers": [
         "RKLB",
         "LUNR",
@@ -74,54 +93,37 @@
       ]
     },
     {
-      "id": "0dte-yolo",
-      "title": "0DTE Options Gambling",
-      "icon": "dice",
-      "heat": "hot",
+      "id": "macro-warnings",
+      "title": "Macro Warning Signals",
+      "icon": "trending-down",
+      "heat": "building",
       "bullets": [
-        "Margin-fueled index speculation",
-        "Big profit posts driving euphoria",
-        "SPY and QQQ short-dated bets",
-        "Reckless leverage celebrated openly"
+        "Payrolls unexpectedly contract 23,000",
+        "TLT pressing all-time lows",
+        "Dollar strength correction thesis",
+        "Crash-history caution posts surface"
+      ],
+      "sentiment_score": 28,
+      "tickers": [
+        "TLT",
+        "SPY"
+      ]
+    },
+    {
+      "id": "gta6-plays",
+      "title": "GTA6 Catalyst Trades",
+      "icon": "device-gamepad",
+      "heat": "normal",
+      "bullets": [
+        "TTWO earnings and preorder hype",
+        "Corsair pegged as GTA6 beneficiary",
+        "Holiday demand narrative building",
+        "Consumer hardware upside expected"
       ],
       "sentiment_score": 72,
       "tickers": [
-        "SPY",
-        "QQQ"
-      ]
-    },
-    {
-      "id": "gta6-gaming",
-      "title": "GTA6 Gaming Trade",
-      "icon": "device-gamepad",
-      "heat": "building",
-      "bullets": [
-        "TTWO earnings on release hype",
-        "Corsair positioned as hardware beneficiary",
-        "Pre-order momentum cited bullishly",
-        "Consumer catalyst into holidays"
-      ],
-      "sentiment_score": 76,
-      "tickers": [
         "TTWO",
         "CRSR"
-      ]
-    },
-    {
-      "id": "macro-signals",
-      "title": "Macro & Rates Watch",
-      "icon": "trending-down",
-      "heat": "normal",
-      "bullets": [
-        "Payrolls unexpectedly contract 23,000",
-        "TLT pressing multi-year lows",
-        "Dollar strength correction warnings",
-        "Alphabet jumbo bond demand notable"
-      ],
-      "sentiment_score": 40,
-      "tickers": [
-        "TLT",
-        "GOOGL"
       ]
     }
   ],
@@ -129,74 +131,74 @@
     {
       "symbol": "HTZ",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Heavy margin high-conviction frenzy",
+      "mentions": 9,
+      "signal": "Distressed turnaround high-conviction frenzy",
       "company_name": "Hertz Global Holdings, Inc"
+    },
+    {
+      "symbol": "PLTR",
+      "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "Earnings breakout calls printing",
+      "company_name": "Palantir Technologies Inc."
     },
     {
       "symbol": "RKLB",
       "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Roundtrip to pre-earnings level",
-      "company_name": "Rocket Lab Corp"
-    },
-    {
-      "symbol": "SPCX",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Dilution and short-squeeze debate",
-      "company_name": "Space Exploration Technologies "
+      "mentions": 6,
+      "signal": "Round-trip post-earnings, dip buyers",
+      "company_name": "Rocket Lab Corporation"
     },
     {
       "symbol": "SPY",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "0DTE gambling favorite",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "0DTE casino battleground",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "OKLO",
+      "symbol": "SMCI",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Nuclear AI moonshot bet",
-      "company_name": "Oklo Inc."
+      "mentions": 5,
+      "signal": "Seen as mispriced AI play",
+      "company_name": "Super Micro Computer, Inc."
+    },
+    {
+      "symbol": "QQQ",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Same-day contract gambling",
+      "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
       "symbol": "TTWO",
       "sentiment": "bullish",
-      "mentions": 2,
+      "mentions": 4,
       "signal": "GTA6 catalyst optimism",
       "company_name": "Take-Two Interactive Software, "
     },
     {
-      "symbol": "TLT",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Bonds at multi-year lows",
-      "company_name": "iShares 20+ Year Treasury Bond "
-    },
-    {
-      "symbol": "IOVA",
+      "symbol": "CRSR",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Lung data catalyst hope",
-      "company_name": "Iovance Biotherapeutics, Inc."
+      "mentions": 3,
+      "signal": "GTA6 and AI compute thesis",
+      "company_name": "Corsair Gaming, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail energy runs hot and speculative, dominated by aggressive margin positioning in Hertz and reckless 0DTE index gambling. Big profit screenshots are fueling a euphoric, greed-tilted mood across the board.",
+      "text": "Retail energy skews euphoric, driven by AI compute leaders and a wave of large speculative bets on distressed names like Hertz. Profit posts and 0DTE win screenshots dominate the feed, reflecting aggressive risk appetite.",
       "tag": "bullish"
     },
     {
-      "text": "Thematic conviction clusters around nuclear-AI infrastructure, space names, and the GTA6 gaming trade, with speculators chasing moonshot narratives while shrugging off underlying fundamentals.",
-      "tag": "notable"
+      "text": "An unexpected payrolls contraction and TLT pressing multi-decade lows inject genuine macro anxiety, echoed by veteran crash-history posts warning against complacency. These caution signals sit uneasily beneath the speculative froth.",
+      "tag": "bearish"
     },
     {
-      "text": "A quieter macro undercurrent warns of trouble: payrolls contracted unexpectedly, long-term Treasuries press multi-year lows, and dollar-strength correction calls hint at fragility beneath the froth.",
-      "tag": "bearish"
+      "text": "Options gambling culture is running hot, with traders openly describing addiction to daily contracts. The GTA6 catalyst and space names add thematic momentum, but the reliance on lottery-ticket trades signals late-cycle greed.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-08-07T21:02:38.779661+00:00",
-  "updated_hkt": "2026-08-08 05:02 HKT"
+  "updated_at": "2026-08-08T12:02:25.795821+00:00",
+  "updated_hkt": "2026-08-08 20:02 HKT"
 }
