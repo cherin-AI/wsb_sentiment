@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 28,
-  "neutral_pct": 28,
-  "bull_bear_ratio": 1.6,
-  "overall_score": 57,
-  "overall_label": "Neutral",
+  "bull_pct": 33,
+  "bear_pct": 53,
+  "neutral_pct": 14,
+  "bull_bear_ratio": 0.6,
+  "overall_score": 39,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 44,
-    "ai_score": 62,
-    "bull_count": 8,
-    "bear_count": 5,
-    "neutral_count": 5,
-    "total_posts": 18,
+    "formula_score": 33,
+    "ai_score": 42,
+    "bull_count": 5,
+    "bear_count": 8,
+    "neutral_count": 2,
+    "total_posts": 15,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,186 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 18,
+  "post_count": 15,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-capex-plays",
-      "title": "AI Capex & Growth Plays",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "PLTR breakout narratives dominate",
-        "SMCI framed as mispriced upside",
-        "PATH pivot draws speculative bets",
-        "NBIS earnings positioning building"
-      ],
-      "sentiment_score": 74,
-      "tickers": [
-        "PLTR",
-        "SMCI",
-        "PATH",
-        "NBIS"
-      ]
-    },
-    {
-      "id": "earnings-speculation",
-      "title": "Earnings Week Positioning",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Traders hunting biggest earnings pops",
-        "ONDS, ASTS, RKLB calls stacked",
-        "BTDR data-center thesis floated",
-        "MU premium selling in focus"
-      ],
-      "sentiment_score": 66,
-      "tickers": [
-        "ONDS",
-        "ASTS",
-        "RKLB",
-        "MU",
-        "BTDR"
-      ]
-    },
-    {
       "id": "options-blowups",
-      "title": "Options Losses & Blow-ups",
+      "title": "Options Account Blow-Ups",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Intraday gains reversing into losses",
-        "Connectivity failure erased profits",
-        "Revenge trading cycle admitted",
-        "0DTE dependence spurs regret"
+        "Multiple trading losses on options",
+        "0DTE regret spreading among traders",
+        "College fund and savings destroyed",
+        "Painful lessons dominate the mood"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 18,
       "tickers": [
         "SPY",
-        "QQQ",
         "MU"
       ]
     },
     {
+      "id": "ai-capex",
+      "title": "AI Capex & Speculation",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "AI theme justifies massive spending",
+        "Agentic AI pitched as 2027 catalyst",
+        "High-conviction concentrated positions",
+        "Speculative bets on software names"
+      ],
+      "sentiment_score": 65,
+      "tickers": [
+        "PATH",
+        "PLTR",
+        "PANW"
+      ]
+    },
+    {
+      "id": "earnings-plays",
+      "title": "Earnings Week Positioning",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Traders eyeing biggest earnings pops",
+        "Calls stacked on speculative names",
+        "Space and semis in focus",
+        "Optimism ahead of catalyst week"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "ONDS",
+        "ASTS",
+        "RKLB",
+        "SMCI",
+        "CRWV",
+        "NBIS"
+      ]
+    },
+    {
       "id": "valuation-skeptics",
-      "title": "Valuation Skepticism",
+      "title": "Stretched Valuations",
       "icon": "alert-triangle",
       "heat": "normal",
       "bullets": [
-        "PANW multiple questioned as excessive",
-        "Put positioning under consideration",
-        "AI premiums viewed as stretched",
-        "Rational caution amid froth"
+        "PANW multiples questioned as excessive",
+        "Put positioning against overvalued names",
+        "Warnings of fairy-tale pricing",
+        "Bearish valuation skepticism emerging"
       ],
-      "sentiment_score": 36,
+      "sentiment_score": 30,
       "tickers": [
         "PANW"
       ]
     },
     {
-      "id": "crash-nostalgia",
-      "title": "Crash & Market Psychology",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Dot-com and 2008 memories resurface",
-        "Warnings on speculative excess",
-        "Fear of downturn undercurrent",
-        "Contrarian caution among veterans"
-      ],
-      "sentiment_score": 30,
-      "tickers": []
-    },
-    {
-      "id": "value-cash-deployment",
-      "title": "Value & Cash Deployment",
+      "id": "berkshire-cash",
+      "title": "Berkshire Deploys Cash",
       "icon": "building-bank",
       "heat": "normal",
       "bullets": [
-        "Berkshire deploying record cash hoard",
-        "Operating earnings climb reported",
-        "Diversified business strength cited",
-        "Defensive value tone emerging"
+        "Operating earnings climbed strongly",
+        "Abel begins deploying record cash hoard",
+        "Energy and rail strength offset insurance",
+        "Blue-chip capital allocation in focus"
       ],
-      "sentiment_score": 64,
+      "sentiment_score": 70,
       "tickers": [
         "BRK"
+      ]
+    },
+    {
+      "id": "general-mood",
+      "title": "General Market Mood",
+      "icon": "flame",
+      "heat": "normal",
+      "bullets": [
+        "Sideways kangaroo market frustration",
+        "Sarcasm masking real losses",
+        "Mixed euphoria and capitulation",
+        "Retail chasing lottery tickets"
+      ],
+      "sentiment_score": 40,
+      "tickers": [
+        "SPY"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "PLTR",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "high-conviction earnings breakout bets",
-      "company_name": "Palantir Technologies Inc."
-    },
-    {
       "symbol": "MU",
       "sentiment": "mixed",
       "mentions": 5,
-      "signal": "IV crush and high-conviction calls",
+      "signal": "IV crush and high-conviction call debates",
       "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "SMCI",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "seen as mispriced AI play",
-      "company_name": "Super Micro Computer, Inc."
     },
     {
       "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "0DTE grind, gains and losses",
+      "mentions": 4,
+      "signal": "0DTE trading pain",
       "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "NBIS",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "earnings call positioning",
-      "company_name": "Nebius Group N.V."
     },
     {
       "symbol": "PANW",
       "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "valuation viewed as excessive",
+      "mentions": 3,
+      "signal": "valuation skepticism, put interest",
       "company_name": "Palo Alto Networks, Inc."
-    },
-    {
-      "symbol": "BTDR",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "large data-center earnings bet",
-      "company_name": "Bitdeer Technologies Group"
     },
     {
       "symbol": "PATH",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "agentic AI turnaround wager",
+      "signal": "high-conviction agentic AI bet",
       "company_name": "UiPath, Inc."
+    },
+    {
+      "symbol": "PLTR",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "reference to prior conviction win",
+      "company_name": "Palantir Technologies Inc."
+    },
+    {
+      "symbol": "RKLB",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "earnings pop candidate",
+      "company_name": "Rocket Lab Corporation"
+    },
+    {
+      "symbol": "ASTS",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "speculative earnings play",
+      "company_name": "AST SpaceMobile, Inc."
+    },
+    {
+      "symbol": "BRK",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "cash deployment optimism",
+      "company_name": "Berkshire Hathaway Inc. New"
     }
   ],
   "summary": [
     {
-      "text": "AI capex enthusiasm dominates the batch, with PLTR, SMCI, and PATH driving high-conviction earnings-week positioning. Speculative traders are stacking calls into upcoming reports, and the prevailing energy skews euphoric despite stretched valuations.",
-      "tag": "bullish"
-    },
-    {
-      "text": "A meaningful undercurrent of caution persists: PANW's multiple draws put interest, veterans invoke dot-com and 2008 memories, and several account blow-ups highlight the cost of 0DTE and revenge trading.",
+      "text": "The batch is dominated by trading losses and options regret, with several traders lamenting blown accounts and swearing off 0DTEs. Sarcasm thinly veils genuine capitulation as retail feels the sting of a choppy, directionless tape.",
       "tag": "bearish"
     },
     {
-      "text": "Berkshire's cash deployment signals a rare value anchor amid the froth. The batch reads as greedy but bifurcated, with AI momentum plays coexisting alongside painful loss posts and valuation skepticism.",
+      "text": "Speculative appetite persists in pockets, with concentrated bets on agentic AI names and a busy earnings week fueling call-buying across space and semiconductor tickers. The high-conviction gambling instinct remains firmly intact despite widespread pain.",
       "tag": "notable"
+    },
+    {
+      "text": "Fundamentals-driven optimism surfaces around Berkshire deploying its record cash hoard, while valuation skeptics flag stretched multiples on PANW. The market mood balances defeated gamblers against measured blue-chip confidence.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-08-08T21:01:36.124311+00:00",
-  "updated_hkt": "2026-08-09 05:01 HKT"
+  "updated_at": "2026-08-09T12:01:27.868222+00:00",
+  "updated_hkt": "2026-08-09 20:01 HKT"
 }
