@@ -1,17 +1,17 @@
 {
-  "bull_pct": 33,
-  "bear_pct": 53,
-  "neutral_pct": 14,
-  "bull_bear_ratio": 0.6,
-  "overall_score": 39,
+  "bull_pct": 7,
+  "bear_pct": 64,
+  "neutral_pct": 29,
+  "bull_bear_ratio": 0.1,
+  "overall_score": 25,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 33,
-    "ai_score": 42,
-    "bull_count": 5,
-    "bear_count": 8,
-    "neutral_count": 2,
-    "total_posts": 15,
+    "formula_score": 7,
+    "ai_score": 33,
+    "bull_count": 1,
+    "bear_count": 9,
+    "neutral_count": 4,
+    "total_posts": 14,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,186 +19,161 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 15,
+  "post_count": 14,
   "hours_window": 24,
   "themes": [
     {
-      "id": "options-blowups",
-      "title": "Options Account Blow-Ups",
+      "id": "account-blowups",
+      "title": "Account Blow-Ups",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Multiple trading losses on options",
-        "0DTE regret spreading among traders",
-        "College fund and savings destroyed",
-        "Painful lessons dominate the mood"
+        "Multiple traders reporting steep losses",
+        "College fund and savings depleted",
+        "0DTE options regret spreading",
+        "Defeated tone dominates discussion"
       ],
       "sentiment_score": 18,
       "tickers": [
-        "SPY",
-        "MU"
+        "HTZ"
       ]
     },
     {
-      "id": "ai-capex",
-      "title": "AI Capex & Speculation",
+      "id": "options-speculation",
+      "title": "Options Speculation",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "0DTE gambling backfiring repeatedly",
+        "Traders swearing off short-dated contracts",
+        "Naked short call gamble ongoing",
+        "High-risk positioning persists"
+      ],
+      "sentiment_score": 28,
+      "tickers": []
+    },
+    {
+      "id": "ai-memory-cycle",
+      "title": "AI Memory Cycle Doubts",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "AI theme justifies massive spending",
-        "Agentic AI pitched as 2027 catalyst",
-        "High-conviction concentrated positions",
-        "Speculative bets on software names"
+        "Micron HBM demand thesis questioned",
+        "Nvidia memory bottleneck workaround feared",
+        "Bearish reassessment of AI supply chain",
+        "Valuation concerns rising"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 38,
       "tickers": [
-        "PATH",
-        "PLTR",
-        "PANW"
+        "MU",
+        "NVDA"
       ]
     },
     {
-      "id": "earnings-plays",
-      "title": "Earnings Week Positioning",
-      "icon": "trending-up",
+      "id": "earnings-yolo",
+      "title": "Earnings high-conviction Plays",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "Traders eyeing biggest earnings pops",
-        "Calls stacked on speculative names",
-        "Space and semis in focus",
-        "Optimism ahead of catalyst week"
+        "Berkshire earnings beat sparks bets",
+        "Buffett casino remark cited",
+        "Speculators chasing green Monday open",
+        "Concentrated single-name gambles"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 62,
       "tickers": [
-        "ONDS",
-        "ASTS",
-        "RKLB",
-        "SMCI",
-        "CRWV",
-        "NBIS"
+        "BRKB"
       ]
     },
     {
-      "id": "valuation-skeptics",
-      "title": "Stretched Valuations",
-      "icon": "alert-triangle",
+      "id": "choppy-market",
+      "title": "Choppy Market Regime",
+      "icon": "trending-down",
       "heat": "normal",
       "bullets": [
-        "PANW multiples questioned as excessive",
-        "Put positioning against overvalued names",
-        "Warnings of fairy-tale pricing",
-        "Bearish valuation skepticism emerging"
+        "Kangaroo market volatility noted",
+        "Even bull runs producing losses",
+        "Directionless price action frustrating traders",
+        "Positioning increasingly cautious"
       ],
-      "sentiment_score": 30,
-      "tickers": [
-        "PANW"
-      ]
-    },
-    {
-      "id": "berkshire-cash",
-      "title": "Berkshire Deploys Cash",
-      "icon": "building-bank",
-      "heat": "normal",
-      "bullets": [
-        "Operating earnings climbed strongly",
-        "Abel begins deploying record cash hoard",
-        "Energy and rail strength offset insurance",
-        "Blue-chip capital allocation in focus"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "BRK"
-      ]
+      "sentiment_score": 40,
+      "tickers": []
     },
     {
       "id": "general-mood",
       "title": "General Market Mood",
-      "icon": "flame",
+      "icon": "mood-sad",
       "heat": "normal",
       "bullets": [
-        "Sideways kangaroo market frustration",
-        "Sarcasm masking real losses",
-        "Mixed euphoria and capitulation",
-        "Retail chasing lottery tickets"
+        "Regret and fatigue widespread",
+        "Traders pulling back to preserve capital",
+        "Dark humor masking real losses",
+        "Speculative appetite waning"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 30,
       "tickers": [
-        "SPY"
+        "HTZ"
       ]
     }
   ],
   "tickers": [
     {
       "symbol": "MU",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "IV crush and high-conviction call debates",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "AI memory thesis under scrutiny",
       "company_name": "Micron Technology, Inc."
     },
     {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "0DTE trading pain",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "PANW",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "valuation skepticism, put interest",
-      "company_name": "Palo Alto Networks, Inc."
-    },
-    {
-      "symbol": "PATH",
+      "symbol": "BRKB",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "high-conviction agentic AI bet",
-      "company_name": "UiPath, Inc."
+      "signal": "Earnings beat high-conviction optimism",
+      "company_name": "BRK.B Sep 2026 425.000 call"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Memory bottleneck workaround chatter",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "HTZ",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Weekend hold conviction questioned",
+      "company_name": "Hertz Global Holdings, Inc"
     },
     {
       "symbol": "PLTR",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "reference to prior conviction win",
+      "sentiment": "neutral",
+      "mentions": 1,
+      "signal": "Mistaken ticker anecdote",
       "company_name": "Palantir Technologies Inc."
     },
     {
-      "symbol": "RKLB",
-      "sentiment": "bullish",
+      "symbol": "PTON",
+      "sentiment": "neutral",
       "mentions": 1,
-      "signal": "earnings pop candidate",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "ASTS",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "speculative earnings play",
-      "company_name": "AST SpaceMobile, Inc."
-    },
-    {
-      "symbol": "BRK",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "cash deployment optimism",
-      "company_name": "Berkshire Hathaway Inc. New"
+      "signal": "Accidental purchase punchline",
+      "company_name": "Peloton Interactive, Inc."
     }
   ],
   "summary": [
     {
-      "text": "The batch is dominated by trading losses and options regret, with several traders lamenting blown accounts and swearing off 0DTEs. Sarcasm thinly veils genuine capitulation as retail feels the sting of a choppy, directionless tape.",
+      "text": "The batch skews defensive, dominated by account blow-ups and options regret. Multiple traders describe depleted funds and are abandoning 0DTE gambles, signaling exhausted speculative appetite and a broadly deflated retail mood after a punishing stretch.",
       "tag": "bearish"
     },
     {
-      "text": "Speculative appetite persists in pockets, with concentrated bets on agentic AI names and a busy earnings week fueling call-buying across space and semiconductor tickers. The high-conviction gambling instinct remains firmly intact despite widespread pain.",
+      "text": "A rare bullish thread runs through Berkshire's earnings beat, with speculators piling into single-name high-conviction plays and citing Buffett's casino remark. Isolated optimism, however, does not offset the pervasive fatigue across the tape.",
       "tag": "notable"
     },
     {
-      "text": "Fundamentals-driven optimism surfaces around Berkshire deploying its record cash hoard, while valuation skeptics flag stretched multiples on PANW. The market mood balances defeated gamblers against measured blue-chip confidence.",
-      "tag": "bullish"
+      "text": "Micron's AI memory narrative faces fresh skepticism as traders weigh Nvidia's potential bottleneck workaround, injecting doubt into the high-conviction HBM cycle thesis that has powered semiconductor sentiment.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-09T12:01:27.868222+00:00",
-  "updated_hkt": "2026-08-09 20:01 HKT"
+  "updated_at": "2026-08-09T21:01:20.903949+00:00",
+  "updated_hkt": "2026-08-10 05:01 HKT"
 }
