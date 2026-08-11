@@ -1,17 +1,17 @@
 {
-  "bull_pct": 7,
-  "bear_pct": 64,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 0.1,
-  "overall_score": 25,
+  "bull_pct": 31,
+  "bear_pct": 55,
+  "neutral_pct": 14,
+  "bull_bear_ratio": 0.6,
+  "overall_score": 37,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 7,
-    "ai_score": 33,
-    "bull_count": 1,
-    "bear_count": 9,
+    "formula_score": 31,
+    "ai_score": 40,
+    "bull_count": 9,
+    "bear_count": 16,
     "neutral_count": 4,
-    "total_posts": 14,
+    "total_posts": 29,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,161 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 14,
+  "post_count": 29,
   "hours_window": 24,
   "themes": [
     {
-      "id": "account-blowups",
-      "title": "Account Blow-Ups",
+      "id": "options-blowups",
+      "title": "Options Losses & Theta Decay",
       "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Multiple traders reporting steep losses",
-        "College fund and savings depleted",
-        "0DTE options regret spreading",
-        "Defeated tone dominates discussion"
+        "Short-dated calls wiped by theta",
+        "Traders averaging down on losers",
+        "Diamond-hands mentality amid deep drawdowns",
+        "Summer theta punishing open positions"
       ],
-      "sentiment_score": 18,
+      "sentiment_score": 20,
       "tickers": [
-        "HTZ"
+        "RDDT",
+        "GOOGL",
+        "SPCX"
       ]
     },
     {
-      "id": "options-speculation",
-      "title": "Options Speculation",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "0DTE gambling backfiring repeatedly",
-        "Traders swearing off short-dated contracts",
-        "Naked short call gamble ongoing",
-        "High-risk positioning persists"
-      ],
-      "sentiment_score": 28,
-      "tickers": []
-    },
-    {
-      "id": "ai-memory-cycle",
-      "title": "AI Memory Cycle Doubts",
+      "id": "ai-financing-concerns",
+      "title": "AI Financing Red Flags",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Micron HBM demand thesis questioned",
-        "Nvidia memory bottleneck workaround feared",
-        "Bearish reassessment of AI supply chain",
-        "Valuation concerns rising"
+        "Nvidia's half-trillion financing raises bubble fears",
+        "Skeptics compare AI to housing bubble",
+        "Elaborate external financing schemes questioned",
+        "Frontier chip valuations viewed as stretched"
       ],
       "sentiment_score": 38,
       "tickers": [
-        "MU",
         "NVDA"
       ]
     },
     {
-      "id": "earnings-yolo",
-      "title": "Earnings high-conviction Plays",
-      "icon": "rocket",
+      "id": "riot-anthropic-deal",
+      "title": "Riot AI Data Center Lease",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Berkshire earnings beat sparks bets",
-        "Buffett casino remark cited",
-        "Speculators chasing green Monday open",
-        "Concentrated single-name gambles"
+        "Anthropic strikes multi-billion Riot lease",
+        "Crypto miner pivots to AI compute",
+        "Bulls target higher year-end prices",
+        "Rockdale campus generating fresh revenue"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 68,
       "tickers": [
-        "BRKB"
+        "RIOT"
       ]
     },
     {
-      "id": "choppy-market",
-      "title": "Choppy Market Regime",
-      "icon": "trending-down",
-      "heat": "normal",
+      "id": "msft-winners",
+      "title": "Microsoft Big Wins",
+      "icon": "rocket",
+      "heat": "building",
       "bullets": [
-        "Kangaroo market volatility noted",
-        "Even bull runs producing losses",
-        "Directionless price action frustrating traders",
-        "Positioning increasingly cautious"
+        "Long-dated MSFT calls printing profits",
+        "Large share positions closing green",
+        "Traders debating hold versus sell",
+        "Concentrated bets paying off"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 78,
+      "tickers": [
+        "MSFT"
+      ]
+    },
+    {
+      "id": "geopolitical-risk",
+      "title": "Iran & Hormuz Tensions",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Hormuz closure priced as temporary",
+        "Stalled peace talks stoke uncertainty",
+        "Market shrugging off geopolitical shock",
+        "Traders questioning earnings impact"
+      ],
+      "sentiment_score": 35,
       "tickers": []
     },
     {
-      "id": "general-mood",
-      "title": "General Market Mood",
-      "icon": "mood-sad",
+      "id": "speculative-yolos",
+      "title": "Speculative Small-Cap Bets",
+      "icon": "dice",
       "heat": "normal",
       "bullets": [
-        "Regret and fatigue widespread",
-        "Traders pulling back to preserve capital",
-        "Dark humor masking real losses",
-        "Speculative appetite waning"
+        "Fermi power contract fuels conviction",
+        "Short thesis on overvalued software basket",
+        "HTZ momentum sparks profit-taking",
+        "Retail chasing binary catalysts"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 50,
       "tickers": [
-        "HTZ"
+        "HTZ",
+        "FRMI",
+        "BSP",
+        "SMCI"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MU",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "AI memory thesis under scrutiny",
-      "company_name": "Micron Technology, Inc."
+      "symbol": "MSFT",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Concentrated bets printing profits",
+      "company_name": "Microsoft Corporation"
     },
     {
-      "symbol": "BRKB",
+      "symbol": "RDDT",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Calls crushed, holding on hope",
+      "company_name": "Reddit, Inc."
+    },
+    {
+      "symbol": "RIOT",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Earnings beat high-conviction optimism",
-      "company_name": "BRK.B Sep 2026 425.000 call"
+      "mentions": 3,
+      "signal": "AI lease drives upside targets",
+      "company_name": "Riot Platforms, Inc."
+    },
+    {
+      "symbol": "GOOGL",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "Short-dated calls misfiring",
+      "company_name": "Alphabet Inc."
     },
     {
       "symbol": "NVDA",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Memory bottleneck workaround chatter",
-      "company_name": "NVIDIA Corporation"
+      "mentions": 3,
+      "signal": "Financing scale raises bubble fears",
+      "company_name": ""
     },
     {
-      "symbol": "HTZ",
+      "symbol": "SPCX",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Weekend hold conviction questioned",
-      "company_name": "Hertz Global Holdings, Inc"
+      "signal": "Puts already priced in",
+      "company_name": "Space Exploration Technologies "
     },
     {
-      "symbol": "PLTR",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Mistaken ticker anecdote",
-      "company_name": "Palantir Technologies Inc."
+      "symbol": "FRMI",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Power contract fuels conviction",
+      "company_name": "Fermi Inc."
     },
     {
-      "symbol": "PTON",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Accidental purchase punchline",
-      "company_name": "Peloton Interactive, Inc."
+      "symbol": "BSP",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Short thesis on overvalued software",
+      "company_name": "Bending Spoons S.p.A."
     }
   ],
   "summary": [
     {
-      "text": "The batch skews defensive, dominated by account blow-ups and options regret. Multiple traders describe depleted funds and are abandoning 0DTE gambles, signaling exhausted speculative appetite and a broadly deflated retail mood after a punishing stretch.",
+      "text": "The batch skews defensive, dominated by options blow-ups where short-dated calls succumb to theta decay and traders cling to deep losers with diamond-hand rationalizations. RDDT, GOOGL, and SPCX losses set a defeated tone across the tape.",
       "tag": "bearish"
     },
     {
-      "text": "A rare bullish thread runs through Berkshire's earnings beat, with speculators piling into single-name high-conviction plays and citing Buffett's casino remark. Isolated optimism, however, does not offset the pervasive fatigue across the tape.",
+      "text": "Skepticism toward the AI narrative is building, with Nvidia's massive external financing drawing pointed housing-bubble comparisons and traders warning that frontier chip valuations cannot all clear as winners.",
       "tag": "notable"
     },
     {
-      "text": "Micron's AI memory narrative faces fresh skepticism as traders weigh Nvidia's potential bottleneck workaround, injecting doubt into the high-conviction HBM cycle thesis that has powered semiconductor sentiment.",
-      "tag": "bearish"
+      "text": "Bright spots persist in concentrated Microsoft positions posting strong profits and Riot's multi-billion Anthropic data-center lease sparking bullish year-end targets, keeping select high-conviction bulls engaged.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-08-09T21:01:20.903949+00:00",
-  "updated_hkt": "2026-08-10 05:01 HKT"
+  "updated_at": "2026-08-11T23:54:46.106646+00:00",
+  "updated_hkt": "2026-08-12 07:54 HKT"
 }
