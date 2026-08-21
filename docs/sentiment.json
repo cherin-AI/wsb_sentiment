@@ -1,17 +1,17 @@
 {
-  "bull_pct": 48,
-  "bear_pct": 26,
-  "neutral_pct": 26,
-  "bull_bear_ratio": 1.9,
-  "overall_score": 62,
-  "overall_label": "Greed",
+  "bull_pct": 22,
+  "bear_pct": 39,
+  "neutral_pct": 39,
+  "bull_bear_ratio": 0.6,
+  "overall_score": 37,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 48,
-    "ai_score": 68,
-    "bull_count": 13,
+    "formula_score": 22,
+    "ai_score": 44,
+    "bull_count": 4,
     "bear_count": 7,
     "neutral_count": 7,
-    "total_posts": 27,
+    "total_posts": 18,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,184 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 27,
+  "post_count": 18,
   "hours_window": 24,
   "themes": [
     {
-      "id": "reddit-sp500-inclusion",
-      "title": "Reddit S&P 500 Inclusion Play",
-      "icon": "trending-up",
+      "id": "options-gambling",
+      "title": "Options Speculation & Blow-ups",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "RDDT index inclusion driving speculation",
-        "Large gains posted on calls",
-        "Cash-secured puts collecting premium",
-        "High-conviction retail positioning"
+        "Revenge trading after rapid losses",
+        "High-conviction, near-full-portfolio call bets",
+        "Traders acknowledging options addiction",
+        "Prediction markets pitched over stocks"
       ],
-      "sentiment_score": 82,
+      "sentiment_score": 45,
+      "tickers": [
+        "SPY",
+        "SNDK",
+        "SOUN"
+      ]
+    },
+    {
+      "id": "ai-narrative",
+      "title": "AI & Big Tech Skepticism",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "Meta criticized for high AI capex",
+        "Questionable ROI on AI investments",
+        "Tempus riding Moderna vaccine catalyst",
+        "Mixed conviction on AI winners"
+      ],
+      "sentiment_score": 42,
+      "tickers": [
+        "META",
+        "TEM"
+      ]
+    },
+    {
+      "id": "recovery-losses",
+      "title": "Loss Recovery & Redemption",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Trader claws back after deep drawdown",
+        "Commenters urge switching to index funds",
+        "Debt-fueled comeback stories resonate",
+        "VOO comparison highlights opportunity cost"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "VOO"
+      ]
+    },
+    {
+      "id": "market-caution",
+      "title": "Defensive Market Mood",
+      "icon": "shield",
+      "heat": "normal",
+      "bullets": [
+        "Whipsaw price action unnerving traders",
+        "Parking cash in perceived safe names",
+        "Bessent policy skepticism widespread",
+        "Consumer weakness flagged at Walmart"
+      ],
+      "sentiment_score": 38,
+      "tickers": [
+        "MU",
+        "SNDK",
+        "WMT"
+      ]
+    },
+    {
+      "id": "long-term-picks",
+      "title": "Long-Term Portfolio Debate",
+      "icon": "clock",
+      "heat": "normal",
+      "bullets": [
+        "Five-stock hold-until-2035 challenge",
+        "Sarcastic anti-consensus inversion humor",
+        "Debate on durable compounders",
+        "Refiners versus extractors value case"
+      ],
+      "sentiment_score": 52,
       "tickers": [
         "RDDT"
       ]
     },
     {
-      "id": "ai-infrastructure-selloff",
-      "title": "AI Infrastructure & Situational Awareness Fallout",
-      "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "Jane Street reportedly hit hard in July",
-        "Forced portfolio liquidation to Citadel",
-        "NBIS LEAPS recovered post-dip",
-        "Anthropic eyeing record IPO valuation"
-      ],
-      "sentiment_score": 48,
-      "tickers": [
-        "NBIS",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "profit-taking",
-      "title": "Profit Posts & Disciplined Selling",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Traders trimming into rallies",
-        "Take-profit discipline unusually common",
-        "Big wins across speculative names",
-        "Sell-into-strength mentality spreading"
-      ],
-      "sentiment_score": 74,
-      "tickers": [
-        "RDDT",
-        "NBIS",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "oil-recession-bears",
-      "title": "Oil Shock & Recession Bears",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "Oil shortage thesis warns of inflation",
-        "Bond yield surge, liquidity drain feared",
-        "Burry-style collapse narratives circulating",
-        "Large bearish index bets underwater"
-      ],
-      "sentiment_score": 28,
-      "tickers": [
-        "SPY",
-        "QQQ"
-      ]
-    },
-    {
-      "id": "trump-defense-trades",
-      "title": "Drone & Defense Trump Trades",
-      "icon": "target",
-      "heat": "building",
-      "bullets": [
-        "UMAC drone momentum legging up",
-        "War and national-security narrative",
-        "Rare earth supply chain reshoring",
-        "Speculators taking profits on strength"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "UMAC"
-      ]
-    },
-    {
-      "id": "index-options-gambling",
-      "title": "Index Options Speculation",
-      "icon": "dice",
+      "id": "general-mood",
+      "title": "General Market Mood",
+      "icon": "message-circle",
       "heat": "normal",
       "bullets": [
-        "0DTE SPY puts and credit spreads",
-        "Automatic exercise leaves large exposure",
-        "Weekly earnings calendar anticipation",
-        "High-leverage bets both directions"
+        "Heavy irony dominates discussion",
+        "SK Hynix dilution concerns noted",
+        "Retail humor masking mixed conviction",
+        "Political frustration bleeding into trades"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 44,
       "tickers": [
-        "SPY",
-        "QQQ"
+        "META",
+        "SPY"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "RDDT",
+      "symbol": "SPY",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "S&P inclusion euphoria, calls printing",
-      "company_name": "Reddit, Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "puts, spreads, both sides bet",
+      "signal": "Aggressive short-dated call bets",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "QQQ",
+      "symbol": "SNDK",
       "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Volatile revenge-trading target",
+      "company_name": "Sandisk Corporation"
+    },
+    {
+      "symbol": "META",
+      "sentiment": "bearish",
       "mentions": 3,
-      "signal": "assignment worries, put bets",
-      "company_name": "Invesco QQQ Trust, Series 1"
-    },
-    {
-      "symbol": "NBIS",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "LEAPS recovered after AI dip",
-      "company_name": "Nebius Group N.V."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "high-conviction conviction plays",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "UMAC",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "drone Trump trade unstoppable",
+      "signal": "AI capex skepticism",
       "company_name": ""
     },
     {
-      "symbol": "IOVA",
+      "symbol": "TEM",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "biotech buy-the-dip winner",
-      "company_name": "Iovance Biotherapeutics, Inc."
+      "mentions": 3,
+      "signal": "Riding Moderna vaccine catalyst",
+      "company_name": "Tempus AI, Inc."
     },
     {
-      "symbol": "BSP",
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Sought as defensive parking",
+      "company_name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "SOUN",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Underwater holder averaging down",
+      "company_name": "SoundHound AI, Inc."
+    },
+    {
+      "symbol": "WMT",
       "sentiment": "bearish",
       "mentions": 1,
-      "signal": "profitable short on manipulated name",
-      "company_name": "Bending Spoons S.p.A."
+      "signal": "Consumer trade-off warning",
+      "company_name": "Walmart Inc."
+    },
+    {
+      "symbol": "VOO",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Cited as smarter alternative",
+      "company_name": "Vanguard S&P 500 ETF"
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews decisively greedy, anchored by the Reddit S&P 500 inclusion trade and a wave of profit-taking posts. Speculators are booking gains, trimming into rallies, and displaying uncharacteristic discipline across drone, biotech, and AI infrastructure names.",
-      "tag": "bullish"
-    },
-    {
-      "text": "The AI complex remains a fault line, with reports of major fund losses and forced liquidation tied to Situational Awareness weighing on sentiment even as dip-buyers recover NBIS positions. Anthropic's IPO ambitions underscore lingering valuation anxiety.",
+      "text": "The batch reflects a cautious, self-aware retail mood, with traders alternating between euphoric near-full-port SPY call bets and confessions of options addiction after rapid account blow-ups. Energy leans speculative but tempered by fatigue.",
       "tag": "notable"
     },
     {
-      "text": "A vocal bearish minority is positioning around oil shock, recession, and index puts, but several large downside bets are deeply underwater. The prevailing tone is confident, momentum-driven risk-taking rather than fear.",
+      "text": "Skepticism toward AI capex dominates the tech narrative, with Meta drawing criticism over questionable ROI, while Tempus rides a Moderna-driven catalyst. Conviction is fragmented rather than uniformly bullish.",
+      "tag": "bearish"
+    },
+    {
+      "text": "Defensive undertones are building as whipsaw price action, Walmart consumer weakness, and policy frustration push traders toward perceived safe names and index-fund comparisons over high-risk single-stock bets.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-15T16:35:20.512209+00:00",
-  "updated_hkt": "2026-08-16 00:35 HKT"
+  "updated_at": "2026-08-21T16:35:28.409109+00:00",
+  "updated_hkt": "2026-08-22 00:35 HKT"
 }
