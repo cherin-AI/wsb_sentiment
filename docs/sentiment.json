@@ -1,17 +1,17 @@
 {
-  "bull_pct": 47,
-  "bear_pct": 26,
-  "neutral_pct": 27,
-  "bull_bear_ratio": 1.8,
-  "overall_score": 55,
+  "bull_pct": 33,
+  "bear_pct": 24,
+  "neutral_pct": 43,
+  "bull_bear_ratio": 1.4,
+  "overall_score": 48,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 47,
-    "ai_score": 58,
-    "bull_count": 9,
+    "formula_score": 33,
+    "ai_score": 55,
+    "bull_count": 7,
     "bear_count": 5,
-    "neutral_count": 5,
-    "total_posts": 19,
+    "neutral_count": 9,
+    "total_posts": 21,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,184 +19,185 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 19,
+  "post_count": 21,
   "hours_window": 24,
   "themes": [
     {
-      "id": "nvda-earnings",
-      "title": "NVDA Earnings Watch",
+      "id": "ai-trade-debate",
+      "title": "AI Trade Reversal Debate",
       "icon": "cpu",
-      "heat": "building",
+      "heat": "hot",
       "bullets": [
-        "NVDA earnings anticipated as key catalyst",
-        "Beat-but-drop scenario debated",
-        "Traders positioning ahead of report",
-        "Broad AI sentiment tied to result"
+        "Traders question durability of AI hype",
+        "OpenAI and Anthropic momentum challenged",
+        "Data-center buildout thesis under scrutiny",
+        "Bearish positioning gaining conviction"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 38,
       "tickers": [
-        "NVDA"
+        "QBTS",
+        "NBIS"
       ]
     },
     {
-      "id": "meta-doubts",
-      "title": "Meta Doubts",
-      "icon": "trending-down",
-      "heat": "building",
-      "bullets": [
-        "Sharp single-day portfolio drawdowns",
-        "Management spending criticized heavily",
-        "AI ROI skepticism growing",
-        "Traders cutting call exposure"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "META"
-      ]
-    },
-    {
-      "id": "leveraged-yolos",
-      "title": "Leveraged high-conviction Bets",
+      "id": "bmnr-momentum",
+      "title": "BMNR Speculative Fever",
       "icon": "rocket",
-      "heat": "hot",
-      "bullets": [
-        "Margin used to full buying power",
-        "Six-figure positions on speculative names",
-        "Conviction plays despite weak financials",
-        "High-risk options aggression persists"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "IREN",
-        "MAAS",
-        "APP",
-        "MRNA"
-      ]
-    },
-    {
-      "id": "account-blowups",
-      "title": "Account Blow-ups",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Portfolios obliterated on options",
-        "Refusing to sell into losses",
-        "Adding to losing positions",
-        "Revenge-trading confessions widespread"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "SOUN",
-        "META"
-      ]
-    },
-    {
-      "id": "big-wins",
-      "title": "Profit Posts",
-      "icon": "flame",
       "heat": "building",
       "bullets": [
-        "Weekly credit spread wins shared",
-        "Six-figure milestone celebrated",
-        "Regret over not sizing larger",
-        "Momentum names delivering upside"
+        "Tom Lee narrative fueling conviction",
+        "Out-of-the-money calls turning green",
+        "Retail piling into leveraged upside",
+        "High-risk, high-reward positioning"
       ],
       "sentiment_score": 78,
       "tickers": [
-        "HOOD",
-        "RDDT"
+        "BMNR"
       ]
     },
     {
-      "id": "market-mood",
+      "id": "profit-posts",
+      "title": "Big Win Screenshots",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "Large long positions posting strong gains",
+        "Semiconductor and infrastructure names leading",
+        "Euphoric tone among winners",
+        "Confidence in continued upside momentum"
+      ],
+      "sentiment_score": 80,
+      "tickers": [
+        "NBIS",
+        "INTC"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Speculative options wiping out capital",
+        "Chasing FOMO entries proving costly",
+        "All-in leveraged ETF desperation plays",
+        "Retail traders seeking recovery hope"
+      ],
+      "sentiment_score": 25,
+      "tickers": [
+        "SOXL",
+        "SOXX",
+        "SPX"
+      ]
+    },
+    {
+      "id": "bear-bull-tug",
+      "title": "Bear-Bull Standoff",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Sharp intraday moves flip positioning",
+        "Bears celebrating brief downside wins",
+        "Bulls vowing full-port call revenge",
+        "Sarcastic seasonality theories circulating"
+      ],
+      "sentiment_score": 52,
+      "tickers": [
+        "SPY",
+        "SPX"
+      ]
+    },
+    {
+      "id": "general-market-mood",
       "title": "General Market Mood",
       "icon": "activity",
       "heat": "normal",
       "bullets": [
-        "Whipsaw price action frustrating traders",
-        "New market-animal jokes circulating",
-        "Mix of euphoria and defeat",
-        "Options culture front and center"
+        "Blue-chip ownership milestones celebrated",
+        "Short thesis on Canadian banks emerging",
+        "Regulatory workforce shifts noted",
+        "Mixed tone across daily discussion"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 50,
       "tickers": [
-        "NVDA",
-        "HOOD"
+        "BRK",
+        "BMO",
+        "AAPL"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "META",
-      "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "Conviction fading, ROI doubts",
-      "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
+      "symbol": "BMNR",
+      "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Beat-then-drop debate",
-      "company_name": "NVIDIA Corporation"
+      "signal": "Speculative call frenzy on Tom Lee thesis",
+      "company_name": "BitMine Immersion Technologies,"
     },
     {
-      "symbol": "HOOD",
+      "symbol": "NBIS",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Strong momentum, regret not sizing",
-      "company_name": "Robinhood Markets, Inc."
+      "signal": "Big long position celebrated",
+      "company_name": "Nebius Group N.V."
     },
     {
-      "symbol": "IREN",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Leveraged long-dated calls",
-      "company_name": "IREN LIMITED"
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Bear-bull intraday tug of war",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
-      "symbol": "SOUN",
+      "symbol": "QBTS",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Holding through losses",
-      "company_name": "SoundHound AI, Inc."
+      "signal": "Overvalued quantum sympathy short",
+      "company_name": "D-Wave Quantum Inc."
     },
     {
-      "symbol": "MRNA",
+      "symbol": "INTC",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "High-conviction target upside",
-      "company_name": "Moderna, Inc."
+      "signal": "Long position posting strong gains",
+      "company_name": "Intel Corporation"
     },
     {
-      "symbol": "APP",
-      "sentiment": "bullish",
+      "symbol": "SOXL",
+      "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Large short-put position",
-      "company_name": ""
+      "signal": "Desperate all-in recovery play",
+      "company_name": "Direxion Daily Semiconductor Bu"
     },
     {
-      "symbol": "RDDT",
-      "sentiment": "bullish",
+      "symbol": "AAPL",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Shares plus speculative calls",
-      "company_name": "Reddit, Inc."
+      "signal": "Gap-fill call speculation",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "BMO",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "Fragile earnings short setup",
+      "company_name": "Bank Of Montreal"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment sits mildly greedy as speculative traders pile into leveraged YOLOs on names like IREN, MAAS and Applovin, while profit posts on HOOD and weekly credit spreads celebrate upside momentum and fuel risk appetite.",
+      "text": "Retail energy centers on BMNR speculation and semiconductor winners, with euphoric profit screenshots and Tom Lee conviction plays driving upside momentum despite the broader market barely moving.",
       "tag": "bullish"
     },
     {
-      "text": "Meta faces a wave of skepticism, with traders cutting call exposure, criticizing spending discipline, and questioning AI return on investment after painful single-day drawdowns.",
+      "text": "A vocal contingent warns the AI trade is exhausted, questioning OpenAI and Anthropic momentum while shorting quantum names like QBTS and fragile bank earnings, signaling growing skepticism beneath the surface.",
       "tag": "bearish"
     },
     {
-      "text": "NVDA earnings loom as the batch's pivotal catalyst, with the community split between a confident beat and the familiar beat-then-sell reaction, keeping positioning cautious into the print.",
+      "text": "Sarcastic bear-versus-bull banter dominates the mood as painful account blow-ups from leveraged options sit alongside big wins, reflecting a market caught between greed and defeated retail capitulation.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-08-22T01:55:26.727313+00:00",
-  "updated_hkt": "2026-08-22 09:55 HKT"
+  "updated_at": "2026-08-25T12:01:54.712821+00:00",
+  "updated_hkt": "2026-08-25 20:01 HKT"
 }
