@@ -1,17 +1,17 @@
 {
-  "bull_pct": 33,
-  "bear_pct": 24,
-  "neutral_pct": 43,
-  "bull_bear_ratio": 1.4,
-  "overall_score": 48,
-  "overall_label": "Neutral",
+  "bull_pct": 22,
+  "bear_pct": 28,
+  "neutral_pct": 50,
+  "bull_bear_ratio": 0.8,
+  "overall_score": 37,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 33,
-    "ai_score": 55,
-    "bull_count": 7,
+    "formula_score": 22,
+    "ai_score": 44,
+    "bull_count": 4,
     "bear_count": 5,
     "neutral_count": 9,
-    "total_posts": 21,
+    "total_posts": 18,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 21,
+  "post_count": 18,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-trade-debate",
-      "title": "AI Trade Reversal Debate",
+      "id": "ai-trade",
+      "title": "AI Trade Skepticism",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Traders question durability of AI hype",
-        "OpenAI and Anthropic momentum challenged",
-        "Data-center buildout thesis under scrutiny",
-        "Bearish positioning gaining conviction"
+        "Circular financing concerns intensify",
+        "Anthropic stakes inflating Mag7 earnings",
+        "Bubble debate dominates discussion",
+        "One weak print from correction"
       ],
-      "sentiment_score": 38,
+      "sentiment_score": 42,
       "tickers": [
-        "QBTS",
-        "NBIS"
+        "NVDA",
+        "CRM",
+        "META"
       ]
     },
     {
-      "id": "bmnr-momentum",
-      "title": "BMNR Speculative Fever",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Tom Lee narrative fueling conviction",
-        "Out-of-the-money calls turning green",
-        "Retail piling into leveraged upside",
-        "High-risk, high-reward positioning"
-      ],
-      "sentiment_score": 78,
-      "tickers": [
-        "BMNR"
-      ]
-    },
-    {
-      "id": "profit-posts",
-      "title": "Big Win Screenshots",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Large long positions posting strong gains",
-        "Semiconductor and infrastructure names leading",
-        "Euphoric tone among winners",
-        "Confidence in continued upside momentum"
-      ],
-      "sentiment_score": 80,
-      "tickers": [
-        "NBIS",
-        "INTC"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Account Blow-Ups",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Speculative options wiping out capital",
-        "Chasing FOMO entries proving costly",
-        "All-in leveraged ETF desperation plays",
-        "Retail traders seeking recovery hope"
-      ],
-      "sentiment_score": 25,
-      "tickers": [
-        "SOXL",
-        "SOXX",
-        "SPX"
-      ]
-    },
-    {
-      "id": "bear-bull-tug",
-      "title": "Bear-Bull Standoff",
+      "id": "nvda-earnings",
+      "title": "Nvidia Earnings Reaction",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Sharp intraday moves flip positioning",
-        "Bears celebrating brief downside wins",
-        "Bulls vowing full-port call revenge",
-        "Sarcastic seasonality theories circulating"
+        "Beats expectations yet stock falls",
+        "Traders question 'crucial' quarterly ritual",
+        "Capex fatigue weighing on names",
+        "Market fragility around AI bellwether"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 40,
       "tickers": [
-        "SPY",
-        "SPX"
+        "NVDA"
       ]
     },
     {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "activity",
+      "id": "inflation-fed",
+      "title": "Inflation & Rate Path",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Core PCE rose 3.3% annually",
+        "Rate cut hopes with skepticism",
+        "De-dollarization and gold chatter",
+        "Central banks accumulating bullion"
+      ],
+      "sentiment_score": 35,
+      "tickers": [
+        "GLD"
+      ]
+    },
+    {
+      "id": "speculative-plays",
+      "title": "Speculative Single-Name Bets",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "ASTS moonshot targets revived",
+        "Take-Two eyeing GTA VI catalyst",
+        "BBWI earnings scalp executed",
+        "Retail hunting asymmetric upside"
+      ],
+      "sentiment_score": 58,
+      "tickers": [
+        "ASTS",
+        "TTWO",
+        "BBWI"
+      ]
+    },
+    {
+      "id": "crypto-saylor",
+      "title": "Crypto & Bitcoin Advocacy",
+      "icon": "currency-bitcoin",
       "heat": "normal",
       "bullets": [
-        "Blue-chip ownership milestones celebrated",
-        "Short thesis on Canadian banks emerging",
-        "Regulatory workforce shifts noted",
-        "Mixed tone across daily discussion"
+        "Saylor commentary draws attention",
+        "Bitcoin treasury narrative persists",
+        "Debate over overconfidence",
+        "Retail watching leverage exposure"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 52,
       "tickers": [
-        "BRK",
-        "BMO",
-        "AAPL"
+        "MSTR",
+        "BTC"
       ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-neutral",
+      "heat": "normal",
+      "bullets": [
+        "Bond entry points debated",
+        "Sanctions speculation circulating",
+        "Bag-holding fatigue evident",
+        "Cautious positioning ahead of data"
+      ],
+      "sentiment_score": 45,
+      "tickers": []
     }
   ],
   "tickers": [
     {
-      "symbol": "BMNR",
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 9,
+      "signal": "Beat but sold off, correction fears",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "CRM",
+      "sentiment": "bullish",
+      "mentions": 6,
+      "signal": "AI growth pop, earnings skepticism",
+      "company_name": "Salesforce, Inc."
+    },
+    {
+      "symbol": "ASTS",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Speculative call frenzy on Tom Lee thesis",
-      "company_name": "BitMine Immersion Technologies,"
+      "signal": "Moonshot revival hopes",
+      "company_name": "AST SpaceMobile, Inc."
     },
     {
-      "symbol": "NBIS",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Big long position celebrated",
-      "company_name": "Nebius Group N.V."
-    },
-    {
-      "symbol": "SPY",
+      "symbol": "TTWO",
       "sentiment": "mixed",
       "mentions": 3,
-      "signal": "Bear-bull intraday tug of war",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "signal": "GTA VI catalyst vs valuation trap",
+      "company_name": "Take-Two Interactive Software, "
     },
     {
-      "symbol": "QBTS",
-      "sentiment": "bearish",
+      "symbol": "BBWI",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Earnings scalp success",
+      "company_name": "Bath & Body Works, Inc."
+    },
+    {
+      "symbol": "META",
+      "sentiment": "neutral",
       "mentions": 2,
-      "signal": "Overvalued quantum sympathy short",
-      "company_name": "D-Wave Quantum Inc."
+      "signal": "Addiction settlement shrug",
+      "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "INTC",
+      "symbol": "GLD",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Long position posting strong gains",
-      "company_name": "Intel Corporation"
+      "signal": "Central bank buying tailwind",
+      "company_name": "SPDR Gold Shares"
     },
     {
-      "symbol": "SOXL",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Desperate all-in recovery play",
-      "company_name": "Direxion Daily Semiconductor Bu"
-    },
-    {
-      "symbol": "AAPL",
+      "symbol": "MSTR",
       "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Gap-fill call speculation",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "BMO",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Fragile earnings short setup",
-      "company_name": "Bank Of Montreal"
+      "signal": "Saylor overconfidence watch",
+      "company_name": "Strategy Inc"
     }
   ],
   "summary": [
     {
-      "text": "Retail energy centers on BMNR speculation and semiconductor winners, with euphoric profit screenshots and Tom Lee conviction plays driving upside momentum despite the broader market barely moving.",
-      "tag": "bullish"
-    },
-    {
-      "text": "A vocal contingent warns the AI trade is exhausted, questioning OpenAI and Anthropic momentum while shorting quantum names like QBTS and fragile bank earnings, signaling growing skepticism beneath the surface.",
+      "text": "The AI trade dominates the batch but with a distinctly skeptical undertone; traders question circular financing and Anthropic-driven earnings inflation, while Nvidia's beat-and-fall reinforces fears the sector sits one weak print from a broader correction.",
       "tag": "bearish"
     },
     {
-      "text": "Sarcastic bear-versus-bull banter dominates the mood as painful account blow-ups from leveraged options sit alongside big wins, reflecting a market caught between greed and defeated retail capitulation.",
+      "text": "Macro anxiety builds around a hotter 3.3% core PCE and doubts that rate cuts fix underlying imbalances, fueling de-dollarization chatter and steady bids for gold as a hedge against currency debasement.",
       "tag": "notable"
+    },
+    {
+      "text": "Speculative energy persists in single-name plays, with ASTS moonshot targets, a GTA VI catalyst debate on Take-Two, and quick earnings scalps keeping retail engaged despite the cautious macro backdrop.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-08-25T12:01:54.712821+00:00",
-  "updated_hkt": "2026-08-25 20:01 HKT"
+  "updated_at": "2026-08-26T23:06:56.051390+00:00",
+  "updated_hkt": "2026-08-27 07:06 HKT"
 }
