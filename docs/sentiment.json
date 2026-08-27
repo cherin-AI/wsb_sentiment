@@ -1,17 +1,17 @@
 {
-  "bull_pct": 22,
-  "bear_pct": 28,
-  "neutral_pct": 50,
-  "bull_bear_ratio": 0.8,
-  "overall_score": 37,
-  "overall_label": "Fear",
+  "bull_pct": 60,
+  "bear_pct": 17,
+  "neutral_pct": 23,
+  "bull_bear_ratio": 3.6,
+  "overall_score": 68,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 22,
-    "ai_score": 44,
-    "bull_count": 4,
+    "formula_score": 60,
+    "ai_score": 72,
+    "bull_count": 18,
     "bear_count": 5,
-    "neutral_count": 9,
-    "total_posts": 18,
+    "neutral_count": 7,
+    "total_posts": 30,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,181 +19,179 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 18,
+  "post_count": 30,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-trade",
-      "title": "AI Trade Skepticism",
+      "id": "nvda-earnings",
+      "title": "Nvidia Earnings Victory Lap",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Circular financing concerns intensify",
-        "Anthropic stakes inflating Mag7 earnings",
-        "Bubble debate dominates discussion",
-        "One weak print from correction"
+        "Beat expectations, strong outlook confirmed",
+        "Bulls taunt bears post-print",
+        "Jensen Huang treated as market savior",
+        "Stock dipped despite the beat"
       ],
-      "sentiment_score": 42,
-      "tickers": [
-        "NVDA",
-        "CRM",
-        "META"
-      ]
-    },
-    {
-      "id": "nvda-earnings",
-      "title": "Nvidia Earnings Reaction",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Beats expectations yet stock falls",
-        "Traders question 'crucial' quarterly ritual",
-        "Capex fatigue weighing on names",
-        "Market fragility around AI bellwether"
-      ],
-      "sentiment_score": 40,
+      "sentiment_score": 78,
       "tickers": [
         "NVDA"
       ]
     },
     {
-      "id": "inflation-fed",
-      "title": "Inflation & Rate Path",
-      "icon": "trending-down",
-      "heat": "building",
+      "id": "ai-bubble-debate",
+      "title": "AI Bubble & Circular Financing",
+      "icon": "flame",
+      "heat": "hot",
       "bullets": [
-        "Core PCE rose 3.3% annually",
-        "Rate cut hopes with skepticism",
-        "De-dollarization and gold chatter",
-        "Central banks accumulating bullion"
+        "Circular financing buzzword saturating discussion",
+        "Bears warn of overextended valuations",
+        "Optimists dismiss bubble concerns",
+        "Skepticism on data center buildout durability"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 55,
       "tickers": [
-        "GLD"
+        "NVDA",
+        "AMZN"
       ]
     },
     {
-      "id": "speculative-plays",
-      "title": "Speculative Single-Name Bets",
+      "id": "data-center-demand",
+      "title": "Data Center & GPU Demand",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "AWS-Nvidia to deliver millions of GPUs",
+        "Government surveillance seen as demand backstop",
+        "Agentic and physical AI expansion cited",
+        "Supply constraints raised as risk"
+      ],
+      "sentiment_score": 70,
+      "tickers": [
+        "NVDA",
+        "AMZN"
+      ]
+    },
+    {
+      "id": "enterprise-ai",
+      "title": "Enterprise AI Momentum",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "ASTS moonshot targets revived",
-        "Take-Two eyeing GTA VI catalyst",
-        "BBWI earnings scalp executed",
-        "Retail hunting asymmetric upside"
+        "Salesforce jumps on AI growth",
+        "Anthropic investment gains highlighted",
+        "Software names riding AI narrative",
+        "Broad optimism on AI monetization"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 75,
       "tickers": [
-        "ASTS",
-        "TTWO",
-        "BBWI"
+        "CRM"
       ]
     },
     {
-      "id": "crypto-saylor",
-      "title": "Crypto & Bitcoin Advocacy",
-      "icon": "currency-bitcoin",
+      "id": "macro-inflation",
+      "title": "Inflation & Fed Watch",
+      "icon": "chart-line",
       "heat": "normal",
       "bullets": [
-        "Saylor commentary draws attention",
-        "Bitcoin treasury narrative persists",
-        "Debate over overconfidence",
-        "Retail watching leverage exposure"
+        "Core PCE rose above comfort levels",
+        "Traders shrug off inflation print",
+        "Rate path uncertainty lingers",
+        "Sarcastic reactions to policy commentary"
       ],
-      "sentiment_score": 52,
-      "tickers": [
-        "MSTR",
-        "BTC"
-      ]
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-neutral",
-      "heat": "normal",
-      "bullets": [
-        "Bond entry points debated",
-        "Sanctions speculation circulating",
-        "Bag-holding fatigue evident",
-        "Cautious positioning ahead of data"
-      ],
-      "sentiment_score": 45,
+      "sentiment_score": 40,
       "tickers": []
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-smile",
+      "heat": "normal",
+      "bullets": [
+        "Bulls urge holding through volatility",
+        "Meta settles addiction litigation",
+        "Platinum supply deficit thesis floated",
+        "Meme-driven euphoria dominates tone"
+      ],
+      "sentiment_score": 60,
+      "tickers": [
+        "META",
+        "PL"
+      ]
     }
   ],
   "tickers": [
     {
       "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 9,
-      "signal": "Beat but sold off, correction fears",
+      "sentiment": "bullish",
+      "mentions": 18,
+      "signal": "Earnings beat sparks victory lap",
       "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "CRM",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "AI growth pop, earnings skepticism",
+      "mentions": 2,
+      "signal": "AI growth drives sharp rally",
       "company_name": "Salesforce, Inc."
     },
     {
-      "symbol": "ASTS",
+      "symbol": "AMZN",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Moonshot revival hopes",
-      "company_name": "AST SpaceMobile, Inc."
-    },
-    {
-      "symbol": "TTWO",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "GTA VI catalyst vs valuation trap",
-      "company_name": "Take-Two Interactive Software, "
-    },
-    {
-      "symbol": "BBWI",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Earnings scalp success",
-      "company_name": "Bath & Body Works, Inc."
+      "mentions": 2,
+      "signal": "AWS-Nvidia GPU deal cheered",
+      "company_name": "Amazon.com, Inc."
     },
     {
       "symbol": "META",
-      "sentiment": "neutral",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Addiction settlement shrug",
+      "signal": "Legal settlement shrugged off",
       "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "GLD",
+      "symbol": "PL",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Central bank buying tailwind",
-      "company_name": "SPDR Gold Shares"
+      "mentions": 1,
+      "signal": "Supply deficit thesis building",
+      "company_name": "Planet Labs PBC"
     },
     {
-      "symbol": "MSTR",
+      "symbol": "TSM",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "AI supply chain beneficiary",
+      "company_name": "Taiwan Semiconductor Manufactur"
+    },
+    {
+      "symbol": "AMD",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Saylor overconfidence watch",
-      "company_name": "Strategy Inc"
+      "mentions": 1,
+      "signal": "Peripheral AI positioning",
+      "company_name": "Advanced Micro Devices, Inc."
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Bulls pushing continuation",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     }
   ],
   "summary": [
     {
-      "text": "The AI trade dominates the batch but with a distinctly skeptical undertone; traders question circular financing and Anthropic-driven earnings inflation, while Nvidia's beat-and-fall reinforces fears the sector sits one weak print from a broader correction.",
-      "tag": "bearish"
+      "text": "Nvidia's earnings beat dominates the batch, with bulls staging an emphatic victory lap and openly taunting bears despite the stock slipping post-print. Jensen Huang is being treated as market savior, and euphoria is spreading across AI-linked names.",
+      "tag": "bullish"
     },
     {
-      "text": "Macro anxiety builds around a hotter 3.3% core PCE and doubts that rate cuts fix underlying imbalances, fueling de-dollarization chatter and steady bids for gold as a hedge against currency debasement.",
+      "text": "The circular financing and AI bubble debate has become a persistent counter-narrative, with skeptics warning of overextended valuations and fragile data center demand. This tension keeps the AI theme running hot even as optimists dismiss the concerns.",
       "tag": "notable"
     },
     {
-      "text": "Speculative energy persists in single-name plays, with ASTS moonshot targets, a GTA VI catalyst debate on Take-Two, and quick earnings scalps keeping retail engaged despite the cautious macro backdrop.",
+      "text": "A hotter core inflation print drew mostly sarcastic dismissal rather than fear, signaling risk-on complacency. Enterprise AI strength via Salesforce and AWS-Nvidia GPU expansion reinforces the greed-tilted mood across the community.",
       "tag": "bullish"
     }
   ],
-  "updated_at": "2026-08-26T23:06:56.051390+00:00",
-  "updated_hkt": "2026-08-27 07:06 HKT"
+  "updated_at": "2026-08-27T13:31:01.459238+00:00",
+  "updated_hkt": "2026-08-27 21:31 HKT"
 }
