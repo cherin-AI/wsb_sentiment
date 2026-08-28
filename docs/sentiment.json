@@ -1,17 +1,17 @@
 {
-  "bull_pct": 60,
-  "bear_pct": 17,
-  "neutral_pct": 23,
-  "bull_bear_ratio": 3.6,
-  "overall_score": 68,
-  "overall_label": "Greed",
+  "bull_pct": 33,
+  "bear_pct": 48,
+  "neutral_pct": 19,
+  "bull_bear_ratio": 0.7,
+  "overall_score": 43,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 60,
-    "ai_score": 72,
-    "bull_count": 18,
-    "bear_count": 5,
-    "neutral_count": 7,
-    "total_posts": 30,
+    "formula_score": 33,
+    "ai_score": 48,
+    "bull_count": 7,
+    "bear_count": 10,
+    "neutral_count": 4,
+    "total_posts": 21,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,179 +19,188 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 30,
+  "post_count": 21,
   "hours_window": 24,
   "themes": [
     {
-      "id": "nvda-earnings",
-      "title": "Nvidia Earnings Victory Lap",
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Trades",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Beat expectations, strong outlook confirmed",
-        "Bulls taunt bears post-print",
-        "Jensen Huang treated as market savior",
-        "Stock dipped despite the beat"
+        "MRVL earnings triggers sharp reversal",
+        "NVDA calls reward patient positioning",
+        "IREN debate splits miners vs AI pivot",
+        "Earnings-hype warnings gaining traction"
       ],
-      "sentiment_score": 78,
-      "tickers": [
-        "NVDA"
-      ]
-    },
-    {
-      "id": "ai-bubble-debate",
-      "title": "AI Bubble & Circular Financing",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Circular financing buzzword saturating discussion",
-        "Bears warn of overextended valuations",
-        "Optimists dismiss bubble concerns",
-        "Skepticism on data center buildout durability"
-      ],
-      "sentiment_score": 55,
+      "sentiment_score": 52,
       "tickers": [
         "NVDA",
-        "AMZN"
+        "MRVL",
+        "IREN",
+        "IONQ",
+        "AVGO"
       ]
     },
     {
-      "id": "data-center-demand",
-      "title": "Data Center & GPU Demand",
+      "id": "spy-macro",
+      "title": "SPY & Macro Positioning",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "AWS-Nvidia to deliver millions of GPUs",
-        "Government surveillance seen as demand backstop",
-        "Agentic and physical AI expansion cited",
-        "Supply constraints raised as risk"
+        "0DTE SPY gains and misses posted",
+        "Seasonal midterm correction thesis circulating",
+        "Short-until-November bias emerging",
+        "Big monthly profit posts on index plays"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 45,
       "tickers": [
-        "NVDA",
-        "AMZN"
+        "SPY",
+        "SPW"
       ]
     },
     {
-      "id": "enterprise-ai",
-      "title": "Enterprise AI Momentum",
-      "icon": "rocket",
+      "id": "put-shorts",
+      "title": "Bearish Put Plays",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Salesforce jumps on AI growth",
-        "Anthropic investment gains highlighted",
-        "Software names riding AI narrative",
-        "Broad optimism on AI monetization"
+        "MRVL puts printing on MACD signal",
+        "SPY put wins highlighted",
+        "SNOW puts pitched on margin risk",
+        "Short bias building into autumn"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 25,
       "tickers": [
-        "CRM"
+        "MRVL",
+        "SPY",
+        "SNOW"
       ]
     },
     {
-      "id": "macro-inflation",
-      "title": "Inflation & Fed Watch",
-      "icon": "chart-line",
-      "heat": "normal",
+      "id": "rate-hike-fear",
+      "title": "Rate Hike & Inflation Watch",
+      "icon": "flame",
+      "heat": "building",
       "bullets": [
-        "Core PCE rose above comfort levels",
-        "Traders shrug off inflation print",
-        "Rate path uncertainty lingers",
-        "Sarcastic reactions to policy commentary"
+        "Warsh sharpens inflation warning",
+        "Possible rate hike signaled",
+        "Jackson Hole hawkish tone",
+        "Macro caution rising among traders"
       ],
-      "sentiment_score": 40,
-      "tickers": []
+      "sentiment_score": 32,
+      "tickers": [
+        "SPY"
+      ]
     },
     {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-smile",
+      "id": "value-longs",
+      "title": "Value & Long-Term Longs",
+      "icon": "rocket",
       "heat": "normal",
       "bullets": [
-        "Bulls urge holding through volatility",
-        "Meta settles addiction litigation",
-        "Platinum supply deficit thesis floated",
-        "Meme-driven euphoria dominates tone"
+        "Goodyear cheap valuation thesis",
+        "McDonald's LEAPS accumulation",
+        "META long into settlement clarity",
+        "Selective conviction plays"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 65,
       "tickers": [
-        "META",
-        "PL"
+        "GT",
+        "MCD",
+        "META"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-neutral",
+      "heat": "normal",
+      "bullets": [
+        "Bagholder humor circulating",
+        "Mixed profit and loss posts",
+        "Earnings-hype skepticism spreading",
+        "Retail split between greed and caution"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "SPY",
+        "NVDA"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "Earnings beat sparks victory lap",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "CRM",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "AI growth drives sharp rally",
-      "company_name": "Salesforce, Inc."
-    },
-    {
-      "symbol": "AMZN",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "AWS-Nvidia GPU deal cheered",
-      "company_name": "Amazon.com, Inc."
-    },
-    {
-      "symbol": "META",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Legal settlement shrugged off",
-      "company_name": "Meta Platforms, Inc."
-    },
-    {
-      "symbol": "PL",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Supply deficit thesis building",
-      "company_name": "Planet Labs PBC"
-    },
-    {
-      "symbol": "TSM",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "AI supply chain beneficiary",
-      "company_name": "Taiwan Semiconductor Manufactur"
-    },
-    {
-      "symbol": "AMD",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "Peripheral AI positioning",
-      "company_name": "Advanced Micro Devices, Inc."
+      "symbol": "MRVL",
+      "sentiment": "bearish",
+      "mentions": 8,
+      "signal": "post-earnings crash, puts favored",
+      "company_name": "Marvell Technology, Inc."
     },
     {
       "symbol": "SPY",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Bulls pushing continuation",
+      "sentiment": "mixed",
+      "mentions": 8,
+      "signal": "0DTE gains meet correction fears",
       "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "IREN",
+      "sentiment": "bearish",
+      "mentions": 6,
+      "signal": "miner-to-AI pivot doubts",
+      "company_name": "IREN LIMITED"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "calls rewarded after dip",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "META",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "long conviction post-settlement",
+      "company_name": "Meta Platforms, Inc."
+    },
+    {
+      "symbol": "SNOW",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "puts pitched on margin risk",
+      "company_name": "Snowflake Inc."
+    },
+    {
+      "symbol": "IONQ",
+      "sentiment": "neutral",
+      "mentions": 2,
+      "signal": "speculative quantum gamble",
+      "company_name": "IonQ, Inc."
+    },
+    {
+      "symbol": "GT",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "deep-value long thesis",
+      "company_name": "The Goodyear Tire & Rubber Comp"
     }
   ],
   "summary": [
     {
-      "text": "Nvidia's earnings beat dominates the batch, with bulls staging an emphatic victory lap and openly taunting bears despite the stock slipping post-print. Jensen Huang is being treated as market savior, and euphoria is spreading across AI-linked names.",
-      "tag": "bullish"
-    },
-    {
-      "text": "The circular financing and AI bubble debate has become a persistent counter-narrative, with skeptics warning of overextended valuations and fragile data center demand. This tension keeps the AI theme running hot even as optimists dismiss the concerns.",
+      "text": "Sentiment is split down the middle: big NVDA and META call winners celebrate upside momentum while a growing chorus positions bearish, pitching SPY and SNOW puts and debating a short-until-November seasonal correction.",
       "tag": "notable"
     },
     {
-      "text": "A hotter core inflation print drew mostly sarcastic dismissal rather than fear, signaling risk-on complacency. Enterprise AI strength via Salesforce and AWS-Nvidia GPU expansion reinforces the greed-tilted mood across the community.",
-      "tag": "bullish"
+      "text": "Marvell's post-earnings reversal dominates the tape, reinforcing warnings against buying calls into earnings and rewarding traders who held puts on weakening technicals. AI enthusiasm remains intact but confidence around individual names is fragile.",
+      "tag": "bearish"
+    },
+    {
+      "text": "Hawkish Jackson Hole commentary and possible rate-hike signals inject macro caution, yet value-oriented longs in Goodyear, McDonald's LEAPS, and META show pockets of high-conviction accumulation beneath the noise.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-08-27T13:31:01.459238+00:00",
-  "updated_hkt": "2026-08-27 21:31 HKT"
+  "updated_at": "2026-08-28T21:23:13.023271+00:00",
+  "updated_hkt": "2026-08-29 05:23 HKT"
 }
