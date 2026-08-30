@@ -1,17 +1,17 @@
 {
-  "bull_pct": 46,
-  "bear_pct": 31,
-  "neutral_pct": 23,
-  "bull_bear_ratio": 1.5,
-  "overall_score": 47,
+  "bull_pct": 40,
+  "bear_pct": 20,
+  "neutral_pct": 40,
+  "bull_bear_ratio": 2.0,
+  "overall_score": 48,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 46,
-    "ai_score": 48,
-    "bull_count": 6,
-    "bear_count": 4,
-    "neutral_count": 3,
-    "total_posts": 13,
+    "formula_score": 40,
+    "ai_score": 52,
+    "bull_count": 2,
+    "bear_count": 1,
+    "neutral_count": 2,
+    "total_posts": 5,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,178 +19,128 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 13,
+  "post_count": 5,
   "hours_window": 24,
   "themes": [
     {
-      "id": "fed-policy",
-      "title": "Fed Policy & Warsh Speech",
-      "icon": "building-bank",
-      "heat": "hot",
-      "bullets": [
-        "Warsh Jackson Hole read more hawkish",
-        "September rate expectations shifting higher",
-        "Traders debating Fed reaction function",
-        "Macro uncertainty pressuring index levels"
-      ],
-      "sentiment_score": 38,
-      "tickers": [
-        "DELL",
-        "SPY"
-      ]
-    },
-    {
-      "id": "ai-infrastructure",
-      "title": "AI Infrastructure & Memory",
+      "id": "ai-memory-spend",
+      "title": "AI Infrastructure & Memory Demand",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
         "Memory now half of AI spending",
-        "Mag 7 earnings boosted by investment gains",
-        "Skepticism over accounting-driven growth",
-        "Compute buildout narrative persists"
+        "Structural demand shift underway",
+        "Traders eyeing semiconductor upside",
+        "Capex narrative gaining traction"
       ],
-      "sentiment_score": 58,
-      "tickers": [
-        "IREN"
-      ]
+      "sentiment_score": 68,
+      "tickers": []
     },
     {
-      "id": "earnings-plays",
-      "title": "Earnings Speculation",
+      "id": "mag7-earnings",
+      "title": "Mega-Cap Earnings Strength",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "DELL calls into Tuesday earnings",
-        "CRM chasing post-earnings rally",
-        "Speculative options positioning ahead of prints",
-        "High-conviction directional bets"
+        "Earnings growth topping triple digits",
+        "Boosted by large investment gains",
+        "Quality of earnings questionable",
+        "Index leaders driving sentiment"
       ],
-      "sentiment_score": 62,
-      "tickers": [
-        "DELL",
-        "CRM"
-      ]
-    },
-    {
-      "id": "loss-posts",
-      "title": "Trading Losses & Confessions",
-      "icon": "skull",
-      "heat": "normal",
-      "bullets": [
-        "Account blow-ups shared as lessons",
-        "Multi-year underperformance highlighted",
-        "Rent-money gambling references",
-        "Self-deprecating loss narratives"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "IREN"
-      ]
+      "sentiment_score": 65,
+      "tickers": []
     },
     {
       "id": "social-arbitrage",
-      "title": "Social Arbitrage Plays",
+      "title": "Social Trend Speculation",
       "icon": "flame",
-      "heat": "normal",
+      "heat": "building",
       "bullets": [
-        "Victoria's Secret tied to GTA VI hype",
-        "Consumer trend front-running thesis",
-        "Momentum extension despite strong run",
-        "Speculative narrative-driven trade"
+        "GTA VI catalyst thesis for VSXY",
+        "Betting on consumer trend shifts",
+        "Momentum already strong past year",
+        "Speculative narrative-driven positioning"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 70,
       "tickers": [
         "VSXY"
       ]
     },
     {
-      "id": "geopolitics-oil",
-      "title": "Geopolitics & Oil",
-      "icon": "droplet",
-      "heat": "building",
+      "id": "trading-losses",
+      "title": "Trading Losses & Lessons",
+      "icon": "skull",
+      "heat": "normal",
       "bullets": [
-        "Venezuela oil reserve deal announced",
-        "Energy supply narrative in focus",
-        "Macro catalyst for crude markets",
-        "Policy-driven commodity speculation"
+        "High-risk single-name bet unwinds",
+        "Reframing losses as learning",
+        "IREN speculative exposure punished",
+        "Defeated but philosophical tone"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 25,
+      "tickers": [
+        "IREN"
+      ]
+    },
+    {
+      "id": "underperformance",
+      "title": "Portfolio Underperformance",
+      "icon": "trending-down",
+      "heat": "normal",
+      "bullets": [
+        "Meager returns over six years",
+        "Self-deprecating retail humor",
+        "Long-horizon strategy questioned",
+        "Cautionary tone on stock-picking"
+      ],
+      "sentiment_score": 35,
+      "tickers": []
+    },
+    {
+      "id": "general-mood",
+      "title": "General Market Mood",
+      "icon": "mood-neutral",
+      "heat": "normal",
+      "bullets": [
+        "Mixed euphoria and defeat",
+        "Retail chasing thematic plays",
+        "Skepticism on earnings quality",
+        "Balanced risk appetite overall"
+      ],
+      "sentiment_score": 50,
       "tickers": []
     }
   ],
   "tickers": [
     {
-      "symbol": "DELL",
+      "symbol": "VSXY",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Call buyers eyeing earnings dip",
-      "company_name": "Dell Technologies Inc."
+      "mentions": 2,
+      "signal": "Social-trend long thesis",
+      "company_name": "Victorias Secret & Co."
     },
     {
       "symbol": "IREN",
       "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Painful loss confessions",
-      "company_name": "IREN LIMITED"
-    },
-    {
-      "symbol": "CRM",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Chasing post-earnings rally",
-      "company_name": "Salesforce, Inc."
-    },
-    {
-      "symbol": "VSXY",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Social arbitrage momentum bet",
-      "company_name": "Victorias Secret & Co."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Fed-driven index anxiety",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "CIB497",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Long-term fund win",
-      "company_name": ""
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "Sarcastic casino jab",
-      "company_name": "Tesla, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "AI memory spending tailwind",
-      "company_name": "NVIDIA Corporation"
+      "signal": "High-risk bet unwound",
+      "company_name": "IREN LIMITED"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment sits near neutral as traders wrestle with Warsh's hawkish Jackson Hole tone, which has lifted September rate-hike odds and pressured index levels heading into a data-heavy week.",
+      "text": "The batch skews cautiously constructive, with AI memory demand and mega-cap earnings strength anchoring the bullish narrative, though traders flag that triple-digit earnings growth leaning on investment gains raises quality-of-earnings concerns.",
       "tag": "notable"
     },
     {
-      "text": "Earnings speculation dominates the bullish flow, with call buyers positioning into DELL and chasing the CRM rally, alongside a narrative-driven social arbitrage long tied to consumer trends.",
+      "text": "Speculative energy persists in narrative-driven plays like the GTA VI-linked VSXY thesis, showcasing retail's appetite for social-arbitrage catalysts ahead of consensus recognition.",
       "tag": "bullish"
     },
     {
-      "text": "Countering the optimism, loss confessions and multi-year underperformance posts underscore lingering caution, while skepticism toward Mag 7 investment-gain-boosted earnings tempers the AI infrastructure enthusiasm.",
+      "text": "Balancing the optimism, painful IREN losses and multi-year underperformance posts underscore the harsh reality of high-risk single-name bets, delivering a sober counterweight to the euphoria.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-29T21:12:59.450164+00:00",
-  "updated_hkt": "2026-08-30 05:12 HKT"
+  "updated_at": "2026-08-30T12:04:35.598876+00:00",
+  "updated_hkt": "2026-08-30 20:04 HKT"
 }
