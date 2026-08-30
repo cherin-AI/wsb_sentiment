@@ -1,17 +1,17 @@
 {
-  "bull_pct": 40,
-  "bear_pct": 20,
-  "neutral_pct": 40,
+  "bull_pct": 50,
+  "bear_pct": 0,
+  "neutral_pct": 50,
   "bull_bear_ratio": 2.0,
-  "overall_score": 48,
+  "overall_score": 58,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 40,
-    "ai_score": 52,
+    "formula_score": 50,
+    "ai_score": 62,
     "bull_count": 2,
-    "bear_count": 1,
+    "bear_count": 0,
     "neutral_count": 2,
-    "total_posts": 5,
+    "total_posts": 4,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,128 +19,134 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 5,
+  "post_count": 4,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-memory-spend",
-      "title": "AI Infrastructure & Memory Demand",
-      "icon": "cpu",
+      "id": "oracle-thesis",
+      "title": "Oracle Valuation Debate",
+      "icon": "cloud",
       "heat": "building",
       "bullets": [
-        "Memory now half of AI spending",
-        "Structural demand shift underway",
-        "Traders eyeing semiconductor upside",
-        "Capex narrative gaining traction"
+        "Cheap forward multiple versus peers",
+        "Large contracted revenue backlog",
+        "Capital intensity a legitimate concern",
+        "Bull case on cloud demand"
       ],
       "sentiment_score": 68,
-      "tickers": []
+      "tickers": [
+        "ORCL"
+      ]
     },
     {
-      "id": "mag7-earnings",
-      "title": "Mega-Cap Earnings Strength",
+      "id": "recovery-trades",
+      "title": "Account Recovery Stories",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Earnings growth topping triple digits",
-        "Boosted by large investment gains",
-        "Quality of earnings questionable",
-        "Index leaders driving sentiment"
+        "Trader claws back prior drawdown",
+        "Big tech names drove gains",
+        "Shares-only, no options positioning",
+        "Momentum into next week"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 72,
+      "tickers": [
+        "GOOGL"
+      ]
+    },
+    {
+      "id": "big-tech",
+      "title": "Big Tech Leadership",
+      "icon": "cpu",
+      "heat": "normal",
+      "bullets": [
+        "Google cited as top holding",
+        "Mega-cap resilience underpins portfolios",
+        "Cloud and AI capex in focus",
+        "Retail leaning into quality names"
+      ],
+      "sentiment_score": 66,
+      "tickers": [
+        "GOOGL",
+        "ORCL"
+      ]
+    },
+    {
+      "id": "daily-positioning",
+      "title": "Daily Moves Thread",
+      "icon": "calendar",
+      "heat": "normal",
+      "bullets": [
+        "Traders set up for next session",
+        "Month-end positioning underway",
+        "Mixed conviction across board",
+        "Baseline daily engagement"
+      ],
+      "sentiment_score": 52,
       "tickers": []
     },
     {
-      "id": "social-arbitrage",
-      "title": "Social Trend Speculation",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "GTA VI catalyst thesis for VSXY",
-        "Betting on consumer trend shifts",
-        "Momentum already strong past year",
-        "Speculative narrative-driven positioning"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "VSXY"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Trading Losses & Lessons",
-      "icon": "skull",
+      "id": "market-education",
+      "title": "Retail Education Questions",
+      "icon": "book",
       "heat": "normal",
       "bullets": [
-        "High-risk single-name bet unwinds",
-        "Reframing losses as learning",
-        "IREN speculative exposure punished",
-        "Defeated but philosophical tone"
+        "Newcomer asks SEC registration basics",
+        "International interest in US listings",
+        "Corporate structure clarifications sought",
+        "Off-topic relative to trading flow"
       ],
-      "sentiment_score": 25,
-      "tickers": [
-        "IREN"
-      ]
-    },
-    {
-      "id": "underperformance",
-      "title": "Portfolio Underperformance",
-      "icon": "trending-down",
-      "heat": "normal",
-      "bullets": [
-        "Meager returns over six years",
-        "Self-deprecating retail humor",
-        "Long-horizon strategy questioned",
-        "Cautionary tone on stock-picking"
-      ],
-      "sentiment_score": 35,
+      "sentiment_score": 50,
       "tickers": []
     },
     {
       "id": "general-mood",
       "title": "General Market Mood",
-      "icon": "mood-neutral",
+      "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Mixed euphoria and defeat",
-        "Retail chasing thematic plays",
-        "Skepticism on earnings quality",
-        "Balanced risk appetite overall"
+        "Constructive tone into month-end",
+        "Recovery narratives boost confidence",
+        "Value-oriented theses emerging",
+        "Limited fear signals present"
       ],
-      "sentiment_score": 50,
-      "tickers": []
+      "sentiment_score": 60,
+      "tickers": [
+        "ORCL",
+        "GOOGL"
+      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "VSXY",
+      "symbol": "ORCL",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Social-trend long thesis",
-      "company_name": "Victorias Secret & Co."
+      "mentions": 3,
+      "signal": "Undervalued cloud growth thesis",
+      "company_name": "Oracle Corporation"
     },
     {
-      "symbol": "IREN",
-      "sentiment": "bearish",
+      "symbol": "GOOGL",
+      "sentiment": "bullish",
       "mentions": 2,
-      "signal": "High-risk bet unwound",
-      "company_name": "IREN LIMITED"
+      "signal": "Top holding driving recovery",
+      "company_name": "Alphabet Inc."
     }
   ],
   "summary": [
     {
-      "text": "The batch skews cautiously constructive, with AI memory demand and mega-cap earnings strength anchoring the bullish narrative, though traders flag that triple-digit earnings growth leaning on investment gains raises quality-of-earnings concerns.",
-      "tag": "notable"
-    },
-    {
-      "text": "Speculative energy persists in narrative-driven plays like the GTA VI-linked VSXY thesis, showcasing retail's appetite for social-arbitrage catalysts ahead of consensus recognition.",
+      "text": "Sentiment leans constructive into month-end, with recovery narratives and value-oriented theses dominating the small batch. A trader recouping a prior drawdown via mega-cap names underscores renewed retail confidence and preference for shares over leverage.",
       "tag": "bullish"
     },
     {
-      "text": "Balancing the optimism, painful IREN losses and multi-year underperformance posts underscore the harsh reality of high-risk single-name bets, delivering a sober counterweight to the euphoria.",
-      "tag": "bearish"
+      "text": "Oracle emerges as the standout single-name debate, framed as mispriced given its cheap forward multiple against a substantial contracted revenue backlog, though capital intensity remains a legitimate offsetting concern.",
+      "tag": "notable"
+    },
+    {
+      "text": "Educational and daily-positioning threads round out a low-volume snapshot lacking fear signals, suggesting steady rather than euphoric engagement as participants set up for the next session.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-08-30T12:04:35.598876+00:00",
-  "updated_hkt": "2026-08-30 20:04 HKT"
+  "updated_at": "2026-08-30T21:06:13.519734+00:00",
+  "updated_hkt": "2026-08-31 05:06 HKT"
 }
