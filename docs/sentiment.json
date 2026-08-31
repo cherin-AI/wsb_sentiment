@@ -1,17 +1,17 @@
 {
-  "bull_pct": 44,
-  "bear_pct": 11,
-  "neutral_pct": 45,
-  "bull_bear_ratio": 4.0,
-  "overall_score": 57,
+  "bull_pct": 33,
+  "bear_pct": 33,
+  "neutral_pct": 34,
+  "bull_bear_ratio": 1.0,
+  "overall_score": 46,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 44,
-    "ai_score": 62,
-    "bull_count": 4,
-    "bear_count": 1,
-    "neutral_count": 4,
-    "total_posts": 9,
+    "formula_score": 33,
+    "ai_score": 52,
+    "bull_count": 5,
+    "bear_count": 5,
+    "neutral_count": 5,
+    "total_posts": 15,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,171 +19,178 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 9,
+  "post_count": 15,
   "hours_window": 24,
   "themes": [
     {
-      "id": "value-plays",
-      "title": "Value & Mispricing Theses",
-      "icon": "search",
-      "heat": "building",
+      "id": "ai-trade-skepticism",
+      "title": "AI Trade Skepticism",
+      "icon": "cpu",
+      "heat": "hot",
       "bullets": [
-        "Cigna flagged as cheap on forward P/E",
-        "Oracle mispricing debate gains traction",
-        "Deep-value screening returning to feed",
-        "Contracted revenue backstops bull case"
+        "Goldman warns on AI capex shock",
+        "Bubble comparisons to dot-com era",
+        "Traders debating puts on hype names",
+        "NVDA remains speculative retail favorite"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 40,
       "tickers": [
-        "CI",
-        "ORCL"
+        "NVDA"
       ]
     },
     {
-      "id": "comeback-wins",
-      "title": "Recovery & Profit Posts",
+      "id": "nvda-momentum",
+      "title": "NVDA Post-Earnings Momentum",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Traders recouping summer drawdowns",
-        "Google cited as recovery driver",
-        "Shares-only conviction over options",
-        "Momentum returning to accounts"
+        "Blockbuster earnings still being digested",
+        "Weekly call speculation running high",
+        "Large short-dated positions in play",
+        "Conviction bets on continued upside"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 62,
       "tickers": [
-        "GOOGL"
+        "NVDA"
       ]
     },
     {
-      "id": "risky-bets",
-      "title": "High-Risk Speculation",
-      "icon": "rocket",
+      "id": "value-plays",
+      "title": "Value & Fundamentals Pitches",
+      "icon": "chart-bar",
       "heat": "building",
       "bullets": [
-        "Aggressive positioning highlighted openly",
-        "Short-dated print-tomorrow gambles",
-        "Buy-more mentality persists",
-        "Speculative appetite elevated"
+        "Cigna flagged on low forward P/E",
+        "Strong cash flow and buyback support",
+        "First Watch bull vs restaurant shorts",
+        "Fundamental theses gaining attention"
       ],
-      "sentiment_score": 60,
-      "tickers": []
+      "sentiment_score": 66,
+      "tickers": [
+        "CI",
+        "FWRG"
+      ]
     },
     {
-      "id": "fx-macro",
-      "title": "Yen & Macro Signals",
-      "icon": "currency-yen",
+      "id": "macro-fx",
+      "title": "Macro & Currency Pressure",
+      "icon": "world",
       "heat": "normal",
       "bullets": [
-        "Yen weakens past ¥160 per dollar",
-        "Intervention gains eroding",
-        "Carry-trade risk in focus",
-        "Macro backdrop watched cautiously"
+        "Yen weakens past 160 per dollar",
+        "Intervention gains eroding quickly",
+        "Midterm timing weighing on positions",
+        "Global risk factors in focus"
       ],
       "sentiment_score": 38,
       "tickers": []
     },
     {
-      "id": "daily-flow",
-      "title": "Daily Discussion & Moves",
-      "icon": "messages",
-      "heat": "normal",
+      "id": "big-bets-gains",
+      "title": "High-Conviction Bets & Wins",
+      "icon": "rocket",
+      "heat": "building",
       "bullets": [
-        "Routine positioning threads active",
-        "Traders sharing next-week plans",
-        "Baseline retail engagement steady",
-        "Mixed sentiment across chat"
+        "Profit posts and multi-bagger wins shared",
+        "Month-end best-trade bragging thread",
+        "Risky concentrated positions highlighted",
+        "Euphoric energy on individual scores"
       ],
-      "sentiment_score": 55,
-      "tickers": []
+      "sentiment_score": 70,
+      "tickers": [
+        "FWRG"
+      ]
     },
     {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-smile",
+      "id": "leaps-losses",
+      "title": "Options Timing & Losses",
+      "icon": "clock",
       "heat": "normal",
       "bullets": [
-        "Optimism outweighing caution",
-        "Buy-the-dip conviction visible",
-        "Recovery narrative gaining strength",
-        "Speculation remains healthy"
+        "QCOM leaps deeply underwater",
+        "Debate over holding into midterms",
+        "Bought near top, held too long",
+        "Time decay pressuring positions"
       ],
-      "sentiment_score": 62,
-      "tickers": []
+      "sentiment_score": 30,
+      "tickers": [
+        "QCOM",
+        "HIMS"
+      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "ORCL",
+      "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Mispricing bull thesis on contracted revenue",
-      "company_name": "Oracle Corporation"
+      "mentions": 4,
+      "signal": "post-earnings weekly call chasing",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "FWRG",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "restaurant long thesis conviction",
+      "company_name": "First Watch Restaurant Group, I"
+    },
+    {
+      "symbol": "QCOM",
+      "sentiment": "bearish",
+      "mentions": 3,
+      "signal": "leaps underwater, timing debate",
+      "company_name": "QUALCOMM Incorporated"
     },
     {
       "symbol": "CI",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Value play on cheap forward multiple",
+      "mentions": 2,
+      "signal": "value pitch on cheap multiple",
       "company_name": "The Cigna Group"
     },
     {
-      "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Cited as recovery engine",
-      "company_name": "Alphabet Inc."
-    },
-    {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Baseline index positioning",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "JPY",
+      "symbol": "HIMS",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "Weakening past intervention levels",
-      "company_name": "Lazard Japanese Equity ETF"
+      "signal": "speculative put positioning",
+      "company_name": "Hims & Hers Health, Inc."
     },
     {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Held among high-conviction names",
-      "company_name": "NVIDIA Corporation"
+      "symbol": "IHOP",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "short leg of restaurant pair",
+      "company_name": ""
     },
     {
       "symbol": "TSLA",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Speculative daily chatter",
+      "mentions": 1,
+      "signal": "AI hype skepticism reference",
       "company_name": "Tesla, Inc."
     },
     {
-      "symbol": "QQQ",
-      "sentiment": "bullish",
+      "symbol": "OPEN",
+      "sentiment": "mixed",
       "mentions": 1,
-      "signal": "Tech tilt in positioning",
-      "company_name": "Invesco QQQ Trust, Series 1"
+      "signal": "speculative retail interest",
+      "company_name": "Opendoor Technologies Inc"
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans constructive as traders share recovery stories and deep-value theses, with Oracle and Cigna framed as mispriced on contracted revenue and cheap forward multiples. Buy-the-dip conviction and shares-only positioning signal steadier risk appetite than pure options gambling.",
-      "tag": "bullish"
-    },
-    {
-      "text": "A weakening yen slipping past ¥160 injects a cautionary macro note, reviving carry-trade concerns even as equity enthusiasm dominates the feed. The divergence between FX stress and retail optimism is worth monitoring into next week.",
+      "text": "AI enthusiasm is meeting fresh skepticism as Goldman flags capex risk and veteran traders warn of bubble parallels, yet NVDA's post-earnings momentum keeps speculative call buyers positioning for continued upside into the week.",
       "tag": "notable"
     },
     {
-      "text": "Speculative energy persists through high-risk positioning and short-dated print-tomorrow bets, but the batch's tone is recovery-driven rather than euphoric. Accounts clawing back summer drawdowns keep the mood firmly greed-tilted without full-blown mania.",
+      "text": "Fundamental value pitches on Cigna and First Watch are drawing unusual attention, with traders citing cheap multiples, strong cash flow, and pair-trade shorts against legacy restaurant names.",
       "tag": "bullish"
+    },
+    {
+      "text": "Underlying stress persists as yen weakness erodes intervention gains and underwater QCOM leaps spark timing debates ahead of the midterms, tempering the euphoria from month-end profit bragging.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-31T12:01:10.670272+00:00",
-  "updated_hkt": "2026-08-31 20:01 HKT"
+  "updated_at": "2026-08-31T21:12:01.323374+00:00",
+  "updated_hkt": "2026-09-01 05:12 HKT"
 }
