@@ -992,5 +992,12 @@
     "label": "Neutral",
     "formula_score": 50,
     "ai_score": 62
+  },
+  {
+    "ts": "2026-08-31 20:01 HKT",
+    "score": 57,
+    "label": "Neutral",
+    "formula_score": 44,
+    "ai_score": 62
   }
 ]
