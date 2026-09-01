@@ -1,17 +1,17 @@
 {
-  "bull_pct": 60,
-  "bear_pct": 27,
-  "neutral_pct": 13,
-  "bull_bear_ratio": 2.2,
-  "overall_score": 59,
-  "overall_label": "Neutral",
+  "bull_pct": 62,
+  "bear_pct": 15,
+  "neutral_pct": 23,
+  "bull_bear_ratio": 4.0,
+  "overall_score": 63,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 60,
-    "ai_score": 58,
-    "bull_count": 9,
-    "bear_count": 4,
-    "neutral_count": 2,
-    "total_posts": 15,
+    "formula_score": 62,
+    "ai_score": 63,
+    "bull_count": 8,
+    "bear_count": 2,
+    "neutral_count": 3,
+    "total_posts": 13,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,37 +19,37 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 15,
+  "post_count": 13,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-capex-trade",
-      "title": "AI Capex & Compute Buildout",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure & Server Demand",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Anthropic-Lambda cloud deal drives compute demand",
-        "Goldman warns of AI capex shock",
-        "Circular financing concerns among skeptics",
-        "Bubble comparisons to dot-com era surface"
+        "Dell lifts fiscal 2027 forecast on AI servers",
+        "Anthropic-Lambda $35B cloud deal boosts HUT 8",
+        "Sovereign AI budgets driving capex expansion",
+        "NVIDIA remains central to compute buildout"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 78,
       "tickers": [
-        "NVDA",
+        "DELL",
         "HUT",
         "NVDA"
       ]
     },
     {
       "id": "memory-supercycle",
-      "title": "DRAM & Memory Supercycle",
+      "title": "Memory & HBM Supercycle",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Tight supply, strong HBM demand cited",
-        "Micron, SK Hynix trading sideways",
-        "South Korea proposes record AI budget",
-        "Debate over supercycle already priced in"
+        "DRAM fundamentals still look constructive",
+        "Tight supply meets strong HBM demand",
+        "Micron and SK Hynix trading sideways",
+        "Geopolitics weighing on chip sentiment"
       ],
       "sentiment_score": 62,
       "tickers": [
@@ -57,49 +57,47 @@
       ]
     },
     {
-      "id": "nvda-earnings-momentum",
-      "title": "NVDA Post-Earnings Momentum",
+      "id": "ttwo-gta6",
+      "title": "TTWO / GTA VI Speculation",
       "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "High-conviction bets on continued upside",
-        "Blockbuster earnings still being digested",
-        "Weekly options expiring Friday in play",
-        "Retail confidence remains elevated"
+        "GTA 6 seen as record entertainment launch",
+        "Bullish theses drawing skepticism on AI-written analysis",
+        "Social arbitrage plays gaining followers",
+        "Potential post-release acquisition narrative"
       ],
       "sentiment_score": 70,
       "tickers": [
-        "NVDA"
+        "TTWO"
       ]
     },
     {
-      "id": "consumer-restaurant-plays",
-      "title": "Consumer & Restaurant Positioning",
-      "icon": "coffee",
-      "heat": "normal",
+      "id": "options-losses",
+      "title": "LEAPS & Options Losses",
+      "icon": "skull",
+      "heat": "hot",
       "bullets": [
-        "First Watch long, IHOP/Cracker Barrel short",
-        "Margin and revenue thesis highlighted",
-        "GTA VI social arbitrage play on Take-Two",
-        "Speculative consumer-name conviction"
+        "ASTS LEAPS positions deeply underwater",
+        "Near-total account drawdowns posted",
+        "Volatility punishing speculative traders",
+        "Diamond-hands rhetoric masking heavy pain"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 22,
       "tickers": [
-        "FWRG",
-        "TTWO",
-        "CBRL"
+        "ASTS"
       ]
     },
     {
-      "id": "apple-milestone",
+      "id": "mega-cap-milestones",
       "title": "Mega-Cap Milestones",
       "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Apple valuation milestone celebrated",
-        "Long-term compounding narrative reinforced",
-        "Retail nostalgia for leadership era",
-        "Leaps preferred over short-dated bets"
+        "Apple celebrated at multi-trillion valuation",
+        "Retail admiring long-term compounding",
+        "Blue-chip leadership reassures market tone",
+        "Legacy management transitions in focus"
       ],
       "sentiment_score": 68,
       "tickers": [
@@ -107,95 +105,94 @@
       ]
     },
     {
-      "id": "general-market-mood",
+      "id": "market-mood",
       "title": "General Market Mood",
       "icon": "mood-smile",
       "heat": "normal",
       "bullets": [
-        "Mixed profit and loss posts circulating",
-        "Iran war weighing on sentiment",
-        "Speculative single-name volatility embraced",
-        "Month-end trade retrospectives shared"
+        "Daily discussion threads active",
+        "SEC weighing wider private market access",
+        "Profit posts fueling optimism",
+        "Mixed catalysts across sectors"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 58,
       "tickers": [
-        "HIMS",
         "ABCL"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "NVDA",
+      "symbol": "DELL",
       "sentiment": "bullish",
+      "mentions": 8,
+      "signal": "AI server strength drives profit posts",
+      "company_name": "Dell Technologies Inc."
+    },
+    {
+      "symbol": "TTWO",
+      "sentiment": "bullish",
+      "mentions": 7,
+      "signal": "GTA VI upside enthusiasm, some skepticism",
+      "company_name": "Take-Two Interactive Software, "
+    },
+    {
+      "symbol": "ASTS",
+      "sentiment": "bearish",
       "mentions": 5,
-      "signal": "High-conviction post-earnings upside bets",
-      "company_name": "NVIDIA Corporation"
+      "signal": "LEAPS positions deeply underwater",
+      "company_name": "AST SpaceMobile, Inc."
     },
     {
       "symbol": "HUT",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Excitement over Anthropic compute deal",
+      "signal": "Anthropic-Lambda deal excitement",
       "company_name": "Hut 8 Corp."
     },
     {
-      "symbol": "FWRG",
+      "symbol": "NVDA",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Long restaurant name with margin thesis",
-      "company_name": "First Watch Restaurant Group, I"
+      "signal": "Central to AI compute buildout",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Supercycle hopes vs sideways action",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "AAPL",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Valuation milestone celebration",
+      "signal": "Long-term compounding admired",
       "company_name": "Apple Inc."
     },
     {
-      "symbol": "TTWO",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "GTA VI catalyst speculation",
-      "company_name": "Take-Two Interactive Software Inc"
-    },
-    {
-      "symbol": "MU",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "DRAM supercycle optimism",
-      "company_name": "Micron Technology, Inc."
-    },
-    {
-      "symbol": "HIMS",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Speculative put positioning",
-      "company_name": "Hims & Hers Health, Inc."
-    },
-    {
       "symbol": "ABCL",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "Volatile name, rough recent run",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Volatile trade delivering gains",
       "company_name": "AbCellera Biologics Inc."
     }
   ],
   "summary": [
     {
-      "text": "AI infrastructure remains the dominant narrative, with the Anthropic-Lambda-Hut 8 deal energizing bulls while skeptics warn of circular financing and dot-com parallels. Retail energy stays constructive but increasingly aware of stretched valuations and heavy capex commitments.",
-      "tag": "notable"
-    },
-    {
-      "text": "NVDA continues to command high-conviction weekly bets as traders digest strong earnings, and mega-cap milestones like Apple reinforce a buy-and-hold undertone. Momentum favors chasing established winners over speculative flyers this session.",
+      "text": "AI infrastructure dominates the batch, with Dell's forecast lift and the Anthropic-Lambda-HUT 8 compute deal fueling constructive positioning. Sovereign AI spending and NVIDIA's central role reinforce a broadly optimistic tone across the semiconductor and datacenter complex.",
       "tag": "bullish"
     },
     {
-      "text": "Beneath the enthusiasm sits genuine caution: Goldman's capex warning, geopolitical risk from the Iran conflict, and self-aware month-end loss confessions temper the greed. The mood is optimistic but not euphoric, leaning cautiously constructive.",
+      "text": "Speculative pain persists as ASTS LEAPS holders nurse near-total drawdowns, a reminder that leveraged options theses remain punishing. The memory supercycle narrative also frustrates bulls as Micron and SK Hynix trade sideways despite strong fundamentals.",
       "tag": "bearish"
+    },
+    {
+      "text": "TTWO's GTA VI upside thesis is drawing fresh speculative interest, though members openly question AI-generated research quality. Overall energy leans greedy, anchored by mega-cap milestones and profit posts rather than fear.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-01T12:33:35.746451+00:00",
-  "updated_hkt": "2026-09-01 20:33 HKT"
+  "updated_at": "2026-09-01T21:05:49.921322+00:00",
+  "updated_hkt": "2026-09-02 05:05 HKT"
 }
