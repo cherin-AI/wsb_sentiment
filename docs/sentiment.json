@@ -1,16 +1,16 @@
 {
-  "bull_pct": 33,
-  "bear_pct": 33,
-  "neutral_pct": 34,
-  "bull_bear_ratio": 1.0,
-  "overall_score": 46,
+  "bull_pct": 60,
+  "bear_pct": 27,
+  "neutral_pct": 13,
+  "bull_bear_ratio": 2.2,
+  "overall_score": 59,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 33,
-    "ai_score": 52,
-    "bull_count": 5,
-    "bear_count": 5,
-    "neutral_count": 5,
+    "formula_score": 60,
+    "ai_score": 58,
+    "bull_count": 9,
+    "bear_count": 4,
+    "neutral_count": 2,
     "total_posts": 15,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
@@ -23,99 +23,104 @@
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-trade-skepticism",
-      "title": "AI Trade Skepticism",
+      "id": "ai-capex-trade",
+      "title": "AI Capex & Compute Buildout",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Goldman warns on AI capex shock",
-        "Bubble comparisons to dot-com era",
-        "Traders debating puts on hype names",
-        "NVDA remains speculative retail favorite"
+        "Anthropic-Lambda cloud deal drives compute demand",
+        "Goldman warns of AI capex shock",
+        "Circular financing concerns among skeptics",
+        "Bubble comparisons to dot-com era surface"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 55,
       "tickers": [
+        "NVDA",
+        "HUT",
         "NVDA"
       ]
     },
     {
-      "id": "nvda-momentum",
-      "title": "NVDA Post-Earnings Momentum",
+      "id": "memory-supercycle",
+      "title": "DRAM & Memory Supercycle",
       "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "Blockbuster earnings still being digested",
-        "Weekly call speculation running high",
-        "Large short-dated positions in play",
-        "Conviction bets on continued upside"
+        "Tight supply, strong HBM demand cited",
+        "Micron, SK Hynix trading sideways",
+        "South Korea proposes record AI budget",
+        "Debate over supercycle already priced in"
       ],
       "sentiment_score": 62,
+      "tickers": [
+        "MU"
+      ]
+    },
+    {
+      "id": "nvda-earnings-momentum",
+      "title": "NVDA Post-Earnings Momentum",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "High-conviction bets on continued upside",
+        "Blockbuster earnings still being digested",
+        "Weekly options expiring Friday in play",
+        "Retail confidence remains elevated"
+      ],
+      "sentiment_score": 70,
       "tickers": [
         "NVDA"
       ]
     },
     {
-      "id": "value-plays",
-      "title": "Value & Fundamentals Pitches",
-      "icon": "chart-bar",
-      "heat": "building",
+      "id": "consumer-restaurant-plays",
+      "title": "Consumer & Restaurant Positioning",
+      "icon": "coffee",
+      "heat": "normal",
       "bullets": [
-        "Cigna flagged on low forward P/E",
-        "Strong cash flow and buyback support",
-        "First Watch bull vs restaurant shorts",
-        "Fundamental theses gaining attention"
+        "First Watch long, IHOP/Cracker Barrel short",
+        "Margin and revenue thesis highlighted",
+        "GTA VI social arbitrage play on Take-Two",
+        "Speculative consumer-name conviction"
       ],
-      "sentiment_score": 66,
+      "sentiment_score": 60,
       "tickers": [
-        "CI",
-        "FWRG"
+        "FWRG",
+        "TTWO",
+        "CBRL"
       ]
     },
     {
-      "id": "macro-fx",
-      "title": "Macro & Currency Pressure",
-      "icon": "world",
+      "id": "apple-milestone",
+      "title": "Mega-Cap Milestones",
+      "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Yen weakens past 160 per dollar",
-        "Intervention gains eroding quickly",
-        "Midterm timing weighing on positions",
-        "Global risk factors in focus"
+        "Apple valuation milestone celebrated",
+        "Long-term compounding narrative reinforced",
+        "Retail nostalgia for leadership era",
+        "Leaps preferred over short-dated bets"
       ],
-      "sentiment_score": 38,
-      "tickers": []
-    },
-    {
-      "id": "big-bets-gains",
-      "title": "High-Conviction Bets & Wins",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Profit posts and multi-bagger wins shared",
-        "Month-end best-trade bragging thread",
-        "Risky concentrated positions highlighted",
-        "Euphoric energy on individual scores"
-      ],
-      "sentiment_score": 70,
+      "sentiment_score": 68,
       "tickers": [
-        "FWRG"
+        "AAPL"
       ]
     },
     {
-      "id": "leaps-losses",
-      "title": "Options Timing & Losses",
-      "icon": "clock",
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-smile",
       "heat": "normal",
       "bullets": [
-        "QCOM leaps deeply underwater",
-        "Debate over holding into midterms",
-        "Bought near top, held too long",
-        "Time decay pressuring positions"
+        "Mixed profit and loss posts circulating",
+        "Iran war weighing on sentiment",
+        "Speculative single-name volatility embraced",
+        "Month-end trade retrospectives shared"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 50,
       "tickers": [
-        "QCOM",
-        "HIMS"
+        "HIMS",
+        "ABCL"
       ]
     }
   ],
@@ -123,74 +128,74 @@
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "post-earnings weekly call chasing",
+      "mentions": 5,
+      "signal": "High-conviction post-earnings upside bets",
       "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "HUT",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Excitement over Anthropic compute deal",
+      "company_name": "Hut 8 Corp."
     },
     {
       "symbol": "FWRG",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "restaurant long thesis conviction",
+      "signal": "Long restaurant name with margin thesis",
       "company_name": "First Watch Restaurant Group, I"
     },
     {
-      "symbol": "QCOM",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "leaps underwater, timing debate",
-      "company_name": "QUALCOMM Incorporated"
-    },
-    {
-      "symbol": "CI",
+      "symbol": "AAPL",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "value pitch on cheap multiple",
-      "company_name": "The Cigna Group"
+      "signal": "Valuation milestone celebration",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "TTWO",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "GTA VI catalyst speculation",
+      "company_name": "Take-Two Interactive Software Inc"
+    },
+    {
+      "symbol": "MU",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "DRAM supercycle optimism",
+      "company_name": "Micron Technology, Inc."
     },
     {
       "symbol": "HIMS",
       "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "speculative put positioning",
+      "mentions": 1,
+      "signal": "Speculative put positioning",
       "company_name": "Hims & Hers Health, Inc."
     },
     {
-      "symbol": "IHOP",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "short leg of restaurant pair",
-      "company_name": ""
-    },
-    {
-      "symbol": "TSLA",
+      "symbol": "ABCL",
       "sentiment": "mixed",
       "mentions": 1,
-      "signal": "AI hype skepticism reference",
-      "company_name": "Tesla, Inc."
-    },
-    {
-      "symbol": "OPEN",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "speculative retail interest",
-      "company_name": "Opendoor Technologies Inc"
+      "signal": "Volatile name, rough recent run",
+      "company_name": "AbCellera Biologics Inc."
     }
   ],
   "summary": [
     {
-      "text": "AI enthusiasm is meeting fresh skepticism as Goldman flags capex risk and veteran traders warn of bubble parallels, yet NVDA's post-earnings momentum keeps speculative call buyers positioning for continued upside into the week.",
+      "text": "AI infrastructure remains the dominant narrative, with the Anthropic-Lambda-Hut 8 deal energizing bulls while skeptics warn of circular financing and dot-com parallels. Retail energy stays constructive but increasingly aware of stretched valuations and heavy capex commitments.",
       "tag": "notable"
     },
     {
-      "text": "Fundamental value pitches on Cigna and First Watch are drawing unusual attention, with traders citing cheap multiples, strong cash flow, and pair-trade shorts against legacy restaurant names.",
+      "text": "NVDA continues to command high-conviction weekly bets as traders digest strong earnings, and mega-cap milestones like Apple reinforce a buy-and-hold undertone. Momentum favors chasing established winners over speculative flyers this session.",
       "tag": "bullish"
     },
     {
-      "text": "Underlying stress persists as yen weakness erodes intervention gains and underwater QCOM leaps spark timing debates ahead of the midterms, tempering the euphoria from month-end profit bragging.",
+      "text": "Beneath the enthusiasm sits genuine caution: Goldman's capex warning, geopolitical risk from the Iran conflict, and self-aware month-end loss confessions temper the greed. The mood is optimistic but not euphoric, leaning cautiously constructive.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-08-31T21:12:01.323374+00:00",
-  "updated_hkt": "2026-09-01 05:12 HKT"
+  "updated_at": "2026-09-01T12:33:35.746451+00:00",
+  "updated_hkt": "2026-09-01 20:33 HKT"
 }
