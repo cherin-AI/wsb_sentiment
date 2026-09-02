@@ -1,17 +1,17 @@
 {
-  "bull_pct": 40,
-  "bear_pct": 40,
-  "neutral_pct": 20,
-  "bull_bear_ratio": 1.0,
-  "overall_score": 48,
+  "bull_pct": 61,
+  "bear_pct": 33,
+  "neutral_pct": 6,
+  "bull_bear_ratio": 1.8,
+  "overall_score": 59,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 40,
-    "ai_score": 52,
-    "bull_count": 6,
+    "formula_score": 61,
+    "ai_score": 58,
+    "bull_count": 11,
     "bear_count": 6,
-    "neutral_count": 3,
-    "total_posts": 15,
+    "neutral_count": 1,
+    "total_posts": 18,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,53 +19,37 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 15,
+  "post_count": 18,
   "hours_window": 24,
   "themes": [
     {
-      "id": "dell-ai-earnings",
-      "title": "Dell AI Server Momentum",
+      "id": "avgo-earnings",
+      "title": "Broadcom Earnings Play",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Dell surges on raised fiscal 2027 forecast",
-        "AI server strength driving upside",
-        "Traders piling into Dell calls",
-        "Profit posts fueling optimism"
+        "Heavy pre-earnings positioning in AVGO",
+        "Weak guidance overshadows earnings beat",
+        "Concentrated portfolios ahead of report",
+        "Debt concerns dismissed as overblown"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 60,
       "tickers": [
-        "DELL"
+        "AVGO"
       ]
     },
     {
-      "id": "loss-posts",
-      "title": "Account Blow-Ups",
-      "icon": "skull",
+      "id": "ai-bubble",
+      "title": "AI Bubble Speculation",
+      "icon": "robot",
       "heat": "building",
       "bullets": [
-        "Deep LEAPS losses on ASTS",
-        "Diamond-hands denial amid heavy drawdowns",
-        "Options traders nursing large losses",
-        "Sarcastic coping across loss posts"
+        "DXYZ traded as Anthropic, OpenAI proxy",
+        "Anthropic S1 disclosure anticipated post-Labor Day",
+        "Pre-IPO access debated across names",
+        "NAV discount cited as upside catalyst"
       ],
-      "sentiment_score": 22,
-      "tickers": [
-        "ASTS"
-      ]
-    },
-    {
-      "id": "anthropic-ipo",
-      "title": "Anthropic Pre-IPO Access",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "S1 disclosure expected after Labor Day",
-        "DXYZ trading below NAV highlighted",
-        "Retail seeking AI IPO exposure",
-        "Pre-IPO speculation intensifying"
-      ],
-      "sentiment_score": 68,
+      "sentiment_score": 65,
       "tickers": [
         "DXYZ",
         "AMZN",
@@ -73,124 +57,145 @@
       ]
     },
     {
-      "id": "energy-short",
-      "title": "Energy Complex Unwind",
-      "icon": "trending-down",
-      "heat": "normal",
+      "id": "commodities",
+      "title": "Commodity Speculation",
+      "icon": "flame",
+      "heat": "building",
       "bullets": [
-        "Heating oil short on Middle East easing",
-        "Physical crude market remains soft",
-        "Downside bet on energy prices",
-        "Geopolitical de-escalation thesis"
+        "Wheat long on supply shortage thesis",
+        "Heating oil short on Middle East de-escalation",
+        "Energy complex unwind anticipated",
+        "Physical crude market described as soft"
       ],
-      "sentiment_score": 35,
-      "tickers": []
-    },
-    {
-      "id": "spy-options",
-      "title": "SPY Options Trend Trading",
-      "icon": "chart-line",
-      "heat": "normal",
-      "bullets": [
-        "Short-dated SPY trades profitable",
-        "Trend-following calls and puts",
-        "Retail options momentum strategies",
-        "Consistent monthly gains reported"
-      ],
-      "sentiment_score": 62,
+      "sentiment_score": 50,
       "tickers": [
-        "SPY"
+        "WEAT"
       ]
     },
     {
-      "id": "ttwo-gta",
-      "title": "Take-Two GTA 6 Upside",
-      "icon": "device-gamepad",
-      "heat": "building",
+      "id": "megacap-tech",
+      "title": "Mega-Cap Conviction Bets",
+      "icon": "trending-up",
+      "heat": "normal",
       "bullets": [
-        "GTA 6 largest entertainment launch thesis",
-        "GTA Online recurring revenue driver",
-        "Potential buyout narrative post-release",
-        "High-conviction long positioning"
+        "GOOG accumulation over past year",
+        "SPOT calls on margin inflection thesis",
+        "Pricing power and FCF scaling cited",
+        "High-conviction long-term positioning"
       ],
-      "sentiment_score": 75,
+      "sentiment_score": 72,
       "tickers": [
-        "TTWO"
+        "GOOG",
+        "SPOT",
+        "AAPL"
+      ]
+    },
+    {
+      "id": "loss-posts",
+      "title": "Trading Losses & Coping",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Account blow-ups and drawdowns shared",
+        "Dell calls chase after heavy losses",
+        "Dark humor coping with defeat",
+        "Speculative traders down materially"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "DELL"
+      ]
+    },
+    {
+      "id": "general-mood",
+      "title": "General Market Mood",
+      "icon": "activity",
+      "heat": "normal",
+      "bullets": [
+        "SPY options day-trading momentum",
+        "Apple framed as bearish drag",
+        "Biotech catalyst speculation on VSTM",
+        "Mixed risk appetite across batch"
+      ],
+      "sentiment_score": 52,
+      "tickers": [
+        "SPY",
+        "VSTM"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "DELL",
-      "sentiment": "bullish",
-      "mentions": 18,
-      "signal": "AI server earnings euphoria",
-      "company_name": "Dell Technologies Inc"
-    },
-    {
-      "symbol": "ASTS",
-      "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "LEAPS losses mounting",
-      "company_name": "AST SpaceMobile, Inc."
-    },
-    {
-      "symbol": "SPY",
+      "symbol": "AVGO",
       "sentiment": "bullish",
       "mentions": 5,
-      "signal": "Trend-following profits",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "signal": "Pre-earnings conviction, guidance concerns",
+      "company_name": "Broadcom Inc."
     },
     {
       "symbol": "DXYZ",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Discounted pre-IPO play",
+      "signal": "AI pre-IPO proxy play",
       "company_name": "Destiny Tech100 Inc."
     },
     {
-      "symbol": "TTWO",
+      "symbol": "GOOG",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "GTA 6 upside conviction",
-      "company_name": "Take-Two Interactive Software, "
-    },
-    {
-      "symbol": "AAPL",
-      "sentiment": "bearish",
       "mentions": 3,
-      "signal": "Blamed for bear days",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "AMZN",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Anthropic exposure route",
-      "company_name": "Amazon.com, Inc."
-    },
-    {
-      "symbol": "GOOGL",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "AI IPO exposure",
+      "signal": "Long-term accumulation",
       "company_name": "Alphabet Inc."
+    },
+    {
+      "symbol": "SPOT",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Margin inflection thesis",
+      "company_name": "Spotify Technology S.A."
+    },
+    {
+      "symbol": "WEAT",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Supply shortage high-conviction",
+      "company_name": "Teucrium Wheat Fund ETV"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "Active options day-trading",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "DELL",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "Loss-chasing call buy",
+      "company_name": "Dell Technologies Inc."
+    },
+    {
+      "symbol": "VSTM",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Biotech catalyst speculation",
+      "company_name": "Verastem, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Dell dominates the tape as raised fiscal 2027 guidance on AI server strength triggers a sharp rally, drawing profit posts and fresh call buying. The AI hardware narrative remains the batch's clearest source of upside conviction.",
+      "text": "Broadcom dominates the tape as traders concentrate portfolios ahead of earnings, dismissing debt and guidance concerns. The pre-report enthusiasm reflects a persistent appetite for mega-cap semiconductor exposure despite a beat overshadowed by soft forward commentary.",
+      "tag": "notable"
+    },
+    {
+      "text": "AI-adjacent speculation intensifies around DXYZ as a proxy for Anthropic and OpenAI, with pre-IPO positioning building ahead of anticipated S1 disclosures. High-conviction long-term bets on GOOG and SPOT reinforce a constructive mega-cap narrative.",
       "tag": "bullish"
     },
     {
-      "text": "Beneath the euphoria, a steady stream of account blow-ups — heavy LEAPS losses on ASTS and deep drawdowns cloaked in diamond-hands denial — signals persistent pain among speculative options traders.",
+      "text": "A visible undercurrent of trading losses and coping posts tempers the euphoria, with drawdown-driven traders chasing recovery bets like Dell calls. The batch reads moderately greedy but carries pockets of defeat.",
       "tag": "bearish"
-    },
-    {
-      "text": "Pre-IPO positioning around Anthropic and a high-conviction Take-Two GTA 6 thesis show traders reaching toward future catalysts, while an energy short bet on Middle East de-escalation adds a rare contrarian macro angle.",
-      "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-02T12:01:24.856175+00:00",
-  "updated_hkt": "2026-09-02 20:01 HKT"
+  "updated_at": "2026-09-02T21:11:30.754682+00:00",
+  "updated_hkt": "2026-09-03 05:11 HKT"
 }
