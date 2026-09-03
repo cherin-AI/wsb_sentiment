@@ -1034,5 +1034,12 @@
     "label": "Neutral",
     "formula_score": 61,
     "ai_score": 58
+  },
+  {
+    "ts": "2026-09-03 20:50 HKT",
+    "score": 61,
+    "label": "Greed",
+    "formula_score": 60,
+    "ai_score": 62
   }
 ]

@@ -1,17 +1,17 @@
 {
-  "bull_pct": 61,
-  "bear_pct": 33,
-  "neutral_pct": 6,
-  "bull_bear_ratio": 1.8,
-  "overall_score": 59,
-  "overall_label": "Neutral",
+  "bull_pct": 60,
+  "bear_pct": 27,
+  "neutral_pct": 13,
+  "bull_bear_ratio": 2.2,
+  "overall_score": 61,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 61,
-    "ai_score": 58,
-    "bull_count": 11,
-    "bear_count": 6,
-    "neutral_count": 1,
-    "total_posts": 18,
+    "formula_score": 60,
+    "ai_score": 62,
+    "bull_count": 9,
+    "bear_count": 4,
+    "neutral_count": 2,
+    "total_posts": 15,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,180 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 18,
+  "post_count": 15,
   "hours_window": 24,
   "themes": [
     {
       "id": "avgo-earnings",
-      "title": "Broadcom Earnings Play",
+      "title": "Broadcom Earnings Reaction",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Heavy pre-earnings positioning in AVGO",
         "Weak guidance overshadows earnings beat",
-        "Concentrated portfolios ahead of report",
+        "Stock slides despite revenue growth story",
+        "Large concentrated positions into report",
         "Debt concerns dismissed as overblown"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 48,
       "tickers": [
         "AVGO"
       ]
     },
     {
-      "id": "ai-bubble",
-      "title": "AI Bubble Speculation",
-      "icon": "robot",
+      "id": "ai-semis",
+      "title": "AI Infrastructure Trade",
+      "icon": "flame",
+      "heat": "hot",
+      "bullets": [
+        "Dell read-through fuels sympathy plays",
+        "IREN rallies into strong volume",
+        "Private AI exposure via DXYZ NAV",
+        "Bubble skeptics fade the euphoria"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "IREN",
+        "DELL",
+        "DXYZ"
+      ]
+    },
+    {
+      "id": "high-conviction-yolos",
+      "title": "Concentrated High-Conviction Bets",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "DXYZ traded as Anthropic, OpenAI proxy",
-        "Anthropic S1 disclosure anticipated post-Labor Day",
-        "Pre-IPO access debated across names",
-        "NAV discount cited as upside catalyst"
+        "Six-figure single-name positions common",
+        "SPOT calls targeting sharp upside",
+        "GOOG accumulation over the year",
+        "Traders leaning fully invested"
       ],
-      "sentiment_score": 65,
+      "sentiment_score": 74,
       "tickers": [
-        "DXYZ",
-        "AMZN",
-        "GOOGL"
+        "SPOT",
+        "GOOG",
+        "AVGO"
+      ]
+    },
+    {
+      "id": "options-pain",
+      "title": "Options Speculation Reality Check",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "New traders questioning options strategy",
+        "OTM contracts fighting short timelines",
+        "Loss posts seeking recovery advice",
+        "Quick-riches narrative meeting resistance"
+      ],
+      "sentiment_score": 32,
+      "tickers": [
+        "ZM"
       ]
     },
     {
       "id": "commodities",
       "title": "Commodity Speculation",
-      "icon": "flame",
-      "heat": "building",
+      "icon": "trending-up",
+      "heat": "normal",
       "bullets": [
-        "Wheat long on supply shortage thesis",
-        "Heating oil short on Middle East de-escalation",
-        "Energy complex unwind anticipated",
-        "Physical crude market described as soft"
+        "Wheat bet on supply shortages",
+        "Fertilizer and diesel constraints cited",
+        "Rotation away from manipulated oil",
+        "Macro scarcity thesis in play"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 60,
       "tickers": [
         "WEAT"
       ]
     },
     {
-      "id": "megacap-tech",
-      "title": "Mega-Cap Conviction Bets",
-      "icon": "trending-up",
-      "heat": "normal",
-      "bullets": [
-        "GOOG accumulation over past year",
-        "SPOT calls on margin inflection thesis",
-        "Pricing power and FCF scaling cited",
-        "High-conviction long-term positioning"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "GOOG",
-        "SPOT",
-        "AAPL"
-      ]
-    },
-    {
-      "id": "loss-posts",
-      "title": "Trading Losses & Coping",
-      "icon": "skull",
-      "heat": "hot",
-      "bullets": [
-        "Account blow-ups and drawdowns shared",
-        "Dell calls chase after heavy losses",
-        "Dark humor coping with defeat",
-        "Speculative traders down materially"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "DELL"
-      ]
-    },
-    {
-      "id": "general-mood",
+      "id": "market-mood",
       "title": "General Market Mood",
-      "icon": "activity",
+      "icon": "mood-neutral",
       "heat": "normal",
       "bullets": [
-        "SPY options day-trading momentum",
-        "Apple framed as bearish drag",
-        "Biotech catalyst speculation on VSTM",
-        "Mixed risk appetite across batch"
+        "AI bubble skepticism running through chatter",
+        "Debt and demographics gallows humor",
+        "Platform changes drawing user reactions",
+        "Mixed greed and fear balance"
       ],
-      "sentiment_score": 52,
-      "tickers": [
-        "SPY",
-        "VSTM"
-      ]
+      "sentiment_score": 50,
+      "tickers": []
     }
   ],
   "tickers": [
     {
       "symbol": "AVGO",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "Pre-earnings conviction, guidance concerns",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Guidance disappoints but dip buyers hold",
       "company_name": "Broadcom Inc."
     },
     {
-      "symbol": "DXYZ",
+      "symbol": "SPOT",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "AI pre-IPO proxy play",
-      "company_name": "Destiny Tech100 Inc."
+      "mentions": 6,
+      "signal": "Aggressive long-dated conviction call bet",
+      "company_name": "Spotify Technology S.A."
     },
     {
       "symbol": "GOOG",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Long-term accumulation",
+      "signal": "Steady accumulation at current levels",
       "company_name": "Alphabet Inc."
     },
     {
-      "symbol": "SPOT",
+      "symbol": "IREN",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Margin inflection thesis",
-      "company_name": "Spotify Technology S.A."
+      "signal": "Sympathy momentum off Dell read-through",
+      "company_name": "IREN LIMITED"
+    },
+    {
+      "symbol": "DXYZ",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "NAV upside play on private AI",
+      "company_name": "Destiny Tech100 Inc."
+    },
+    {
+      "symbol": "DELL",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Earnings driving hardware optimism",
+      "company_name": "Dell Technologies Inc."
     },
     {
       "symbol": "WEAT",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Supply shortage high-conviction",
+      "mentions": 1,
+      "signal": "Supply-driven commodity speculation",
       "company_name": "Teucrium Wheat Fund ETV"
     },
     {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "Active options day-trading",
-      "company_name": "State Street SPDR S&P 500 ETF T"
-    },
-    {
-      "symbol": "DELL",
-      "sentiment": "bearish",
+      "symbol": "ZM",
+      "sentiment": "neutral",
       "mentions": 1,
-      "signal": "Loss-chasing call buy",
-      "company_name": "Dell Technologies Inc."
-    },
-    {
-      "symbol": "VSTM",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Biotech catalyst speculation",
-      "company_name": "Verastem, Inc."
+      "signal": "Contrarian all-in curiosity",
+      "company_name": "Zoom Communications, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Broadcom dominates the tape as traders concentrate portfolios ahead of earnings, dismissing debt and guidance concerns. The pre-report enthusiasm reflects a persistent appetite for mega-cap semiconductor exposure despite a beat overshadowed by soft forward commentary.",
-      "tag": "notable"
-    },
-    {
-      "text": "AI-adjacent speculation intensifies around DXYZ as a proxy for Anthropic and OpenAI, with pre-IPO positioning building ahead of anticipated S1 disclosures. High-conviction long-term bets on GOOG and SPOT reinforce a constructive mega-cap narrative.",
+      "text": "Sentiment tilts greedy as concentrated six-figure positions dominate the tape, with SPOT calls, GOOG accumulation, and AI infrastructure sympathy plays like IREN and DXYZ drawing high-conviction retail flow into names tied to the ongoing AI narrative.",
       "tag": "bullish"
     },
     {
-      "text": "A visible undercurrent of trading losses and coping posts tempers the euphoria, with drawdown-driven traders chasing recovery bets like Dell calls. The batch reads moderately greedy but carries pockets of defeat.",
+      "text": "Broadcom stands as the batch's pivotal catalyst, sliding on weak guidance despite an earnings beat while traders holding heavy positions into the report dismiss debt concerns as overblown, leaving the name genuinely divided.",
+      "tag": "notable"
+    },
+    {
+      "text": "Beneath the euphoria, cracks show as new options traders question the quick-riches thesis and loss posts seek recovery, a persistent reminder that leverage cuts both ways in this speculative climate.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-09-02T21:11:30.754682+00:00",
-  "updated_hkt": "2026-09-03 05:11 HKT"
+  "updated_at": "2026-09-03T12:50:27.458858+00:00",
+  "updated_hkt": "2026-09-03 20:50 HKT"
 }
