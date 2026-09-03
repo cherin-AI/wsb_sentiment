@@ -1,17 +1,17 @@
 {
-  "bull_pct": 60,
-  "bear_pct": 27,
-  "neutral_pct": 13,
-  "bull_bear_ratio": 2.2,
-  "overall_score": 61,
-  "overall_label": "Greed",
+  "bull_pct": 40,
+  "bear_pct": 35,
+  "neutral_pct": 25,
+  "bull_bear_ratio": 1.1,
+  "overall_score": 53,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 60,
-    "ai_score": 62,
-    "bull_count": 9,
-    "bear_count": 4,
-    "neutral_count": 2,
-    "total_posts": 15,
+    "formula_score": 40,
+    "ai_score": 58,
+    "bull_count": 8,
+    "bear_count": 7,
+    "neutral_count": 5,
+    "total_posts": 20,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,180 +19,184 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 15,
+  "post_count": 20,
   "hours_window": 24,
   "themes": [
     {
-      "id": "avgo-earnings",
-      "title": "Broadcom Earnings Reaction",
+      "id": "crypto-miner-ai",
+      "title": "Crypto Miner & AI Momentum",
       "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Weak guidance overshadows earnings beat",
-        "Stock slides despite revenue growth story",
-        "Large concentrated positions into report",
-        "Debt concerns dismissed as overblown"
-      ],
-      "sentiment_score": 48,
-      "tickers": [
-        "AVGO"
-      ]
-    },
-    {
-      "id": "ai-semis",
-      "title": "AI Infrastructure Trade",
-      "icon": "flame",
-      "heat": "hot",
-      "bullets": [
-        "Dell read-through fuels sympathy plays",
-        "IREN rallies into strong volume",
-        "Private AI exposure via DXYZ NAV",
-        "Bubble skeptics fade the euphoria"
-      ],
-      "sentiment_score": 68,
-      "tickers": [
-        "IREN",
-        "DELL",
-        "DXYZ"
-      ]
-    },
-    {
-      "id": "high-conviction-yolos",
-      "title": "Concentrated High-Conviction Bets",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Six-figure single-name positions common",
-        "SPOT calls targeting sharp upside",
-        "GOOG accumulation over the year",
-        "Traders leaning fully invested"
+        "IREN riding Dell earnings sympathy",
+        "Volume surging into close",
+        "Multi-day profit posts circulating",
+        "Speculative traders chasing upside"
       ],
       "sentiment_score": 74,
       "tickers": [
-        "SPOT",
-        "GOOG",
+        "IREN",
+        "DELL"
+      ]
+    },
+    {
+      "id": "options-lottery",
+      "title": "Weekly Options Lottery Tickets",
+      "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Small stakes into large wins",
+        "DELL and HOOD calls printing",
+        "Traders letting positions ride",
+        "High-conviction gambling energy"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
+        "HOOD",
+        "DELL",
+        "AVGO",
+        "TSLA"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Account Blow-ups & Regret",
+      "icon": "skull",
+      "heat": "building",
+      "bullets": [
+        "Expired calls worthless overnight",
+        "Traders questioning recovery odds",
+        "Options frustration spreading",
+        "Discipline lapses punished quickly"
+      ],
+      "sentiment_score": 24,
+      "tickers": [
         "AVGO"
       ]
     },
     {
-      "id": "options-pain",
-      "title": "Options Speculation Reality Check",
-      "icon": "skull",
+      "id": "tsla-catalyst",
+      "title": "Tesla Cybercab Event",
+      "icon": "trending-up",
       "heat": "building",
       "bullets": [
-        "New traders questioning options strategy",
-        "OTM contracts fighting short timelines",
-        "Loss posts seeking recovery advice",
-        "Quick-riches narrative meeting resistance"
+        "Cybercab launch in Austin today",
+        "Calls positioned ahead of event",
+        "Traders eyeing quick exits",
+        "Catalyst-driven speculation building"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 66,
       "tickers": [
-        "ZM"
+        "TSLA"
       ]
     },
     {
-      "id": "commodities",
-      "title": "Commodity Speculation",
-      "icon": "trending-up",
+      "id": "software-bets",
+      "title": "Software & Enterprise Plays",
+      "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Wheat bet on supply shortages",
-        "Fertilizer and diesel constraints cited",
-        "Rotation away from manipulated oil",
-        "Macro scarcity thesis in play"
+        "ZScaler call holders staying stubborn",
+        "Zoom board reshuffle draws interest",
+        "LULU seen crashing hard",
+        "Mixed conviction across names"
       ],
-      "sentiment_score": 60,
+      "sentiment_score": 48,
       "tickers": [
-        "WEAT"
+        "ZS",
+        "ZM",
+        "LULU"
       ]
     },
     {
-      "id": "market-mood",
+      "id": "general-mood",
       "title": "General Market Mood",
       "icon": "mood-neutral",
       "heat": "normal",
       "bullets": [
-        "AI bubble skepticism running through chatter",
-        "Debt and demographics gallows humor",
-        "Platform changes drawing user reactions",
-        "Mixed greed and fear balance"
+        "Manual trading day, tech skepticism",
+        "Bonds surprising some traders",
+        "Short-covering profit claims",
+        "Mixed euphoria and despair coexist"
       ],
-      "sentiment_score": 50,
-      "tickers": []
+      "sentiment_score": 52,
+      "tickers": [
+        "PATH"
+      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "AVGO",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "Guidance disappoints but dip buyers hold",
-      "company_name": "Broadcom Inc."
-    },
-    {
-      "symbol": "SPOT",
-      "sentiment": "bullish",
-      "mentions": 6,
-      "signal": "Aggressive long-dated conviction call bet",
-      "company_name": "Spotify Technology S.A."
-    },
-    {
-      "symbol": "GOOG",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Steady accumulation at current levels",
-      "company_name": "Alphabet Inc."
-    },
-    {
       "symbol": "IREN",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Sympathy momentum off Dell read-through",
-      "company_name": "IREN LIMITED"
+      "mentions": 3,
+      "signal": "Dell sympathy momentum play",
+      "company_name": ""
     },
     {
-      "symbol": "DXYZ",
+      "symbol": "HOOD",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "NAV upside play on private AI",
-      "company_name": "Destiny Tech100 Inc."
+      "mentions": 3,
+      "signal": "Options win, shorts doubted",
+      "company_name": "Robinhood Markets, Inc."
     },
     {
       "symbol": "DELL",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Earnings driving hardware optimism",
+      "mentions": 3,
+      "signal": "Earnings-driven call printing",
       "company_name": "Dell Technologies Inc."
     },
     {
-      "symbol": "WEAT",
+      "symbol": "TSLA",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Supply-driven commodity speculation",
-      "company_name": "Teucrium Wheat Fund ETV"
+      "mentions": 2,
+      "signal": "Cybercab event positioning",
+      "company_name": "Tesla, Inc."
+    },
+    {
+      "symbol": "AVGO",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Red despite strong guidance",
+      "company_name": "Broadcom Inc."
     },
     {
       "symbol": "ZM",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Contrarian all-in curiosity",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Board appointment optimism",
       "company_name": "Zoom Communications, Inc."
+    },
+    {
+      "symbol": "LULU",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "Seen crashing hard",
+      "company_name": "lululemon athletica inc."
+    },
+    {
+      "symbol": "ZS",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Stubborn call holders",
+      "company_name": "Zscaler, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment tilts greedy as concentrated six-figure positions dominate the tape, with SPOT calls, GOOG accumulation, and AI infrastructure sympathy plays like IREN and DXYZ drawing high-conviction retail flow into names tied to the ongoing AI narrative.",
+      "text": "Crypto miners and AI adjacent names dominate the tape, with IREN riding a Dell earnings read-through and traders piling into weekly call lotteries. The energy skews euphoric as profit screenshots circulate on DELL and HOOD.",
       "tag": "bullish"
     },
     {
-      "text": "Broadcom stands as the batch's pivotal catalyst, sliding on weak guidance despite an earnings beat while traders holding heavy positions into the report dismiss debt concerns as overblown, leaving the name genuinely divided.",
-      "tag": "notable"
+      "text": "Beneath the celebration sits a familiar undertow of account blow-ups: overnight expirations, missed take-profits, and traders openly questioning whether recovery is possible. AVGO frustrates holders despite doubling-revenue guidance.",
+      "tag": "bearish"
     },
     {
-      "text": "Beneath the euphoria, cracks show as new options traders question the quick-riches thesis and loss posts seek recovery, a persistent reminder that leverage cuts both ways in this speculative climate.",
-      "tag": "bearish"
+      "text": "Catalyst positioning is thick, with Tesla's Cybercab event and Zoom's board reshuffle drawing fresh speculative interest. The batch reflects classic mid-cycle greed — buyers active, but pockets of pain warn of stretched conviction.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-03T12:50:27.458858+00:00",
-  "updated_hkt": "2026-09-03 20:50 HKT"
+  "updated_at": "2026-09-03T21:27:00.250499+00:00",
+  "updated_hkt": "2026-09-04 05:27 HKT"
 }
