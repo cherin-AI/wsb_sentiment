@@ -1,17 +1,17 @@
 {
-  "bull_pct": 50,
-  "bear_pct": 25,
-  "neutral_pct": 25,
-  "bull_bear_ratio": 2.0,
-  "overall_score": 58,
+  "bull_pct": 36,
+  "bear_pct": 32,
+  "neutral_pct": 32,
+  "bull_bear_ratio": 1.1,
+  "overall_score": 51,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 50,
-    "ai_score": 62,
+    "formula_score": 36,
+    "ai_score": 58,
     "bull_count": 10,
-    "bear_count": 5,
-    "neutral_count": 5,
-    "total_posts": 20,
+    "bear_count": 9,
+    "neutral_count": 9,
+    "total_posts": 28,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,92 +19,95 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 20,
+  "post_count": 28,
   "hours_window": 24,
   "themes": [
     {
-      "id": "lulu-selloff",
-      "title": "Lululemon Selloff",
-      "icon": "trending-down",
+      "id": "earnings-winners",
+      "title": "Earnings-Driven Profit Posts",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
-        "Sharp double-digit decline draws attention",
-        "Burry thesis cited as questionable call",
-        "Traders lament missing put entries",
-        "Satirical AI-pivot mockery spreading"
+        "SNOW earnings surge sparks large gains",
+        "BMNR, SPCX round out winning week",
+        "Retail chasing post-earnings momentum",
+        "Traders warned not to give back profits"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 78,
       "tickers": [
-        "LULU"
+        "SNOW",
+        "BMNR",
+        "SPCX"
       ]
     },
     {
-      "id": "earnings-plays",
-      "title": "Earnings Options Plays",
+      "id": "rare-earths",
+      "title": "Rare-Earth Geopolitical Play",
       "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "China restricting rare-earth shipments",
+        "Sept. 24 talks seen as catalyst",
+        "High-conviction bets on miners",
+        "Divergence from risk-off flows noted"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "MP",
+        "UUUU",
+        "USAR"
+      ]
+    },
+    {
+      "id": "macro-fed",
+      "title": "Fed Cuts and Jobs Report",
+      "icon": "building-bank",
       "heat": "hot",
       "bullets": [
-        "SNOW surge rewards post-earnings call buyers",
-        "ZScaler and TTWO high-conviction bets",
-        "Speculative weeklies dominate positioning",
-        "Zoom board appointment sparks interest"
+        "Trump pressures Fed for rate cut",
+        "Weak jobs print questioned by traders",
+        "Low-quality service jobs criticized",
+        "Skepticism toward applauding economists"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    {
+      "id": "ai-datacenter",
+      "title": "AI Infrastructure Buildout",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "Hut 8 leasing data center to NVIDIA",
+        "Anthropic and Lambda deals cited",
+        "AI capex narrative stays strong",
+        "Speculative interest in compute plays"
       ],
       "sentiment_score": 72,
       "tickers": [
-        "SNOW",
-        "ZS",
-        "TTWO",
-        "ZM"
+        "NVDA",
+        "HUT"
       ]
     },
     {
-      "id": "big-wins",
-      "title": "Profit Posts",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "Weekly options translate small stakes to big wins",
-        "HOOD trades printing outsized returns",
-        "Euphoric screenshots piling in",
-        "Retail confidence riding momentum"
-      ],
-      "sentiment_score": 85,
-      "tickers": [
-        "HOOD",
-        "SNOW",
-        "IREN"
-      ]
-    },
-    {
-      "id": "tesla-cybercab",
-      "title": "Tesla Cybercab Catalyst",
-      "icon": "bolt",
-      "heat": "building",
-      "bullets": [
-        "Cybercab launch event fuels call buying",
-        "Traders positioning ahead of catalyst",
-        "Short-dated expirations favored",
-        "Event-driven speculation building"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Trading Losses",
+      "id": "loss-porn",
+      "title": "Trading Losses and Bag-Holding",
       "icon": "skull",
-      "heat": "building",
+      "heat": "normal",
       "bullets": [
-        "Missed take-profit levels sting overnight",
-        "Weeklies expiring worthless",
-        "Revenge-trading mentality emerging",
-        "Recovery narratives after account drawdowns"
+        "Traders showcasing heavy red positions",
+        "Selling at the bottom lament",
+        "Revenge trades after prior losses",
+        "Self-deprecating gallows humor persists"
       ],
-      "sentiment_score": 30,
+      "sentiment_score": 28,
       "tickers": [
-        "BROS"
+        "SNDK",
+        "BROS",
+        "TTWO"
       ]
     },
     {
@@ -113,90 +116,90 @@
       "icon": "mood-smile",
       "heat": "normal",
       "bullets": [
-        "Daily discussion threads active",
-        "AI hardware jokes circulating",
-        "Bonds discussion noted",
-        "Mixed greed-and-fear undertone"
+        "Weekend and daily discussion banter",
+        "Squirrel and meme trading strategies",
+        "Congressional trade-copying jokes",
+        "Mixed euphoria and fatigue"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 52,
       "tickers": [
-        "DELL",
-        "NVDA"
+        "SPY",
+        "TSLA"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "LULU",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Selloff draws bearish mockery",
-      "company_name": "lululemon athletica inc."
-    },
-    {
       "symbol": "SNOW",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Post-earnings surge rewards calls",
+      "signal": "earnings surge printing big gains",
       "company_name": "Snowflake Inc."
     },
     {
-      "symbol": "HOOD",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Weekly options big win",
-      "company_name": "Robinhood Markets, Inc."
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "index bets both directions",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "TSLA",
-      "sentiment": "bullish",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Cybercab event positioning",
+      "signal": "short then flip to calls",
       "company_name": "Tesla, Inc."
     },
     {
-      "symbol": "ZS",
+      "symbol": "MP",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "High-conviction call holders",
-      "company_name": "Zscaler, Inc."
+      "signal": "rare-earth squeeze thesis",
+      "company_name": "MP Materials Corp."
     },
     {
-      "symbol": "TTWO",
+      "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Full-port conviction bet",
-      "company_name": "Take-Two Interactive Software, "
+      "mentions": 2,
+      "signal": "AI datacenter anchor",
+      "company_name": ""
     },
     {
-      "symbol": "IREN",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Crypto miner profit run",
-      "company_name": "IREN LIMITED"
+      "symbol": "SNDK",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "missed the move by a week",
+      "company_name": "Sandisk Corporation"
     },
     {
       "symbol": "BROS",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "Revenge leaps after weeklies loss",
+      "signal": "large leaps revenge conviction",
       "company_name": "Dutch Bros Inc."
+    },
+    {
+      "symbol": "NKE",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "weak employee sentiment warning",
+      "company_name": "Nike, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews greedy, with a wave of profit screenshots on SNOW and HOOD driving euphoric momentum. Speculative weeklies and event-driven Tesla Cybercab positioning underscore a risk-on appetite dominating the board today.",
+      "text": "SNOW's post-earnings surge dominated the profit narrative, with multiple traders showcasing outsized wins alongside BMNR and SPCX. Momentum-chasing energy is high as retail piles into winners, though seasoned voices warn against surrendering gains next week.",
       "tag": "bullish"
     },
     {
-      "text": "Lululemon's sharp decline is the batch's most intense narrative, drawing bearish mockery and regret from traders who missed put entries. The satirical AI-pivot commentary signals the theme is culturally sticky despite the pain.",
-      "tag": "bearish"
+      "text": "Macro drives the undertone: Trump's push for rate cuts collided with a soft jobs print that traders openly ridiculed as low-quality service hiring. Skepticism toward the economic narrative tempers the otherwise upbeat speculative tone.",
+      "tag": "notable"
     },
     {
-      "text": "Beneath the greed, familiar pain points persist: missed take-profit levels, worthless weeklies, and revenge trades. The mix of big wins and account blow-ups reflects the perennial barbell of retail options speculation.",
-      "tag": "notable"
+      "text": "The rare-earth complex is quietly building conviction, with MP, UUUU and USAR framed as geopolitical catalysts ahead of Sept. 24 talks. Meanwhile, bag-holding confessions and revenge trades remind that beneath the euphoria sits familiar retail pain.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-09-04T12:06:11.037144+00:00",
-  "updated_hkt": "2026-09-04 20:06 HKT"
+  "updated_at": "2026-09-04T22:00:04.703598+00:00",
+  "updated_hkt": "2026-09-05 06:00 HKT"
 }
