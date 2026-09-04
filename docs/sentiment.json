@@ -1,15 +1,15 @@
 {
-  "bull_pct": 40,
-  "bear_pct": 35,
+  "bull_pct": 50,
+  "bear_pct": 25,
   "neutral_pct": 25,
-  "bull_bear_ratio": 1.1,
-  "overall_score": 53,
+  "bull_bear_ratio": 2.0,
+  "overall_score": 58,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 40,
-    "ai_score": 58,
-    "bull_count": 8,
-    "bear_count": 7,
+    "formula_score": 50,
+    "ai_score": 62,
+    "bull_count": 10,
+    "bear_count": 5,
     "neutral_count": 5,
     "total_posts": 20,
     "formula": {
@@ -23,129 +23,129 @@
   "hours_window": 24,
   "themes": [
     {
-      "id": "crypto-miner-ai",
-      "title": "Crypto Miner & AI Momentum",
-      "icon": "cpu",
+      "id": "lulu-selloff",
+      "title": "Lululemon Selloff",
+      "icon": "trending-down",
       "heat": "hot",
       "bullets": [
-        "IREN riding Dell earnings sympathy",
-        "Volume surging into close",
-        "Multi-day profit posts circulating",
-        "Speculative traders chasing upside"
+        "Sharp double-digit decline draws attention",
+        "Burry thesis cited as questionable call",
+        "Traders lament missing put entries",
+        "Satirical AI-pivot mockery spreading"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 28,
       "tickers": [
-        "IREN",
-        "DELL"
+        "LULU"
       ]
     },
     {
-      "id": "options-lottery",
-      "title": "Weekly Options Lottery Tickets",
-      "icon": "rocket",
+      "id": "earnings-plays",
+      "title": "Earnings Options Plays",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Small stakes into large wins",
-        "DELL and HOOD calls printing",
-        "Traders letting positions ride",
-        "High-conviction gambling energy"
+        "SNOW surge rewards post-earnings call buyers",
+        "ZScaler and TTWO high-conviction bets",
+        "Speculative weeklies dominate positioning",
+        "Zoom board appointment sparks interest"
       ],
       "sentiment_score": 72,
       "tickers": [
+        "SNOW",
+        "ZS",
+        "TTWO",
+        "ZM"
+      ]
+    },
+    {
+      "id": "big-wins",
+      "title": "Profit Posts",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "Weekly options translate small stakes to big wins",
+        "HOOD trades printing outsized returns",
+        "Euphoric screenshots piling in",
+        "Retail confidence riding momentum"
+      ],
+      "sentiment_score": 85,
+      "tickers": [
         "HOOD",
-        "DELL",
-        "AVGO",
+        "SNOW",
+        "IREN"
+      ]
+    },
+    {
+      "id": "tesla-cybercab",
+      "title": "Tesla Cybercab Catalyst",
+      "icon": "bolt",
+      "heat": "building",
+      "bullets": [
+        "Cybercab launch event fuels call buying",
+        "Traders positioning ahead of catalyst",
+        "Short-dated expirations favored",
+        "Event-driven speculation building"
+      ],
+      "sentiment_score": 70,
+      "tickers": [
         "TSLA"
       ]
     },
     {
       "id": "trading-losses",
-      "title": "Account Blow-ups & Regret",
+      "title": "Trading Losses",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Expired calls worthless overnight",
-        "Traders questioning recovery odds",
-        "Options frustration spreading",
-        "Discipline lapses punished quickly"
+        "Missed take-profit levels sting overnight",
+        "Weeklies expiring worthless",
+        "Revenge-trading mentality emerging",
+        "Recovery narratives after account drawdowns"
       ],
-      "sentiment_score": 24,
+      "sentiment_score": 30,
       "tickers": [
-        "AVGO"
+        "BROS"
       ]
     },
     {
-      "id": "tsla-catalyst",
-      "title": "Tesla Cybercab Event",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Cybercab launch in Austin today",
-        "Calls positioned ahead of event",
-        "Traders eyeing quick exits",
-        "Catalyst-driven speculation building"
-      ],
-      "sentiment_score": 66,
-      "tickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "id": "software-bets",
-      "title": "Software & Enterprise Plays",
-      "icon": "flame",
-      "heat": "normal",
-      "bullets": [
-        "ZScaler call holders staying stubborn",
-        "Zoom board reshuffle draws interest",
-        "LULU seen crashing hard",
-        "Mixed conviction across names"
-      ],
-      "sentiment_score": 48,
-      "tickers": [
-        "ZS",
-        "ZM",
-        "LULU"
-      ]
-    },
-    {
-      "id": "general-mood",
+      "id": "market-mood",
       "title": "General Market Mood",
-      "icon": "mood-neutral",
+      "icon": "mood-smile",
       "heat": "normal",
       "bullets": [
-        "Manual trading day, tech skepticism",
-        "Bonds surprising some traders",
-        "Short-covering profit claims",
-        "Mixed euphoria and despair coexist"
+        "Daily discussion threads active",
+        "AI hardware jokes circulating",
+        "Bonds discussion noted",
+        "Mixed greed-and-fear undertone"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 55,
       "tickers": [
-        "PATH"
+        "DELL",
+        "NVDA"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "IREN",
+      "symbol": "LULU",
+      "sentiment": "bearish",
+      "mentions": 4,
+      "signal": "Selloff draws bearish mockery",
+      "company_name": "lululemon athletica inc."
+    },
+    {
+      "symbol": "SNOW",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Dell sympathy momentum play",
-      "company_name": ""
+      "signal": "Post-earnings surge rewards calls",
+      "company_name": "Snowflake Inc."
     },
     {
       "symbol": "HOOD",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Options win, shorts doubted",
+      "mentions": 2,
+      "signal": "Weekly options big win",
       "company_name": "Robinhood Markets, Inc."
-    },
-    {
-      "symbol": "DELL",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Earnings-driven call printing",
-      "company_name": "Dell Technologies Inc."
     },
     {
       "symbol": "TSLA",
@@ -155,48 +155,48 @@
       "company_name": "Tesla, Inc."
     },
     {
-      "symbol": "AVGO",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Red despite strong guidance",
-      "company_name": "Broadcom Inc."
-    },
-    {
-      "symbol": "ZM",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Board appointment optimism",
-      "company_name": "Zoom Communications, Inc."
-    },
-    {
-      "symbol": "LULU",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Seen crashing hard",
-      "company_name": "lululemon athletica inc."
-    },
-    {
       "symbol": "ZS",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Stubborn call holders",
+      "mentions": 2,
+      "signal": "High-conviction call holders",
       "company_name": "Zscaler, Inc."
+    },
+    {
+      "symbol": "TTWO",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Full-port conviction bet",
+      "company_name": "Take-Two Interactive Software, "
+    },
+    {
+      "symbol": "IREN",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Crypto miner profit run",
+      "company_name": "IREN LIMITED"
+    },
+    {
+      "symbol": "BROS",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Revenge leaps after weeklies loss",
+      "company_name": "Dutch Bros Inc."
     }
   ],
   "summary": [
     {
-      "text": "Crypto miners and AI adjacent names dominate the tape, with IREN riding a Dell earnings read-through and traders piling into weekly call lotteries. The energy skews euphoric as profit screenshots circulate on DELL and HOOD.",
+      "text": "Retail energy skews greedy, with a wave of profit screenshots on SNOW and HOOD driving euphoric momentum. Speculative weeklies and event-driven Tesla Cybercab positioning underscore a risk-on appetite dominating the board today.",
       "tag": "bullish"
     },
     {
-      "text": "Beneath the celebration sits a familiar undertow of account blow-ups: overnight expirations, missed take-profits, and traders openly questioning whether recovery is possible. AVGO frustrates holders despite doubling-revenue guidance.",
+      "text": "Lululemon's sharp decline is the batch's most intense narrative, drawing bearish mockery and regret from traders who missed put entries. The satirical AI-pivot commentary signals the theme is culturally sticky despite the pain.",
       "tag": "bearish"
     },
     {
-      "text": "Catalyst positioning is thick, with Tesla's Cybercab event and Zoom's board reshuffle drawing fresh speculative interest. The batch reflects classic mid-cycle greed — buyers active, but pockets of pain warn of stretched conviction.",
+      "text": "Beneath the greed, familiar pain points persist: missed take-profit levels, worthless weeklies, and revenge trades. The mix of big wins and account blow-ups reflects the perennial barbell of retail options speculation.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-03T21:27:00.250499+00:00",
-  "updated_hkt": "2026-09-04 05:27 HKT"
+  "updated_at": "2026-09-04T12:06:11.037144+00:00",
+  "updated_hkt": "2026-09-04 20:06 HKT"
 }
