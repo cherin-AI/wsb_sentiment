@@ -1,17 +1,17 @@
 {
-  "bull_pct": 50,
-  "bear_pct": 33,
-  "neutral_pct": 17,
-  "bull_bear_ratio": 1.5,
-  "overall_score": 57,
-  "overall_label": "Neutral",
+  "bull_pct": 67,
+  "bear_pct": 8,
+  "neutral_pct": 25,
+  "bull_bear_ratio": 8.0,
+  "overall_score": 66,
+  "overall_label": "Greed",
   "methodology": {
-    "formula_score": 50,
-    "ai_score": 60,
-    "bull_count": 12,
-    "bear_count": 8,
-    "neutral_count": 4,
-    "total_posts": 24,
+    "formula_score": 67,
+    "ai_score": 66,
+    "bull_count": 8,
+    "bear_count": 1,
+    "neutral_count": 3,
+    "total_posts": 12,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,187 +19,183 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 24,
+  "post_count": 12,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-energy-plays",
+      "id": "pelosi-sp500-adds",
+      "title": "Pelosi Trades & S&P Index Adds",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Bloom Energy, Sandisk join S&P 500",
+        "Congressional trades tracked as signals",
+        "Intel flagged as next play",
+        "Speculators chasing index-inclusion momentum"
+      ],
+      "sentiment_score": 74,
+      "tickers": [
+        "BE",
+        "INTC",
+        "SNDK"
+      ]
+    },
+    {
+      "id": "ai-energy",
       "title": "AI Data Center Energy",
-      "icon": "cpu",
+      "icon": "bolt",
       "heat": "building",
       "bullets": [
-        "Traders rotating into power infrastructure",
-        "VST and BE draw exposure bets",
-        "AI demand thesis remains dominant",
-        "Congressional trades cited as catalyst"
+        "Vistra bought for data-center power exposure",
+        "Bearish skepticism on Bloom promises",
+        "Rising tide lifts energy names",
+        "AI demand narrative driving positioning"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 70,
       "tickers": [
         "VST",
         "BE"
       ]
     },
     {
-      "id": "rare-earth-geopolitics",
-      "title": "Rare Earth Geopolitics",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "China restricting shipments spurs speculation",
-        "Sept. 24 talks flagged as catalyst",
-        "High-conviction bets being placed",
-        "Miners diverging from risk-off tape"
-      ],
-      "sentiment_score": 70,
-      "tickers": [
-        "MP",
-        "UUUU",
-        "USAR"
-      ]
-    },
-    {
-      "id": "profit-flexing",
-      "title": "Profit Posts",
-      "icon": "trending-up",
-      "heat": "hot",
-      "bullets": [
-        "Big wins circulating across accounts",
-        "SPY and TSLA swing trades celebrated",
-        "Weekly credit spread strategies compounding",
-        "Euphoric tone dominates gain posts"
-      ],
-      "sentiment_score": 80,
-      "tickers": [
-        "SPY",
-        "TSLA",
-        "DELL",
-        "BMNR"
-      ]
-    },
-    {
-      "id": "loss-bags",
-      "title": "Trading Losses & Heavy Bags",
+      "id": "loss-recovery",
+      "title": "Loss Posts & Recovery Journeys",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Traders showcasing deep red positions",
-        "Funko calls bought at peak",
-        "OPEN thesis built on speculation",
-        "Sold-at-bottom regret common"
+        "Trader recounts full account blow-up",
+        "Options desperation after big run",
+        "Buy-the-dip recovery strategy in play",
+        "Emotional attachment to lost gains"
       ],
-      "sentiment_score": 25,
+      "sentiment_score": 38,
       "tickers": [
-        "FNKO",
-        "OPEN",
-        "SNDK"
+        "META",
+        "GS"
       ]
     },
     {
-      "id": "macro-jobs-fed",
-      "title": "Jobs Report & Fed Path",
-      "icon": "chart-line",
-      "heat": "hot",
+      "id": "speculative-yolo",
+      "title": "Speculative high-conviction Plays",
+      "icon": "rocket",
+      "heat": "building",
       "bullets": [
-        "Weak jobs print stirring risk-off talk",
-        "FedWatch shows rate hike odds shift",
-        "Macro catalyst framing the tape",
-        "Traders positioning around data"
+        "SMCI conviction long from lows",
+        "OPEN thesis built on ticker confusion",
+        "Gold miner mutual fund swings",
+        "High-risk single-name bets stacking"
       ],
-      "sentiment_score": 42,
+      "sentiment_score": 64,
       "tickers": [
-        "SPY"
+        "SMCI",
+        "OPEN"
       ]
     },
     {
-      "id": "value-turnarounds",
-      "title": "Value & Turnaround Plays",
+      "id": "rates-macro",
+      "title": "Rates, Gold & BTC Macro",
+      "icon": "coin",
+      "heat": "building",
+      "bullets": [
+        "FedWatch odds fuel rate speculation",
+        "No hikes seen until 2027",
+        "Gold and Bitcoin flagged for upside",
+        "Politics injected into rate outlook"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "BTC"
+      ]
+    },
+    {
+      "id": "value-turnaround",
+      "title": "Value & Turnaround Theses",
       "icon": "building-store",
       "heat": "normal",
       "bullets": [
-        "Grocery Outlet insider buying flagged",
-        "Discount grocery thesis on inflation",
-        "Nike employee sentiment deteriorating",
-        "Fundamental narratives gaining niche traction"
+        "Grocery Outlet turnaround gaining traction",
+        "Heavy insider buying cited",
+        "Underperforming stores closed for margins",
+        "Discount-grocery tailwind from sticky inflation"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 68,
       "tickers": [
-        "GO",
-        "NKE"
+        "GO"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPY",
-      "sentiment": "mixed",
-      "mentions": 5,
-      "signal": "macro-driven swing trading",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "symbol": "BE",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "S&P add hype and Pelosi following",
+      "company_name": "Bloom Energy Corporation"
     },
     {
-      "symbol": "TSLA",
-      "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "short-then-long momentum plays",
-      "company_name": "Tesla, Inc."
+      "symbol": "INTC",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "next Pelosi play speculation",
+      "company_name": "Intel Corporation"
     },
     {
       "symbol": "VST",
       "sentiment": "bullish",
-      "mentions": 3,
+      "mentions": 2,
       "signal": "AI energy exposure bet",
       "company_name": "Vistra Corp."
     },
     {
-      "symbol": "MP",
+      "symbol": "SMCI",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "rare-earth escalation play",
-      "company_name": "MP Materials Corp."
+      "mentions": 2,
+      "signal": "high-conviction long hold",
+      "company_name": "Super Micro Computer, Inc."
     },
     {
       "symbol": "OPEN",
-      "sentiment": "bullish",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "speculative IPO confusion thesis",
+      "signal": "ironic idiots-driven thesis",
       "company_name": "Opendoor Technologies Inc"
     },
     {
-      "symbol": "BE",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "crowded but questioned",
-      "company_name": "Bloom Energy Corporation"
-    },
-    {
-      "symbol": "DELL",
+      "symbol": "GO",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "profit post enthusiasm",
-      "company_name": "Dell Technologies Inc."
+      "mentions": 1,
+      "signal": "insider-buying turnaround play",
+      "company_name": "Grocery Outlet Holding Corp."
     },
     {
       "symbol": "SNDK",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "early is same as wrong",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "riding S&P inclusion",
       "company_name": "Sandisk Corporation"
+    },
+    {
+      "symbol": "BTC",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "rate-cut driven upside call",
+      "company_name": "Bitcoin USD"
     }
   ],
   "summary": [
     {
-      "text": "The batch leans risk-on, with profit posts and celebratory swing trades dominating the tone. AI data center energy names and rare-earth speculation are drawing fresh, high-conviction capital ahead of identified catalysts, keeping the crowd's energy notably greedy.",
+      "text": "Retail energy skews greedy, anchored by congressional-trade tracking and S&P index-inclusion plays around Bloom Energy and Sandisk, with speculators front-running Intel as the next high-profile catalyst.",
       "tag": "bullish"
     },
     {
-      "text": "A softer jobs report and shifting Fed rate expectations inject genuine macro uncertainty, prompting risk-off framing that some traders are actively positioning around while others dismiss the divergence in mining names.",
+      "text": "The AI data-center power thesis is broadening, with traders rotating into Vistra and energy names, while macro chatter frames a no-hike Fed path as bullish for gold and Bitcoin.",
       "tag": "notable"
     },
     {
-      "text": "Beneath the euphoria, a steady undercurrent of loss posts and heavy underwater bags persists, from mistimed Funko calls to sold-at-bottom regret, reminding that speculative positioning cuts both ways this week.",
+      "text": "Beneath the euphoria, sobering account blow-up posts and options-driven wipeouts remind the tape that leverage cuts both ways, tempering the otherwise buoyant risk appetite.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-09-05T13:32:32.516681+00:00",
-  "updated_hkt": "2026-09-05 21:32 HKT"
+  "updated_at": "2026-09-05T21:34:58.371368+00:00",
+  "updated_hkt": "2026-09-06 05:34 HKT"
 }
