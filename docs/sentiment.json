@@ -1,17 +1,17 @@
 {
-  "bull_pct": 36,
-  "bear_pct": 32,
-  "neutral_pct": 32,
-  "bull_bear_ratio": 1.1,
-  "overall_score": 51,
+  "bull_pct": 50,
+  "bear_pct": 33,
+  "neutral_pct": 17,
+  "bull_bear_ratio": 1.5,
+  "overall_score": 57,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 36,
-    "ai_score": 58,
-    "bull_count": 10,
-    "bear_count": 9,
-    "neutral_count": 9,
-    "total_posts": 28,
+    "formula_score": 50,
+    "ai_score": 60,
+    "bull_count": 12,
+    "bear_count": 8,
+    "neutral_count": 4,
+    "total_posts": 24,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,39 +19,38 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 28,
+  "post_count": 24,
   "hours_window": 24,
   "themes": [
     {
-      "id": "earnings-winners",
-      "title": "Earnings-Driven Profit Posts",
-      "icon": "trending-up",
-      "heat": "hot",
+      "id": "ai-energy-plays",
+      "title": "AI Data Center Energy",
+      "icon": "cpu",
+      "heat": "building",
       "bullets": [
-        "SNOW earnings surge sparks large gains",
-        "BMNR, SPCX round out winning week",
-        "Retail chasing post-earnings momentum",
-        "Traders warned not to give back profits"
+        "Traders rotating into power infrastructure",
+        "VST and BE draw exposure bets",
+        "AI demand thesis remains dominant",
+        "Congressional trades cited as catalyst"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 72,
       "tickers": [
-        "SNOW",
-        "BMNR",
-        "SPCX"
+        "VST",
+        "BE"
       ]
     },
     {
-      "id": "rare-earths",
-      "title": "Rare-Earth Geopolitical Play",
+      "id": "rare-earth-geopolitics",
+      "title": "Rare Earth Geopolitics",
       "icon": "flame",
       "heat": "building",
       "bullets": [
-        "China restricting rare-earth shipments",
-        "Sept. 24 talks seen as catalyst",
-        "High-conviction bets on miners",
-        "Divergence from risk-off flows noted"
+        "China restricting shipments spurs speculation",
+        "Sept. 24 talks flagged as catalyst",
+        "High-conviction bets being placed",
+        "Miners diverging from risk-off tape"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 70,
       "tickers": [
         "MP",
         "UUUU",
@@ -59,147 +58,148 @@
       ]
     },
     {
-      "id": "macro-fed",
-      "title": "Fed Cuts and Jobs Report",
-      "icon": "building-bank",
+      "id": "profit-flexing",
+      "title": "Profit Posts",
+      "icon": "trending-up",
       "heat": "hot",
       "bullets": [
-        "Trump pressures Fed for rate cut",
-        "Weak jobs print questioned by traders",
-        "Low-quality service jobs criticized",
-        "Skepticism toward applauding economists"
+        "Big wins circulating across accounts",
+        "SPY and TSLA swing trades celebrated",
+        "Weekly credit spread strategies compounding",
+        "Euphoric tone dominates gain posts"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 80,
       "tickers": [
         "SPY",
-        "QQQ"
+        "TSLA",
+        "DELL",
+        "BMNR"
       ]
     },
     {
-      "id": "ai-datacenter",
-      "title": "AI Infrastructure Buildout",
-      "icon": "cpu",
+      "id": "loss-bags",
+      "title": "Trading Losses & Heavy Bags",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Hut 8 leasing data center to NVIDIA",
-        "Anthropic and Lambda deals cited",
-        "AI capex narrative stays strong",
-        "Speculative interest in compute plays"
+        "Traders showcasing deep red positions",
+        "Funko calls bought at peak",
+        "OPEN thesis built on speculation",
+        "Sold-at-bottom regret common"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 25,
       "tickers": [
-        "NVDA",
-        "HUT"
+        "FNKO",
+        "OPEN",
+        "SNDK"
       ]
     },
     {
-      "id": "loss-porn",
-      "title": "Trading Losses and Bag-Holding",
-      "icon": "skull",
-      "heat": "normal",
+      "id": "macro-jobs-fed",
+      "title": "Jobs Report & Fed Path",
+      "icon": "chart-line",
+      "heat": "hot",
       "bullets": [
-        "Traders showcasing heavy red positions",
-        "Selling at the bottom lament",
-        "Revenge trades after prior losses",
-        "Self-deprecating gallows humor persists"
+        "Weak jobs print stirring risk-off talk",
+        "FedWatch shows rate hike odds shift",
+        "Macro catalyst framing the tape",
+        "Traders positioning around data"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 42,
       "tickers": [
-        "SNDK",
-        "BROS",
-        "TTWO"
+        "SPY"
       ]
     },
     {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-smile",
+      "id": "value-turnarounds",
+      "title": "Value & Turnaround Plays",
+      "icon": "building-store",
       "heat": "normal",
       "bullets": [
-        "Weekend and daily discussion banter",
-        "Squirrel and meme trading strategies",
-        "Congressional trade-copying jokes",
-        "Mixed euphoria and fatigue"
+        "Grocery Outlet insider buying flagged",
+        "Discount grocery thesis on inflation",
+        "Nike employee sentiment deteriorating",
+        "Fundamental narratives gaining niche traction"
       ],
-      "sentiment_score": 52,
+      "sentiment_score": 55,
       "tickers": [
-        "SPY",
-        "TSLA"
+        "GO",
+        "NKE"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SNOW",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "earnings surge printing big gains",
-      "company_name": "Snowflake Inc."
-    },
-    {
       "symbol": "SPY",
       "sentiment": "mixed",
-      "mentions": 4,
-      "signal": "index bets both directions",
+      "mentions": 5,
+      "signal": "macro-driven swing trading",
       "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "TSLA",
       "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "short then flip to calls",
+      "mentions": 4,
+      "signal": "short-then-long momentum plays",
       "company_name": "Tesla, Inc."
+    },
+    {
+      "symbol": "VST",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "AI energy exposure bet",
+      "company_name": "Vistra Corp."
     },
     {
       "symbol": "MP",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "rare-earth squeeze thesis",
+      "mentions": 3,
+      "signal": "rare-earth escalation play",
       "company_name": "MP Materials Corp."
     },
     {
-      "symbol": "NVDA",
+      "symbol": "OPEN",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "AI datacenter anchor",
-      "company_name": ""
+      "signal": "speculative IPO confusion thesis",
+      "company_name": "Opendoor Technologies Inc"
+    },
+    {
+      "symbol": "BE",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "crowded but questioned",
+      "company_name": "Bloom Energy Corporation"
+    },
+    {
+      "symbol": "DELL",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "profit post enthusiasm",
+      "company_name": "Dell Technologies Inc."
     },
     {
       "symbol": "SNDK",
       "sentiment": "bearish",
       "mentions": 2,
-      "signal": "missed the move by a week",
+      "signal": "early is same as wrong",
       "company_name": "Sandisk Corporation"
-    },
-    {
-      "symbol": "BROS",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "large leaps revenge conviction",
-      "company_name": "Dutch Bros Inc."
-    },
-    {
-      "symbol": "NKE",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "weak employee sentiment warning",
-      "company_name": "Nike, Inc."
     }
   ],
   "summary": [
     {
-      "text": "SNOW's post-earnings surge dominated the profit narrative, with multiple traders showcasing outsized wins alongside BMNR and SPCX. Momentum-chasing energy is high as retail piles into winners, though seasoned voices warn against surrendering gains next week.",
+      "text": "The batch leans risk-on, with profit posts and celebratory swing trades dominating the tone. AI data center energy names and rare-earth speculation are drawing fresh, high-conviction capital ahead of identified catalysts, keeping the crowd's energy notably greedy.",
       "tag": "bullish"
     },
     {
-      "text": "Macro drives the undertone: Trump's push for rate cuts collided with a soft jobs print that traders openly ridiculed as low-quality service hiring. Skepticism toward the economic narrative tempers the otherwise upbeat speculative tone.",
+      "text": "A softer jobs report and shifting Fed rate expectations inject genuine macro uncertainty, prompting risk-off framing that some traders are actively positioning around while others dismiss the divergence in mining names.",
       "tag": "notable"
     },
     {
-      "text": "The rare-earth complex is quietly building conviction, with MP, UUUU and USAR framed as geopolitical catalysts ahead of Sept. 24 talks. Meanwhile, bag-holding confessions and revenge trades remind that beneath the euphoria sits familiar retail pain.",
-      "tag": "bullish"
+      "text": "Beneath the euphoria, a steady undercurrent of loss posts and heavy underwater bags persists, from mistimed Funko calls to sold-at-bottom regret, reminding that speculative positioning cuts both ways this week.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-09-04T22:00:04.703598+00:00",
-  "updated_hkt": "2026-09-05 06:00 HKT"
+  "updated_at": "2026-09-05T13:32:32.516681+00:00",
+  "updated_hkt": "2026-09-05 21:32 HKT"
 }
