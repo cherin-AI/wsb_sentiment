@@ -1,17 +1,17 @@
 {
-  "bull_pct": 30,
-  "bear_pct": 30,
-  "neutral_pct": 40,
+  "bull_pct": 20,
+  "bear_pct": 20,
+  "neutral_pct": 60,
   "bull_bear_ratio": 1.0,
-  "overall_score": 43,
+  "overall_score": 42,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 30,
-    "ai_score": 48,
-    "bull_count": 3,
-    "bear_count": 3,
-    "neutral_count": 4,
-    "total_posts": 10,
+    "formula_score": 20,
+    "ai_score": 52,
+    "bull_count": 1,
+    "bear_count": 1,
+    "neutral_count": 3,
+    "total_posts": 5,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,179 +19,141 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 10,
+  "post_count": 5,
   "hours_window": 24,
   "themes": [
     {
-      "id": "sp500-additions",
-      "title": "S&P 500 Index Additions",
-      "icon": "trending-up",
+      "id": "mstr-crypto-plays",
+      "title": "MSTR & Crypto Proxies",
+      "icon": "rocket",
       "heat": "building",
       "bullets": [
-        "SNDK and Bloom Energy join index",
-        "Traders anticipating inclusion pop",
-        "Comparisons to prior MRVL rally",
-        "SNDK near all-time highs"
+        "mNAV expansion signals upside momentum",
+        "Bitcoin dip resilience noted",
+        "Speculative call buying underway",
+        "Post-jobs-report positioning active"
       ],
       "sentiment_score": 68,
-      "tickers": [
-        "SNDK",
-        "BE",
-        "MRVL"
-      ]
-    },
-    {
-      "id": "crypto-proxy",
-      "title": "Crypto Proxy Speculation",
-      "icon": "currency-bitcoin",
-      "heat": "building",
-      "bullets": [
-        "MSTR calls bought on mNAV thesis",
-        "Bitcoin dipped on jobs report",
-        "MSTR held firm versus BTC",
-        "Speculators positioning for upside week"
-      ],
-      "sentiment_score": 66,
       "tickers": [
         "MSTR",
         "BTC"
       ]
     },
     {
-      "id": "trading-losses",
-      "title": "Account Blow-Ups",
+      "id": "digital-asset-security",
+      "title": "Digital Asset Security Fears",
       "icon": "skull",
-      "heat": "hot",
+      "heat": "building",
       "bullets": [
-        "Large options-driven account loss shared",
-        "Grind to seven figures reversed",
-        "Desperation trades erased gains",
-        "Community offering support and caution"
+        "OpenAI/Hugging Face incident raises alarms",
+        "Financial sector tightening security posture",
+        "Rotation toward tangible assets debated",
+        "Uncertainty clouds digital holdings"
       ],
-      "sentiment_score": 20,
+      "sentiment_score": 35,
       "tickers": []
     },
     {
-      "id": "beaten-down-names",
-      "title": "Deep Value Wreckage",
-      "icon": "trending-down",
+      "id": "index-valuations",
+      "title": "Index Valuations & Macro",
+      "icon": "trending-up",
       "heat": "normal",
       "bullets": [
-        "NKE far below all-time highs",
-        "Shareholders enduring prolonged decline",
-        "Falling-knife sentiment persists",
-        "Little confidence in near-term recovery"
+        "S&P 500 P/E cooling to 19.4x",
+        "Valuation reset draws attention",
+        "Jobs report muddies rate outlook",
+        "Broad market positioning cautious"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 50,
       "tickers": [
-        "NKE"
+        "SPX"
       ]
     },
     {
-      "id": "high-conviction-bets",
-      "title": "High-Conviction Long Bets",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "SMCI accumulated at low base",
-        "Holder refusing to sell into 2027",
-        "Strong unrealized upside momentum",
-        "Diamond-hand conviction on display"
-      ],
-      "sentiment_score": 72,
-      "tickers": [
-        "SMCI"
-      ]
-    },
-    {
-      "id": "market-mood",
-      "title": "General Market Mood",
+      "id": "macro-jobs-data",
+      "title": "Jobs Data & Rate Path",
       "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "S&P valuation cooling to 19.4x",
-        "Ironic quests for guaranteed losses",
-        "Return-math jokes on compounding",
-        "Mental health reminders circulating"
+        "Strong print read as bearish",
+        "Rate cut hopes complicated",
+        "Bitcoin reacted with a pullback",
+        "Traders parsing mixed signals"
       ],
       "sentiment_score": 45,
       "tickers": [
-        "SPX"
+        "BTC"
+      ]
+    },
+    {
+      "id": "political-market-noise",
+      "title": "Political Market Commentary",
+      "icon": "message-circle",
+      "heat": "normal",
+      "bullets": [
+        "Sarcastic takes on policy influence",
+        "Skepticism toward leadership motives",
+        "Low-conviction off-topic chatter",
+        "Little direct trade impact"
+      ],
+      "sentiment_score": 48,
+      "tickers": []
+    },
+    {
+      "id": "general-market-mood",
+      "title": "General Market Mood",
+      "icon": "activity",
+      "heat": "normal",
+      "bullets": [
+        "Mixed sentiment across the batch",
+        "Cautious optimism on select names",
+        "Macro uncertainty tempers enthusiasm",
+        "Low overall engagement snapshot"
+      ],
+      "sentiment_score": 50,
+      "tickers": [
+        "SPX",
+        "MSTR"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SNDK",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Index inclusion buying interest",
-      "company_name": "Sandisk Corporation"
-    },
-    {
       "symbol": "MSTR",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "mNAV expansion optimism",
+      "mentions": 3,
+      "signal": "call buyers eye a strong week",
       "company_name": "Strategy Inc"
-    },
-    {
-      "symbol": "SMCI",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "High-conviction long hold",
-      "company_name": "Super Micro Computer, Inc."
-    },
-    {
-      "symbol": "NKE",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Falling-knife exhaustion",
-      "company_name": "Nike, Inc."
-    },
-    {
-      "symbol": "BE",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "S&P addition anticipation",
-      "company_name": "Bloom Energy Corporation"
-    },
-    {
-      "symbol": "MRVL",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "Cited as inclusion precedent",
-      "company_name": "Marvell Technology, Inc."
     },
     {
       "symbol": "BTC",
       "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "Wobbled on jobs data",
+      "mentions": 2,
+      "signal": "post-jobs pullback watched closely",
       "company_name": "Bitcoin USD"
     },
     {
       "symbol": "SPX",
       "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Valuation cooling noted",
+      "mentions": 2,
+      "signal": "valuations cooling, macro cautious",
       "company_name": "S&P 500 INDEX"
     }
   ],
   "summary": [
     {
-      "text": "Retail attention is rotating toward S&P inclusion trades, with SNDK and Bloom Energy drawing anticipatory buying and comparisons to prior index-driven rallies. MSTR and SMCI bulls voice high-conviction upside theses, keeping speculative energy alive.",
+      "text": "A quiet, low-engagement snapshot with MSTR standing out as the lone high-conviction play, driven by mNAV expansion and speculative call buying following a resilient Bitcoin reaction to strong jobs data.",
       "tag": "bullish"
     },
     {
-      "text": "A prominent account blow-up dominated emotional engagement, chronicling a rapid climb to seven figures unwound by leveraged options bets. The post drew community support and mental-health reminders, underscoring the risks of overextended speculation.",
+      "text": "Security anxiety around digital assets is building after the OpenAI/Hugging Face incident, prompting debate over rotation toward tangible investments and adding an undercurrent of caution to crypto exposure.",
       "tag": "bearish"
     },
     {
-      "text": "Broader tone is mixed rather than euphoric: cooling S&P valuations, ironic loss-seeking humor, and battered names like NKE temper the optimism from index and crypto-proxy plays. Sentiment sits near neutral.",
+      "text": "Macro backdrop remains ambiguous as the S&P 500 P/E cools to 19.4x and a strong jobs print muddies the rate-cut narrative, leaving overall sentiment balanced near neutral.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-06T13:06:46.781519+00:00",
-  "updated_hkt": "2026-09-06 21:06 HKT"
+  "updated_at": "2026-09-06T21:27:47.617407+00:00",
+  "updated_hkt": "2026-09-07 05:27 HKT"
 }
