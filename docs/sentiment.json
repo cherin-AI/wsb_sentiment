@@ -1,17 +1,17 @@
 {
-  "bull_pct": 67,
-  "bear_pct": 8,
-  "neutral_pct": 25,
-  "bull_bear_ratio": 8.0,
-  "overall_score": 66,
-  "overall_label": "Greed",
+  "bull_pct": 30,
+  "bear_pct": 30,
+  "neutral_pct": 40,
+  "bull_bear_ratio": 1.0,
+  "overall_score": 43,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 67,
-    "ai_score": 66,
-    "bull_count": 8,
-    "bear_count": 1,
-    "neutral_count": 3,
-    "total_posts": 12,
+    "formula_score": 30,
+    "ai_score": 48,
+    "bull_count": 3,
+    "bear_count": 3,
+    "neutral_count": 4,
+    "total_posts": 10,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,183 +19,179 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 12,
+  "post_count": 10,
   "hours_window": 24,
   "themes": [
     {
-      "id": "pelosi-sp500-adds",
-      "title": "Pelosi Trades & S&P Index Adds",
+      "id": "sp500-additions",
+      "title": "S&P 500 Index Additions",
       "icon": "trending-up",
-      "heat": "hot",
+      "heat": "building",
       "bullets": [
-        "Bloom Energy, Sandisk join S&P 500",
-        "Congressional trades tracked as signals",
-        "Intel flagged as next play",
-        "Speculators chasing index-inclusion momentum"
+        "SNDK and Bloom Energy join index",
+        "Traders anticipating inclusion pop",
+        "Comparisons to prior MRVL rally",
+        "SNDK near all-time highs"
       ],
-      "sentiment_score": 74,
+      "sentiment_score": 68,
       "tickers": [
+        "SNDK",
         "BE",
-        "INTC",
-        "SNDK"
+        "MRVL"
       ]
     },
     {
-      "id": "ai-energy",
-      "title": "AI Data Center Energy",
-      "icon": "bolt",
+      "id": "crypto-proxy",
+      "title": "Crypto Proxy Speculation",
+      "icon": "currency-bitcoin",
       "heat": "building",
       "bullets": [
-        "Vistra bought for data-center power exposure",
-        "Bearish skepticism on Bloom promises",
-        "Rising tide lifts energy names",
-        "AI demand narrative driving positioning"
+        "MSTR calls bought on mNAV thesis",
+        "Bitcoin dipped on jobs report",
+        "MSTR held firm versus BTC",
+        "Speculators positioning for upside week"
       ],
-      "sentiment_score": 70,
+      "sentiment_score": 66,
       "tickers": [
-        "VST",
-        "BE"
-      ]
-    },
-    {
-      "id": "loss-recovery",
-      "title": "Loss Posts & Recovery Journeys",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Trader recounts full account blow-up",
-        "Options desperation after big run",
-        "Buy-the-dip recovery strategy in play",
-        "Emotional attachment to lost gains"
-      ],
-      "sentiment_score": 38,
-      "tickers": [
-        "META",
-        "GS"
-      ]
-    },
-    {
-      "id": "speculative-yolo",
-      "title": "Speculative high-conviction Plays",
-      "icon": "rocket",
-      "heat": "building",
-      "bullets": [
-        "SMCI conviction long from lows",
-        "OPEN thesis built on ticker confusion",
-        "Gold miner mutual fund swings",
-        "High-risk single-name bets stacking"
-      ],
-      "sentiment_score": 64,
-      "tickers": [
-        "SMCI",
-        "OPEN"
-      ]
-    },
-    {
-      "id": "rates-macro",
-      "title": "Rates, Gold & BTC Macro",
-      "icon": "coin",
-      "heat": "building",
-      "bullets": [
-        "FedWatch odds fuel rate speculation",
-        "No hikes seen until 2027",
-        "Gold and Bitcoin flagged for upside",
-        "Politics injected into rate outlook"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
+        "MSTR",
         "BTC"
       ]
     },
     {
-      "id": "value-turnaround",
-      "title": "Value & Turnaround Theses",
-      "icon": "building-store",
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Large options-driven account loss shared",
+        "Grind to seven figures reversed",
+        "Desperation trades erased gains",
+        "Community offering support and caution"
+      ],
+      "sentiment_score": 20,
+      "tickers": []
+    },
+    {
+      "id": "beaten-down-names",
+      "title": "Deep Value Wreckage",
+      "icon": "trending-down",
       "heat": "normal",
       "bullets": [
-        "Grocery Outlet turnaround gaining traction",
-        "Heavy insider buying cited",
-        "Underperforming stores closed for margins",
-        "Discount-grocery tailwind from sticky inflation"
+        "NKE far below all-time highs",
+        "Shareholders enduring prolonged decline",
+        "Falling-knife sentiment persists",
+        "Little confidence in near-term recovery"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 28,
       "tickers": [
-        "GO"
+        "NKE"
+      ]
+    },
+    {
+      "id": "high-conviction-bets",
+      "title": "High-Conviction Long Bets",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "SMCI accumulated at low base",
+        "Holder refusing to sell into 2027",
+        "Strong unrealized upside momentum",
+        "Diamond-hand conviction on display"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
+        "SMCI"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "flame",
+      "heat": "normal",
+      "bullets": [
+        "S&P valuation cooling to 19.4x",
+        "Ironic quests for guaranteed losses",
+        "Return-math jokes on compounding",
+        "Mental health reminders circulating"
+      ],
+      "sentiment_score": 45,
+      "tickers": [
+        "SPX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "BE",
+      "symbol": "SNDK",
       "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "S&P add hype and Pelosi following",
-      "company_name": "Bloom Energy Corporation"
+      "mentions": 3,
+      "signal": "Index inclusion buying interest",
+      "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "INTC",
+      "symbol": "MSTR",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "next Pelosi play speculation",
-      "company_name": "Intel Corporation"
-    },
-    {
-      "symbol": "VST",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "AI energy exposure bet",
-      "company_name": "Vistra Corp."
+      "signal": "mNAV expansion optimism",
+      "company_name": "Strategy Inc"
     },
     {
       "symbol": "SMCI",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "high-conviction long hold",
+      "signal": "High-conviction long hold",
       "company_name": "Super Micro Computer, Inc."
     },
     {
-      "symbol": "OPEN",
-      "sentiment": "mixed",
+      "symbol": "NKE",
+      "sentiment": "bearish",
       "mentions": 2,
-      "signal": "ironic idiots-driven thesis",
-      "company_name": "Opendoor Technologies Inc"
+      "signal": "Falling-knife exhaustion",
+      "company_name": "Nike, Inc."
     },
     {
-      "symbol": "GO",
+      "symbol": "BE",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "insider-buying turnaround play",
-      "company_name": "Grocery Outlet Holding Corp."
+      "signal": "S&P addition anticipation",
+      "company_name": "Bloom Energy Corporation"
     },
     {
-      "symbol": "SNDK",
+      "symbol": "MRVL",
       "sentiment": "bullish",
       "mentions": 1,
-      "signal": "riding S&P inclusion",
-      "company_name": "Sandisk Corporation"
+      "signal": "Cited as inclusion precedent",
+      "company_name": "Marvell Technology, Inc."
     },
     {
       "symbol": "BTC",
-      "sentiment": "bullish",
+      "sentiment": "mixed",
       "mentions": 1,
-      "signal": "rate-cut driven upside call",
+      "signal": "Wobbled on jobs data",
       "company_name": "Bitcoin USD"
+    },
+    {
+      "symbol": "SPX",
+      "sentiment": "neutral",
+      "mentions": 1,
+      "signal": "Valuation cooling noted",
+      "company_name": "S&P 500 INDEX"
     }
   ],
   "summary": [
     {
-      "text": "Retail energy skews greedy, anchored by congressional-trade tracking and S&P index-inclusion plays around Bloom Energy and Sandisk, with speculators front-running Intel as the next high-profile catalyst.",
+      "text": "Retail attention is rotating toward S&P inclusion trades, with SNDK and Bloom Energy drawing anticipatory buying and comparisons to prior index-driven rallies. MSTR and SMCI bulls voice high-conviction upside theses, keeping speculative energy alive.",
       "tag": "bullish"
     },
     {
-      "text": "The AI data-center power thesis is broadening, with traders rotating into Vistra and energy names, while macro chatter frames a no-hike Fed path as bullish for gold and Bitcoin.",
-      "tag": "notable"
+      "text": "A prominent account blow-up dominated emotional engagement, chronicling a rapid climb to seven figures unwound by leveraged options bets. The post drew community support and mental-health reminders, underscoring the risks of overextended speculation.",
+      "tag": "bearish"
     },
     {
-      "text": "Beneath the euphoria, sobering account blow-up posts and options-driven wipeouts remind the tape that leverage cuts both ways, tempering the otherwise buoyant risk appetite.",
-      "tag": "bearish"
+      "text": "Broader tone is mixed rather than euphoric: cooling S&P valuations, ironic loss-seeking humor, and battered names like NKE temper the optimism from index and crypto-proxy plays. Sentiment sits near neutral.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-05T21:34:58.371368+00:00",
-  "updated_hkt": "2026-09-06 05:34 HKT"
+  "updated_at": "2026-09-06T13:06:46.781519+00:00",
+  "updated_hkt": "2026-09-06 21:06 HKT"
 }
