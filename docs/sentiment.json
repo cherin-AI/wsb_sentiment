@@ -1,17 +1,17 @@
 {
   "bull_pct": 33,
-  "bear_pct": 33,
-  "neutral_pct": 34,
-  "bull_bear_ratio": 1.0,
-  "overall_score": 43,
+  "bear_pct": 40,
+  "neutral_pct": 27,
+  "bull_bear_ratio": 0.8,
+  "overall_score": 41,
   "overall_label": "Neutral",
   "methodology": {
     "formula_score": 33,
-    "ai_score": 48,
-    "bull_count": 4,
-    "bear_count": 4,
+    "ai_score": 44,
+    "bull_count": 5,
+    "bear_count": 6,
     "neutral_count": 4,
-    "total_posts": 12,
+    "total_posts": 15,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,36 +19,76 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 12,
+  "post_count": 15,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-agi-narrative",
-      "title": "AI & AGI Narrative",
-      "icon": "cpu",
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
       "heat": "hot",
       "bullets": [
-        "Jensen Huang declares AGI has arrived",
-        "Anthropic exposure sought via proxies",
-        "OpenAI security incident raising concerns",
-        "AI enthusiasm dominates speculative flows"
+        "Large single-session trading losses reported",
+        "Overnight SPX options gambles backfire",
+        "Post-liquidation defeat sentiment",
+        "Discipline lapses erode profits"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 22,
       "tickers": [
-        "NVDA",
-        "ZM"
+        "SPX",
+        "SNXX",
+        "SNDQ"
       ]
     },
     {
-      "id": "nike-technical-debate",
-      "title": "Nike Technical Debate",
-      "icon": "trending-down",
+      "id": "ai-momentum",
+      "title": "AI Euphoria",
+      "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Multi-timeframe bullish RSI divergence claimed",
-        "Skeptics warn of continued downtrend",
-        "Legacy athletic brand facing pressure",
-        "Dip buyers versus fundamental bears clash"
+        "Jensen Huang declares 'AGI has arrived'",
+        "Anthropic exposure via Zoom proxy",
+        "Semiconductor test names in focus",
+        "OpenAI narrative fuels speculation"
+      ],
+      "sentiment_score": 72,
+      "tickers": [
+        "NVDA",
+        "ZM",
+        "AEHR",
+        "KEYS",
+        "TER"
+      ]
+    },
+    {
+      "id": "yolo-options",
+      "title": "Speculative high-conviction Bets",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "Concentrated options positions on single names",
+        "BitMine and Bloom Energy long calls",
+        "Whole-account overnight scalps",
+        "Near-dated expiries drive gambling",
+        "High-conviction, high-risk plays"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "BMNR",
+        "BE",
+        "SPX"
+      ]
+    },
+    {
+      "id": "technical-setups",
+      "title": "Chart & Technical Plays",
+      "icon": "chart-line",
+      "heat": "normal",
+      "bullets": [
+        "Nike RSI bullish divergence debated",
+        "Skeptics warn of dead-cat bounce",
+        "EMA crossover strategies discussed",
+        "Analysts lowering price targets"
       ],
       "sentiment_score": 38,
       "tickers": [
@@ -56,63 +96,15 @@
       ]
     },
     {
-      "id": "acquisition-speculation",
-      "title": "Acquisition Speculation",
-      "icon": "target",
-      "heat": "building",
-      "bullets": [
-        "Zoom framed as acquisition target",
-        "Strong cash position and Anthropic stake",
-        "Market cap discount versus estimated value",
-        "Speculative M&A thesis circulating"
-      ],
-      "sentiment_score": 66,
-      "tickers": [
-        "ZM"
-      ]
-    },
-    {
-      "id": "trading-losses",
-      "title": "Trading Losses & Discipline",
-      "icon": "skull",
+      "id": "macro-speculation",
+      "title": "Macro & Event Trades",
+      "icon": "cloud-storm",
       "heat": "normal",
       "bullets": [
-        "Post-liquidation reflections shared",
-        "Discipline breakdowns after early wins",
-        "Overtrading erodes accumulated profits",
-        "Account blow-ups recounted candidly"
-      ],
-      "sentiment_score": 25,
-      "tickers": []
-    },
-    {
-      "id": "semiconductor-equipment",
-      "title": "Semiconductor Equipment",
-      "icon": "microchip",
-      "heat": "normal",
-      "bullets": [
-        "Test-equipment names compared for value",
-        "AEHR, KEYS, TER contract exposure",
-        "Semiconductor cycle tailwinds noted",
-        "Retail seeks industry-expert guidance"
-      ],
-      "sentiment_score": 58,
-      "tickers": [
-        "AEHR",
-        "KEYS",
-        "TER"
-      ]
-    },
-    {
-      "id": "macro-thematic-plays",
-      "title": "Macro Thematic Plays",
-      "icon": "world",
-      "heat": "normal",
-      "bullets": [
-        "El Niño weather angle proposed",
-        "Mobility names flagged as beneficiaries",
+        "Super El Nino sector speculation",
         "Apple event anticipation building",
-        "General market mood mixed"
+        "Mobility names flagged as beneficiaries",
+        "Event-driven positioning discussed"
       ],
       "sentiment_score": 52,
       "tickers": [
@@ -120,80 +112,96 @@
         "UBER",
         "AAPL"
       ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-neutral",
+      "heat": "normal",
+      "bullets": [
+        "Mix of profit-taking and losses",
+        "Prudent exits earn rare praise",
+        "Discipline versus gambling tension",
+        "Cautious tone amid speculation"
+      ],
+      "sentiment_score": 46,
+      "tickers": [
+        "SPX"
+      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "ZM",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "acquisition and Anthropic proxy thesis",
-      "company_name": "Zoom Communications, Inc."
+      "symbol": "NKE",
+      "sentiment": "bearish",
+      "mentions": 8,
+      "signal": "Divergence hope met with skepticism",
+      "company_name": "Nike, Inc."
     },
     {
-      "symbol": "NKE",
-      "sentiment": "mixed",
+      "symbol": "SPX",
+      "sentiment": "bearish",
       "mentions": 6,
-      "signal": "divergence bulls versus downtrend bears",
-      "company_name": "Nike, Inc."
+      "signal": "Overnight options gambles backfiring",
+      "company_name": "S&P 500 INDEX"
     },
     {
       "symbol": "NVDA",
       "sentiment": "bullish",
-      "mentions": 3,
+      "mentions": 5,
       "signal": "AGI declaration fuels optimism",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "AAPL",
-      "sentiment": "neutral",
-      "mentions": 2,
-      "signal": "event anticipation building",
-      "company_name": "Apple Inc."
+      "symbol": "ZM",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Anthropic proxy acquisition thesis",
+      "company_name": "Zoom Communications, Inc."
     },
     {
-      "symbol": "TSLA",
+      "symbol": "BMNR",
       "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "speculative El Niño mobility play",
-      "company_name": "Tesla, Inc."
-    },
-    {
-      "symbol": "UBER",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "mobility demand thesis",
-      "company_name": "Uber Technologies, Inc."
+      "mentions": 3,
+      "signal": "Crypto-linked call speculation",
+      "company_name": "BitMine Immersion Technologies,"
     },
     {
       "symbol": "AEHR",
-      "sentiment": "bullish",
-      "mentions": 1,
-      "signal": "test-equipment value candidate",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Semiconductor test name comparison",
       "company_name": "Aehr Test Systems"
     },
     {
-      "symbol": "KEYS",
-      "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "semiconductor test exposure",
-      "company_name": "Keysight Technologies Inc."
+      "symbol": "TSLA",
+      "sentiment": "mixed",
+      "mentions": 2,
+      "signal": "El Nino mobility speculation",
+      "company_name": "Tesla, Inc."
+    },
+    {
+      "symbol": "BE",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "high-conviction print-or-bust bet",
+      "company_name": "Bloom Energy Corporation"
     }
   ],
   "summary": [
     {
-      "text": "AI dominates the batch as Huang's AGI declaration and Anthropic proxy plays fuel speculative optimism, with traders hunting exposure through Zoom's cash-rich balance sheet and semiconductor test-equipment names.",
+      "text": "Sentiment is fractured, with painful account blow-ups from overnight SPX scalps and concentrated single-session losses dominating the emotional tone, while a smaller cohort quietly celebrates disciplined profit-taking.",
+      "tag": "bearish"
+    },
+    {
+      "text": "AI enthusiasm provides the batch's bullish counterweight, as Jensen Huang's 'AGI has arrived' remark and an Anthropic-by-proxy Zoom acquisition thesis draw fresh speculative interest across semiconductor test names.",
       "tag": "bullish"
     },
     {
-      "text": "Nike sparks a genuine tug-of-war, with technical bulls citing multi-timeframe RSI divergence while skeptics warn a slowing downtrend is no buy signal, leaving the name firmly contested.",
+      "text": "Nike's multi-timeframe bullish divergence sparks a technical debate, but skeptics dominate, warning of a dead-cat bounce as analysts continue lowering targets — a cautious note amid the speculation.",
       "tag": "notable"
-    },
-    {
-      "text": "A steady undercurrent of loss posts and post-liquidation reflections tempers the mood, as traders recount discipline breakdowns and overtrading, keeping overall sentiment balanced near neutral.",
-      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-09-07T12:15:28.096612+00:00",
-  "updated_hkt": "2026-09-07 20:15 HKT"
+  "updated_at": "2026-09-07T21:28:32.092023+00:00",
+  "updated_hkt": "2026-09-08 05:28 HKT"
 }
