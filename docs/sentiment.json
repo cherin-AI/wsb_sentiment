@@ -1,17 +1,17 @@
 {
-  "bull_pct": 20,
-  "bear_pct": 20,
-  "neutral_pct": 60,
+  "bull_pct": 33,
+  "bear_pct": 33,
+  "neutral_pct": 34,
   "bull_bear_ratio": 1.0,
-  "overall_score": 42,
+  "overall_score": 43,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 20,
-    "ai_score": 52,
-    "bull_count": 1,
-    "bear_count": 1,
-    "neutral_count": 3,
-    "total_posts": 5,
+    "formula_score": 33,
+    "ai_score": 48,
+    "bull_count": 4,
+    "bear_count": 4,
+    "neutral_count": 4,
+    "total_posts": 12,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,141 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 5,
+  "post_count": 12,
   "hours_window": 24,
   "themes": [
     {
-      "id": "mstr-crypto-plays",
-      "title": "MSTR & Crypto Proxies",
-      "icon": "rocket",
-      "heat": "building",
+      "id": "ai-agi-narrative",
+      "title": "AI & AGI Narrative",
+      "icon": "cpu",
+      "heat": "hot",
       "bullets": [
-        "mNAV expansion signals upside momentum",
-        "Bitcoin dip resilience noted",
-        "Speculative call buying underway",
-        "Post-jobs-report positioning active"
+        "Jensen Huang declares AGI has arrived",
+        "Anthropic exposure sought via proxies",
+        "OpenAI security incident raising concerns",
+        "AI enthusiasm dominates speculative flows"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 62,
       "tickers": [
-        "MSTR",
-        "BTC"
+        "NVDA",
+        "ZM"
       ]
     },
     {
-      "id": "digital-asset-security",
-      "title": "Digital Asset Security Fears",
+      "id": "nike-technical-debate",
+      "title": "Nike Technical Debate",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Multi-timeframe bullish RSI divergence claimed",
+        "Skeptics warn of continued downtrend",
+        "Legacy athletic brand facing pressure",
+        "Dip buyers versus fundamental bears clash"
+      ],
+      "sentiment_score": 38,
+      "tickers": [
+        "NKE"
+      ]
+    },
+    {
+      "id": "acquisition-speculation",
+      "title": "Acquisition Speculation",
+      "icon": "target",
+      "heat": "building",
+      "bullets": [
+        "Zoom framed as acquisition target",
+        "Strong cash position and Anthropic stake",
+        "Market cap discount versus estimated value",
+        "Speculative M&A thesis circulating"
+      ],
+      "sentiment_score": 66,
+      "tickers": [
+        "ZM"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Trading Losses & Discipline",
       "icon": "skull",
-      "heat": "building",
+      "heat": "normal",
       "bullets": [
-        "OpenAI/Hugging Face incident raises alarms",
-        "Financial sector tightening security posture",
-        "Rotation toward tangible assets debated",
-        "Uncertainty clouds digital holdings"
+        "Post-liquidation reflections shared",
+        "Discipline breakdowns after early wins",
+        "Overtrading erodes accumulated profits",
+        "Account blow-ups recounted candidly"
       ],
-      "sentiment_score": 35,
+      "sentiment_score": 25,
       "tickers": []
     },
     {
-      "id": "index-valuations",
-      "title": "Index Valuations & Macro",
-      "icon": "trending-up",
+      "id": "semiconductor-equipment",
+      "title": "Semiconductor Equipment",
+      "icon": "microchip",
       "heat": "normal",
       "bullets": [
-        "S&P 500 P/E cooling to 19.4x",
-        "Valuation reset draws attention",
-        "Jobs report muddies rate outlook",
-        "Broad market positioning cautious"
+        "Test-equipment names compared for value",
+        "AEHR, KEYS, TER contract exposure",
+        "Semiconductor cycle tailwinds noted",
+        "Retail seeks industry-expert guidance"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 58,
       "tickers": [
-        "SPX"
+        "AEHR",
+        "KEYS",
+        "TER"
       ]
     },
     {
-      "id": "macro-jobs-data",
-      "title": "Jobs Data & Rate Path",
-      "icon": "flame",
+      "id": "macro-thematic-plays",
+      "title": "Macro Thematic Plays",
+      "icon": "world",
       "heat": "normal",
       "bullets": [
-        "Strong print read as bearish",
-        "Rate cut hopes complicated",
-        "Bitcoin reacted with a pullback",
-        "Traders parsing mixed signals"
+        "El Niño weather angle proposed",
+        "Mobility names flagged as beneficiaries",
+        "Apple event anticipation building",
+        "General market mood mixed"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 52,
       "tickers": [
-        "BTC"
-      ]
-    },
-    {
-      "id": "political-market-noise",
-      "title": "Political Market Commentary",
-      "icon": "message-circle",
-      "heat": "normal",
-      "bullets": [
-        "Sarcastic takes on policy influence",
-        "Skepticism toward leadership motives",
-        "Low-conviction off-topic chatter",
-        "Little direct trade impact"
-      ],
-      "sentiment_score": 48,
-      "tickers": []
-    },
-    {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
-      "icon": "activity",
-      "heat": "normal",
-      "bullets": [
-        "Mixed sentiment across the batch",
-        "Cautious optimism on select names",
-        "Macro uncertainty tempers enthusiasm",
-        "Low overall engagement snapshot"
-      ],
-      "sentiment_score": 50,
-      "tickers": [
-        "SPX",
-        "MSTR"
+        "TSLA",
+        "UBER",
+        "AAPL"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "MSTR",
+      "symbol": "ZM",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "acquisition and Anthropic proxy thesis",
+      "company_name": "Zoom Communications, Inc."
+    },
+    {
+      "symbol": "NKE",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "divergence bulls versus downtrend bears",
+      "company_name": "Nike, Inc."
+    },
+    {
+      "symbol": "NVDA",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "call buyers eye a strong week",
-      "company_name": "Strategy Inc"
+      "signal": "AGI declaration fuels optimism",
+      "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "BTC",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "post-jobs pullback watched closely",
-      "company_name": "Bitcoin USD"
-    },
-    {
-      "symbol": "SPX",
+      "symbol": "AAPL",
       "sentiment": "neutral",
       "mentions": 2,
-      "signal": "valuations cooling, macro cautious",
-      "company_name": "S&P 500 INDEX"
+      "signal": "event anticipation building",
+      "company_name": "Apple Inc."
+    },
+    {
+      "symbol": "TSLA",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "speculative El Niño mobility play",
+      "company_name": "Tesla, Inc."
+    },
+    {
+      "symbol": "UBER",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "mobility demand thesis",
+      "company_name": "Uber Technologies, Inc."
+    },
+    {
+      "symbol": "AEHR",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "test-equipment value candidate",
+      "company_name": "Aehr Test Systems"
+    },
+    {
+      "symbol": "KEYS",
+      "sentiment": "neutral",
+      "mentions": 1,
+      "signal": "semiconductor test exposure",
+      "company_name": "Keysight Technologies Inc."
     }
   ],
   "summary": [
     {
-      "text": "A quiet, low-engagement snapshot with MSTR standing out as the lone high-conviction play, driven by mNAV expansion and speculative call buying following a resilient Bitcoin reaction to strong jobs data.",
+      "text": "AI dominates the batch as Huang's AGI declaration and Anthropic proxy plays fuel speculative optimism, with traders hunting exposure through Zoom's cash-rich balance sheet and semiconductor test-equipment names.",
       "tag": "bullish"
     },
     {
-      "text": "Security anxiety around digital assets is building after the OpenAI/Hugging Face incident, prompting debate over rotation toward tangible investments and adding an undercurrent of caution to crypto exposure.",
-      "tag": "bearish"
+      "text": "Nike sparks a genuine tug-of-war, with technical bulls citing multi-timeframe RSI divergence while skeptics warn a slowing downtrend is no buy signal, leaving the name firmly contested.",
+      "tag": "notable"
     },
     {
-      "text": "Macro backdrop remains ambiguous as the S&P 500 P/E cools to 19.4x and a strong jobs print muddies the rate-cut narrative, leaving overall sentiment balanced near neutral.",
-      "tag": "notable"
+      "text": "A steady undercurrent of loss posts and post-liquidation reflections tempers the mood, as traders recount discipline breakdowns and overtrading, keeping overall sentiment balanced near neutral.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-09-06T21:27:47.617407+00:00",
-  "updated_hkt": "2026-09-07 05:27 HKT"
+  "updated_at": "2026-09-07T12:15:28.096612+00:00",
+  "updated_hkt": "2026-09-07 20:15 HKT"
 }
