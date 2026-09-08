@@ -1,16 +1,16 @@
 {
-  "bull_pct": 33,
-  "bear_pct": 40,
-  "neutral_pct": 27,
-  "bull_bear_ratio": 0.8,
-  "overall_score": 41,
+  "bull_pct": 40,
+  "bear_pct": 27,
+  "neutral_pct": 33,
+  "bull_bear_ratio": 1.5,
+  "overall_score": 53,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 33,
-    "ai_score": 44,
-    "bull_count": 5,
-    "bear_count": 6,
-    "neutral_count": 4,
+    "formula_score": 40,
+    "ai_score": 58,
+    "bull_count": 6,
+    "bear_count": 4,
+    "neutral_count": 5,
     "total_posts": 15,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
@@ -23,185 +23,174 @@
   "hours_window": 24,
   "themes": [
     {
-      "id": "trading-losses",
-      "title": "Account Blow-Ups",
-      "icon": "skull",
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure Buildout",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Large single-session trading losses reported",
-        "Overnight SPX options gambles backfire",
-        "Post-liquidation defeat sentiment",
-        "Discipline lapses erode profits"
+        "Semiconductors lifting global indices",
+        "Memory inventories tightening sharply",
+        "Long AI positioning dominant",
+        "Data center demand narrative strengthening"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 78,
       "tickers": [
-        "SPX",
-        "SNXX",
-        "SNDQ"
+        "SOXL",
+        "NVDA"
       ]
     },
     {
-      "id": "ai-momentum",
-      "title": "AI Euphoria",
-      "icon": "cpu",
+      "id": "energy-bottleneck",
+      "title": "Energy Powers AI Thesis",
+      "icon": "bolt",
       "heat": "building",
       "bullets": [
-        "Jensen Huang declares 'AGI has arrived'",
-        "Anthropic exposure via Zoom proxy",
-        "Semiconductor test names in focus",
-        "OpenAI narrative fuels speculation"
+        "Energy cited as AI bottleneck",
+        "Berkshire leadership echoes theme",
+        "Speculative bets on power names",
+        "Emerging cross-sector conviction"
       ],
-      "sentiment_score": 72,
+      "sentiment_score": 70,
       "tickers": [
-        "NVDA",
-        "ZM",
-        "AEHR",
-        "KEYS",
-        "TER"
+        "BE"
       ]
     },
     {
       "id": "yolo-options",
-      "title": "Speculative high-conviction Bets",
+      "title": "Speculative Options YOLOs",
       "icon": "rocket",
+      "heat": "hot",
+      "bullets": [
+        "Overnight SPX scalps backfiring",
+        "Short-dated calls piling up",
+        "High-conviction lottery tickets",
+        "Crypto-linked equity bets active"
+      ],
+      "sentiment_score": 55,
+      "tickers": [
+        "SPX",
+        "BMNR",
+        "BE"
+      ]
+    },
+    {
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Concentrated options positions on single names",
-        "BitMine and Bloom Energy long calls",
-        "Whole-account overnight scalps",
-        "Near-dated expiries drive gambling",
-        "High-conviction, high-risk plays"
+        "Leveraged ETF losses mounting",
+        "Accidental high-conviction regret posts",
+        "Break-even bag-holder relief",
+        "Discipline lapses acknowledged"
       ],
-      "sentiment_score": 62,
+      "sentiment_score": 28,
       "tickers": [
-        "BMNR",
-        "BE",
+        "SOXL",
         "SPX"
       ]
     },
     {
-      "id": "technical-setups",
-      "title": "Chart & Technical Plays",
-      "icon": "chart-line",
+      "id": "ipo-scrutiny",
+      "title": "IPO Skepticism",
+      "icon": "alert-triangle",
       "heat": "normal",
       "bullets": [
-        "Nike RSI bullish divergence debated",
-        "Skeptics warn of dead-cat bounce",
-        "EMA crossover strategies discussed",
-        "Analysts lowering price targets"
+        "Oura filing raises red flags",
+        "Margin compression flagged",
+        "Insider timing questioned",
+        "Smart money sitting out"
       ],
-      "sentiment_score": 38,
-      "tickers": [
-        "NKE"
-      ]
-    },
-    {
-      "id": "macro-speculation",
-      "title": "Macro & Event Trades",
-      "icon": "cloud-storm",
-      "heat": "normal",
-      "bullets": [
-        "Super El Nino sector speculation",
-        "Apple event anticipation building",
-        "Mobility names flagged as beneficiaries",
-        "Event-driven positioning discussed"
-      ],
-      "sentiment_score": 52,
-      "tickers": [
-        "TSLA",
-        "UBER",
-        "AAPL"
-      ]
+      "sentiment_score": 35,
+      "tickers": []
     },
     {
       "id": "market-mood",
       "title": "General Market Mood",
-      "icon": "mood-neutral",
+      "icon": "trending-up",
       "heat": "normal",
       "bullets": [
-        "Mix of profit-taking and losses",
-        "Prudent exits earn rare praise",
-        "Discipline versus gambling tension",
-        "Cautious tone amid speculation"
+        "Bull-bear banter persists",
+        "Global indices at highs",
+        "Retail optimism cautiously euphoric",
+        "Daily discussion steady"
       ],
-      "sentiment_score": 46,
-      "tickers": [
-        "SPX"
-      ]
+      "sentiment_score": 60,
+      "tickers": []
     }
   ],
   "tickers": [
     {
-      "symbol": "NKE",
-      "sentiment": "bearish",
-      "mentions": 8,
-      "signal": "Divergence hope met with skepticism",
-      "company_name": "Nike, Inc."
+      "symbol": "SOXL",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Bag-holders reaching break-even",
+      "company_name": "Direxion Daily Semiconductor Bu"
     },
     {
       "symbol": "SPX",
       "sentiment": "bearish",
-      "mentions": 6,
-      "signal": "Overnight options gambles backfiring",
+      "mentions": 3,
+      "signal": "Overnight scalps misfiring",
       "company_name": "S&P 500 INDEX"
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "AGI declaration fuels optimism",
-      "company_name": "NVIDIA Corporation"
-    },
-    {
-      "symbol": "ZM",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Anthropic proxy acquisition thesis",
-      "company_name": "Zoom Communications, Inc."
-    },
-    {
-      "symbol": "BMNR",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Crypto-linked call speculation",
-      "company_name": "BitMine Immersion Technologies,"
-    },
-    {
-      "symbol": "AEHR",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Semiconductor test name comparison",
-      "company_name": "Aehr Test Systems"
-    },
-    {
-      "symbol": "TSLA",
-      "sentiment": "mixed",
-      "mentions": 2,
-      "signal": "El Nino mobility speculation",
-      "company_name": "Tesla, Inc."
     },
     {
       "symbol": "BE",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "high-conviction print-or-bust bet",
+      "mentions": 3,
+      "signal": "Energy-AI high-conviction conviction",
       "company_name": "Bloom Energy Corporation"
+    },
+    {
+      "symbol": "BMNR",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Crypto-linked call speculation",
+      "company_name": "BitMine Immersion Technologies,"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Semiconductor rally leader",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "SNXX",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "Leveraged loss regret",
+      "company_name": "Tradr 2X Long SNDK Daily ETF"
+    },
+    {
+      "symbol": "SNDQ",
+      "sentiment": "bearish",
+      "mentions": 1,
+      "signal": "First-time buyer burned",
+      "company_name": "Tradr 2X Short SNDK Daily ETF"
+    },
+    {
+      "symbol": "HOOD",
+      "sentiment": "mixed",
+      "mentions": 1,
+      "signal": "IPO underwriter scrutiny",
+      "company_name": "Robinhood Markets, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment is fractured, with painful account blow-ups from overnight SPX scalps and concentrated single-session losses dominating the emotional tone, while a smaller cohort quietly celebrates disciplined profit-taking.",
-      "tag": "bearish"
-    },
-    {
-      "text": "AI enthusiasm provides the batch's bullish counterweight, as Jensen Huang's 'AGI has arrived' remark and an Anthropic-by-proxy Zoom acquisition thesis draw fresh speculative interest across semiconductor test names.",
+      "text": "AI infrastructure remains the dominant narrative, with semiconductor strength lifting global indices and memory inventories tightening. Retail traders are leaning long on chips and energy names, framing power capacity as the next critical bottleneck for data center expansion.",
       "tag": "bullish"
     },
     {
-      "text": "Nike's multi-timeframe bullish divergence sparks a technical debate, but skeptics dominate, warning of a dead-cat bounce as analysts continue lowering targets — a cautious note amid the speculation.",
+      "text": "Speculative options activity runs hot, from overnight SPX scalps to short-dated crypto-linked calls. Several account blow-up posts underscore the recklessness beneath the euphoria, with leveraged ETF losses and accidental YOLOs highlighting persistent discipline lapses.",
       "tag": "notable"
+    },
+    {
+      "text": "Skepticism surfaced around the Oura IPO, with traders flagging margin compression and insider timing as reasons to sit out. The overall tone balances constructive AI optimism against pockets of pain and caution.",
+      "tag": "bearish"
     }
   ],
-  "updated_at": "2026-09-07T21:28:32.092023+00:00",
-  "updated_hkt": "2026-09-08 05:28 HKT"
+  "updated_at": "2026-09-08T12:01:27.982254+00:00",
+  "updated_hkt": "2026-09-08 20:01 HKT"
 }
