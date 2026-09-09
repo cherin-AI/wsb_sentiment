@@ -1097,5 +1097,12 @@
     "label": "Neutral",
     "formula_score": 50,
     "ai_score": 62
+  },
+  {
+    "ts": "2026-09-10 05:42 HKT",
+    "score": 51,
+    "label": "Neutral",
+    "formula_score": 35,
+    "ai_score": 58
   }
 ]
