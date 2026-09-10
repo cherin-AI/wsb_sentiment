@@ -1,17 +1,17 @@
 {
-  "bull_pct": 35,
-  "bear_pct": 27,
-  "neutral_pct": 38,
-  "bull_bear_ratio": 1.3,
-  "overall_score": 51,
+  "bull_pct": 46,
+  "bear_pct": 25,
+  "neutral_pct": 29,
+  "bull_bear_ratio": 1.8,
+  "overall_score": 58,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 35,
-    "ai_score": 58,
-    "bull_count": 9,
-    "bear_count": 7,
-    "neutral_count": 9,
-    "total_posts": 26,
+    "formula_score": 46,
+    "ai_score": 63,
+    "bull_count": 11,
+    "bear_count": 6,
+    "neutral_count": 6,
+    "total_posts": 24,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,181 +19,186 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 26,
+  "post_count": 24,
   "hours_window": 24,
   "themes": [
     {
-      "id": "psychedelic-plays",
-      "title": "Psychedelic Pharma Speculation",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "CMPS eyeing psilocybin market entry",
-        "Traders anticipate Q1 2027 catalyst",
-        "Breakout above key levels targeted",
-        "High-conviction bulls piling in"
-      ],
-      "sentiment_score": 74,
-      "tickers": [
-        "CMPS"
-      ]
-    },
-    {
-      "id": "energy-commodities",
-      "title": "Oil & Uranium Positioning",
-      "icon": "trending-up",
-      "heat": "building",
-      "bullets": [
-        "Concentrated oil and gas exposure",
-        "Full-port uranium conviction bets",
-        "Offshore drilling and coal holdings",
-        "Hedging heavy commodity risk"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "UUUU"
-      ]
-    },
-    {
-      "id": "options-yolos",
-      "title": "Options high-conviction Gambling",
+      "id": "yolo-options",
+      "title": "High-Conviction Options Bets",
       "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "0DTE META calls chasing big targets",
-        "Short-dated puts speedrunning risk",
-        "Fat-finger contract mishaps costly",
-        "Aggressive weekly speculation dominant"
+        "Large single-name call gambles dominating feed",
+        "0DTE speculation ahead of catalysts",
+        "Traders chasing outsized payouts",
+        "Revenge trading energy persists"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 72,
       "tickers": [
         "META",
-        "NBIS",
+        "VRT",
         "AAPL",
         "SNDK"
       ]
     },
     {
+      "id": "profit-posts",
+      "title": "Profit Screenshots",
+      "icon": "trending-up",
+      "heat": "hot",
+      "bullets": [
+        "Multiple big-win posts circulating",
+        "Realized-gain flexing continues",
+        "Emboldening further speculation",
+        "Greed openly acknowledged"
+      ],
+      "sentiment_score": 78,
+      "tickers": [
+        "SNDK",
+        "SKHY",
+        "PLTR"
+      ]
+    },
+    {
       "id": "short-theses",
-      "title": "Bearish Short Theses",
+      "title": "Bearish Short Setups",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "EXEL flagged on single-drug dependence",
-        "IREN dilution warns off buyers",
-        "Visa/Mastercard disruption narrative",
-        "Bloom Energy short conviction"
+        "Detailed short DD on select names",
+        "Dilution and valuation concerns cited",
+        "Fed rate-hike fears referenced",
+        "Contrarian positioning gathering interest"
       ],
       "sentiment_score": 30,
       "tickers": [
         "EXEL",
+        "BE",
         "IREN",
-        "V",
-        "MA",
-        "BE"
+        "PLTR"
       ]
     },
     {
-      "id": "macro-policy",
-      "title": "Macro & Policy Watch",
-      "icon": "building-bank",
+      "id": "crash-fears",
+      "title": "Macro Crash Narratives",
+      "icon": "flame",
       "heat": "normal",
       "bullets": [
-        "Treasury debt repurchases target yields",
-        "FOMC hold anticipated mid-September",
-        "Bessent challenges yen shorts",
-        "Rate hike speculation building"
+        "GFC 2.0 comparisons resurfacing",
+        "Dot-com bubble parallels debated",
+        "Rising yields and Treasury buybacks",
+        "ZIRP nostalgia amid caution"
       ],
-      "sentiment_score": 48,
+      "sentiment_score": 35,
       "tickers": []
     },
     {
-      "id": "recovery-losses",
-      "title": "Account Recovery & Losses",
-      "icon": "activity",
+      "id": "value-plays",
+      "title": "Beaten-Down Value Ideas",
+      "icon": "discount",
       "heat": "normal",
       "bullets": [
-        "Traders rebuilding after blow-ups",
-        "Quitting options aids recovery",
-        "Reflection on past speculative losses",
-        "General market mood mixed"
+        "Deeply discounted names screened",
+        "Contrarian mean-reversion thesis",
+        "NKE and CHTR debated",
+        "Inverse-retail wisecracks abound"
       ],
-      "sentiment_score": 45,
-      "tickers": []
+      "sentiment_score": 55,
+      "tickers": [
+        "CHTR",
+        "NKE",
+        "UBER"
+      ]
+    },
+    {
+      "id": "crypto-tokenization",
+      "title": "Crypto & Tokenization",
+      "icon": "coin",
+      "heat": "normal",
+      "bullets": [
+        "Robinhood tokenization commentary",
+        "MicroStrategy branding stunt mocked",
+        "Bitcoin narrative simmering",
+        "Skeptical retail reception"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "MSTR"
+      ]
     }
   ],
   "tickers": [
     {
-      "symbol": "CMPS",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "psilocybin catalyst optimism",
-      "company_name": "COMPASS Pathways Plc - American"
-    },
-    {
       "symbol": "META",
       "sentiment": "mixed",
-      "mentions": 7,
-      "signal": "split calls and puts debate",
+      "mentions": 8,
+      "signal": "high-conviction calls yet correction warnings",
       "company_name": "Meta Platforms, Inc."
     },
     {
-      "symbol": "UUUU",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "full-port uranium conviction",
-      "company_name": "Energy Fuels Inc"
+      "symbol": "AAPL",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "Fat-finger pain and dip buyers",
+      "company_name": ""
     },
     {
-      "symbol": "EXEL",
+      "symbol": "SNDK",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Loyal winners celebrating",
+      "company_name": ""
+    },
+    {
+      "symbol": "VRT",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Revenge high-conviction on the dip",
+      "company_name": "Vertiv Holdings, LLC"
+    },
+    {
+      "symbol": "PLTR",
       "sentiment": "bearish",
       "mentions": 3,
-      "signal": "single-drug risk short thesis",
-      "company_name": "Exelixis, Inc."
+      "signal": "Put options paying off",
+      "company_name": "Palantir Technologies Inc."
+    },
+    {
+      "symbol": "NKE",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "Contrarian value or falling knife",
+      "company_name": "Nike, Inc."
+    },
+    {
+      "symbol": "CHTR",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Deep-value turnaround thesis",
+      "company_name": "Charter Communications, Inc."
     },
     {
       "symbol": "IREN",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "dilution concerns flagged",
+      "mentions": 2,
+      "signal": "Dilution concerns flagged",
       "company_name": "IREN LIMITED"
-    },
-    {
-      "symbol": "UBER",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "post-META rotation bet",
-      "company_name": "Uber Technologies, Inc."
-    },
-    {
-      "symbol": "NBIS",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "aggressive put speculation",
-      "company_name": "Nebius Group N.V."
-    },
-    {
-      "symbol": "AAPL",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "costly fat-finger mishap",
-      "company_name": "Apple Inc."
     }
   ],
   "summary": [
     {
-      "text": "Speculative energy remains elevated with retail piling into aggressive options positions on META, NBIS, and AAPL, while psychedelic pharma play CMPS draws high-conviction bulls anticipating a Q1 2027 regulatory catalyst.",
+      "text": "Speculative energy runs hot as traders flood the feed with high-conviction options bets and celebratory profit screenshots, particularly across AAPL, META, and memory names, keeping the mood tilted toward greed despite periodic caution.",
       "tag": "bullish"
     },
     {
-      "text": "A distinct bearish undercurrent persists as detailed short theses on EXEL, IREN, and the Visa/Mastercard payment complex circulate, alongside multiple account blow-up and recovery posts signaling lingering risk fatigue.",
+      "text": "A counter-current of detailed short theses on EXEL, Bloom Energy, and IREN, plus recurring GFC 2.0 and dot-com crash comparisons, signals a persistent bearish undertone among more analytical participants.",
       "tag": "bearish"
     },
     {
-      "text": "Macro remains a key watch item with a mid-September FOMC hold expected, Treasury debt repurchases targeting yields, and Bessent's yen posturing framing the near-term positioning landscape.",
+      "text": "Macro anxiety around rising yields, Treasury debt repurchases, and next week's Fed meeting frames positioning, with rate-hike fears driving both defensive put trades and contrarian value hunting.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-09T21:42:40.690100+00:00",
-  "updated_hkt": "2026-09-10 05:42 HKT"
+  "updated_at": "2026-09-10T13:49:15.107256+00:00",
+  "updated_hkt": "2026-09-10 21:49 HKT"
 }
