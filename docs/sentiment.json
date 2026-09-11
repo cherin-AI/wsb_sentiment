@@ -1,17 +1,17 @@
 {
-  "bull_pct": 46,
-  "bear_pct": 25,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 1.8,
-  "overall_score": 58,
+  "bull_pct": 37,
+  "bear_pct": 16,
+  "neutral_pct": 47,
+  "bull_bear_ratio": 2.3,
+  "overall_score": 52,
   "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 46,
-    "ai_score": 63,
-    "bull_count": 11,
-    "bear_count": 6,
-    "neutral_count": 6,
-    "total_posts": 24,
+    "formula_score": 37,
+    "ai_score": 58,
+    "bull_count": 7,
+    "bear_count": 3,
+    "neutral_count": 9,
+    "total_posts": 19,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,186 +19,181 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 24,
+  "post_count": 19,
   "hours_window": 24,
   "themes": [
     {
-      "id": "yolo-options",
-      "title": "High-Conviction Options Bets",
-      "icon": "rocket",
+      "id": "nvda-ai-trade",
+      "title": "AI & Semiconductor Momentum",
+      "icon": "cpu",
       "heat": "hot",
       "bullets": [
-        "Large single-name call gambles dominating feed",
-        "0DTE speculation ahead of catalysts",
-        "Traders chasing outsized payouts",
-        "Revenge trading energy persists"
+        "NVDA earnings strength fuels aggressive call buying",
+        "Jensen Huang commentary lifts sentiment",
+        "0DTE speculation concentrated in chips",
+        "Anthropic IPO chatter raises AI froth"
       ],
       "sentiment_score": 72,
       "tickers": [
-        "META",
-        "VRT",
-        "AAPL",
-        "SNDK"
+        "NVDA"
+      ]
+    },
+    {
+      "id": "oil-energy",
+      "title": "Oil & Energy Positioning",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "Crude bulls regain conviction after dip",
+        "Superglut thesis under debate",
+        "Speculative energy tendies rebuilding",
+        "WTI direction actively traded"
+      ],
+      "sentiment_score": 62,
+      "tickers": [
+        "WTI",
+        "USO"
+      ]
+    },
+    {
+      "id": "single-stock-dd",
+      "title": "Retail Deep-Dive Plays",
+      "icon": "trending-up",
+      "heat": "building",
+      "bullets": [
+        "DECK pitched on cheap valuation",
+        "Hoka growth narrative gaining traction",
+        "BRUN speculative small-cap thesis",
+        "Retail hunting undervalued names"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "DECK",
+        "BRUN",
+        "NBIS"
       ]
     },
     {
       "id": "profit-posts",
-      "title": "Profit Screenshots",
-      "icon": "trending-up",
+      "title": "Big Win Screenshots",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "Multiple big-win posts circulating",
-        "Realized-gain flexing continues",
-        "Emboldening further speculation",
-        "Greed openly acknowledged"
+        "CASY revenge trade pays off",
+        "AAPL call celebration posts",
+        "Concentrated call bets printing",
+        "Euphoric gain-porn circulating"
       ],
-      "sentiment_score": 78,
+      "sentiment_score": 80,
       "tickers": [
-        "SNDK",
-        "SKHY",
-        "PLTR"
+        "CASY",
+        "AAPL"
       ]
     },
     {
-      "id": "short-theses",
-      "title": "Bearish Short Setups",
+      "id": "account-blowups",
+      "title": "Trading Losses & Blow-Ups",
       "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Detailed short DD on select names",
-        "Dilution and valuation concerns cited",
-        "Fed rate-hike fears referenced",
-        "Contrarian positioning gathering interest"
+        "Repeated account blow-ups documented",
+        "Covered call safety still bleeding",
+        "All-time-high loss frustration",
+        "Capitulation among some traders"
       ],
-      "sentiment_score": 30,
-      "tickers": [
-        "EXEL",
-        "BE",
-        "IREN",
-        "PLTR"
-      ]
-    },
-    {
-      "id": "crash-fears",
-      "title": "Macro Crash Narratives",
-      "icon": "flame",
-      "heat": "normal",
-      "bullets": [
-        "GFC 2.0 comparisons resurfacing",
-        "Dot-com bubble parallels debated",
-        "Rising yields and Treasury buybacks",
-        "ZIRP nostalgia amid caution"
-      ],
-      "sentiment_score": 35,
+      "sentiment_score": 22,
       "tickers": []
     },
     {
-      "id": "value-plays",
-      "title": "Beaten-Down Value Ideas",
-      "icon": "discount",
+      "id": "macro-rates",
+      "title": "Macro, Rates & Bonds",
+      "icon": "chart-line",
       "heat": "normal",
       "bullets": [
-        "Deeply discounted names screened",
-        "Contrarian mean-reversion thesis",
-        "NKE and CHTR debated",
-        "Inverse-retail wisecracks abound"
+        "ECB hikes 25 bps, Lagarde outlook",
+        "PPI rose 0.4% as expected",
+        "Bond market volatility flagged",
+        "VIX creeping into focus"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 45,
       "tickers": [
-        "CHTR",
-        "NKE",
-        "UBER"
-      ]
-    },
-    {
-      "id": "crypto-tokenization",
-      "title": "Crypto & Tokenization",
-      "icon": "coin",
-      "heat": "normal",
-      "bullets": [
-        "Robinhood tokenization commentary",
-        "MicroStrategy branding stunt mocked",
-        "Bitcoin narrative simmering",
-        "Skeptical retail reception"
-      ],
-      "sentiment_score": 48,
-      "tickers": [
-        "MSTR"
+        "SPY",
+        "VIX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "META",
-      "sentiment": "mixed",
+      "symbol": "NVDA",
+      "sentiment": "bullish",
       "mentions": 8,
-      "signal": "high-conviction calls yet correction warnings",
-      "company_name": "Meta Platforms, Inc."
+      "signal": "Aggressive high-conviction call conviction",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "SPY",
+      "sentiment": "mixed",
+      "mentions": 5,
+      "signal": "Watching for red-day setups",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "DECK",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "Cheap valuation DD play",
+      "company_name": "Deckers Outdoor Corporation"
     },
     {
       "symbol": "AAPL",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "Fat-finger pain and dip buyers",
-      "company_name": ""
-    },
-    {
-      "symbol": "SNDK",
-      "sentiment": "bullish",
-      "mentions": 4,
-      "signal": "Loyal winners celebrating",
-      "company_name": ""
-    },
-    {
-      "symbol": "VRT",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Revenge high-conviction on the dip",
-      "company_name": "Vertiv Holdings, LLC"
+      "signal": "Winning call celebration",
+      "company_name": "Apple Inc."
     },
     {
-      "symbol": "PLTR",
-      "sentiment": "bearish",
+      "symbol": "CASY",
+      "sentiment": "bullish",
       "mentions": 3,
-      "signal": "Put options paying off",
-      "company_name": "Palantir Technologies Inc."
+      "signal": "Revenge trade payoff",
+      "company_name": "Caseys General Stores, Inc."
     },
     {
-      "symbol": "NKE",
+      "symbol": "VIX",
       "sentiment": "mixed",
       "mentions": 3,
-      "signal": "Contrarian value or falling knife",
-      "company_name": "Nike, Inc."
+      "signal": "Volatility timing chatter",
+      "company_name": "CBOE Volatility Index"
     },
     {
-      "symbol": "CHTR",
+      "symbol": "BRUN",
       "sentiment": "bullish",
       "mentions": 2,
-      "signal": "Deep-value turnaround thesis",
-      "company_name": "Charter Communications, Inc."
+      "signal": "Speculative small-cap thesis",
+      "company_name": "Boost Run Inc."
     },
     {
-      "symbol": "IREN",
-      "sentiment": "bearish",
+      "symbol": "NBIS",
+      "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Dilution concerns flagged",
-      "company_name": "IREN LIMITED"
+      "signal": "Sold too early regret",
+      "company_name": "Nebius Group N.V."
     }
   ],
   "summary": [
     {
-      "text": "Speculative energy runs hot as traders flood the feed with high-conviction options bets and celebratory profit screenshots, particularly across AAPL, META, and memory names, keeping the mood tilted toward greed despite periodic caution.",
+      "text": "Sentiment leans greedy, powered by NVDA call speculation and celebratory profit posts on names like AAPL and CASY. Traders are leaning into concentrated options bets, with AI momentum and Jensen Huang's upbeat commentary anchoring the bullish narrative.",
       "tag": "bullish"
     },
     {
-      "text": "A counter-current of detailed short theses on EXEL, Bloom Energy, and IREN, plus recurring GFC 2.0 and dot-com crash comparisons, signals a persistent bearish undertone among more analytical participants.",
+      "text": "A vocal minority documents repeated account blow-ups and mounting frustration from safer covered-call strategies still bleeding value, a reminder that the euphoria masks meaningful pockets of capitulation and drawdown pain.",
       "tag": "bearish"
     },
     {
-      "text": "Macro anxiety around rising yields, Treasury debt repurchases, and next week's Fed meeting frames positioning, with rate-hike fears driving both defensive put trades and contrarian value hunting.",
+      "text": "Macro cross-currents are building beneath the surface: an ECB 25bp hike, in-line PPI, unusual bond-market moves, and creeping VIX are drawing attention as traders position around potential volatility.",
       "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-10T13:49:15.107256+00:00",
-  "updated_hkt": "2026-09-10 21:49 HKT"
+  "updated_at": "2026-09-11T12:25:30.675407+00:00",
+  "updated_hkt": "2026-09-11 20:25 HKT"
 }
