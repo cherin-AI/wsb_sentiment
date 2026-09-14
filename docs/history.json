@@ -1153,5 +1153,12 @@
     "label": "Fear",
     "formula_score": 27,
     "ai_score": 42
+  },
+  {
+    "ts": "2026-09-15 05:45 HKT",
+    "score": 36,
+    "label": "Fear",
+    "formula_score": 33,
+    "ai_score": 38
   }
 ]

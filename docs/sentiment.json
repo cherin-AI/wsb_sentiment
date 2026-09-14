@@ -1,17 +1,17 @@
 {
-  "bull_pct": 27,
-  "bear_pct": 27,
-  "neutral_pct": 46,
-  "bull_bear_ratio": 1.0,
-  "overall_score": 38,
+  "bull_pct": 33,
+  "bear_pct": 38,
+  "neutral_pct": 29,
+  "bull_bear_ratio": 0.9,
+  "overall_score": 36,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 27,
-    "ai_score": 42,
-    "bull_count": 4,
-    "bear_count": 4,
+    "formula_score": 33,
+    "ai_score": 38,
+    "bull_count": 8,
+    "bear_count": 9,
     "neutral_count": 7,
-    "total_posts": 15,
+    "total_posts": 24,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,175 +19,184 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 14,
+  "post_count": 24,
   "hours_window": 24,
   "themes": [
     {
-      "id": "ai-selloff",
-      "title": "AI Capex & Safety Selloff",
-      "icon": "cpu",
+      "id": "fed-rate-decision",
+      "title": "Fed Rate Decision & Yields",
+      "icon": "building-bank",
       "heat": "hot",
       "bullets": [
-        "Frontier labs stress safety concerns",
-        "Market prices in AI slowdown fears",
-        "Bulls call selloff overdone",
-        "Datacenter demand debate intensifies"
-      ],
-      "sentiment_score": 45,
-      "tickers": [
-        "ANTHROPIC",
-        "SNDK"
-      ]
-    },
-    {
-      "id": "rate-hike",
-      "title": "Fed Rate Hike Anxiety",
-      "icon": "trending-down",
-      "heat": "hot",
-      "bullets": [
-        "Traders brace for surprise hike",
-        "ECB already tightened today",
-        "Cash yields climbing on brokers",
-        "Uncertainty grips positioning"
-      ],
-      "sentiment_score": 32,
-      "tickers": []
-    },
-    {
-      "id": "memory-chips",
-      "title": "Memory Stock Cyclical Peak",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "SNDK short conviction growing",
-        "SK Hynix, Samsung cite uncertainty",
-        "Cyclical peak warnings spreading",
-        "Demand narrative questioned"
+        "10-year Treasury yield touches 5%",
+        "Traders bracing for surprise rate hike",
+        "Warsh press conference in focus",
+        "Mortgage rates climbing to 7%+"
       ],
       "sentiment_score": 28,
       "tickers": [
+        "SPY"
+      ]
+    },
+    {
+      "id": "ai-selloff",
+      "title": "AI Capex & Safety Doubts",
+      "icon": "cpu",
+      "heat": "hot",
+      "bullets": [
+        "Frontier labs stress AI safety",
+        "Market pricing AI slowdown fears",
+        "Debate over demand sustainability",
+        "Bulls call selloff overdone"
+      ],
+      "sentiment_score": 42,
+      "tickers": [
+        "NVDA",
+        "MSFT"
+      ]
+    },
+    {
+      "id": "bearish-positioning",
+      "title": "Puts & Short Positioning",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Put buyers celebrating gains",
+        "Memory stocks flagged for peak",
+        "SPY puts held overnight",
+        "Shorts pressing conviction"
+      ],
+      "sentiment_score": 22,
+      "tickers": [
+        "SPY",
+        "SNDK",
+        "VRT"
+      ]
+    },
+    {
+      "id": "memory-chips",
+      "title": "Memory & Chip Demand",
+      "icon": "device-sd-card",
+      "heat": "building",
+      "bullets": [
+        "SK Hynix, Samsung decline power prepay",
+        "Uncertainty cited on capex",
+        "Cyclical peak thesis emerging",
+        "Short conviction on SNDK"
+      ],
+      "sentiment_score": 30,
+      "tickers": [
         "SNDK"
       ]
     },
     {
-      "id": "tesla-robotaxi",
-      "title": "Tesla CyberCab Optimism",
-      "icon": "rocket",
-      "heat": "building",
+      "id": "yolo-plays",
+      "title": "Options YOLOs & Losses",
+      "icon": "flame",
+      "heat": "hot",
       "bullets": [
-        "CyberCab pitched as driverless Uber",
-        "Data advantage touted",
-        "Regulatory hurdles seen as clearable",
-        "Delivery expansion speculation"
+        "0DTE trades left on table",
+        "Weekly call gambles into weakness",
+        "Overnight put exposure",
+        "Leverage stacked in retirement accounts"
       ],
-      "sentiment_score": 68,
+      "sentiment_score": 45,
       "tickers": [
-        "TSLA"
+        "SPY",
+        "VRT",
+        "MSFT"
       ]
     },
     {
-      "id": "oil-shock",
-      "title": "Iran War Oil Shock",
-      "icon": "flame",
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "mood-nervous",
       "heat": "building",
       "bullets": [
-        "Freight fund posts outsized gains",
-        "Geopolitical premium in oil",
-        "Speculative flows chasing energy",
-        "Supply disruption fears persist"
+        "Selloff sentiment dominant",
+        "Liquidation fears circulating",
+        "LULU contrarian long thesis",
+        "Anthropic profitability a bright spot"
       ],
-      "sentiment_score": 60,
-      "tickers": []
-    },
-    {
-      "id": "retail-gambling",
-      "title": "Robinhood Event Contracts Boom",
-      "icon": "dice-5",
-      "heat": "normal",
-      "bullets": [
-        "Event contracts volume surging",
-        "Retail speculation broadening fast",
-        "Betting-style products proliferate",
-        "Investing culture shifting to wagers"
-      ],
-      "sentiment_score": 50,
+      "sentiment_score": 40,
       "tickers": [
-        "HOOD"
+        "LULU",
+        "SPY"
       ]
     }
   ],
   "tickers": [
     {
+      "symbol": "SPY",
+      "sentiment": "bearish",
+      "mentions": 8,
+      "signal": "Puts favored into Fed",
+      "company_name": "State Street SPDR S&P 500 ETF T"
+    },
+    {
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "AI narrative debated",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "VRT",
+      "sentiment": "bullish",
+      "mentions": 5,
+      "signal": "High-risk call high-conviction",
+      "company_name": "Vertiv Holdings, LLC"
+    },
+    {
+      "symbol": "MSFT",
+      "sentiment": "neutral",
+      "mentions": 4,
+      "signal": "0DTE regret",
+      "company_name": "Microsoft Corporation"
+    },
+    {
       "symbol": "SNDK",
       "sentiment": "bearish",
       "mentions": 4,
-      "signal": "High-conviction short on memory peak",
+      "signal": "Cyclical peak short",
       "company_name": "Sandisk Corporation"
     },
     {
-      "symbol": "TSLA",
+      "symbol": "LULU",
       "sentiment": "bullish",
       "mentions": 3,
-      "signal": "CyberCab upside speculation",
-      "company_name": "Tesla, Inc."
-    },
-    {
-      "symbol": "HOOD",
-      "sentiment": "mixed",
-      "mentions": 3,
-      "signal": "Feature creep, retail gambling concerns",
-      "company_name": "Robinhood Markets, Inc."
-    },
-    {
-      "symbol": "ANTHROPIC",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Profitability surprise cheered",
-      "company_name": "Anthropic AI Lab Ecosystem ETF"
-    },
-    {
-      "symbol": "SAMSUNG",
-      "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Cites capex uncertainty",
-      "company_name": "SamsungElec"
-    },
-    {
-      "symbol": "UBER",
-      "sentiment": "mixed",
-      "mentions": 1,
-      "signal": "Cited as CyberCab comparison",
-      "company_name": "Uber Technologies, Inc."
+      "signal": "Contrarian long conviction",
+      "company_name": "lululemon athletica inc."
     },
     {
       "symbol": "SK",
       "sentiment": "bearish",
-      "mentions": 1,
-      "signal": "Declines power prepayment",
+      "mentions": 3,
+      "signal": "Capex uncertainty flagged",
       "company_name": "Corgi SK hynix 2x Daily ETF"
     },
     {
-      "symbol": "KEPCO",
+      "symbol": "MSFT",
       "sentiment": "neutral",
-      "mentions": 1,
-      "signal": "Power supply financing dispute",
-      "company_name": "KEPCO"
+      "mentions": 2,
+      "signal": "Missed upside lament",
+      "company_name": "Microsoft Corporation"
     }
   ],
   "summary": [
     {
-      "text": "The batch is dominated by defensive positioning ahead of an anticipated Fed rate hike, with ECB tightening already confirmed and traders debating whether US policy risk is fully priced. Cash yields and liquidation fears color the mood.",
+      "text": "Sentiment leans defensive as traders brace for a contentious Fed meeting, with the 10-year yield hitting 5% and speculation of a surprise hike driving put buying and overnight bearish positioning across SPY.",
       "tag": "bearish"
     },
     {
-      "text": "An AI-driven selloff triggered by frontier labs emphasizing safety has bulls arguing the reaction is overdone, noting no explicit capex cuts. Anthropic's profitability news offers a counterweight to the broader tech anxiety.",
+      "text": "The AI narrative is fracturing: frontier-lab safety warnings and reports of slowing capex fuel a selloff, though bulls argue nothing signals reduced GPU demand and point to Anthropic's back-to-back profitability.",
       "tag": "notable"
     },
     {
-      "text": "Memory chip skepticism is building, with high-conviction shorts targeting SNDK on a cyclical-peak thesis, while pockets of optimism persist around Tesla's CyberCab and oil-linked freight plays on geopolitical shock.",
+      "text": "Memory and chip names face fresh skepticism after SK Hynix and Samsung declined large upfront power payments, emboldening short theses on cyclical peaks even as contrarian longs like LULU draw scattered conviction.",
       "tag": "bearish"
     }
   ],
-  "updated_at": "2026-09-14T12:01:22.426987+00:00",
-  "updated_hkt": "2026-09-14 20:01 HKT"
+  "updated_at": "2026-09-14T21:45:34.772783+00:00",
+  "updated_hkt": "2026-09-15 05:45 HKT"
 }
