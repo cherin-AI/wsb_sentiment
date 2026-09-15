@@ -1,17 +1,17 @@
 {
-  "bull_pct": 33,
-  "bear_pct": 38,
-  "neutral_pct": 29,
-  "bull_bear_ratio": 0.9,
-  "overall_score": 36,
-  "overall_label": "Fear",
+  "bull_pct": 40,
+  "bear_pct": 25,
+  "neutral_pct": 35,
+  "bull_bear_ratio": 1.6,
+  "overall_score": 41,
+  "overall_label": "Neutral",
   "methodology": {
-    "formula_score": 33,
-    "ai_score": 38,
+    "formula_score": 40,
+    "ai_score": 42,
     "bull_count": 8,
-    "bear_count": 9,
+    "bear_count": 5,
     "neutral_count": 7,
-    "total_posts": 24,
+    "total_posts": 20,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,184 +19,179 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 24,
+  "post_count": 20,
   "hours_window": 24,
   "themes": [
     {
-      "id": "fed-rate-decision",
-      "title": "Fed Rate Decision & Yields",
+      "id": "fed-rates",
+      "title": "Fed Decision & Rate Anxiety",
       "icon": "building-bank",
       "heat": "hot",
       "bullets": [
         "10-year Treasury yield touches 5%",
-        "Traders bracing for surprise rate hike",
+        "FOMC decision looming this week",
         "Warsh press conference in focus",
-        "Mortgage rates climbing to 7%+"
+        "Mortgage rates near multi-year highs"
       ],
-      "sentiment_score": 28,
+      "sentiment_score": 35,
       "tickers": [
-        "SPY"
+        "SPX"
       ]
     },
     {
-      "id": "ai-selloff",
-      "title": "AI Capex & Safety Doubts",
+      "id": "ai-capex",
+      "title": "AI Capex & Semiconductors",
       "icon": "cpu",
-      "heat": "hot",
-      "bullets": [
-        "Frontier labs stress AI safety",
-        "Market pricing AI slowdown fears",
-        "Debate over demand sustainability",
-        "Bulls call selloff overdone"
-      ],
-      "sentiment_score": 42,
-      "tickers": [
-        "NVDA",
-        "MSFT"
-      ]
-    },
-    {
-      "id": "bearish-positioning",
-      "title": "Puts & Short Positioning",
-      "icon": "trending-down",
       "heat": "building",
       "bullets": [
-        "Put buyers celebrating gains",
-        "Memory stocks flagged for peak",
-        "SPY puts held overnight",
-        "Shorts pressing conviction"
+        "AI safeguards seen boosting capex",
+        "Nvidia narrative stays high-conviction",
+        "SK and Samsung expansion debated",
+        "Doomer skepticism gaining voice"
       ],
-      "sentiment_score": 22,
+      "sentiment_score": 58,
       "tickers": [
-        "SPY",
-        "SNDK",
+        "NVDA",
         "VRT"
       ]
     },
     {
-      "id": "memory-chips",
-      "title": "Memory & Chip Demand",
-      "icon": "device-sd-card",
-      "heat": "building",
-      "bullets": [
-        "SK Hynix, Samsung decline power prepay",
-        "Uncertainty cited on capex",
-        "Cyclical peak thesis emerging",
-        "Short conviction on SNDK"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "SNDK"
-      ]
-    },
-    {
-      "id": "yolo-plays",
-      "title": "Options YOLOs & Losses",
-      "icon": "flame",
+      "id": "options-gambling",
+      "title": "0DTE Options Speculation",
+      "icon": "rocket",
       "heat": "hot",
       "bullets": [
-        "0DTE trades left on table",
-        "Weekly call gambles into weakness",
-        "Overnight put exposure",
-        "Leverage stacked in retirement accounts"
+        "Weekly calls driving quick flips",
+        "Missed upside on early exits",
+        "Traders chasing adrenaline plays",
+        "High-risk leverage across accounts"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 48,
       "tickers": [
-        "SPY",
-        "VRT",
-        "MSFT"
+        "MSFT",
+        "SPX",
+        "VRT"
       ]
     },
     {
-      "id": "market-mood",
-      "title": "General Market Mood",
-      "icon": "mood-nervous",
+      "id": "blowups",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
       "heat": "building",
       "bullets": [
-        "Selloff sentiment dominant",
-        "Liquidation fears circulating",
-        "LULU contrarian long thesis",
-        "Anthropic profitability a bright spot"
+        "Margin losses from last year",
+        "Large drawdowns disclosed",
+        "Leveraged IRA positioning",
+        "Broker fill disputes noted"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 22,
       "tickers": [
-        "LULU",
-        "SPY"
+        "SPX"
+      ]
+    },
+    {
+      "id": "oil-geopolitics",
+      "title": "Oil & Geopolitics",
+      "icon": "flame",
+      "heat": "building",
+      "bullets": [
+        "Brent volatility rattling traders",
+        "Iran war expansion feared",
+        "Oil price swings on headlines",
+        "Energy weighing on rate path"
+      ],
+      "sentiment_score": 38,
+      "tickers": []
+    },
+    {
+      "id": "bears-winning",
+      "title": "Bearish Positioning Wins",
+      "icon": "trending-down",
+      "heat": "building",
+      "bullets": [
+        "Put buyers celebrating gains",
+        "Shorts profiting on weakness",
+        "Defensive stance rewarded",
+        "Market caution spreading"
+      ],
+      "sentiment_score": 28,
+      "tickers": [
+        "SPX"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "SPY",
+      "symbol": "SPX",
       "sentiment": "bearish",
-      "mentions": 8,
-      "signal": "Puts favored into Fed",
-      "company_name": "State Street SPDR S&P 500 ETF T"
+      "mentions": 5,
+      "signal": "Put buyers pressing weakness into Fed",
+      "company_name": "S&P 500 INDEX"
     },
     {
       "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "AI narrative debated",
+      "sentiment": "bullish",
+      "mentions": 4,
+      "signal": "High-conviction AI bull thesis persists",
       "company_name": "NVIDIA Corporation"
     },
     {
       "symbol": "VRT",
       "sentiment": "bullish",
-      "mentions": 5,
-      "signal": "High-risk call high-conviction",
+      "mentions": 3,
+      "signal": "Speculative weekly call high-conviction",
       "company_name": "Vertiv Holdings, LLC"
     },
     {
       "symbol": "MSFT",
-      "sentiment": "neutral",
-      "mentions": 4,
-      "signal": "0DTE regret",
+      "sentiment": "mixed",
+      "mentions": 3,
+      "signal": "0DTE flip regret story",
       "company_name": "Microsoft Corporation"
-    },
-    {
-      "symbol": "SNDK",
-      "sentiment": "bearish",
-      "mentions": 4,
-      "signal": "Cyclical peak short",
-      "company_name": "Sandisk Corporation"
     },
     {
       "symbol": "LULU",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Contrarian long conviction",
+      "mentions": 2,
+      "signal": "Contrarian long on hated name",
       "company_name": "lululemon athletica inc."
     },
     {
-      "symbol": "SK",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Capex uncertainty flagged",
-      "company_name": "Corgi SK hynix 2x Daily ETF"
+      "symbol": "NOK",
+      "sentiment": "neutral",
+      "mentions": 1,
+      "signal": "Nostalgia token gimmick",
+      "company_name": "Nokia Corporation Sponsored"
     },
     {
-      "symbol": "MSFT",
+      "symbol": "SSNLF",
+      "sentiment": "bullish",
+      "mentions": 1,
+      "signal": "Expansion demand defended",
+      "company_name": "SAMSUNG ELECTRONICS CO"
+    },
+    {
+      "symbol": "AMD",
       "sentiment": "neutral",
-      "mentions": 2,
-      "signal": "Missed upside lament",
-      "company_name": "Microsoft Corporation"
+      "mentions": 1,
+      "signal": "AI doomer commentary tangent",
+      "company_name": "Advanced Micro Devices, Inc."
     }
   ],
   "summary": [
     {
-      "text": "Sentiment leans defensive as traders brace for a contentious Fed meeting, with the 10-year yield hitting 5% and speculation of a surprise hike driving put buying and overnight bearish positioning across SPY.",
+      "text": "Sentiment leans cautious as the 10-year yield pierces 5% ahead of a pivotal FOMC decision and Warsh press conference. Traders are bracing for impact, with put buyers and shorts openly celebrating gains as defensive positioning is rewarded.",
       "tag": "bearish"
     },
     {
-      "text": "The AI narrative is fracturing: frontier-lab safety warnings and reports of slowing capex fuel a selloff, though bulls argue nothing signals reduced GPU demand and point to Anthropic's back-to-back profitability.",
+      "text": "AI remains the batch's core bull thesis, with arguments that safety concerns actually accelerate capex, alongside high-conviction Nvidia optimism and defended Korean chip expansion. Doomer skepticism, however, is gaining a louder voice.",
       "tag": "notable"
     },
     {
-      "text": "Memory and chip names face fresh skepticism after SK Hynix and Samsung declined large upfront power payments, emboldening short theses on cyclical peaks even as contrarian longs like LULU draw scattered conviction.",
-      "tag": "bearish"
+      "text": "Speculative energy stays intense through 0DTE options plays and leveraged accounts, but pain is visible in margin-driven drawdowns and account blow-ups. The mood is a tense mix of gambling adrenaline and rate-driven fear.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-14T21:45:34.772783+00:00",
-  "updated_hkt": "2026-09-15 05:45 HKT"
+  "updated_at": "2026-09-15T12:13:57.206434+00:00",
+  "updated_hkt": "2026-09-15 20:13 HKT"
 }
