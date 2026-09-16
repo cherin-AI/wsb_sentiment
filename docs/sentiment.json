@@ -1,17 +1,17 @@
 {
-  "bull_pct": 29,
-  "bear_pct": 41,
-  "neutral_pct": 30,
-  "bull_bear_ratio": 0.7,
-  "overall_score": 40,
-  "overall_label": "Neutral",
+  "bull_pct": 25,
+  "bear_pct": 50,
+  "neutral_pct": 25,
+  "bull_bear_ratio": 0.5,
+  "overall_score": 37,
+  "overall_label": "Fear",
   "methodology": {
-    "formula_score": 29,
-    "ai_score": 44,
-    "bull_count": 5,
-    "bear_count": 7,
-    "neutral_count": 5,
-    "total_posts": 17,
+    "formula_score": 25,
+    "ai_score": 42,
+    "bull_count": 4,
+    "bear_count": 8,
+    "neutral_count": 4,
+    "total_posts": 16,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,104 +19,109 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 17,
+  "post_count": 16,
   "hours_window": 24,
   "themes": [
     {
-      "id": "crypto-clarity-act",
+      "id": "clarity-act-crypto",
       "title": "CLARITY Act & Crypto Regulation",
       "icon": "gavel",
       "heat": "hot",
       "bullets": [
-        "Senate cloture vote fails to advance",
-        "COIN traders caught long on hope",
-        "Politically driven catalyst evaporates",
-        "Options positions closed at losses"
+        "Senate cloture vote fails 49-50",
+        "COIN rallied then faded on rejection",
+        "Speculative call buyers caught offside",
+        "Crypto regulatory optimism collapses"
       ],
-      "sentiment_score": 32,
+      "sentiment_score": 30,
       "tickers": [
-        "COIN"
+        "COIN",
+        "BTC"
       ]
     },
     {
-      "id": "ai-capex",
-      "title": "AI Infrastructure & Capex",
+      "id": "fomc-rate-decision",
+      "title": "FOMC Rate Decision",
+      "icon": "building-bank",
+      "heat": "hot",
+      "bullets": [
+        "Traders positioning ahead of Fed meeting",
+        "Rate hold versus hike debate",
+        "Speculators buying QQQ post-FOMC",
+        "Uncertainty driving heavy option flow"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "QQQ",
+        "SPY"
+      ]
+    },
+    {
+      "id": "ai-semis",
+      "title": "AI & Semiconductor Trade",
       "icon": "cpu",
       "heat": "building",
       "bullets": [
-        "Capex thesis argued as accelerating",
-        "Anthropic margin claims mocked heavily",
-        "NVIDIA and DRAM remain core bets",
-        "Apple floated as AI hedge"
+        "SK Hynix-Intel US memory chip talks",
+        "NVDA remains high-conviction AI bet",
+        "Apple floated as AI hedge",
+        "DRAM demand narrative persists"
       ],
-      "sentiment_score": 58,
+      "sentiment_score": 62,
       "tickers": [
         "NVDA",
+        "INTC",
         "AAPL"
       ]
     },
     {
-      "id": "nvda-yolo",
-      "title": "NVDA Options Speculation",
-      "icon": "rocket",
+      "id": "yolo-options",
+      "title": "High-Risk Options Gambles",
+      "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Entire port bet on short-dated calls",
-        "Rate decision looms as catalyst",
-        "Community warns of imminent losses",
-        "OOTM lottery-ticket positioning"
+        "Entire portfolio in short-dated NVDA calls",
+        "Deep out-of-the-money speculation",
+        "0DTE bets ahead of catalysts",
+        "Peers warn positions are cooked"
       ],
-      "sentiment_score": 55,
+      "sentiment_score": 40,
       "tickers": [
-        "NVDA"
+        "NVDA",
+        "QQQ"
       ]
     },
     {
-      "id": "account-blowups",
-      "title": "Trading Losses & Margin Wreckage",
-      "icon": "skull",
-      "heat": "building",
-      "bullets": [
-        "Margin blowups draining large accounts",
-        "Broker fills disputed on SPX puts",
-        "Painful drawdowns shared openly",
-        "Leverage lessons learned the hard way"
-      ],
-      "sentiment_score": 22,
-      "tickers": [
-        "SPX"
-      ]
-    },
-    {
-      "id": "spac-speculation",
-      "title": "SPAC & Meme Speculation",
-      "icon": "flame",
-      "heat": "building",
-      "bullets": [
-        "Folding-home SPAC pitched satirically",
-        "Retail skepticism toward SPAC warrants",
-        "Speculative lottery mentality persists",
-        "High-risk narrative plays circulate"
-      ],
-      "sentiment_score": 48,
-      "tickers": [
-        "BXBL"
-      ]
-    },
-    {
-      "id": "general-market-mood",
-      "title": "General Market Mood",
+      "id": "profit-loss-posts",
+      "title": "Profit & Loss Posts",
       "icon": "trending-up",
-      "heat": "normal",
+      "heat": "building",
       "bullets": [
-        "Rate decision anchors positioning",
-        "AVGO and DELL near highs",
-        "Mixed conviction across daily threads",
-        "Cautious tone ahead of catalysts"
+        "RKLB long-hold gains despite pullback",
+        "Diamond-hand conviction on winners",
+        "Crypto DCA regret after downturn",
+        "Mixed account outcomes on display"
       ],
       "sentiment_score": 50,
       "tickers": [
-        "AVGO",
+        "RKLB",
+        "COIN"
+      ]
+    },
+    {
+      "id": "corporate-tech-news",
+      "title": "Corporate & Tech Headlines",
+      "icon": "news",
+      "heat": "normal",
+      "bullets": [
+        "Oracle CFO addresses post-layoff morale",
+        "DELL new high faces selling pressure",
+        "Anthropic profit definition scrutinized",
+        "Treasury studies $5,000 check proposal"
+      ],
+      "sentiment_score": 45,
+      "tickers": [
+        "ORCL",
         "DELL"
       ]
     }
@@ -125,74 +130,74 @@
     {
       "symbol": "COIN",
       "sentiment": "bearish",
-      "mentions": 9,
-      "signal": "CLARITY Act failure stings longs",
+      "mentions": 8,
+      "signal": "Fading after CLARITY Act rejection",
       "company_name": "Coinbase Global, Inc."
     },
     {
       "symbol": "NVDA",
-      "sentiment": "bullish",
-      "mentions": 8,
-      "signal": "high-conviction calls into rate decision",
+      "sentiment": "mixed",
+      "mentions": 6,
+      "signal": "High-risk high-conviction magnet",
       "company_name": "NVIDIA Corporation"
     },
     {
-      "symbol": "AVGO",
+      "symbol": "QQQ",
       "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Holders eyeing $400 breakout",
-      "company_name": "Broadcom Inc."
+      "mentions": 4,
+      "signal": "Post-FOMC dip buying planned",
+      "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
       "symbol": "DELL",
       "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Put buying at new highs",
+      "mentions": 5,
+      "signal": "Puts on new-high selling pressure",
       "company_name": "Dell Technologies Inc."
-    },
-    {
-      "symbol": "AAPL",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Pitched as defensive AI hedge",
-      "company_name": "Apple Inc."
-    },
-    {
-      "symbol": "SPX",
-      "sentiment": "bearish",
-      "mentions": 3,
-      "signal": "Broker fill dispute frustration",
-      "company_name": "S&P 500 INDEX"
     },
     {
       "symbol": "RKLB",
       "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "Diamond-hand long-term conviction",
+      "mentions": 3,
+      "signal": "Long-term diamond hands",
       "company_name": "Rocket Lab Corporation"
     },
     {
-      "symbol": "BXBL",
+      "symbol": "AAPL",
       "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Satirical SPAC speculation",
-      "company_name": "BOXABL, Inc."
+      "signal": "Debated as AI hedge",
+      "company_name": ""
+    },
+    {
+      "symbol": "INTC",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "SK Hynix deal optimism",
+      "company_name": "Intel Corporation"
+    },
+    {
+      "symbol": "ORCL",
+      "sentiment": "bearish",
+      "mentions": 2,
+      "signal": "Layoff and morale concerns",
+      "company_name": "Oracle Corporation"
     }
   ],
   "summary": [
     {
-      "text": "The failed CLARITY Act cloture vote gutted crypto optimism, leaving COIN speculators unwinding calls at losses. What began as a political catalyst rally reversed sharply, reinforcing skepticism toward legislative timing bets across the community.",
+      "text": "The batch is dominated by regulatory disappointment as the CLARITY Act failed cloture 49-50, crushing crypto optimism and leaving COIN call buyers offside. Speculative traders were quick to close positions and book losses once passage became impossible.",
       "tag": "bearish"
     },
     {
-      "text": "AI remains the central bull thesis, with traders arguing capex accelerates rather than slows and floating Apple as a defensive hedge. Aggressive short-dated NVDA positioning ahead of the rate decision reflects persistent lottery-ticket risk appetite.",
+      "text": "All eyes are fixed on tomorrow's FOMC decision, with traders holding fire and planning post-meeting QQQ entries. Sentiment is anxious but opportunistic, torn between rate-hold hopes and fears of a sharp drawdown.",
       "tag": "notable"
     },
     {
-      "text": "Beneath the speculation, account blow-ups and margin-driven drawdowns dominate the confessional posts, tempering euphoria. Overall tone reads cautiously mixed as leverage casualties and a looming rate decision keep conviction in check.",
-      "tag": "bearish"
+      "text": "The AI and semiconductor narrative offers the batch's brightest spot, buoyed by SK Hynix-Intel US chip talks and persistent NVDA conviction, even as portfolio-betting on short-dated options signals reckless euphoria over discipline.",
+      "tag": "bullish"
     }
   ],
-  "updated_at": "2026-09-15T22:00:38.945605+00:00",
-  "updated_hkt": "2026-09-16 06:00 HKT"
+  "updated_at": "2026-09-16T12:28:50.509995+00:00",
+  "updated_hkt": "2026-09-16 20:28 HKT"
 }
