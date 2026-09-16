@@ -1,17 +1,17 @@
 {
-  "bull_pct": 25,
-  "bear_pct": 50,
-  "neutral_pct": 25,
-  "bull_bear_ratio": 0.5,
-  "overall_score": 37,
+  "bull_pct": 19,
+  "bear_pct": 48,
+  "neutral_pct": 33,
+  "bull_bear_ratio": 0.4,
+  "overall_score": 32,
   "overall_label": "Fear",
   "methodology": {
-    "formula_score": 25,
-    "ai_score": 42,
-    "bull_count": 4,
-    "bear_count": 8,
-    "neutral_count": 4,
-    "total_posts": 16,
+    "formula_score": 19,
+    "ai_score": 38,
+    "bull_count": 5,
+    "bear_count": 13,
+    "neutral_count": 9,
+    "total_posts": 27,
     "formula": {
       "bull_pct": "bullish posts / total posts × 100",
       "bear_pct": "bearish posts / total posts × 100",
@@ -19,185 +19,187 @@
       "overall_score": "bull_pct × 0.3 + ai_holistic_score × 0.7"
     }
   },
-  "post_count": 16,
+  "post_count": 27,
   "hours_window": 24,
   "themes": [
     {
-      "id": "clarity-act-crypto",
-      "title": "CLARITY Act & Crypto Regulation",
-      "icon": "gavel",
-      "heat": "hot",
-      "bullets": [
-        "Senate cloture vote fails 49-50",
-        "COIN rallied then faded on rejection",
-        "Speculative call buyers caught offside",
-        "Crypto regulatory optimism collapses"
-      ],
-      "sentiment_score": 30,
-      "tickers": [
-        "COIN",
-        "BTC"
-      ]
-    },
-    {
-      "id": "fomc-rate-decision",
-      "title": "FOMC Rate Decision",
-      "icon": "building-bank",
-      "heat": "hot",
-      "bullets": [
-        "Traders positioning ahead of Fed meeting",
-        "Rate hold versus hike debate",
-        "Speculators buying QQQ post-FOMC",
-        "Uncertainty driving heavy option flow"
-      ],
-      "sentiment_score": 48,
-      "tickers": [
-        "QQQ",
-        "SPY"
-      ]
-    },
-    {
-      "id": "ai-semis",
-      "title": "AI & Semiconductor Trade",
-      "icon": "cpu",
-      "heat": "building",
-      "bullets": [
-        "SK Hynix-Intel US memory chip talks",
-        "NVDA remains high-conviction AI bet",
-        "Apple floated as AI hedge",
-        "DRAM demand narrative persists"
-      ],
-      "sentiment_score": 62,
-      "tickers": [
-        "NVDA",
-        "INTC",
-        "AAPL"
-      ]
-    },
-    {
-      "id": "yolo-options",
-      "title": "High-Risk Options Gambles",
+      "id": "fomc-rate-hike",
+      "title": "Fed Rate Hike Shock",
       "icon": "flame",
       "heat": "hot",
       "bullets": [
-        "Entire portfolio in short-dated NVDA calls",
-        "Deep out-of-the-money speculation",
-        "0DTE bets ahead of catalysts",
-        "Peers warn positions are cooked"
+        "First Fed hike since 2023",
+        "One more hike signaled this year",
+        "Kevin Warsh headlines rattle markets",
+        "Traders positioning around FOMC catalyst"
       ],
-      "sentiment_score": 40,
+      "sentiment_score": 30,
       "tickers": [
-        "NVDA",
+        "SPY",
         "QQQ"
       ]
     },
     {
-      "id": "profit-loss-posts",
-      "title": "Profit & Loss Posts",
-      "icon": "trending-up",
+      "id": "political-fed-pressure",
+      "title": "Political Fed Pressure",
+      "icon": "gavel",
       "heat": "building",
       "bullets": [
-        "RKLB long-hold gains despite pullback",
-        "Diamond-hand conviction on winners",
-        "Crypto DCA regret after downturn",
-        "Mixed account outcomes on display"
+        "Trump demands sub-1% rates",
+        "Rhetoric escalating around Fed independence",
+        "Rate-cut hopes crushed by hike",
+        "Uncertainty fueling volatility"
       ],
-      "sentiment_score": 50,
+      "sentiment_score": 33,
       "tickers": [
-        "RKLB",
-        "COIN"
+        "SPY"
       ]
     },
     {
-      "id": "corporate-tech-news",
-      "title": "Corporate & Tech Headlines",
-      "icon": "news",
+      "id": "trading-losses",
+      "title": "Account Blow-Ups",
+      "icon": "skull",
+      "heat": "hot",
+      "bullets": [
+        "Deficit accounts and denied refunds",
+        "Expired worthless positions piling up",
+        "Puts and calls both punished",
+        "Defeated retail tone dominates"
+      ],
+      "sentiment_score": 20,
+      "tickers": [
+        "NVDA",
+        "SPY"
+      ]
+    },
+    {
+      "id": "semis-ai",
+      "title": "Semiconductors & AI",
+      "icon": "cpu",
+      "heat": "building",
+      "bullets": [
+        "SK Hynix-Intel US memory talks",
+        "NVIDIA and MRVL option speculation",
+        "Hyperscaler debt warnings surface",
+        "Mixed conviction into catalysts"
+      ],
+      "sentiment_score": 48,
+      "tickers": [
+        "NVDA",
+        "MRVL",
+        "INTC",
+        "DELL"
+      ]
+    },
+    {
+      "id": "speculative-plays",
+      "title": "Speculative Small-Caps",
+      "icon": "rocket",
+      "heat": "building",
+      "bullets": [
+        "DXYZ front-running Anthropic IPO",
+        "KDK driverless semi upside thesis",
+        "High-conviction asymmetric bets",
+        "Traders loading into share unlocks"
+      ],
+      "sentiment_score": 68,
+      "tickers": [
+        "DXYZ",
+        "KDK",
+        "AUR"
+      ]
+    },
+    {
+      "id": "market-mood",
+      "title": "General Market Mood",
+      "icon": "trending-down",
       "heat": "normal",
       "bullets": [
-        "Oracle CFO addresses post-layoff morale",
-        "DELL new high faces selling pressure",
-        "Anthropic profit definition scrutinized",
-        "Treasury studies $5,000 check proposal"
+        "Buy-the-dip reflex persists despite hits",
+        "Perpetual calls mentality intact",
+        "Crypto DCA fatigue emerging",
+        "Layoffs at Oracle noted"
       ],
-      "sentiment_score": 45,
+      "sentiment_score": 42,
       "tickers": [
-        "ORCL",
-        "DELL"
+        "QQQ",
+        "SPY",
+        "ORCL"
       ]
     }
   ],
   "tickers": [
     {
-      "symbol": "COIN",
+      "symbol": "SPY",
       "sentiment": "bearish",
       "mentions": 8,
-      "signal": "Fading after CLARITY Act rejection",
-      "company_name": "Coinbase Global, Inc."
-    },
-    {
-      "symbol": "NVDA",
-      "sentiment": "mixed",
-      "mentions": 6,
-      "signal": "High-risk high-conviction magnet",
-      "company_name": "NVIDIA Corporation"
+      "signal": "Nervous FOMC chart-watching",
+      "company_name": "State Street SPDR S&P 500 ETF T"
     },
     {
       "symbol": "QQQ",
       "sentiment": "bullish",
       "mentions": 4,
-      "signal": "Post-FOMC dip buying planned",
+      "signal": "Buy-the-dip post-FOMC",
       "company_name": "Invesco QQQ Trust, Series 1"
     },
     {
+      "symbol": "NVDA",
+      "sentiment": "mixed",
+      "mentions": 4,
+      "signal": "Whipsaw call and put pain",
+      "company_name": "NVIDIA Corporation"
+    },
+    {
+      "symbol": "DXYZ",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "Anthropic IPO front-run",
+      "company_name": "Destiny Tech100 Inc."
+    },
+    {
+      "symbol": "KDK",
+      "sentiment": "bullish",
+      "mentions": 3,
+      "signal": "High-conviction driverless bet",
+      "company_name": "Kodiak AI, Inc."
+    },
+    {
+      "symbol": "MRVL",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Profit-taking on calls",
+      "company_name": "Marvell Technology, Inc."
+    },
+    {
       "symbol": "DELL",
-      "sentiment": "bearish",
-      "mentions": 5,
-      "signal": "Puts on new-high selling pressure",
+      "sentiment": "bullish",
+      "mentions": 2,
+      "signal": "Quick short win",
       "company_name": "Dell Technologies Inc."
     },
     {
-      "symbol": "RKLB",
-      "sentiment": "bullish",
-      "mentions": 3,
-      "signal": "Long-term diamond hands",
-      "company_name": "Rocket Lab Corporation"
-    },
-    {
-      "symbol": "AAPL",
+      "symbol": "INTC",
       "sentiment": "mixed",
       "mentions": 2,
-      "signal": "Debated as AI hedge",
-      "company_name": ""
-    },
-    {
-      "symbol": "INTC",
-      "sentiment": "bullish",
-      "mentions": 2,
-      "signal": "SK Hynix deal optimism",
+      "signal": "SK Hynix deal speculation",
       "company_name": "Intel Corporation"
-    },
-    {
-      "symbol": "ORCL",
-      "sentiment": "bearish",
-      "mentions": 2,
-      "signal": "Layoff and morale concerns",
-      "company_name": "Oracle Corporation"
     }
   ],
   "summary": [
     {
-      "text": "The batch is dominated by regulatory disappointment as the CLARITY Act failed cloture 49-50, crushing crypto optimism and leaving COIN call buyers offside. Speculative traders were quick to close positions and book losses once passage became impossible.",
+      "text": "The Fed's first rate hike since 2023, with another signaled, blindsided a retail crowd conditioned to expect cuts, leaving both call and put buyers whipsawed and the tape swinging on Kevin Warsh headlines throughout the session.",
       "tag": "bearish"
     },
     {
-      "text": "All eyes are fixed on tomorrow's FOMC decision, with traders holding fire and planning post-meeting QQQ entries. Sentiment is anxious but opportunistic, torn between rate-hold hopes and fears of a sharp drawdown.",
-      "tag": "notable"
+      "text": "Defeated tone dominates the batch: deficit accounts, denied refunds, expired-worthless positions and crypto DCA fatigue reflect a bruised retail base absorbing losses ahead of and after the FOMC decision.",
+      "tag": "bearish"
     },
     {
-      "text": "The AI and semiconductor narrative offers the batch's brightest spot, buoyed by SK Hynix-Intel US chip talks and persistent NVDA conviction, even as portfolio-betting on short-dated options signals reckless euphoria over discipline.",
-      "tag": "bullish"
+      "text": "Pockets of speculative greed persist, with high-conviction bets on DXYZ front-running the Anthropic IPO and KDK's driverless thesis, alongside a stubborn buy-the-dip reflex targeting QQQ post-FOMC.",
+      "tag": "notable"
     }
   ],
-  "updated_at": "2026-09-16T12:28:50.509995+00:00",
-  "updated_hkt": "2026-09-16 20:28 HKT"
+  "updated_at": "2026-09-16T22:18:24.954994+00:00",
+  "updated_hkt": "2026-09-17 06:18 HKT"
 }
